@@ -8,7 +8,7 @@ threads = 2
 
 ## Multithreading
 class myThread (threading.Thread):
-   def __init__(self, threadID, pdb):
+   def __init__(self, threadID, ):
        threading.Thread.__init__(self, pdb)
        self.threadID = threadID
        self.pdb = pdb
@@ -51,7 +51,7 @@ def parseCIF(pdb)
 		break
     #sys.exit()
 
-l = ''; count = 0
+l = ''; num = 0
 dic = {}
 pathToPDB = '/net/home.isilon/ds-russell/pdb-cif/'
 for pdb in pdbs:
@@ -60,8 +60,8 @@ for pdb in pdbs:
 		os.system('cp '+pathToPDB+code+'/'+pdb+'.cif.gz .')
 	        os.system('gunzip '+pdb+'.cif.gz')
 		call_main(thread, count, pdb)
-		count += 1
-	        if (count == 100):
+		num += 1
+	        if (num == 100):
         	        break
 
 while threading.activeCount() > 1:
