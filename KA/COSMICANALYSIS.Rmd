@@ -1,0 +1,741 @@
+---
+title: "COSMICANALYSIS"
+author: "Anastasiia Kutkina"
+output: html_document
+---
+
+Cosmic resistance mutations data set (release v95, 24th November 2021) https://cancer.sanger.ac.uk/cosmic/download
+The whole file has been downloaded
+
+```{r}
+library(tidyverse)
+getwd()
+list.files()
+cosmic_whole<- read.table(file = 'CosmicResistanceMutations_Nov21.tsv', sep = '\t', header = TRUE)
+dim(cosmic_whole) #[1] 5100   27
+head(cosmic_whole)
+#cosmic_whole %>% select(Sample.Type) %>% unique()
+#cosmic_whole %>% select(Somatic.Status) %>% unique()
+```
+Column description from COSMIC (https://cancer.sanger.ac.uk/cosmic/download) with analysis of a potential column importance:
+
+[1:A] Sample name,Sample id - A sample is an instance of a portion of a tumour being examined for mutations. The sample name can be derived from a number of sources. In many cases it originates from the cell line name. Other sources include names assigned by the annotators, or an incremented number assigned during an anonymisation process. A number of samples can be taken from a single tumour and a number of tumours can be obtained from one individual. A sample id is used to identify a sample within the COSMIC database. There can be multiple ids, if the same sample has been entered into the database multiple times from different papers. 
+--> not telling us much, not important
+
+[3:C] Gene Name - The gene name for which the data has been curated in COSMIC. In most cases this is the accepted HGNC identifier.
+-->important, can be canonical as well as isoform
+
+[4:D] Transcript - The transcript identifier (accession number) of the gene.
+--> Gene name already contains important info, not important
+
+[5:E] Census Gene - Is the gene in the Cancer Gene Census (Yes, or No).
+--> isoforms can be compared to each other, as well as genes can be analysed on the count number of isoforms and their impact on resistance development, important
+
+[6:F] Drug Name - The name of the drug which the mutation confers resistance to.
+ --> can be either as abstract kinase inhibitor, as well as a specific name, like imatinib, or an endocrine therapy, important. 
+
+[7:G] MUTATION_ID - An internal mutation identifier to uniquely represent each mutation on a specific transcript on a given assembly build.
+--> not telling us much, not important
+
+[8:H] GENOMIC_MUTATION_ID - Genomic mutation identifier (COSV) to indicate the definitive position of the variant on the genome. This identifier is trackable and stable between different versions of the release.
+--> not telling us much, not important
+
+[9:I] LEGACY_MUTATION_ID - Legacy mutation identifier (COSM) that will represent existing COSM mutation identifiers.
+--> not telling us much, not important
+
+[10:J] AA Mutation - The change that has occurred in the peptide sequence. Formatting is based on the recommendations made by the Human Genome Variation Society.
+--> important
+
+[11:K] CDS Mutation - The change that has occurred in the nucleotide sequence. Formatting is identical to the method used for the peptide sequence.
+--> important
+
+[12:L] Primary Tissue - The primary tissue/cancer from which the sample originated. More details on the tissue classification are avaliable from here. In COSMIC we have standard classification system for tissue types and sub types because they vary a lot between different papers.
+--> too general, but might be important (breat, blood etc.)
+
+[13:M] Tissue Subtype 1 - Further sub classification (level 1) of the samples tissue of origin.
+--> to specific, not important
+
+[14:N] Tissue Subtype 2 - Further sub classification (level 2) of the samples tissue of origin.
+--> to specific, not important
+
+[15:O] Histology - The histological classification of the sample.
+--> too general, but might be important (carcinoma, lymphoid_neoplasm etc.)
+
+[16:P] Histology Subtype 1 - Further histological classification (level 1) of the sample.
+--> more exact disease name, might be important (chronic_myeloid_leukaemia)
+
+[17:Q] Histology Subtype 2 - Further histological classification (level 2) of the sample.
+--> shows up Philadelphia chromosome presence, might be important
+
+[18:R] Pubmed ID - The PUBMED ID for the paper that the sample was noted in, linking to pubmed to provide more details of the publication.
+--> not telling us much, not important
+
+[19:S] CGP Study - Lists the unique Ids of studies that have involved this sample.
+--> not telling us much, not important
+
+[20:T] Somatic Status - Information on whether the sample was reported to be Confirmed Somatic, Previously Reported or Variant of unknown origin -
+
+    Confirmed Somatic = if the mutation has been confimed to be somatic in the experiment by sequencing both the tumour and a matched normal from the same patient.
+    Variant of unknown origin = when the mutation is known to be somatic but the tumour was sequenced without a matched normal.
+    Previously observed = when the mutation has been reported as somatic previously but not in current paper.
+
+```{r}
+cosmic_whole %>% dplyr::group_by(Somatic.Status) %>% dplyr::count()
+
+```
+    
+--> important, leave out Variant of unknown origin to avoid ambiguity
+
+[21:U] Sample Type - Describes where the sample has originated from including the tumour type.
+```{r}
+cosmic_whole %>% group_by(Sample.Type) %>% count()
+```
+--> either Tumour Sample, Cultured or NS --> we concentrate only on Tumour Sample
+
+[22:V] Zygosity - Information on whether the mutation was reported to be homozygous , heterozygous or unknown within the sample.
+--> important for a separate analysis
+
+[23:W] Genome Coordinates (GRCh37/38) - The genome location of the mutation (chr:start..end), on the specified genome version.
+--> might be important later for methylation analysis, for now unimportant
+
+[24:X] Tier - 1 or 2 [see here for details or Tier 1 and 2]
+--> not telling us much, not important
+
+[25:Y] HGVSP - Human Genome Variation Society peptide syntax.
+--> not telling us much, not important
+
+[26:Z] HGVSC - Human Genome Variation Society coding dna sequence syntax (CDS).
+--> not telling us much, not important
+
+[27:AA] HGVSG - Human Genome Variation Society genomic syntax (3' shifted).
+--> not telling us much, not important
+
+Leave only major important columns and leave only Tumour Sample for Sample.Type, as well as leave out Variant of unknown origin for Somatic status.
+```{r}
+cosmic_clean <- cosmic_whole %>% filter(Somatic.Status != 'Variant of unknown origin') %>% filter(Sample.Type == 'Tumour Sample') %>% select(Gene.Name, Census.Gene, Drug.Name, AA.Mutation, CDS.Mutation, Primary.Tissue, Histology, Histology.Subtype.1, Histology.Subtype.2, Zygosity) %>% unique()
+#dim(cosmic_clean) #[1] 3852   10 #nonunique
+dim(cosmic_clean) #[1] 1079   10 #unique
+head(cosmic_clean)
+#save file
+#write.table(cosmic_clean, "cosmic_clean_v95.txt", row.names=FALSE, col.names = TRUE, quote = FALSE)
+```
+Clean AA.Mutation column and CDS.Mutation, that will be Gen.Mutation
+Create separate columns for the original amino acid, position, new amino acid.
+Delete deletions from the mutation list as we concentrate only on substitutions
+and no missing values: 
+
+```{r, warning=FALSE}
+#modify columns with amino acids and nucleotides substitutions
+cosmic_clean_1<- cosmic_clean %>% separate(AA.Mutation, c('p', 'Mutation'), sep = 2) %>% select(-p) %>% mutate(Mutation_1 = Mutation, .after = 'Mutation' ) %>% separate(Mutation_1, c('Orig_AA', 'Mutation_2'), sep = 1) %>% separate(Mutation_2, c('Position_AA', 'Mut_AA'), sep = -1) %>% separate(CDS.Mutation, c('c.sign', 'Gen.Mutation'), sep = 2) %>% select(-c.sign)  %>% separate(Gen.Mutation, c('b', 'Gen_mutated_to'), sep = '>', remove = FALSE) %>% separate(b, c('bef', 'Gen_mutated_from'), sep = -1, remove = FALSE) %>% select(-c(b,bef)) %>% unique()
+
+dim(cosmic_clean_1) #1079 rows, 13 columns
+
+#delete deletions, leave only substitutions as mutations:
+deletions_in_mut<- str_subset(cosmic_clean_1$Mutation, 'del')
+cosmic_clean_1_no_del<-subset(cosmic_clean_1, !(Mutation %in% deletions_in_mut))
+cosmic_clean_1_no_del
+#dim(cosmic_clean_1_no_del) #1069 rows  13
+
+#delete missing values for the mutations
+missing_mutation<- str_subset(cosmic_clean_1_no_del$Mutation, '\\?')
+cosmic_clean_1_no_del_no_mm<- subset(cosmic_clean_1_no_del, !(Mutation %in% missing_mutation))
+dim(cosmic_clean_1_no_del_no_mm) # 951 rows 13
+
+cosmic_clean_1_no_del_no_mm
+```
+
+The Gene.Name is written as either a normal gene name for census genes or as an unique transcript with an _ after a gene name --> another amino acid sequence that can potentially affect folding, therefore each noncesus gene needs to be checked, whether the alterations affect the kinase domain. 
+
+Assumption: 
+if amino acid alterations of a transcript do not differ for the kinase domain, account that as canonical sequence for mutation profiling.
+
+However, it might be that these alterations may affect the expression rate of a gene --> overexpression and the resistance associated with it --> check it later
+
+What kinds of genes are present in a data set? 
+```{r, warning=FALSE}
+cosmic_clean_1_no_del_no_mm %>% separate(Gene.Name, c('Gene', 'Transcript.Info'), sep = '_') %>% group_by(Gene) %>% count() %>% arrange(desc(n))
+
+```
+In total 32 genes are present within the data set, highest number of detected entries is observed for EGFR - 140, followed by FGFR2 - 110, KRAS - 78, ABL1 - 62 etc. Conclusion: might be that the high occurence is present due to:
+1) high number of resistant mutations
+2) high number of different transcript variants
+3) high number of different inhibitors that are able to inhibit a kinase and/or cause resistance
+
+Not all genes, however, contain kinase domain, as well as some unknown  --> needs to be filtered out (manual check of the kinase domain based on literature review (uniprot, SMART)). In addition to that kinases have subgroups. Tyr kinases are mostly associated with cancer. It might be that some ser-thr kinases are also involved in cancer, however, as they differ drastically in conformation they need to be analyzed separately --> analyze later. 
+
+For now we leave only human tyrosine kinases (with no '-->'):
+EGFR https://www.uniprot.org/uniprot/P00533
+FGFR2 https://www.uniprot.org/uniprot/P21802
+KRAS https://www.uniprot.org/uniprot/P01116 --> not a kinase, but a GTPase
+NT5C2 https://www.uniprot.org/uniprot/P49902 --> cytosolic purine 5' nucleosidase 
+ESR1 https://www.uniprot.org/uniprot/P03372 --> estrogen receptor 
+BTK https://www.uniprot.org/uniprot/Q06187 
+ABL1 https://www.uniprot.org/uniprot/P00519
+KIT https://www.uniprot.org/uniprot/P10721
+ALK https://www.uniprot.org/uniprot/Q9UM73
+AR https://www.uniprot.org/uniprot/P10275 --> androgen receptor 
+CTNNB1 https://www.uniprot.org/uniprot/P35222 --> beta catenin
+NRAS https://www.uniprot.org/uniprot/P01111 --> GTPase 
+MET https://www.uniprot.org/uniprot/P08581 
+BRAF https://www.uniprot.org/uniprot/P15056 --> Ser/thr kinase
+MAPK2K2 https://www.uniprot.org/uniprot/P36507 --> MAPK kinase
+SMO https://www.uniprot.org/uniprot/Q99835 --> GPCR
+FLT3 https://www.uniprot.org/uniprot/P36888 
+FGFR1 https://www.uniprot.org/uniprot/P11362 
+FGFR4 https://www.uniprot.org/uniprot/P22455 
+MAP2K1 https://www.uniprot.org/uniprot/Q02750 --> MAPK kinase
+NF2 https://www.uniprot.org/uniprot/P35240 --> tumor supressor
+PDGFRA https://www.uniprot.org/uniprot/P16234
+ERBB2 https://www.uniprot.org/uniprot/P04626 
+AC058822.1 unknown 
+TET2 https://www.uniprot.org/uniprot/Q6N021 --> methylcytosine dioxygenase 
+MTOR https://www.uniprot.org/uniprot/P42345 --> Ser/thr kinase
+PIK3CA https://www.uniprot.org/uniprot/P42336 --> kinase, but which?
+PTEN https://www.uniprot.org/uniprot/P60484 --> phosphatase 
+CDKN2A https://www.uniprot.org/uniprot/P42771 --> cyclin-dependent kinase
+KDR https://www.uniprot.org/uniprot/P35968 
+NF1 https://www.uniprot.org/uniprot/P21359 --> GTPase
+ASXL1 https://www.uniprot.org/uniprot/Q8IXJ9 --> ?
+JAK1 https://www.uniprot.org/uniprot/P23458
+
+
+Literature research leaves 15 Tyrosine kinases:
+
+```{r, warning=FALSE}
+TyrKinNames <- c('EGFR', 'FGFR2', 'BTK', 'ABL1', 'KIT', 'ALK', 'MET', 'FLT3', 'FGFR1', 'FGFR4', 'PDGFRA', 'ERBB2', 'KDR', 'JAK1' ) 
+cosmic_clean_tyr_kin<- cosmic_clean_1_no_del_no_mm %>% separate(Gene.Name, c('Gene', 'Transcript.Info'), sep = '_') %>% filter(Gene %in% TyrKinNames)
+#view(cosmic_clean_tyr_kin)
+dim(cosmic_clean_tyr_kin) # 545 rows 16 columns 
+cosmic_clean_tyr_kin <- cosmic_clean_tyr_kin  %>% arrange(Gene, Position_AA)
+cosmic_clean_tyr_kin 
+```
+
+Now the goal is to match the genes with corresponding amino acid sequences, sort mutations within kinase domain (KD), match positions within a multiple sequence alignment (MSA), that needs to be calculated separately each time new kinases are added. 
+
+Following data set contains not just canonical sequences (census gene), but also isoforms (ENST... in Transcript.Info), which sequences need to be checked and adjusted. 
+
+Assumption: if the sequence of a non-canonical gene is equal to the sequence of a canonical one within a kinase domain, we regard this transcript as canonical one for the MSA. For that purpose the non-canonical sequences within COSMIC have been compared manually to canonical. Prior to that KD and the sequences for the kinases have been downloaded from SMART database. 
+
+```{r}
+cosmic_clean_tyr_kin %>% select(Gene, Transcript.Info) %>% unique() 
+```
+Analysis of different isoforms:
+
+1	ABL1	ENST00000318560		
+	
+63	ALK	ENST00000642122		
+98	ALK	ENST00000618119
+
+114	BTK	ENST00000308731		
+115	BTK	ENST00000618050		
+
+168	EGFR	ENST00000455089		
+169	EGFR	ENST00000454757
+
+309	ERBB2	ENST00000445658		
+310	ERBB2	ENST00000406381		
+311	ERBB2	ENST00000584601		
+312	ERBB2	ENST00000541774		
+313	ERBB2	ENST00000584450
+
+315	FGFR1	ENST00000326324		
+316	FGFR1	ENST00000356207		
+317	FGFR1	ENST00000397103 https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=FGFR1_ENST00000397103#drug-resistance
+318	FGFR1	ENST00000335922		
+319	FGFR1	ENST00000397091		
+320	FGFR1	ENST00000532791		
+321	FGFR1	ENST00000397113		
+322	FGFR1	ENST00000397108		
+323	FGFR1	ENST00000447712		
+
+325	FGFR2	ENST00000478859		
+326	FGFR2	ENST00000356226		
+327	FGFR2	ENST00000369059
+328	FGFR2	ENST00000369061		
+329	FGFR2	ENST00000613048		
+330	FGFR2	ENST00000357555		
+331	FGFR2	ENST00000360144		
+338	FGFR2	ENST00000346997		
+339	FGFR2	ENST00000358487		
+341	FGFR2	ENST00000369056		
+342	FGFR2	ENST00000351936		
+344	FGFR2	ENST00000369060
+435	FGFR4	ENST00000393648		
+438	FGFR4	ENST00000393637		
+441	FGFR4	ENST00000502906		
+	
+462	KDR	ENST00000263923		
+		
+516	MET	ENST00000397752
+
+
+Noticeable is that FGFR2 and FGFR4 has huge number of isoforms that have potential resistant mutations. 
+
+Human kinase domain sequences have been downloaded from SMART. 
+http://smart.embl-heidelberg.de/smart/get_members.pl?WHAT=species&NAME=TyrKc&WHICH=Homo%20sapiens  
+292 protein sequences have been downloaded in FASTA format: one file contains the sequences of TyrKc (tyrosine kinase domain). Another file contains full protein sequences. 
+
+```{r}
+library(Biostrings)
+#getwd()
+#list.files()
+#full SMART tyrosine kinase amino acid sequences
+SMART_full_human_tyrkin <- readAAStringSet("SMART_full_human_tyrkin.txt", format="fasta",
+               nrec=-1L, skip=0L, seek.first.rec=FALSE,
+               use.names=TRUE, with.qualities=FALSE)
+head(SMART_full_human_tyrkin )
+#only tyrosine kinase domain amino acid seqences
+SMART_humanTyrKc<- readAAStringSet("SMART_humanTyrKc.txt", format="fasta",
+               nrec=-1L, skip=0L, seek.first.rec=FALSE,
+               use.names=TRUE, with.qualities=FALSE)
+head(SMART_humanTyrKc)
+#merge both from above
+SMART_full_human_tyrkin_asdf <- as.data.frame(SMART_full_human_tyrkin, row.names = TRUE, optional = FALSE)
+names_kinases_smart<-rownames(SMART_full_human_tyrkin_asdf)
+#names_kinases_smart<-rownames(a)
+SMART_humanTyrKc_asdf<- as.data.frame(SMART_humanTyrKc, row.names = , optional = FALSE)
+SMART_seq<- cbind(names_kinases_smart, SMART_full_human_tyrkin_asdf, SMART_humanTyrKc_asdf)
+
+#tidy table with tyrosine kinase sequences
+colnames(SMART_seq)<- c('smart_kin_names', 'full_tyrkin_seq', 'tyrkin_domain_seq')
+
+#write.table(SMART_seq_1, "SMART_seq_1.txt", row.names=FALSE, col.names = TRUE, quote = FALSE, sep = '\t')
+#?write.table
+
+SMART_seq_1<- SMART_seq %>% separate(smart_kin_names, c('uniprot', 'uniprot_id', 'kinase_name_smart'), sep = "\\|", remove = FALSE)
+
+SMART_seq_1 %>% rowwise() %>%
+  mutate(c = gregexpr(pattern = SMART_seq_1$tyrkin_domain_seq, SMART_seq_1$full_tyrkin_seq )[[1]][1])
+
+write.table(SMART_seq_1, "SMART_seq_1.txt", row.names=FALSE, col.names = TRUE, quote = FALSE)
+
+SMART_seq_1 <- read.table(file = 'SMART_seq_1.txt', sep = '\t', header = TRUE)
+#view(df)
+#calculate the first position for the kinase domain
+indx <- NULL
+for(i in 1:nrow(SMART_seq_1)) {
+  indx[i] <- gregexpr(pattern = SMART_seq_1$tyrkin_domain_seq[i], SMART_seq_1$full_tyrkin_seq[i])[[1]][1]
+}
+SMART_seq_1$start_position_KD <- indx
+
+#calculate the length of the last position of the kinase domain for the full amino acid sequence
+SMART_seq_2<- SMART_seq_1 %>% rowwise() %>% mutate(length_of_KD = nchar(tyrkin_domain_seq))
+SMART_seq_3<- SMART_seq_2 %>% rowwise() %>% mutate(last_position_KD = start_position_KD+length_of_KD-1)
+
+
+head(SMART_seq_3)
+#write.table(SMART_seq_3, "SMART_seq_3.txt", row.names=FALSE, col.names = TRUE, quote = FALSE, sep = '\t')
+
+'''
+#check that positions are calculated correctly
+a<- SMART_seq_1[1,5]
+typeof(a)
+b<- c(a)
+str_sub(b, start = 288, end = 300)
+cat(SMART_seq_1[1,6]) #last elements: RPSFAETHQAF
+str_sub(b, start = 535, end = 539) #[1] "THQAF"
+'''
+```
+
+
+Now we need to match the SMART info with COSMIC dataset
+COSMIC provides no uniprot id, therefore, we need to assign to the table manually, so it matches the SMART table and will be more useful to work with in the future, e.g. parse through mechismo etc. 
+
+```{r, warning=FALSE}
+#identified tyrosine kinases for the analysis from COSMIC
+TyrKinNames
+length(TyrKinNames) #14
+
+#from our manual analysis (see above)
+TyrKin_for_analysis_names_cosmic<- read.table(file = 'TyrKin_for_analysis_names_cosmic.txt', sep = '\t', header = FALSE)
+
+TyrKin_for_analysis_names_cosmic_clean<- TyrKin_for_analysis_names_cosmic %>% separate(V1, c('Gene_name', 'rest'), sep = ' ') #%>% separate(rest, c('rest_1', 'uniprot_id'), sep = 32) %>% select(Gene_name, uniprot_id) %>% filter(Gene_name %in% TyrKinNames)
+
+#nchar('https://www.uniprot.org/uniprot/') #32
+#write.table(TyrKin_for_analysis_names_cosmic_clean, 'TyrKin_for_analysis_names_cosmic_clean.txt', sep = '\t', row.names=FALSE, col.names = TRUE, quote = FALSE)
+
+TyrKin_for_analysis_names_cosmic_final_clean<- TyrKin_for_analysis_names_cosmic_clean %>%  separate(rest, c('link', 'uniprot_id_kinase'), sep = 'uniprot/') %>% dplyr::select(Gene_name, uniprot_id_kinase) %>% drop_na()
+head(TyrKin_for_analysis_names_cosmic_final_clean)
+#TyrKin_for_analysis_names_cosmic
+```
+Now, as a lot of the transcripts within the COSMIC are noncanonical sequences, they need to be checked manually, so the positioning within an alignment should match
+```{r}
+tyr_kin<- cosmic_clean_tyr_kin %>% select(Gene) %>% unique()
+tyr_kin
+TyrKin_for_analysis_names_cosmic_final_clean_1 <- TyrKin_for_analysis_names_cosmic_final_clean %>% filter(Gene_name %in% tyr_kin$Gene)
+TyrKin_for_analysis_names_cosmic_final_clean_1 %>% arrange(uniprot_id_kinase)
+```
+```{r}
+SMART_seq_4 <- SMART_seq_3 %>% separate(uniprot_id, c('uniprot_ID', 'isoform_nr'), sep = '-', remove = FALSE )
+SMART_seq_4 %>% filter(uniprot_ID %in% TyrKin_for_analysis_names_cosmic_final_clean_1$uniprot_id_kinase | uniprot_ID == 'P00533'| uniprot_ID == 'P21802'| uniprot_ID == 'A9UF07') %>% arrange(uniprot_ID) %>% filter(uniprot_id != 'P36888-2'  & uniprot_id != 'P22455-2')
+```
+The issue is that most of the kinases do not match with the canonical uniprot ids, as well as simply not present within SMART database. 
+For ABL1, KIT, MET, PDGFRA, FGFR1 the sequences from the uniprot were compared to those found in smart similar sequences. MSA has been run. 
+
+Comparing the isoforms of transcripts gives following:
+
+sp|P00519|ABL1_HUMAN A9UF02|A9UF02_HUMAN 
+Q9UM73|ALK_HUMAN 
+sp|Q06187|BTK_HUMAN smart|TyrKc-uniprot|Q06187-2|Q06
+smart|TyrKc-uniprot|P00533|EGFR
+smart|TyrKc-uniprot|P04626|ERBB2
+
+smart|TyrKc-uniprot|P11362-21|P1 = sp|P11362|FGFR1_HUMAN  
+
+```{r}
+cosmic_clean_tyr_kin
+```
+
+
+
+
+
+
+
+
+```{r}
+getwd()
+
+FINAL_MATCHED_SEQ_MUT_MECHISMO<-read.table(file = '/Users/anastasia/Desktop/Job/FINAL_MATCHED_SEQ_MUT_MECHISMO.txt', sep = ',', header = TRUE)
+FINAL_MATCHED_SEQ_MUT_MECHISMO
+FULL_ALI_KD_WHOLE_DIFF_ALPHA<- read.table(file = '/Users/anastasia/Desktop/Job/FULL_ALI_KD_WHOLE_DIFF_ALPHA.txt', sep = ',', header = TRUE)
+FULL_ALI_KD_WHOLE_DIFF_ALPHA
+```
+
+DGKLYVSSESRFNTLAELVHHHSTVADGLITTLHYPAPKRNKPTVYGVSPNYDKWEMERT
+```{r}
+
+```
+
+sp|P00519|ABL1_HUMAN smart|TyrKc-uniprot|A9UF07|A9UF0
+```{r}
+ABL1<- cosmic_clean_tyr_kin %>% filter(Gene == 'ABL1' & Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+ABL1_pos
+ABL1_pos<- ABL1 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-260) #position till KD start
+```
+
+```{r}
+nchar('***********************************************************************')
+```
+
+ABL1_ENST00000318560  smart|TyrKc-uniprot|A9UF07|A9UF0
+```{r}
+ABL1_ENST00000318560<- cosmic_clean_tyr_kin %>% filter(Gene == 'ABL1' & Census.Gene == 'No') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+ABL1_ENST00000318560
+ABL1_ENST00000318560_pos
+ABL1_ENST00000318560_pos <- ABL1_ENST00000318560 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-241)
+```
+```{r}
+#ALK_ENST00000642122
+nchar('-----------------------------------------------') #47
+nchar('******************************************************')
+ALK_ENST00000642122 <- cosmic_clean_tyr_kin %>% filter(Gene == 'ALK' & Transcript.Info== 'ENST00000642122') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+ALK_ENST00000642122
+ALK_ENST00000642122_pos<- ALK_ENST00000642122 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-47)
+ALK_ENST00000642122_pos
+```
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-045100-0313-62591153-p2m 
+98	ALK	ENST00000618119
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-045125-0922-32957380-p2m
+```{r}
+nchar('*****************************************')
+ALK_ENST00000618119 <- cosmic_clean_tyr_kin %>% filter(Gene == 'ALK' & Transcript.Info== 'ENST00000618119') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+ALK_ENST00000618119_pos
+ALK_ENST00000618119_pos<- ALK_ENST00000618119 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-738)
+```
+ALK 
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-045156-0742-14305953-p1m
+```{r}
+nchar('*****************************************')
+ALK <- cosmic_clean_tyr_kin %>% filter(Gene == 'ALK' & Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+ALK_pos
+ALK_pos<- ALK %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-1115)
+```
+
+
+114	BTK	ENST00000308731
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-050711-0040-10535811-p2m
+```{r}
+nchar('-----------------------------------------')
+BTK_ENST00000308731 <- cosmic_clean_tyr_kin %>% filter(Gene == 'BTK' & Transcript.Info == 'ENST00000308731') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+BTK_ENST00000308731
+BTK_ENST00000308731_pos
+BTK_ENST00000308731_pos<- BTK_ENST00000308731 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-401)
+```
+
+115	BTK	ENST00000618050	
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-051043-0353-98578025-p2m 
+```{r}
+nchar('-----------------------------------------')
+BTK_ENST00000618050	 <- cosmic_clean_tyr_kin %>% filter(Gene == 'BTK' & Transcript.Info == 'ENST00000618050') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+BTK_ENST00000618050	
+BTK_ENST00000618050_pos
+BTK_ENST00000618050_pos<- BTK_ENST00000618050	 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-401)
+```
+
+BTK
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-051323-0452-17103158-p2m
+```{r}
+nchar('---------------')
+BTK <- cosmic_clean_tyr_kin %>% filter(Gene == 'BTK' & Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+BTK
+BTK_pos
+BTK_pos<- BTK	 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-435)
+```
+
+
+168	EGFR	ENST00000455089	
+```{r}
+nchar('------')
+EGFR_ENST00000455089	 <- cosmic_clean_tyr_kin %>% filter(Gene == 'EGFR' & Transcript.Info == 'ENST00000455089') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+EGFR_ENST00000455089
+EGFR_ENST00000455089_pos
+EGFR_ENST00000455089_pos<- EGFR_ENST00000455089	 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-666)
+```
+
+
+169	EGFR	ENST00000454757
+
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-052211-0813-99565761-p2m
+```{r}
+nchar('------')
+EGFR_ENST00000454757	 <- cosmic_clean_tyr_kin %>% filter(Gene == 'EGFR' & Transcript.Info == 'ENST00000454757') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+EGFR_ENST00000454757
+EGFR_ENST00000454757_pos
+EGFR_ENST00000454757_pos<- EGFR_ENST00000454757	 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-666)
+```
+EGFR canonical
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-052449-0233-80207019-p2m
+```{r}
+nchar('---------------------------------------------------')
+EGFR	 <- cosmic_clean_tyr_kin %>% filter(Gene == 'EGFR' & Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+EGFR
+EGFR_pos
+EGFR_pos<- EGFR	 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-711)
+```
+```{r}
+cosmic_clean_tyr_kin %>% filter(Gene == 'ERBB2')
+ERBB2	 <- cosmic_clean_tyr_kin %>% filter(Gene == 'ERBB2' & Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+ERBB2	
+ERBB2_pos
+ERBB2_pos<- ERBB2 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-719)
+```
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-052908-0568-39593828-p1m 
+```{r}
+nchar('******************************')
+```
+
+
+309	ERBB2	ENST00000445658	
+
+310	ERBB2	ENST00000406381		
+311	ERBB2	ENST00000584601		
+312	ERBB2	ENST00000541774		
+313	ERBB2	ENST00000584450
+
+FGFR1
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-053801-0120-93940682-p2m 
+```{r}
+FGFR1	 <- cosmic_clean_tyr_kin %>% filter(Gene == 'FGFR1', Census.Gene =='Yes' )#& Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+FGFR1
+FGFR1_pos
+FGFR1_pos<- FGFR1 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-488)
+```
+```{r}
+nchar('----------------------------')
+```
+
+
+315	FGFR1	ENST00000326324		
+316	FGFR1	ENST00000356207		
+317	FGFR1	ENST00000397103 https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=FGFR1_ENST00000397103#drug-resistance
+318	FGFR1	ENST00000335922		
+319	FGFR1	ENST00000397091		
+320	FGFR1	ENST00000532791		
+321	FGFR1	ENST00000397113		
+322	FGFR1	ENST00000397108		
+323	FGFR1	ENST00000447712	
+
+
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-054804-0124-36087884-p2m 
+
+```{r}
+FGFR2	 <- cosmic_clean_tyr_kin %>% filter(Gene == 'FGFR2' & Drug.Name!='INCB054828'& Drug.Name!='BGJ398', Census.Gene == 'Yes' )#, Census.Gene =='Yes' )#& Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+FGFR2
+FGFR2_pos
+FGFR2_pos<- FGFR2 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-481)
+```
+
+
+325	FGFR2	ENST00000478859		
+326	FGFR2	ENST00000356226		
+327	FGFR2	ENST00000369059
+328	FGFR2	ENST00000369061		
+329	FGFR2	ENST00000613048		
+330	FGFR2	ENST00000357555		
+331	FGFR2	ENST00000360144		
+338	FGFR2	ENST00000346997		
+339	FGFR2	ENST00000358487		
+341	FGFR2	ENST00000369056		
+342	FGFR2	ENST00000351936		
+344	FGFR2	ENST00000369060
+
+435	FGFR4	ENST00000393648		
+438	FGFR4	ENST00000393637		
+441	FGFR4	ENST00000502906	
+
+```{r}
+FGFR4	 <- cosmic_clean_tyr_kin %>% filter(Gene == 'FGFR4' & Census.Gene =='Yes' )#& Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+FGFR4
+FGFR4_pos
+FGFR4_pos<- FGFR4 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-466)
+```
+
+```{r}
+nchar('----------------------------------------------')
+```
+
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-055234-0137-5586036-p1m 
+	
+462	KDR	ENST00000263923	
+```{r}
+nchar('-----------------------------------------------------')
+KDR	 <- cosmic_clean_tyr_kin %>% filter(Gene == 'KDR') #& Census.Gene =='Yes' )#& Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+KDR
+KDR_pos
+KDR_pos<- KDR %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-833)
+```
+
+		
+516	MET	ENST00000397752
+```{r}
+nchar(z---------------)
+MET <- cosmic_clean_tyr_kin %>% filter(Gene == 'MET') #& Census.Gene =='Yes' )#& Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+MET
+MET_pos
+MET_pos<- MET %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-1095)
+```
+
+```{r}
+cosmic_clean_tyr_kin
+```
+FLT3
+```{r}
+nchar('---------')
+FLT3 <- cosmic_clean_tyr_kin %>% filter(Gene == 'FLT3') #& Census.Gene =='Yes' )#& Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+FLT3 
+FLT3_pos
+FLT3_pos<- FLT3 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-609)
+```
+
+JAK1 #weg
+```{r}
+JAK1 <- cosmic_clean_tyr_kin %>% filter(Gene == 'JAK1') #& Census.Gene =='Yes' )#& Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+JAK1
+JAK1_pos
+JAK1_pos<- JAK1 %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-1095)
+```
+
+KIT
+https://www.ebi.ac.uk/Tools/services/web/toolresult.ebi?jobId=muscle-I20220317-061640-0826-28208305-p2m
+```{r}
+nchar('------------------------------------------------')
+KIT <- cosmic_clean_tyr_kin %>% filter(Gene == 'KIT') #& Census.Gene =='Yes' )#& Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+KIT
+KIT_pos
+KIT_pos<-KIT%>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-588)
+```
+
+PDGFRA #weg
+```{r}
+PDGFRA <- cosmic_clean_tyr_kin %>% filter(Gene == 'PDGFRA') #& Census.Gene =='Yes' )#& Census.Gene == 'Yes') %>% rowwise()%>% filter(Orig_AA!=Mut_AA)
+PDGFRA
+PDGFRA_pos
+PDGFRA_pos<- PDGFRA %>% rowwise() %>% mutate(Mutation_within_KD = as.numeric(Position_AA)-1095)
+```
+
+Build together
+
+```{r}
+cosmic_clean_tyr_kin %>% select(Gene, Transcript.Info)%>%arrange(Gene) %>% unique()
+cosmic_clean_tyr_kin_KD_pos<- rbind(ABL1_pos, ABL1_ENST00000318560_pos, ALK_ENST00000642122_pos, ALK_pos,BTK_ENST00000308731_pos, BTK_ENST00000618050_pos, BTK_pos, EGFR_ENST00000454757_pos, EGFR_ENST00000455089_pos, EGFR_pos,  ERBB2_pos, FGFR1_pos, FGFR2_pos, FGFR4_pos, FLT3_pos, KDR_pos, MET_pos) #339 rows
+cosmic_clean_tyr_kin_KD_pos 
+```
+Merge the positions
+```{r}
+positions_collapsed<- 
+cosmic_clean_tyr_kin_KD_pos %>% select(Gene, Mutation_within_KD) %>% group_by(Gene) %>% summarise(positions_loc = paste(Mutation_within_KD, collapse = ','))
+
+write.csv(positions_collapsed,'positions_collapsed.csv' )
+```
+
+
+General stats
+```{r}
+a<- cosmic_whole %>% select(Gene.Name) %>% unique() %>%separate(Gene.Name, c('Gene', 'Transcript.Info'), sep = '_') %>% group_by(Gene) %>% count() %>% arrange(desc(n))
+view(a)
+a<- cosmic_whole %>% select(Gene.Name, AA.Mutation ) %>% group_by(Gene.Name) %>% count() %>% arrange(desc(n)) %>% unique()
+```
+Diseases
+```{r}
+view(cosmic_whole %>% separate(Gene.Name, c('Gene', 'Transcript.Info'), sep = '_') %>% select(Gene,Drug.Name ) %>% unique()%>%group_by(Gene) %>% summarise(diseases = paste(Drug.Name, collapse = ',')))
+
+```
+```{r}
+view(cosmic_whole %>% separate(Gene.Name, c('Gene', 'Transcript.Info'), sep = '_') %>% select(Gene,Drug.Name ) %>% unique()%>%group_by(Drug.Name) %>% summarise(diseases = paste(Gene, collapse = ',')))
+```
+
+
+Kinases
+```{r}
+view(cosmic_clean_tyr_kin_KD_pos %>% select(Gene, Drug.Name) %>% unique()%>%group_by(Gene) %>% summarise(Inhibitors = paste(Drug.Name, collapse = ',')))
+view(cosmic_clean_tyr_kin_KD_pos%>%select(Gene,Position_AA) %>% unique() %>%group_by(Gene) %>% count() %>% arrange(desc(n)))
+a
+```
+plot
+```{r}
+cosmic_clean_tyr_kin_KD_pos
+#%>% select(Orig_AA, Mut_AA) %>% #%>% gro
+cosmic_clean_tyr_kin_KD_pos$merged_aa_sub <- str_c(cosmic_clean_tyr_kin_KD_pos$Orig_AA, cosmic_clean_tyr_kin_KD_pos$Mut_AA )
+`
+view(as.data.frame(cosmic_clean_tyr_kin_KD_pos$merged_aa_sub) %>%group_by(cosmic_clean_tyr_kin_KD_pos$merged_aa_sub)%>% count()%>% arrange(desc(n)))
+```
+
+```{r}
+cosmic_clean_tyr_kin_KD_pos #%>% select(Gene, Transcript)
+```
+
+Inhibitors 
+
+Diseases
+
+Genetic substitutions
+
+Zygosity
+ABL1 
+Ph positive
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
