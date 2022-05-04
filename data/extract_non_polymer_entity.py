@@ -62,7 +62,7 @@ for pdb in pdbs:
 while threading.activeCount() > 1:
     pass
 
-l = 'PDB\tCompID\tCompName\n'
+l = '#PDB\tCompID\tCompName\n'
 for pdb in dic:
 	for compid in dic[pdb]:
 		l += pdb + '\t' + compid + '\t' + dic[pdb][compid] + '\n'
