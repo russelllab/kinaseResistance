@@ -2,14 +2,43 @@ from Bio.Data.IUPACData import protein_letters_3to1
 from Bio.PDB import *
 import numpy as np
 import os, sys
+import requests
 
 pdbs = {}
 ## Load inhibitors from HETATM file ############################################
+def checkName(code, name):
+    #print (code, name)
+    api_url = "https://data.rcsb.org/rest/v1/core/chemcomp/"+code
+    response = requests.get(api_url)
+    dic = response.json()
+    action = []
+    if 'rcsb_chem_comp_target' in dic:
+        targets = dic['rcsb_chem_comp_target']
+        for target in targets:
+            if 'target_actions' in target:
+                #print (target['target_actions'])
+                action += target['target_actions']
+        action = list(set(action))
+    alternateNames = []
+    if 'inhibitor' in action:
+        synonyms = dic['rcsb_chem_comp_synonyms']
+        #print (code, action)
+        for synonym in synonyms:
+            #print (synonym['comp_id'], synonym['name'])
+            alternateNames.append(synonym['name'])
+    #sys.exit()
+    return alternateNames
+
 class inhibitors:
     def __init__(self, code, name, pdb):
-        self.name = name
         self.code = code
         self.pdb = [pdb]
+        names = []
+        if 'inib' not in name:
+            names = checkName(code, name)
+        else:
+            names = [name]
+        self.names = ';'.join(names)
 
 inhibitorsDic = {}
 for line in open('HETATM.tsv', 'r'):
@@ -18,11 +47,11 @@ for line in open('HETATM.tsv', 'r'):
         inhibitorCode = line.split('\t')[1]
         inhibitorPDB = line.split('\t')[0]
         pdbs[inhibitorPDB] = []
-        if 'inib' in inhibitorName:
-            if inhibitorCode not in inhibitorsDic:
-                inhibitorsDic[inhibitorCode] = inhibitors(inhibitorCode, inhibitorName, inhibitorPDB)
-            else:
-                inhibitorsDic[inhibitorCode].pdb.append(inhibitorPDB)
+        if inhibitorCode not in inhibitorsDic:
+            inhibitorsDic[inhibitorCode] = inhibitors(inhibitorCode, inhibitorName, inhibitorPDB)
+        else:
+            inhibitorsDic[inhibitorCode].pdb.append(inhibitorPDB)
+sys.exit()
 ########################################################################################
 
 
@@ -35,7 +64,7 @@ for line in open('PF07714_pdb_chain_pfam.tsv', 'r'):
 ########################################################################################
 
 
-def run(pdb, given_chain, given_ligand, ligand_name, l):
+def run(pdb, given_chain, given_ligand, ligand_names, l):
     tempdir = ''
     #pdb = '5MO4'
     format = 'cif'
@@ -98,7 +127,7 @@ def run(pdb, given_chain, given_ligand, ligand_name, l):
                                             protein_letters_3to1[residue1.get_resname()] +'\t'+\
                                             str(residue1.id[1]) +'\t'+\
                                             residue2.get_resname() +'\t'+\
-                                            ligand_name +'\t'+\
+                                            ';'.join(ligand_name) +'\t'+\
                                             str(residue2.id[1]) +'\t'+\
                                             str(distance) + '\n'
                                             #closest_residue = residueA2.id[1]
@@ -108,10 +137,10 @@ def run(pdb, given_chain, given_ligand, ligand_name, l):
         #sys.exit()
     return l
 
-l = '#PDB\tChain\tAA\taaKin\tposKin\tcodeInhib\tnameInhib\tposInhib\tDistance\n'
+l = '#PDB\tChain\tAA\taaKin\tposKin\tcodeInhib\tnamesInhib\tposInhib\tDistance\n'
 for inhibitorCode in inhibitorsDic:
     for pdb in inhibitorsDic[inhibitorCode].pdb:
         for chain in pdbs[pdb]:
-            l = run(pdb, chain, inhibitorCode, inhibitorsDic[inhibitorCode].name, l)
+            l = run(pdb, chain, inhibitorCode, inhibitorsDic[inhibitorCode].names, l)
             #sys.exit()
 open('interface.tsv', 'w').write(l)

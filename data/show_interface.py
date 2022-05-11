@@ -1,6 +1,13 @@
 #!/usr/bin/python3
+
+'''
+This script maps drug resistance mutations in kinases
+to 3D structure available from PDB
+'''
+
 from Bio.PDB import *
 import os, sys, gzip
+from pymol import cmd
 
 def plot(acc, pdb, givenChain, inhibitor):
     if os.path.isfile(acc+'.fasta') == False:
@@ -68,6 +75,9 @@ def plot(acc, pdb, givenChain, inhibitor):
                 #open(pdb+'_'+chain.id+'.fasta', 'w').write(fasta)
                 break
 
+    #print (fastaToAtom)
+    #sys.exit()
+
     interfaces = []
     for line in open('interface.tsv', 'r'):
         if line.split('\t')[0] == pdb and line.split('\t')[1] == givenChain and line.split('\t')[4] == inhibitor:
@@ -79,21 +89,22 @@ def plot(acc, pdb, givenChain, inhibitor):
             mechismoFormat = line.split(',')[2].replace('"', '')
             uniprot = mechismoFormat.split('/')[0]
             mutation = mechismoFormat.split('/')[1]
-            mutationPosition = mutation[1:-1]
+            mutationPosition = str(int(mutation[1:-1]) - 1)
             if uniprot == acc:
                 if mutationPosition in uniprotToFasta:
                     fastaPosition = uniprotToFasta[mutationPosition]
                     if fastaPosition in fastaToAtom:
                         atomPosition = fastaToAtom[fastaPosition]
                         resitancePositions.append(str(atomPosition))
+                        print (mutationPosition, fastaPosition, atomPosition)
 
-    '''
+    #sys.exit()
     print (resitancePositions)
     print (interfaces)
     print (fastaToAtom)
     print (uniprotToFasta)
-    sys.exit()
-    '''
+    #sys.exit()
+
     cmd.load(pdb+'.cif')
     cmd.color('grey', 'chain '+givenChain)
     cmd.color('yellow', 'resn '+inhibitor)
