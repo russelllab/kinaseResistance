@@ -36,19 +36,19 @@ for name in kins:
         if line[0] != '>':
             kins[name].uniprotSeq += line.replace('\n', '')
 
-## Write COSMIC and UniProt sequences, and run clustalo
+## Write COSMIC and UniProt sequences, and run muscle
 for name in kins:
     l = ''
     l += '>'+name+'_COSMIC\n'
     l += kins[name].cosmicSeq
     l += '\n>'+name+'_UniProt\n'
     l += kins[name].uniprotSeq
-    open(name+'_clustalo_input.fasta', 'w').write(l)
-    os.system('clustalo --force -i '+name+'_clustalo_input.fasta -o '+name+'_clustalo.aln')
+    open(name+'_muscle_input.fasta', 'w').write(l)
+    os.system('../../../../muscle -align '+name+'_muscle_input.fasta -output '+name+'_muscle.aln')
 
 ## Map COSMIC to UniProt sequences
 for name in kins:
-    for line in open(name+'_clustalo.aln', 'r'):
+    for line in open(name+'_muscle.aln', 'r'):
         if line[0] == '>':
             kinSource = line.split('>')[1].replace('\n', '').split('_')[1]
         else:
@@ -72,4 +72,4 @@ for name in kins:
         else:
             numCosmic += 1
 
-    open(name+'_clustalo_mappings.tsv', 'w').write(l)
+    open(name+'_muscle_mappings.tsv', 'w').write(l)

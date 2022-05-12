@@ -49,7 +49,7 @@ for line in open('../fasta_cosmic_kinases_for_alignment_full.fasta', 'r'):
                             seq += line.replace('\n', '')
                 #print (seq)
                 if seq!='':
-                    open(name+'_UniProt.fasta', 'w').write('>'+name+'_'+acc+'\n'+seq)
+                    open(name+'_UniProt.fasta', 'w').write('>'+name+'_'+acc+'_UniProt'+'\n'+seq)
             else:
                 print ('FASTA sequence not found for', name, acc)
         else:
