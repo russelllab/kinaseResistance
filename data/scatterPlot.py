@@ -163,6 +163,26 @@ for acc in accs:
 		exclPara = accs[acc].muts[mut].exclPara
 		homo = accs[acc].muts[mut].homo
 		
+		row = []
+		row.append(mut)
+		if accs[acc].muts[mut].resistance == True:
+			row.append('resistance')
+		elif accs[acc].muts[mut].activating == True:
+			row.append('activating')
+		elif accs[acc].muts[mut].deactivating == True:
+			row.append('deactivating')
+		elif accs[acc].muts[mut].neutral > 50:
+			row.append('neutral')
+		else:
+			continue
+			row.append(None)
+		row.append(neutral)		
+		row.append(ortho)
+		row.append(exclPara)
+		row.append(specPara)
+		row.append(hom)
+		data.append(row)
+		'''
 		for name, value in zip(['Orthologs', 'ExclParalogs', 'SpecParalogs', 'AllHomologs'],[ortho, exclPara, specPara, homo]):
 			row = []
 			row.append(mut)
@@ -177,28 +197,32 @@ for acc in accs:
 			else:
 				continue
 				row.append(None)
-			'''
-			row.append(neutral)		
-			row.append(ortho)
-			row.append(exclPara)
-			row.append(specPara)
-			row.append(hom)
-			'''
+			
+			#row.append(neutral)		
+			#row.append(ortho)
+			#row.append(exclPara)
+			#row.append(specPara)
+			#row.append(hom)
+			
 			row.append(name)
 			row.append(value)
 			data.append(row)
+		'''
 		if ortho != None and neutral != None:
 			print (acc, mut, accs[acc].muts[mut].neutral, accs[acc].muts[mut].ortho, accs[acc].muts[mut].activating)
 
-#df = pd.DataFrame(data, columns=['Mutations', 'Label', 'HomoSamples', 'Ortho', 'ExclPara', 'SpecPara', 'AllHomo'])
-df = pd.DataFrame(data, columns=['Mutations', 'Label', 'Type', 'Score'])
+df = pd.DataFrame(data, columns=['Mutations', 'Label', 'HomoSamples', 'Ortho', 'ExclPara', 'SpecPara', 'AllHomo'])
+#df = pd.DataFrame(data, columns=['Mutations', 'Label', 'Type', 'Score'])
 print (df)
 #g = sns.FacetGrid(df, col="Type", hue="Label")
 #g.map_dataframe(sns.violinplot, x="Label", y="Score")
+sns.scatterplot(data=df, x="Ortho", y="SpecPara", hue="Label", palette="deep")
+'''
 g = sns.catplot(x="Label", y="Score",
                 col="Type",
                 data=df, kind="box",
                 height=4, aspect=.7);
+'''
 #ax = sns.boxplot(x="Label", y="Ortho", data=df)
-plt.savefig('violinplot.jpeg')
-#plt.show()
+#plt.savefig('scatterplot.jpeg')
+plt.show()
