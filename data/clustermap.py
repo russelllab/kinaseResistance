@@ -160,8 +160,10 @@ for line in open('../KA/kinase_resistant_mutation_count_by_ID_sample.csv', 'r'):
 				break
 
 data = []
+AllAlnPos = []
 for alnPos in aln:
 	print (alnPos, aln[alnPos].activating, aln[alnPos].deactivating, aln[alnPos].resistance)
+	AllAlnPos.append(alnPos)
 	row = []
 	if aln[alnPos].activating == True:
 		row.append(1)
@@ -179,8 +181,9 @@ for alnPos in aln:
 
 print (data)
 df = pd.DataFrame(data, columns=['Activating', 'Deactivating', 'Resistance'])
+df.index = AllAlnPos
 palette = sns.light_palette("seagreen", as_cmap=True)
 g = sns.clustermap(df, cmap=palette)
-plt.savefig('clusterMap.jpeg', format="jpeg", dpi=1000)
+plt.savefig('clusterMap.jpeg', format="jpeg", dpi=500)
 plt.show()
 sys.exit()
