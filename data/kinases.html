@@ -1,0 +1,5463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>KinHub</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/jquery/html5shiv.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/jquery/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/sorttable.js"></script>
+    </head>
+
+    <body style="padding-top: 70px;">
+        <!--Navigation-->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">KinHub<sub><i>beta</i></sub></a>
+              </div>
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html"><i class="fa fa-lg fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-list-ul"></i> Human Kinases</a></li>
+                    <li><a href="kinmap/index.html"><img src="img/kinmap-icon.png" height="18px"> KinMap</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+        <!--Main Content Start-->
+
+<div class="container">
+    <div class="row">
+        <h1>List of Human Kinases</h1>
+        <div class="table-responsive">
+            <table border="1" class="dataframe table table-bordered table-striped table-condensed sortable">
+  <thead>
+    <tr style="text-align: right;">
+      <th><abbr title="Primary kinase identifier used in KinMap">xName</abbr></th>
+      <th><abbr title="Manning et al., Science. 2002 298:1912-34.">Manning</abbr> Name
+        <!--<a href="http://www.ncbi.nlm.nih.gov/pubmed/12471243" target="_blank"><i class="fa fa-external-link"></i></a>-->
+      </th>
+      <th><abbr title="HUGO Gene Nomenclature Committee">HGNC</abbr> Name
+        <!--<a href="http://www.genenames.org/" target="_blank"><i class="fa fa-external-link"></i></a>-->
+      </th>
+      <th>Kinase Name</th>
+      <th>Group</th>
+      <th>Family</th>
+      <th>SubFamily</th>
+      <th>UniprotID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ABL1</td>
+      <td>ABL</td>
+      <td>ABL1</td>
+      <td>Tyrosine-protein kinase ABL1</td>
+      <td>TK</td>
+      <td>Abl</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P00519" target="_blank">P00519</a></td>
+    </tr>
+    <tr>
+      <td>ACK</td>
+      <td>ACK</td>
+      <td>TNK2</td>
+      <td>Activated CDC42 kinase 1</td>
+      <td>TK</td>
+      <td>Ack</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q07912" target="_blank">Q07912</a></td>
+    </tr>
+    <tr>
+      <td>ACTR2</td>
+      <td>ACTR2</td>
+      <td>ACVR2A</td>
+      <td>Activin receptor type-2A</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR2</td>
+      <td><a href="http://www.uniprot.org/uniprot/P27037" target="_blank">P27037</a></td>
+    </tr>
+    <tr>
+      <td>ACTR2B</td>
+      <td>ACTR2B</td>
+      <td>ACVR2B</td>
+      <td>Activin receptor type-2B</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR2</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13705" target="_blank">Q13705</a></td>
+    </tr>
+    <tr>
+      <td>ADCK4</td>
+      <td>ADCK4</td>
+      <td>ADCK4</td>
+      <td>Uncharacterized aarF domain-containing protein kinase 4</td>
+      <td>Atypical</td>
+      <td>ABC1</td>
+      <td>ABC1-A</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96D53" target="_blank">Q96D53</a></td>
+    </tr>
+    <tr>
+      <td>Trb1</td>
+      <td>Trb1</td>
+      <td>TRIB1</td>
+      <td>Tribbles homolog 1</td>
+      <td>CAMK</td>
+      <td>Trbl</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96RU8" target="_blank">Q96RU8</a></td>
+    </tr>
+    <tr>
+      <td>BRSK2</td>
+      <td>BRSK2</td>
+      <td>BRSK2</td>
+      <td>Serine/threonine-protein kinase BRSK2</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>BRSK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IWQ3" target="_blank">Q8IWQ3</a></td>
+    </tr>
+    <tr>
+      <td>Wnk2</td>
+      <td>Wnk2</td>
+      <td>WNK2</td>
+      <td>Serine/threonine-protein kinase WNK2</td>
+      <td>Other</td>
+      <td>WNK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y3S1" target="_blank">Q9Y3S1</a></td>
+    </tr>
+    <tr>
+      <td>AKT1</td>
+      <td>AKT1</td>
+      <td>AKT1</td>
+      <td>RAC-alpha serine/threonine-protein kinase</td>
+      <td>AGC</td>
+      <td>Akt</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P31749" target="_blank">P31749</a></td>
+    </tr>
+    <tr>
+      <td>AKT2</td>
+      <td>AKT2</td>
+      <td>AKT2</td>
+      <td>RAC-beta serine/threonine-protein kinase</td>
+      <td>AGC</td>
+      <td>Akt</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P31751" target="_blank">P31751</a></td>
+    </tr>
+    <tr>
+      <td>AKT3</td>
+      <td>AKT3</td>
+      <td>AKT3</td>
+      <td>RAC-gamma serine/threonine-protein kinase</td>
+      <td>AGC</td>
+      <td>Akt</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y243" target="_blank">Q9Y243</a></td>
+    </tr>
+    <tr>
+      <td>CaMK1g</td>
+      <td>CaMK1g</td>
+      <td>CAMK1G</td>
+      <td>Calcium/calmodulin-dependent protein kinase type 1G</td>
+      <td>CAMK</td>
+      <td>CAMK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96NX5" target="_blank">Q96NX5</a></td>
+    </tr>
+    <tr>
+      <td>ALK</td>
+      <td>ALK</td>
+      <td>ALK</td>
+      <td>ALK tyrosine kinase receptor</td>
+      <td>TK</td>
+      <td>ALK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UM73" target="_blank">Q9UM73</a></td>
+    </tr>
+    <tr>
+      <td>ALK1</td>
+      <td>ALK1</td>
+      <td>ACVRL1</td>
+      <td>Serine/threonine-protein kinase receptor R3</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR1</td>
+      <td><a href="http://www.uniprot.org/uniprot/P37023" target="_blank">P37023</a></td>
+    </tr>
+    <tr>
+      <td>ALK2</td>
+      <td>ALK2</td>
+      <td>ACVR1</td>
+      <td>Activin receptor type-1</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR1</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q04771" target="_blank">Q04771</a></td>
+    </tr>
+    <tr>
+      <td>BMPR1A</td>
+      <td>BMPR1A</td>
+      <td>BMPR1A</td>
+      <td>Bone morphogenetic protein receptor type-1A</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR1</td>
+      <td><a href="http://www.uniprot.org/uniprot/P36894" target="_blank">P36894</a></td>
+    </tr>
+    <tr>
+      <td>ALK4</td>
+      <td>ALK4</td>
+      <td>ACVR1B</td>
+      <td>Activin receptor type-1B</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR1</td>
+      <td><a href="http://www.uniprot.org/uniprot/P36896" target="_blank">P36896</a></td>
+    </tr>
+    <tr>
+      <td>TGFbR1</td>
+      <td>TGFbR1</td>
+      <td>TGFBR1</td>
+      <td>TGF-beta receptor type-1</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR1</td>
+      <td><a href="http://www.uniprot.org/uniprot/P36897" target="_blank">P36897</a></td>
+    </tr>
+    <tr>
+      <td>BMPR1B</td>
+      <td>BMPR1B</td>
+      <td>BMPR1B</td>
+      <td>Bone morphogenetic protein receptor type-1B</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR1</td>
+      <td><a href="http://www.uniprot.org/uniprot/O00238" target="_blank">O00238</a></td>
+    </tr>
+    <tr>
+      <td>AMPKa1</td>
+      <td>AMPKa1</td>
+      <td>PRKAA1</td>
+      <td>5'-AMP-activated protein kinase catalytic subunit alpha-1</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>AMPK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13131" target="_blank">Q13131</a></td>
+    </tr>
+    <tr>
+      <td>AMPKa2</td>
+      <td>AMPKa2</td>
+      <td>PRKAA2</td>
+      <td>5'-AMP-activated protein kinase catalytic subunit alpha-2</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>AMPK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P54646" target="_blank">P54646</a></td>
+    </tr>
+    <tr>
+      <td>ANPa</td>
+      <td>ANPa</td>
+      <td>NPR1</td>
+      <td>Atrial natriuretic peptide receptor 1</td>
+      <td>RGC</td>
+      <td>RGC</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P16066" target="_blank">P16066</a></td>
+    </tr>
+    <tr>
+      <td>ANPb</td>
+      <td>ANPb</td>
+      <td>NPR2</td>
+      <td>Atrial natriuretic peptide receptor 2</td>
+      <td>RGC</td>
+      <td>RGC</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P20594" target="_blank">P20594</a></td>
+    </tr>
+    <tr>
+      <td>ARAF</td>
+      <td>ARAF</td>
+      <td>ARAF</td>
+      <td>Serine/threonine-protein kinase A-Raf</td>
+      <td>TKL</td>
+      <td>RAF</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P10398" target="_blank">P10398</a></td>
+    </tr>
+    <tr>
+      <td>ABL2</td>
+      <td>ARG</td>
+      <td>ABL2</td>
+      <td>Abelson tyrosine-protein kinase 2</td>
+      <td>TK</td>
+      <td>Abl</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P42684" target="_blank">P42684</a></td>
+    </tr>
+    <tr>
+      <td>ATM</td>
+      <td>ATM</td>
+      <td>ATM</td>
+      <td>Serine-protein kinase ATM</td>
+      <td>Atypical</td>
+      <td>PIKK</td>
+      <td>ATM</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13315" target="_blank">Q13315</a></td>
+    </tr>
+    <tr>
+      <td>ATR</td>
+      <td>ATR</td>
+      <td>ATR</td>
+      <td>Serine/threonine-protein kinase ATR</td>
+      <td>Atypical</td>
+      <td>PIKK</td>
+      <td>ATR</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13535" target="_blank">Q13535</a></td>
+    </tr>
+    <tr>
+      <td>AurC</td>
+      <td>AurC</td>
+      <td>AURKC</td>
+      <td>Aurora kinase C</td>
+      <td>Other</td>
+      <td>Aur</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UQB9" target="_blank">Q9UQB9</a></td>
+    </tr>
+    <tr>
+      <td>AXL</td>
+      <td>AXL</td>
+      <td>AXL</td>
+      <td>Tyrosine-protein kinase receptor UFO</td>
+      <td>TK</td>
+      <td>Axl</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P30530" target="_blank">P30530</a></td>
+    </tr>
+    <tr>
+      <td>BARK1</td>
+      <td>BARK1</td>
+      <td>ADRBK1</td>
+      <td>Beta-adrenergic receptor kinase 1</td>
+      <td>AGC</td>
+      <td>GRK</td>
+      <td>BARK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P25098" target="_blank">P25098</a></td>
+    </tr>
+    <tr>
+      <td>BCKDK</td>
+      <td>BCKDK</td>
+      <td>BCKDK</td>
+      <td>[3-methyl-2-oxobutanoate dehydrogenase [lipoamide]] kinase</td>
+      <td>Atypical</td>
+      <td>PDHK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O14874" target="_blank">O14874</a></td>
+    </tr>
+    <tr>
+      <td>GCK</td>
+      <td>GCK</td>
+      <td>MAP4K2</td>
+      <td>Mitogen-activated protein kinase kinase kinase kinase 2</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>KHS</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q12851" target="_blank">Q12851</a></td>
+    </tr>
+    <tr>
+      <td>BLK</td>
+      <td>BLK</td>
+      <td>BLK</td>
+      <td>Tyrosine-protein kinase Blk</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P51451" target="_blank">P51451</a></td>
+    </tr>
+    <tr>
+      <td>BRAF</td>
+      <td>BRAF</td>
+      <td>BRAF</td>
+      <td>Serine/threonine-protein kinase B-raf</td>
+      <td>TKL</td>
+      <td>RAF</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P15056" target="_blank">P15056</a></td>
+    </tr>
+    <tr>
+      <td>BRK</td>
+      <td>BRK</td>
+      <td>PTK6</td>
+      <td>Protein-tyrosine kinase 6</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13882" target="_blank">Q13882</a></td>
+    </tr>
+    <tr>
+      <td>BTK</td>
+      <td>BTK</td>
+      <td>BTK</td>
+      <td>Tyrosine-protein kinase BTK</td>
+      <td>TK</td>
+      <td>Tec</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q06187" target="_blank">Q06187</a></td>
+    </tr>
+    <tr>
+      <td>BUBR1</td>
+      <td>BUBR1</td>
+      <td>BUB1B</td>
+      <td>Mitotic checkpoint serine/threonine-protein kinase BUB1 beta</td>
+      <td>Other</td>
+      <td>BUB</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O60566" target="_blank">O60566</a></td>
+    </tr>
+    <tr>
+      <td>CDK7</td>
+      <td>CDK7</td>
+      <td>CDK7</td>
+      <td>Cyclin-dependent kinase 7</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK7</td>
+      <td><a href="http://www.uniprot.org/uniprot/P50613" target="_blank">P50613</a></td>
+    </tr>
+    <tr>
+      <td>CaMK1a</td>
+      <td>CaMK1a</td>
+      <td>CAMK1</td>
+      <td>Calcium/calmodulin-dependent protein kinase type 1</td>
+      <td>CAMK</td>
+      <td>CAMK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q14012" target="_blank">Q14012</a></td>
+    </tr>
+    <tr>
+      <td>CaMK2a</td>
+      <td>CaMK2a</td>
+      <td>CAMK2A</td>
+      <td>Calcium/calmodulin-dependent protein kinase type II subunit alpha</td>
+      <td>CAMK</td>
+      <td>CAMK2</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UQM7" target="_blank">Q9UQM7</a></td>
+    </tr>
+    <tr>
+      <td>CaMK2b</td>
+      <td>CaMK2b</td>
+      <td>CAMK2B</td>
+      <td>Calcium/calmodulin-dependent protein kinase type II subunit beta</td>
+      <td>CAMK</td>
+      <td>CAMK2</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13554" target="_blank">Q13554</a></td>
+    </tr>
+    <tr>
+      <td>CaMK2g</td>
+      <td>CaMK2g</td>
+      <td>CAMK2G</td>
+      <td>Calcium/calmodulin-dependent protein kinase (CaM kinase) II gamma</td>
+      <td>CAMK</td>
+      <td>CAMK2</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13555" target="_blank">Q13555</a></td>
+    </tr>
+    <tr>
+      <td>CaMK4</td>
+      <td>CaMK4</td>
+      <td>CAMK4</td>
+      <td>Calcium/calmodulin-dependent protein kinase type IV</td>
+      <td>CAMK</td>
+      <td>CAMK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16566" target="_blank">Q16566</a></td>
+    </tr>
+    <tr>
+      <td>VACAMKL</td>
+      <td>VACAMKL</td>
+      <td>CAMKV</td>
+      <td>CaM kinase-like vesicle-associated protein</td>
+      <td>CAMK</td>
+      <td>CAMK-Unique</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8NCB2" target="_blank">Q8NCB2</a></td>
+    </tr>
+    <tr>
+      <td>DCAMKL1</td>
+      <td>DCAMKL1</td>
+      <td>DCLK1</td>
+      <td>Serine/threonine-protein kinase DCLK1</td>
+      <td>CAMK</td>
+      <td>DCAMKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O15075" target="_blank">O15075</a></td>
+    </tr>
+    <tr>
+      <td>CASK</td>
+      <td>CASK</td>
+      <td>CASK</td>
+      <td>Peripheral plasma membrane protein CASK</td>
+      <td>CAMK</td>
+      <td>CASK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O14936" target="_blank">O14936</a></td>
+    </tr>
+    <tr>
+      <td>CDC2</td>
+      <td>CDC2</td>
+      <td>CDK1</td>
+      <td>Cyclin-dependent kinase 1</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDC2</td>
+      <td><a href="http://www.uniprot.org/uniprot/P06493" target="_blank">P06493</a></td>
+    </tr>
+    <tr>
+      <td>CDC7</td>
+      <td>CDC7</td>
+      <td>CDC7</td>
+      <td>Cell division cycle 7-related protein kinase</td>
+      <td>Other</td>
+      <td>CDC7</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O00311" target="_blank">O00311</a></td>
+    </tr>
+    <tr>
+      <td>CDK2</td>
+      <td>CDK2</td>
+      <td>CDK2</td>
+      <td>Cyclin-dependent kinase 2</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK2</td>
+      <td><a href="http://www.uniprot.org/uniprot/P24941" target="_blank">P24941</a></td>
+    </tr>
+    <tr>
+      <td>CDK3</td>
+      <td>CDK3</td>
+      <td>CDK3</td>
+      <td>Cyclin-dependent kinase 3</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK2</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q00526" target="_blank">Q00526</a></td>
+    </tr>
+    <tr>
+      <td>CDK4</td>
+      <td>CDK4</td>
+      <td>CDK4</td>
+      <td>Cyclin-dependent kinase 4</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK4</td>
+      <td><a href="http://www.uniprot.org/uniprot/P11802" target="_blank">P11802</a></td>
+    </tr>
+    <tr>
+      <td>CDK5</td>
+      <td>CDK5</td>
+      <td>CDK5</td>
+      <td>Cyclin-dependent kinase 5</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK5</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q00535" target="_blank">Q00535</a></td>
+    </tr>
+    <tr>
+      <td>CDK6</td>
+      <td>CDK6</td>
+      <td>CDK6</td>
+      <td>Cyclin-dependent kinase 6</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK4</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q00534" target="_blank">Q00534</a></td>
+    </tr>
+    <tr>
+      <td>CDK8</td>
+      <td>CDK8</td>
+      <td>CDK8</td>
+      <td>Cyclin-dependent kinase 8</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK8</td>
+      <td><a href="http://www.uniprot.org/uniprot/P49336" target="_blank">P49336</a></td>
+    </tr>
+    <tr>
+      <td>PKG1</td>
+      <td>PKG1</td>
+      <td>PRKG1</td>
+      <td>cGMP-dependent protein kinase</td>
+      <td>AGC</td>
+      <td>PKG</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13976" target="_blank">Q13976</a></td>
+    </tr>
+    <tr>
+      <td>PKG2</td>
+      <td>PKG2</td>
+      <td>PRKG2</td>
+      <td>cGMP-dependent protein kinase 2</td>
+      <td>AGC</td>
+      <td>PKG</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13237" target="_blank">Q13237</a></td>
+    </tr>
+    <tr>
+      <td>CHED</td>
+      <td>CHED</td>
+      <td>CDK13</td>
+      <td>Cyclin-dependent kinase 13</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CRK7</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q14004" target="_blank">Q14004</a></td>
+    </tr>
+    <tr>
+      <td>CHK1</td>
+      <td>CHK1</td>
+      <td>CHEK1</td>
+      <td>Serine/threonine-protein kinase Chk1</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>CHK1</td>
+      <td><a href="http://www.uniprot.org/uniprot/O14757" target="_blank">O14757</a></td>
+    </tr>
+    <tr>
+      <td>CHK2</td>
+      <td>CHK2</td>
+      <td>CHEK2</td>
+      <td>Serine/threonine-protein kinase Chk2</td>
+      <td>CAMK</td>
+      <td>RAD53</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O96017" target="_blank">O96017</a></td>
+    </tr>
+    <tr>
+      <td>CK1a</td>
+      <td>CK1a</td>
+      <td>CSNK1A1</td>
+      <td>Casein kinase I isoform alpha</td>
+      <td>CK1</td>
+      <td>CK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P48729" target="_blank">P48729</a></td>
+    </tr>
+    <tr>
+      <td>CK1d</td>
+      <td>CK1d</td>
+      <td>CSNK1D</td>
+      <td>Casein kinase I isoform delta</td>
+      <td>CK1</td>
+      <td>CK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P48730" target="_blank">P48730</a></td>
+    </tr>
+    <tr>
+      <td>CK1e</td>
+      <td>CK1e</td>
+      <td>CSNK1E</td>
+      <td>Casein kinase I isoform epsilon</td>
+      <td>CK1</td>
+      <td>CK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P49674" target="_blank">P49674</a></td>
+    </tr>
+    <tr>
+      <td>CK1g2</td>
+      <td>CK1g2</td>
+      <td>CSNK1G2</td>
+      <td>Casein kinase I isoform gamma-2</td>
+      <td>CK1</td>
+      <td>CK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P78368" target="_blank">P78368</a></td>
+    </tr>
+    <tr>
+      <td>CK1g3</td>
+      <td>CK1g3</td>
+      <td>CSNK1G3</td>
+      <td>Casein kinase I isoform gamma-3</td>
+      <td>CK1</td>
+      <td>CK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y6M4" target="_blank">Q9Y6M4</a></td>
+    </tr>
+    <tr>
+      <td>CK2a1</td>
+      <td>CK2a1</td>
+      <td>CSNK2A1</td>
+      <td>Casein kinase II subunit alpha</td>
+      <td>CMGC</td>
+      <td>CK2</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P68400" target="_blank">P68400</a></td>
+    </tr>
+    <tr>
+      <td>CK2a2</td>
+      <td>CK2a2</td>
+      <td>CSNK2A2</td>
+      <td>Casein kinase II subunit alpha'</td>
+      <td>CMGC</td>
+      <td>CK2</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P19784" target="_blank">P19784</a></td>
+    </tr>
+    <tr>
+      <td>CLK1</td>
+      <td>CLK1</td>
+      <td>CLK1</td>
+      <td>Dual specificity protein kinase CLK1</td>
+      <td>CMGC</td>
+      <td>CLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P49759" target="_blank">P49759</a></td>
+    </tr>
+    <tr>
+      <td>CLK2</td>
+      <td>CLK2</td>
+      <td>CLK2</td>
+      <td>Dual specificity protein kinase CLK2</td>
+      <td>CMGC</td>
+      <td>CLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P49760" target="_blank">P49760</a></td>
+    </tr>
+    <tr>
+      <td>CLK3</td>
+      <td>CLK3</td>
+      <td>CLK3</td>
+      <td>Dual specificity protein kinase CLK3</td>
+      <td>CMGC</td>
+      <td>CLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P49761" target="_blank">P49761</a></td>
+    </tr>
+    <tr>
+      <td>COT</td>
+      <td>COT</td>
+      <td>MAP3K8</td>
+      <td>Mitogen-activated protein kinase kinase kinase 8</td>
+      <td>STE</td>
+      <td>STE-Unique</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P41279" target="_blank">P41279</a></td>
+    </tr>
+    <tr>
+      <td>FMS</td>
+      <td>FMS</td>
+      <td>CSF1R</td>
+      <td>Macrophage colony-stimulating factor 1 receptor</td>
+      <td>TK</td>
+      <td>PDGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P07333" target="_blank">P07333</a></td>
+    </tr>
+    <tr>
+      <td>CSK</td>
+      <td>CSK</td>
+      <td>CSK</td>
+      <td>Tyrosine-protein kinase CSK</td>
+      <td>TK</td>
+      <td>Csk</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P41240" target="_blank">P41240</a></td>
+    </tr>
+    <tr>
+      <td>MARK3</td>
+      <td>MARK3</td>
+      <td>MARK3</td>
+      <td>MAP/microtubule affinity-regulating kinase 3</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>MARK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P27448" target="_blank">P27448</a></td>
+    </tr>
+    <tr>
+      <td>CYGD</td>
+      <td>CYGD</td>
+      <td>GUCY2D</td>
+      <td>Retinal guanylyl cyclase 1</td>
+      <td>RGC</td>
+      <td>RGC</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q02846" target="_blank">Q02846</a></td>
+    </tr>
+    <tr>
+      <td>CYGF</td>
+      <td>CYGF</td>
+      <td>GUCY2F</td>
+      <td>Retinal guanylyl cyclase 2</td>
+      <td>RGC</td>
+      <td>RGC</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P51841" target="_blank">P51841</a></td>
+    </tr>
+    <tr>
+      <td>DAPK1</td>
+      <td>DAPK1</td>
+      <td>DAPK1</td>
+      <td>Death-associated protein kinase 1</td>
+      <td>CAMK</td>
+      <td>DAPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P53355" target="_blank">P53355</a></td>
+    </tr>
+    <tr>
+      <td>DAPK2</td>
+      <td>DAPK2</td>
+      <td>DAPK2</td>
+      <td>Death-associated protein kinase 2</td>
+      <td>CAMK</td>
+      <td>DAPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UIK4" target="_blank">Q9UIK4</a></td>
+    </tr>
+    <tr>
+      <td>DLK</td>
+      <td>DLK</td>
+      <td>MAP3K12</td>
+      <td>Mitogen-activated protein kinase kinase kinase 12</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>LZK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q12852" target="_blank">Q12852</a></td>
+    </tr>
+    <tr>
+      <td>DMPK1</td>
+      <td>DMPK1</td>
+      <td>DMPK</td>
+      <td>Myotonin-protein kinase</td>
+      <td>AGC</td>
+      <td>DMPK</td>
+      <td>GEK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q09013" target="_blank">Q09013</a></td>
+    </tr>
+    <tr>
+      <td>DMPK2</td>
+      <td>DMPK2</td>
+      <td>CDC42BPG</td>
+      <td>Serine/threonine-protein kinase MRCK gamma</td>
+      <td>AGC</td>
+      <td>DMPK</td>
+      <td>GEK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6DT37" target="_blank">Q6DT37</a></td>
+    </tr>
+    <tr>
+      <td>DNAPK</td>
+      <td>DNAPK</td>
+      <td>PRKDC</td>
+      <td>DNA-dependent protein kinase catalytic subunit</td>
+      <td>Atypical</td>
+      <td>PIKK</td>
+      <td>DNAPK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P78527" target="_blank">P78527</a></td>
+    </tr>
+    <tr>
+      <td>DYRK1B</td>
+      <td>DYRK1B</td>
+      <td>DYRK1B</td>
+      <td>Dual specificity tyrosine-phosphorylation-regulated kinase 1B</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>DYRK1</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y463" target="_blank">Q9Y463</a></td>
+    </tr>
+    <tr>
+      <td>DYRK2</td>
+      <td>DYRK2</td>
+      <td>DYRK2</td>
+      <td>Dual specificity tyrosine-phosphorylation-regulated kinase 2</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>DYRK2</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q92630" target="_blank">Q92630</a></td>
+    </tr>
+    <tr>
+      <td>DYRK4</td>
+      <td>DYRK4</td>
+      <td>DYRK4</td>
+      <td>Dual specificity tyrosine-phosphorylation-regulated kinase 4</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>DYRK2</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NR20" target="_blank">Q9NR20</a></td>
+    </tr>
+    <tr>
+      <td>eEF2K</td>
+      <td>eEF2K</td>
+      <td>EEF2K</td>
+      <td>Eukaryotic elongation factor 2 kinase</td>
+      <td>Atypical</td>
+      <td>Alpha</td>
+      <td>eEF2K</td>
+      <td><a href="http://www.uniprot.org/uniprot/O00418" target="_blank">O00418</a></td>
+    </tr>
+    <tr>
+      <td>EGFR</td>
+      <td>EGFR</td>
+      <td>EGFR</td>
+      <td>Epidermal growth factor receptor</td>
+      <td>TK</td>
+      <td>EGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P00533" target="_blank">P00533</a></td>
+    </tr>
+    <tr>
+      <td>PKR</td>
+      <td>PKR</td>
+      <td>EIF2AK2</td>
+      <td>Interferon-induced</td>
+      <td>Other</td>
+      <td>PEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P19525" target="_blank">P19525</a></td>
+    </tr>
+    <tr>
+      <td>MARK2</td>
+      <td>MARK2</td>
+      <td>MARK2</td>
+      <td>Serine/threonine-protein kinase MARK2</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>MARK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q7KZI7" target="_blank">Q7KZI7</a></td>
+    </tr>
+    <tr>
+      <td>EphA1</td>
+      <td>EphA1</td>
+      <td>EPHA1</td>
+      <td>Ephrin type-A receptor 1</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P21709" target="_blank">P21709</a></td>
+    </tr>
+    <tr>
+      <td>EphA2</td>
+      <td>EphA2</td>
+      <td>EPHA2</td>
+      <td>Ephrin type-A receptor 2</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P29317" target="_blank">P29317</a></td>
+    </tr>
+    <tr>
+      <td>EphA3</td>
+      <td>EphA3</td>
+      <td>EPHA3</td>
+      <td>Ephrin type-A receptor 3</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P29320" target="_blank">P29320</a></td>
+    </tr>
+    <tr>
+      <td>EphA4</td>
+      <td>EphA4</td>
+      <td>EPHA4</td>
+      <td>Ephrin type-A receptor 4</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P54764" target="_blank">P54764</a></td>
+    </tr>
+    <tr>
+      <td>EphA5</td>
+      <td>EphA5</td>
+      <td>EPHA5</td>
+      <td>Ephrin type-A receptor 5</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P54756" target="_blank">P54756</a></td>
+    </tr>
+    <tr>
+      <td>EphA8</td>
+      <td>EphA8</td>
+      <td>EPHA8</td>
+      <td>Ephrin type-A receptor 8</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P29322" target="_blank">P29322</a></td>
+    </tr>
+    <tr>
+      <td>EphB1</td>
+      <td>EphB1</td>
+      <td>EPHB1</td>
+      <td>Ephrin type-B receptor 1</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P54762" target="_blank">P54762</a></td>
+    </tr>
+    <tr>
+      <td>EphB2</td>
+      <td>EphB2</td>
+      <td>EPHB2</td>
+      <td>Ephrin type-B receptor 2</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P29323" target="_blank">P29323</a></td>
+    </tr>
+    <tr>
+      <td>EphB3</td>
+      <td>EphB3</td>
+      <td>EPHB3</td>
+      <td>Ephrin type-B receptor 3</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P54753" target="_blank">P54753</a></td>
+    </tr>
+    <tr>
+      <td>EphB4</td>
+      <td>EphB4</td>
+      <td>EPHB4</td>
+      <td>Ephrin type-B receptor 4</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P54760" target="_blank">P54760</a></td>
+    </tr>
+    <tr>
+      <td>EphB6</td>
+      <td>EphB6</td>
+      <td>EPHB6</td>
+      <td>Ephrin type-B receptor 6</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O15197" target="_blank">O15197</a></td>
+    </tr>
+    <tr>
+      <td>Erk1</td>
+      <td>Erk1</td>
+      <td>MAPK3</td>
+      <td>Mitogen-activated protein kinase 3</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>ERK1</td>
+      <td><a href="http://www.uniprot.org/uniprot/P27361" target="_blank">P27361</a></td>
+    </tr>
+    <tr>
+      <td>Erk2</td>
+      <td>Erk2</td>
+      <td>MAPK1</td>
+      <td>Mitogen-activated protein kinase 1</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>ERK1</td>
+      <td><a href="http://www.uniprot.org/uniprot/P28482" target="_blank">P28482</a></td>
+    </tr>
+    <tr>
+      <td>Erk3</td>
+      <td>Erk3</td>
+      <td>MAPK6</td>
+      <td>Mitogen-activated protein kinase 6</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>ERK3</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16659" target="_blank">Q16659</a></td>
+    </tr>
+    <tr>
+      <td>Erk4</td>
+      <td>Erk4</td>
+      <td>MAPK4</td>
+      <td>Mitogen-activated protein kinase 4</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>ERK3</td>
+      <td><a href="http://www.uniprot.org/uniprot/P31152" target="_blank">P31152</a></td>
+    </tr>
+    <tr>
+      <td>FAK</td>
+      <td>FAK</td>
+      <td>PTK2</td>
+      <td>Focal adhesion kinase 1</td>
+      <td>TK</td>
+      <td>FAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q05397" target="_blank">Q05397</a></td>
+    </tr>
+    <tr>
+      <td>FER</td>
+      <td>FER</td>
+      <td>FER</td>
+      <td>Tyrosine-protein kinase Fer</td>
+      <td>TK</td>
+      <td>Fer</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P16591" target="_blank">P16591</a></td>
+    </tr>
+    <tr>
+      <td>FES</td>
+      <td>FES</td>
+      <td>FES</td>
+      <td>Tyrosine-protein kinase Fes/Fps</td>
+      <td>TK</td>
+      <td>Fer</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P07332" target="_blank">P07332</a></td>
+    </tr>
+    <tr>
+      <td>FGFR1</td>
+      <td>FGFR1</td>
+      <td>FGFR1</td>
+      <td>Fibroblast growth factor receptor 1</td>
+      <td>TK</td>
+      <td>FGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P11362" target="_blank">P11362</a></td>
+    </tr>
+    <tr>
+      <td>FGFR2</td>
+      <td>FGFR2</td>
+      <td>FGFR2</td>
+      <td>Fibroblast growth factor receptor 2</td>
+      <td>TK</td>
+      <td>FGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P21802" target="_blank">P21802</a></td>
+    </tr>
+    <tr>
+      <td>FGFR3</td>
+      <td>FGFR3</td>
+      <td>FGFR3</td>
+      <td>Fibroblast growth factor receptor 3</td>
+      <td>TK</td>
+      <td>FGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P22607" target="_blank">P22607</a></td>
+    </tr>
+    <tr>
+      <td>FGFR4</td>
+      <td>FGFR4</td>
+      <td>FGFR4</td>
+      <td>Fibroblast growth factor receptor 4</td>
+      <td>TK</td>
+      <td>FGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P22455" target="_blank">P22455</a></td>
+    </tr>
+    <tr>
+      <td>FGR</td>
+      <td>FGR</td>
+      <td>FGR</td>
+      <td>Tyrosine-protein kinase Fgr</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P09769" target="_blank">P09769</a></td>
+    </tr>
+    <tr>
+      <td>FLT3</td>
+      <td>FLT3</td>
+      <td>FLT3</td>
+      <td>Receptor-type tyrosine-protein kinase FLT3</td>
+      <td>TK</td>
+      <td>PDGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P36888" target="_blank">P36888</a></td>
+    </tr>
+    <tr>
+      <td>FLT1</td>
+      <td>FLT1</td>
+      <td>FLT1</td>
+      <td>Vascular endothelial growth factor receptor 1</td>
+      <td>TK</td>
+      <td>VEGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P17948" target="_blank">P17948</a></td>
+    </tr>
+    <tr>
+      <td>FLT4</td>
+      <td>FLT4</td>
+      <td>FLT4</td>
+      <td>Vascular endothelial growth factor receptor 3</td>
+      <td>TK</td>
+      <td>VEGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P35916" target="_blank">P35916</a></td>
+    </tr>
+    <tr>
+      <td>FRAP</td>
+      <td>FRAP</td>
+      <td>MTOR</td>
+      <td>Serine/threonine-protein kinase mTOR</td>
+      <td>Atypical</td>
+      <td>PIKK</td>
+      <td>FRAP</td>
+      <td><a href="http://www.uniprot.org/uniprot/P42345" target="_blank">P42345</a></td>
+    </tr>
+    <tr>
+      <td>FYN</td>
+      <td>FYN</td>
+      <td>FYN</td>
+      <td>Tyrosine-protein kinase Fyn</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P06241" target="_blank">P06241</a></td>
+    </tr>
+    <tr>
+      <td>GAK</td>
+      <td>GAK</td>
+      <td>GAK</td>
+      <td>Cyclin-G-associated kinase</td>
+      <td>Other</td>
+      <td>NAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O14976" target="_blank">O14976</a></td>
+    </tr>
+    <tr>
+      <td>GPRK4</td>
+      <td>GPRK4</td>
+      <td>GRK4</td>
+      <td>G protein-coupled receptor kinase 4</td>
+      <td>AGC</td>
+      <td>GRK</td>
+      <td>GRK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P32298" target="_blank">P32298</a></td>
+    </tr>
+    <tr>
+      <td>GPRK5</td>
+      <td>GPRK5</td>
+      <td>GRK5</td>
+      <td>G protein-coupled receptor kinase 5</td>
+      <td>AGC</td>
+      <td>GRK</td>
+      <td>GRK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P34947" target="_blank">P34947</a></td>
+    </tr>
+    <tr>
+      <td>GPRK6</td>
+      <td>GPRK6</td>
+      <td>GRK6</td>
+      <td>G protein-coupled receptor kinase 6</td>
+      <td>AGC</td>
+      <td>GRK</td>
+      <td>GRK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P43250" target="_blank">P43250</a></td>
+    </tr>
+    <tr>
+      <td>Trb2</td>
+      <td>Trb2</td>
+      <td>TRIB2</td>
+      <td>Tribbles homolog 2</td>
+      <td>CAMK</td>
+      <td>Trbl</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q92519" target="_blank">Q92519</a></td>
+    </tr>
+    <tr>
+      <td>GSK3A</td>
+      <td>GSK3A</td>
+      <td>GSK3A</td>
+      <td>Glycogen synthase kinase-3 alpha</td>
+      <td>CMGC</td>
+      <td>GSK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P49840" target="_blank">P49840</a></td>
+    </tr>
+    <tr>
+      <td>GSK3B</td>
+      <td>GSK3B</td>
+      <td>GSK3B</td>
+      <td>Glycogen synthase kinase-3 beta</td>
+      <td>CMGC</td>
+      <td>GSK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P49841" target="_blank">P49841</a></td>
+    </tr>
+    <tr>
+      <td>HCK</td>
+      <td>HCK</td>
+      <td>HCK</td>
+      <td>Tyrosine-protein kinase HCK</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P08631" target="_blank">P08631</a></td>
+    </tr>
+    <tr>
+      <td>ErbB2</td>
+      <td>HER2/ErbB2</td>
+      <td>ERBB2</td>
+      <td>Receptor tyrosine-protein kinase erbB-2</td>
+      <td>TK</td>
+      <td>EGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P04626" target="_blank">P04626</a></td>
+    </tr>
+    <tr>
+      <td>ErbB3</td>
+      <td>HER3/ErbB3</td>
+      <td>ERBB3</td>
+      <td>Receptor tyrosine-protein kinase erbB-3</td>
+      <td>TK</td>
+      <td>EGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P21860" target="_blank">P21860</a></td>
+    </tr>
+    <tr>
+      <td>ErbB4</td>
+      <td>HER4/ErbB4</td>
+      <td>ERBB4</td>
+      <td>Receptor tyrosine-protein kinase erbB-4</td>
+      <td>TK</td>
+      <td>EGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15303" target="_blank">Q15303</a></td>
+    </tr>
+    <tr>
+      <td>HIPK1</td>
+      <td>HIPK1</td>
+      <td>HIPK1</td>
+      <td>Homeodomain-interacting protein kinase 1</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>HIPK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86Z02" target="_blank">Q86Z02</a></td>
+    </tr>
+    <tr>
+      <td>HPK1</td>
+      <td>HPK1</td>
+      <td>MAP4K1</td>
+      <td>Mitogen-activated protein kinase kinase kinase kinase 1</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>KHS</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q92918" target="_blank">Q92918</a></td>
+    </tr>
+    <tr>
+      <td>HSER</td>
+      <td>HSER</td>
+      <td>GUCY2C</td>
+      <td>Heat-stable enterotoxin receptor</td>
+      <td>RGC</td>
+      <td>RGC</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P25092" target="_blank">P25092</a></td>
+    </tr>
+    <tr>
+      <td>IGF1R</td>
+      <td>IGF1R</td>
+      <td>IGF1R</td>
+      <td>Insulin-like growth factor 1 receptor</td>
+      <td>TK</td>
+      <td>InsR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P08069" target="_blank">P08069</a></td>
+    </tr>
+    <tr>
+      <td>IKKa</td>
+      <td>IKKa</td>
+      <td>CHUK</td>
+      <td>Inhibitor of nuclear factor kappa-B kinase subunit alpha</td>
+      <td>Other</td>
+      <td>IKK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O15111" target="_blank">O15111</a></td>
+    </tr>
+    <tr>
+      <td>IKKb</td>
+      <td>IKKb</td>
+      <td>IKBKB</td>
+      <td>Inhibitor of nuclear factor kappa-B kinase subunit beta</td>
+      <td>Other</td>
+      <td>IKK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O14920" target="_blank">O14920</a></td>
+    </tr>
+    <tr>
+      <td>ILK</td>
+      <td>ILK</td>
+      <td>ILK</td>
+      <td>Integrin-linked protein kinase</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>ILK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13418" target="_blank">Q13418</a></td>
+    </tr>
+    <tr>
+      <td>INSR</td>
+      <td>INSR</td>
+      <td>INSR</td>
+      <td>Insulin receptor</td>
+      <td>TK</td>
+      <td>InsR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P06213" target="_blank">P06213</a></td>
+    </tr>
+    <tr>
+      <td>IRAK1</td>
+      <td>IRAK1</td>
+      <td>IRAK1</td>
+      <td>Interleukin-1 receptor-associated kinase 1</td>
+      <td>TKL</td>
+      <td>IRAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P51617" target="_blank">P51617</a></td>
+    </tr>
+    <tr>
+      <td>IRAK2</td>
+      <td>IRAK2</td>
+      <td>IRAK2</td>
+      <td>Interleukin-1 receptor-associated kinase-like 2</td>
+      <td>TKL</td>
+      <td>IRAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O43187" target="_blank">O43187</a></td>
+    </tr>
+    <tr>
+      <td>IRAK3</td>
+      <td>IRAK3</td>
+      <td>IRAK3</td>
+      <td>Interleukin-1 receptor-associated kinase 3</td>
+      <td>TKL</td>
+      <td>IRAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y616" target="_blank">Q9Y616</a></td>
+    </tr>
+    <tr>
+      <td>IRE1</td>
+      <td>IRE1</td>
+      <td>ERN1</td>
+      <td>Serine/threonine-protein kinase/endoribonuclease IRE1</td>
+      <td>Other</td>
+      <td>IRE</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O75460" target="_blank">O75460</a></td>
+    </tr>
+    <tr>
+      <td>IRR</td>
+      <td>IRR</td>
+      <td>INSRR</td>
+      <td>Insulin receptor-related protein</td>
+      <td>TK</td>
+      <td>InsR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P14616" target="_blank">P14616</a></td>
+    </tr>
+    <tr>
+      <td>ITK</td>
+      <td>ITK</td>
+      <td>ITK</td>
+      <td>Tyrosine-protein kinase ITK/TSK</td>
+      <td>TK</td>
+      <td>Tec</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q08881" target="_blank">Q08881</a></td>
+    </tr>
+    <tr>
+      <td>JAK1</td>
+      <td>JAK1</td>
+      <td>JAK1</td>
+      <td>Tyrosine-protein kinase JAK1</td>
+      <td>TK</td>
+      <td>Jak</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P23458" target="_blank">P23458</a></td>
+    </tr>
+    <tr>
+      <td>JAK2</td>
+      <td>JAK2</td>
+      <td>JAK2</td>
+      <td>Tyrosine-protein kinase JAK2</td>
+      <td>TK</td>
+      <td>Jak</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O60674" target="_blank">O60674</a></td>
+    </tr>
+    <tr>
+      <td>JAK3</td>
+      <td>JAK3</td>
+      <td>JAK3</td>
+      <td>Tyrosine-protein kinase JAK3</td>
+      <td>TK</td>
+      <td>Jak</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P52333" target="_blank">P52333</a></td>
+    </tr>
+    <tr>
+      <td>JNK1</td>
+      <td>JNK1</td>
+      <td>MAPK8</td>
+      <td>Mitogen-activated protein kinase 8</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>JNK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P45983" target="_blank">P45983</a></td>
+    </tr>
+    <tr>
+      <td>JNK2</td>
+      <td>JNK2</td>
+      <td>MAPK9</td>
+      <td>Mitogen-activated protein kinase 9</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>JNK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P45984" target="_blank">P45984</a></td>
+    </tr>
+    <tr>
+      <td>JNK3</td>
+      <td>JNK3</td>
+      <td>MAPK10</td>
+      <td>Mitogen-activated protein kinase 10</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>JNK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P53779" target="_blank">P53779</a></td>
+    </tr>
+    <tr>
+      <td>KHS1</td>
+      <td>KHS1</td>
+      <td>MAP4K5</td>
+      <td>Mitogen-activated protein kinase kinase kinase kinase 5</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>KHS</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y4K4" target="_blank">Q9Y4K4</a></td>
+    </tr>
+    <tr>
+      <td>IKKe</td>
+      <td>IKKe</td>
+      <td>IKBKE</td>
+      <td>Inhibitor of nuclear factor kappa-B kinase subunit epsilon</td>
+      <td>Other</td>
+      <td>IKK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q14164" target="_blank">Q14164</a></td>
+    </tr>
+    <tr>
+      <td>NuaK1</td>
+      <td>NuaK1</td>
+      <td>NUAK1</td>
+      <td>NUAK family SNF1-like kinase 1</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>NuaK</td>
+      <td><a href="http://www.uniprot.org/uniprot/O60285" target="_blank">O60285</a></td>
+    </tr>
+    <tr>
+      <td>MAST3</td>
+      <td>MAST3</td>
+      <td>MAST3</td>
+      <td>Microtubule-associated serine/threonine-protein kinase 3</td>
+      <td>AGC</td>
+      <td>MAST</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O60307" target="_blank">O60307</a></td>
+    </tr>
+    <tr>
+      <td>Fused</td>
+      <td>Fused</td>
+      <td>STK36</td>
+      <td>Serine/threonine-protein kinase 36</td>
+      <td>Other</td>
+      <td>ULK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NRP7" target="_blank">Q9NRP7</a></td>
+    </tr>
+    <tr>
+      <td>PIM3</td>
+      <td>PIM3</td>
+      <td>PIM3</td>
+      <td>Serine/threonine-protein kinase pim-3</td>
+      <td>CAMK</td>
+      <td>PIM</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86V86" target="_blank">Q86V86</a></td>
+    </tr>
+    <tr>
+      <td>KIT</td>
+      <td>KIT</td>
+      <td>KIT</td>
+      <td>Mast/stem cell growth factor receptor Kit</td>
+      <td>TK</td>
+      <td>PDGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P10721" target="_blank">P10721</a></td>
+    </tr>
+    <tr>
+      <td>CDKL2</td>
+      <td>CDKL2</td>
+      <td>CDKL2</td>
+      <td>Cyclin-dependent kinase-like 2</td>
+      <td>CMGC</td>
+      <td>CDKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q92772" target="_blank">Q92772</a></td>
+    </tr>
+    <tr>
+      <td>CDKL1</td>
+      <td>CDKL1</td>
+      <td>CDKL1</td>
+      <td>Cyclin-dependent kinase-like 1</td>
+      <td>CMGC</td>
+      <td>CDKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q00532" target="_blank">Q00532</a></td>
+    </tr>
+    <tr>
+      <td>KSR1</td>
+      <td>KSR1</td>
+      <td>KSR1</td>
+      <td>Kinase suppressor of Ras 1</td>
+      <td>TKL</td>
+      <td>RAF</td>
+      <td>KSR</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IVT5" target="_blank">Q8IVT5</a></td>
+    </tr>
+    <tr>
+      <td>LCK</td>
+      <td>LCK</td>
+      <td>LCK</td>
+      <td>Tyrosine-protein kinase Lck</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P06239" target="_blank">P06239</a></td>
+    </tr>
+    <tr>
+      <td>LIMK2</td>
+      <td>LIMK2</td>
+      <td>LIMK2</td>
+      <td>LIM domain kinase 2</td>
+      <td>TKL</td>
+      <td>LISK</td>
+      <td>LIMK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P53671" target="_blank">P53671</a></td>
+    </tr>
+    <tr>
+      <td>LKB1</td>
+      <td>LKB1</td>
+      <td>STK11</td>
+      <td>Serine/threonine-protein kinase STK11</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>LKB</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15831" target="_blank">Q15831</a></td>
+    </tr>
+    <tr>
+      <td>LTK</td>
+      <td>LTK</td>
+      <td>LTK</td>
+      <td>Leukocyte tyrosine kinase receptor</td>
+      <td>TK</td>
+      <td>ALK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P29376" target="_blank">P29376</a></td>
+    </tr>
+    <tr>
+      <td>LYN</td>
+      <td>LYN</td>
+      <td>LYN</td>
+      <td>Tyrosine-protein kinase Lyn</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P07948" target="_blank">P07948</a></td>
+    </tr>
+    <tr>
+      <td>MAK</td>
+      <td>MAK</td>
+      <td>MAK</td>
+      <td>Serine/threonine-protein kinase MAK</td>
+      <td>CMGC</td>
+      <td>RCK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P20794" target="_blank">P20794</a></td>
+    </tr>
+    <tr>
+      <td>MAPKAPK2</td>
+      <td>MAPKAPK2</td>
+      <td>MAPKAPK2</td>
+      <td>MAP kinase-activated protein kinase 2</td>
+      <td>CAMK</td>
+      <td>MAPKAPK</td>
+      <td>MK2</td>
+      <td><a href="http://www.uniprot.org/uniprot/P49137" target="_blank">P49137</a></td>
+    </tr>
+    <tr>
+      <td>MAPKAPK3</td>
+      <td>MAPKAPK3</td>
+      <td>MAPKAPK3</td>
+      <td>MAP kinase-activated protein kinase 3</td>
+      <td>CAMK</td>
+      <td>MAPKAPK</td>
+      <td>MK2</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16644" target="_blank">Q16644</a></td>
+    </tr>
+    <tr>
+      <td>MAPKAPK5</td>
+      <td>MAPKAPK5</td>
+      <td>MAPKAPK5</td>
+      <td>MAP kinase-activated protein kinase 5</td>
+      <td>CAMK</td>
+      <td>MAPKAPK</td>
+      <td>MK5</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IW41" target="_blank">Q8IW41</a></td>
+    </tr>
+    <tr>
+      <td>MARK1</td>
+      <td>MARK1</td>
+      <td>MARK1</td>
+      <td>Serine/threonine-protein kinase MARK1</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>MARK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9P0L2" target="_blank">Q9P0L2</a></td>
+    </tr>
+    <tr>
+      <td>MAST2</td>
+      <td>MAST2</td>
+      <td>MAST2</td>
+      <td>Microtubule-associated serine/threonine-protein kinase 2</td>
+      <td>AGC</td>
+      <td>MAST</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6P0Q8" target="_blank">Q6P0Q8</a></td>
+    </tr>
+    <tr>
+      <td>MAP2K1</td>
+      <td>MAP2K1</td>
+      <td>MAP2K1</td>
+      <td>Dual specificity mitogen-activated protein kinase kinase 1</td>
+      <td>STE</td>
+      <td>STE7</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q02750" target="_blank">Q02750</a></td>
+    </tr>
+    <tr>
+      <td>MAP2K2</td>
+      <td>MAP2K2</td>
+      <td>MAP2K2</td>
+      <td>Dual specificity mitogen-activated protein kinase kinase 2</td>
+      <td>STE</td>
+      <td>STE7</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P36507" target="_blank">P36507</a></td>
+    </tr>
+    <tr>
+      <td>MAP2K5</td>
+      <td>MAP2K5</td>
+      <td>MAP2K5</td>
+      <td>Dual specificity mitogen-activated protein kinase kinase 5</td>
+      <td>STE</td>
+      <td>STE7</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13163" target="_blank">Q13163</a></td>
+    </tr>
+    <tr>
+      <td>MAP2K6</td>
+      <td>MAP2K6</td>
+      <td>MAP2K6</td>
+      <td>Dual specificity mitogen-activated protein kinase kinase 6</td>
+      <td>STE</td>
+      <td>STE7</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P52564" target="_blank">P52564</a></td>
+    </tr>
+    <tr>
+      <td>MAP3K1</td>
+      <td>MAP3K1</td>
+      <td>MAP3K1</td>
+      <td>Mitogen-activated protein kinase kinase kinase 1</td>
+      <td>STE</td>
+      <td>STE11</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13233" target="_blank">Q13233</a></td>
+    </tr>
+    <tr>
+      <td>MAP3K2</td>
+      <td>MAP3K2</td>
+      <td>MAP3K2</td>
+      <td>Mitogen-activated protein kinase kinase kinase 2</td>
+      <td>STE</td>
+      <td>STE11</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y2U5" target="_blank">Q9Y2U5</a></td>
+    </tr>
+    <tr>
+      <td>MAP3K3</td>
+      <td>MAP3K3</td>
+      <td>MAP3K3</td>
+      <td>Mitogen-activated protein kinase kinase kinase 3</td>
+      <td>STE</td>
+      <td>STE11</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q99759" target="_blank">Q99759</a></td>
+    </tr>
+    <tr>
+      <td>MAP3K4</td>
+      <td>MAP3K4</td>
+      <td>MAP3K4</td>
+      <td>Mitogen-activated protein kinase kinase kinase 4</td>
+      <td>STE</td>
+      <td>STE11</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y6R4" target="_blank">Q9Y6R4</a></td>
+    </tr>
+    <tr>
+      <td>MAP3K5</td>
+      <td>MAP3K5</td>
+      <td>MAP3K5</td>
+      <td>Mitogen-activated protein kinase kinase kinase 5</td>
+      <td>STE</td>
+      <td>STE11</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q99683" target="_blank">Q99683</a></td>
+    </tr>
+    <tr>
+      <td>MER</td>
+      <td>MER</td>
+      <td>MERTK</td>
+      <td>Tyrosine-protein kinase Mer</td>
+      <td>TK</td>
+      <td>Axl</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q12866" target="_blank">Q12866</a></td>
+    </tr>
+    <tr>
+      <td>MET</td>
+      <td>MET</td>
+      <td>MET</td>
+      <td>Hepatocyte growth factor receptor</td>
+      <td>TK</td>
+      <td>Met</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P08581" target="_blank">P08581</a></td>
+    </tr>
+    <tr>
+      <td>MISR2</td>
+      <td>MISR2</td>
+      <td>AMHR2</td>
+      <td>Anti-Muellerian hormone type-2 receptor</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR2</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16671" target="_blank">Q16671</a></td>
+    </tr>
+    <tr>
+      <td>MAP2K7</td>
+      <td>MAP2K7</td>
+      <td>MAP2K7</td>
+      <td>Dual specificity mitogen-activated protein kinase kinase 7</td>
+      <td>STE</td>
+      <td>STE7</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O14733" target="_blank">O14733</a></td>
+    </tr>
+    <tr>
+      <td>smMLCK</td>
+      <td>smMLCK</td>
+      <td>MYLK</td>
+      <td>Myosin light chain kinase</td>
+      <td>CAMK</td>
+      <td>MLCK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15746" target="_blank">Q15746</a></td>
+    </tr>
+    <tr>
+      <td>MLK1</td>
+      <td>MLK1</td>
+      <td>MAP3K9</td>
+      <td>Mitogen-activated protein kinase kinase kinase 9</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>MLK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P80192" target="_blank">P80192</a></td>
+    </tr>
+    <tr>
+      <td>MLK2</td>
+      <td>MLK2</td>
+      <td>MAP3K10</td>
+      <td>Mitogen-activated protein kinase kinase kinase 10</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>MLK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q02779" target="_blank">Q02779</a></td>
+    </tr>
+    <tr>
+      <td>DYRK1A</td>
+      <td>DYRK1A</td>
+      <td>DYRK1A</td>
+      <td>Dual specificity tyrosine-phosphorylation-regulated kinase 1A</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>DYRK1</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13627" target="_blank">Q13627</a></td>
+    </tr>
+    <tr>
+      <td>MNK1</td>
+      <td>MNK1</td>
+      <td>MKNK1</td>
+      <td>MAP kinase-interacting serine/threonine-protein kinase 1</td>
+      <td>CAMK</td>
+      <td>MAPKAPK</td>
+      <td>MNK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BUB5" target="_blank">Q9BUB5</a></td>
+    </tr>
+    <tr>
+      <td>MNK2</td>
+      <td>MNK2</td>
+      <td>MKNK2</td>
+      <td>MAP kinase-interacting serine/threonine-protein kinase 2</td>
+      <td>CAMK</td>
+      <td>MAPKAPK</td>
+      <td>MNK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9HBH9" target="_blank">Q9HBH9</a></td>
+    </tr>
+    <tr>
+      <td>MOS</td>
+      <td>MOS</td>
+      <td>MOS</td>
+      <td>Proto-oncogene serine/threonine-protein kinase mos</td>
+      <td>Other</td>
+      <td>MOS</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P00540" target="_blank">P00540</a></td>
+    </tr>
+    <tr>
+      <td>MAP2K3</td>
+      <td>MAP2K3</td>
+      <td>MAP2K3</td>
+      <td>Dual specificity mitogen-activated protein kinase kinase 3</td>
+      <td>STE</td>
+      <td>STE7</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P46734" target="_blank">P46734</a></td>
+    </tr>
+    <tr>
+      <td>MAP2K4</td>
+      <td>MAP2K4</td>
+      <td>MAP2K4</td>
+      <td>Dual specificity mitogen-activated protein kinase kinase 4</td>
+      <td>STE</td>
+      <td>STE7</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P45985" target="_blank">P45985</a></td>
+    </tr>
+    <tr>
+      <td>MRCKb</td>
+      <td>MRCKb</td>
+      <td>CDC42BPB</td>
+      <td>Serine/threonine-protein kinase MRCK beta</td>
+      <td>AGC</td>
+      <td>DMPK</td>
+      <td>GEK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y5S2" target="_blank">Q9Y5S2</a></td>
+    </tr>
+    <tr>
+      <td>MSK1</td>
+      <td>MSK1</td>
+      <td>RPS6KA5</td>
+      <td>Ribosomal protein S6 kinase alpha-5</td>
+      <td>AGC</td>
+      <td>RSK</td>
+      <td>MSK</td>
+      <td><a href="http://www.uniprot.org/uniprot/O75582" target="_blank">O75582</a></td>
+    </tr>
+    <tr>
+      <td>MSK2</td>
+      <td>MSK2</td>
+      <td>RPS6KA4</td>
+      <td>Ribosomal protein S6 kinase alpha-4</td>
+      <td>AGC</td>
+      <td>RSK</td>
+      <td>MSK</td>
+      <td><a href="http://www.uniprot.org/uniprot/O75676" target="_blank">O75676</a></td>
+    </tr>
+    <tr>
+      <td>MST1</td>
+      <td>MST1</td>
+      <td>STK4</td>
+      <td>Serine/threonine-protein kinase 4</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>MST</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13043" target="_blank">Q13043</a></td>
+    </tr>
+    <tr>
+      <td>MST2</td>
+      <td>MST2</td>
+      <td>STK3</td>
+      <td>Serine/threonine-protein kinase 3</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>MST</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13188" target="_blank">Q13188</a></td>
+    </tr>
+    <tr>
+      <td>MST3</td>
+      <td>MST3</td>
+      <td>STK24</td>
+      <td>Serine/threonine-protein kinase 24</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>YSK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y6E0" target="_blank">Q9Y6E0</a></td>
+    </tr>
+    <tr>
+      <td>MUSK</td>
+      <td>MUSK</td>
+      <td>MUSK</td>
+      <td>Muscle</td>
+      <td>TK</td>
+      <td>Musk</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O15146" target="_blank">O15146</a></td>
+    </tr>
+    <tr>
+      <td>MYT1</td>
+      <td>MYT1</td>
+      <td>PKMYT1</td>
+      <td>Membrane-associated tyrosine- and threonine-specific cdc2-inhibitory kinase</td>
+      <td>Other</td>
+      <td>WEE</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q99640" target="_blank">Q99640</a></td>
+    </tr>
+    <tr>
+      <td>NDR1</td>
+      <td>NDR1</td>
+      <td>STK38</td>
+      <td>Serine/threonine-protein kinase 38</td>
+      <td>AGC</td>
+      <td>NDR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15208" target="_blank">Q15208</a></td>
+    </tr>
+    <tr>
+      <td>NEK1</td>
+      <td>NEK1</td>
+      <td>NEK1</td>
+      <td>Serine/threonine-protein kinase Nek1</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96PY6" target="_blank">Q96PY6</a></td>
+    </tr>
+    <tr>
+      <td>NEK2</td>
+      <td>NEK2</td>
+      <td>NEK2</td>
+      <td>Serine/threonine-protein kinase Nek2</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P51955" target="_blank">P51955</a></td>
+    </tr>
+    <tr>
+      <td>NEK3</td>
+      <td>NEK3</td>
+      <td>NEK3</td>
+      <td>Serine/threonine-protein kinase Nek3</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P51956" target="_blank">P51956</a></td>
+    </tr>
+    <tr>
+      <td>NIK</td>
+      <td>NIK</td>
+      <td>MAP3K14</td>
+      <td>Mitogen-activated protein kinase kinase kinase 14</td>
+      <td>STE</td>
+      <td>STE-Unique</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q99558" target="_blank">Q99558</a></td>
+    </tr>
+    <tr>
+      <td>NLK</td>
+      <td>NLK</td>
+      <td>NLK</td>
+      <td>Serine/threonine-protein kinase NLK</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>nmo</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UBE8" target="_blank">Q9UBE8</a></td>
+    </tr>
+    <tr>
+      <td>NEK4</td>
+      <td>NEK4</td>
+      <td>NEK4</td>
+      <td>Serine/threonine-protein kinase Nek4</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P51957" target="_blank">P51957</a></td>
+    </tr>
+    <tr>
+      <td>IRAK4</td>
+      <td>IRAK4</td>
+      <td>IRAK4</td>
+      <td>Interleukin-1 receptor-associated kinase 4</td>
+      <td>TKL</td>
+      <td>IRAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NWZ3" target="_blank">Q9NWZ3</a></td>
+    </tr>
+    <tr>
+      <td>PIK3R4</td>
+      <td>PIK3R4</td>
+      <td>PIK3R4</td>
+      <td>Phosphoinositide 3-kinase regulatory subunit 4</td>
+      <td>Other</td>
+      <td>VPS15</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q99570" target="_blank">Q99570</a></td>
+    </tr>
+    <tr>
+      <td>ROCK2</td>
+      <td>ROCK2</td>
+      <td>ROCK2</td>
+      <td>Rho-associated protein kinase 2</td>
+      <td>AGC</td>
+      <td>DMPK</td>
+      <td>ROCK</td>
+      <td><a href="http://www.uniprot.org/uniprot/O75116" target="_blank">O75116</a></td>
+    </tr>
+    <tr>
+      <td>p38a</td>
+      <td>p38a</td>
+      <td>MAPK14</td>
+      <td>Mitogen-activated protein kinase 14</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>p38</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16539" target="_blank">Q16539</a></td>
+    </tr>
+    <tr>
+      <td>p70S6K</td>
+      <td>p70S6K</td>
+      <td>RPS6KB1</td>
+      <td>Ribosomal protein S6 kinase beta-1</td>
+      <td>AGC</td>
+      <td>RSK</td>
+      <td>RSKp70</td>
+      <td><a href="http://www.uniprot.org/uniprot/P23443" target="_blank">P23443</a></td>
+    </tr>
+    <tr>
+      <td>p70S6Kb</td>
+      <td>p70S6Kb</td>
+      <td>RPS6KB2</td>
+      <td>Ribosomal protein S6 kinase beta-2</td>
+      <td>AGC</td>
+      <td>RSK</td>
+      <td>RSKp70</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UBS0" target="_blank">Q9UBS0</a></td>
+    </tr>
+    <tr>
+      <td>PAK1</td>
+      <td>PAK1</td>
+      <td>PAK1</td>
+      <td>Serine/threonine-protein kinase PAK 1</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>PAKA</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13153" target="_blank">Q13153</a></td>
+    </tr>
+    <tr>
+      <td>PAK2</td>
+      <td>PAK2</td>
+      <td>PAK2</td>
+      <td>Serine/threonine-protein kinase PAK 2</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>PAKA</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13177" target="_blank">Q13177</a></td>
+    </tr>
+    <tr>
+      <td>PAK3</td>
+      <td>PAK3</td>
+      <td>PAK3</td>
+      <td>Serine/threonine-protein kinase PAK 3</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>PAKA</td>
+      <td><a href="http://www.uniprot.org/uniprot/O75914" target="_blank">O75914</a></td>
+    </tr>
+    <tr>
+      <td>PKCh</td>
+      <td>PKCh</td>
+      <td>PRKCH</td>
+      <td>Protein kinase C eta type</td>
+      <td>AGC</td>
+      <td>PKC</td>
+      <td>PKCh</td>
+      <td><a href="http://www.uniprot.org/uniprot/P24723" target="_blank">P24723</a></td>
+    </tr>
+    <tr>
+      <td>PCTAIRE1</td>
+      <td>PCTAIRE1</td>
+      <td>CDK16</td>
+      <td>Cyclin-dependent kinase 16</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>PCTAIRE</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q00536" target="_blank">Q00536</a></td>
+    </tr>
+    <tr>
+      <td>PCTAIRE2</td>
+      <td>PCTAIRE2</td>
+      <td>CDK17</td>
+      <td>Cyclin-dependent kinase 17</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>PCTAIRE</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q00537" target="_blank">Q00537</a></td>
+    </tr>
+    <tr>
+      <td>PCTAIRE3</td>
+      <td>PCTAIRE3</td>
+      <td>CDK18</td>
+      <td>Cyclin-dependent kinase 18</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>PCTAIRE</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q07002" target="_blank">Q07002</a></td>
+    </tr>
+    <tr>
+      <td>PDGFRa</td>
+      <td>PDGFRa</td>
+      <td>PDGFRA</td>
+      <td>Platelet-derived growth factor receptor alpha</td>
+      <td>TK</td>
+      <td>PDGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P16234" target="_blank">P16234</a></td>
+    </tr>
+    <tr>
+      <td>PDGFRb</td>
+      <td>PDGFRb</td>
+      <td>PDGFRB</td>
+      <td>Platelet-derived growth factor receptor beta</td>
+      <td>TK</td>
+      <td>PDGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P09619" target="_blank">P09619</a></td>
+    </tr>
+    <tr>
+      <td>PDK1</td>
+      <td>PDK1</td>
+      <td>PDPK1</td>
+      <td>3-phosphoinositide-dependent protein kinase 1</td>
+      <td>AGC</td>
+      <td>PDK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O15530" target="_blank">O15530</a></td>
+    </tr>
+    <tr>
+      <td>PDHK1</td>
+      <td>PDHK1</td>
+      <td>PDK1</td>
+      <td>[Pyruvate dehydrogenase [lipoamide]] kinase isozyme 1</td>
+      <td>Atypical</td>
+      <td>PDHK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15118" target="_blank">Q15118</a></td>
+    </tr>
+    <tr>
+      <td>PDHK2</td>
+      <td>PDHK2</td>
+      <td>PDK2</td>
+      <td>[Pyruvate dehydrogenase [lipoamide]] kinase isozyme 2</td>
+      <td>Atypical</td>
+      <td>PDHK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15119" target="_blank">Q15119</a></td>
+    </tr>
+    <tr>
+      <td>PDHK3</td>
+      <td>PDHK3</td>
+      <td>PDK3</td>
+      <td>[Pyruvate dehydrogenase [lipoamide]] kinase isozyme 3</td>
+      <td>Atypical</td>
+      <td>PDHK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15120" target="_blank">Q15120</a></td>
+    </tr>
+    <tr>
+      <td>PDHK4</td>
+      <td>PDHK4</td>
+      <td>PDK4</td>
+      <td>[Pyruvate dehydrogenase [lipoamide]] kinase isozyme 4</td>
+      <td>Atypical</td>
+      <td>PDHK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16654" target="_blank">Q16654</a></td>
+    </tr>
+    <tr>
+      <td>PEK</td>
+      <td>PEK</td>
+      <td>EIF2AK3</td>
+      <td>Eukaryotic translation initiation factor 2-alpha kinase 3</td>
+      <td>Other</td>
+      <td>PEK</td>
+      <td>PEK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NZJ5" target="_blank">Q9NZJ5</a></td>
+    </tr>
+    <tr>
+      <td>PFTAIRE1</td>
+      <td>PFTAIRE1</td>
+      <td>CDK14</td>
+      <td>Cyclin-dependent kinase 14</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>PFTAIRE</td>
+      <td><a href="http://www.uniprot.org/uniprot/O94921" target="_blank">O94921</a></td>
+    </tr>
+    <tr>
+      <td>PHKg1</td>
+      <td>PHKg1</td>
+      <td>PHKG1</td>
+      <td>Phosphorylase b kinase gamma catalytic chain</td>
+      <td>CAMK</td>
+      <td>PHK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16816" target="_blank">Q16816</a></td>
+    </tr>
+    <tr>
+      <td>PHKg2</td>
+      <td>PHKg2</td>
+      <td>PHKG2</td>
+      <td>Phosphorylase b kinase gamma catalytic chain</td>
+      <td>CAMK</td>
+      <td>PHK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P15735" target="_blank">P15735</a></td>
+    </tr>
+    <tr>
+      <td>PIM1</td>
+      <td>PIM1</td>
+      <td>PIM1</td>
+      <td>Serine/threonine-protein kinase pim-1</td>
+      <td>CAMK</td>
+      <td>PIM</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P11309" target="_blank">P11309</a></td>
+    </tr>
+    <tr>
+      <td>PIM2</td>
+      <td>PIM2</td>
+      <td>PIM2</td>
+      <td>Serine/threonine-protein kinase pim-2</td>
+      <td>CAMK</td>
+      <td>PIM</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9P1W9" target="_blank">Q9P1W9</a></td>
+    </tr>
+    <tr>
+      <td>CDK10</td>
+      <td>CDK10</td>
+      <td>CDK10</td>
+      <td>Cyclin-dependent kinase 10</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK10</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15131" target="_blank">Q15131</a></td>
+    </tr>
+    <tr>
+      <td>CDK9</td>
+      <td>CDK9</td>
+      <td>CDK9</td>
+      <td>Cyclin-dependent kinase 9</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK9</td>
+      <td><a href="http://www.uniprot.org/uniprot/P50750" target="_blank">P50750</a></td>
+    </tr>
+    <tr>
+      <td>PITSLRE</td>
+      <td>PITSLRE</td>
+      <td>CDK11B</td>
+      <td>Cyclin-dependent kinase 11B</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK11</td>
+      <td><a href="http://www.uniprot.org/uniprot/P21127" target="_blank">P21127</a></td>
+    </tr>
+    <tr>
+      <td>MELK</td>
+      <td>MELK</td>
+      <td>MELK</td>
+      <td>Maternal embryonic leucine zipper kinase</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>MELK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q14680" target="_blank">Q14680</a></td>
+    </tr>
+    <tr>
+      <td>MRCKa</td>
+      <td>MRCKa</td>
+      <td>CDC42BPA</td>
+      <td>Serine/threonine-protein kinase MRCK alpha</td>
+      <td>AGC</td>
+      <td>DMPK</td>
+      <td>GEK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q5VT25" target="_blank">Q5VT25</a></td>
+    </tr>
+    <tr>
+      <td>PKACa</td>
+      <td>PKACa</td>
+      <td>PRKACA</td>
+      <td>cAMP-dependent protein kinase catalytic subunit alpha</td>
+      <td>AGC</td>
+      <td>PKA</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P17612" target="_blank">P17612</a></td>
+    </tr>
+    <tr>
+      <td>PKACb</td>
+      <td>PKACb</td>
+      <td>PRKACB</td>
+      <td>cAMP-dependent protein kinase catalytic subunit beta</td>
+      <td>AGC</td>
+      <td>PKA</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P22694" target="_blank">P22694</a></td>
+    </tr>
+    <tr>
+      <td>PKACg</td>
+      <td>PKACg</td>
+      <td>PRKACG</td>
+      <td>cAMP-dependent protein kinase catalytic subunit gamma</td>
+      <td>AGC</td>
+      <td>PKA</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P22612" target="_blank">P22612</a></td>
+    </tr>
+    <tr>
+      <td>PKCa</td>
+      <td>PKCa</td>
+      <td>PRKCA</td>
+      <td>Protein kinase C alpha type</td>
+      <td>AGC</td>
+      <td>PKC</td>
+      <td>PKCa</td>
+      <td><a href="http://www.uniprot.org/uniprot/P17252" target="_blank">P17252</a></td>
+    </tr>
+    <tr>
+      <td>PKCb</td>
+      <td>PKCb</td>
+      <td>PRKCB</td>
+      <td>Protein kinase C beta type</td>
+      <td>AGC</td>
+      <td>PKC</td>
+      <td>PKCa</td>
+      <td><a href="http://www.uniprot.org/uniprot/P05771" target="_blank">P05771</a></td>
+    </tr>
+    <tr>
+      <td>PKCd</td>
+      <td>PKCd</td>
+      <td>PRKCD</td>
+      <td>Protein kinase C delta type</td>
+      <td>AGC</td>
+      <td>PKC</td>
+      <td>PKCd</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q05655" target="_blank">Q05655</a></td>
+    </tr>
+    <tr>
+      <td>PKCe</td>
+      <td>PKCe</td>
+      <td>PRKCE</td>
+      <td>Protein kinase C epsilon type</td>
+      <td>AGC</td>
+      <td>PKC</td>
+      <td>PKCh</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q02156" target="_blank">Q02156</a></td>
+    </tr>
+    <tr>
+      <td>PKCg</td>
+      <td>PKCg</td>
+      <td>PRKCG</td>
+      <td>Protein kinase C gamma type</td>
+      <td>AGC</td>
+      <td>PKC</td>
+      <td>PKCa</td>
+      <td><a href="http://www.uniprot.org/uniprot/P05129" target="_blank">P05129</a></td>
+    </tr>
+    <tr>
+      <td>PKCi</td>
+      <td>PKCi</td>
+      <td>PRKCI</td>
+      <td>Protein kinase C iota type</td>
+      <td>AGC</td>
+      <td>PKC</td>
+      <td>PKCi</td>
+      <td><a href="http://www.uniprot.org/uniprot/P41743" target="_blank">P41743</a></td>
+    </tr>
+    <tr>
+      <td>PKD1</td>
+      <td>PKD1</td>
+      <td>PRKD1</td>
+      <td>Serine/threonine-protein kinase D1</td>
+      <td>CAMK</td>
+      <td>PKD</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15139" target="_blank">Q15139</a></td>
+    </tr>
+    <tr>
+      <td>PKCt</td>
+      <td>PKCt</td>
+      <td>PRKCQ</td>
+      <td>Protein kinase C theta type</td>
+      <td>AGC</td>
+      <td>PKC</td>
+      <td>PKCd</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q04759" target="_blank">Q04759</a></td>
+    </tr>
+    <tr>
+      <td>PKCz</td>
+      <td>PKCz</td>
+      <td>PRKCZ</td>
+      <td>Protein kinase C zeta type</td>
+      <td>AGC</td>
+      <td>PKC</td>
+      <td>PKCi</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q05513" target="_blank">Q05513</a></td>
+    </tr>
+    <tr>
+      <td>PRKX</td>
+      <td>PRKX</td>
+      <td>PRKX</td>
+      <td>cAMP-dependent protein kinase catalytic subunit PRKX</td>
+      <td>AGC</td>
+      <td>PKA</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P51817" target="_blank">P51817</a></td>
+    </tr>
+    <tr>
+      <td>HIPK3</td>
+      <td>HIPK3</td>
+      <td>HIPK3</td>
+      <td>Homeodomain-interacting protein kinase 3</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>HIPK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H422" target="_blank">Q9H422</a></td>
+    </tr>
+    <tr>
+      <td>PLK1</td>
+      <td>PLK1</td>
+      <td>PLK1</td>
+      <td>Serine/threonine-protein kinase PLK1</td>
+      <td>Other</td>
+      <td>PLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P53350" target="_blank">P53350</a></td>
+    </tr>
+    <tr>
+      <td>PLK3</td>
+      <td>PLK3</td>
+      <td>PLK3</td>
+      <td>Serine/threonine-protein kinase PLK3</td>
+      <td>Other</td>
+      <td>PLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H4B4" target="_blank">Q9H4B4</a></td>
+    </tr>
+    <tr>
+      <td>PKN1</td>
+      <td>PKN1</td>
+      <td>PKN1</td>
+      <td>Serine/threonine-protein kinase N1</td>
+      <td>AGC</td>
+      <td>PKN</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16512" target="_blank">Q16512</a></td>
+    </tr>
+    <tr>
+      <td>PKN2</td>
+      <td>PKN2</td>
+      <td>PKN2</td>
+      <td>Serine/threonine-protein kinase N2</td>
+      <td>AGC</td>
+      <td>PKN</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16513" target="_blank">Q16513</a></td>
+    </tr>
+    <tr>
+      <td>PRKY</td>
+      <td>PRKY</td>
+      <td>PRKY</td>
+      <td>Serine/threonine-protein kinase PRKY</td>
+      <td>AGC</td>
+      <td>PKA</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O43930" target="_blank">O43930</a></td>
+    </tr>
+    <tr>
+      <td>PRP4</td>
+      <td>PRP4</td>
+      <td>PRPF4B</td>
+      <td>Serine/threonine-protein kinase PRP4 homolog</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>PRP4</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13523" target="_blank">Q13523</a></td>
+    </tr>
+    <tr>
+      <td>PSKH1</td>
+      <td>PSKH1</td>
+      <td>PSKH1</td>
+      <td>Serine/threonine-protein kinase H1</td>
+      <td>CAMK</td>
+      <td>PSK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P11801" target="_blank">P11801</a></td>
+    </tr>
+    <tr>
+      <td>RAF1</td>
+      <td>RAF1</td>
+      <td>RAF1</td>
+      <td>RAF proto-oncogene serine/threonine-protein kinase</td>
+      <td>TKL</td>
+      <td>RAF</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P04049" target="_blank">P04049</a></td>
+    </tr>
+    <tr>
+      <td>RET</td>
+      <td>RET</td>
+      <td>RET</td>
+      <td>Proto-oncogene tyrosine-protein kinase receptor Ret</td>
+      <td>TK</td>
+      <td>Ret</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P07949" target="_blank">P07949</a></td>
+    </tr>
+    <tr>
+      <td>RHOK</td>
+      <td>RHOK</td>
+      <td>GRK1</td>
+      <td>Rhodopsin kinase</td>
+      <td>AGC</td>
+      <td>GRK</td>
+      <td>GRK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15835" target="_blank">Q15835</a></td>
+    </tr>
+    <tr>
+      <td>RIPK1</td>
+      <td>RIPK1</td>
+      <td>RIPK1</td>
+      <td>Receptor-interacting serine/threonine-protein kinase 1</td>
+      <td>TKL</td>
+      <td>RIPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13546" target="_blank">Q13546</a></td>
+    </tr>
+    <tr>
+      <td>RIPK2</td>
+      <td>RIPK2</td>
+      <td>RIPK2</td>
+      <td>Receptor-interacting serine/threonine-protein kinase 2</td>
+      <td>TKL</td>
+      <td>RIPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O43353" target="_blank">O43353</a></td>
+    </tr>
+    <tr>
+      <td>RIPK3</td>
+      <td>RIPK3</td>
+      <td>RIPK3</td>
+      <td>Receptor-interacting serine/threonine-protein kinase 3</td>
+      <td>TKL</td>
+      <td>RIPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y572" target="_blank">Q9Y572</a></td>
+    </tr>
+    <tr>
+      <td>ROCK1</td>
+      <td>ROCK1</td>
+      <td>ROCK1</td>
+      <td>Rho-associated protein kinase 1</td>
+      <td>AGC</td>
+      <td>DMPK</td>
+      <td>ROCK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13464" target="_blank">Q13464</a></td>
+    </tr>
+    <tr>
+      <td>RON</td>
+      <td>RON</td>
+      <td>MST1R</td>
+      <td>Macrophage-stimulating protein receptor</td>
+      <td>TK</td>
+      <td>Met</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q04912" target="_blank">Q04912</a></td>
+    </tr>
+    <tr>
+      <td>ROR1</td>
+      <td>ROR1</td>
+      <td>ROR1</td>
+      <td>Tyrosine-protein kinase transmembrane receptor ROR1</td>
+      <td>TK</td>
+      <td>Ror</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q01973" target="_blank">Q01973</a></td>
+    </tr>
+    <tr>
+      <td>ROR2</td>
+      <td>ROR2</td>
+      <td>ROR2</td>
+      <td>Tyrosine-protein kinase transmembrane receptor ROR2</td>
+      <td>TK</td>
+      <td>Ror</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q01974" target="_blank">Q01974</a></td>
+    </tr>
+    <tr>
+      <td>ROS</td>
+      <td>ROS</td>
+      <td>ROS1</td>
+      <td>Proto-oncogene tyrosine-protein kinase ROS</td>
+      <td>TK</td>
+      <td>Sev</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P08922" target="_blank">P08922</a></td>
+    </tr>
+    <tr>
+      <td>RSK3</td>
+      <td>RSK1</td>
+      <td>RPS6KA2</td>
+      <td>Ribosomal protein S6 kinase alpha-2</td>
+      <td>AGC</td>
+      <td>RSK</td>
+      <td>RSKp90</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15349" target="_blank">Q15349</a></td>
+    </tr>
+    <tr>
+      <td>RSK2</td>
+      <td>RSK2</td>
+      <td>RPS6KA3</td>
+      <td>Ribosomal protein S6 kinase alpha-3</td>
+      <td>AGC</td>
+      <td>RSK</td>
+      <td>RSKp90</td>
+      <td><a href="http://www.uniprot.org/uniprot/P51812" target="_blank">P51812</a></td>
+    </tr>
+    <tr>
+      <td>RSK1</td>
+      <td>RSK3</td>
+      <td>RPS6KA1</td>
+      <td>Ribosomal protein S6 kinase alpha-1</td>
+      <td>AGC</td>
+      <td>RSK</td>
+      <td>RSKp90</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15418" target="_blank">Q15418</a></td>
+    </tr>
+    <tr>
+      <td>RYK</td>
+      <td>RYK</td>
+      <td>RYK</td>
+      <td>Tyrosine-protein kinase RYK</td>
+      <td>TK</td>
+      <td>Ryk</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P34925" target="_blank">P34925</a></td>
+    </tr>
+    <tr>
+      <td>PLK4</td>
+      <td>PLK4</td>
+      <td>PLK4</td>
+      <td>Serine/threonine-protein kinase PLK4</td>
+      <td>Other</td>
+      <td>PLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O00444" target="_blank">O00444</a></td>
+    </tr>
+    <tr>
+      <td>p38b</td>
+      <td>p38b</td>
+      <td>MAPK11</td>
+      <td>Mitogen-activated protein kinase 11</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>p38</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15759" target="_blank">Q15759</a></td>
+    </tr>
+    <tr>
+      <td>p38g</td>
+      <td>p38g</td>
+      <td>MAPK12</td>
+      <td>Mitogen-activated protein kinase 12</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>p38</td>
+      <td><a href="http://www.uniprot.org/uniprot/P53778" target="_blank">P53778</a></td>
+    </tr>
+    <tr>
+      <td>p38d</td>
+      <td>p38d</td>
+      <td>MAPK13</td>
+      <td>Mitogen-activated protein kinase 13</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>p38</td>
+      <td><a href="http://www.uniprot.org/uniprot/O15264" target="_blank">O15264</a></td>
+    </tr>
+    <tr>
+      <td>MAST1</td>
+      <td>MAST1</td>
+      <td>MAST1</td>
+      <td>Microtubule-associated serine/threonine-protein kinase 1</td>
+      <td>AGC</td>
+      <td>MAST</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y2H9" target="_blank">Q9Y2H9</a></td>
+    </tr>
+    <tr>
+      <td>SGK1</td>
+      <td>SGK</td>
+      <td>SGK1</td>
+      <td>Serine/threonine-protein kinase Sgk1</td>
+      <td>AGC</td>
+      <td>SGK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O00141" target="_blank">O00141</a></td>
+    </tr>
+    <tr>
+      <td>SLK</td>
+      <td>SLK</td>
+      <td>SLK</td>
+      <td>STE20-like serine/threonine-protein kinase</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>SLK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H2G2" target="_blank">Q9H2G2</a></td>
+    </tr>
+    <tr>
+      <td>PLK2</td>
+      <td>PLK2</td>
+      <td>PLK2</td>
+      <td>Serine/threonine-protein kinase PLK2</td>
+      <td>Other</td>
+      <td>PLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NYY3" target="_blank">Q9NYY3</a></td>
+    </tr>
+    <tr>
+      <td>MLK3</td>
+      <td>MLK3</td>
+      <td>MAP3K11</td>
+      <td>Mitogen-activated protein kinase kinase kinase 11</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>MLK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16584" target="_blank">Q16584</a></td>
+    </tr>
+    <tr>
+      <td>SRC</td>
+      <td>SRC</td>
+      <td>SRC</td>
+      <td>Proto-oncogene tyrosine-protein kinase Src</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P12931" target="_blank">P12931</a></td>
+    </tr>
+    <tr>
+      <td>SRPK1</td>
+      <td>SRPK1</td>
+      <td>SRPK1</td>
+      <td>SRSF protein kinase 1</td>
+      <td>CMGC</td>
+      <td>SRPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96SB4" target="_blank">Q96SB4</a></td>
+    </tr>
+    <tr>
+      <td>SRPK2</td>
+      <td>SRPK2</td>
+      <td>SRPK2</td>
+      <td>SRSF protein kinase 2</td>
+      <td>CMGC</td>
+      <td>SRPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P78362" target="_blank">P78362</a></td>
+    </tr>
+    <tr>
+      <td>CDKL5</td>
+      <td>CDKL5</td>
+      <td>CDKL5</td>
+      <td>Cyclin-dependent kinase-like 5</td>
+      <td>CMGC</td>
+      <td>CDKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O76039" target="_blank">O76039</a></td>
+    </tr>
+    <tr>
+      <td>TAO2</td>
+      <td>TAO2</td>
+      <td>TAOK2</td>
+      <td>Serine/threonine-protein kinase TAO2</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>TAO</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UL54" target="_blank">Q9UL54</a></td>
+    </tr>
+    <tr>
+      <td>SYK</td>
+      <td>SYK</td>
+      <td>SYK</td>
+      <td>Tyrosine-protein kinase SYK</td>
+      <td>TK</td>
+      <td>Syk</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P43405" target="_blank">P43405</a></td>
+    </tr>
+    <tr>
+      <td>TAK1</td>
+      <td>TAK1</td>
+      <td>MAP3K7</td>
+      <td>Mitogen-activated protein kinase kinase kinase 7</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>TAK1</td>
+      <td><a href="http://www.uniprot.org/uniprot/O43318" target="_blank">O43318</a></td>
+    </tr>
+    <tr>
+      <td>BMPR2</td>
+      <td>BMPR2</td>
+      <td>BMPR2</td>
+      <td>Bone morphogenetic protein receptor type-2</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR2</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13873" target="_blank">Q13873</a></td>
+    </tr>
+    <tr>
+      <td>TEC</td>
+      <td>TEC</td>
+      <td>TEC</td>
+      <td>Tyrosine-protein kinase Tec</td>
+      <td>TK</td>
+      <td>Tec</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P42680" target="_blank">P42680</a></td>
+    </tr>
+    <tr>
+      <td>TIE2</td>
+      <td>TIE2</td>
+      <td>TEK</td>
+      <td>Angiopoietin-1 receptor</td>
+      <td>TK</td>
+      <td>Tie</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q02763" target="_blank">Q02763</a></td>
+    </tr>
+    <tr>
+      <td>TESK1</td>
+      <td>TESK1</td>
+      <td>TESK1</td>
+      <td>Dual specificity testis-specific protein kinase 1</td>
+      <td>TKL</td>
+      <td>LISK</td>
+      <td>TESK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15569" target="_blank">Q15569</a></td>
+    </tr>
+    <tr>
+      <td>TGFbR2</td>
+      <td>TGFbR2</td>
+      <td>TGFBR2</td>
+      <td>TGF-beta receptor type-2</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR2</td>
+      <td><a href="http://www.uniprot.org/uniprot/P37173" target="_blank">P37173</a></td>
+    </tr>
+    <tr>
+      <td>TIE1</td>
+      <td>TIE1</td>
+      <td>TIE1</td>
+      <td>Tyrosine-protein kinase receptor Tie-1</td>
+      <td>TK</td>
+      <td>Tie</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P35590" target="_blank">P35590</a></td>
+    </tr>
+    <tr>
+      <td>TTN</td>
+      <td>TTN</td>
+      <td>TTN</td>
+      <td>Titin</td>
+      <td>CAMK</td>
+      <td>MLCK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8WZ42" target="_blank">Q8WZ42</a></td>
+    </tr>
+    <tr>
+      <td>TLK1</td>
+      <td>TLK1</td>
+      <td>TLK1</td>
+      <td>Serine/threonine-protein kinase tousled-like 1</td>
+      <td>Other</td>
+      <td>TLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UKI8" target="_blank">Q9UKI8</a></td>
+    </tr>
+    <tr>
+      <td>TLK2</td>
+      <td>TLK2</td>
+      <td>TLK2</td>
+      <td>Serine/threonine-protein kinase tousled-like 2</td>
+      <td>Other</td>
+      <td>TLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86UE8" target="_blank">Q86UE8</a></td>
+    </tr>
+    <tr>
+      <td>TNK1</td>
+      <td>TNK1</td>
+      <td>TNK1</td>
+      <td>Non-receptor tyrosine-protein kinase TNK1</td>
+      <td>TK</td>
+      <td>Ack</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13470" target="_blank">Q13470</a></td>
+    </tr>
+    <tr>
+      <td>Trio</td>
+      <td>Trio</td>
+      <td>TRIO</td>
+      <td>Triple functional domain protein</td>
+      <td>CAMK</td>
+      <td>Trio</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O75962" target="_blank">O75962</a></td>
+    </tr>
+    <tr>
+      <td>TRKA</td>
+      <td>TRKA</td>
+      <td>NTRK1</td>
+      <td>High affinity nerve growth factor receptor</td>
+      <td>TK</td>
+      <td>Trk</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P04629" target="_blank">P04629</a></td>
+    </tr>
+    <tr>
+      <td>TRKB</td>
+      <td>TRKB</td>
+      <td>NTRK2</td>
+      <td>BDNF/NT-3 growth factors receptor</td>
+      <td>TK</td>
+      <td>Trk</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16620" target="_blank">Q16620</a></td>
+    </tr>
+    <tr>
+      <td>TRKC</td>
+      <td>TRKC</td>
+      <td>NTRK3</td>
+      <td>NT-3 growth factor receptor</td>
+      <td>TK</td>
+      <td>Trk</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16288" target="_blank">Q16288</a></td>
+    </tr>
+    <tr>
+      <td>TRRAP</td>
+      <td>TRRAP</td>
+      <td>TRRAP</td>
+      <td>Transformation/transcription domain-associated protein</td>
+      <td>Atypical</td>
+      <td>PIKK</td>
+      <td>TRRAP</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y4A5" target="_blank">Q9Y4A5</a></td>
+    </tr>
+    <tr>
+      <td>TTK</td>
+      <td>TTK</td>
+      <td>TTK</td>
+      <td>Dual specificity protein kinase TTK</td>
+      <td>Other</td>
+      <td>TTK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P33981" target="_blank">P33981</a></td>
+    </tr>
+    <tr>
+      <td>TXK</td>
+      <td>TXK</td>
+      <td>TXK</td>
+      <td>Tyrosine-protein kinase TXK</td>
+      <td>TK</td>
+      <td>Tec</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P42681" target="_blank">P42681</a></td>
+    </tr>
+    <tr>
+      <td>TYK2</td>
+      <td>TYK2</td>
+      <td>TYK2</td>
+      <td>Non-receptor tyrosine-protein kinase TYK2</td>
+      <td>TK</td>
+      <td>Jak</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P29597" target="_blank">P29597</a></td>
+    </tr>
+    <tr>
+      <td>TYRO3</td>
+      <td>TYRO3</td>
+      <td>TYRO3</td>
+      <td>Tyrosine-protein kinase receptor TYRO3</td>
+      <td>TK</td>
+      <td>Axl</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q06418" target="_blank">Q06418</a></td>
+    </tr>
+    <tr>
+      <td>ULK1</td>
+      <td>ULK1</td>
+      <td>ULK1</td>
+      <td>Serine/threonine-protein kinase ULK1</td>
+      <td>Other</td>
+      <td>ULK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O75385" target="_blank">O75385</a></td>
+    </tr>
+    <tr>
+      <td>ULK2</td>
+      <td>ULK2</td>
+      <td>ULK2</td>
+      <td>Serine/threonine-protein kinase ULK2</td>
+      <td>Other</td>
+      <td>ULK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IYT8" target="_blank">Q8IYT8</a></td>
+    </tr>
+    <tr>
+      <td>VRK1</td>
+      <td>VRK1</td>
+      <td>VRK1</td>
+      <td>Serine/threonine-protein kinase VRK1</td>
+      <td>CK1</td>
+      <td>VRK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q99986" target="_blank">Q99986</a></td>
+    </tr>
+    <tr>
+      <td>VRK2</td>
+      <td>VRK2</td>
+      <td>VRK2</td>
+      <td>Serine/threonine-protein kinase VRK2</td>
+      <td>CK1</td>
+      <td>VRK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86Y07" target="_blank">Q86Y07</a></td>
+    </tr>
+    <tr>
+      <td>Wee1</td>
+      <td>Wee1</td>
+      <td>WEE1</td>
+      <td>Wee1-like protein kinase</td>
+      <td>Other</td>
+      <td>WEE</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P30291" target="_blank">P30291</a></td>
+    </tr>
+    <tr>
+      <td>YES</td>
+      <td>YES</td>
+      <td>YES1</td>
+      <td>Tyrosine-protein kinase Yes</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P07947" target="_blank">P07947</a></td>
+    </tr>
+    <tr>
+      <td>YSK1</td>
+      <td>YSK1</td>
+      <td>STK25</td>
+      <td>Serine/threonine-protein kinase 25</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>YSK</td>
+      <td><a href="http://www.uniprot.org/uniprot/O00506" target="_blank">O00506</a></td>
+    </tr>
+    <tr>
+      <td>ZAP70</td>
+      <td>ZAP70</td>
+      <td>ZAP70</td>
+      <td>Tyrosine-protein kinase ZAP-70</td>
+      <td>TK</td>
+      <td>Syk</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P43403" target="_blank">P43403</a></td>
+    </tr>
+    <tr>
+      <td>LZK</td>
+      <td>LZK</td>
+      <td>MAP3K13</td>
+      <td>Mitogen-activated protein kinase kinase kinase 13</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>LZK</td>
+      <td><a href="http://www.uniprot.org/uniprot/O43283" target="_blank">O43283</a></td>
+    </tr>
+    <tr>
+      <td>DDR1</td>
+      <td>DDR1</td>
+      <td>DDR1</td>
+      <td>Epithelial discoidin domain-containing receptor 1</td>
+      <td>TK</td>
+      <td>DDR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q08345" target="_blank">Q08345</a></td>
+    </tr>
+    <tr>
+      <td>ADCK1</td>
+      <td>ADCK1</td>
+      <td>ADCK1</td>
+      <td>Uncharacterized aarF domain-containing protein kinase 1</td>
+      <td>Atypical</td>
+      <td>ABC1</td>
+      <td>ABC1-B</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86TW2" target="_blank">Q86TW2</a></td>
+    </tr>
+    <tr>
+      <td>KDR</td>
+      <td>KDR</td>
+      <td>KDR</td>
+      <td>Vascular endothelial growth factor receptor 2</td>
+      <td>TK</td>
+      <td>VEGFR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P35968" target="_blank">P35968</a></td>
+    </tr>
+    <tr>
+      <td>ALK7</td>
+      <td>ALK7</td>
+      <td>ACVR1C</td>
+      <td>Activin receptor type-1C</td>
+      <td>TKL</td>
+      <td>STKR</td>
+      <td>STKR1</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8NER5" target="_blank">Q8NER5</a></td>
+    </tr>
+    <tr>
+      <td>AurB</td>
+      <td>AurB</td>
+      <td>AURKB</td>
+      <td>Aurora kinase B</td>
+      <td>Other</td>
+      <td>Aur</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96GD4" target="_blank">Q96GD4</a></td>
+    </tr>
+    <tr>
+      <td>AurA</td>
+      <td>AurA</td>
+      <td>AURKA</td>
+      <td>Aurora kinase A</td>
+      <td>Other</td>
+      <td>Aur</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O14965" target="_blank">O14965</a></td>
+    </tr>
+    <tr>
+      <td>Erk5</td>
+      <td>Erk5</td>
+      <td>MAPK7</td>
+      <td>Mitogen-activated protein kinase 7</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>ERK5</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13164" target="_blank">Q13164</a></td>
+    </tr>
+    <tr>
+      <td>BUB1</td>
+      <td>BUB1</td>
+      <td>BUB1</td>
+      <td>Mitotic checkpoint serine/threonine-protein kinase BUB1</td>
+      <td>Other</td>
+      <td>BUB</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O43683" target="_blank">O43683</a></td>
+    </tr>
+    <tr>
+      <td>DDR2</td>
+      <td>DDR2</td>
+      <td>DDR2</td>
+      <td>Discoidin domain-containing receptor 2</td>
+      <td>TK</td>
+      <td>DDR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q16832" target="_blank">Q16832</a></td>
+    </tr>
+    <tr>
+      <td>CCK4</td>
+      <td>CCK4</td>
+      <td>PTK7</td>
+      <td>Inactive tyrosine-protein kinase 7</td>
+      <td>TK</td>
+      <td>CCK4</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13308" target="_blank">Q13308</a></td>
+    </tr>
+    <tr>
+      <td>LIMK1</td>
+      <td>LIMK1</td>
+      <td>LIMK1</td>
+      <td>LIM domain kinase 1</td>
+      <td>TKL</td>
+      <td>LISK</td>
+      <td>LIMK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P53667" target="_blank">P53667</a></td>
+    </tr>
+    <tr>
+      <td>LMR1</td>
+      <td>LMR1</td>
+      <td>AATK</td>
+      <td>Serine/threonine-protein kinase LMTK1</td>
+      <td>TK</td>
+      <td>Lmr</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6ZMQ8" target="_blank">Q6ZMQ8</a></td>
+    </tr>
+    <tr>
+      <td>LMR2</td>
+      <td>LMR2</td>
+      <td>LMTK2</td>
+      <td>Serine/threonine-protein kinase LMTK2</td>
+      <td>TK</td>
+      <td>Lmr</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IWU2" target="_blank">Q8IWU2</a></td>
+    </tr>
+    <tr>
+      <td>LMR3</td>
+      <td>LMR3</td>
+      <td>LMTK3</td>
+      <td>Serine/threonine-protein kinase LMTK3</td>
+      <td>TK</td>
+      <td>Lmr</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96Q04" target="_blank">Q96Q04</a></td>
+    </tr>
+    <tr>
+      <td>EphA7</td>
+      <td>EphA7</td>
+      <td>EPHA7</td>
+      <td>Ephrin type-A receptor 7</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15375" target="_blank">Q15375</a></td>
+    </tr>
+    <tr>
+      <td>BMX</td>
+      <td>BMX</td>
+      <td>BMX</td>
+      <td>Cytoplasmic tyrosine-protein kinase BMX</td>
+      <td>TK</td>
+      <td>Tec</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P51813" target="_blank">P51813</a></td>
+    </tr>
+    <tr>
+      <td>CTK</td>
+      <td>CTK</td>
+      <td>MATK</td>
+      <td>Megakaryocyte-associated tyrosine-protein kinase</td>
+      <td>TK</td>
+      <td>Csk</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P42679" target="_blank">P42679</a></td>
+    </tr>
+    <tr>
+      <td>FRK</td>
+      <td>FRK</td>
+      <td>FRK</td>
+      <td>Tyrosine-protein kinase FRK</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P42685" target="_blank">P42685</a></td>
+    </tr>
+    <tr>
+      <td>NEK6</td>
+      <td>NEK6</td>
+      <td>NEK6</td>
+      <td>Serine/threonine-protein kinase Nek6</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9HC98" target="_blank">Q9HC98</a></td>
+    </tr>
+    <tr>
+      <td>NEK7</td>
+      <td>NEK7</td>
+      <td>NEK7</td>
+      <td>Serine/threonine-protein kinase Nek7</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8TDX7" target="_blank">Q8TDX7</a></td>
+    </tr>
+    <tr>
+      <td>AAK1</td>
+      <td>AAK1</td>
+      <td>AAK1</td>
+      <td>AP2-associated protein kinase 1</td>
+      <td>Other</td>
+      <td>NAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q2M2I8" target="_blank">Q2M2I8</a></td>
+    </tr>
+    <tr>
+      <td>ChaK1</td>
+      <td>ChaK1</td>
+      <td>TRPM7</td>
+      <td>Transient receptor potential cation channel subfamily M member 7</td>
+      <td>Atypical</td>
+      <td>Alpha</td>
+      <td>ChaK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96QT4" target="_blank">Q96QT4</a></td>
+    </tr>
+    <tr>
+      <td>PYK2</td>
+      <td>PYK2</td>
+      <td>PTK2B</td>
+      <td>Protein-tyrosine kinase 2-beta</td>
+      <td>TK</td>
+      <td>FAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q14289" target="_blank">Q14289</a></td>
+    </tr>
+    <tr>
+      <td>SRM</td>
+      <td>SRM</td>
+      <td>SRMS</td>
+      <td>Tyrosine-protein kinase Srms</td>
+      <td>TK</td>
+      <td>Src</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H3Y6" target="_blank">Q9H3Y6</a></td>
+    </tr>
+    <tr>
+      <td>LOK</td>
+      <td>LOK</td>
+      <td>STK10</td>
+      <td>Serine/threonine-protein kinase 10</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>SLK</td>
+      <td><a href="http://www.uniprot.org/uniprot/O94804" target="_blank">O94804</a></td>
+    </tr>
+    <tr>
+      <td>KHS2</td>
+      <td>KHS2</td>
+      <td>MAP4K3</td>
+      <td>Mitogen-activated protein kinase kinase kinase kinase 3</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>KHS</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IVH8" target="_blank">Q8IVH8</a></td>
+    </tr>
+    <tr>
+      <td>OSR1</td>
+      <td>OSR1</td>
+      <td>OXSR1</td>
+      <td>Serine/threonine-protein kinase OSR1</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>FRAY</td>
+      <td><a href="http://www.uniprot.org/uniprot/O95747" target="_blank">O95747</a></td>
+    </tr>
+    <tr>
+      <td>PAK6</td>
+      <td>PAK6</td>
+      <td>PAK6</td>
+      <td>Serine/threonine-protein kinase PAK 6</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>PAKB</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NQU5" target="_blank">Q9NQU5</a></td>
+    </tr>
+    <tr>
+      <td>PAK4</td>
+      <td>PAK4</td>
+      <td>PAK4</td>
+      <td>Serine/threonine-protein kinase PAK 4</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>PAKB</td>
+      <td><a href="http://www.uniprot.org/uniprot/O96013" target="_blank">O96013</a></td>
+    </tr>
+    <tr>
+      <td>MST4</td>
+      <td>MST4</td>
+      <td>STK26</td>
+      <td>Serine/threonine-protein kinase MST4</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>YSK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9P289" target="_blank">Q9P289</a></td>
+    </tr>
+    <tr>
+      <td>STLK3</td>
+      <td>STLK3</td>
+      <td>STK39</td>
+      <td>STE20/SPS1-related proline-alanine-rich protein kinase</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>FRAY</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UEW8" target="_blank">Q9UEW8</a></td>
+    </tr>
+    <tr>
+      <td>STLK5</td>
+      <td>STLK5</td>
+      <td>STRADA</td>
+      <td>STE20-related kinase adapter protein alpha</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>STLK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q7RTN6" target="_blank">Q7RTN6</a></td>
+    </tr>
+    <tr>
+      <td>STLK6</td>
+      <td>STLK6</td>
+      <td>STRADB</td>
+      <td>STE20-related kinase adapter protein beta</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>STLK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9C0K7" target="_blank">Q9C0K7</a></td>
+    </tr>
+    <tr>
+      <td>TAO3</td>
+      <td>TAO3</td>
+      <td>TAOK3</td>
+      <td>Serine/threonine-protein kinase TAO3</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>TAO</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H2K8" target="_blank">Q9H2K8</a></td>
+    </tr>
+    <tr>
+      <td>TAO1</td>
+      <td>TAO1</td>
+      <td>TAOK1</td>
+      <td>Serine/threonine-protein kinase TAO1</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>TAO</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q7L7X3" target="_blank">Q7L7X3</a></td>
+    </tr>
+    <tr>
+      <td>HGK</td>
+      <td>ZC1/HGK</td>
+      <td>MAP4K4</td>
+      <td>Mitogen-activated protein kinase kinase kinase kinase 4</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>MSN</td>
+      <td><a href="http://www.uniprot.org/uniprot/O95819" target="_blank">O95819</a></td>
+    </tr>
+    <tr>
+      <td>TNIK</td>
+      <td>ZC2/TNIK</td>
+      <td>TNIK</td>
+      <td>TRAF2 and NCK-interacting protein kinase</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>MSN</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UKE5" target="_blank">Q9UKE5</a></td>
+    </tr>
+    <tr>
+      <td>MINK</td>
+      <td>ZC3/MINK</td>
+      <td>MINK1</td>
+      <td>Misshapen-like kinase 1</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>MSN</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8N4C8" target="_blank">Q8N4C8</a></td>
+    </tr>
+    <tr>
+      <td>NRK</td>
+      <td>ZC4/NRK</td>
+      <td>NRK</td>
+      <td>Nik-related protein kinase</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>MSN</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q7Z2Y5" target="_blank">Q7Z2Y5</a></td>
+    </tr>
+    <tr>
+      <td>LATS1</td>
+      <td>LATS1</td>
+      <td>LATS1</td>
+      <td>Serine/threonine-protein kinase LATS1</td>
+      <td>AGC</td>
+      <td>NDR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O95835" target="_blank">O95835</a></td>
+    </tr>
+    <tr>
+      <td>LATS2</td>
+      <td>LATS2</td>
+      <td>LATS2</td>
+      <td>Serine/threonine-protein kinase LATS2</td>
+      <td>AGC</td>
+      <td>NDR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NRM7" target="_blank">Q9NRM7</a></td>
+    </tr>
+    <tr>
+      <td>CDK11</td>
+      <td>CDK11</td>
+      <td>CDK19</td>
+      <td>Cyclin-dependent kinase 19</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CDK8</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BWU1" target="_blank">Q9BWU1</a></td>
+    </tr>
+    <tr>
+      <td>NIM1</td>
+      <td>NIM1</td>
+      <td>NIM1K</td>
+      <td>Serine/threonine-protein kinase NIM1</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>NIM1</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IY84" target="_blank">Q8IY84</a></td>
+    </tr>
+    <tr>
+      <td>ULK3</td>
+      <td>ULK3</td>
+      <td>ULK3</td>
+      <td>Serine/threonine-protein kinase ULK3</td>
+      <td>Other</td>
+      <td>ULK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6PHR2" target="_blank">Q6PHR2</a></td>
+    </tr>
+    <tr>
+      <td>CLIK1L</td>
+      <td>CLIK1L</td>
+      <td>PDIK1L</td>
+      <td>Serine/threonine-protein kinase PDIK1L</td>
+      <td>Other</td>
+      <td>NKF4</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8N165" target="_blank">Q8N165</a></td>
+    </tr>
+    <tr>
+      <td>TTBK2</td>
+      <td>TTBK2</td>
+      <td>TTBK2</td>
+      <td>Tau-tubulin kinase 2</td>
+      <td>CK1</td>
+      <td>TTBK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6IQ55" target="_blank">Q6IQ55</a></td>
+    </tr>
+    <tr>
+      <td>SCYL1</td>
+      <td>SCYL1</td>
+      <td>SCYL1</td>
+      <td>N-terminal kinase-like protein</td>
+      <td>Other</td>
+      <td>SCY1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96KG9" target="_blank">Q96KG9</a></td>
+    </tr>
+    <tr>
+      <td>MASTL</td>
+      <td>MASTL</td>
+      <td>MASTL</td>
+      <td>Serine/threonine-protein kinase greatwall</td>
+      <td>AGC</td>
+      <td>MAST</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96GX5" target="_blank">Q96GX5</a></td>
+    </tr>
+    <tr>
+      <td>PINK1</td>
+      <td>PINK1</td>
+      <td>PINK1</td>
+      <td>Serine/threonine-protein kinase PINK1</td>
+      <td>Other</td>
+      <td>NKF2</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BXM7" target="_blank">Q9BXM7</a></td>
+    </tr>
+    <tr>
+      <td>ULK4</td>
+      <td>ULK4</td>
+      <td>ULK4</td>
+      <td>Serine/threonine-protein kinase ULK4</td>
+      <td>Other</td>
+      <td>ULK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96C45" target="_blank">Q96C45</a></td>
+    </tr>
+    <tr>
+      <td>MLKL</td>
+      <td>MLKL</td>
+      <td>MLKL</td>
+      <td>Mixed lineage kinase domain-like protein</td>
+      <td>TKL</td>
+      <td>TKL-Unique</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8NB16" target="_blank">Q8NB16</a></td>
+    </tr>
+    <tr>
+      <td>DCAMKL3</td>
+      <td>DCAMKL3</td>
+      <td>DCLK3</td>
+      <td>Serine/threonine-protein kinase DCLK3</td>
+      <td>CAMK</td>
+      <td>DCAMKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9C098" target="_blank">Q9C098</a></td>
+    </tr>
+    <tr>
+      <td>SgK493</td>
+      <td>SgK493</td>
+      <td>PKDCC</td>
+      <td>Protein kinase domain-containing protein</td>
+      <td>Other</td>
+      <td>SgK493</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q504Y2" target="_blank">Q504Y2</a></td>
+    </tr>
+    <tr>
+      <td>PFTAIRE2</td>
+      <td>PFTAIRE2</td>
+      <td>CDK15</td>
+      <td>Cyclin-dependent kinase 15</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>PFTAIRE</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96Q40" target="_blank">Q96Q40</a></td>
+    </tr>
+    <tr>
+      <td>STK33</td>
+      <td>STK33</td>
+      <td>STK33</td>
+      <td>Serine/threonine-protein kinase 33</td>
+      <td>CAMK</td>
+      <td>STK33</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BYT3" target="_blank">Q9BYT3</a></td>
+    </tr>
+    <tr>
+      <td>PRPK</td>
+      <td>PRPK</td>
+      <td>TP53RK</td>
+      <td>TP53-regulating kinase</td>
+      <td>Other</td>
+      <td>Bud32</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96S44" target="_blank">Q96S44</a></td>
+    </tr>
+    <tr>
+      <td>Erk7</td>
+      <td>Erk7</td>
+      <td>MAPK15</td>
+      <td>Mitogen-activated protein kinase 15</td>
+      <td>CMGC</td>
+      <td>MAPK</td>
+      <td>ERK7</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8TD08" target="_blank">Q8TD08</a></td>
+    </tr>
+    <tr>
+      <td>CDKL4</td>
+      <td>CDKL4</td>
+      <td>CDKL4</td>
+      <td>Cyclin-dependent kinase-like 4</td>
+      <td>CMGC</td>
+      <td>CDKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q5MAI5" target="_blank">Q5MAI5</a></td>
+    </tr>
+    <tr>
+      <td>SCYL3</td>
+      <td>SCYL3</td>
+      <td>SCYL3</td>
+      <td>Protein-associating with the carboxyl-terminal domain of ezrin</td>
+      <td>Other</td>
+      <td>SCY1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IZE3" target="_blank">Q8IZE3</a></td>
+    </tr>
+    <tr>
+      <td>YANK3</td>
+      <td>YANK3</td>
+      <td>STK32C</td>
+      <td>Serine/threonine-protein kinase 32C</td>
+      <td>AGC</td>
+      <td>YANK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86UX6" target="_blank">Q86UX6</a></td>
+    </tr>
+    <tr>
+      <td>NEK9</td>
+      <td>NEK9</td>
+      <td>NEK9</td>
+      <td>Serine/threonine-protein kinase Nek9</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8TD19" target="_blank">Q8TD19</a></td>
+    </tr>
+    <tr>
+      <td>TSSK3</td>
+      <td>TSSK3</td>
+      <td>TSSK3</td>
+      <td>Testis-specific serine/threonine-protein kinase 3</td>
+      <td>CAMK</td>
+      <td>TSSK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96PN8" target="_blank">Q96PN8</a></td>
+    </tr>
+    <tr>
+      <td>NuaK2</td>
+      <td>NuaK2</td>
+      <td>NUAK2</td>
+      <td>NUAK family SNF1-like kinase 2</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>NuaK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H093" target="_blank">Q9H093</a></td>
+    </tr>
+    <tr>
+      <td>RSKL2</td>
+      <td>RSKL2</td>
+      <td>RPS6KL1</td>
+      <td>Ribosomal protein S6 kinase-like 1</td>
+      <td>AGC</td>
+      <td>RSKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y6S9" target="_blank">Q9Y6S9</a></td>
+    </tr>
+    <tr>
+      <td>TSSK2</td>
+      <td>TSSK2</td>
+      <td>TSSK2</td>
+      <td>Testis-specific serine/threonine-protein kinase 2</td>
+      <td>CAMK</td>
+      <td>TSSK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96PF2" target="_blank">Q96PF2</a></td>
+    </tr>
+    <tr>
+      <td>SCYL2</td>
+      <td>SCYL2</td>
+      <td>SCYL2</td>
+      <td>SCY1-like protein 2</td>
+      <td>Other</td>
+      <td>SCY1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6P3W7" target="_blank">Q6P3W7</a></td>
+    </tr>
+    <tr>
+      <td>NEK8</td>
+      <td>NEK8</td>
+      <td>NEK8</td>
+      <td>Serine/threonine-protein kinase Nek8</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86SG6" target="_blank">Q86SG6</a></td>
+    </tr>
+    <tr>
+      <td>BARK2</td>
+      <td>BARK2</td>
+      <td>ADRBK2</td>
+      <td>Beta-adrenergic receptor kinase 2</td>
+      <td>AGC</td>
+      <td>GRK</td>
+      <td>BARK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P35626" target="_blank">P35626</a></td>
+    </tr>
+    <tr>
+      <td>NRBP1</td>
+      <td>NRBP1</td>
+      <td>NRBP1</td>
+      <td>Nuclear receptor-binding protein</td>
+      <td>Other</td>
+      <td>NRBP</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UHY1" target="_blank">Q9UHY1</a></td>
+    </tr>
+    <tr>
+      <td>PKD2</td>
+      <td>PKD2</td>
+      <td>PRKD2</td>
+      <td>Serine/threonine-protein kinase D2</td>
+      <td>CAMK</td>
+      <td>PKD</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BZL6" target="_blank">Q9BZL6</a></td>
+    </tr>
+    <tr>
+      <td>YANK2</td>
+      <td>YANK2</td>
+      <td>STK32B</td>
+      <td>Serine/threonine-protein kinase 32B</td>
+      <td>AGC</td>
+      <td>YANK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NY57" target="_blank">Q9NY57</a></td>
+    </tr>
+    <tr>
+      <td>CaMKK2</td>
+      <td>CaMKK2</td>
+      <td>CAMKK2</td>
+      <td>Calcium/calmodulin-dependent protein kinase kinase 2</td>
+      <td>Other</td>
+      <td>CAMKK</td>
+      <td>CAMKK-Meta</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96RR4" target="_blank">Q96RR4</a></td>
+    </tr>
+    <tr>
+      <td>CCRK</td>
+      <td>CCRK</td>
+      <td>CDK20</td>
+      <td>Cyclin-dependent kinase 20</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IZL9" target="_blank">Q8IZL9</a></td>
+    </tr>
+    <tr>
+      <td>CLK4</td>
+      <td>CLK4</td>
+      <td>CLK4</td>
+      <td>Dual specificity protein kinase CLK4</td>
+      <td>CMGC</td>
+      <td>CLK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9HAZ1" target="_blank">Q9HAZ1</a></td>
+    </tr>
+    <tr>
+      <td>CRK7</td>
+      <td>CRK7</td>
+      <td>CDK12</td>
+      <td>Cyclin-dependent kinase 12</td>
+      <td>CMGC</td>
+      <td>CDK</td>
+      <td>CRK7</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NYV4" target="_blank">Q9NYV4</a></td>
+    </tr>
+    <tr>
+      <td>DRAK1</td>
+      <td>DRAK1</td>
+      <td>STK17A</td>
+      <td>Serine/threonine-protein kinase 17A</td>
+      <td>CAMK</td>
+      <td>DAPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UEE5" target="_blank">Q9UEE5</a></td>
+    </tr>
+    <tr>
+      <td>DRAK2</td>
+      <td>DRAK2</td>
+      <td>STK17B</td>
+      <td>Serine/threonine-protein kinase 17B</td>
+      <td>CAMK</td>
+      <td>DAPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O94768" target="_blank">O94768</a></td>
+    </tr>
+    <tr>
+      <td>DYRK3</td>
+      <td>DYRK3</td>
+      <td>DYRK3</td>
+      <td>Dual specificity tyrosine-phosphorylation-regulated kinase 3</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>DYRK2</td>
+      <td><a href="http://www.uniprot.org/uniprot/O43781" target="_blank">O43781</a></td>
+    </tr>
+    <tr>
+      <td>PKD3</td>
+      <td>PKD3</td>
+      <td>PRKD3</td>
+      <td>Serine/threonine-protein kinase D3</td>
+      <td>CAMK</td>
+      <td>PKD</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O94806" target="_blank">O94806</a></td>
+    </tr>
+    <tr>
+      <td>GCN2</td>
+      <td>GCN2</td>
+      <td>EIF2AK4</td>
+      <td>Eukaryotic translation initiation factor 2-alpha kinase 4</td>
+      <td>Other</td>
+      <td>PEK</td>
+      <td>GCN2</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9P2K8" target="_blank">Q9P2K8</a></td>
+    </tr>
+    <tr>
+      <td>SgK494</td>
+      <td>SgK494</td>
+      <td></td>
+      <td>Uncharacterized serine/threonine-protein kinase SgK494</td>
+      <td>AGC</td>
+      <td>RSKR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96LW2" target="_blank">Q96LW2</a></td>
+    </tr>
+    <tr>
+      <td>SgK495</td>
+      <td>SgK495</td>
+      <td>STK40</td>
+      <td>Serine/threonine-protein kinase 40</td>
+      <td>CAMK</td>
+      <td>SgK495</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8N2I9" target="_blank">Q8N2I9</a></td>
+    </tr>
+    <tr>
+      <td>CLIK1</td>
+      <td>CLIK1</td>
+      <td>STK35</td>
+      <td>Serine/threonine-protein kinase 35</td>
+      <td>Other</td>
+      <td>NKF4</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8TDR2" target="_blank">Q8TDR2</a></td>
+    </tr>
+    <tr>
+      <td>HH498</td>
+      <td>HH498</td>
+      <td>TNNI3K</td>
+      <td>Serine/threonine-protein kinase TNNI3K</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>HH498</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q59H18" target="_blank">Q59H18</a></td>
+    </tr>
+    <tr>
+      <td>HIPK2</td>
+      <td>HIPK2</td>
+      <td>HIPK2</td>
+      <td>Homeodomain-interacting protein kinase 2</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>HIPK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H2X6" target="_blank">Q9H2X6</a></td>
+    </tr>
+    <tr>
+      <td>HRI</td>
+      <td>HRI</td>
+      <td>EIF2AK1</td>
+      <td>Eukaryotic translation initiation factor 2-alpha kinase 1</td>
+      <td>Other</td>
+      <td>PEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BQI3" target="_blank">Q9BQI3</a></td>
+    </tr>
+    <tr>
+      <td>ICK</td>
+      <td>ICK</td>
+      <td>ICK</td>
+      <td>Serine/threonine-protein kinase ICK</td>
+      <td>CMGC</td>
+      <td>RCK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UPZ9" target="_blank">Q9UPZ9</a></td>
+    </tr>
+    <tr>
+      <td>IRE2</td>
+      <td>IRE2</td>
+      <td>ERN2</td>
+      <td>Serine/threonine-protein kinase/endoribonuclease IRE2</td>
+      <td>Other</td>
+      <td>IRE</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q76MJ5" target="_blank">Q76MJ5</a></td>
+    </tr>
+    <tr>
+      <td>PASK</td>
+      <td>PASK</td>
+      <td>PASK</td>
+      <td>PAS domain-containing serine/threonine-protein kinase</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>PASK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96RG2" target="_blank">Q96RG2</a></td>
+    </tr>
+    <tr>
+      <td>NDR2</td>
+      <td>NDR2</td>
+      <td>STK38L</td>
+      <td>Serine/threonine-protein kinase 38-like</td>
+      <td>AGC</td>
+      <td>NDR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y2H1" target="_blank">Q9Y2H1</a></td>
+    </tr>
+    <tr>
+      <td>QSK</td>
+      <td>QSK</td>
+      <td>SIK3</td>
+      <td>Serine/threonine-protein kinase SIK3</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>QIK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y2K2" target="_blank">Q9Y2K2</a></td>
+    </tr>
+    <tr>
+      <td>HUNK</td>
+      <td>HUNK</td>
+      <td>HUNK</td>
+      <td>Hormonally up-regulated neu tumor-associated kinase</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>HUNK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P57058" target="_blank">P57058</a></td>
+    </tr>
+    <tr>
+      <td>MAP3K6</td>
+      <td>MAP3K6</td>
+      <td>MAP3K6</td>
+      <td>Mitogen-activated protein kinase kinase kinase 6</td>
+      <td>STE</td>
+      <td>STE11</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O95382" target="_blank">O95382</a></td>
+    </tr>
+    <tr>
+      <td>ZAK</td>
+      <td>ZAK</td>
+      <td></td>
+      <td>Mitogen-activated protein kinase kinase kinase MLT</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>ZAK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NYL2" target="_blank">Q9NYL2</a></td>
+    </tr>
+    <tr>
+      <td>MOK</td>
+      <td>MOK</td>
+      <td>MOK</td>
+      <td>MAPK/MAK/MRK overlapping kinase</td>
+      <td>CMGC</td>
+      <td>RCK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UQ07" target="_blank">Q9UQ07</a></td>
+    </tr>
+    <tr>
+      <td>MPSK1</td>
+      <td>MPSK1</td>
+      <td>STK16</td>
+      <td>Serine/threonine-protein kinase 16</td>
+      <td>Other</td>
+      <td>NAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O75716" target="_blank">O75716</a></td>
+    </tr>
+    <tr>
+      <td>MSSK1</td>
+      <td>MSSK1</td>
+      <td>SRPK3</td>
+      <td>SRSF protein kinase 3</td>
+      <td>CMGC</td>
+      <td>SRPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UPE1" target="_blank">Q9UPE1</a></td>
+    </tr>
+    <tr>
+      <td>Wnk1</td>
+      <td>Wnk1</td>
+      <td>WNK1</td>
+      <td>Serine/threonine-protein kinase WNK1</td>
+      <td>Other</td>
+      <td>WNK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H4A3" target="_blank">Q9H4A3</a></td>
+    </tr>
+    <tr>
+      <td>CDKL3</td>
+      <td>CDKL3</td>
+      <td>CDKL3</td>
+      <td>Cyclin-dependent kinase-like 3</td>
+      <td>CMGC</td>
+      <td>CDKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IVW4" target="_blank">Q8IVW4</a></td>
+    </tr>
+    <tr>
+      <td>PAK5</td>
+      <td>PAK5</td>
+      <td>PAK7</td>
+      <td>Serine/threonine-protein kinase PAK 7</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>PAKB</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9P286" target="_blank">Q9P286</a></td>
+    </tr>
+    <tr>
+      <td>PKN3</td>
+      <td>PKN3</td>
+      <td>PKN3</td>
+      <td>Serine/threonine-protein kinase N3</td>
+      <td>AGC</td>
+      <td>PKN</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6P5Z2" target="_blank">Q6P5Z2</a></td>
+    </tr>
+    <tr>
+      <td>QIK</td>
+      <td>QIK</td>
+      <td>SIK2</td>
+      <td>Serine/threonine-protein kinase SIK2</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>QIK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H0K1" target="_blank">Q9H0K1</a></td>
+    </tr>
+    <tr>
+      <td>MARK4</td>
+      <td>MARK4</td>
+      <td>MARK4</td>
+      <td>MAP/microtubule affinity-regulating kinase 4</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>MARK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96L34" target="_blank">Q96L34</a></td>
+    </tr>
+    <tr>
+      <td>SgK496</td>
+      <td>SgK496</td>
+      <td>DSTYK</td>
+      <td>Dual serine/threonine and tyrosine protein kinase</td>
+      <td>Other</td>
+      <td>Dusty</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6XUX3" target="_blank">Q6XUX3</a></td>
+    </tr>
+    <tr>
+      <td>RSKL1</td>
+      <td>RSKL1</td>
+      <td>RPS6KC1</td>
+      <td>Ribosomal protein S6 kinase delta-1</td>
+      <td>AGC</td>
+      <td>RSKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96S38" target="_blank">Q96S38</a></td>
+    </tr>
+    <tr>
+      <td>RSK4</td>
+      <td>RSK4</td>
+      <td>RPS6KA6</td>
+      <td>Ribosomal protein S6 kinase alpha-6</td>
+      <td>AGC</td>
+      <td>RSK</td>
+      <td>RSKp90</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UK32" target="_blank">Q9UK32</a></td>
+    </tr>
+    <tr>
+      <td>NRBP2</td>
+      <td>NRBP2</td>
+      <td>NRBP2</td>
+      <td>Nuclear receptor-binding protein 2</td>
+      <td>Other</td>
+      <td>NRBP</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NSY0" target="_blank">Q9NSY0</a></td>
+    </tr>
+    <tr>
+      <td>SgK071</td>
+      <td>SgK071</td>
+      <td>STKLD1</td>
+      <td>Protein kinase-like protein SgK071</td>
+      <td>Other</td>
+      <td>SgK071</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8NE28" target="_blank">Q8NE28</a></td>
+    </tr>
+    <tr>
+      <td>SGK2</td>
+      <td>SGK2</td>
+      <td>SGK2</td>
+      <td>Serine/threonine-protein kinase Sgk2</td>
+      <td>AGC</td>
+      <td>SGK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9HBY8" target="_blank">Q9HBY8</a></td>
+    </tr>
+    <tr>
+      <td>SSTK</td>
+      <td>SSTK</td>
+      <td>TSSK6</td>
+      <td>Testis-specific serine/threonine-protein kinase 6</td>
+      <td>CAMK</td>
+      <td>TSSK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BXA6" target="_blank">Q9BXA6</a></td>
+    </tr>
+    <tr>
+      <td>SGK3</td>
+      <td>SGK3</td>
+      <td>SGK3</td>
+      <td>Serine/threonine-protein kinase Sgk3</td>
+      <td>AGC</td>
+      <td>SGK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96BR1" target="_blank">Q96BR1</a></td>
+    </tr>
+    <tr>
+      <td>TTBK1</td>
+      <td>TTBK1</td>
+      <td>TTBK1</td>
+      <td>Tau-tubulin kinase 1</td>
+      <td>CK1</td>
+      <td>TTBK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q5TCY1" target="_blank">Q5TCY1</a></td>
+    </tr>
+    <tr>
+      <td>DCAMKL2</td>
+      <td>DCAMKL2</td>
+      <td>DCLK2</td>
+      <td>Serine/threonine-protein kinase DCLK2</td>
+      <td>CAMK</td>
+      <td>DCAMKL</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8N568" target="_blank">Q8N568</a></td>
+    </tr>
+    <tr>
+      <td>Slob</td>
+      <td>Slob</td>
+      <td>PXK</td>
+      <td>PX domain-containing protein kinase-like protein</td>
+      <td>Other</td>
+      <td>Slob</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q7Z7A4" target="_blank">Q7Z7A4</a></td>
+    </tr>
+    <tr>
+      <td>PBK</td>
+      <td>PBK</td>
+      <td>PBK</td>
+      <td>Lymphokine-activated killer T-cell-originated protein kinase</td>
+      <td>Other</td>
+      <td>TOPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96KB5" target="_blank">Q96KB5</a></td>
+    </tr>
+    <tr>
+      <td>SuRTK106</td>
+      <td>SuRTK106</td>
+      <td>STYK1</td>
+      <td>Tyrosine-protein kinase STYK1</td>
+      <td>TK</td>
+      <td>TK-Unique</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6J9G0" target="_blank">Q6J9G0</a></td>
+    </tr>
+    <tr>
+      <td>TBK1</td>
+      <td>TBK1</td>
+      <td>TBK1</td>
+      <td>Serine/threonine-protein kinase TBK1</td>
+      <td>Other</td>
+      <td>IKK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UHD2" target="_blank">Q9UHD2</a></td>
+    </tr>
+    <tr>
+      <td>TESK2</td>
+      <td>TESK2</td>
+      <td>TESK2</td>
+      <td>Dual-specificity testis-specific protein kinase 2</td>
+      <td>TKL</td>
+      <td>LISK</td>
+      <td>TESK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96S53" target="_blank">Q96S53</a></td>
+    </tr>
+    <tr>
+      <td>Trad</td>
+      <td>Trad</td>
+      <td>KALRN</td>
+      <td>HCG2039851</td>
+      <td>CAMK</td>
+      <td>Trio</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O60229" target="_blank">O60229</a></td>
+    </tr>
+    <tr>
+      <td>TSSK4</td>
+      <td>TSSK4</td>
+      <td>TSSK4</td>
+      <td>Testis-specific serine/threonine-protein kinase 4</td>
+      <td>CAMK</td>
+      <td>TSSK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6SA08" target="_blank">Q6SA08</a></td>
+    </tr>
+    <tr>
+      <td>VRK3</td>
+      <td>VRK3</td>
+      <td>VRK3</td>
+      <td>Inactive serine/threonine-protein kinase VRK3</td>
+      <td>CK1</td>
+      <td>VRK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IV63" target="_blank">Q8IV63</a></td>
+    </tr>
+    <tr>
+      <td>caMLCK</td>
+      <td>caMLCK</td>
+      <td>MYLK3</td>
+      <td>Myosin light chain kinase 3</td>
+      <td>CAMK</td>
+      <td>MLCK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q32MK0" target="_blank">Q32MK0</a></td>
+    </tr>
+    <tr>
+      <td>SPEG</td>
+      <td>SPEG</td>
+      <td>SPEG</td>
+      <td>Striated muscle preferentially expressed protein kinase</td>
+      <td>CAMK</td>
+      <td>Trio</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15772" target="_blank">Q15772</a></td>
+    </tr>
+    <tr>
+      <td>CK1a2</td>
+      <td>CK1a2</td>
+      <td>CSNK1A1L</td>
+      <td>Casein kinase I isoform alpha-like</td>
+      <td>CK1</td>
+      <td>CK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8N752" target="_blank">Q8N752</a></td>
+    </tr>
+    <tr>
+      <td>ANKRD3</td>
+      <td>ANKRD3</td>
+      <td>RIPK4</td>
+      <td>Receptor-interacting serine/threonine-protein kinase 4</td>
+      <td>TKL</td>
+      <td>RIPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P57078" target="_blank">P57078</a></td>
+    </tr>
+    <tr>
+      <td>NEK5</td>
+      <td>NEK5</td>
+      <td>NEK5</td>
+      <td>Serine/threonine-protein kinase Nek5</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6P3R8" target="_blank">Q6P3R8</a></td>
+    </tr>
+    <tr>
+      <td>CaMK1d</td>
+      <td>CaMK1d</td>
+      <td>CAMK1D</td>
+      <td>Calcium/calmodulin-dependent protein kinase type 1D</td>
+      <td>CAMK</td>
+      <td>CAMK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IU85" target="_blank">Q8IU85</a></td>
+    </tr>
+    <tr>
+      <td>MAP3K19</td>
+      <td>MAP3K8</td>
+      <td>MAP3K19</td>
+      <td>Mitogen-activated protein kinase kinase kinase 19</td>
+      <td>STE</td>
+      <td>STE11</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q56UN5" target="_blank">Q56UN5</a></td>
+    </tr>
+    <tr>
+      <td>NEK11</td>
+      <td>NEK11</td>
+      <td>NEK11</td>
+      <td>Serine/threonine-protein kinase Nek11</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8NG66" target="_blank">Q8NG66</a></td>
+    </tr>
+    <tr>
+      <td>GPRK7</td>
+      <td>GPRK7</td>
+      <td>GRK7</td>
+      <td>G protein-coupled receptor kinase 7</td>
+      <td>AGC</td>
+      <td>GRK</td>
+      <td>GRK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8WTQ7" target="_blank">Q8WTQ7</a></td>
+    </tr>
+    <tr>
+      <td>SgK069</td>
+      <td>SgK069</td>
+      <td>SBK2</td>
+      <td>Serine/threonine-protein kinase SBK2</td>
+      <td>Other</td>
+      <td>NKF1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P0C263" target="_blank">P0C263</a></td>
+    </tr>
+    <tr>
+      <td>HIPK4</td>
+      <td>HIPK4</td>
+      <td>HIPK4</td>
+      <td>Homeodomain-interacting protein kinase 4</td>
+      <td>CMGC</td>
+      <td>DYRK</td>
+      <td>HIPK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8NE63" target="_blank">Q8NE63</a></td>
+    </tr>
+    <tr>
+      <td>MYO3B</td>
+      <td>MYO3B</td>
+      <td>MYO3B</td>
+      <td>Myosin-IIIb</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>NinaC</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8WXR4" target="_blank">Q8WXR4</a></td>
+    </tr>
+    <tr>
+      <td>Wnk4</td>
+      <td>Wnk4</td>
+      <td>WNK4</td>
+      <td>Serine/threonine-protein kinase WNK4</td>
+      <td>Other</td>
+      <td>WNK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96J92" target="_blank">Q96J92</a></td>
+    </tr>
+    <tr>
+      <td>SgK110</td>
+      <td>SgK110</td>
+      <td>SBK3</td>
+      <td>Putative uncharacterized serine/threonine-protein kinase SgK110</td>
+      <td>Other</td>
+      <td>NKF1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P0C264" target="_blank">P0C264</a></td>
+    </tr>
+    <tr>
+      <td>BRSK1</td>
+      <td>BRSK1</td>
+      <td>BRSK1</td>
+      <td>Serine/threonine-protein kinase BRSK1</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>BRSK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8TDC3" target="_blank">Q8TDC3</a></td>
+    </tr>
+    <tr>
+      <td>Obscn</td>
+      <td>Obscn</td>
+      <td>OBSCN</td>
+      <td>Obscurin</td>
+      <td>CAMK</td>
+      <td>Trio</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q5VST9" target="_blank">Q5VST9</a></td>
+    </tr>
+    <tr>
+      <td>PSKH2</td>
+      <td>PSKH2</td>
+      <td>PSKH2</td>
+      <td>Serine/threonine-protein kinase H2</td>
+      <td>CAMK</td>
+      <td>PSK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96QS6" target="_blank">Q96QS6</a></td>
+    </tr>
+    <tr>
+      <td>SIK</td>
+      <td>SIK</td>
+      <td>SIK1</td>
+      <td>Serine/threonine-protein kinase SIK1</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>QIK</td>
+      <td><a href="http://www.uniprot.org/uniprot/P57059" target="_blank">P57059</a></td>
+    </tr>
+    <tr>
+      <td>KSR2</td>
+      <td>KSR2</td>
+      <td>KSR2</td>
+      <td>Kinase suppressor of Ras 2</td>
+      <td>TKL</td>
+      <td>RAF</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6VAB6" target="_blank">Q6VAB6</a></td>
+    </tr>
+    <tr>
+      <td>RIOK3</td>
+      <td>RIOK3</td>
+      <td>RIOK3</td>
+      <td>Serine/threonine-protein kinase RIO3</td>
+      <td>Atypical</td>
+      <td>RIO</td>
+      <td>RIO3</td>
+      <td><a href="http://www.uniprot.org/uniprot/O14730" target="_blank">O14730</a></td>
+    </tr>
+    <tr>
+      <td>ADCK3</td>
+      <td>ADCK3</td>
+      <td>ADCK3</td>
+      <td>Chaperone activity of bc1 complex-like</td>
+      <td>Atypical</td>
+      <td>ABC1</td>
+      <td>ABC1-A</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8NI60" target="_blank">Q8NI60</a></td>
+    </tr>
+    <tr>
+      <td>RIOK1</td>
+      <td>RIOK1</td>
+      <td>RIOK1</td>
+      <td>Serine/threonine-protein kinase RIO1</td>
+      <td>Atypical</td>
+      <td>RIO</td>
+      <td>RIO1</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BRS2" target="_blank">Q9BRS2</a></td>
+    </tr>
+    <tr>
+      <td>YANK1</td>
+      <td>YANK1</td>
+      <td>STK32A</td>
+      <td>Serine/threonine-protein kinase 32A</td>
+      <td>AGC</td>
+      <td>YANK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8WU08" target="_blank">Q8WU08</a></td>
+    </tr>
+    <tr>
+      <td>SNRK</td>
+      <td>SNRK</td>
+      <td>SNRK</td>
+      <td>SNF-related serine/threonine-protein kinase</td>
+      <td>CAMK</td>
+      <td>CAMKL</td>
+      <td>SNRK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NRH2" target="_blank">Q9NRH2</a></td>
+    </tr>
+    <tr>
+      <td>EphA10</td>
+      <td>EphA10</td>
+      <td>EPHA10</td>
+      <td>Ephrin type-A receptor 10</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q5JZY3" target="_blank">Q5JZY3</a></td>
+    </tr>
+    <tr>
+      <td>SgK196</td>
+      <td>SgK196</td>
+      <td>POMK</td>
+      <td>Protein kinase-like protein SgK196</td>
+      <td>Other</td>
+      <td>Other-Unique</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H5K3" target="_blank">Q9H5K3</a></td>
+    </tr>
+    <tr>
+      <td>MYO3A</td>
+      <td>MYO3A</td>
+      <td>MYO3A</td>
+      <td>Myosin-IIIa</td>
+      <td>STE</td>
+      <td>STE20</td>
+      <td>NinaC</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8NEV4" target="_blank">Q8NEV4</a></td>
+    </tr>
+    <tr>
+      <td>Wnk3</td>
+      <td>Wnk3</td>
+      <td>WNK3</td>
+      <td>Serine/threonine-protein kinase WNK3</td>
+      <td>Other</td>
+      <td>WNK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BYP7" target="_blank">Q9BYP7</a></td>
+    </tr>
+    <tr>
+      <td>SgK223</td>
+      <td>SgK223</td>
+      <td></td>
+      <td>Tyrosine-protein kinase SgK223</td>
+      <td>Other</td>
+      <td>NKF3</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86YV5" target="_blank">Q86YV5</a></td>
+    </tr>
+    <tr>
+      <td>NEK10</td>
+      <td>NEK10</td>
+      <td>NEK10</td>
+      <td>Serine/threonine-protein kinase Nek10</td>
+      <td>Other</td>
+      <td>NEK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6ZWH5" target="_blank">Q6ZWH5</a></td>
+    </tr>
+    <tr>
+      <td>EphA6</td>
+      <td>EphA6</td>
+      <td>EPHA6</td>
+      <td>Ephrin type-A receptor 6</td>
+      <td>TK</td>
+      <td>Eph</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UF33" target="_blank">Q9UF33</a></td>
+    </tr>
+    <tr>
+      <td>CK1g1</td>
+      <td>CK1g1</td>
+      <td>CSNK1G1</td>
+      <td>Casein kinase I isoform gamma-1</td>
+      <td>CK1</td>
+      <td>CK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9HCP0" target="_blank">Q9HCP0</a></td>
+    </tr>
+    <tr>
+      <td>SgK269</td>
+      <td>SgK269</td>
+      <td>PEAK1</td>
+      <td>Pseudopodium-enriched atypical kinase 1</td>
+      <td>Other</td>
+      <td>NKF3</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H792" target="_blank">Q9H792</a></td>
+    </tr>
+    <tr>
+      <td>SBK</td>
+      <td>SBK</td>
+      <td>SBK1</td>
+      <td>Serine/threonine-protein kinase SBK1</td>
+      <td>Other</td>
+      <td>NKF1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q52WX2" target="_blank">Q52WX2</a></td>
+    </tr>
+    <tr>
+      <td>SgK396</td>
+      <td>SgK396</td>
+      <td>STK31</td>
+      <td>Serine/threonine-protein kinase 31</td>
+      <td>Other</td>
+      <td>Other-Unique</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BXU1" target="_blank">Q9BXU1</a></td>
+    </tr>
+    <tr>
+      <td>SgK288</td>
+      <td>SgK288</td>
+      <td>ANKK1</td>
+      <td>Ankyrin repeat and protein kinase domain-containing protein 1</td>
+      <td>TKL</td>
+      <td>RIPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8NFD2" target="_blank">Q8NFD2</a></td>
+    </tr>
+    <tr>
+      <td>KIS</td>
+      <td>KIS</td>
+      <td>UHMK1</td>
+      <td>Serine/threonine-protein kinase Kist</td>
+      <td>Other</td>
+      <td>KIS</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8TAS1" target="_blank">Q8TAS1</a></td>
+    </tr>
+    <tr>
+      <td>CaMK1b</td>
+      <td>CaMK1b</td>
+      <td>PNCK</td>
+      <td>Calcium/calmodulin-dependent protein kinase type 1B</td>
+      <td>CAMK</td>
+      <td>CAMK1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6P2M8" target="_blank">Q6P2M8</a></td>
+    </tr>
+    <tr>
+      <td>TBCK</td>
+      <td>TBCK</td>
+      <td>TBCK</td>
+      <td>TBC domain-containing protein kinase-like protein</td>
+      <td>Other</td>
+      <td>TBCK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8TEA7" target="_blank">Q8TEA7</a></td>
+    </tr>
+    <tr>
+      <td>SMG1</td>
+      <td>SMG1</td>
+      <td>SMG1</td>
+      <td>Serine/threonine-protein kinase SMG1</td>
+      <td>Atypical</td>
+      <td>PIKK</td>
+      <td>SMG1</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96Q15" target="_blank">Q96Q15</a></td>
+    </tr>
+    <tr>
+      <td>skMLCK</td>
+      <td>skMLCK</td>
+      <td>MYLK2</td>
+      <td>Myosin light chain kinase 2</td>
+      <td>CAMK</td>
+      <td>MLCK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9H1R3" target="_blank">Q9H1R3</a></td>
+    </tr>
+    <tr>
+      <td>MAP3K7</td>
+      <td>MAP3K7</td>
+      <td>MAP3K15</td>
+      <td>Mitogen-activated protein kinase kinase kinase 15</td>
+      <td>STE</td>
+      <td>STE11</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6ZN16" target="_blank">Q6ZN16</a></td>
+    </tr>
+    <tr>
+      <td>LRRK2</td>
+      <td>LRRK2</td>
+      <td>LRRK2</td>
+      <td>Leucine-rich repeat serine/threonine-protein kinase 2</td>
+      <td>TKL</td>
+      <td>LRRK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q5S007" target="_blank">Q5S007</a></td>
+    </tr>
+    <tr>
+      <td>MLK4</td>
+      <td>MLK4</td>
+      <td></td>
+      <td>Mitogen-activated protein kinase kinase kinase MLK4</td>
+      <td>TKL</td>
+      <td>MLK</td>
+      <td>MLK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q5TCX8" target="_blank">Q5TCX8</a></td>
+    </tr>
+    <tr>
+      <td>Haspin</td>
+      <td>Haspin</td>
+      <td>GSG2</td>
+      <td>Serine/threonine-protein kinase haspin</td>
+      <td>Other</td>
+      <td>Haspin</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8TF76" target="_blank">Q8TF76</a></td>
+    </tr>
+    <tr>
+      <td>Trb3</td>
+      <td>Trb3</td>
+      <td>TRIB3</td>
+      <td>Tribbles homolog 3</td>
+      <td>CAMK</td>
+      <td>Trbl</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96RU7" target="_blank">Q96RU7</a></td>
+    </tr>
+    <tr>
+      <td>CRIK</td>
+      <td>CRIK</td>
+      <td>CIT</td>
+      <td>Citron Rho-interacting kinase</td>
+      <td>AGC</td>
+      <td>DMPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O14578" target="_blank">O14578</a></td>
+    </tr>
+    <tr>
+      <td>CaMKK1</td>
+      <td>CaMKK1</td>
+      <td>CAMKK1</td>
+      <td>Calcium/calmodulin-dependent protein kinase kinase 1</td>
+      <td>Other</td>
+      <td>CAMKK</td>
+      <td>CAMKK-Meta</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8N5S9" target="_blank">Q8N5S9</a></td>
+    </tr>
+    <tr>
+      <td>LRRK1</td>
+      <td>LRRK1</td>
+      <td>LRRK1</td>
+      <td>Leucine-rich repeat serine/threonine-protein kinase 1</td>
+      <td>TKL</td>
+      <td>LRRK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q38SD2" target="_blank">Q38SD2</a></td>
+    </tr>
+    <tr>
+      <td>SgK307</td>
+      <td>SgK307</td>
+      <td>TEX14</td>
+      <td>Inactive serine/threonine-protein kinase TEX14</td>
+      <td>Other</td>
+      <td>NKF5</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IWB6" target="_blank">Q8IWB6</a></td>
+    </tr>
+    <tr>
+      <td>MAST4</td>
+      <td>MAST4</td>
+      <td>MAST4</td>
+      <td>Microtubule-associated serine/threonine-protein kinase 4</td>
+      <td>AGC</td>
+      <td>MAST</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O15021" target="_blank">O15021</a></td>
+    </tr>
+    <tr>
+      <td>CaMK2d</td>
+      <td>CaMK2d</td>
+      <td>CAMK2D</td>
+      <td>Calcium/calmodulin-dependent protein kinase type II subunit delta</td>
+      <td>CAMK</td>
+      <td>CAMK2</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13557" target="_blank">Q13557</a></td>
+    </tr>
+    <tr>
+      <td>BIKE</td>
+      <td>BIKE</td>
+      <td>BMP2K</td>
+      <td>BMP-2-inducible protein kinase</td>
+      <td>Other</td>
+      <td>NAK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NSY1" target="_blank">Q9NSY1</a></td>
+    </tr>
+    <tr>
+      <td>TSSK1</td>
+      <td>TSSK1</td>
+      <td>TSSK1B</td>
+      <td>Testis-specific serine/threonine-protein kinase 1</td>
+      <td>CAMK</td>
+      <td>TSSK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BXA7" target="_blank">Q9BXA7</a></td>
+    </tr>
+    <tr>
+      <td>SgK424</td>
+      <td>SgK424</td>
+      <td>TEX14</td>
+      <td>Inactive serine/threonine-protein kinase TEX14</td>
+      <td>Other</td>
+      <td>NKF5</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IWB6" target="_blank">Q8IWB6</a></td>
+    </tr>
+    <tr>
+      <td>SgK085</td>
+      <td>SgK085</td>
+      <td>MYLK4</td>
+      <td>Myosin light chain kinase family member 4</td>
+      <td>CAMK</td>
+      <td>MLCK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86YV6" target="_blank">Q86YV6</a></td>
+    </tr>
+    <tr>
+      <td>ADCK2</td>
+      <td>ADCK2</td>
+      <td>ADCK2</td>
+      <td>Uncharacterized aarF domain-containing protein kinase 2</td>
+      <td>Atypical</td>
+      <td>ABC1</td>
+      <td>ABC1-C</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q7Z695" target="_blank">Q7Z695</a></td>
+    </tr>
+    <tr>
+      <td>DAPK3</td>
+      <td>DAPK3</td>
+      <td>DAPK3</td>
+      <td>Death-associated protein kinase 3</td>
+      <td>CAMK</td>
+      <td>DAPK</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O43293" target="_blank">O43293</a></td>
+    </tr>
+    <tr>
+      <td>Wee1B</td>
+      <td>Wee1B</td>
+      <td>WEE2</td>
+      <td>Wee1-like protein kinase 2</td>
+      <td>Other</td>
+      <td>WEE</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P0C1S8" target="_blank">P0C1S8</a></td>
+    </tr>
+    <tr>
+      <td>RNAseL</td>
+      <td>RNAseL</td>
+      <td>RNASEL</td>
+      <td>2-5A-dependent ribonuclease</td>
+      <td>Other</td>
+      <td>Other-Unique</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q05823" target="_blank">Q05823</a></td>
+    </tr>
+    <tr>
+      <td>ChaK2</td>
+      <td>ChaK2</td>
+      <td>TRPM6</td>
+      <td>Transient receptor potential cation channel subfamily M member 6</td>
+      <td>Atypical</td>
+      <td>Alpha</td>
+      <td>ChaK</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BX84" target="_blank">Q9BX84</a></td>
+    </tr>
+    <tr>
+      <td>RIOK2</td>
+      <td>RIOK2</td>
+      <td>RIOK2</td>
+      <td>Serine/threonine-protein kinase RIO2</td>
+      <td>Atypical</td>
+      <td>RIO</td>
+      <td>RIO2</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9BVS4" target="_blank">Q9BVS4</a></td>
+    </tr>
+    <tr>
+      <td>AlphaK2</td>
+      <td>AlphaK2</td>
+      <td>ALPK2</td>
+      <td>Alpha-protein kinase 2</td>
+      <td>Atypical</td>
+      <td>Alpha</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q86TB3" target="_blank">Q86TB3</a></td>
+    </tr>
+    <tr>
+      <td>AlphaK3</td>
+      <td>AlphaK3</td>
+      <td>ALPK1</td>
+      <td>Alpha-protein kinase 1</td>
+      <td>Atypical</td>
+      <td>Alpha</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96QP1" target="_blank">Q96QP1</a></td>
+    </tr>
+    <tr>
+      <td>BRD2</td>
+      <td>BRD2</td>
+      <td>BRD2</td>
+      <td>Bromodomain-containing protein 2</td>
+      <td>Atypical</td>
+      <td>BRD</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P25440" target="_blank">P25440</a></td>
+    </tr>
+    <tr>
+      <td>BRD3</td>
+      <td>BRD3</td>
+      <td>BRD3</td>
+      <td>Bromodomain-containing protein 3</td>
+      <td>Atypical</td>
+      <td>BRD</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15059" target="_blank">Q15059</a></td>
+    </tr>
+    <tr>
+      <td>BRD4</td>
+      <td>BRD4</td>
+      <td>BRD4</td>
+      <td>BRD4 protein</td>
+      <td>Atypical</td>
+      <td>BRD</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O60885" target="_blank">O60885</a></td>
+    </tr>
+    <tr>
+      <td>BRDT</td>
+      <td>BRDT</td>
+      <td>BRDT</td>
+      <td>Bromodomain testis-specific protein</td>
+      <td>Atypical</td>
+      <td>BRD</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q58F21" target="_blank">Q58F21</a></td>
+    </tr>
+    <tr>
+      <td>AlphaK1</td>
+      <td>AlphaK1</td>
+      <td>ALPK3</td>
+      <td>Alpha-protein kinase 3</td>
+      <td>Atypical</td>
+      <td>Alpha</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q96L96" target="_blank">Q96L96</a></td>
+    </tr>
+    <tr>
+      <td>ADCK5</td>
+      <td>ADCK5</td>
+      <td>ADCK5</td>
+      <td>Uncharacterized aarF domain-containing protein kinase 5</td>
+      <td>Atypical</td>
+      <td>ABC1</td>
+      <td>ABC1-D</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q3MIX3" target="_blank">Q3MIX3</a></td>
+    </tr>
+    <tr>
+      <td>TIF1a</td>
+      <td>TIF1a</td>
+      <td>TRIM24</td>
+      <td>Transcription intermediary factor 1-alpha</td>
+      <td>Atypical</td>
+      <td>TIF1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O15164" target="_blank">O15164</a></td>
+    </tr>
+    <tr>
+      <td>TIF1b</td>
+      <td>TIF1b</td>
+      <td>TRIM28</td>
+      <td>Transcription intermediary factor 1-beta</td>
+      <td>Atypical</td>
+      <td>TIF1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q13263" target="_blank">Q13263</a></td>
+    </tr>
+    <tr>
+      <td>TIF1g</td>
+      <td>TIF1g</td>
+      <td>TRIM33</td>
+      <td>E3 ubiquitin-protein ligase TRIM33</td>
+      <td>Atypical</td>
+      <td>TIF1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UPN9" target="_blank">Q9UPN9</a></td>
+    </tr>
+    <tr>
+      <td>JAK1_b</td>
+      <td>Domain2_JAK1</td>
+      <td>JAK1</td>
+      <td>Tyrosine-protein kinase JAK1</td>
+      <td>TK</td>
+      <td>JakB</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P23458" target="_blank">P23458</a></td>
+    </tr>
+    <tr>
+      <td>JAK2_b</td>
+      <td>Domain2_JAK2</td>
+      <td>JAK2</td>
+      <td>Tyrosine-protein kinase JAK2</td>
+      <td>TK</td>
+      <td>JakB</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/O60674" target="_blank">O60674</a></td>
+    </tr>
+    <tr>
+      <td>JAK3_b</td>
+      <td>Domain2_JAK3</td>
+      <td>JAK3</td>
+      <td>Tyrosine-protein kinase JAK3</td>
+      <td>TK</td>
+      <td>JakB</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P52333" target="_blank">P52333</a></td>
+    </tr>
+    <tr>
+      <td>MSK1_b</td>
+      <td>Domain2_MSK1</td>
+      <td>RPS6KA5</td>
+      <td>Ribosomal protein S6 kinase alpha-5</td>
+      <td>CAMK</td>
+      <td>RSKb</td>
+      <td>MSKb</td>
+      <td><a href="http://www.uniprot.org/uniprot/O75582" target="_blank">O75582</a></td>
+    </tr>
+    <tr>
+      <td>MSK2_b</td>
+      <td>Domain2_MSK2</td>
+      <td>RPS6KA4</td>
+      <td>Ribosomal protein S6 kinase alpha-4</td>
+      <td>CAMK</td>
+      <td>RSKb</td>
+      <td>MSKb</td>
+      <td><a href="http://www.uniprot.org/uniprot/O75676" target="_blank">O75676</a></td>
+    </tr>
+    <tr>
+      <td>RSK3_b</td>
+      <td>Domain2_RSK1</td>
+      <td>RPS6KA2</td>
+      <td>Ribosomal protein S6 kinase alpha-2</td>
+      <td>CAMK</td>
+      <td>RSKb</td>
+      <td>RSKb</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15349" target="_blank">Q15349</a></td>
+    </tr>
+    <tr>
+      <td>RSK2_b</td>
+      <td>Domain2_RSK2</td>
+      <td>RPS6KA3</td>
+      <td>Ribosomal protein S6 kinase alpha-3</td>
+      <td>CAMK</td>
+      <td>RSKb</td>
+      <td>RSKb</td>
+      <td><a href="http://www.uniprot.org/uniprot/P51812" target="_blank">P51812</a></td>
+    </tr>
+    <tr>
+      <td>RSK1_b</td>
+      <td>Domain2_RSK3</td>
+      <td>RPS6KA1</td>
+      <td>Ribosomal protein S6 kinase alpha-1</td>
+      <td>CAMK</td>
+      <td>RSKb</td>
+      <td>RSKb</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15418" target="_blank">Q15418</a></td>
+    </tr>
+    <tr>
+      <td>TYK2_b</td>
+      <td>Domain2_TYK2</td>
+      <td>TYK2</td>
+      <td>Non-receptor tyrosine-protein kinase TYK2</td>
+      <td>TK</td>
+      <td>JakB</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P29597" target="_blank">P29597</a></td>
+    </tr>
+    <tr>
+      <td>GCN2_b</td>
+      <td>Domain2_GCN2</td>
+      <td>EIF2AK4</td>
+      <td>Eukaryotic translation initiation factor 2-alpha kinase 4</td>
+      <td>STE</td>
+      <td>STE-Unique</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9P2K8" target="_blank">Q9P2K8</a></td>
+    </tr>
+    <tr>
+      <td>RSK4_b</td>
+      <td>Domain2_RSK4</td>
+      <td>RPS6KA6</td>
+      <td>Ribosomal protein S6 kinase alpha-6</td>
+      <td>CAMK</td>
+      <td>RSKb</td>
+      <td>RSKb</td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UK32" target="_blank">Q9UK32</a></td>
+    </tr>
+    <tr>
+      <td>SPEG_b</td>
+      <td>Domain2_SPEG</td>
+      <td>SPEG</td>
+      <td>Striated muscle preferentially expressed protein kinase</td>
+      <td>CAMK</td>
+      <td>Trio</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q15772" target="_blank">Q15772</a></td>
+    </tr>
+    <tr>
+      <td>Obscn_b</td>
+      <td>Domain2_Obscn</td>
+      <td>OBSCN</td>
+      <td>Obscurin</td>
+      <td>CAMK</td>
+      <td>Trio</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q5VST9" target="_blank">Q5VST9</a></td>
+    </tr>
+    <tr>
+      <td>PAN3</td>
+      <td>PAN3</td>
+      <td>PAN3</td>
+      <td>PAB-dependent poly(A)-specific ribonuclease subunit 3</td>
+      <td>Other</td>
+      <td>PAN3</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q58A45" target="_blank">Q58A45</a></td>
+    </tr>
+    <tr>
+      <td>FASTK</td>
+      <td>FASTK</td>
+      <td>FASTK</td>
+      <td>Fas-activated serine/threonine kinase</td>
+      <td>Atypical</td>
+      <td>FAST</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q14296" target="_blank">Q14296</a></td>
+    </tr>
+    <tr>
+      <td>G11</td>
+      <td>G11</td>
+      <td>STK19</td>
+      <td>Serine/threonine-protein kinase 19</td>
+      <td>Atypical</td>
+      <td>G11</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P49842" target="_blank">P49842</a></td>
+    </tr>
+    <tr>
+      <td>TAF1</td>
+      <td>TAF1</td>
+      <td>TAF1</td>
+      <td>Transcription initiation factor TFIID subunit 1</td>
+      <td>Atypical</td>
+      <td>TAF1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P21675" target="_blank">P21675</a></td>
+    </tr>
+    <tr>
+      <td>TAF1L</td>
+      <td>TAF1L</td>
+      <td>TAF1L</td>
+      <td>Transcription initiation factor TFIID subunit 1-like</td>
+      <td>Atypical</td>
+      <td>TAF1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q8IZX4" target="_blank">Q8IZX4</a></td>
+    </tr>
+    <tr>
+      <td>BCR</td>
+      <td>BCR</td>
+      <td>BCR</td>
+      <td>Breakpoint cluster region protein</td>
+      <td>Atypical</td>
+      <td>BCR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P11274" target="_blank">P11274</a></td>
+    </tr>
+    <tr>
+      <td>ABR</td>
+      <td>ABR</td>
+      <td>ABR</td>
+      <td>Active breakpoint cluster region-related protein</td>
+      <td>Atypical</td>
+      <td>BCR</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q12979" target="_blank">Q12979</a></td>
+    </tr>
+    <tr>
+      <td>TIF1D</td>
+      <td>TIF1D</td>
+      <td>TRIM66</td>
+      <td>Tripartite motif-containing protein 66</td>
+      <td>Atypical</td>
+      <td>TIF1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/B5MCJ9" target="_blank">B5MCJ9</a></td>
+    </tr>
+    <tr>
+      <td>GTF2F1</td>
+      <td>GTF2F1</td>
+      <td></td>
+      <td>nan</td>
+      <td>Atypical</td>
+      <td>GTF2F1</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q6IBK5" target="_blank">Q6IBK5</a></td>
+    </tr>
+    <tr>
+      <td>Col4A3BP</td>
+      <td>Col4A3BP</td>
+      <td>COL4A3BP</td>
+      <td>Collagen type IV alpha-3-binding protein</td>
+      <td>Atypical</td>
+      <td>Col4A3BP</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9Y5P4" target="_blank">Q9Y5P4</a></td>
+    </tr>
+    <tr>
+      <td>BLVRA</td>
+      <td>BLVRA</td>
+      <td>BLVRA</td>
+      <td>Biliverdin reductase A</td>
+      <td>Atypical</td>
+      <td>BLVRA</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/P53004" target="_blank">P53004</a></td>
+    </tr>
+    <tr>
+      <td>BAZ1A</td>
+      <td>BAZ1A</td>
+      <td>BAZ1A</td>
+      <td>Bromodomain adjacent to zinc finger domain protein 1A</td>
+      <td>Atypical</td>
+      <td>BAZ</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9NRL2" target="_blank">Q9NRL2</a></td>
+    </tr>
+    <tr>
+      <td>BAZ1B</td>
+      <td>BAZ1B</td>
+      <td>BAZ1B</td>
+      <td>Tyrosine-protein kinase BAZ1B</td>
+      <td>Atypical</td>
+      <td>BAZ</td>
+      <td></td>
+      <td><a href="http://www.uniprot.org/uniprot/Q9UIG0" target="_blank">Q9UIG0</a></td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </div>
+</div>
+        <!--Main Content End-->
+
+        <!--Footer-->
+        <footer class="footer">
+            <hr style="border: none; height: 2px; color: LightSlateGray; background-color: LightSlateGray;">
+            <div class="container" style="margin-top:30px;">
+                <p class="text-muted" style="text-align: center">
+                    <a href="disclaimer.html">Disclaimer</a> &middot;
+                    <a href="imprint.html">Imprint &amp; Legal Notice</a> &middot;
+                    <a href="mailto:fulle@bio.mx">Contact</a>
+		        </p>
+				<p class="text-muted" style="text-align: center; font-size:12px ">
+				Copyright &copy; 2015-2017 by Sameh Eid and Simone Fulle
+				</p>
+            </div>
+        </footer>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-64937014-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
