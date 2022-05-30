@@ -4,7 +4,7 @@
 import os, sys
 dic = {}
 '''
-for line in open('hmmAlignment.aln', 'r'):
+for line in open('hmmAlignment2.aln', 'r'):
     if line.split()!=[]:
         if line[0] != '#' and line.split()[0] != '//':
             name = line.split()[0]
@@ -27,9 +27,9 @@ for name in dic:
             fasta += 1
         aln += 1
 
-open('hmmAlignmentMappings.tsv', 'w').write(l)
+open('hmmAlignmentMappings2.tsv', 'w').write(l)
 '''
-for line in open('muscleAlignment.clustal', 'r'):
+for line in open('muscleAlignment2.clustal', 'r'):
 	if line.split()!=[] and line.split()[0] != 'CLUSTAL':
 		name = line.split()[0]
 		seq = line.split()[1]
@@ -51,4 +51,4 @@ for name in dic:
             fasta += 1
         aln += 1
 
-open('muscleAlignmentMappings.tsv', 'w').write(l)
+open('muscleAlignmentMappings2.tsv', 'w').write(l)
