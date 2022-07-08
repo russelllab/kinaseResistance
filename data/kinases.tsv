@@ -1,0 +1,536 @@
+ABL1	ABL	ABL1	Tyrosine-proteinkinaseABL1	TK	Abl		<ahref="http://www.uniprot.org/uniprot/P00519"target="_blank">P00519</a>
+ACK	ACK	TNK2	ActivatedCDC42kinase1	TK	Ack		<ahref="http://www.uniprot.org/uniprot/Q07912"target="_blank">Q07912</a>
+ACTR2	ACTR2	ACVR2A	Activinreceptortype-2A	TKL	STKR	STKR2	<ahref="http://www.uniprot.org/uniprot/P27037"target="_blank">P27037</a>
+ACTR2B	ACTR2B	ACVR2B	Activinreceptortype-2B	TKL	STKR	STKR2	<ahref="http://www.uniprot.org/uniprot/Q13705"target="_blank">Q13705</a>
+ADCK4	ADCK4	ADCK4	UncharacterizedaarFdomain-containingproteinkinase4	Atypical	ABC1	ABC1-A	<ahref="http://www.uniprot.org/uniprot/Q96D53"target="_blank">Q96D53</a>
+Trb1	Trb1	TRIB1	Tribbleshomolog1	CAMK	Trbl		<ahref="http://www.uniprot.org/uniprot/Q96RU8"target="_blank">Q96RU8</a>
+BRSK2	BRSK2	BRSK2	Serine/threonine-proteinkinaseBRSK2	CAMK	CAMKL	BRSK	<ahref="http://www.uniprot.org/uniprot/Q8IWQ3"target="_blank">Q8IWQ3</a>
+Wnk2	Wnk2	WNK2	Serine/threonine-proteinkinaseWNK2	Other	WNK		<ahref="http://www.uniprot.org/uniprot/Q9Y3S1"target="_blank">Q9Y3S1</a>
+AKT1	AKT1	AKT1	RAC-alphaserine/threonine-proteinkinase	AGC	Akt		<ahref="http://www.uniprot.org/uniprot/P31749"target="_blank">P31749</a>
+AKT2	AKT2	AKT2	RAC-betaserine/threonine-proteinkinase	AGC	Akt		<ahref="http://www.uniprot.org/uniprot/P31751"target="_blank">P31751</a>
+AKT3	AKT3	AKT3	RAC-gammaserine/threonine-proteinkinase	AGC	Akt		<ahref="http://www.uniprot.org/uniprot/Q9Y243"target="_blank">Q9Y243</a>
+CaMK1g	CaMK1g	CAMK1G	Calcium/calmodulin-dependentproteinkinasetype1G	CAMK	CAMK1		<ahref="http://www.uniprot.org/uniprot/Q96NX5"target="_blank">Q96NX5</a>
+ALK	ALK	ALK	ALKtyrosinekinasereceptor	TK	ALK		<ahref="http://www.uniprot.org/uniprot/Q9UM73"target="_blank">Q9UM73</a>
+ALK1	ALK1	ACVRL1	Serine/threonine-proteinkinasereceptorR3	TKL	STKR	STKR1	<ahref="http://www.uniprot.org/uniprot/P37023"target="_blank">P37023</a>
+ALK2	ALK2	ACVR1	Activinreceptortype-1	TKL	STKR	STKR1	<ahref="http://www.uniprot.org/uniprot/Q04771"target="_blank">Q04771</a>
+BMPR1A	BMPR1A	BMPR1A	Bonemorphogeneticproteinreceptortype-1A	TKL	STKR	STKR1	<ahref="http://www.uniprot.org/uniprot/P36894"target="_blank">P36894</a>
+ALK4	ALK4	ACVR1B	Activinreceptortype-1B	TKL	STKR	STKR1	<ahref="http://www.uniprot.org/uniprot/P36896"target="_blank">P36896</a>
+TGFbR1	TGFbR1	TGFBR1	TGF-betareceptortype-1	TKL	STKR	STKR1	<ahref="http://www.uniprot.org/uniprot/P36897"target="_blank">P36897</a>
+BMPR1B	BMPR1B	BMPR1B	Bonemorphogeneticproteinreceptortype-1B	TKL	STKR	STKR1	<ahref="http://www.uniprot.org/uniprot/O00238"target="_blank">O00238</a>
+AMPKa1	AMPKa1	PRKAA1	5'-AMP-activatedproteinkinasecatalyticsubunitalpha-1	CAMK	CAMKL	AMPK	<ahref="http://www.uniprot.org/uniprot/Q13131"target="_blank">Q13131</a>
+AMPKa2	AMPKa2	PRKAA2	5'-AMP-activatedproteinkinasecatalyticsubunitalpha-2	CAMK	CAMKL	AMPK	<ahref="http://www.uniprot.org/uniprot/P54646"target="_blank">P54646</a>
+ANPa	ANPa	NPR1	Atrialnatriureticpeptidereceptor1	RGC	RGC		<ahref="http://www.uniprot.org/uniprot/P16066"target="_blank">P16066</a>
+ANPb	ANPb	NPR2	Atrialnatriureticpeptidereceptor2	RGC	RGC		<ahref="http://www.uniprot.org/uniprot/P20594"target="_blank">P20594</a>
+ARAF	ARAF	ARAF	Serine/threonine-proteinkinaseA-Raf	TKL	RAF		<ahref="http://www.uniprot.org/uniprot/P10398"target="_blank">P10398</a>
+ABL2	ARG	ABL2	Abelsontyrosine-proteinkinase2	TK	Abl		<ahref="http://www.uniprot.org/uniprot/P42684"target="_blank">P42684</a>
+ATM	ATM	ATM	Serine-proteinkinaseATM	Atypical	PIKK	ATM	<ahref="http://www.uniprot.org/uniprot/Q13315"target="_blank">Q13315</a>
+ATR	ATR	ATR	Serine/threonine-proteinkinaseATR	Atypical	PIKK	ATR	<ahref="http://www.uniprot.org/uniprot/Q13535"target="_blank">Q13535</a>
+AurC	AurC	AURKC	AurorakinaseC	Other	Aur		<ahref="http://www.uniprot.org/uniprot/Q9UQB9"target="_blank">Q9UQB9</a>
+AXL	AXL	AXL	Tyrosine-proteinkinasereceptorUFO	TK	Axl		<ahref="http://www.uniprot.org/uniprot/P30530"target="_blank">P30530</a>
+BARK1	BARK1	ADRBK1	Beta-adrenergicreceptorkinase1	AGC	GRK	BARK	<ahref="http://www.uniprot.org/uniprot/P25098"target="_blank">P25098</a>
+BCKDK	BCKDK	BCKDK	[3-methyl-2-oxobutanoatedehydrogenase[lipoamide]]kinase	Atypical	PDHK		<ahref="http://www.uniprot.org/uniprot/O14874"target="_blank">O14874</a>
+GCK	GCK	MAP4K2	Mitogen-activatedproteinkinasekinasekinasekinase2	STE	STE20	KHS	<ahref="http://www.uniprot.org/uniprot/Q12851"target="_blank">Q12851</a>
+BLK	BLK	BLK	Tyrosine-proteinkinaseBlk	TK	Src		<ahref="http://www.uniprot.org/uniprot/P51451"target="_blank">P51451</a>
+BRAF	BRAF	BRAF	Serine/threonine-proteinkinaseB-raf	TKL	RAF		<ahref="http://www.uniprot.org/uniprot/P15056"target="_blank">P15056</a>
+BRK	BRK	PTK6	Protein-tyrosinekinase6	TK	Src		<ahref="http://www.uniprot.org/uniprot/Q13882"target="_blank">Q13882</a>
+BTK	BTK	BTK	Tyrosine-proteinkinaseBTK	TK	Tec		<ahref="http://www.uniprot.org/uniprot/Q06187"target="_blank">Q06187</a>
+BUBR1	BUBR1	BUB1B	Mitoticcheckpointserine/threonine-proteinkinaseBUB1beta	Other	BUB		<ahref="http://www.uniprot.org/uniprot/O60566"target="_blank">O60566</a>
+CDK7	CDK7	CDK7	Cyclin-dependentkinase7	CMGC	CDK	CDK7	<ahref="http://www.uniprot.org/uniprot/P50613"target="_blank">P50613</a>
+CaMK1a	CaMK1a	CAMK1	Calcium/calmodulin-dependentproteinkinasetype1	CAMK	CAMK1		<ahref="http://www.uniprot.org/uniprot/Q14012"target="_blank">Q14012</a>
+CaMK2a	CaMK2a	CAMK2A	Calcium/calmodulin-dependentproteinkinasetypeIIsubunitalpha	CAMK	CAMK2		<ahref="http://www.uniprot.org/uniprot/Q9UQM7"target="_blank">Q9UQM7</a>
+CaMK2b	CaMK2b	CAMK2B	Calcium/calmodulin-dependentproteinkinasetypeIIsubunitbeta	CAMK	CAMK2		<ahref="http://www.uniprot.org/uniprot/Q13554"target="_blank">Q13554</a>
+CaMK2g	CaMK2g	CAMK2G	Calcium/calmodulin-dependentproteinkinase(CaMkinase)IIgamma	CAMK	CAMK2		<ahref="http://www.uniprot.org/uniprot/Q13555"target="_blank">Q13555</a>
+CaMK4	CaMK4	CAMK4	Calcium/calmodulin-dependentproteinkinasetypeIV	CAMK	CAMK1		<ahref="http://www.uniprot.org/uniprot/Q16566"target="_blank">Q16566</a>
+VACAMKL	VACAMKL	CAMKV	CaMkinase-likevesicle-associatedprotein	CAMK	CAMK-Unique		<ahref="http://www.uniprot.org/uniprot/Q8NCB2"target="_blank">Q8NCB2</a>
+DCAMKL1	DCAMKL1	DCLK1	Serine/threonine-proteinkinaseDCLK1	CAMK	DCAMKL		<ahref="http://www.uniprot.org/uniprot/O15075"target="_blank">O15075</a>
+CASK	CASK	CASK	PeripheralplasmamembraneproteinCASK	CAMK	CASK		<ahref="http://www.uniprot.org/uniprot/O14936"target="_blank">O14936</a>
+CDC2	CDC2	CDK1	Cyclin-dependentkinase1	CMGC	CDK	CDC2	<ahref="http://www.uniprot.org/uniprot/P06493"target="_blank">P06493</a>
+CDC7	CDC7	CDC7	Celldivisioncycle7-relatedproteinkinase	Other	CDC7		<ahref="http://www.uniprot.org/uniprot/O00311"target="_blank">O00311</a>
+CDK2	CDK2	CDK2	Cyclin-dependentkinase2	CMGC	CDK	CDK2	<ahref="http://www.uniprot.org/uniprot/P24941"target="_blank">P24941</a>
+CDK3	CDK3	CDK3	Cyclin-dependentkinase3	CMGC	CDK	CDK2	<ahref="http://www.uniprot.org/uniprot/Q00526"target="_blank">Q00526</a>
+CDK4	CDK4	CDK4	Cyclin-dependentkinase4	CMGC	CDK	CDK4	<ahref="http://www.uniprot.org/uniprot/P11802"target="_blank">P11802</a>
+CDK5	CDK5	CDK5	Cyclin-dependentkinase5	CMGC	CDK	CDK5	<ahref="http://www.uniprot.org/uniprot/Q00535"target="_blank">Q00535</a>
+CDK6	CDK6	CDK6	Cyclin-dependentkinase6	CMGC	CDK	CDK4	<ahref="http://www.uniprot.org/uniprot/Q00534"target="_blank">Q00534</a>
+CDK8	CDK8	CDK8	Cyclin-dependentkinase8	CMGC	CDK	CDK8	<ahref="http://www.uniprot.org/uniprot/P49336"target="_blank">P49336</a>
+PKG1	PKG1	PRKG1	cGMP-dependentproteinkinase	AGC	PKG		<ahref="http://www.uniprot.org/uniprot/Q13976"target="_blank">Q13976</a>
+PKG2	PKG2	PRKG2	cGMP-dependentproteinkinase2	AGC	PKG		<ahref="http://www.uniprot.org/uniprot/Q13237"target="_blank">Q13237</a>
+CHED	CHED	CDK13	Cyclin-dependentkinase13	CMGC	CDK	CRK7	<ahref="http://www.uniprot.org/uniprot/Q14004"target="_blank">Q14004</a>
+CHK1	CHK1	CHEK1	Serine/threonine-proteinkinaseChk1	CAMK	CAMKL	CHK1	<ahref="http://www.uniprot.org/uniprot/O14757"target="_blank">O14757</a>
+CHK2	CHK2	CHEK2	Serine/threonine-proteinkinaseChk2	CAMK	RAD53		<ahref="http://www.uniprot.org/uniprot/O96017"target="_blank">O96017</a>
+CK1a	CK1a	CSNK1A1	CaseinkinaseIisoformalpha	CK1	CK1		<ahref="http://www.uniprot.org/uniprot/P48729"target="_blank">P48729</a>
+CK1d	CK1d	CSNK1D	CaseinkinaseIisoformdelta	CK1	CK1		<ahref="http://www.uniprot.org/uniprot/P48730"target="_blank">P48730</a>
+CK1e	CK1e	CSNK1E	CaseinkinaseIisoformepsilon	CK1	CK1		<ahref="http://www.uniprot.org/uniprot/P49674"target="_blank">P49674</a>
+CK1g2	CK1g2	CSNK1G2	CaseinkinaseIisoformgamma-2	CK1	CK1		<ahref="http://www.uniprot.org/uniprot/P78368"target="_blank">P78368</a>
+CK1g3	CK1g3	CSNK1G3	CaseinkinaseIisoformgamma-3	CK1	CK1		<ahref="http://www.uniprot.org/uniprot/Q9Y6M4"target="_blank">Q9Y6M4</a>
+CK2a1	CK2a1	CSNK2A1	CaseinkinaseIIsubunitalpha	CMGC	CK2		<ahref="http://www.uniprot.org/uniprot/P68400"target="_blank">P68400</a>
+CK2a2	CK2a2	CSNK2A2	CaseinkinaseIIsubunitalpha'	CMGC	CK2		<ahref="http://www.uniprot.org/uniprot/P19784"target="_blank">P19784</a>
+CLK1	CLK1	CLK1	DualspecificityproteinkinaseCLK1	CMGC	CLK		<ahref="http://www.uniprot.org/uniprot/P49759"target="_blank">P49759</a>
+CLK2	CLK2	CLK2	DualspecificityproteinkinaseCLK2	CMGC	CLK		<ahref="http://www.uniprot.org/uniprot/P49760"target="_blank">P49760</a>
+CLK3	CLK3	CLK3	DualspecificityproteinkinaseCLK3	CMGC	CLK		<ahref="http://www.uniprot.org/uniprot/P49761"target="_blank">P49761</a>
+COT	COT	MAP3K8	Mitogen-activatedproteinkinasekinasekinase8	STE	STE-Unique		<ahref="http://www.uniprot.org/uniprot/P41279"target="_blank">P41279</a>
+FMS	FMS	CSF1R	Macrophagecolony-stimulatingfactor1receptor	TK	PDGFR		<ahref="http://www.uniprot.org/uniprot/P07333"target="_blank">P07333</a>
+CSK	CSK	CSK	Tyrosine-proteinkinaseCSK	TK	Csk		<ahref="http://www.uniprot.org/uniprot/P41240"target="_blank">P41240</a>
+MARK3	MARK3	MARK3	MAP/microtubuleaffinity-regulatingkinase3	CAMK	CAMKL	MARK	<ahref="http://www.uniprot.org/uniprot/P27448"target="_blank">P27448</a>
+CYGD	CYGD	GUCY2D	Retinalguanylylcyclase1	RGC	RGC		<ahref="http://www.uniprot.org/uniprot/Q02846"target="_blank">Q02846</a>
+CYGF	CYGF	GUCY2F	Retinalguanylylcyclase2	RGC	RGC		<ahref="http://www.uniprot.org/uniprot/P51841"target="_blank">P51841</a>
+DAPK1	DAPK1	DAPK1	Death-associatedproteinkinase1	CAMK	DAPK		<ahref="http://www.uniprot.org/uniprot/P53355"target="_blank">P53355</a>
+DAPK2	DAPK2	DAPK2	Death-associatedproteinkinase2	CAMK	DAPK		<ahref="http://www.uniprot.org/uniprot/Q9UIK4"target="_blank">Q9UIK4</a>
+DLK	DLK	MAP3K12	Mitogen-activatedproteinkinasekinasekinase12	TKL	MLK	LZK	<ahref="http://www.uniprot.org/uniprot/Q12852"target="_blank">Q12852</a>
+DMPK1	DMPK1	DMPK	Myotonin-proteinkinase	AGC	DMPK	GEK	<ahref="http://www.uniprot.org/uniprot/Q09013"target="_blank">Q09013</a>
+DMPK2	DMPK2	CDC42BPG	Serine/threonine-proteinkinaseMRCKgamma	AGC	DMPK	GEK	<ahref="http://www.uniprot.org/uniprot/Q6DT37"target="_blank">Q6DT37</a>
+DNAPK	DNAPK	PRKDC	DNA-dependentproteinkinasecatalyticsubunit	Atypical	PIKK	DNAPK	<ahref="http://www.uniprot.org/uniprot/P78527"target="_blank">P78527</a>
+DYRK1B	DYRK1B	DYRK1B	Dualspecificitytyrosine-phosphorylation-regulatedkinase1B	CMGC	DYRK	DYRK1	<ahref="http://www.uniprot.org/uniprot/Q9Y463"target="_blank">Q9Y463</a>
+DYRK2	DYRK2	DYRK2	Dualspecificitytyrosine-phosphorylation-regulatedkinase2	CMGC	DYRK	DYRK2	<ahref="http://www.uniprot.org/uniprot/Q92630"target="_blank">Q92630</a>
+DYRK4	DYRK4	DYRK4	Dualspecificitytyrosine-phosphorylation-regulatedkinase4	CMGC	DYRK	DYRK2	<ahref="http://www.uniprot.org/uniprot/Q9NR20"target="_blank">Q9NR20</a>
+eEF2K	eEF2K	EEF2K	Eukaryoticelongationfactor2kinase	Atypical	Alpha	eEF2K	<ahref="http://www.uniprot.org/uniprot/O00418"target="_blank">O00418</a>
+EGFR	EGFR	EGFR	Epidermalgrowthfactorreceptor	TK	EGFR		<ahref="http://www.uniprot.org/uniprot/P00533"target="_blank">P00533</a>
+PKR	PKR	EIF2AK2	Interferon-induced	Other	PEK		<ahref="http://www.uniprot.org/uniprot/P19525"target="_blank">P19525</a>
+MARK2	MARK2	MARK2	Serine/threonine-proteinkinaseMARK2	CAMK	CAMKL	MARK	<ahref="http://www.uniprot.org/uniprot/Q7KZI7"target="_blank">Q7KZI7</a>
+EphA1	EphA1	EPHA1	Ephrintype-Areceptor1	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P21709"target="_blank">P21709</a>
+EphA2	EphA2	EPHA2	Ephrintype-Areceptor2	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P29317"target="_blank">P29317</a>
+EphA3	EphA3	EPHA3	Ephrintype-Areceptor3	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P29320"target="_blank">P29320</a>
+EphA4	EphA4	EPHA4	Ephrintype-Areceptor4	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P54764"target="_blank">P54764</a>
+EphA5	EphA5	EPHA5	Ephrintype-Areceptor5	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P54756"target="_blank">P54756</a>
+EphA8	EphA8	EPHA8	Ephrintype-Areceptor8	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P29322"target="_blank">P29322</a>
+EphB1	EphB1	EPHB1	Ephrintype-Breceptor1	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P54762"target="_blank">P54762</a>
+EphB2	EphB2	EPHB2	Ephrintype-Breceptor2	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P29323"target="_blank">P29323</a>
+EphB3	EphB3	EPHB3	Ephrintype-Breceptor3	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P54753"target="_blank">P54753</a>
+EphB4	EphB4	EPHB4	Ephrintype-Breceptor4	TK	Eph		<ahref="http://www.uniprot.org/uniprot/P54760"target="_blank">P54760</a>
+EphB6	EphB6	EPHB6	Ephrintype-Breceptor6	TK	Eph		<ahref="http://www.uniprot.org/uniprot/O15197"target="_blank">O15197</a>
+Erk1	Erk1	MAPK3	Mitogen-activatedproteinkinase3	CMGC	MAPK	ERK1	<ahref="http://www.uniprot.org/uniprot/P27361"target="_blank">P27361</a>
+Erk2	Erk2	MAPK1	Mitogen-activatedproteinkinase1	CMGC	MAPK	ERK1	<ahref="http://www.uniprot.org/uniprot/P28482"target="_blank">P28482</a>
+Erk3	Erk3	MAPK6	Mitogen-activatedproteinkinase6	CMGC	MAPK	ERK3	<ahref="http://www.uniprot.org/uniprot/Q16659"target="_blank">Q16659</a>
+Erk4	Erk4	MAPK4	Mitogen-activatedproteinkinase4	CMGC	MAPK	ERK3	<ahref="http://www.uniprot.org/uniprot/P31152"target="_blank">P31152</a>
+FAK	FAK	PTK2	Focaladhesionkinase1	TK	FAK		<ahref="http://www.uniprot.org/uniprot/Q05397"target="_blank">Q05397</a>
+FER	FER	FER	Tyrosine-proteinkinaseFer	TK	Fer		<ahref="http://www.uniprot.org/uniprot/P16591"target="_blank">P16591</a>
+FES	FES	FES	Tyrosine-proteinkinaseFes/Fps	TK	Fer		<ahref="http://www.uniprot.org/uniprot/P07332"target="_blank">P07332</a>
+FGFR1	FGFR1	FGFR1	Fibroblastgrowthfactorreceptor1	TK	FGFR		<ahref="http://www.uniprot.org/uniprot/P11362"target="_blank">P11362</a>
+FGFR2	FGFR2	FGFR2	Fibroblastgrowthfactorreceptor2	TK	FGFR		<ahref="http://www.uniprot.org/uniprot/P21802"target="_blank">P21802</a>
+FGFR3	FGFR3	FGFR3	Fibroblastgrowthfactorreceptor3	TK	FGFR		<ahref="http://www.uniprot.org/uniprot/P22607"target="_blank">P22607</a>
+FGFR4	FGFR4	FGFR4	Fibroblastgrowthfactorreceptor4	TK	FGFR		<ahref="http://www.uniprot.org/uniprot/P22455"target="_blank">P22455</a>
+FGR	FGR	FGR	Tyrosine-proteinkinaseFgr	TK	Src		<ahref="http://www.uniprot.org/uniprot/P09769"target="_blank">P09769</a>
+FLT3	FLT3	FLT3	Receptor-typetyrosine-proteinkinaseFLT3	TK	PDGFR		<ahref="http://www.uniprot.org/uniprot/P36888"target="_blank">P36888</a>
+FLT1	FLT1	FLT1	Vascularendothelialgrowthfactorreceptor1	TK	VEGFR		<ahref="http://www.uniprot.org/uniprot/P17948"target="_blank">P17948</a>
+FLT4	FLT4	FLT4	Vascularendothelialgrowthfactorreceptor3	TK	VEGFR		<ahref="http://www.uniprot.org/uniprot/P35916"target="_blank">P35916</a>
+FRAP	FRAP	MTOR	Serine/threonine-proteinkinasemTOR	Atypical	PIKK	FRAP	<ahref="http://www.uniprot.org/uniprot/P42345"target="_blank">P42345</a>
+FYN	FYN	FYN	Tyrosine-proteinkinaseFyn	TK	Src		<ahref="http://www.uniprot.org/uniprot/P06241"target="_blank">P06241</a>
+GAK	GAK	GAK	Cyclin-G-associatedkinase	Other	NAK		<ahref="http://www.uniprot.org/uniprot/O14976"target="_blank">O14976</a>
+GPRK4	GPRK4	GRK4	Gprotein-coupledreceptorkinase4	AGC	GRK	GRK	<ahref="http://www.uniprot.org/uniprot/P32298"target="_blank">P32298</a>
+GPRK5	GPRK5	GRK5	Gprotein-coupledreceptorkinase5	AGC	GRK	GRK	<ahref="http://www.uniprot.org/uniprot/P34947"target="_blank">P34947</a>
+GPRK6	GPRK6	GRK6	Gprotein-coupledreceptorkinase6	AGC	GRK	GRK	<ahref="http://www.uniprot.org/uniprot/P43250"target="_blank">P43250</a>
+Trb2	Trb2	TRIB2	Tribbleshomolog2	CAMK	Trbl		<ahref="http://www.uniprot.org/uniprot/Q92519"target="_blank">Q92519</a>
+GSK3A	GSK3A	GSK3A	Glycogensynthasekinase-3alpha	CMGC	GSK		<ahref="http://www.uniprot.org/uniprot/P49840"target="_blank">P49840</a>
+GSK3B	GSK3B	GSK3B	Glycogensynthasekinase-3beta	CMGC	GSK		<ahref="http://www.uniprot.org/uniprot/P49841"target="_blank">P49841</a>
+HCK	HCK	HCK	Tyrosine-proteinkinaseHCK	TK	Src		<ahref="http://www.uniprot.org/uniprot/P08631"target="_blank">P08631</a>
+ErbB2	HER2/ErbB2	ERBB2	Receptortyrosine-proteinkinaseerbB-2	TK	EGFR		<ahref="http://www.uniprot.org/uniprot/P04626"target="_blank">P04626</a>
+ErbB3	HER3/ErbB3	ERBB3	Receptortyrosine-proteinkinaseerbB-3	TK	EGFR		<ahref="http://www.uniprot.org/uniprot/P21860"target="_blank">P21860</a>
+ErbB4	HER4/ErbB4	ERBB4	Receptortyrosine-proteinkinaseerbB-4	TK	EGFR		<ahref="http://www.uniprot.org/uniprot/Q15303"target="_blank">Q15303</a>
+HIPK1	HIPK1	HIPK1	Homeodomain-interactingproteinkinase1	CMGC	DYRK	HIPK	<ahref="http://www.uniprot.org/uniprot/Q86Z02"target="_blank">Q86Z02</a>
+HPK1	HPK1	MAP4K1	Mitogen-activatedproteinkinasekinasekinasekinase1	STE	STE20	KHS	<ahref="http://www.uniprot.org/uniprot/Q92918"target="_blank">Q92918</a>
+HSER	HSER	GUCY2C	Heat-stableenterotoxinreceptor	RGC	RGC		<ahref="http://www.uniprot.org/uniprot/P25092"target="_blank">P25092</a>
+IGF1R	IGF1R	IGF1R	Insulin-likegrowthfactor1receptor	TK	InsR		<ahref="http://www.uniprot.org/uniprot/P08069"target="_blank">P08069</a>
+IKKa	IKKa	CHUK	Inhibitorofnuclearfactorkappa-Bkinasesubunitalpha	Other	IKK		<ahref="http://www.uniprot.org/uniprot/O15111"target="_blank">O15111</a>
+IKKb	IKKb	IKBKB	Inhibitorofnuclearfactorkappa-Bkinasesubunitbeta	Other	IKK		<ahref="http://www.uniprot.org/uniprot/O14920"target="_blank">O14920</a>
+ILK	ILK	ILK	Integrin-linkedproteinkinase	TKL	MLK	ILK	<ahref="http://www.uniprot.org/uniprot/Q13418"target="_blank">Q13418</a>
+INSR	INSR	INSR	Insulinreceptor	TK	InsR		<ahref="http://www.uniprot.org/uniprot/P06213"target="_blank">P06213</a>
+IRAK1	IRAK1	IRAK1	Interleukin-1receptor-associatedkinase1	TKL	IRAK		<ahref="http://www.uniprot.org/uniprot/P51617"target="_blank">P51617</a>
+IRAK2	IRAK2	IRAK2	Interleukin-1receptor-associatedkinase-like2	TKL	IRAK		<ahref="http://www.uniprot.org/uniprot/O43187"target="_blank">O43187</a>
+IRAK3	IRAK3	IRAK3	Interleukin-1receptor-associatedkinase3	TKL	IRAK		<ahref="http://www.uniprot.org/uniprot/Q9Y616"target="_blank">Q9Y616</a>
+IRE1	IRE1	ERN1	Serine/threonine-proteinkinase/endoribonucleaseIRE1	Other	IRE		<ahref="http://www.uniprot.org/uniprot/O75460"target="_blank">O75460</a>
+IRR	IRR	INSRR	Insulinreceptor-relatedprotein	TK	InsR		<ahref="http://www.uniprot.org/uniprot/P14616"target="_blank">P14616</a>
+ITK	ITK	ITK	Tyrosine-proteinkinaseITK/TSK	TK	Tec		<ahref="http://www.uniprot.org/uniprot/Q08881"target="_blank">Q08881</a>
+JAK1	JAK1	JAK1	Tyrosine-proteinkinaseJAK1	TK	Jak		<ahref="http://www.uniprot.org/uniprot/P23458"target="_blank">P23458</a>
+JAK2	JAK2	JAK2	Tyrosine-proteinkinaseJAK2	TK	Jak		<ahref="http://www.uniprot.org/uniprot/O60674"target="_blank">O60674</a>
+JAK3	JAK3	JAK3	Tyrosine-proteinkinaseJAK3	TK	Jak		<ahref="http://www.uniprot.org/uniprot/P52333"target="_blank">P52333</a>
+JNK1	JNK1	MAPK8	Mitogen-activatedproteinkinase8	CMGC	MAPK	JNK	<ahref="http://www.uniprot.org/uniprot/P45983"target="_blank">P45983</a>
+JNK2	JNK2	MAPK9	Mitogen-activatedproteinkinase9	CMGC	MAPK	JNK	<ahref="http://www.uniprot.org/uniprot/P45984"target="_blank">P45984</a>
+JNK3	JNK3	MAPK10	Mitogen-activatedproteinkinase10	CMGC	MAPK	JNK	<ahref="http://www.uniprot.org/uniprot/P53779"target="_blank">P53779</a>
+KHS1	KHS1	MAP4K5	Mitogen-activatedproteinkinasekinasekinasekinase5	STE	STE20	KHS	<ahref="http://www.uniprot.org/uniprot/Q9Y4K4"target="_blank">Q9Y4K4</a>
+IKKe	IKKe	IKBKE	Inhibitorofnuclearfactorkappa-Bkinasesubunitepsilon	Other	IKK		<ahref="http://www.uniprot.org/uniprot/Q14164"target="_blank">Q14164</a>
+NuaK1	NuaK1	NUAK1	NUAKfamilySNF1-likekinase1	CAMK	CAMKL	NuaK	<ahref="http://www.uniprot.org/uniprot/O60285"target="_blank">O60285</a>
+MAST3	MAST3	MAST3	Microtubule-associatedserine/threonine-proteinkinase3	AGC	MAST		<ahref="http://www.uniprot.org/uniprot/O60307"target="_blank">O60307</a>
+Fused	Fused	STK36	Serine/threonine-proteinkinase36	Other	ULK		<ahref="http://www.uniprot.org/uniprot/Q9NRP7"target="_blank">Q9NRP7</a>
+PIM3	PIM3	PIM3	Serine/threonine-proteinkinasepim-3	CAMK	PIM		<ahref="http://www.uniprot.org/uniprot/Q86V86"target="_blank">Q86V86</a>
+KIT	KIT	KIT	Mast/stemcellgrowthfactorreceptorKit	TK	PDGFR		<ahref="http://www.uniprot.org/uniprot/P10721"target="_blank">P10721</a>
+CDKL2	CDKL2	CDKL2	Cyclin-dependentkinase-like2	CMGC	CDKL		<ahref="http://www.uniprot.org/uniprot/Q92772"target="_blank">Q92772</a>
+CDKL1	CDKL1	CDKL1	Cyclin-dependentkinase-like1	CMGC	CDKL		<ahref="http://www.uniprot.org/uniprot/Q00532"target="_blank">Q00532</a>
+KSR1	KSR1	KSR1	KinasesuppressorofRas1	TKL	RAF	KSR	<ahref="http://www.uniprot.org/uniprot/Q8IVT5"target="_blank">Q8IVT5</a>
+LCK	LCK	LCK	Tyrosine-proteinkinaseLck	TK	Src		<ahref="http://www.uniprot.org/uniprot/P06239"target="_blank">P06239</a>
+LIMK2	LIMK2	LIMK2	LIMdomainkinase2	TKL	LISK	LIMK	<ahref="http://www.uniprot.org/uniprot/P53671"target="_blank">P53671</a>
+LKB1	LKB1	STK11	Serine/threonine-proteinkinaseSTK11	CAMK	CAMKL	LKB	<ahref="http://www.uniprot.org/uniprot/Q15831"target="_blank">Q15831</a>
+LTK	LTK	LTK	Leukocytetyrosinekinasereceptor	TK	ALK		<ahref="http://www.uniprot.org/uniprot/P29376"target="_blank">P29376</a>
+LYN	LYN	LYN	Tyrosine-proteinkinaseLyn	TK	Src		<ahref="http://www.uniprot.org/uniprot/P07948"target="_blank">P07948</a>
+MAK	MAK	MAK	Serine/threonine-proteinkinaseMAK	CMGC	RCK		<ahref="http://www.uniprot.org/uniprot/P20794"target="_blank">P20794</a>
+MAPKAPK2	MAPKAPK2	MAPKAPK2	MAPkinase-activatedproteinkinase2	CAMK	MAPKAPK	MK2	<ahref="http://www.uniprot.org/uniprot/P49137"target="_blank">P49137</a>
+MAPKAPK3	MAPKAPK3	MAPKAPK3	MAPkinase-activatedproteinkinase3	CAMK	MAPKAPK	MK2	<ahref="http://www.uniprot.org/uniprot/Q16644"target="_blank">Q16644</a>
+MAPKAPK5	MAPKAPK5	MAPKAPK5	MAPkinase-activatedproteinkinase5	CAMK	MAPKAPK	MK5	<ahref="http://www.uniprot.org/uniprot/Q8IW41"target="_blank">Q8IW41</a>
+MARK1	MARK1	MARK1	Serine/threonine-proteinkinaseMARK1	CAMK	CAMKL	MARK	<ahref="http://www.uniprot.org/uniprot/Q9P0L2"target="_blank">Q9P0L2</a>
+MAST2	MAST2	MAST2	Microtubule-associatedserine/threonine-proteinkinase2	AGC	MAST		<ahref="http://www.uniprot.org/uniprot/Q6P0Q8"target="_blank">Q6P0Q8</a>
+MAP2K1	MAP2K1	MAP2K1	Dualspecificitymitogen-activatedproteinkinasekinase1	STE	STE7		<ahref="http://www.uniprot.org/uniprot/Q02750"target="_blank">Q02750</a>
+MAP2K2	MAP2K2	MAP2K2	Dualspecificitymitogen-activatedproteinkinasekinase2	STE	STE7		<ahref="http://www.uniprot.org/uniprot/P36507"target="_blank">P36507</a>
+MAP2K5	MAP2K5	MAP2K5	Dualspecificitymitogen-activatedproteinkinasekinase5	STE	STE7		<ahref="http://www.uniprot.org/uniprot/Q13163"target="_blank">Q13163</a>
+MAP2K6	MAP2K6	MAP2K6	Dualspecificitymitogen-activatedproteinkinasekinase6	STE	STE7		<ahref="http://www.uniprot.org/uniprot/P52564"target="_blank">P52564</a>
+MAP3K1	MAP3K1	MAP3K1	Mitogen-activatedproteinkinasekinasekinase1	STE	STE11		<ahref="http://www.uniprot.org/uniprot/Q13233"target="_blank">Q13233</a>
+MAP3K2	MAP3K2	MAP3K2	Mitogen-activatedproteinkinasekinasekinase2	STE	STE11		<ahref="http://www.uniprot.org/uniprot/Q9Y2U5"target="_blank">Q9Y2U5</a>
+MAP3K3	MAP3K3	MAP3K3	Mitogen-activatedproteinkinasekinasekinase3	STE	STE11		<ahref="http://www.uniprot.org/uniprot/Q99759"target="_blank">Q99759</a>
+MAP3K4	MAP3K4	MAP3K4	Mitogen-activatedproteinkinasekinasekinase4	STE	STE11		<ahref="http://www.uniprot.org/uniprot/Q9Y6R4"target="_blank">Q9Y6R4</a>
+MAP3K5	MAP3K5	MAP3K5	Mitogen-activatedproteinkinasekinasekinase5	STE	STE11		<ahref="http://www.uniprot.org/uniprot/Q99683"target="_blank">Q99683</a>
+MER	MER	MERTK	Tyrosine-proteinkinaseMer	TK	Axl		<ahref="http://www.uniprot.org/uniprot/Q12866"target="_blank">Q12866</a>
+MET	MET	MET	Hepatocytegrowthfactorreceptor	TK	Met		<ahref="http://www.uniprot.org/uniprot/P08581"target="_blank">P08581</a>
+MISR2	MISR2	AMHR2	Anti-Muellerianhormonetype-2receptor	TKL	STKR	STKR2	<ahref="http://www.uniprot.org/uniprot/Q16671"target="_blank">Q16671</a>
+MAP2K7	MAP2K7	MAP2K7	Dualspecificitymitogen-activatedproteinkinasekinase7	STE	STE7		<ahref="http://www.uniprot.org/uniprot/O14733"target="_blank">O14733</a>
+smMLCK	smMLCK	MYLK	Myosinlightchainkinase	CAMK	MLCK		<ahref="http://www.uniprot.org/uniprot/Q15746"target="_blank">Q15746</a>
+MLK1	MLK1	MAP3K9	Mitogen-activatedproteinkinasekinasekinase9	TKL	MLK	MLK	<ahref="http://www.uniprot.org/uniprot/P80192"target="_blank">P80192</a>
+MLK2	MLK2	MAP3K10	Mitogen-activatedproteinkinasekinasekinase10	TKL	MLK	MLK	<ahref="http://www.uniprot.org/uniprot/Q02779"target="_blank">Q02779</a>
+DYRK1A	DYRK1A	DYRK1A	Dualspecificitytyrosine-phosphorylation-regulatedkinase1A	CMGC	DYRK	DYRK1	<ahref="http://www.uniprot.org/uniprot/Q13627"target="_blank">Q13627</a>
+MNK1	MNK1	MKNK1	MAPkinase-interactingserine/threonine-proteinkinase1	CAMK	MAPKAPK	MNK	<ahref="http://www.uniprot.org/uniprot/Q9BUB5"target="_blank">Q9BUB5</a>
+MNK2	MNK2	MKNK2	MAPkinase-interactingserine/threonine-proteinkinase2	CAMK	MAPKAPK	MNK	<ahref="http://www.uniprot.org/uniprot/Q9HBH9"target="_blank">Q9HBH9</a>
+MOS	MOS	MOS	Proto-oncogeneserine/threonine-proteinkinasemos	Other	MOS		<ahref="http://www.uniprot.org/uniprot/P00540"target="_blank">P00540</a>
+MAP2K3	MAP2K3	MAP2K3	Dualspecificitymitogen-activatedproteinkinasekinase3	STE	STE7		<ahref="http://www.uniprot.org/uniprot/P46734"target="_blank">P46734</a>
+MAP2K4	MAP2K4	MAP2K4	Dualspecificitymitogen-activatedproteinkinasekinase4	STE	STE7		<ahref="http://www.uniprot.org/uniprot/P45985"target="_blank">P45985</a>
+MRCKb	MRCKb	CDC42BPB	Serine/threonine-proteinkinaseMRCKbeta	AGC	DMPK	GEK	<ahref="http://www.uniprot.org/uniprot/Q9Y5S2"target="_blank">Q9Y5S2</a>
+MSK1	MSK1	RPS6KA5	RibosomalproteinS6kinasealpha-5	AGC	RSK	MSK	<ahref="http://www.uniprot.org/uniprot/O75582"target="_blank">O75582</a>
+MSK2	MSK2	RPS6KA4	RibosomalproteinS6kinasealpha-4	AGC	RSK	MSK	<ahref="http://www.uniprot.org/uniprot/O75676"target="_blank">O75676</a>
+MST1	MST1	STK4	Serine/threonine-proteinkinase4	STE	STE20	MST	<ahref="http://www.uniprot.org/uniprot/Q13043"target="_blank">Q13043</a>
+MST2	MST2	STK3	Serine/threonine-proteinkinase3	STE	STE20	MST	<ahref="http://www.uniprot.org/uniprot/Q13188"target="_blank">Q13188</a>
+MST3	MST3	STK24	Serine/threonine-proteinkinase24	STE	STE20	YSK	<ahref="http://www.uniprot.org/uniprot/Q9Y6E0"target="_blank">Q9Y6E0</a>
+MUSK	MUSK	MUSK	Muscle	TK	Musk		<ahref="http://www.uniprot.org/uniprot/O15146"target="_blank">O15146</a>
+MYT1	MYT1	PKMYT1	Membrane-associatedtyrosine-andthreonine-specificcdc2-inhibitorykinase	Other	WEE		<ahref="http://www.uniprot.org/uniprot/Q99640"target="_blank">Q99640</a>
+NDR1	NDR1	STK38	Serine/threonine-proteinkinase38	AGC	NDR		<ahref="http://www.uniprot.org/uniprot/Q15208"target="_blank">Q15208</a>
+NEK1	NEK1	NEK1	Serine/threonine-proteinkinaseNek1	Other	NEK		<ahref="http://www.uniprot.org/uniprot/Q96PY6"target="_blank">Q96PY6</a>
+NEK2	NEK2	NEK2	Serine/threonine-proteinkinaseNek2	Other	NEK		<ahref="http://www.uniprot.org/uniprot/P51955"target="_blank">P51955</a>
+NEK3	NEK3	NEK3	Serine/threonine-proteinkinaseNek3	Other	NEK		<ahref="http://www.uniprot.org/uniprot/P51956"target="_blank">P51956</a>
+NIK	NIK	MAP3K14	Mitogen-activatedproteinkinasekinasekinase14	STE	STE-Unique		<ahref="http://www.uniprot.org/uniprot/Q99558"target="_blank">Q99558</a>
+NLK	NLK	NLK	Serine/threonine-proteinkinaseNLK	CMGC	MAPK	nmo	<ahref="http://www.uniprot.org/uniprot/Q9UBE8"target="_blank">Q9UBE8</a>
+NEK4	NEK4	NEK4	Serine/threonine-proteinkinaseNek4	Other	NEK		<ahref="http://www.uniprot.org/uniprot/P51957"target="_blank">P51957</a>
+IRAK4	IRAK4	IRAK4	Interleukin-1receptor-associatedkinase4	TKL	IRAK		<ahref="http://www.uniprot.org/uniprot/Q9NWZ3"target="_blank">Q9NWZ3</a>
+PIK3R4	PIK3R4	PIK3R4	Phosphoinositide3-kinaseregulatorysubunit4	Other	VPS15		<ahref="http://www.uniprot.org/uniprot/Q99570"target="_blank">Q99570</a>
+ROCK2	ROCK2	ROCK2	Rho-associatedproteinkinase2	AGC	DMPK	ROCK	<ahref="http://www.uniprot.org/uniprot/O75116"target="_blank">O75116</a>
+p38a	p38a	MAPK14	Mitogen-activatedproteinkinase14	CMGC	MAPK	p38	<ahref="http://www.uniprot.org/uniprot/Q16539"target="_blank">Q16539</a>
+p70S6K	p70S6K	RPS6KB1	RibosomalproteinS6kinasebeta-1	AGC	RSK	RSKp70	<ahref="http://www.uniprot.org/uniprot/P23443"target="_blank">P23443</a>
+p70S6Kb	p70S6Kb	RPS6KB2	RibosomalproteinS6kinasebeta-2	AGC	RSK	RSKp70	<ahref="http://www.uniprot.org/uniprot/Q9UBS0"target="_blank">Q9UBS0</a>
+PAK1	PAK1	PAK1	Serine/threonine-proteinkinasePAK1	STE	STE20	PAKA	<ahref="http://www.uniprot.org/uniprot/Q13153"target="_blank">Q13153</a>
+PAK2	PAK2	PAK2	Serine/threonine-proteinkinasePAK2	STE	STE20	PAKA	<ahref="http://www.uniprot.org/uniprot/Q13177"target="_blank">Q13177</a>
+PAK3	PAK3	PAK3	Serine/threonine-proteinkinasePAK3	STE	STE20	PAKA	<ahref="http://www.uniprot.org/uniprot/O75914"target="_blank">O75914</a>
+PKCh	PKCh	PRKCH	ProteinkinaseCetatype	AGC	PKC	PKCh	<ahref="http://www.uniprot.org/uniprot/P24723"target="_blank">P24723</a>
+PCTAIRE1	PCTAIRE1	CDK16	Cyclin-dependentkinase16	CMGC	CDK	PCTAIRE	<ahref="http://www.uniprot.org/uniprot/Q00536"target="_blank">Q00536</a>
+PCTAIRE2	PCTAIRE2	CDK17	Cyclin-dependentkinase17	CMGC	CDK	PCTAIRE	<ahref="http://www.uniprot.org/uniprot/Q00537"target="_blank">Q00537</a>
+PCTAIRE3	PCTAIRE3	CDK18	Cyclin-dependentkinase18	CMGC	CDK	PCTAIRE	<ahref="http://www.uniprot.org/uniprot/Q07002"target="_blank">Q07002</a>
+PDGFRa	PDGFRa	PDGFRA	Platelet-derivedgrowthfactorreceptoralpha	TK	PDGFR		<ahref="http://www.uniprot.org/uniprot/P16234"target="_blank">P16234</a>
+PDGFRb	PDGFRb	PDGFRB	Platelet-derivedgrowthfactorreceptorbeta	TK	PDGFR		<ahref="http://www.uniprot.org/uniprot/P09619"target="_blank">P09619</a>
+PDK1	PDK1	PDPK1	3-phosphoinositide-dependentproteinkinase1	AGC	PDK1		<ahref="http://www.uniprot.org/uniprot/O15530"target="_blank">O15530</a>
+PDHK1	PDHK1	PDK1	[Pyruvatedehydrogenase[lipoamide]]kinaseisozyme1	Atypical	PDHK		<ahref="http://www.uniprot.org/uniprot/Q15118"target="_blank">Q15118</a>
+PDHK2	PDHK2	PDK2	[Pyruvatedehydrogenase[lipoamide]]kinaseisozyme2	Atypical	PDHK		<ahref="http://www.uniprot.org/uniprot/Q15119"target="_blank">Q15119</a>
+PDHK3	PDHK3	PDK3	[Pyruvatedehydrogenase[lipoamide]]kinaseisozyme3	Atypical	PDHK		<ahref="http://www.uniprot.org/uniprot/Q15120"target="_blank">Q15120</a>
+PDHK4	PDHK4	PDK4	[Pyruvatedehydrogenase[lipoamide]]kinaseisozyme4	Atypical	PDHK		<ahref="http://www.uniprot.org/uniprot/Q16654"target="_blank">Q16654</a>
+PEK	PEK	EIF2AK3	Eukaryotictranslationinitiationfactor2-alphakinase3	Other	PEK	PEK	<ahref="http://www.uniprot.org/uniprot/Q9NZJ5"target="_blank">Q9NZJ5</a>
+PFTAIRE1	PFTAIRE1	CDK14	Cyclin-dependentkinase14	CMGC	CDK	PFTAIRE	<ahref="http://www.uniprot.org/uniprot/O94921"target="_blank">O94921</a>
+PHKg1	PHKg1	PHKG1	Phosphorylasebkinasegammacatalyticchain	CAMK	PHK		<ahref="http://www.uniprot.org/uniprot/Q16816"target="_blank">Q16816</a>
+PHKg2	PHKg2	PHKG2	Phosphorylasebkinasegammacatalyticchain	CAMK	PHK		<ahref="http://www.uniprot.org/uniprot/P15735"target="_blank">P15735</a>
+PIM1	PIM1	PIM1	Serine/threonine-proteinkinasepim-1	CAMK	PIM		<ahref="http://www.uniprot.org/uniprot/P11309"target="_blank">P11309</a>
+PIM2	PIM2	PIM2	Serine/threonine-proteinkinasepim-2	CAMK	PIM		<ahref="http://www.uniprot.org/uniprot/Q9P1W9"target="_blank">Q9P1W9</a>
+CDK10	CDK10	CDK10	Cyclin-dependentkinase10	CMGC	CDK	CDK10	<ahref="http://www.uniprot.org/uniprot/Q15131"target="_blank">Q15131</a>
+CDK9	CDK9	CDK9	Cyclin-dependentkinase9	CMGC	CDK	CDK9	<ahref="http://www.uniprot.org/uniprot/P50750"target="_blank">P50750</a>
+PITSLRE	PITSLRE	CDK11B	Cyclin-dependentkinase11B	CMGC	CDK	CDK11	<ahref="http://www.uniprot.org/uniprot/P21127"target="_blank">P21127</a>
+MELK	MELK	MELK	Maternalembryonicleucinezipperkinase	CAMK	CAMKL	MELK	<ahref="http://www.uniprot.org/uniprot/Q14680"target="_blank">Q14680</a>
+MRCKa	MRCKa	CDC42BPA	Serine/threonine-proteinkinaseMRCKalpha	AGC	DMPK	GEK	<ahref="http://www.uniprot.org/uniprot/Q5VT25"target="_blank">Q5VT25</a>
+PKACa	PKACa	PRKACA	cAMP-dependentproteinkinasecatalyticsubunitalpha	AGC	PKA		<ahref="http://www.uniprot.org/uniprot/P17612"target="_blank">P17612</a>
+PKACb	PKACb	PRKACB	cAMP-dependentproteinkinasecatalyticsubunitbeta	AGC	PKA		<ahref="http://www.uniprot.org/uniprot/P22694"target="_blank">P22694</a>
+PKACg	PKACg	PRKACG	cAMP-dependentproteinkinasecatalyticsubunitgamma	AGC	PKA		<ahref="http://www.uniprot.org/uniprot/P22612"target="_blank">P22612</a>
+PKCa	PKCa	PRKCA	ProteinkinaseCalphatype	AGC	PKC	PKCa	<ahref="http://www.uniprot.org/uniprot/P17252"target="_blank">P17252</a>
+PKCb	PKCb	PRKCB	ProteinkinaseCbetatype	AGC	PKC	PKCa	<ahref="http://www.uniprot.org/uniprot/P05771"target="_blank">P05771</a>
+PKCd	PKCd	PRKCD	ProteinkinaseCdeltatype	AGC	PKC	PKCd	<ahref="http://www.uniprot.org/uniprot/Q05655"target="_blank">Q05655</a>
+PKCe	PKCe	PRKCE	ProteinkinaseCepsilontype	AGC	PKC	PKCh	<ahref="http://www.uniprot.org/uniprot/Q02156"target="_blank">Q02156</a>
+PKCg	PKCg	PRKCG	ProteinkinaseCgammatype	AGC	PKC	PKCa	<ahref="http://www.uniprot.org/uniprot/P05129"target="_blank">P05129</a>
+PKCi	PKCi	PRKCI	ProteinkinaseCiotatype	AGC	PKC	PKCi	<ahref="http://www.uniprot.org/uniprot/P41743"target="_blank">P41743</a>
+PKD1	PKD1	PRKD1	Serine/threonine-proteinkinaseD1	CAMK	PKD		<ahref="http://www.uniprot.org/uniprot/Q15139"target="_blank">Q15139</a>
+PKCt	PKCt	PRKCQ	ProteinkinaseCthetatype	AGC	PKC	PKCd	<ahref="http://www.uniprot.org/uniprot/Q04759"target="_blank">Q04759</a>
+PKCz	PKCz	PRKCZ	ProteinkinaseCzetatype	AGC	PKC	PKCi	<ahref="http://www.uniprot.org/uniprot/Q05513"target="_blank">Q05513</a>
+PRKX	PRKX	PRKX	cAMP-dependentproteinkinasecatalyticsubunitPRKX	AGC	PKA		<ahref="http://www.uniprot.org/uniprot/P51817"target="_blank">P51817</a>
+HIPK3	HIPK3	HIPK3	Homeodomain-interactingproteinkinase3	CMGC	DYRK	HIPK	<ahref="http://www.uniprot.org/uniprot/Q9H422"target="_blank">Q9H422</a>
+PLK1	PLK1	PLK1	Serine/threonine-proteinkinasePLK1	Other	PLK		<ahref="http://www.uniprot.org/uniprot/P53350"target="_blank">P53350</a>
+PLK3	PLK3	PLK3	Serine/threonine-proteinkinasePLK3	Other	PLK		<ahref="http://www.uniprot.org/uniprot/Q9H4B4"target="_blank">Q9H4B4</a>
+PKN1	PKN1	PKN1	Serine/threonine-proteinkinaseN1	AGC	PKN		<ahref="http://www.uniprot.org/uniprot/Q16512"target="_blank">Q16512</a>
+PKN2	PKN2	PKN2	Serine/threonine-proteinkinaseN2	AGC	PKN		<ahref="http://www.uniprot.org/uniprot/Q16513"target="_blank">Q16513</a>
+PRKY	PRKY	PRKY	Serine/threonine-proteinkinasePRKY	AGC	PKA		<ahref="http://www.uniprot.org/uniprot/O43930"target="_blank">O43930</a>
+PRP4	PRP4	PRPF4B	Serine/threonine-proteinkinasePRP4homolog	CMGC	DYRK	PRP4	<ahref="http://www.uniprot.org/uniprot/Q13523"target="_blank">Q13523</a>
+PSKH1	PSKH1	PSKH1	Serine/threonine-proteinkinaseH1	CAMK	PSK		<ahref="http://www.uniprot.org/uniprot/P11801"target="_blank">P11801</a>
+RAF1	RAF1	RAF1	RAFproto-oncogeneserine/threonine-proteinkinase	TKL	RAF		<ahref="http://www.uniprot.org/uniprot/P04049"target="_blank">P04049</a>
+RET	RET	RET	Proto-oncogenetyrosine-proteinkinasereceptorRet	TK	Ret		<ahref="http://www.uniprot.org/uniprot/P07949"target="_blank">P07949</a>
+RHOK	RHOK	GRK1	Rhodopsinkinase	AGC	GRK	GRK	<ahref="http://www.uniprot.org/uniprot/Q15835"target="_blank">Q15835</a>
+RIPK1	RIPK1	RIPK1	Receptor-interactingserine/threonine-proteinkinase1	TKL	RIPK		<ahref="http://www.uniprot.org/uniprot/Q13546"target="_blank">Q13546</a>
+RIPK2	RIPK2	RIPK2	Receptor-interactingserine/threonine-proteinkinase2	TKL	RIPK		<ahref="http://www.uniprot.org/uniprot/O43353"target="_blank">O43353</a>
+RIPK3	RIPK3	RIPK3	Receptor-interactingserine/threonine-proteinkinase3	TKL	RIPK		<ahref="http://www.uniprot.org/uniprot/Q9Y572"target="_blank">Q9Y572</a>
+ROCK1	ROCK1	ROCK1	Rho-associatedproteinkinase1	AGC	DMPK	ROCK	<ahref="http://www.uniprot.org/uniprot/Q13464"target="_blank">Q13464</a>
+RON	RON	MST1R	Macrophage-stimulatingproteinreceptor	TK	Met		<ahref="http://www.uniprot.org/uniprot/Q04912"target="_blank">Q04912</a>
+ROR1	ROR1	ROR1	Tyrosine-proteinkinasetransmembranereceptorROR1	TK	Ror		<ahref="http://www.uniprot.org/uniprot/Q01973"target="_blank">Q01973</a>
+ROR2	ROR2	ROR2	Tyrosine-proteinkinasetransmembranereceptorROR2	TK	Ror		<ahref="http://www.uniprot.org/uniprot/Q01974"target="_blank">Q01974</a>
+ROS	ROS	ROS1	Proto-oncogenetyrosine-proteinkinaseROS	TK	Sev		<ahref="http://www.uniprot.org/uniprot/P08922"target="_blank">P08922</a>
+RSK3	RSK1	RPS6KA2	RibosomalproteinS6kinasealpha-2	AGC	RSK	RSKp90	<ahref="http://www.uniprot.org/uniprot/Q15349"target="_blank">Q15349</a>
+RSK2	RSK2	RPS6KA3	RibosomalproteinS6kinasealpha-3	AGC	RSK	RSKp90	<ahref="http://www.uniprot.org/uniprot/P51812"target="_blank">P51812</a>
+RSK1	RSK3	RPS6KA1	RibosomalproteinS6kinasealpha-1	AGC	RSK	RSKp90	<ahref="http://www.uniprot.org/uniprot/Q15418"target="_blank">Q15418</a>
+RYK	RYK	RYK	Tyrosine-proteinkinaseRYK	TK	Ryk		<ahref="http://www.uniprot.org/uniprot/P34925"target="_blank">P34925</a>
+PLK4	PLK4	PLK4	Serine/threonine-proteinkinasePLK4	Other	PLK		<ahref="http://www.uniprot.org/uniprot/O00444"target="_blank">O00444</a>
+p38b	p38b	MAPK11	Mitogen-activatedproteinkinase11	CMGC	MAPK	p38	<ahref="http://www.uniprot.org/uniprot/Q15759"target="_blank">Q15759</a>
+p38g	p38g	MAPK12	Mitogen-activatedproteinkinase12	CMGC	MAPK	p38	<ahref="http://www.uniprot.org/uniprot/P53778"target="_blank">P53778</a>
+p38d	p38d	MAPK13	Mitogen-activatedproteinkinase13	CMGC	MAPK	p38	<ahref="http://www.uniprot.org/uniprot/O15264"target="_blank">O15264</a>
+MAST1	MAST1	MAST1	Microtubule-associatedserine/threonine-proteinkinase1	AGC	MAST		<ahref="http://www.uniprot.org/uniprot/Q9Y2H9"target="_blank">Q9Y2H9</a>
+SGK1	SGK	SGK1	Serine/threonine-proteinkinaseSgk1	AGC	SGK		<ahref="http://www.uniprot.org/uniprot/O00141"target="_blank">O00141</a>
+SLK	SLK	SLK	STE20-likeserine/threonine-proteinkinase	STE	STE20	SLK	<ahref="http://www.uniprot.org/uniprot/Q9H2G2"target="_blank">Q9H2G2</a>
+PLK2	PLK2	PLK2	Serine/threonine-proteinkinasePLK2	Other	PLK		<ahref="http://www.uniprot.org/uniprot/Q9NYY3"target="_blank">Q9NYY3</a>
+MLK3	MLK3	MAP3K11	Mitogen-activatedproteinkinasekinasekinase11	TKL	MLK	MLK	<ahref="http://www.uniprot.org/uniprot/Q16584"target="_blank">Q16584</a>
+SRC	SRC	SRC	Proto-oncogenetyrosine-proteinkinaseSrc	TK	Src		<ahref="http://www.uniprot.org/uniprot/P12931"target="_blank">P12931</a>
+SRPK1	SRPK1	SRPK1	SRSFproteinkinase1	CMGC	SRPK		<ahref="http://www.uniprot.org/uniprot/Q96SB4"target="_blank">Q96SB4</a>
+SRPK2	SRPK2	SRPK2	SRSFproteinkinase2	CMGC	SRPK		<ahref="http://www.uniprot.org/uniprot/P78362"target="_blank">P78362</a>
+CDKL5	CDKL5	CDKL5	Cyclin-dependentkinase-like5	CMGC	CDKL		<ahref="http://www.uniprot.org/uniprot/O76039"target="_blank">O76039</a>
+TAO2	TAO2	TAOK2	Serine/threonine-proteinkinaseTAO2	STE	STE20	TAO	<ahref="http://www.uniprot.org/uniprot/Q9UL54"target="_blank">Q9UL54</a>
+SYK	SYK	SYK	Tyrosine-proteinkinaseSYK	TK	Syk		<ahref="http://www.uniprot.org/uniprot/P43405"target="_blank">P43405</a>
+TAK1	TAK1	MAP3K7	Mitogen-activatedproteinkinasekinasekinase7	TKL	MLK	TAK1	<ahref="http://www.uniprot.org/uniprot/O43318"target="_blank">O43318</a>
+BMPR2	BMPR2	BMPR2	Bonemorphogeneticproteinreceptortype-2	TKL	STKR	STKR2	<ahref="http://www.uniprot.org/uniprot/Q13873"target="_blank">Q13873</a>
+TEC	TEC	TEC	Tyrosine-proteinkinaseTec	TK	Tec		<ahref="http://www.uniprot.org/uniprot/P42680"target="_blank">P42680</a>
+TIE2	TIE2	TEK	Angiopoietin-1receptor	TK	Tie		<ahref="http://www.uniprot.org/uniprot/Q02763"target="_blank">Q02763</a>
+TESK1	TESK1	TESK1	Dualspecificitytestis-specificproteinkinase1	TKL	LISK	TESK	<ahref="http://www.uniprot.org/uniprot/Q15569"target="_blank">Q15569</a>
+TGFbR2	TGFbR2	TGFBR2	TGF-betareceptortype-2	TKL	STKR	STKR2	<ahref="http://www.uniprot.org/uniprot/P37173"target="_blank">P37173</a>
+TIE1	TIE1	TIE1	Tyrosine-proteinkinasereceptorTie-1	TK	Tie		<ahref="http://www.uniprot.org/uniprot/P35590"target="_blank">P35590</a>
+TTN	TTN	TTN	Titin	CAMK	MLCK		<ahref="http://www.uniprot.org/uniprot/Q8WZ42"target="_blank">Q8WZ42</a>
+TLK1	TLK1	TLK1	Serine/threonine-proteinkinasetousled-like1	Other	TLK		<ahref="http://www.uniprot.org/uniprot/Q9UKI8"target="_blank">Q9UKI8</a>
+TLK2	TLK2	TLK2	Serine/threonine-proteinkinasetousled-like2	Other	TLK		<ahref="http://www.uniprot.org/uniprot/Q86UE8"target="_blank">Q86UE8</a>
+TNK1	TNK1	TNK1	Non-receptortyrosine-proteinkinaseTNK1	TK	Ack		<ahref="http://www.uniprot.org/uniprot/Q13470"target="_blank">Q13470</a>
+Trio	Trio	TRIO	Triplefunctionaldomainprotein	CAMK	Trio		<ahref="http://www.uniprot.org/uniprot/O75962"target="_blank">O75962</a>
+TRKA	TRKA	NTRK1	Highaffinitynervegrowthfactorreceptor	TK	Trk		<ahref="http://www.uniprot.org/uniprot/P04629"target="_blank">P04629</a>
+TRKB	TRKB	NTRK2	BDNF/NT-3growthfactorsreceptor	TK	Trk		<ahref="http://www.uniprot.org/uniprot/Q16620"target="_blank">Q16620</a>
+TRKC	TRKC	NTRK3	NT-3growthfactorreceptor	TK	Trk		<ahref="http://www.uniprot.org/uniprot/Q16288"target="_blank">Q16288</a>
+TRRAP	TRRAP	TRRAP	Transformation/transcriptiondomain-associatedprotein	Atypical	PIKK	TRRAP	<ahref="http://www.uniprot.org/uniprot/Q9Y4A5"target="_blank">Q9Y4A5</a>
+TTK	TTK	TTK	DualspecificityproteinkinaseTTK	Other	TTK		<ahref="http://www.uniprot.org/uniprot/P33981"target="_blank">P33981</a>
+TXK	TXK	TXK	Tyrosine-proteinkinaseTXK	TK	Tec		<ahref="http://www.uniprot.org/uniprot/P42681"target="_blank">P42681</a>
+TYK2	TYK2	TYK2	Non-receptortyrosine-proteinkinaseTYK2	TK	Jak		<ahref="http://www.uniprot.org/uniprot/P29597"target="_blank">P29597</a>
+TYRO3	TYRO3	TYRO3	Tyrosine-proteinkinasereceptorTYRO3	TK	Axl		<ahref="http://www.uniprot.org/uniprot/Q06418"target="_blank">Q06418</a>
+ULK1	ULK1	ULK1	Serine/threonine-proteinkinaseULK1	Other	ULK		<ahref="http://www.uniprot.org/uniprot/O75385"target="_blank">O75385</a>
+ULK2	ULK2	ULK2	Serine/threonine-proteinkinaseULK2	Other	ULK		<ahref="http://www.uniprot.org/uniprot/Q8IYT8"target="_blank">Q8IYT8</a>
+VRK1	VRK1	VRK1	Serine/threonine-proteinkinaseVRK1	CK1	VRK		<ahref="http://www.uniprot.org/uniprot/Q99986"target="_blank">Q99986</a>
+VRK2	VRK2	VRK2	Serine/threonine-proteinkinaseVRK2	CK1	VRK		<ahref="http://www.uniprot.org/uniprot/Q86Y07"target="_blank">Q86Y07</a>
+Wee1	Wee1	WEE1	Wee1-likeproteinkinase	Other	WEE		<ahref="http://www.uniprot.org/uniprot/P30291"target="_blank">P30291</a>
+YES	YES	YES1	Tyrosine-proteinkinaseYes	TK	Src		<ahref="http://www.uniprot.org/uniprot/P07947"target="_blank">P07947</a>
+YSK1	YSK1	STK25	Serine/threonine-proteinkinase25	STE	STE20	YSK	<ahref="http://www.uniprot.org/uniprot/O00506"target="_blank">O00506</a>
+ZAP70	ZAP70	ZAP70	Tyrosine-proteinkinaseZAP-70	TK	Syk		<ahref="http://www.uniprot.org/uniprot/P43403"target="_blank">P43403</a>
+LZK	LZK	MAP3K13	Mitogen-activatedproteinkinasekinasekinase13	TKL	MLK	LZK	<ahref="http://www.uniprot.org/uniprot/O43283"target="_blank">O43283</a>
+DDR1	DDR1	DDR1	Epithelialdiscoidindomain-containingreceptor1	TK	DDR		<ahref="http://www.uniprot.org/uniprot/Q08345"target="_blank">Q08345</a>
+ADCK1	ADCK1	ADCK1	UncharacterizedaarFdomain-containingproteinkinase1	Atypical	ABC1	ABC1-B	<ahref="http://www.uniprot.org/uniprot/Q86TW2"target="_blank">Q86TW2</a>
+KDR	KDR	KDR	Vascularendothelialgrowthfactorreceptor2	TK	VEGFR		<ahref="http://www.uniprot.org/uniprot/P35968"target="_blank">P35968</a>
+ALK7	ALK7	ACVR1C	Activinreceptortype-1C	TKL	STKR	STKR1	<ahref="http://www.uniprot.org/uniprot/Q8NER5"target="_blank">Q8NER5</a>
+AurB	AurB	AURKB	AurorakinaseB	Other	Aur		<ahref="http://www.uniprot.org/uniprot/Q96GD4"target="_blank">Q96GD4</a>
+AurA	AurA	AURKA	AurorakinaseA	Other	Aur		<ahref="http://www.uniprot.org/uniprot/O14965"target="_blank">O14965</a>
+Erk5	Erk5	MAPK7	Mitogen-activatedproteinkinase7	CMGC	MAPK	ERK5	<ahref="http://www.uniprot.org/uniprot/Q13164"target="_blank">Q13164</a>
+BUB1	BUB1	BUB1	Mitoticcheckpointserine/threonine-proteinkinaseBUB1	Other	BUB		<ahref="http://www.uniprot.org/uniprot/O43683"target="_blank">O43683</a>
+DDR2	DDR2	DDR2	Discoidindomain-containingreceptor2	TK	DDR		<ahref="http://www.uniprot.org/uniprot/Q16832"target="_blank">Q16832</a>
+CCK4	CCK4	PTK7	Inactivetyrosine-proteinkinase7	TK	CCK4		<ahref="http://www.uniprot.org/uniprot/Q13308"target="_blank">Q13308</a>
+LIMK1	LIMK1	LIMK1	LIMdomainkinase1	TKL	LISK	LIMK	<ahref="http://www.uniprot.org/uniprot/P53667"target="_blank">P53667</a>
+LMR1	LMR1	AATK	Serine/threonine-proteinkinaseLMTK1	TK	Lmr		<ahref="http://www.uniprot.org/uniprot/Q6ZMQ8"target="_blank">Q6ZMQ8</a>
+LMR2	LMR2	LMTK2	Serine/threonine-proteinkinaseLMTK2	TK	Lmr		<ahref="http://www.uniprot.org/uniprot/Q8IWU2"target="_blank">Q8IWU2</a>
+LMR3	LMR3	LMTK3	Serine/threonine-proteinkinaseLMTK3	TK	Lmr		<ahref="http://www.uniprot.org/uniprot/Q96Q04"target="_blank">Q96Q04</a>
+EphA7	EphA7	EPHA7	Ephrintype-Areceptor7	TK	Eph		<ahref="http://www.uniprot.org/uniprot/Q15375"target="_blank">Q15375</a>
+BMX	BMX	BMX	Cytoplasmictyrosine-proteinkinaseBMX	TK	Tec		<ahref="http://www.uniprot.org/uniprot/P51813"target="_blank">P51813</a>
+CTK	CTK	MATK	Megakaryocyte-associatedtyrosine-proteinkinase	TK	Csk		<ahref="http://www.uniprot.org/uniprot/P42679"target="_blank">P42679</a>
+FRK	FRK	FRK	Tyrosine-proteinkinaseFRK	TK	Src		<ahref="http://www.uniprot.org/uniprot/P42685"target="_blank">P42685</a>
+NEK6	NEK6	NEK6	Serine/threonine-proteinkinaseNek6	Other	NEK		<ahref="http://www.uniprot.org/uniprot/Q9HC98"target="_blank">Q9HC98</a>
+NEK7	NEK7	NEK7	Serine/threonine-proteinkinaseNek7	Other	NEK		<ahref="http://www.uniprot.org/uniprot/Q8TDX7"target="_blank">Q8TDX7</a>
+AAK1	AAK1	AAK1	AP2-associatedproteinkinase1	Other	NAK		<ahref="http://www.uniprot.org/uniprot/Q2M2I8"target="_blank">Q2M2I8</a>
+ChaK1	ChaK1	TRPM7	TransientreceptorpotentialcationchannelsubfamilyMmember7	Atypical	Alpha	ChaK	<ahref="http://www.uniprot.org/uniprot/Q96QT4"target="_blank">Q96QT4</a>
+PYK2	PYK2	PTK2B	Protein-tyrosinekinase2-beta	TK	FAK		<ahref="http://www.uniprot.org/uniprot/Q14289"target="_blank">Q14289</a>
+SRM	SRM	SRMS	Tyrosine-proteinkinaseSrms	TK	Src		<ahref="http://www.uniprot.org/uniprot/Q9H3Y6"target="_blank">Q9H3Y6</a>
+LOK	LOK	STK10	Serine/threonine-proteinkinase10	STE	STE20	SLK	<ahref="http://www.uniprot.org/uniprot/O94804"target="_blank">O94804</a>
+KHS2	KHS2	MAP4K3	Mitogen-activatedproteinkinasekinasekinasekinase3	STE	STE20	KHS	<ahref="http://www.uniprot.org/uniprot/Q8IVH8"target="_blank">Q8IVH8</a>
+OSR1	OSR1	OXSR1	Serine/threonine-proteinkinaseOSR1	STE	STE20	FRAY	<ahref="http://www.uniprot.org/uniprot/O95747"target="_blank">O95747</a>
+PAK6	PAK6	PAK6	Serine/threonine-proteinkinasePAK6	STE	STE20	PAKB	<ahref="http://www.uniprot.org/uniprot/Q9NQU5"target="_blank">Q9NQU5</a>
+PAK4	PAK4	PAK4	Serine/threonine-proteinkinasePAK4	STE	STE20	PAKB	<ahref="http://www.uniprot.org/uniprot/O96013"target="_blank">O96013</a>
+MST4	MST4	STK26	Serine/threonine-proteinkinaseMST4	STE	STE20	YSK	<ahref="http://www.uniprot.org/uniprot/Q9P289"target="_blank">Q9P289</a>
+STLK3	STLK3	STK39	STE20/SPS1-relatedproline-alanine-richproteinkinase	STE	STE20	FRAY	<ahref="http://www.uniprot.org/uniprot/Q9UEW8"target="_blank">Q9UEW8</a>
+STLK5	STLK5	STRADA	STE20-relatedkinaseadapterproteinalpha	STE	STE20	STLK	<ahref="http://www.uniprot.org/uniprot/Q7RTN6"target="_blank">Q7RTN6</a>
+STLK6	STLK6	STRADB	STE20-relatedkinaseadapterproteinbeta	STE	STE20	STLK	<ahref="http://www.uniprot.org/uniprot/Q9C0K7"target="_blank">Q9C0K7</a>
+TAO3	TAO3	TAOK3	Serine/threonine-proteinkinaseTAO3	STE	STE20	TAO	<ahref="http://www.uniprot.org/uniprot/Q9H2K8"target="_blank">Q9H2K8</a>
+TAO1	TAO1	TAOK1	Serine/threonine-proteinkinaseTAO1	STE	STE20	TAO	<ahref="http://www.uniprot.org/uniprot/Q7L7X3"target="_blank">Q7L7X3</a>
+HGK	ZC1/HGK	MAP4K4	Mitogen-activatedproteinkinasekinasekinasekinase4	STE	STE20	MSN	<ahref="http://www.uniprot.org/uniprot/O95819"target="_blank">O95819</a>
+TNIK	ZC2/TNIK	TNIK	TRAF2andNCK-interactingproteinkinase	STE	STE20	MSN	<ahref="http://www.uniprot.org/uniprot/Q9UKE5"target="_blank">Q9UKE5</a>
+MINK	ZC3/MINK	MINK1	Misshapen-likekinase1	STE	STE20	MSN	<ahref="http://www.uniprot.org/uniprot/Q8N4C8"target="_blank">Q8N4C8</a>
+NRK	ZC4/NRK	NRK	Nik-relatedproteinkinase	STE	STE20	MSN	<ahref="http://www.uniprot.org/uniprot/Q7Z2Y5"target="_blank">Q7Z2Y5</a>
+LATS1	LATS1	LATS1	Serine/threonine-proteinkinaseLATS1	AGC	NDR		<ahref="http://www.uniprot.org/uniprot/O95835"target="_blank">O95835</a>
+LATS2	LATS2	LATS2	Serine/threonine-proteinkinaseLATS2	AGC	NDR		<ahref="http://www.uniprot.org/uniprot/Q9NRM7"target="_blank">Q9NRM7</a>
+CDK11	CDK11	CDK19	Cyclin-dependentkinase19	CMGC	CDK	CDK8	<ahref="http://www.uniprot.org/uniprot/Q9BWU1"target="_blank">Q9BWU1</a>
+NIM1	NIM1	NIM1K	Serine/threonine-proteinkinaseNIM1	CAMK	CAMKL	NIM1	<ahref="http://www.uniprot.org/uniprot/Q8IY84"target="_blank">Q8IY84</a>
+ULK3	ULK3	ULK3	Serine/threonine-proteinkinaseULK3	Other	ULK		<ahref="http://www.uniprot.org/uniprot/Q6PHR2"target="_blank">Q6PHR2</a>
+CLIK1L	CLIK1L	PDIK1L	Serine/threonine-proteinkinasePDIK1L	Other	NKF4		<ahref="http://www.uniprot.org/uniprot/Q8N165"target="_blank">Q8N165</a>
+TTBK2	TTBK2	TTBK2	Tau-tubulinkinase2	CK1	TTBK		<ahref="http://www.uniprot.org/uniprot/Q6IQ55"target="_blank">Q6IQ55</a>
+SCYL1	SCYL1	SCYL1	N-terminalkinase-likeprotein	Other	SCY1		<ahref="http://www.uniprot.org/uniprot/Q96KG9"target="_blank">Q96KG9</a>
+MASTL	MASTL	MASTL	Serine/threonine-proteinkinasegreatwall	AGC	MAST		<ahref="http://www.uniprot.org/uniprot/Q96GX5"target="_blank">Q96GX5</a>
+PINK1	PINK1	PINK1	Serine/threonine-proteinkinasePINK1	Other	NKF2		<ahref="http://www.uniprot.org/uniprot/Q9BXM7"target="_blank">Q9BXM7</a>
+ULK4	ULK4	ULK4	Serine/threonine-proteinkinaseULK4	Other	ULK		<ahref="http://www.uniprot.org/uniprot/Q96C45"target="_blank">Q96C45</a>
+MLKL	MLKL	MLKL	Mixedlineagekinasedomain-likeprotein	TKL	TKL-Unique		<ahref="http://www.uniprot.org/uniprot/Q8NB16"target="_blank">Q8NB16</a>
+DCAMKL3	DCAMKL3	DCLK3	Serine/threonine-proteinkinaseDCLK3	CAMK	DCAMKL		<ahref="http://www.uniprot.org/uniprot/Q9C098"target="_blank">Q9C098</a>
+SgK493	SgK493	PKDCC	Proteinkinasedomain-containingprotein	Other	SgK493		<ahref="http://www.uniprot.org/uniprot/Q504Y2"target="_blank">Q504Y2</a>
+PFTAIRE2	PFTAIRE2	CDK15	Cyclin-dependentkinase15	CMGC	CDK	PFTAIRE	<ahref="http://www.uniprot.org/uniprot/Q96Q40"target="_blank">Q96Q40</a>
+STK33	STK33	STK33	Serine/threonine-proteinkinase33	CAMK	STK33		<ahref="http://www.uniprot.org/uniprot/Q9BYT3"target="_blank">Q9BYT3</a>
+PRPK	PRPK	TP53RK	TP53-regulatingkinase	Other	Bud32		<ahref="http://www.uniprot.org/uniprot/Q96S44"target="_blank">Q96S44</a>
+Erk7	Erk7	MAPK15	Mitogen-activatedproteinkinase15	CMGC	MAPK	ERK7	<ahref="http://www.uniprot.org/uniprot/Q8TD08"target="_blank">Q8TD08</a>
+CDKL4	CDKL4	CDKL4	Cyclin-dependentkinase-like4	CMGC	CDKL		<ahref="http://www.uniprot.org/uniprot/Q5MAI5"target="_blank">Q5MAI5</a>
+SCYL3	SCYL3	SCYL3	Protein-associatingwiththecarboxyl-terminaldomainofezrin	Other	SCY1		<ahref="http://www.uniprot.org/uniprot/Q8IZE3"target="_blank">Q8IZE3</a>
+YANK3	YANK3	STK32C	Serine/threonine-proteinkinase32C	AGC	YANK		<ahref="http://www.uniprot.org/uniprot/Q86UX6"target="_blank">Q86UX6</a>
+NEK9	NEK9	NEK9	Serine/threonine-proteinkinaseNek9	Other	NEK		<ahref="http://www.uniprot.org/uniprot/Q8TD19"target="_blank">Q8TD19</a>
+TSSK3	TSSK3	TSSK3	Testis-specificserine/threonine-proteinkinase3	CAMK	TSSK		<ahref="http://www.uniprot.org/uniprot/Q96PN8"target="_blank">Q96PN8</a>
+NuaK2	NuaK2	NUAK2	NUAKfamilySNF1-likekinase2	CAMK	CAMKL	NuaK	<ahref="http://www.uniprot.org/uniprot/Q9H093"target="_blank">Q9H093</a>
+RSKL2	RSKL2	RPS6KL1	RibosomalproteinS6kinase-like1	AGC	RSKL		<ahref="http://www.uniprot.org/uniprot/Q9Y6S9"target="_blank">Q9Y6S9</a>
+TSSK2	TSSK2	TSSK2	Testis-specificserine/threonine-proteinkinase2	CAMK	TSSK		<ahref="http://www.uniprot.org/uniprot/Q96PF2"target="_blank">Q96PF2</a>
+SCYL2	SCYL2	SCYL2	SCY1-likeprotein2	Other	SCY1		<ahref="http://www.uniprot.org/uniprot/Q6P3W7"target="_blank">Q6P3W7</a>
+NEK8	NEK8	NEK8	Serine/threonine-proteinkinaseNek8	Other	NEK		<ahref="http://www.uniprot.org/uniprot/Q86SG6"target="_blank">Q86SG6</a>
+BARK2	BARK2	ADRBK2	Beta-adrenergicreceptorkinase2	AGC	GRK	BARK	<ahref="http://www.uniprot.org/uniprot/P35626"target="_blank">P35626</a>
+NRBP1	NRBP1	NRBP1	Nuclearreceptor-bindingprotein	Other	NRBP		<ahref="http://www.uniprot.org/uniprot/Q9UHY1"target="_blank">Q9UHY1</a>
+PKD2	PKD2	PRKD2	Serine/threonine-proteinkinaseD2	CAMK	PKD		<ahref="http://www.uniprot.org/uniprot/Q9BZL6"target="_blank">Q9BZL6</a>
+YANK2	YANK2	STK32B	Serine/threonine-proteinkinase32B	AGC	YANK		<ahref="http://www.uniprot.org/uniprot/Q9NY57"target="_blank">Q9NY57</a>
+CaMKK2	CaMKK2	CAMKK2	Calcium/calmodulin-dependentproteinkinasekinase2	Other	CAMKK	CAMKK-Meta	<ahref="http://www.uniprot.org/uniprot/Q96RR4"target="_blank">Q96RR4</a>
+CCRK	CCRK	CDK20	Cyclin-dependentkinase20	CMGC	CDK		<ahref="http://www.uniprot.org/uniprot/Q8IZL9"target="_blank">Q8IZL9</a>
+CLK4	CLK4	CLK4	DualspecificityproteinkinaseCLK4	CMGC	CLK		<ahref="http://www.uniprot.org/uniprot/Q9HAZ1"target="_blank">Q9HAZ1</a>
+CRK7	CRK7	CDK12	Cyclin-dependentkinase12	CMGC	CDK	CRK7	<ahref="http://www.uniprot.org/uniprot/Q9NYV4"target="_blank">Q9NYV4</a>
+DRAK1	DRAK1	STK17A	Serine/threonine-proteinkinase17A	CAMK	DAPK		<ahref="http://www.uniprot.org/uniprot/Q9UEE5"target="_blank">Q9UEE5</a>
+DRAK2	DRAK2	STK17B	Serine/threonine-proteinkinase17B	CAMK	DAPK		<ahref="http://www.uniprot.org/uniprot/O94768"target="_blank">O94768</a>
+DYRK3	DYRK3	DYRK3	Dualspecificitytyrosine-phosphorylation-regulatedkinase3	CMGC	DYRK	DYRK2	<ahref="http://www.uniprot.org/uniprot/O43781"target="_blank">O43781</a>
+PKD3	PKD3	PRKD3	Serine/threonine-proteinkinaseD3	CAMK	PKD		<ahref="http://www.uniprot.org/uniprot/O94806"target="_blank">O94806</a>
+GCN2	GCN2	EIF2AK4	Eukaryotictranslationinitiationfactor2-alphakinase4	Other	PEK	GCN2	<ahref="http://www.uniprot.org/uniprot/Q9P2K8"target="_blank">Q9P2K8</a>
+SgK494	SgK494		Uncharacterizedserine/threonine-proteinkinaseSgK494	AGC	RSKR		<ahref="http://www.uniprot.org/uniprot/Q96LW2"target="_blank">Q96LW2</a>
+SgK495	SgK495	STK40	Serine/threonine-proteinkinase40	CAMK	SgK495		<ahref="http://www.uniprot.org/uniprot/Q8N2I9"target="_blank">Q8N2I9</a>
+CLIK1	CLIK1	STK35	Serine/threonine-proteinkinase35	Other	NKF4		<ahref="http://www.uniprot.org/uniprot/Q8TDR2"target="_blank">Q8TDR2</a>
+HH498	HH498	TNNI3K	Serine/threonine-proteinkinaseTNNI3K	TKL	MLK	HH498	<ahref="http://www.uniprot.org/uniprot/Q59H18"target="_blank">Q59H18</a>
+HIPK2	HIPK2	HIPK2	Homeodomain-interactingproteinkinase2	CMGC	DYRK	HIPK	<ahref="http://www.uniprot.org/uniprot/Q9H2X6"target="_blank">Q9H2X6</a>
+HRI	HRI	EIF2AK1	Eukaryotictranslationinitiationfactor2-alphakinase1	Other	PEK		<ahref="http://www.uniprot.org/uniprot/Q9BQI3"target="_blank">Q9BQI3</a>
+ICK	ICK	ICK	Serine/threonine-proteinkinaseICK	CMGC	RCK		<ahref="http://www.uniprot.org/uniprot/Q9UPZ9"target="_blank">Q9UPZ9</a>
+IRE2	IRE2	ERN2	Serine/threonine-proteinkinase/endoribonucleaseIRE2	Other	IRE		<ahref="http://www.uniprot.org/uniprot/Q76MJ5"target="_blank">Q76MJ5</a>
+PASK	PASK	PASK	PASdomain-containingserine/threonine-proteinkinase	CAMK	CAMKL	PASK	<ahref="http://www.uniprot.org/uniprot/Q96RG2"target="_blank">Q96RG2</a>
+NDR2	NDR2	STK38L	Serine/threonine-proteinkinase38-like	AGC	NDR		<ahref="http://www.uniprot.org/uniprot/Q9Y2H1"target="_blank">Q9Y2H1</a>
+QSK	QSK	SIK3	Serine/threonine-proteinkinaseSIK3	CAMK	CAMKL	QIK	<ahref="http://www.uniprot.org/uniprot/Q9Y2K2"target="_blank">Q9Y2K2</a>
+HUNK	HUNK	HUNK	Hormonallyup-regulatedneutumor-associatedkinase	CAMK	CAMKL	HUNK	<ahref="http://www.uniprot.org/uniprot/P57058"target="_blank">P57058</a>
+MAP3K6	MAP3K6	MAP3K6	Mitogen-activatedproteinkinasekinasekinase6	STE	STE11		<ahref="http://www.uniprot.org/uniprot/O95382"target="_blank">O95382</a>
+ZAK	ZAK		Mitogen-activatedproteinkinasekinasekinaseMLT	TKL	MLK	ZAK	<ahref="http://www.uniprot.org/uniprot/Q9NYL2"target="_blank">Q9NYL2</a>
+MOK	MOK	MOK	MAPK/MAK/MRKoverlappingkinase	CMGC	RCK		<ahref="http://www.uniprot.org/uniprot/Q9UQ07"target="_blank">Q9UQ07</a>
+MPSK1	MPSK1	STK16	Serine/threonine-proteinkinase16	Other	NAK		<ahref="http://www.uniprot.org/uniprot/O75716"target="_blank">O75716</a>
+MSSK1	MSSK1	SRPK3	SRSFproteinkinase3	CMGC	SRPK		<ahref="http://www.uniprot.org/uniprot/Q9UPE1"target="_blank">Q9UPE1</a>
+Wnk1	Wnk1	WNK1	Serine/threonine-proteinkinaseWNK1	Other	WNK		<ahref="http://www.uniprot.org/uniprot/Q9H4A3"target="_blank">Q9H4A3</a>
+CDKL3	CDKL3	CDKL3	Cyclin-dependentkinase-like3	CMGC	CDKL		<ahref="http://www.uniprot.org/uniprot/Q8IVW4"target="_blank">Q8IVW4</a>
+PAK5	PAK5	PAK7	Serine/threonine-proteinkinasePAK7	STE	STE20	PAKB	<ahref="http://www.uniprot.org/uniprot/Q9P286"target="_blank">Q9P286</a>
+PKN3	PKN3	PKN3	Serine/threonine-proteinkinaseN3	AGC	PKN		<ahref="http://www.uniprot.org/uniprot/Q6P5Z2"target="_blank">Q6P5Z2</a>
+QIK	QIK	SIK2	Serine/threonine-proteinkinaseSIK2	CAMK	CAMKL	QIK	<ahref="http://www.uniprot.org/uniprot/Q9H0K1"target="_blank">Q9H0K1</a>
+MARK4	MARK4	MARK4	MAP/microtubuleaffinity-regulatingkinase4	CAMK	CAMKL	MARK	<ahref="http://www.uniprot.org/uniprot/Q96L34"target="_blank">Q96L34</a>
+SgK496	SgK496	DSTYK	Dualserine/threonineandtyrosineproteinkinase	Other	Dusty		<ahref="http://www.uniprot.org/uniprot/Q6XUX3"target="_blank">Q6XUX3</a>
+RSKL1	RSKL1	RPS6KC1	RibosomalproteinS6kinasedelta-1	AGC	RSKL		<ahref="http://www.uniprot.org/uniprot/Q96S38"target="_blank">Q96S38</a>
+RSK4	RSK4	RPS6KA6	RibosomalproteinS6kinasealpha-6	AGC	RSK	RSKp90	<ahref="http://www.uniprot.org/uniprot/Q9UK32"target="_blank">Q9UK32</a>
+NRBP2	NRBP2	NRBP2	Nuclearreceptor-bindingprotein2	Other	NRBP		<ahref="http://www.uniprot.org/uniprot/Q9NSY0"target="_blank">Q9NSY0</a>
+SgK071	SgK071	STKLD1	Proteinkinase-likeproteinSgK071	Other	SgK071		<ahref="http://www.uniprot.org/uniprot/Q8NE28"target="_blank">Q8NE28</a>
+SGK2	SGK2	SGK2	Serine/threonine-proteinkinaseSgk2	AGC	SGK		<ahref="http://www.uniprot.org/uniprot/Q9HBY8"target="_blank">Q9HBY8</a>
+SSTK	SSTK	TSSK6	Testis-specificserine/threonine-proteinkinase6	CAMK	TSSK		<ahref="http://www.uniprot.org/uniprot/Q9BXA6"target="_blank">Q9BXA6</a>
+SGK3	SGK3	SGK3	Serine/threonine-proteinkinaseSgk3	AGC	SGK		<ahref="http://www.uniprot.org/uniprot/Q96BR1"target="_blank">Q96BR1</a>
+TTBK1	TTBK1	TTBK1	Tau-tubulinkinase1	CK1	TTBK		<ahref="http://www.uniprot.org/uniprot/Q5TCY1"target="_blank">Q5TCY1</a>
+DCAMKL2	DCAMKL2	DCLK2	Serine/threonine-proteinkinaseDCLK2	CAMK	DCAMKL		<ahref="http://www.uniprot.org/uniprot/Q8N568"target="_blank">Q8N568</a>
+Slob	Slob	PXK	PXdomain-containingproteinkinase-likeprotein	Other	Slob		<ahref="http://www.uniprot.org/uniprot/Q7Z7A4"target="_blank">Q7Z7A4</a>
+PBK	PBK	PBK	Lymphokine-activatedkillerT-cell-originatedproteinkinase	Other	TOPK		<ahref="http://www.uniprot.org/uniprot/Q96KB5"target="_blank">Q96KB5</a>
+SuRTK106	SuRTK106	STYK1	Tyrosine-proteinkinaseSTYK1	TK	TK-Unique		<ahref="http://www.uniprot.org/uniprot/Q6J9G0"target="_blank">Q6J9G0</a>
+TBK1	TBK1	TBK1	Serine/threonine-proteinkinaseTBK1	Other	IKK		<ahref="http://www.uniprot.org/uniprot/Q9UHD2"target="_blank">Q9UHD2</a>
+TESK2	TESK2	TESK2	Dual-specificitytestis-specificproteinkinase2	TKL	LISK	TESK	<ahref="http://www.uniprot.org/uniprot/Q96S53"target="_blank">Q96S53</a>
+Trad	Trad	KALRN	HCG2039851	CAMK	Trio		<ahref="http://www.uniprot.org/uniprot/O60229"target="_blank">O60229</a>
+TSSK4	TSSK4	TSSK4	Testis-specificserine/threonine-proteinkinase4	CAMK	TSSK		<ahref="http://www.uniprot.org/uniprot/Q6SA08"target="_blank">Q6SA08</a>
+VRK3	VRK3	VRK3	Inactiveserine/threonine-proteinkinaseVRK3	CK1	VRK		<ahref="http://www.uniprot.org/uniprot/Q8IV63"target="_blank">Q8IV63</a>
+caMLCK	caMLCK	MYLK3	Myosinlightchainkinase3	CAMK	MLCK		<ahref="http://www.uniprot.org/uniprot/Q32MK0"target="_blank">Q32MK0</a>
+SPEG	SPEG	SPEG	Striatedmusclepreferentiallyexpressedproteinkinase	CAMK	Trio		<ahref="http://www.uniprot.org/uniprot/Q15772"target="_blank">Q15772</a>
+CK1a2	CK1a2	CSNK1A1L	CaseinkinaseIisoformalpha-like	CK1	CK1		<ahref="http://www.uniprot.org/uniprot/Q8N752"target="_blank">Q8N752</a>
+ANKRD3	ANKRD3	RIPK4	Receptor-interactingserine/threonine-proteinkinase4	TKL	RIPK		<ahref="http://www.uniprot.org/uniprot/P57078"target="_blank">P57078</a>
+NEK5	NEK5	NEK5	Serine/threonine-proteinkinaseNek5	Other	NEK		<ahref="http://www.uniprot.org/uniprot/Q6P3R8"target="_blank">Q6P3R8</a>
+CaMK1d	CaMK1d	CAMK1D	Calcium/calmodulin-dependentproteinkinasetype1D	CAMK	CAMK1		<ahref="http://www.uniprot.org/uniprot/Q8IU85"target="_blank">Q8IU85</a>
+MAP3K19	MAP3K8	MAP3K19	Mitogen-activatedproteinkinasekinasekinase19	STE	STE11		<ahref="http://www.uniprot.org/uniprot/Q56UN5"target="_blank">Q56UN5</a>
+NEK11	NEK11	NEK11	Serine/threonine-proteinkinaseNek11	Other	NEK		<ahref="http://www.uniprot.org/uniprot/Q8NG66"target="_blank">Q8NG66</a>
+GPRK7	GPRK7	GRK7	Gprotein-coupledreceptorkinase7	AGC	GRK	GRK	<ahref="http://www.uniprot.org/uniprot/Q8WTQ7"target="_blank">Q8WTQ7</a>
+SgK069	SgK069	SBK2	Serine/threonine-proteinkinaseSBK2	Other	NKF1		<ahref="http://www.uniprot.org/uniprot/P0C263"target="_blank">P0C263</a>
+HIPK4	HIPK4	HIPK4	Homeodomain-interactingproteinkinase4	CMGC	DYRK	HIPK	<ahref="http://www.uniprot.org/uniprot/Q8NE63"target="_blank">Q8NE63</a>
+MYO3B	MYO3B	MYO3B	Myosin-IIIb	STE	STE20	NinaC	<ahref="http://www.uniprot.org/uniprot/Q8WXR4"target="_blank">Q8WXR4</a>
+Wnk4	Wnk4	WNK4	Serine/threonine-proteinkinaseWNK4	Other	WNK		<ahref="http://www.uniprot.org/uniprot/Q96J92"target="_blank">Q96J92</a>
+SgK110	SgK110	SBK3	Putativeuncharacterizedserine/threonine-proteinkinaseSgK110	Other	NKF1		<ahref="http://www.uniprot.org/uniprot/P0C264"target="_blank">P0C264</a>
+BRSK1	BRSK1	BRSK1	Serine/threonine-proteinkinaseBRSK1	CAMK	CAMKL	BRSK	<ahref="http://www.uniprot.org/uniprot/Q8TDC3"target="_blank">Q8TDC3</a>
+Obscn	Obscn	OBSCN	Obscurin	CAMK	Trio		<ahref="http://www.uniprot.org/uniprot/Q5VST9"target="_blank">Q5VST9</a>
+PSKH2	PSKH2	PSKH2	Serine/threonine-proteinkinaseH2	CAMK	PSK		<ahref="http://www.uniprot.org/uniprot/Q96QS6"target="_blank">Q96QS6</a>
+SIK	SIK	SIK1	Serine/threonine-proteinkinaseSIK1	CAMK	CAMKL	QIK	<ahref="http://www.uniprot.org/uniprot/P57059"target="_blank">P57059</a>
+KSR2	KSR2	KSR2	KinasesuppressorofRas2	TKL	RAF		<ahref="http://www.uniprot.org/uniprot/Q6VAB6"target="_blank">Q6VAB6</a>
+RIOK3	RIOK3	RIOK3	Serine/threonine-proteinkinaseRIO3	Atypical	RIO	RIO3	<ahref="http://www.uniprot.org/uniprot/O14730"target="_blank">O14730</a>
+ADCK3	ADCK3	ADCK3	Chaperoneactivityofbc1complex-like	Atypical	ABC1	ABC1-A	<ahref="http://www.uniprot.org/uniprot/Q8NI60"target="_blank">Q8NI60</a>
+RIOK1	RIOK1	RIOK1	Serine/threonine-proteinkinaseRIO1	Atypical	RIO	RIO1	<ahref="http://www.uniprot.org/uniprot/Q9BRS2"target="_blank">Q9BRS2</a>
+YANK1	YANK1	STK32A	Serine/threonine-proteinkinase32A	AGC	YANK		<ahref="http://www.uniprot.org/uniprot/Q8WU08"target="_blank">Q8WU08</a>
+SNRK	SNRK	SNRK	SNF-relatedserine/threonine-proteinkinase	CAMK	CAMKL	SNRK	<ahref="http://www.uniprot.org/uniprot/Q9NRH2"target="_blank">Q9NRH2</a>
+EphA10	EphA10	EPHA10	Ephrintype-Areceptor10	TK	Eph		<ahref="http://www.uniprot.org/uniprot/Q5JZY3"target="_blank">Q5JZY3</a>
+SgK196	SgK196	POMK	Proteinkinase-likeproteinSgK196	Other	Other-Unique		<ahref="http://www.uniprot.org/uniprot/Q9H5K3"target="_blank">Q9H5K3</a>
+MYO3A	MYO3A	MYO3A	Myosin-IIIa	STE	STE20	NinaC	<ahref="http://www.uniprot.org/uniprot/Q8NEV4"target="_blank">Q8NEV4</a>
+Wnk3	Wnk3	WNK3	Serine/threonine-proteinkinaseWNK3	Other	WNK		<ahref="http://www.uniprot.org/uniprot/Q9BYP7"target="_blank">Q9BYP7</a>
+SgK223	SgK223		Tyrosine-proteinkinaseSgK223	Other	NKF3		<ahref="http://www.uniprot.org/uniprot/Q86YV5"target="_blank">Q86YV5</a>
+NEK10	NEK10	NEK10	Serine/threonine-proteinkinaseNek10	Other	NEK		<ahref="http://www.uniprot.org/uniprot/Q6ZWH5"target="_blank">Q6ZWH5</a>
+EphA6	EphA6	EPHA6	Ephrintype-Areceptor6	TK	Eph		<ahref="http://www.uniprot.org/uniprot/Q9UF33"target="_blank">Q9UF33</a>
+CK1g1	CK1g1	CSNK1G1	CaseinkinaseIisoformgamma-1	CK1	CK1		<ahref="http://www.uniprot.org/uniprot/Q9HCP0"target="_blank">Q9HCP0</a>
+SgK269	SgK269	PEAK1	Pseudopodium-enrichedatypicalkinase1	Other	NKF3		<ahref="http://www.uniprot.org/uniprot/Q9H792"target="_blank">Q9H792</a>
+SBK	SBK	SBK1	Serine/threonine-proteinkinaseSBK1	Other	NKF1		<ahref="http://www.uniprot.org/uniprot/Q52WX2"target="_blank">Q52WX2</a>
+SgK396	SgK396	STK31	Serine/threonine-proteinkinase31	Other	Other-Unique		<ahref="http://www.uniprot.org/uniprot/Q9BXU1"target="_blank">Q9BXU1</a>
+SgK288	SgK288	ANKK1	Ankyrinrepeatandproteinkinasedomain-containingprotein1	TKL	RIPK		<ahref="http://www.uniprot.org/uniprot/Q8NFD2"target="_blank">Q8NFD2</a>
+KIS	KIS	UHMK1	Serine/threonine-proteinkinaseKist	Other	KIS		<ahref="http://www.uniprot.org/uniprot/Q8TAS1"target="_blank">Q8TAS1</a>
+CaMK1b	CaMK1b	PNCK	Calcium/calmodulin-dependentproteinkinasetype1B	CAMK	CAMK1		<ahref="http://www.uniprot.org/uniprot/Q6P2M8"target="_blank">Q6P2M8</a>
+TBCK	TBCK	TBCK	TBCdomain-containingproteinkinase-likeprotein	Other	TBCK		<ahref="http://www.uniprot.org/uniprot/Q8TEA7"target="_blank">Q8TEA7</a>
+SMG1	SMG1	SMG1	Serine/threonine-proteinkinaseSMG1	Atypical	PIKK	SMG1	<ahref="http://www.uniprot.org/uniprot/Q96Q15"target="_blank">Q96Q15</a>
+skMLCK	skMLCK	MYLK2	Myosinlightchainkinase2	CAMK	MLCK		<ahref="http://www.uniprot.org/uniprot/Q9H1R3"target="_blank">Q9H1R3</a>
+MAP3K7	MAP3K7	MAP3K15	Mitogen-activatedproteinkinasekinasekinase15	STE	STE11		<ahref="http://www.uniprot.org/uniprot/Q6ZN16"target="_blank">Q6ZN16</a>
+LRRK2	LRRK2	LRRK2	Leucine-richrepeatserine/threonine-proteinkinase2	TKL	LRRK		<ahref="http://www.uniprot.org/uniprot/Q5S007"target="_blank">Q5S007</a>
+MLK4	MLK4		Mitogen-activatedproteinkinasekinasekinaseMLK4	TKL	MLK	MLK	<ahref="http://www.uniprot.org/uniprot/Q5TCX8"target="_blank">Q5TCX8</a>
+Haspin	Haspin	GSG2	Serine/threonine-proteinkinasehaspin	Other	Haspin		<ahref="http://www.uniprot.org/uniprot/Q8TF76"target="_blank">Q8TF76</a>
+Trb3	Trb3	TRIB3	Tribbleshomolog3	CAMK	Trbl		<ahref="http://www.uniprot.org/uniprot/Q96RU7"target="_blank">Q96RU7</a>
+CRIK	CRIK	CIT	CitronRho-interactingkinase	AGC	DMPK		<ahref="http://www.uniprot.org/uniprot/O14578"target="_blank">O14578</a>
+CaMKK1	CaMKK1	CAMKK1	Calcium/calmodulin-dependentproteinkinasekinase1	Other	CAMKK	CAMKK-Meta	<ahref="http://www.uniprot.org/uniprot/Q8N5S9"target="_blank">Q8N5S9</a>
+LRRK1	LRRK1	LRRK1	Leucine-richrepeatserine/threonine-proteinkinase1	TKL	LRRK		<ahref="http://www.uniprot.org/uniprot/Q38SD2"target="_blank">Q38SD2</a>
+SgK307	SgK307	TEX14	Inactiveserine/threonine-proteinkinaseTEX14	Other	NKF5		<ahref="http://www.uniprot.org/uniprot/Q8IWB6"target="_blank">Q8IWB6</a>
+MAST4	MAST4	MAST4	Microtubule-associatedserine/threonine-proteinkinase4	AGC	MAST		<ahref="http://www.uniprot.org/uniprot/O15021"target="_blank">O15021</a>
+CaMK2d	CaMK2d	CAMK2D	Calcium/calmodulin-dependentproteinkinasetypeIIsubunitdelta	CAMK	CAMK2		<ahref="http://www.uniprot.org/uniprot/Q13557"target="_blank">Q13557</a>
+BIKE	BIKE	BMP2K	BMP-2-inducibleproteinkinase	Other	NAK		<ahref="http://www.uniprot.org/uniprot/Q9NSY1"target="_blank">Q9NSY1</a>
+TSSK1	TSSK1	TSSK1B	Testis-specificserine/threonine-proteinkinase1	CAMK	TSSK		<ahref="http://www.uniprot.org/uniprot/Q9BXA7"target="_blank">Q9BXA7</a>
+SgK424	SgK424	TEX14	Inactiveserine/threonine-proteinkinaseTEX14	Other	NKF5		<ahref="http://www.uniprot.org/uniprot/Q8IWB6"target="_blank">Q8IWB6</a>
+SgK085	SgK085	MYLK4	Myosinlightchainkinasefamilymember4	CAMK	MLCK		<ahref="http://www.uniprot.org/uniprot/Q86YV6"target="_blank">Q86YV6</a>
+ADCK2	ADCK2	ADCK2	UncharacterizedaarFdomain-containingproteinkinase2	Atypical	ABC1	ABC1-C	<ahref="http://www.uniprot.org/uniprot/Q7Z695"target="_blank">Q7Z695</a>
+DAPK3	DAPK3	DAPK3	Death-associatedproteinkinase3	CAMK	DAPK		<ahref="http://www.uniprot.org/uniprot/O43293"target="_blank">O43293</a>
+Wee1B	Wee1B	WEE2	Wee1-likeproteinkinase2	Other	WEE		<ahref="http://www.uniprot.org/uniprot/P0C1S8"target="_blank">P0C1S8</a>
+RNAseL	RNAseL	RNASEL	2-5A-dependentribonuclease	Other	Other-Unique		<ahref="http://www.uniprot.org/uniprot/Q05823"target="_blank">Q05823</a>
+ChaK2	ChaK2	TRPM6	TransientreceptorpotentialcationchannelsubfamilyMmember6	Atypical	Alpha	ChaK	<ahref="http://www.uniprot.org/uniprot/Q9BX84"target="_blank">Q9BX84</a>
+RIOK2	RIOK2	RIOK2	Serine/threonine-proteinkinaseRIO2	Atypical	RIO	RIO2	<ahref="http://www.uniprot.org/uniprot/Q9BVS4"target="_blank">Q9BVS4</a>
+AlphaK2	AlphaK2	ALPK2	Alpha-proteinkinase2	Atypical	Alpha		<ahref="http://www.uniprot.org/uniprot/Q86TB3"target="_blank">Q86TB3</a>
+AlphaK3	AlphaK3	ALPK1	Alpha-proteinkinase1	Atypical	Alpha		<ahref="http://www.uniprot.org/uniprot/Q96QP1"target="_blank">Q96QP1</a>
+BRD2	BRD2	BRD2	Bromodomain-containingprotein2	Atypical	BRD		<ahref="http://www.uniprot.org/uniprot/P25440"target="_blank">P25440</a>
+BRD3	BRD3	BRD3	Bromodomain-containingprotein3	Atypical	BRD		<ahref="http://www.uniprot.org/uniprot/Q15059"target="_blank">Q15059</a>
+BRD4	BRD4	BRD4	BRD4protein	Atypical	BRD		<ahref="http://www.uniprot.org/uniprot/O60885"target="_blank">O60885</a>
+BRDT	BRDT	BRDT	Bromodomaintestis-specificprotein	Atypical	BRD		<ahref="http://www.uniprot.org/uniprot/Q58F21"target="_blank">Q58F21</a>
+AlphaK1	AlphaK1	ALPK3	Alpha-proteinkinase3	Atypical	Alpha		<ahref="http://www.uniprot.org/uniprot/Q96L96"target="_blank">Q96L96</a>
+ADCK5	ADCK5	ADCK5	UncharacterizedaarFdomain-containingproteinkinase5	Atypical	ABC1	ABC1-D	<ahref="http://www.uniprot.org/uniprot/Q3MIX3"target="_blank">Q3MIX3</a>
+TIF1a	TIF1a	TRIM24	Transcriptionintermediaryfactor1-alpha	Atypical	TIF1		<ahref="http://www.uniprot.org/uniprot/O15164"target="_blank">O15164</a>
+TIF1b	TIF1b	TRIM28	Transcriptionintermediaryfactor1-beta	Atypical	TIF1		<ahref="http://www.uniprot.org/uniprot/Q13263"target="_blank">Q13263</a>
+TIF1g	TIF1g	TRIM33	E3ubiquitin-proteinligaseTRIM33	Atypical	TIF1		<ahref="http://www.uniprot.org/uniprot/Q9UPN9"target="_blank">Q9UPN9</a>
+JAK1_b	Domain2_JAK1	JAK1	Tyrosine-proteinkinaseJAK1	TK	JakB		<ahref="http://www.uniprot.org/uniprot/P23458"target="_blank">P23458</a>
+JAK2_b	Domain2_JAK2	JAK2	Tyrosine-proteinkinaseJAK2	TK	JakB		<ahref="http://www.uniprot.org/uniprot/O60674"target="_blank">O60674</a>
+JAK3_b	Domain2_JAK3	JAK3	Tyrosine-proteinkinaseJAK3	TK	JakB		<ahref="http://www.uniprot.org/uniprot/P52333"target="_blank">P52333</a>
+MSK1_b	Domain2_MSK1	RPS6KA5	RibosomalproteinS6kinasealpha-5	CAMK	RSKb	MSKb	<ahref="http://www.uniprot.org/uniprot/O75582"target="_blank">O75582</a>
+MSK2_b	Domain2_MSK2	RPS6KA4	RibosomalproteinS6kinasealpha-4	CAMK	RSKb	MSKb	<ahref="http://www.uniprot.org/uniprot/O75676"target="_blank">O75676</a>
+RSK3_b	Domain2_RSK1	RPS6KA2	RibosomalproteinS6kinasealpha-2	CAMK	RSKb	RSKb	<ahref="http://www.uniprot.org/uniprot/Q15349"target="_blank">Q15349</a>
+RSK2_b	Domain2_RSK2	RPS6KA3	RibosomalproteinS6kinasealpha-3	CAMK	RSKb	RSKb	<ahref="http://www.uniprot.org/uniprot/P51812"target="_blank">P51812</a>
+RSK1_b	Domain2_RSK3	RPS6KA1	RibosomalproteinS6kinasealpha-1	CAMK	RSKb	RSKb	<ahref="http://www.uniprot.org/uniprot/Q15418"target="_blank">Q15418</a>
+TYK2_b	Domain2_TYK2	TYK2	Non-receptortyrosine-proteinkinaseTYK2	TK	JakB		<ahref="http://www.uniprot.org/uniprot/P29597"target="_blank">P29597</a>
+GCN2_b	Domain2_GCN2	EIF2AK4	Eukaryotictranslationinitiationfactor2-alphakinase4	STE	STE-Unique		<ahref="http://www.uniprot.org/uniprot/Q9P2K8"target="_blank">Q9P2K8</a>
+RSK4_b	Domain2_RSK4	RPS6KA6	RibosomalproteinS6kinasealpha-6	CAMK	RSKb	RSKb	<ahref="http://www.uniprot.org/uniprot/Q9UK32"target="_blank">Q9UK32</a>
+SPEG_b	Domain2_SPEG	SPEG	Striatedmusclepreferentiallyexpressedproteinkinase	CAMK	Trio		<ahref="http://www.uniprot.org/uniprot/Q15772"target="_blank">Q15772</a>
+Obscn_b	Domain2_Obscn	OBSCN	Obscurin	CAMK	Trio		<ahref="http://www.uniprot.org/uniprot/Q5VST9"target="_blank">Q5VST9</a>
+PAN3	PAN3	PAN3	PAB-dependentpoly(A)-specificribonucleasesubunit3	Other	PAN3		<ahref="http://www.uniprot.org/uniprot/Q58A45"target="_blank">Q58A45</a>
+FASTK	FASTK	FASTK	Fas-activatedserine/threoninekinase	Atypical	FAST		<ahref="http://www.uniprot.org/uniprot/Q14296"target="_blank">Q14296</a>
+G11	G11	STK19	Serine/threonine-proteinkinase19	Atypical	G11		<ahref="http://www.uniprot.org/uniprot/P49842"target="_blank">P49842</a>
+TAF1	TAF1	TAF1	TranscriptioninitiationfactorTFIIDsubunit1	Atypical	TAF1		<ahref="http://www.uniprot.org/uniprot/P21675"target="_blank">P21675</a>
+TAF1L	TAF1L	TAF1L	TranscriptioninitiationfactorTFIIDsubunit1-like	Atypical	TAF1		<ahref="http://www.uniprot.org/uniprot/Q8IZX4"target="_blank">Q8IZX4</a>
+BCR	BCR	BCR	Breakpointclusterregionprotein	Atypical	BCR		<ahref="http://www.uniprot.org/uniprot/P11274"target="_blank">P11274</a>
+ABR	ABR	ABR	Activebreakpointclusterregion-relatedprotein	Atypical	BCR		<ahref="http://www.uniprot.org/uniprot/Q12979"target="_blank">Q12979</a>
+TIF1D	TIF1D	TRIM66	Tripartitemotif-containingprotein66	Atypical	TIF1		<ahref="http://www.uniprot.org/uniprot/B5MCJ9"target="_blank">B5MCJ9</a>
+GTF2F1	GTF2F1		nan	Atypical	GTF2F1		<ahref="http://www.uniprot.org/uniprot/Q6IBK5"target="_blank">Q6IBK5</a>
+Col4A3BP	Col4A3BP	COL4A3BP	CollagentypeIValpha-3-bindingprotein	Atypical	Col4A3BP		<ahref="http://www.uniprot.org/uniprot/Q9Y5P4"target="_blank">Q9Y5P4</a>
+BLVRA	BLVRA	BLVRA	BiliverdinreductaseA	Atypical	BLVRA		<ahref="http://www.uniprot.org/uniprot/P53004"target="_blank">P53004</a>
+BAZ1A	BAZ1A	BAZ1A	Bromodomainadjacenttozincfingerdomainprotein1A	Atypical	BAZ		<ahref="http://www.uniprot.org/uniprot/Q9NRL2"target="_blank">Q9NRL2</a>
+BAZ1B	BAZ1B	BAZ1B	Tyrosine-proteinkinaseBAZ1B	Atypical	BAZ		<ahref="http://www.uniprot.org/uniprot/Q9UIG0"target="_blank">Q9UIG0</a>
