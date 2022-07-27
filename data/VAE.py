@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[105]:
+# In[9]:
 
 
 ## Develop VAE for kinase resistance predtictions
@@ -24,6 +24,7 @@ class kinase:
         self.acc = acc
         self.gene = gene
         self.fasta = ''
+        self.group = ''
         self.hmm = {}
         self.oneHotEncoding = {}
         self.domains = {}
@@ -34,9 +35,15 @@ class kinase:
         self.burr = {}
         self.iupred = {}
         self.mechismo = {}
+        self.allHomologs = {}
+        self.exclParalogs = {}
+        self.specParalogs = {}
+        self.orthologs = {}
+        self.bpso = {}
+        self.bpsh = {}
 
 
-# In[106]:
+# In[10]:
 
 
 exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
@@ -44,7 +51,8 @@ exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
              'Q8TF76', 'Q96L34', 'Q13308', 'Q9UK32', 'Q15772',
              'P51617', 'Q9Y3S1', 'Q9C098', 'Q6VAB6', 'P21127',
              'Q13557', 'Q6ZMQ8', 'Q6P0Q8', 'Q8IZE3', 'P51957',
-             'O60229', 'Q96RG2', 'Q5VST9', 'Q8WZ42', 'O75962']
+             'O60229', 'Q96RG2', 'Q5VST9', 'Q8WZ42', 'O75962',
+             'O95835']
 
 kinases = {}
 def loadFasta():
@@ -62,10 +70,16 @@ def loadFasta():
                 kinases[acc].fasta += line.replace('\n', '')
 
 loadFasta()
-print (kinases['P00533'].fasta)
+
+for line in open('kinases.tsv', 'r'):
+    acc = line.split('\t')[7].split('>')[1].split('<')[0]
+    if acc in kinases:
+        kinases[acc].group = line.split('\t')[4]
+
+print (kinases['P00533'].group)
 
 
-# In[107]:
+# In[11]:
 
 
 def read_hmmPkinase():
@@ -86,7 +100,7 @@ hmmPkinase = read_hmmPkinase()
 #print (hmmPkin[263]['C'])
 
 
-# In[108]:
+# In[12]:
 
 
 def hmmsearch():
@@ -130,7 +144,7 @@ def hmmsearch():
 hmmsearch()
 
 
-# In[109]:
+# In[13]:
 
 
 def createDicForDSSP(dic, position, mutation, value):
@@ -145,7 +159,7 @@ def dsspScores():
         for line in gzip.open(dir + acc[:4] + '/AF-' + acc + '-F1-model_v1.dssp-scores.gz', 'rt'):
             #print (acc, line.split())
             position = int(line.split()[0])
-            mutation = line.split()[10]
+            mutation = line.split()[2] + line.split()[0] + line.split()[10]
             ## Dihedral angles
             torsional = line.split()[18]
             #print (kinases[acc].dihedral)
@@ -166,7 +180,7 @@ dsspScores()
 print (kinases['Q9NYV4'].burr[3])
 
 
-# In[110]:
+# In[58]:
 
 
 def iupredScores():
@@ -178,15 +192,15 @@ def iupredScores():
         for line in gzip.open(dir + acc[:4] + '/AF-' + acc + '-F1-model_v1.iupred.gz', 'rt'):
             #print (acc, line.split())
             position = int(line.split()[0])
-            mutation = line.split()[3]
+            mutation = line.split()[2] + line.split()[0] + line.split()[3]
             ## IUPred
             iupred = float(line.split()[9])
             createDicForDSSP(kinases[acc].iupred, position, mutation, iupred)
-            
+
 iupredScores()
 
 
-# In[111]:
+# In[59]:
 
 
 def mechismoScores():
@@ -200,17 +214,42 @@ def mechismoScores():
                 #print (acc, line.split())
                 #sys.exit()
                 position = int(line.split()[1])
-                mutation = line.split()[3]
+                mutation = line.split()[2] + line.split()[1] + line.split()[3]
                 ## Mechismo score
                 mechismo = float(line.split()[6])
                 createDicForDSSP(kinases[acc].mechismo, position, mutation, mechismo)
-            
+
 mechismoScores()
 
 
-# In[113]:
+# In[24]:
 
-'''
+
+def homologyScores():
+    remove = []
+    path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
+    for num, acc in enumerate(kinases):
+        if ((num+1)%50 == 0):
+            print (num+1)
+        for dic, fileEnd in zip([kinases[acc].allHomologs, kinases[acc].orthologs, kinases[acc].exclParalogs, kinases[acc].specParalogs, kinases[acc].bpso, kinases[acc].bpsh],
+                        ['_all_homs.scores.txt.gz', '_orth.scores.txt.gz', '_excl_para.scores.txt.gz', '_spec_para.scores.txt.gz', '_bpso.scores.txt.gz', '_bpsh.scores.txt.gz']):
+            for line in gzip.open(path + acc[:4] + '/' + acc + fileEnd, 'rt'):
+                #print (acc, line.split())
+                #sys.exit()
+                value = line.split()[0].split('/')[1]
+                position = value[1:-1]
+                residue = value[-1]
+                #print (mutation, position)
+                ## Mechismo score
+                score = float(line.split()[4])
+                createDicForDSSP(dic, position, residue, score)
+
+homologyScores()
+
+
+# In[60]:
+
+
 #print (kinases['Q9NYV4'].mechismo)
 data = []
 for acc in kinases:
@@ -222,9 +261,56 @@ for acc in kinases:
 #print (data)
 df = pd.DataFrame(data = data, columns=['Length'])
 sns.histplot(data=df, x="Length")
-'''
 
-# In[114]:
+print (kinases['Q92772'].dihedral)
+
+
+# In[70]:
+
+
+for number, acc in enumerate(kinases):
+    mutations = {}
+    for dic, name in zip([kinases[acc].dihedral,
+                          kinases[acc].sec,
+                          kinases[acc].burr,
+                          kinases[acc].access,
+                          kinases[acc].iupred,
+                          kinases[acc].mechismo,
+                          kinases[acc].orthologs,
+                          kinases[acc].exclParalogs,
+                          kinases[acc].specParalogs,
+                          kinases[acc].allHomologs,
+                          kinases[acc].bpso,
+                          kinases[acc].bpsh],
+                        ['dihedral',
+                         'access',
+                         'burr',
+                         'sec',
+                         'iupred',
+                         'mechismo',
+                         'orthologs',
+                         'exclParalogs',
+                         'specParalogs',
+                         'allHomologs',
+                         'bpso',
+                         'bpsh']):
+        mutations[name] = {}
+        for position in dic:
+            if position not in mutations[name]:
+                mutations[name][position] = {}
+            mutations[name][position] = dic[position]
+    l = '#Position\tMutation\tCategory\tScore\n'
+    for name in mutations:
+        for position in mutations[name]:
+            for mutation in mutations[name][position]:
+                l += str(position) + '\t' + mutation + '\t' + name + '\t' + str(mutations[name][position][mutation]) + '\n'
+    #print (l)
+    gzip.open('/net/home.isilon/ds-russell/kinaseResistance/KA/robScores/'+acc+'.tsv.gz', 'wt').write(l)
+    print (number+1, 'of', len(kinases), 'done')
+
+
+sys.exit()
+# In[40]:
 
 
 def fetchPkinase(acc, domainNum):
@@ -252,6 +338,8 @@ def fetchStrucFeat(acc, domainNum):
     for dic, name in zip([kinases[acc].dihedral, kinases[acc].sec, kinases[acc].burr, kinases[acc].access, kinases[acc].iupred, kinases[acc].mechismo],
                         ['dihedral', 'access', 'burr', 'sec', 'iupred', 'mechismo']):
         row = []
+        print (kinases[acc].dihedral)
+        sys.exit()
         for hmmPosition in range(1,265):
             if hmmPosition in kinases[acc].domains[domainNum]:
                 SeqPosition = kinases[acc].domains[domainNum][hmmPosition]
@@ -260,7 +348,36 @@ def fetchStrucFeat(acc, domainNum):
                 try:
                     value = dic[SeqPosition][residue]
                 except:
-                    print (acc, SeqPosition, len(dic))
+                    print (acc, SeqPosition, len(dic), residue)
+                    sys.exit()
+            else:
+                value = 3
+            row.append(value)
+        #f = pd.DataFrame(data, columns=AA)
+        df[name] = row
+    #print (df)
+
+    return df
+
+def fetchSeqFeat(acc, domainNum):
+    data = []
+    df = pd.DataFrame()
+    for dic, name in zip([kinases[acc].orthologs, kinases[acc].exclParalogs, kinases[acc].specParalogs, kinases[acc].allHomologs, kinases[acc].bpso, kinases[acc].bpsh],
+                        ['orthologs', 'exclParalogs', 'specParalogs', 'allHomologs', 'bpso', 'bpsh']):
+        row = []
+        for hmmPosition in range(1,265):
+            if hmmPosition in kinases[acc].domains[domainNum]:
+                SeqPosition = kinases[acc].domains[domainNum][hmmPosition]
+                residue = kinases[acc].fasta[SeqPosition-1]
+                #print (SeqPosition)
+                try:
+                    #print (dic[str(SeqPosition)])
+                    for mutation in dic[str(SeqPosition)]:
+                        if mutation[-1] == residue:
+                            value = dic[str(SeqPosition)][mutation]
+                            break
+                except:
+                    print (acc, SeqPosition, len(dic), residue)
                     sys.exit()
             else:
                 value = 3
@@ -269,7 +386,8 @@ def fetchStrucFeat(acc, domainNum):
         df[name] = row
     #print (df)
     return df
-            
+
+
 def oneHotEncoding(acc, domainNum):
     '''
     A function to take acc and alignment cutoff values to return
@@ -305,7 +423,7 @@ def oneHotEncoding(acc, domainNum):
         #print (data.shape)
         trainData.append(data)
     '''
-            
+
     #trainData = np.array(trainData)
     #print (np.stack(trainData, axis=0).shape)
     return (data, AA)
@@ -313,28 +431,44 @@ def oneHotEncoding(acc, domainNum):
 df = pd.DataFrame()
 trainData = []
 alignmentCutoff = 200
+labels = []
 for acc in kinases:
     for domainNum in kinases[acc].domains:
         if len(kinases[acc].domains[domainNum]) >= alignmentCutoff:
-            
+            labels.append(kinases[acc].group)
+            '''
             data, AA = oneHotEncoding(acc, domainNum)
             df = pd.DataFrame(data, columns=AA)
             df['HMM'] = fetchPkinase(acc, domainNum)
-            df = pd.concat([df, fetchStrucFeat(acc, domainNum)], axis=1)
+            df = pd.concat([df, fetchSeqFeat(acc, domainNum), fetchStrucFeat(acc, domainNum)], axis=1)
             #print (acc, kinases[acc].hmm)
+            df['Group'] = kinases[acc].group
             trainData.append(df.to_numpy())
+            '''
         #break
 
+print (df)
 trainData = np.array(trainData)
+'''
 np.stack(trainData, axis=0)
 print (trainData.shape)
+np.save('trainData.npy', trainData)
 numSamples, numRows, numCols = trainData.shape
-
+'''
 #for data in trainData:
 #    print (data.shape)
 
 
-# In[122]:
+# In[31]:
+
+
+trainData = np.load('trainData.npy')
+trainData = trainData[:, :, :28]
+numSamples, numRows, numCols = trainData.shape
+print (trainData.shape)
+
+
+# In[55]:
 
 
 ## Create Sampling layer
@@ -349,13 +483,16 @@ class Sampling(layers.Layer):
         return z_mean + tf.exp(0.5 * z_log_var) * epsilon
 
 ## Built encoder
-latent_dim = 2
+latent_dim = 50
 
 encoder_inputs = keras.Input(shape=(numRows, numCols, 1))
 x = layers.Conv2D(20, 3, activation="relu", strides=2, padding="same")(encoder_inputs)
+x = layers.BatchNormalization()(x)
 x = layers.Conv2D(50, 3, activation="relu", strides=2, padding="same")(x)
+x = layers.BatchNormalization()(x)
 x = layers.Flatten()(x)
 x = layers.Dense(20, activation="relu")(x)
+x = layers.BatchNormalization()(x)
 z_mean = layers.Dense(latent_dim, name="z_mean")(x)
 z_log_var = layers.Dense(latent_dim, name="z_log_var")(x)
 z = Sampling()([z_mean, z_log_var])
@@ -366,17 +503,20 @@ encoder.summary()
 ## Built decoder
 latent_inputs = keras.Input(shape=(latent_dim,))
 x = layers.Dense(66 * 7 * 50, activation="relu")(latent_inputs)
+x = layers.BatchNormalization()(x)
 x = layers.Reshape((66, 7, 50))(x)
 x = layers.Conv2DTranspose(50, 3, activation="relu", strides=2, padding="same")(x)
+x = layers.BatchNormalization()(x)
 x = layers.Conv2DTranspose(20, 3, activation="relu", strides=2, padding="same")(x)
-#decoder_outputs = layers.Cropping2D(cropping=((0, 0), (0, 0)))(x)
+x = layers.BatchNormalization()(x)
+#decoder_outputs = layers.Cropping2D(cropping=((0, 0), (2, 2)))(x)
 #decoder_outputs = layers.Conv2DTranspose(1, 3, activation="sigmoid", padding="same")(decoder_outputs)
 decoder_outputs = layers.Conv2DTranspose(1, 3, activation="sigmoid", padding="same")(x)
 decoder = keras.Model(latent_inputs, decoder_outputs, name="decoder")
 decoder.summary()
 
 
-# In[129]:
+# In[56]:
 
 
 ## Define VAE
@@ -435,17 +575,28 @@ print (trainData.shape)
 trainData = trainData.reshape(numSamples, numRows, numCols, 1)
 vae = VAE(encoder, decoder)
 vae.compile(optimizer=keras.optimizers.Adam())
-vae.fit(trainData, epochs=50, batch_size=10)
+vae.fit(trainData, epochs=50, batch_size=30)
 
 
-# In[130]:
+# In[57]:
+
+
+## dic = {}
+colors = ['red', 'yellow', 'green', 'blue', 'grey', 'orange', 'blue', 'cyan', 'brown', 'gold', 'pink']
+setLabels = list(set(labels))
+for label, color in zip(setLabels, colors):
+    dic[label] = color
+
+labelColors = []
+for label in labels:
+    labelColors.append(dic[label])
 
 
 def plot_label_clusters(vae, data, labels=None):
     # display a 2D plot of the digit classes in the latent space
     z_mean, _, _ = vae.encoder.predict(data)
     plt.figure(figsize=(12, 10))
-    plt.scatter(z_mean[:, 0], z_mean[:, 1], c=labels)
+    plt.scatter(z_mean[:, 0], z_mean[:, 1], c=labelColors)
     plt.colorbar()
     plt.xlabel("z[0]")
     plt.ylabel("z[1]")
@@ -455,11 +606,7 @@ def plot_label_clusters(vae, data, labels=None):
 #(x_train, y_train), _ = keras.datasets.mnist.load_data()
 #x_train = np.expand_dims(x_train, -1).astype("float32") / 255
 
-plot_label_clusters(vae, trainData)
+plot_label_clusters(vae, trainData, labelColors)
 
 
 # In[ ]:
-
-
-
-
