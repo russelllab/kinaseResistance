@@ -1,10 +1,10 @@
-#!/usr/bin/env python3
 # coding: utf-8
+#!/usr/bin/env python3
 
 import os, sys
 dic = {}
-'''
-for line in open('hmmAlignment2.aln', 'r'):
+
+for line in open('hmmAlignment3.aln', 'r'):
     if line.split()!=[]:
         if line[0] != '#' and line.split()[0] != '//':
             name = line.split()[0]
@@ -27,7 +27,7 @@ for name in dic:
             fasta += 1
         aln += 1
 
-open('hmmAlignmentMappings2.tsv', 'w').write(l)
+open('hmmAlignmentMappings3.tsv', 'w').write(l)
 '''
 for line in open('muscleAlignment2.clustal', 'r'):
 	if line.split()!=[] and line.split()[0] != 'CLUSTAL':
@@ -52,3 +52,4 @@ for name in dic:
         aln += 1
 
 open('muscleAlignmentMappings2.tsv', 'w').write(l)
+'''
