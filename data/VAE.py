@@ -52,7 +52,7 @@ exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
              'P51617', 'Q9Y3S1', 'Q9C098', 'Q6VAB6', 'P21127',
              'Q13557', 'Q6ZMQ8', 'Q6P0Q8', 'Q8IZE3', 'P51957',
              'O60229', 'Q96RG2', 'Q5VST9', 'Q8WZ42', 'O75962',
-             'O95835']
+             'O95835', 'Q13535', 'O15021', 'P42345']
 
 kinases = {}
 def loadFasta():
@@ -305,7 +305,7 @@ for number, acc in enumerate(kinases):
             for mutation in mutations[name][position]:
                 l += str(position) + '\t' + mutation + '\t' + name + '\t' + str(mutations[name][position][mutation]) + '\n'
     #print (l)
-    gzip.open('/net/home.isilon/ds-russell/kinaseResistance/KA/robScores/'+acc+'.tsv.gz', 'wt').write(l)
+    gzip.open('/net/home.isilon/ds-russell/kinaseResistance/KA/robScores2/'+acc+'.tsv.gz', 'wt').write(l)
     print (number+1, 'of', len(kinases), 'done')
 
 
