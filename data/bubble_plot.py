@@ -10,7 +10,15 @@ import seaborn as sns
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from scipy.stats import fisher_exact
+import plotly.express as px
 
+class Gene:
+    '''
+    class to define gene and their accessions
+    '''
+    def __init__(self,) -> None:
+        pass
 class Mutation:
     '''
     class to define mutations
@@ -38,8 +46,8 @@ class Kinase:
         kinase = cls()
         return kinase
     def get_fasta_formatted(self) -> str:
-        return '>'+self.gene+'\n'+self.sequence
-    def check_position(self, mutation) -> None:
+        return '>'+self.acc+'\n'+self.sequence
+    def check_position(self, mutation):
         '''
         Check if the given mutation position and
         WT exist also in the sequence, else raise
@@ -53,7 +61,9 @@ class Kinase:
             if aa != wt:
                 print (f"position {position} in Gene:{self.gene}, Acc:{self.acc} has {aa}, and not {mutation[0]}; mutation given: {mutation}")
                 # raise ValueError(f"position {position} has {aa}, and not {mutation} in {self.gene}, {self.acc}")
-            break
+                return False
+            else:
+                return True
     def display(self) -> None:
         '''
         Function to display the instance items
@@ -69,6 +79,7 @@ def run_hmmsearch():
     Fetch all kinase sequences and run HMMSEARCH
     '''
     kinase_dic = {}
+    gene_to_accs_dic = {}
     ## Run hmmsearch against Kinase FASTA seqs
     # os.system('hmmsearch -o hmmsearchAlignment3.txt ../pfam/Pkinase.hmm ../KA/fastaForAlignment3.fasta')
     # Fetch all FASTA seqeuences
@@ -82,19 +93,25 @@ def run_hmmsearch():
                 if line[0] == '>':
                     names = line.split('>')[1].lstrip().rstrip().split('_')
                     gene, acc = names[0], names[1]
-                    kinase_dic[gene] = Kinase(acc, gene)
+                    kinase_dic[acc] = Kinase(acc, gene)
+                    if gene not in gene_to_accs_dic:
+                        gene_to_accs_dic[gene] = [acc]
+                    else:
+                        if acc not in gene_to_accs_dic[gene]:
+                            gene_to_accs_dic[gene].append(acc)
+                            gene_to_accs_dic[gene].sort()
                 else:
-                    kinase_dic[gene].sequence += line.rstrip()
+                    kinase_dic[acc].sequence += line.rstrip()
     # Save all sequences together in a FASTA file
     all_kinases_fasta = ''
-    for gene in kinase_dic:
-        all_kinases_fasta += kinase_dic[gene].get_fasta_formatted() + '\n'
+    for acc in kinase_dic:
+        all_kinases_fasta += kinase_dic[acc].get_fasta_formatted() + '\n'
     open('allKinases.fasta', 'w').write(all_kinases_fasta)
     # Run HMMSEARCH against saved sequences
     os.system('hmmsearch -o allKinasesHmmsearch.txt ../pfam/Pkinase.hmm allKinases.fasta')
-    return kinase_dic
+    return kinase_dic, gene_to_accs_dic
 
-kinase_dic = run_hmmsearch()
+kinase_dic, gene_to_accs_dic = run_hmmsearch()
 
 ## Dictionary that maps gene names to accessions
 # acc_to_gene = {}
@@ -136,21 +153,23 @@ for line in open('allKinasesHmmsearch.txt', 'r'):
                     kinase_dic[kinase].kinase_to_pfam[kin_start] = pfam_start
                     pfam_start += 1
                     kin_start += 1
-                elif pfam_char not in ['.', '-']:
+                elif pfam_char in ['.', '-']:
                     kin_start += 1
-                elif kin_char not in ['.', '-']:
+                elif kin_char in ['.', '-']:
                     pfam_start += 1
                 else:
                     print ('Exception found', kinase)
                     sys.exit()
-
+print (kinase_dic['P21802'].kinase_to_pfam[628])
+print (kinase_dic['P21802'].kinase_to_pfam[628])
+# sys.exit()
 ## activating/inactivating mutations from UniProt
 for line in open('../KA/act_deact_mut_for_scores_fin.tsv', 'r'):
     if line.split('\t')[0] != 'uniprot_id':
         acc = line.split('\t')[0]
         gene = line.split('\t')[5]
         # Raise an error when not found in HMMSearch o/p
-        if gene not in kinase_dic:
+        if acc not in kinase_dic:
             raise ValueError(f'{gene} not found in the HMMSearch output')
         # prepare mutation
         mutation = line.split('\t')[1] + line.split('\t')[2] + line.split('\t')[3]
@@ -158,31 +177,34 @@ for line in open('../KA/act_deact_mut_for_scores_fin.tsv', 'r'):
         if 'del' in mutation:
             continue
         # Check if the given mutation position exist else throw an error
-        kinase_dic[gene].check_position(mutation)
-        # Whether activating/deactivating
-        status = line.replace('\n', '').split('\t')[-1]
-        if status == 'A':
-            kinase_dic[kinase].act[mutation] = Mutation(mutation, 'activating')
-        else:
-            kinase_dic[kinase].deact[mutation] = Mutation(mutation, 'deactivating')
+        if kinase_dic[acc].check_position(mutation) == True:
+            # Whether activating/deactivating
+            status = line.replace('\n', '').split('\t')[-1]
+            if status == 'A':
+                kinase_dic[acc].act[mutation] = Mutation(mutation, 'activating')
+            else:
+                kinase_dic[acc].deact[mutation] = Mutation(mutation, 'deactivating')
 
 ## Resistance mutations from COSMIC
 for line in open('../KA/resistance_mutations_w_scores_aligned_fin.tsv', 'r'):
     if line.split('\t')[0] != 'Gene.Name':
         gene = line.split('\t')[0]
-        # Raise an error when not found in HMMSearch o/p
-        if gene not in kinase_dic:
-            raise ValueError(f'{gene} not found in the HMMSearch output')
-        # prepare mutation
-        mutation = line.split('\t')[1]
-        # Ignore mutations where you see del (deletions)
-        if 'del' in mutation:
-            continue
-        # Check if the given mutation position exist else throw an error
-        kinase_dic[gene].check_position(mutation)
-        kinase_dic[gene].resistance[mutation] = Mutation(mutation, 'resistance')
+        accs = gene_to_accs_dic[gene]
+        for acc in accs:
+            print (accs)
+            # Raise an error when not found in HMMSearch o/p
+            if acc not in kinase_dic:
+                raise ValueError(f'{acc} not found in the HMMSearch output')
+            # prepare mutation
+            mutation = line.split('\t')[1]
+            # Ignore mutations where you see del (deletions)
+            if 'del' in mutation:
+                continue
+            # Check if the given mutation position exist else throw an error
+            if kinase_dic[acc].check_position(mutation) == True:
+                kinase_dic[acc].resistance[mutation] = Mutation(mutation, 'resistance')
+                break
 
-sys.exit()
 ## read the instances
 # print (kinase_dic['P25092'].act)
 # print (kinase_dic['P25092'].kinase_to_pfam)
@@ -193,14 +215,15 @@ for kinase in kinase_dic:
         mutationInstance = kinase_dic[kinase].act[mutation]
         kin_pos = int(mutation[1:-1])
         if kin_pos in kinase_dic[kinase].kinase_to_pfam:
-            # print (kin_pos)
             pfam_pos = kinase_dic[kinase].kinase_to_pfam[kin_pos]
             pfam_pos = int(pfam_pos)
             row = []
-            name = kinase if kinase not in acc_to_gene else acc_to_gene[kinase]
+            # name = kinase if kinase not in acc_to_gene else acc_to_gene[kinase]
+            name = kinase_dic[kinase].gene+'/'+kinase
             row.append(name)
             row.append(pfam_pos)
             row.append('activating')
+            row.append(mutation)
             data.append(row)
     
     for mutation in kinase_dic[kinase].deact:
@@ -210,10 +233,12 @@ for kinase in kinase_dic:
             pfam_pos = kinase_dic[kinase].kinase_to_pfam[kin_pos]
             pfam_pos = int(pfam_pos)
             row = []
-            name = kinase if kinase not in acc_to_gene else acc_to_gene[kinase]
+            # name = kinase if kinase not in acc_to_gene else acc_to_gene[kinase]
+            name = kinase_dic[kinase].gene+'/'+kinase
             row.append(name)
             row.append(pfam_pos)
             row.append('deactivating')
+            row.append(mutation)
             data.append(row)
     
     for mutation in kinase_dic[kinase].resistance:
@@ -223,19 +248,75 @@ for kinase in kinase_dic:
             pfam_pos = kinase_dic[kinase].kinase_to_pfam[kin_pos]
             pfam_pos = int(pfam_pos)
             row = []
-            name = kinase if kinase not in acc_to_gene else acc_to_gene[kinase]
+            # name = kinase if kinase not in acc_to_gene else acc_to_gene[kinase]
+            name = kinase_dic[kinase].gene+'/'+kinase
             row.append(name)
             row.append(pfam_pos)
             row.append('resistance')
+            row.append(mutation)
             data.append(row)
 
-# print (data)
-df = pd.DataFrame(data=data, columns=['Kinase', 'Position', 'Category'])
+df = pd.DataFrame(data=data, columns=['Kinase', 'Position', 'Category', 'Mutation'])
 df = df.sort_values(by=['Kinase'])
-print (df)
-sns.scatterplot(data=df, x="Position", y="Kinase", hue="Category")
+print (list(set(df[df['Category']=='activating'].Position)))
+allRes = list(set(df[df['Category']=='resistance'].Position))
+allAct = list(set(df[df['Category']=='activating'].Position))
+allDeact = list(set(df[df['Category']=='deactivating'].Position))
+resYactY = list(set(allRes).intersection(allAct))
+resYdeactY = list(set(allRes).intersection(allDeact))
+actYdeactY = list(set(allAct).intersection(allDeact))
+resYactYdeactY = list(set(actYdeactY).intersection(allRes))
+resYactN = list(set(allRes) - set(allAct))
+resYdeactN = list(set(allRes) - set(allDeact))
+resNactY = list(set(allAct) - set(allRes))
+resNdeactY = list(set(allDeact) - set(allRes))
+resNActN = list(set(df.Position) - set(allAct) - set(allRes))
+print (resYactY, resYactN)
+print (resYactYdeactY, 'resYactYdeactY')
+print (actYdeactY, 'actYdeactY')
+print (resYactY, 'resYactY')
+print (resYactN, 'resYactN')
+print (resYdeactY, 'resYdeactY')
+print (resYdeactN, 'resYdeactN')
+oddsratio, pvalue = fisher_exact([[len(resYactY), len(resYdeactY)], [len(resNactY), len(resNdeactY)]])
+print (oddsratio, pvalue)
+resYactY = set(allRes).intersection(allAct)
+ax = sns.scatterplot(data=df, x="Position", y="Kinase", hue="Category")
+#ax.tick_params(axis='both', which='minor', labelsize=8)
 plt.xlabel('Pfam position')
-plt.xticks(range(1, len(pfam), 1), range(1, len(pfam), 1))
+relevant_pfam = list(set(df.Position))
+#plt.xticks(range(1, len(pfam), 1), range(1, len(pfam), 1), rotation=90, size=5)
 plt.grid()
-plt.show()
+#plt.show()
+fig = px.scatter(df, x="Position", y="Kinase", color="Category", symbol="Category", hover_data=["Mutation"],
+                color_discrete_map={
+                "activating": "green",
+                "deactivating": "red",
+                "resistance": "blue"})
+fig.update_yaxes(ticklabelstep=1)
+fig.update_layout(
+    # hovermode = 'x',
+    xaxis = dict(
+        tickmode = 'linear',
+        tick0 = 1,
+        dtick = 2,
+        tickfont = dict(
+            family = 'Old Standard TT, serif',
+            size = 7,
+            color = 'black'
+            )
+    ),
+    yaxis = dict(
+        tickmode = 'linear',
+        tick0 = 1,
+        dtick = 1,
+        tickfont = dict(
+            size = 8.5,
+            )
+    )
+)
+fig.update_xaxes(showspikes=True, spikecolor="green", spikethickness=1, spikesnap="cursor", spikemode="across")
+fig.update_yaxes(showspikes=True, spikecolor="orange", spikethickness=1)
+
+fig.show()
 print (len(pfam))
