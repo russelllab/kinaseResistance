@@ -329,33 +329,37 @@ for site in atp_sites:
 ## Add PTM sites
 phospho_sites = {}
 acetyl_sites = {}
-for line in open('Kinase_psites.tsv', 'r'):
+for line in open('Kinase_psites2.tsv', 'r'):
     if line[0] == '#':
         continue
-    site = int(line.split('\t')[0])
-    num_ptmsites = int(line.split('\t')[3].replace('\n', ''))
-    type_ptm = line.split('\t')[2]
-    dic = phospho_sites if type_ptm == 'p-site' else acetyl_sites
-    if site not in dic:
-        dic[site] = num_ptmsites
+    pfam_pos = int(line.split('\t')[3])
+    # num_ptmsites = int(line.split('\t')[3].replace('\n', ''))
+    type_ptm = line.split('\t')[2].split('-')[1]
+    dic = phospho_sites if type_ptm == 'p' else acetyl_sites
+    if pfam_pos not in dic:
+        dic[pfam_pos] = 1
+    else:
+        dic[pfam_pos] += 1
 
 for count, dic in enumerate([phospho_sites, acetyl_sites]):
-    for site in dic:
+    for pfam_pos in dic:
         row = []
         if count == 0:
             row.append('Psites')
         else:
             row.append('Ksites')
-        row.append(int(site))
-        row.append(pfam[site])
+        row.append(int(pfam_pos))
+        row.append(pfam[pfam_pos])
         if count == 0:
             row.append('P-site')
             row.append('P-site')
+            row.append(np.log2(dic[pfam_pos]))
+            row.append(np.log2(dic[pfam_pos]))
         else:
             row.append('K-site')
             row.append('K-site')
-        row.append(np.log2(dic[site]))
-        row.append(np.log2(dic[site]))
+            row.append(dic[pfam_pos])
+            row.append(dic[pfam_pos])
         data.append(row)
 
 df = pd.DataFrame(data=data, columns=['Kinase', 'Pfam_Position', 'Pfam_Residue', 'Category', 'Mutation', 'Num_Samples', 'Num_Samples_Size'])

@@ -37,15 +37,22 @@ for line in open('humanKinases.fasta', 'r'):
     if line[0] != '>':
         continue
     gene = line.split('GN=')[1].split()[0]
+    '''
+    Just take the gene names, and that is also
+    enough to catch the isoform information
+    from PSP
+    '''
     human_kinases.append(gene)
 
 ## fetch all PTM sites in kinases
 kinases_dic = {}
+## Read both p and k site files
 for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_site_dataset.gz']):
     FLAG = 0
     for line in gzip.open('PSP/'+files, 'rt'):
         if len(line.split()) == 0:
             continue
+        # flag when header found
         if line.split()[0] == 'GENE':
             FLAG = 1
             continue
@@ -57,16 +64,19 @@ for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_s
         ptmsite = line.split('\t')[4]
         species = line.split('\t')[6]
         low_throughput = line.split('\t')[10]
+        # ignore line when LT_LIT is zero
         if low_throughput == '':
             continue
+        # ignore line when LT_LIT is < 2 in psites file
         if int(low_throughput) < 2 and count == 0:
             continue
-        if int(low_throughput) < 0 and count == 1:
-            continue
+        # Ignore non-human PTM sites
         if species != 'human':
             continue
+        # Ignore non-kinases
         if gene not in human_kinases:
             continue
+
         if acc not in kinases_dic:
             accession_address = Kinases(acc, gene)
             kinases_dic[acc] = accession_address
@@ -81,7 +91,8 @@ for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_s
 # print (kinases_dic.keys())
 # sys.exit()
 
-## get all kinases' FASTA formatted sequence
+## retreive and save all kinase
+## sequences in FASTA format
 all_kinases_fasta = ''
 for acc in kinases_dic:
     if acc in ['Q59GL6', 'Q15300', 'Q8IWY7']:
@@ -143,8 +154,11 @@ for line in open('allKinasesHmmsearch.txt', 'r'):
                     print ('Exception found', kinase)
                     sys.exit()
 
+## Map PTM sites to kinases domain and 
+## save in corresponding dictionaries
 pfam_phospho = {}
 pfam_acetyl = {}
+out_text2 = '#Acc\tGene\tPfam_Position\tPfam_Residue\tPTM_type\n'
 for count, dic in enumerate([pfam_phospho, pfam_acetyl]):
     for acc in kinases_dic:
         if count == 0:
@@ -163,14 +177,17 @@ for count, dic in enumerate([pfam_phospho, pfam_acetyl]):
             if ptmsite_pos in kinases_dic[acc].kinase_to_pfam:
                 # print (acc, psite, psite_pos)
                 pfam_pos = kinases_dic[acc].kinase_to_pfam[ptmsite_pos]
+                out_text2 += acc + '\t' + kinases_dic[acc].gene + '\t' + ptmsite + '\t' + str(pfam_pos) + '\t' + str(pfam[pfam_pos]) + '\n'
                 if pfam_pos not in dic:
                     dic[pfam_pos] = 1 
                 else:
                     dic[pfam_pos] += 1
 
+open('Kinase_psites2.tsv', 'w').write(out_text2)
 # print (pfam_phospho)
 # print (pfam_acetyl)
-# sys.exit()
+sys.exit()
+## Write the output
 out_text = '#Pfam_Position\tPfam_Residue\tType_PTM\tNum_PTMsites\n'
 for i in range(1, 265):
     for count, dic in enumerate([pfam_phospho, pfam_acetyl]):
