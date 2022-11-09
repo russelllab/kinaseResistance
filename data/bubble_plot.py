@@ -23,9 +23,10 @@ class Mutation:
     '''
     class to define mutations
     '''
-    def __init__(self, name, category):
+    def __init__(self, name, category, num_samples):
         self.name = name
         self.category = category
+        self.samples = num_samples
 class Kinase:
     '''
     class to define kinases
@@ -91,8 +92,8 @@ def run_hmmsearch():
             lines = fp.readlines()
             for line in lines:
                 if line[0] == '>':
-                    names = line.split('>')[1].lstrip().rstrip().split('_')
-                    gene, acc = names[0], names[1]
+                    acc = line.split('|')[1]
+                    gene = line.split('GN=')[1].split()[0]
                     kinase_dic[acc] = Kinase(acc, gene)
                     if gene not in gene_to_accs_dic:
                         gene_to_accs_dic[gene] = [acc]
@@ -112,6 +113,7 @@ def run_hmmsearch():
     return kinase_dic, gene_to_accs_dic
 
 kinase_dic, gene_to_accs_dic = run_hmmsearch()
+print (kinase_dic)
 
 ## Dictionary that maps gene names to accessions
 # acc_to_gene = {}
@@ -173,6 +175,7 @@ for line in open('../KA/act_deact_mut_for_scores_fin.tsv', 'r'):
             raise ValueError(f'{gene} not found in the HMMSearch output')
         # prepare mutation
         mutation = line.split('\t')[1] + line.split('\t')[2] + line.split('\t')[3]
+        num_samples = 1
         # Ignore mutations where you see del (deletions)
         if 'del' in mutation:
             continue
@@ -181,11 +184,12 @@ for line in open('../KA/act_deact_mut_for_scores_fin.tsv', 'r'):
             # Whether activating/deactivating
             status = line.replace('\n', '').split('\t')[-1]
             if status == 'A':
-                kinase_dic[acc].act[mutation] = Mutation(mutation, 'activating')
+                kinase_dic[acc].act[mutation] = Mutation(mutation, 'activating', num_samples)
             else:
-                kinase_dic[acc].deact[mutation] = Mutation(mutation, 'deactivating')
+                kinase_dic[acc].deact[mutation] = Mutation(mutation, 'deactivating', num_samples)
 
 ## Resistance mutations from COSMIC
+'''
 for line in open('../KA/resistance_mutations_w_scores_aligned_fin.tsv', 'r'):
     if line.split('\t')[0] != 'Gene.Name':
         gene = line.split('\t')[0]
@@ -204,6 +208,26 @@ for line in open('../KA/resistance_mutations_w_scores_aligned_fin.tsv', 'r'):
             if kinase_dic[acc].check_position(mutation) == True:
                 kinase_dic[acc].resistance[mutation] = Mutation(mutation, 'resistance')
                 break
+'''
+for line in open('../KA/resistant_mutations_Nov22.tsv.gz', 'rt'):
+    if line[0] != '#':
+        gene = line.split('\t')[0]
+        accs = gene_to_accs_dic[gene]
+        for acc in accs:
+            print (accs)
+            # Raise an error when not found in HMMSearch o/p
+            if acc not in kinase_dic:
+                raise ValueError(f'{acc} not found in the HMMSearch output')
+            # prepare mutation
+            mutation = line.split('\t')[2]
+            num_samples = int(line.split('\t')[4])
+            # Ignore mutations where you see del (deletions)
+            if 'del' in mutation or '*' in mutation or '_' in mutation or 'dup' in mutation:
+                continue
+            # Check if the given mutation position exist else throw an error
+            if kinase_dic[acc].check_position(mutation) == True:
+                kinase_dic[acc].resistance[mutation] = Mutation(mutation, 'resistance', num_samples)
+                break
 
 ## read the instances
 # print (kinase_dic['P25092'].act)
@@ -217,13 +241,19 @@ for kinase in kinase_dic:
         if kin_pos in kinase_dic[kinase].kinase_to_pfam:
             pfam_pos = kinase_dic[kinase].kinase_to_pfam[kin_pos]
             pfam_pos = int(pfam_pos)
+            num_samples = mutationInstance.samples
             row = []
             # name = kinase if kinase not in acc_to_gene else acc_to_gene[kinase]
             name = kinase_dic[kinase].gene+'/'+kinase
             row.append(name)
             row.append(pfam_pos)
+            row.append(pfam[pfam_pos])
             row.append('activating')
             row.append(mutation)
+            ## used to display
+            row.append(num_samples)
+            ## used to calculate size
+            row.append(num_samples)
             data.append(row)
     
     for mutation in kinase_dic[kinase].deact:
@@ -232,13 +262,19 @@ for kinase in kinase_dic:
         if kin_pos in kinase_dic[kinase].kinase_to_pfam:
             pfam_pos = kinase_dic[kinase].kinase_to_pfam[kin_pos]
             pfam_pos = int(pfam_pos)
+            num_samples = mutationInstance.samples
             row = []
             # name = kinase if kinase not in acc_to_gene else acc_to_gene[kinase]
             name = kinase_dic[kinase].gene+'/'+kinase
             row.append(name)
             row.append(pfam_pos)
+            row.append(pfam[pfam_pos])
             row.append('deactivating')
             row.append(mutation)
+            ## used to display
+            row.append(num_samples)
+            ## used to calculate size
+            row.append(num_samples)
             data.append(row)
     
     for mutation in kinase_dic[kinase].resistance:
@@ -247,21 +283,87 @@ for kinase in kinase_dic:
         if kin_pos in kinase_dic[kinase].kinase_to_pfam:
             pfam_pos = kinase_dic[kinase].kinase_to_pfam[kin_pos]
             pfam_pos = int(pfam_pos)
+            num_samples = mutationInstance.samples
             row = []
             # name = kinase if kinase not in acc_to_gene else acc_to_gene[kinase]
             name = kinase_dic[kinase].gene+'/'+kinase
             row.append(name)
             row.append(pfam_pos)
+            row.append(pfam[pfam_pos])
             row.append('resistance')
             row.append(mutation)
+            ## used to display
+            row.append(num_samples)
+            ## used to calculate size
+            row.append(np.log2(num_samples))
             data.append(row)
 
-df = pd.DataFrame(data=data, columns=['Kinase', 'Position', 'Category', 'Mutation'])
+## Add ATP binding sites
+atp_sites = {}
+for line in open('ATP_binding_sites.tsv', 'r'):
+    if line[0] == '#':
+        continue
+    site = int(line.split('\t')[3])
+    pdbs = line.split('\t')[6].replace('\n', '').split(';')
+    if site not in atp_sites:
+        atp_sites[site] = pdbs
+    else:
+        atp_sites[site] += pdbs
+        atp_sites[site] = list(set(atp_sites[site]))
+
+for site in atp_sites:
+    row = []
+    row.append('ATPbindingSites')
+    row.append(int(site))
+    row.append(pfam[site])
+    row.append('ATP site')
+    row.append('ATP site')
+    if site in atp_sites:
+        row.append(np.log2(len(atp_sites[site])))
+        row.append(np.log2(len(atp_sites[site])))
+    else:
+        row.append(0)
+        row.append(0)
+    data.append(row)
+
+## Add PTM sites
+phospho_sites = {}
+acetyl_sites = {}
+for line in open('Kinase_psites.tsv', 'r'):
+    if line[0] == '#':
+        continue
+    site = int(line.split('\t')[0])
+    num_ptmsites = int(line.split('\t')[3].replace('\n', ''))
+    type_ptm = line.split('\t')[2]
+    dic = phospho_sites if type_ptm == 'p-site' else acetyl_sites
+    if site not in dic:
+        dic[site] = num_ptmsites
+
+for count, dic in enumerate([phospho_sites, acetyl_sites]):
+    for site in dic:
+        row = []
+        if count == 0:
+            row.append('Psites')
+        else:
+            row.append('Ksites')
+        row.append(int(site))
+        row.append(pfam[site])
+        if count == 0:
+            row.append('P-site')
+            row.append('P-site')
+        else:
+            row.append('K-site')
+            row.append('K-site')
+        row.append(np.log2(dic[site]))
+        row.append(np.log2(dic[site]))
+        data.append(row)
+
+df = pd.DataFrame(data=data, columns=['Kinase', 'Pfam_Position', 'Pfam_Residue', 'Category', 'Mutation', 'Num_Samples', 'Num_Samples_Size'])
 df = df.sort_values(by=['Kinase'])
-print (list(set(df[df['Category']=='activating'].Position)))
-allRes = list(set(df[df['Category']=='resistance'].Position))
-allAct = list(set(df[df['Category']=='activating'].Position))
-allDeact = list(set(df[df['Category']=='deactivating'].Position))
+print (list(set(df[df['Category']=='activating'].Pfam_Position)))
+allRes = list(set(df[df['Category']=='resistance'].Pfam_Position))
+allAct = list(set(df[df['Category']=='activating'].Pfam_Position))
+allDeact = list(set(df[df['Category']=='deactivating'].Pfam_Position))
 resYactY = list(set(allRes).intersection(allAct))
 resYdeactY = list(set(allRes).intersection(allDeact))
 actYdeactY = list(set(allAct).intersection(allDeact))
@@ -270,7 +372,7 @@ resYactN = list(set(allRes) - set(allAct))
 resYdeactN = list(set(allRes) - set(allDeact))
 resNactY = list(set(allAct) - set(allRes))
 resNdeactY = list(set(allDeact) - set(allRes))
-resNActN = list(set(df.Position) - set(allAct) - set(allRes))
+resNActN = list(set(df.Pfam_Position) - set(allAct) - set(allRes))
 print (resYactY, resYactN)
 print (resYactYdeactY, 'resYactYdeactY')
 print (actYdeactY, 'actYdeactY')
@@ -281,14 +383,14 @@ print (resYdeactN, 'resYdeactN')
 oddsratio, pvalue = fisher_exact([[len(resYactY), len(resYdeactY)], [len(resNactY), len(resNdeactY)]])
 print (oddsratio, pvalue)
 resYactY = set(allRes).intersection(allAct)
-ax = sns.scatterplot(data=df, x="Position", y="Kinase", hue="Category")
+ax = sns.scatterplot(data=df, x="Pfam_Position", y="Kinase", hue="Category")
 #ax.tick_params(axis='both', which='minor', labelsize=8)
 plt.xlabel('Pfam position')
-relevant_pfam = list(set(df.Position))
+relevant_pfam = list(set(df.Pfam_Position))
 #plt.xticks(range(1, len(pfam), 1), range(1, len(pfam), 1), rotation=90, size=5)
 plt.grid()
 #plt.show()
-fig = px.scatter(df, x="Position", y="Kinase", color="Category", symbol="Category", hover_data=["Mutation"],
+fig = px.scatter(df, x="Pfam_Position", y="Kinase", color="Category", size="Num_Samples_Size", symbol="Category", hover_data=["Pfam_Residue", "Mutation", "Num_Samples"],
                 color_discrete_map={
                 "activating": "green",
                 "deactivating": "red",
