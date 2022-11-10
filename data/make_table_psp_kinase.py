@@ -24,6 +24,7 @@ class Kinases:
         self.sequence = ''
         self.psites = []
         self.ksites = []
+        self.msites = []
         self.kinase_to_pfam = {}
     def get_fasta_formatted(self, gene):
         '''
@@ -46,8 +47,8 @@ for line in open('humanKinases.fasta', 'r'):
 
 ## fetch all PTM sites in kinases
 kinases_dic = {}
-## Read both p and k site files
-for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_site_dataset.gz']):
+## Read phospho, acetyl and methyl sites files
+for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_site_dataset.gz', 'Methylation_site_dataset.gz']):
     FLAG = 0
     for line in gzip.open('PSP/'+files, 'rt'):
         if len(line.split()) == 0:
@@ -64,7 +65,7 @@ for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_s
         ptmsite = line.split('\t')[4]
         species = line.split('\t')[6]
         low_throughput = line.split('\t')[10]
-        # ignore line when LT_LIT is zero
+        # ignore line when LT_LIT is zero regardless of ptm type
         if low_throughput == '':
             continue
         # ignore line when LT_LIT is < 2 in psites file
@@ -85,8 +86,10 @@ for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_s
         
         if count == 0:
             accession_address.psites.append(ptmsite)
-        else:
+        elif count == 1:
             accession_address.ksites.append(ptmsite)
+        else:
+            accession_address.msites.append(ptmsite)
 # print (len(kinases_dic.keys()))
 # print (kinases_dic.keys())
 # sys.exit()
@@ -158,19 +161,22 @@ for line in open('allKinasesHmmsearch.txt', 'r'):
 ## save in corresponding dictionaries
 pfam_phospho = {}
 pfam_acetyl = {}
+pfam_methyl = {}
 out_text2 = '#Acc\tGene\tPfam_Position\tPfam_Residue\tPTM_type\n'
-for count, dic in enumerate([pfam_phospho, pfam_acetyl]):
+for count, dic in enumerate([pfam_phospho, pfam_acetyl, pfam_methyl]):
     for acc in kinases_dic:
         if count == 0:
             ptm_sites = kinases_dic[acc].psites
-        else:
+        elif count == 1:
             ptm_sites = kinases_dic[acc].ksites
+        else:
+            ptm_sites = kinases_dic[acc].msites
         for ptmsite in ptm_sites:
             if kinases_dic[acc].sequence == '':
                 continue
             # print (acc, psite)
             ptmsite_pos = int(ptmsite[1:].split('-')[0])
-            if kinases_dic[acc].sequence[ptmsite_pos-1] not in ['S', 'T', 'Y', 'K']:
+            if kinases_dic[acc].sequence[ptmsite_pos-1] not in ['S', 'T', 'Y', 'K', 'R']:
                 print (acc, 'has', kinases_dic[acc].sequence[ptmsite_pos-1], 'at', ptmsite_pos, 'and not', ptmsite)
                 # sys.exit()
                 continue
@@ -183,7 +189,7 @@ for count, dic in enumerate([pfam_phospho, pfam_acetyl]):
                 else:
                     dic[pfam_pos] += 1
 
-open('Kinase_psites2.tsv', 'w').write(out_text2)
+open('Kinase_psites3.tsv', 'w').write(out_text2)
 # print (pfam_phospho)
 # print (pfam_acetyl)
 sys.exit()

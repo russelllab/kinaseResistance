@@ -329,25 +329,33 @@ for site in atp_sites:
 ## Add PTM sites
 phospho_sites = {}
 acetyl_sites = {}
-for line in open('Kinase_psites2.tsv', 'r'):
+methyl_sites ={}
+for line in open('Kinase_psites3.tsv', 'r'):
     if line[0] == '#':
         continue
     pfam_pos = int(line.split('\t')[3])
     # num_ptmsites = int(line.split('\t')[3].replace('\n', ''))
     type_ptm = line.split('\t')[2].split('-')[1]
-    dic = phospho_sites if type_ptm == 'p' else acetyl_sites
+    if type_ptm == 'p':
+        dic = phospho_sites 
+    elif type_ptm == 'ac':
+        dic = acetyl_sites
+    else:
+        dic = methyl_sites
     if pfam_pos not in dic:
         dic[pfam_pos] = 1
     else:
         dic[pfam_pos] += 1
 
-for count, dic in enumerate([phospho_sites, acetyl_sites]):
+for count, dic in enumerate([phospho_sites, acetyl_sites, methyl_sites]):
     for pfam_pos in dic:
         row = []
         if count == 0:
             row.append('Psites')
-        else:
+        elif count == 1:
             row.append('Ksites')
+        else:
+            row.append('Mesites')
         row.append(int(pfam_pos))
         row.append(pfam[pfam_pos])
         if count == 0:
@@ -355,9 +363,14 @@ for count, dic in enumerate([phospho_sites, acetyl_sites]):
             row.append('P-site')
             row.append(np.log2(dic[pfam_pos]))
             row.append(np.log2(dic[pfam_pos]))
+        elif count == 1:
+            row.append('K-site')
+            row.append('K-site')
+            row.append(dic[pfam_pos])
+            row.append(dic[pfam_pos])
         else:
-            row.append('K-site')
-            row.append('K-site')
+            row.append('Me-site')
+            row.append('me-site')
             row.append(dic[pfam_pos])
             row.append(dic[pfam_pos])
         data.append(row)
