@@ -1,0 +1,395 @@
+ID   SGK2_HUMAN              Reviewed;         367 AA.
+AC   Q9HBY8; Q52PK5; Q5H8Y6; Q5H8Z1; Q5TZR3; Q9UKG6;
+DT   22-FEB-2003, integrated into UniProtKB/Swiss-Prot.
+DT   10-FEB-2021, sequence version 2.
+DT   12-OCT-2022, entry version 183.
+DE   RecName: Full=Serine/threonine-protein kinase Sgk2;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Serum/glucocorticoid-regulated kinase 2;
+GN   Name=SGK2;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS 1 AND 2), TISSUE SPECIFICITY,
+RP   PHOSPHORYLATION AT THR-193, AND MUTAGENESIS OF SER-356.
+RX   PubMed=10548550; DOI=10.1042/bj3440189;
+RA   Kobayashi T., Deak M., Morrice N., Cohen P.;
+RT   "Characterization of the structure and regulation of two novel isoforms of
+RT   serum- and glucocorticoid-induced protein kinase.";
+RL   Biochem. J. 344:189-197(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 3).
+RA   Li H., Nong W., Zhou G., Ke R., Shen C., Zhong G., Zheng Z., Liang M.,
+RA   Xiao W., Lin L., Yang S.;
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RA   Kalnine N., Chen X., Rolfs A., Halleck A., Hines L., Eisenstein S.,
+RA   Koundinya M., Raphael J., Moreira D., Kelley T., LaBaer J., Lin Y.,
+RA   Phelan M., Farmer A.;
+RT   "Cloning of human full-length CDSs in BD Creator(TM) system donor vector.";
+RL   Submitted (OCT-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=11780052; DOI=10.1038/414865a;
+RA   Deloukas P., Matthews L.H., Ashurst J.L., Burton J., Gilbert J.G.R.,
+RA   Jones M., Stavrides G., Almeida J.P., Babbage A.K., Bagguley C.L.,
+RA   Bailey J., Barlow K.F., Bates K.N., Beard L.M., Beare D.M., Beasley O.P.,
+RA   Bird C.P., Blakey S.E., Bridgeman A.M., Brown A.J., Buck D., Burrill W.D.,
+RA   Butler A.P., Carder C., Carter N.P., Chapman J.C., Clamp M., Clark G.,
+RA   Clark L.N., Clark S.Y., Clee C.M., Clegg S., Cobley V.E., Collier R.E.,
+RA   Connor R.E., Corby N.R., Coulson A., Coville G.J., Deadman R., Dhami P.D.,
+RA   Dunn M., Ellington A.G., Frankland J.A., Fraser A., French L., Garner P.,
+RA   Grafham D.V., Griffiths C., Griffiths M.N.D., Gwilliam R., Hall R.E.,
+RA   Hammond S., Harley J.L., Heath P.D., Ho S., Holden J.L., Howden P.J.,
+RA   Huckle E., Hunt A.R., Hunt S.E., Jekosch K., Johnson C.M., Johnson D.,
+RA   Kay M.P., Kimberley A.M., King A., Knights A., Laird G.K., Lawlor S.,
+RA   Lehvaeslaiho M.H., Leversha M.A., Lloyd C., Lloyd D.M., Lovell J.D.,
+RA   Marsh V.L., Martin S.L., McConnachie L.J., McLay K., McMurray A.A.,
+RA   Milne S.A., Mistry D., Moore M.J.F., Mullikin J.C., Nickerson T.,
+RA   Oliver K., Parker A., Patel R., Pearce T.A.V., Peck A.I.,
+RA   Phillimore B.J.C.T., Prathalingam S.R., Plumb R.W., Ramsay H., Rice C.M.,
+RA   Ross M.T., Scott C.E., Sehra H.K., Shownkeen R., Sims S., Skuce C.D.,
+RA   Smith M.L., Soderlund C., Steward C.A., Sulston J.E., Swann R.M.,
+RA   Sycamore N., Taylor R., Tee L., Thomas D.W., Thorpe A., Tracey A.,
+RA   Tromans A.C., Vaudin M., Wall M., Wallis J.M., Whitehead S.L.,
+RA   Whittaker P., Willey D.L., Williams L., Williams S.A., Wilming L.,
+RA   Wray P.W., Hubbard T., Durbin R.M., Bentley D.R., Beck S., Rogers J.;
+RT   "The DNA sequence and comparative analysis of human chromosome 20.";
+RL   Nature 414:865-871(2001).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Brain, and Colon;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   FUNCTION IN THE REGULATION OF NA(+)/K(+) ATPASE.
+RX   PubMed=12590200; DOI=10.1159/000068699;
+RA   Henke G., Setiawan I., Boehmer C., Lang F.;
+RT   "Activation of Na+/K+-ATPase by the serum and glucocorticoid-dependent
+RT   kinase isoforms.";
+RL   Kidney Blood Press. Res. 25:370-374(2002).
+RN   [7]
+RP   FUNCTION.
+RX   PubMed=12397388; DOI=10.1007/s00424-002-0873-2;
+RA   Gamper N., Fillon S., Feng Y., Friedrich B., Lang P.A., Henke G.,
+RA   Huber S.M., Kobayashi T., Cohen P., Lang F.;
+RT   "K(+) channel activation by all three isoforms of serum- and
+RT   glucocorticoid-dependent protein kinase SGK.";
+RL   Pflugers Arch. 445:60-66(2002).
+RN   [8]
+RP   FUNCTION IN THE REGULATION OF KCNE1 AND KCNQ1.
+RX   PubMed=12634932; DOI=10.1007/s00424-002-0982-y;
+RA   Embark H.M., Boehmer C., Vallon V., Luft F., Lang F.;
+RT   "Regulation of KCNE1-dependent K(+) current by the serum and
+RT   glucocorticoid-inducible kinase (SGK) isoforms.";
+RL   Pflugers Arch. 445:601-606(2003).
+RN   [9]
+RP   FUNCTION IN THE REGULATION OF SCNN1A/ENAC.
+RX   PubMed=12632189; DOI=10.1007/s00424-002-0993-8;
+RA   Friedrich B., Feng Y., Cohen P., Risler T., Vandewalle A., Broeer S.,
+RA   Wang J., Pearce D., Lang F.;
+RT   "The serine/threonine kinases SGK2 and SGK3 are potent stimulators of the
+RT   epithelial Na+ channel alpha,beta,gamma-ENaC.";
+RL   Pflugers Arch. 445:693-696(2003).
+RN   [10]
+RP   FUNCTION IN THE REGULATION OF KCNA3/KV1.3.
+RX   PubMed=15040001; DOI=10.1002/jcp.10430;
+RA   Henke G., Maier G., Wallisch S., Boehmer C., Lang F.;
+RT   "Regulation of the voltage gated K+ channel Kv1.3 by the ubiquitin ligase
+RT   Nedd4-2 and the serum and glucocorticoid inducible kinase SGK1.";
+RL   J. Cell. Physiol. 199:194-199(2004).
+RN   [11]
+RP   FUNCTION IN THE REGULATION OF SLC6A19.
+RX   PubMed=20511718; DOI=10.1159/000315092;
+RA   Boehmer C., Sopjani M., Klaus F., Lindner R., Laufer J., Jeyaraj S.,
+RA   Lang F., Palmada M.;
+RT   "The serum and glucocorticoid inducible kinases SGK1-3 stimulate the
+RT   neutral amino acid transporter SLC6A19.";
+RL   Cell. Physiol. Biochem. 25:723-732(2010).
+RN   [12]
+RP   FUNCTION IN THE REGULATION OF SLC9A3/NHE3, AND SUBCELLULAR LOCATION.
+RX   PubMed=21865597; DOI=10.1091/mbc.e11-04-0328;
+RA   He P., Lee S.J., Lin S., Seidler U., Lang F., Fejes-Toth G.,
+RA   Naray-Fejes-Toth A., Yun C.C.;
+RT   "Serum- and glucocorticoid-induced kinase 3 in recycling endosomes mediates
+RT   acute activation of Na+/H+ exchanger NHE3 by glucocorticoids.";
+RL   Mol. Biol. Cell 22:3812-3825(2011).
+RN   [13]
+RP   REVIEW.
+RX   PubMed=16460280; DOI=10.1146/annurev.physiol.68.040104.131654;
+RA   Loffing J., Flores S.Y., Staub O.;
+RT   "Sgk kinases and their role in epithelial transport.";
+RL   Annu. Rev. Physiol. 68:461-490(2006).
+RN   [14]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=20919962; DOI=10.3109/08977194.2010.518616;
+RA   Bruhn M.A., Pearson R.B., Hannan R.D., Sheppard K.E.;
+RT   "Second AKT: the rise of SGK in cancer signalling.";
+RL   Growth Factors 28:394-408(2010).
+RN   [15]
+RP   VARIANTS [LARGE SCALE ANALYSIS] LYS-199 AND TYR-289, AND VARIANT THR-12
+RP   (ISOFORM 2).
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Serine/threonine-protein kinase which is involved in the
+CC       regulation of a wide variety of ion channels, membrane transporters,
+CC       cell growth, survival and proliferation. Up-regulates Na(+) channels:
+CC       SCNN1A/ENAC, K(+) channels: KCNA3/Kv1.3, KCNE1 and KCNQ1, amino acid
+CC       transporter: SLC6A19, glutamate transporter: SLC1A6/EAAT4, glutamate
+CC       receptors: GRIA1/GLUR1 and GRIK2/GLUR6, Na(+)/H(+) exchanger:
+CC       SLC9A3/NHE3, and the Na(+)/K(+) ATPase. {ECO:0000269|PubMed:12397388,
+CC       ECO:0000269|PubMed:12590200, ECO:0000269|PubMed:12632189,
+CC       ECO:0000269|PubMed:12634932, ECO:0000269|PubMed:15040001,
+CC       ECO:0000269|PubMed:20511718, ECO:0000269|PubMed:21865597}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- ACTIVITY REGULATION: Two specific sites, one in the kinase domain (Thr-
+CC       193) and the other in the C-terminal regulatory region (Ser-356), need
+CC       to be phosphorylated for its full activation.
+CC   -!- INTERACTION:
+CC       Q9HBY8; P08238: HSP90AB1; NbExp=2; IntAct=EBI-3914329, EBI-352572;
+CC       Q9HBY8-2; Q9BW71: HIRIP3; NbExp=5; IntAct=EBI-12143041, EBI-723624;
+CC       Q9HBY8-2; O15305: PMM2; NbExp=5; IntAct=EBI-12143041, EBI-10182608;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:21865597}. Nucleus
+CC       {ECO:0000269|PubMed:21865597}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1; Synonyms=alpha;
+CC         IsoId=Q9HBY8-2; Sequence=Displayed;
+CC       Name=2; Synonyms=beta;
+CC         IsoId=Q9HBY8-1; Sequence=VSP_060876;
+CC       Name=3;
+CC         IsoId=Q9HBY8-3; Sequence=VSP_060877;
+CC   -!- TISSUE SPECIFICITY: Highly expressed in liver, kidney and pancreas, and
+CC       at lower levels in brain. {ECO:0000269|PubMed:10548550}.
+CC   -!- PTM: Activated by phosphorylation on Ser-356 by an unknown kinase (may
+CC       be mTORC2 but not confirmed), transforming it into a substrate for
+CC       PDPK1 which then phosphorylates it on Thr-193.
+CC       {ECO:0000269|PubMed:10548550}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. AGC Ser/Thr
+CC       protein kinase family. {ECO:0000305}.
+CC   -!- CAUTION: Not regulated by serum or glucocorticoids. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AF169034; AAF12757.2; -; mRNA.
+DR   EMBL; AF186470; AAG17012.1; -; mRNA.
+DR   EMBL; AY987010; AAX88805.1; -; mRNA.
+DR   EMBL; BT020098; AAV38901.1; -; mRNA.
+DR   EMBL; Z98752; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC014037; AAH14037.3; -; mRNA.
+DR   EMBL; BC065511; AAH65511.1; -; mRNA.
+DR   CCDS; CCDS13320.1; -. [Q9HBY8-2]
+DR   CCDS; CCDS13321.1; -. [Q9HBY8-2]
+DR   RefSeq; NP_001186193.1; NM_001199264.1. [Q9HBY8-2]
+DR   RefSeq; NP_057360.2; NM_016276.3. [Q9HBY8-1]
+DR   RefSeq; NP_733794.1; NM_170693.2. [Q9HBY8-2]
+DR   AlphaFoldDB; Q9HBY8; -.
+DR   SMR; Q9HBY8; -.
+DR   BioGRID; 115416; 28.
+DR   IntAct; Q9HBY8; 20.
+DR   STRING; 9606.ENSP00000340608; -.
+DR   BindingDB; Q9HBY8; -.
+DR   ChEMBL; CHEMBL5794; -.
+DR   GuidetoPHARMACOLOGY; 1535; -.
+DR   iPTMnet; Q9HBY8; -.
+DR   PhosphoSitePlus; Q9HBY8; -.
+DR   BioMuta; SGK2; -.
+DR   DMDM; 28558166; -.
+DR   jPOST; Q9HBY8; -.
+DR   MassIVE; Q9HBY8; -.
+DR   MaxQB; Q9HBY8; -.
+DR   PaxDb; Q9HBY8; -.
+DR   PeptideAtlas; Q9HBY8; -.
+DR   PRIDE; Q9HBY8; -.
+DR   ProteomicsDB; 81612; -. [Q9HBY8-1]
+DR   ProteomicsDB; 81613; -. [Q9HBY8-2]
+DR   ProteomicsDB; 81614; -. [Q9HBY8-3]
+DR   Antibodypedia; 1638; 324 antibodies from 31 providers.
+DR   DNASU; 10110; -.
+DR   Ensembl; ENST00000341458.10; ENSP00000340608.5; ENSG00000101049.18. [Q9HBY8-2]
+DR   Ensembl; ENST00000373100.7; ENSP00000362192.1; ENSG00000101049.18. [Q9HBY8-2]
+DR   Ensembl; ENST00000423407.7; ENSP00000392795.3; ENSG00000101049.18. [Q9HBY8-2]
+DR   Ensembl; ENST00000426287.3; ENSP00000412214.2; ENSG00000101049.18. [Q9HBY8-2]
+DR   GeneID; 10110; -.
+DR   KEGG; hsa:10110; -.
+DR   MANE-Select; ENST00000373100.7; ENSP00000362192.1; NM_170693.3; NP_733794.1.
+DR   UCSC; uc002xkr.4; human. [Q9HBY8-2]
+DR   CTD; 10110; -.
+DR   DisGeNET; 10110; -.
+DR   GeneCards; SGK2; -.
+DR   HGNC; HGNC:13900; SGK2.
+DR   HPA; ENSG00000101049; Tissue enhanced (intestine, kidney, liver).
+DR   MIM; 607589; gene.
+DR   neXtProt; NX_Q9HBY8; -.
+DR   OpenTargets; ENSG00000101049; -.
+DR   VEuPathDB; HostDB:ENSG00000101049; -.
+DR   eggNOG; KOG0598; Eukaryota.
+DR   GeneTree; ENSGT00940000153776; -.
+DR   InParanoid; Q9HBY8; -.
+DR   OrthoDB; 614710at2759; -.
+DR   PhylomeDB; Q9HBY8; -.
+DR   TreeFam; TF320906; -.
+DR   PathwayCommons; Q9HBY8; -.
+DR   Reactome; R-HSA-2672351; Stimuli-sensing channels.
+DR   SignaLink; Q9HBY8; -.
+DR   SIGNOR; Q9HBY8; -.
+DR   BioGRID-ORCS; 10110; 11 hits in 1106 CRISPR screens.
+DR   ChiTaRS; SGK2; human.
+DR   GeneWiki; SGK2; -.
+DR   GenomeRNAi; 10110; -.
+DR   Pharos; Q9HBY8; Tchem.
+DR   PRO; PR:Q9HBY8; -.
+DR   Proteomes; UP000005640; Chromosome 20.
+DR   RNAct; Q9HBY8; protein.
+DR   Bgee; ENSG00000101049; Expressed in mucosa of transverse colon and 141 other tissues.
+DR   ExpressionAtlas; Q9HBY8; baseline and differential.
+DR   Genevisible; Q9HBY8; HS.
+DR   GO; GO:0005829; C:cytosol; TAS:Reactome.
+DR   GO; GO:0005654; C:nucleoplasm; IDA:HPA.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0015459; F:potassium channel regulator activity; IDA:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IBA:GO_Central.
+DR   GO; GO:0017080; F:sodium channel regulator activity; TAS:UniProtKB.
+DR   GO; GO:0035556; P:intracellular signal transduction; IBA:GO_Central.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IBA:GO_Central.
+DR   GO; GO:0032411; P:positive regulation of transporter activity; TAS:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; TAS:ProtInc.
+DR   GO; GO:0001558; P:regulation of cell growth; TAS:UniProtKB.
+DR   GO; GO:0042127; P:regulation of cell population proliferation; TAS:UniProtKB.
+DR   GO; GO:0006979; P:response to oxidative stress; TAS:ProtInc.
+DR   InterPro; IPR000961; AGC-kinase_C.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR017892; Pkinase_C.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   Pfam; PF00433; Pkinase_C; 1.
+DR   SMART; SM00133; S_TK_X; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS51285; AGC_KINASE_CTER; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; ATP-binding; Cytoplasm; Kinase; Nucleotide-binding;
+KW   Nucleus; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Transferase.
+FT   CHAIN           1..367
+FT                   /note="Serine/threonine-protein kinase Sgk2"
+FT                   /id="PRO_0000086646"
+FT   DOMAIN          35..292
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   DOMAIN          293..367
+FT                   /note="AGC-kinase C-terminal"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00618"
+FT   REGION          1..26
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOTIF           68..78
+FT                   /note="Nuclear localization signal"
+FT                   /evidence="ECO:0000250"
+FT   ACT_SITE        159
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         41..49
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         64
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         10
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q8R4U9"
+FT   MOD_RES         193
+FT                   /note="Phosphothreonine; by PDPK1"
+FT                   /evidence="ECO:0000269|PubMed:10548550"
+FT   MOD_RES         334
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00618"
+FT   MOD_RES         356
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00618"
+FT   MOD_RES         357
+FT                   /note="Phosphotyrosine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00618"
+FT   VAR_SEQ         1
+FT                   /note="M -> MQGLLTSGRKPSGGGRCTGRGGWRGQWCLKPWMGGADPPTPTLSCLL
+FT                   LPVPPELPDHCYRM (in isoform 2)"
+FT                   /evidence="ECO:0000305"
+FT                   /id="VSP_060876"
+FT   VAR_SEQ         1
+FT                   /note="M -> MQGLLTSGRKPSGGGRCTELPDHCYRM (in isoform 3)"
+FT                   /evidence="ECO:0000305"
+FT                   /id="VSP_060877"
+FT   VARIANT         199
+FT                   /note="E -> K (in a lung adenocarcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041074"
+FT   VARIANT         289
+FT                   /note="H -> Y (in dbSNP:rs35793869)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041075"
+FT   MUTAGEN         356
+FT                   /note="S->D: Increased activation."
+FT                   /evidence="ECO:0000269|PubMed:10548550"
+FT   CONFLICT        108
+FT                   /note="K -> E (in Ref. 2; AAX88805)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        148
+FT                   /note="G -> D (in Ref. 3; AAV38901)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        277
+FT                   /note="L -> P (in Ref. 2; AAX88805)"
+FT                   /evidence="ECO:0000305"
+FT   VARIANT         Q9HBY8-1:12
+FT                   /note="S -> T (in dbSNP:rs33969356)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_083966"
+SQ   SEQUENCE   367 AA;  41175 MW;  E53F1ABE253F648B CRC64;
+     MNSSPAGTPS PQPSRANGNI NLGPSANPNA QPTDFDFLKV IGKGNYGKVL LAKRKSDGAF
+     YAVKVLQKKS ILKKKEQSHI MAERSVLLKN VRHPFLVGLR YSFQTPEKLY FVLDYVNGGE
+     LFFHLQRERR FLEPRARFYA AEVASAIGYL HSLNIIYRDL KPENILLDCQ GHVVLTDFGL
+     CKEGVEPEDT TSTFCGTPEY LAPEVLRKEP YDRAVDWWCL GAVLYEMLHG LPPFYSQDVS
+     QMYENILHQP LQIPGGRTVA ACDLLQSLLH KDQRQRLGSK ADFLEIKNHV FFSPINWDDL
+     YHKRLTPPFN PNVTGPADLK HFDPEFTQEA VSKSIGCTPD TVASSSGASS AFLGFSYAPE
+     DDDILDC
+//

@@ -1,0 +1,291 @@
+ID   MP2K6_HUMAN             Reviewed;         278 AA.
+AC   P52564-2;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   01-OCT-1996, sequence version 1.
+DT   12-OCT-2022, entry version 210.
+DE   RecName: Full=Isoform 2 of Dual specificity mitogen-activated protein kinase kinase 6;
+DE            Short=MAP kinase kinase 6;
+DE            Short=MAPKK 6;
+DE            EC=2.7.12.2;
+DE   AltName: Full=MAPK/ERK kinase 6;
+DE            Short=MEK 6;
+DE   AltName: Full=Stress-activated protein kinase kinase 3;
+DE            Short=SAPK kinase 3;
+DE            Short=SAPKK-3;
+DE            Short=SAPKK3;
+GN   Name=MAP2K6; Synonyms=MEK6, MKK6, PRKMK6, SKK3;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), MUTAGENESIS, AND FUNCTION.
+RC   TISSUE=Skeletal muscle;
+RX   PubMed=8622669; DOI=10.1128/mcb.16.3.1247;
+RA   Raingeaud J., Whitmarsh A.J., Barrett T., Derijard B., Davis R.J.;
+RT   "MKK3- and MKK6-regulated gene expression is mediated by the p38 mitogen-
+RT   activated protein kinase signal transduction pathway.";
+RL   Mol. Cell. Biol. 16:1247-1255(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), FUNCTION, AND ACTIVITY REGULATION.
+RC   TISSUE=T-cell;
+RX   PubMed=8626699; DOI=10.1074/jbc.271.19.11427;
+RA   Stein B., Brady H., Yang M.X., Young D.B., Barbosa M.S.;
+RT   "Cloning and characterization of MEK6, a novel member of the mitogen-
+RT   activated protein kinase kinase cascade.";
+RL   J. Biol. Chem. 271:11427-11433(1996).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS 1 AND 2), TISSUE SPECIFICITY, AND
+RP   MUTAGENESIS.
+RC   TISSUE=Placenta;
+RX   PubMed=8621675; DOI=10.1074/jbc.271.6.2886;
+RA   Han J., Lee J.-D., Jiang Y., Li Z., Feng L., Ulevitch R.J.;
+RT   "Characterization of the structure and function of a novel MAP kinase
+RT   kinase (MKK6).";
+RL   J. Biol. Chem. 271:2886-2891(1996).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), PHOSPHORYLATION, ACTIVITY
+RP   REGULATION, AND FUNCTION.
+RX   PubMed=8663074; DOI=10.1074/jbc.271.23.13675;
+RA   Moriguchi T., Kuroyanagi N., Yamaguchi K., Gotoh Y., Irie K., Kano T.,
+RA   Shirakabe K., Muro Y., Shibuya H., Matsumoto K., Nishida E., Hagiwara M.;
+RT   "A novel kinase cascade mediated by mitogen-activated protein kinase kinase
+RT   6 and MKK3.";
+RL   J. Biol. Chem. 271:13675-13679(1996).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=8861944; DOI=10.1002/j.1460-2075.1996.tb00790.x;
+RA   Cuenda A., Alonso G., Morrice N., Jones M., Meier R., Cohen P.,
+RA   Nebreda A.R.;
+RT   "Purification and cDNA cloning of SAPKK3, the major activator of RK/p38 in
+RT   stress- and cytokine-stimulated monocytes and epithelial cells.";
+RL   EMBO J. 15:4156-4164(1996).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Urinary bladder;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [7]
+RP   FUNCTION IN ACTIVATION OF MAPK13.
+RX   PubMed=9218798; DOI=10.1093/emboj/16.12.3563;
+RA   Goedert M., Cuenda A., Craxton M., Jakes R., Cohen P.;
+RT   "Activation of the novel stress-activated protein kinase SAPK4 by cytokines
+RT   and cellular stresses is mediated by SKK3 (MKK6); comparison of its
+RT   substrate specificity with that of other SAP kinases.";
+RL   EMBO J. 16:3563-3571(1997).
+RN   [8]
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=9768359; DOI=10.1016/s0960-9822(98)70442-7;
+RA   Ben-Levy R., Hooper S., Wilson R., Paterson H.F., Marshall C.J.;
+RT   "Nuclear export of the stress-activated protein kinase p38 mediated by its
+RT   substrate MAPKAP kinase-2.";
+RL   Curr. Biol. 8:1049-1057(1998).
+RN   [9]
+RP   PHOSPHORYLATION BY MAP3K4.
+RX   PubMed=9841871; DOI=10.1042/bj3360599;
+RA   Chan-Hui P.Y., Weaver R.;
+RT   "Human mitogen-activated protein kinase kinase kinase mediates the stress-
+RT   induced activation of mitogen-activated protein kinase cascades.";
+RL   Biochem. J. 336:599-609(1998).
+RN   [10]
+RP   PHOSPHORYLATION BY MAP3K2/MEKK2 AND MAP3K3/MEK3.
+RX   PubMed=10347227; DOI=10.1074/jbc.274.23.16604;
+RA   Deacon K., Blank J.L.;
+RT   "MEK kinase 3 directly activates MKK6 and MKK7, specific activators of the
+RT   p38 and c-Jun NH2-terminal kinases.";
+RL   J. Biol. Chem. 274:16604-16610(1999).
+RN   [11]
+RP   INTERACTION WITH TAOK2, AND PHOSPHORYLATION BY TAOK2.
+RX   PubMed=10497253; DOI=10.1074/jbc.274.40.28803;
+RA   Chen Z., Hutchison M., Cobb M.H.;
+RT   "Isolation of the protein kinase TAO2 and identification of its mitogen-
+RT   activated protein kinase/extracellular signal-regulated kinase kinase
+RT   binding domain.";
+RL   J. Biol. Chem. 274:28803-28807(1999).
+RN   [12]
+RP   PHOSPHORYLATION BY MAP3K7/TAK1.
+RX   PubMed=10094049; DOI=10.1038/18465;
+RA   Ninomiya-Tsuji J., Kishimoto K., Hiyama A., Inoue J., Cao Z., Matsumoto K.;
+RT   "The kinase TAK1 can activate the NIK-I kappaB as well as the MAP kinase
+RT   cascade in the IL-1 signalling pathway.";
+RL   Nature 398:252-256(1999).
+RN   [13]
+RP   CLEAVAGE BY ANTHRAX LETHAL FACTOR.
+RX   PubMed=11104681; DOI=10.1042/bj3520739;
+RA   Vitale G., Bernardi L., Napolitani G., Mock M., Montecucco C.;
+RT   "Susceptibility of mitogen-activated protein kinase kinase family members
+RT   to proteolysis by anthrax lethal factor.";
+RL   Biochem. J. 352:739-745(2000).
+RN   [14]
+RP   FUNCTION.
+RX   PubMed=10961885;
+RA   Visconti R., Gadina M., Chiariello M., Chen E.H., Stancato L.F.,
+RA   Gutkind J.S., O'Shea J.J.;
+RT   "Importance of the MKK6/p38 pathway for interleukin-12-induced STAT4 serine
+RT   phosphorylation and transcriptional activity.";
+RL   Blood 96:1844-1852(2000).
+RN   [15]
+RP   FUNCTION.
+RX   PubMed=11727828; DOI=10.1515/bc.2001.178;
+RA   Bode J.G., Ludwig S., Freitas C.A., Schaper F., Ruhl M., Melmed S.,
+RA   Heinrich P.C., Haussinger D.;
+RT   "The MKK6/p38 mitogen-activated protein kinase pathway is capable of
+RT   inducing SOCS3 gene expression and inhibits IL-6-induced transcription.";
+RL   Biol. Chem. 382:1447-1453(2001).
+RN   [16]
+RP   PHOSPHORYLATION BY MAP3K5/ASK1.
+RX   PubMed=11689443; DOI=10.1093/emboj/20.21.6028;
+RA   Morita K., Saitoh M., Tobiume K., Matsuura H., Enomoto S., Nishitoh H.,
+RA   Ichijo H.;
+RT   "Negative feedback regulation of ASK1 by protein phosphatase 5 (PP5) in
+RT   response to oxidative stress.";
+RL   EMBO J. 20:6028-6036(2001).
+RN   [17]
+RP   PHOSPHORYLATION BY TAOK2.
+RX   PubMed=11279118; DOI=10.1074/jbc.m100681200;
+RA   Chen Z., Cobb M.H.;
+RT   "Regulation of stress-responsive mitogen-activated protein (MAP) kinase
+RT   pathways by TAO2.";
+RL   J. Biol. Chem. 276:16070-16075(2001).
+RN   [18]
+RP   PHOSPHORYLATION BY MAP3K7/TAK1.
+RX   PubMed=11460167; DOI=10.1038/35085597;
+RA   Wang C., Deng L., Hong M., Akkaraju G.R., Inoue J., Chen Z.J.;
+RT   "TAK1 is a ubiquitin-dependent kinase of MKK and IKK.";
+RL   Nature 412:346-351(2001).
+RN   [19]
+RP   INTERACTION WITH EIF2AK2, AND PHOSPHORYLATION.
+RX   PubMed=15229216; DOI=10.1074/jbc.m406554200;
+RA   Silva A.M., Whitmore M., Xu Z., Jiang Z., Li X., Williams B.R.;
+RT   "Protein kinase R (PKR) interacts with and activates mitogen-activated
+RT   protein kinase kinase 6 (MKK6) in response to double-stranded RNA
+RT   stimulation.";
+RL   J. Biol. Chem. 279:37670-37676(2004).
+RN   [20]
+RP   INTERACTION WITH DCTN1, AND MICROTUBULE-BINDING.
+RX   PubMed=15375157; DOI=10.1074/jbc.c400333200;
+RA   Cheung P.Y., Zhang Y., Long J., Lin S., Zhang M., Jiang Y., Wu Z.;
+RT   "p150(Glued), Dynein, and microtubules are specifically required for
+RT   activation of MKK3/6 and p38 MAPKs.";
+RL   J. Biol. Chem. 279:45308-45311(2004).
+RN   [21]
+RP   FUNCTION IN PHOSPHORYLATION OF PAK6.
+RX   PubMed=15550393; DOI=10.1074/jbc.m406701200;
+RA   Kaur R., Liu X., Gjoerup O., Zhang A., Yuan X., Balk S.P., Schneider M.C.,
+RA   Lu M.L.;
+RT   "Activation of p21-activated kinase 6 by MAP kinase kinase 6 and p38 MAP
+RT   kinase.";
+RL   J. Biol. Chem. 280:3323-3330(2005).
+RN   [22]
+RP   DOMAIN.
+RX   PubMed=15866172; DOI=10.1016/j.molcel.2005.04.001;
+RA   Takekawa M., Tatebayashi K., Saito H.;
+RT   "Conserved docking site is essential for activation of mammalian MAP kinase
+RT   kinases by specific MAP kinase kinase kinases.";
+RL   Mol. Cell 18:295-306(2005).
+RN   [23]
+RP   ACETYLATION AT SER-207 AND THR-211, PHOSPHORYLATION AT SER-207 AND THR-211,
+RP   INACTIVATION BY YERSINIA YOPJ (MICROBIAL INFECTION), AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY.
+RX   PubMed=16728640; DOI=10.1126/science.1126867;
+RA   Mukherjee S., Keitany G., Li Y., Wang Y., Ball H.L., Goldsmith E.J.,
+RA   Orth K.;
+RT   "Yersinia YopJ acetylates and inhibits kinase activation by blocking
+RT   phosphorylation.";
+RL   Science 312:1211-1214(2006).
+RN   [24]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [25]
+RP   PHOSPHORYLATION BY MAP3K5/ASK1, ACTIVITY REGULATION, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY.
+RX   PubMed=20364819; DOI=10.1021/bi100010j;
+RA   Sturchler E., Feurstein D., McDonald P., Duckett D.;
+RT   "Mechanism of oxidative stress-induced ASK1-catalyzed MKK6
+RT   phosphorylation.";
+RL   Biochemistry 49:4094-4102(2010).
+RN   [26]
+RP   FUNCTION.
+RX   PubMed=20869211; DOI=10.1016/j.jdermsci.2010.08.006;
+RA   Kim M.Y., Choi T.Y., Kim J.H., Lee J.H., Kim J.G., Sohn K.C., Yoon K.S.,
+RA   Kim C.D., Lee J.H., Yoon T.J.;
+RT   "MKK6 increases the melanocyte dendricity through the regulation of Rho
+RT   family GTPases.";
+RL   J. Dermatol. Sci. 60:114-119(2010).
+RN   [27]
+RP   REVIEW ON ACTIVITY REGULATION, AND REVIEW ON FUNCTION.
+RX   PubMed=9779990; DOI=10.1038/sj.onc.1202251;
+RA   Dhanasekaran N., Premkumar Reddy E.;
+RT   "Signaling by dual specificity kinases.";
+RL   Oncogene 17:1447-1455(1998).
+RN   [28]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [29]
+RP   ACETYLATION AT SER-207 AND THR-211 (MICROBIAL INFECTION).
+RX   PubMed=22802624; DOI=10.1073/pnas.1008203109;
+RA   Paquette N., Conlon J., Sweet C., Rus F., Wilson L., Pereira A.,
+RA   Rosadini C.V., Goutagny N., Weber A.N., Lane W.S., Shaffer S.A.,
+RA   Maniatis S., Fitzgerald K.A., Stuart L., Silverman N.;
+RT   "Serine/threonine acetylation of TGFbeta-activated kinase (TAK1) by
+RT   Yersinia pestis YopJ inhibits innate immune signaling.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:12710-12715(2012).
+RN   [30]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [31]
+RP   X-RAY CRYSTALLOGRAPHY (2.35 ANGSTROMS) OF 45-332 OF MUTANT ASP-207 AND
+RP   ASP-211, AND SUBUNIT.
+RX   PubMed=19141286; DOI=10.1016/j.str.2008.11.007;
+RA   Min X., Akella R., He H., Humphreys J.M., Tsutakawa S.E., Lee S.J.,
+RA   Tainer J.A., Cobb M.H., Goldsmith E.J.;
+RT   "The structure of the MAP2K MEK6 reveals an autoinhibitory dimer.";
+RL   Structure 17:96-104(2009).
+RN   [32]
+RP   X-RAY CRYSTALLOGRAPHY (2.26 ANGSTROMS) OF 47-334.
+RG   Structural genomics consortium (SGC);
+RT   "Crystal structure of human mitogen-activated protein kinase kinase 6
+RT   (mek6) activated mutant (s207d, t211d).";
+RL   Submitted (JUL-2011) to the PDB data bank.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1; Synonyms=MKK6b;
+CC         IsoId=P52564-1; Sequence=Displayed;
+CC       Name=2; Synonyms=MKK6;
+CC         IsoId=P52564-2; Sequence=VSP_004882;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS82194.1; -.
+DR   ProteomicsDB; 56488; -.
+DR   Ensembl; ENST00000589647.5; ENSP00000467213.1; ENSG00000108984.15.
+DR   Ensembl; ENST00000613873.4; ENSP00000477701.1; ENSG00000108984.15.
+DR   Proteomes; UP000005640; Chromosome 17.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   278 AA;  31339 MW;  1EE7FC1B26B11AE4 CRC64;
+     MELGRGAYGV VEKMRHVPSG QIMAVKRIRA TVNSQEQKRL LMDLDISMRT VDCPFTVTFY
+     GALFREGDVW ICMELMDTSL DKFYKQVIDK GQTIPEDILG KIAVSIVKAL EHLHSKLSVI
+     HRDVKPSNVL INALGQVKMC DFGISGYLVD SVAKTIDAGC KPYMAPERIN PELNQKGYSV
+     KSDIWSLGIT MIELAILRFP YDSWGTPFQQ LKQVVEEPSP QLPADKFSAE FVDFTSQCLK
+     KNSKERPTYP ELMQHPFFTL HESKGTDVAS FVKLILGD
+//

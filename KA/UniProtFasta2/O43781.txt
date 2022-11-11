@@ -1,0 +1,558 @@
+ID   DYRK3_HUMAN             Reviewed;         588 AA.
+AC   O43781; D3DT79; Q7Z752; Q9HBY6; Q9HBY7;
+DT   27-APR-2001, integrated into UniProtKB/Swiss-Prot.
+DT   26-JUN-2007, sequence version 3.
+DT   12-OCT-2022, entry version 192.
+DE   RecName: Full=Dual specificity tyrosine-phosphorylation-regulated kinase 3;
+DE            EC=2.7.12.1 {ECO:0000269|PubMed:23415227, ECO:0000269|PubMed:29634919, ECO:0000269|PubMed:29973724, ECO:0000269|PubMed:9748265};
+DE   AltName: Full=Regulatory erythroid kinase {ECO:0000303|PubMed:10779429};
+DE            Short=REDK {ECO:0000303|PubMed:10779429};
+GN   Name=DYRK3 {ECO:0000312|HGNC:HGNC:3094};
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), CATALYTIC ACTIVITY, AND
+RP   AUTOPHOSPHORYLATION.
+RC   TISSUE=Fetal brain;
+RX   PubMed=9748265; DOI=10.1074/jbc.273.40.25893;
+RA   Becker W., Weber Y., Wetzel K., Eirmbter K., Tejedor F.J., Joost H.-G.;
+RT   "Sequence characteristics, subcellular localization, and substrate
+RT   specificity of DYRK-related kinases, a novel family of dual specificity
+RT   protein kinases.";
+RL   J. Biol. Chem. 273:25893-25902(1998).
+RN   [2]
+RP   SEQUENCE REVISION TO N-TERMINUS.
+RA   Becker W.;
+RL   Submitted (MAY-2000) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=9845759;
+RA   Xia J., Yang X., Ruan Q., Pan Q., Liu C., Xie W., Deng H.;
+RT   "Molecular cloning and characterization of novel protein kinase gene
+RT   DYRK3.";
+RL   Zhonghua Yi Xue Yi Chuan Xue Za Zhi 15:327-332(1998).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS 1 AND 2), FUNCTION, COFACTOR,
+RP   SUBCELLULAR LOCATION, TISSUE SPECIFICITY, AND INDUCTION.
+RC   TISSUE=Skeletal muscle;
+RX   PubMed=10779429;
+RA   Lord K.A., Creasy C.L., King A.G., King C., Burns B.M., Lee J.C.,
+RA   Dillon S.B.;
+RT   "REDK, a novel human regulatory erythroid kinase.";
+RL   Blood 95:2838-2846(2000).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2).
+RC   TISSUE=Testis;
+RA   Zhou Z.M.;
+RT   "Cloning of the human testis-specific dual-specificity tyrosine-(Y)-
+RT   phosphorylation regulated kinase 5 (DYRK5) gene.";
+RL   Submitted (DEC-2000) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RA   Raya A., de la Luna S.;
+RL   Submitted (APR-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16710414; DOI=10.1038/nature04727;
+RA   Gregory S.G., Barlow K.F., McLay K.E., Kaul R., Swarbreck D., Dunham A.,
+RA   Scott C.E., Howe K.L., Woodfine K., Spencer C.C.A., Jones M.C., Gillson C.,
+RA   Searle S., Zhou Y., Kokocinski F., McDonald L., Evans R., Phillips K.,
+RA   Atkinson A., Cooper R., Jones C., Hall R.E., Andrews T.D., Lloyd C.,
+RA   Ainscough R., Almeida J.P., Ambrose K.D., Anderson F., Andrew R.W.,
+RA   Ashwell R.I.S., Aubin K., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Beasley H., Bethel G., Bird C.P., Bray-Allen S., Brown J.Y., Brown A.J.,
+RA   Buckley D., Burton J., Bye J., Carder C., Chapman J.C., Clark S.Y.,
+RA   Clarke G., Clee C., Cobley V., Collier R.E., Corby N., Coville G.J.,
+RA   Davies J., Deadman R., Dunn M., Earthrowl M., Ellington A.G., Errington H.,
+RA   Frankish A., Frankland J., French L., Garner P., Garnett J., Gay L.,
+RA   Ghori M.R.J., Gibson R., Gilby L.M., Gillett W., Glithero R.J.,
+RA   Grafham D.V., Griffiths C., Griffiths-Jones S., Grocock R., Hammond S.,
+RA   Harrison E.S.I., Hart E., Haugen E., Heath P.D., Holmes S., Holt K.,
+RA   Howden P.J., Hunt A.R., Hunt S.E., Hunter G., Isherwood J., James R.,
+RA   Johnson C., Johnson D., Joy A., Kay M., Kershaw J.K., Kibukawa M.,
+RA   Kimberley A.M., King A., Knights A.J., Lad H., Laird G., Lawlor S.,
+RA   Leongamornlert D.A., Lloyd D.M., Loveland J., Lovell J., Lush M.J.,
+RA   Lyne R., Martin S., Mashreghi-Mohammadi M., Matthews L., Matthews N.S.W.,
+RA   McLaren S., Milne S., Mistry S., Moore M.J.F., Nickerson T., O'Dell C.N.,
+RA   Oliver K., Palmeiri A., Palmer S.A., Parker A., Patel D., Pearce A.V.,
+RA   Peck A.I., Pelan S., Phelps K., Phillimore B.J., Plumb R., Rajan J.,
+RA   Raymond C., Rouse G., Saenphimmachak C., Sehra H.K., Sheridan E.,
+RA   Shownkeen R., Sims S., Skuce C.D., Smith M., Steward C., Subramanian S.,
+RA   Sycamore N., Tracey A., Tromans A., Van Helmond Z., Wall M., Wallis J.M.,
+RA   White S., Whitehead S.L., Wilkinson J.E., Willey D.L., Williams H.,
+RA   Wilming L., Wray P.W., Wu Z., Coulson A., Vaudin M., Sulston J.E.,
+RA   Durbin R.M., Hubbard T., Wooster R., Dunham I., Carter N.P., McVean G.,
+RA   Ross M.T., Harrow J., Olson M.V., Beck S., Rogers J., Bentley D.R.;
+RT   "The DNA sequence and biological annotation of human chromosome 1.";
+RL   Nature 441:315-321(2006).
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [9]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2).
+RC   TISSUE=Uterus;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [10]
+RP   SUBCELLULAR LOCATION, AND FUNCTION.
+RX   PubMed=20167603; DOI=10.1074/jbc.m110.102574;
+RA   Guo X., Williams J.G., Schug T.T., Li X.;
+RT   "DYRK1A and DYRK3 promote cell survival through phosphorylation and
+RT   activation of SIRT1.";
+RL   J. Biol. Chem. 285:13223-13232(2010).
+RN   [11]
+RP   SUBCELLULAR LOCATION, FUNCTION, CATALYTIC ACTIVITY, AND MUTAGENESIS OF
+RP   LYS-238.
+RX   PubMed=23415227; DOI=10.1016/j.cell.2013.01.033;
+RA   Wippich F., Bodenmiller B., Trajkovska M.G., Wanka S., Aebersold R.,
+RA   Pelkmans L.;
+RT   "Dual specificity kinase DYRK3 couples stress granule
+RT   condensation/dissolution to mTORC1 signaling.";
+RL   Cell 152:791-805(2013).
+RN   [12]
+RP   FUNCTION, CATALYTIC ACTIVITY, SUBCELLULAR LOCATION, UBIQUITINATION, AND
+RP   MUTAGENESIS OF LYS-238 AND 470-ARG--LYS-474.
+RX   PubMed=29973724; DOI=10.1038/s41586-018-0279-8;
+RA   Rai A.K., Chen J.X., Selbach M., Pelkmans L.;
+RT   "Kinase-controlled phase transition of membraneless organelles in
+RT   mitosis.";
+RL   Nature 559:211-216(2018).
+RN   [13] {ECO:0007744|PDB:5Y86}
+RP   X-RAY CRYSTALLOGRAPHY (1.90 ANGSTROMS) IN COMPLEX WITH HARMINE, FUNCTION,
+RP   CATALYTIC ACTIVITY, ACTIVITY REGULATION, PHOSPHORYLATION AT SER-350, AND
+RP   MUTAGENESIS OF LYS-238 AND SER-350.
+RX   PubMed=29634919; DOI=10.1016/j.jmb.2018.04.001;
+RA   Kim K., Cha J.S., Cho Y.S., Kim H., Chang N., Kim H.J., Cho H.S.;
+RT   "Crystal structure of human dual-specificity tyrosine-regulated kinase 3
+RT   reveals new structural features and insights into its auto-
+RT   phosphorylation.";
+RL   J. Mol. Biol. 430:1521-1530(2018).
+RN   [14]
+RP   VARIANT [LARGE SCALE ANALYSIS] LEU-239.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Dual-specificity protein kinase that promotes disassembly of
+CC       several types of membraneless organelles during mitosis, such as stress
+CC       granules, nuclear speckles and pericentriolar material
+CC       (PubMed:29973724). Dual-specificity tyrosine-regulated kinases (DYRKs)
+CC       autophosphorylate a critical tyrosine residue in their activation loop
+CC       and phosphorylate their substrate on serine and threonine residues
+CC       (PubMed:9748265, PubMed:29634919). Acts as a central dissolvase of
+CC       membraneless organelles during the G2-to-M transition, after the
+CC       nuclear-envelope breakdown: acts by mediating phosphorylation of
+CC       multiple serine and threonine residues in unstructured domains of
+CC       proteins, such as SRRM1 and PCM1 (PubMed:29973724). Does not mediate
+CC       disassembly of all membraneless organelles: disassembly of P-body and
+CC       nucleolus is not regulated by DYRK3 (PubMed:29973724). Dissolution of
+CC       membraneless organelles at the onset of mitosis is also required to
+CC       release mitotic regulators, such as ZNF207, from liquid-unmixed
+CC       organelles where they are sequestered and keep them dissolved during
+CC       mitosis (PubMed:29973724). Regulates mTORC1 by mediating the
+CC       dissolution of stress granules: during stressful conditions, DYRK3
+CC       partitions from the cytosol to the stress granule, together with mTORC1
+CC       components, which prevents mTORC1 signaling (PubMed:23415227). When
+CC       stress signals are gone, the kinase activity of DYRK3 is required for
+CC       the dissolution of stress granule and mTORC1 relocation to the cytosol:
+CC       acts by mediating the phosphorylation of the mTORC1 inhibitor AKT1S1,
+CC       allowing full reactivation of mTORC1 signaling (PubMed:23415227). Also
+CC       acts as a negative regulator of EPO-dependent erythropoiesis: may place
+CC       an upper limit on red cell production during stress erythropoiesis
+CC       (PubMed:10779429). Inhibits cell death due to cytokine withdrawal in
+CC       hematopoietic progenitor cells (PubMed:10779429). Promotes cell
+CC       survival upon genotoxic stress through phosphorylation of SIRT1: this
+CC       in turn inhibits p53/TP53 activity and apoptosis (PubMed:20167603).
+CC       {ECO:0000269|PubMed:10779429, ECO:0000269|PubMed:20167603,
+CC       ECO:0000269|PubMed:23415227, ECO:0000269|PubMed:29634919,
+CC       ECO:0000269|PubMed:29973724, ECO:0000269|PubMed:9748265}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.12.1;
+CC         Evidence={ECO:0000269|PubMed:23415227, ECO:0000269|PubMed:29634919,
+CC         ECO:0000269|PubMed:29973724, ECO:0000269|PubMed:9748265};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.12.1; Evidence={ECO:0000269|PubMed:23415227,
+CC         ECO:0000269|PubMed:29634919, ECO:0000269|PubMed:29973724,
+CC         ECO:0000269|PubMed:9748265};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.12.1;
+CC         Evidence={ECO:0000269|PubMed:23415227, ECO:0000269|PubMed:29634919,
+CC         ECO:0000269|PubMed:29973724, ECO:0000269|PubMed:9748265};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000269|PubMed:10779429};
+CC   -!- ACTIVITY REGULATION: Protein kinase activity is activated following
+CC       autophosphorylation at Tyr-369 (PubMed:9748265). Inhibited by harmine,
+CC       an ATP competitive inhibitor (PubMed:29634919). Inhibited by small-
+CC       compound GSK-626616 (PubMed:29973724). {ECO:0000269|PubMed:29634919,
+CC       ECO:0000269|PubMed:29973724, ECO:0000269|PubMed:9748265}.
+CC   -!- SUBUNIT: Interacts with SIRT1. {ECO:0000250|UniProtKB:Q922Y0}.
+CC   -!- INTERACTION:
+CC       O43781-2; Q9H8Y8: GORASP2; NbExp=5; IntAct=EBI-13332019, EBI-739467;
+CC   -!- SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:10779429,
+CC       ECO:0000269|PubMed:20167603, ECO:0000269|PubMed:29973724}. Cytoplasm
+CC       {ECO:0000269|PubMed:29973724}. Nucleus speckle
+CC       {ECO:0000269|PubMed:29973724}. Cytoplasmic granule
+CC       {ECO:0000269|PubMed:20167603, ECO:0000269|PubMed:23415227,
+CC       ECO:0000269|PubMed:29973724}. Cytoplasm, cytoskeleton, microtubule
+CC       organizing center, centrosome {ECO:0000269|PubMed:29973724}.
+CC       Note=Associates with membraneless organelles in the cytoplasm and
+CC       nucleus (PubMed:29973724). Shuttles between cytoplasm and stress
+CC       granules (PubMed:20167603). Localized predominantly on distinct
+CC       speckles distributed throughout the cytoplasm of the cell
+CC       (PubMed:20167603). At low concentration, showns a homogeneous
+CC       distribution throughout the cytoplasm and does not condense in
+CC       speckles. During oxidative and osmotic stress, localizes to stress
+CC       granules (PubMed:20167603). {ECO:0000269|PubMed:20167603,
+CC       ECO:0000269|PubMed:29973724}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1; Synonyms=Long {ECO:0000303|PubMed:10779429};
+CC         IsoId=O43781-1; Sequence=Displayed;
+CC       Name=2; Synonyms=Short {ECO:0000303|PubMed:10779429};
+CC         IsoId=O43781-2; Sequence=VSP_026178, VSP_026179;
+CC   -!- TISSUE SPECIFICITY: Isoform 1: Highly expressed in testis and in
+CC       hematopoietic tissue such as fetal liver, and bone marrow
+CC       (PubMed:10779429). Isoform 1: Predominant form in fetal liver and bone
+CC       marrow (PubMed:10779429). Isoform 1: Present at low levels in heart,
+CC       pancreas, lymph node and thymus (PubMed:10779429). Isoform 2: Highly
+CC       expressed in testis and in hematopoietic tissue such as fetal liver,
+CC       and bone marrow (PubMed:10779429). Isoform 2: Predominant form in
+CC       testis. Isoform 2: Present at low levels in heart, pancreas, lymph node
+CC       and thymus (PubMed:10779429). {ECO:0000269|PubMed:10779429}.
+CC   -!- INDUCTION: By EPO/erythropoietin. {ECO:0000269|PubMed:10779429}.
+CC   -!- DOMAIN: The N-terminal domain, which is intrinsically disordered, is
+CC       required for stress granule localization.
+CC       {ECO:0000269|PubMed:23415227}.
+CC   -!- PTM: Ubiquitinated at anaphase by the anaphase-promoting complex
+CC       (APC/C), leading to its degradation by the proteasome.
+CC       {ECO:0000269|PubMed:29973724}.
+CC   -!- PTM: Protein kinase activity is activated following autophosphorylation
+CC       at Tyr-369 (Probable). Autophosphorylation at Ser-350 stabilizes the
+CC       protein and enhances the protein kinase activity (PubMed:9748265).
+CC       {ECO:0000269|PubMed:9748265, ECO:0000305|PubMed:9748265}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CMGC Ser/Thr
+CC       protein kinase family. MNB/DYRK subfamily. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; Y12735; CAA73266.2; -; mRNA.
+DR   EMBL; AF186773; AAG17028.1; -; mRNA.
+DR   EMBL; AF186774; AAG17029.1; -; mRNA.
+DR   EMBL; AF327561; AAK16443.1; -; mRNA.
+DR   EMBL; AY590695; AAT06103.1; -; mRNA.
+DR   EMBL; AL591846; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471100; EAW93533.1; -; Genomic_DNA.
+DR   EMBL; CH471100; EAW93534.1; -; Genomic_DNA.
+DR   EMBL; BC015501; AAH15501.1; -; mRNA.
+DR   CCDS; CCDS30999.1; -. [O43781-1]
+DR   CCDS; CCDS31000.1; -. [O43781-2]
+DR   RefSeq; NP_001004023.1; NM_001004023.1. [O43781-2]
+DR   RefSeq; NP_003573.2; NM_003582.2. [O43781-1]
+DR   RefSeq; XP_005273372.1; XM_005273315.4. [O43781-2]
+DR   PDB; 5Y86; X-ray; 1.90 A; A=1-588.
+DR   PDBsum; 5Y86; -.
+DR   AlphaFoldDB; O43781; -.
+DR   SMR; O43781; -.
+DR   BioGRID; 114022; 10.
+DR   IntAct; O43781; 28.
+DR   MINT; O43781; -.
+DR   STRING; 9606.ENSP00000356076; -.
+DR   BindingDB; O43781; -.
+DR   ChEMBL; CHEMBL4575; -.
+DR   GuidetoPHARMACOLOGY; 2012; -.
+DR   iPTMnet; O43781; -.
+DR   PhosphoSitePlus; O43781; -.
+DR   BioMuta; DYRK3; -.
+DR   jPOST; O43781; -.
+DR   MassIVE; O43781; -.
+DR   MaxQB; O43781; -.
+DR   PaxDb; O43781; -.
+DR   PeptideAtlas; O43781; -.
+DR   PRIDE; O43781; -.
+DR   ProteomicsDB; 49168; -. [O43781-1]
+DR   ProteomicsDB; 49169; -. [O43781-2]
+DR   Antibodypedia; 34587; 238 antibodies from 28 providers.
+DR   DNASU; 8444; -.
+DR   Ensembl; ENST00000367106.1; ENSP00000356073.1; ENSG00000143479.18. [O43781-2]
+DR   Ensembl; ENST00000367108.7; ENSP00000356075.3; ENSG00000143479.18. [O43781-2]
+DR   Ensembl; ENST00000367109.8; ENSP00000356076.2; ENSG00000143479.18. [O43781-1]
+DR   GeneID; 8444; -.
+DR   KEGG; hsa:8444; -.
+DR   MANE-Select; ENST00000367109.8; ENSP00000356076.2; NM_003582.4; NP_003573.2.
+DR   UCSC; uc001hei.4; human. [O43781-1]
+DR   CTD; 8444; -.
+DR   DisGeNET; 8444; -.
+DR   GeneCards; DYRK3; -.
+DR   HGNC; HGNC:3094; DYRK3.
+DR   HPA; ENSG00000143479; Tissue enhanced (testis).
+DR   MIM; 603497; gene.
+DR   neXtProt; NX_O43781; -.
+DR   OpenTargets; ENSG00000143479; -.
+DR   PharmGKB; PA27551; -.
+DR   VEuPathDB; HostDB:ENSG00000143479; -.
+DR   eggNOG; KOG0667; Eukaryota.
+DR   GeneTree; ENSGT00940000159878; -.
+DR   HOGENOM; CLU_000288_5_13_1; -.
+DR   InParanoid; O43781; -.
+DR   OMA; CDDPTFI; -.
+DR   OrthoDB; 870358at2759; -.
+DR   PhylomeDB; O43781; -.
+DR   TreeFam; TF314624; -.
+DR   BRENDA; 2.7.12.1; 2681.
+DR   PathwayCommons; O43781; -.
+DR   SignaLink; O43781; -.
+DR   SIGNOR; O43781; -.
+DR   BioGRID-ORCS; 8444; 11 hits in 1114 CRISPR screens.
+DR   ChiTaRS; DYRK3; human.
+DR   GeneWiki; DYRK3; -.
+DR   GenomeRNAi; 8444; -.
+DR   Pharos; O43781; Tchem.
+DR   PRO; PR:O43781; -.
+DR   Proteomes; UP000005640; Chromosome 1.
+DR   RNAct; O43781; protein.
+DR   Bgee; ENSG00000143479; Expressed in type B pancreatic cell and 150 other tissues.
+DR   ExpressionAtlas; O43781; baseline and differential.
+DR   Genevisible; O43781; HS.
+DR   GO; GO:0005737; C:cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0010494; C:cytoplasmic stress granule; IDA:UniProtKB.
+DR   GO; GO:0005856; C:cytoskeleton; IBA:GO_Central.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0043231; C:intracellular membrane-bounded organelle; IDA:HPA.
+DR   GO; GO:0016607; C:nuclear speck; IDA:UniProtKB.
+DR   GO; GO:0005654; C:nucleoplasm; IDA:HPA.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0000242; C:pericentriolar material; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IDA:UniProtKB.
+DR   GO; GO:0000287; F:magnesium ion binding; IDA:UniProtKB.
+DR   GO; GO:0004672; F:protein kinase activity; IDA:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0004712; F:protein serine/threonine/tyrosine kinase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0007049; P:cell cycle; IEA:UniProtKB-KW.
+DR   GO; GO:0051301; P:cell division; IEA:UniProtKB-KW.
+DR   GO; GO:0030218; P:erythrocyte differentiation; IDA:UniProtKB.
+DR   GO; GO:0043066; P:negative regulation of apoptotic process; IEA:Ensembl.
+DR   GO; GO:0043518; P:negative regulation of DNA damage response, signal transduction by p53 class mediator; IEA:Ensembl.
+DR   GO; GO:0035063; P:nuclear speck organization; IDA:UniProtKB.
+DR   GO; GO:1903008; P:organelle disassembly; IDA:UniProtKB.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IBA:GO_Central.
+DR   GO; GO:0018107; P:peptidyl-threonine phosphorylation; IBA:GO_Central.
+DR   GO; GO:1902751; P:positive regulation of cell cycle G2/M phase transition; IDA:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0080135; P:regulation of cellular response to stress; IMP:UniProtKB.
+DR   GO; GO:1903432; P:regulation of TORC1 signaling; IMP:UniProtKB.
+DR   GO; GO:0035617; P:stress granule disassembly; IDA:UniProtKB.
+DR   Gene3D; 3.30.10.30; -; 1.
+DR   InterPro; IPR042521; DYRK.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Cell cycle; Cell division;
+KW   Cytoplasm; Cytoskeleton; Kinase; Magnesium; Metal-binding; Mitosis;
+KW   Nucleotide-binding; Nucleus; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Transferase; Tyrosine-protein kinase;
+KW   Ubl conjugation.
+FT   CHAIN           1..588
+FT                   /note="Dual specificity tyrosine-phosphorylation-regulated
+FT                   kinase 3"
+FT                   /id="PRO_0000085938"
+FT   DOMAIN          209..522
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1..188
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000305|PubMed:23415227"
+FT   MOTIF           468..481
+FT                   /note="Nuclear localization signal"
+FT                   /evidence="ECO:0000269|PubMed:29973724"
+FT   ACT_SITE        335
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         215..223
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000305|PubMed:29634919"
+FT   BINDING         238
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000269|PubMed:23415227, ECO:0000269|PubMed:29634919"
+FT   BINDING         288..291
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000305|PubMed:29634919"
+FT   MOD_RES         350
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:29634919"
+FT   MOD_RES         369
+FT                   /note="Phosphotyrosine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q922Y0"
+FT   VAR_SEQ         1..20
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:10779429,
+FT                   ECO:0000303|PubMed:15489334, ECO:0000303|Ref.5"
+FT                   /id="VSP_026178"
+FT   VAR_SEQ         21..26
+FT                   /note="PPQQRR -> MKWKEK (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:10779429,
+FT                   ECO:0000303|PubMed:15489334, ECO:0000303|Ref.5"
+FT                   /id="VSP_026179"
+FT   VARIANT         239
+FT                   /note="M -> L"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040464"
+FT   MUTAGEN         238
+FT                   /note="K->M: Kinase dead; Induces formation of stress
+FT                   granules-like in absence of stress. Impaired dissolution of
+FT                   membraneless organelles during mitosis, such as stress
+FT                   granules, nuclear speckles and pericentriolar material."
+FT                   /evidence="ECO:0000269|PubMed:23415227,
+FT                   ECO:0000269|PubMed:29634919, ECO:0000269|PubMed:29973724"
+FT   MUTAGEN         350
+FT                   /note="S->A: Decreased stability of the protein."
+FT                   /evidence="ECO:0000269|PubMed:29634919"
+FT   MUTAGEN         350
+FT                   /note="S->E,D: Phosphomimetic mutant; increased stability
+FT                   of the protein."
+FT                   /evidence="ECO:0000269|PubMed:29634919"
+FT   MUTAGEN         470..474
+FT                   /note="RRGKK->AAGAA: Abolishes localization to the nucleus,
+FT                   leading to impaired dissolution of nuclear speckles during
+FT                   mitosis."
+FT                   /evidence="ECO:0000269|PubMed:29973724"
+FT   CONFLICT        313
+FT                   /note="R -> H (in Ref. 9; AAH15501)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        396
+FT                   /note="G -> R (in Ref. 1; CAA73266)"
+FT                   /evidence="ECO:0000305"
+FT   HELIX           143..149
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   TURN            150..153
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           156..161
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           162..164
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           185..188
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   TURN            206..208
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   STRAND          209..218
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   STRAND          221..228
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   TURN            229..232
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   STRAND          233..240
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           244..263
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   TURN            266..269
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   STRAND          274..280
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   STRAND          283..288
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           295..301
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   TURN            302..304
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           309..328
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           338..340
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   STRAND          341..345
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   STRAND          351..353
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           356..358
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           373..375
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           378..382
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           389..404
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           414..425
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           430..434
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           439..441
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   STRAND          452..456
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   STRAND          462..465
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           483..486
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   TURN            487..489
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           493..502
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           507..509
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   HELIX           513..518
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+FT   TURN            520..522
+FT                   /evidence="ECO:0007829|PDB:5Y86"
+SQ   SEQUENCE   588 AA;  65714 MW;  9950F51C39AFED82 CRC64;
+     MGGTARGPGR KDAGPPGAGL PPQQRRLGDG VYDTFMMIDE TKCPPCSNVL CNPSEPPPPR
+     RLNMTTEQFT GDHTQHFLDG GEMKVEQLFQ EFGNRKSNTI QSDGISDSEK CSPTVSQGKS
+     SDCLNTVKSN SSSKAPKVVP LTPEQALKQY KHHLTAYEKL EIINYPEIYF VGPNAKKRHG
+     VIGGPNNGGY DDADGAYIHV PRDHLAYRYE VLKIIGKGSF GQVARVYDHK LRQYVALKMV
+     RNEKRFHRQA AEEIRILEHL KKQDKTGSMN VIHMLESFTF RNHVCMAFEL LSIDLYELIK
+     KNKFQGFSVQ LVRKFAQSIL QSLDALHKNK IIHCDLKPEN ILLKHHGRSS TKVIDFGSSC
+     FEYQKLYTYI QSRFYRAPEI ILGSRYSTPI DIWSFGCILA ELLTGQPLFP GEDEGDQLAC
+     MMELLGMPPP KLLEQSKRAK YFINSKGIPR YCSVTTQADG RVVLVGGRSR RGKKRGPPGS
+     KDWGTALKGC DDYLFIEFLK RCLHWDPSAR LTPAQALRHP WISKSVPRPL TTIDKVSGKR
+     VVNPASAFQG LGSKLPPVVG IANKLKANLM SETNGSIPLC SVLPKLIS
+//

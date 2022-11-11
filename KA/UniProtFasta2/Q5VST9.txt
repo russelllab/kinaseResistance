@@ -1,0 +1,1755 @@
+ID   OBSCN_HUMAN             Reviewed;        7968 AA.
+AC   Q5VST9; Q2A664; Q5T7G8; Q5T7G9; Q5VSU2; Q86YC7; Q8NHN0; Q8NHN1; Q8NHN2;
+AC   Q8NHN3; Q8NHN4; Q8NHN5; Q8NHN6; Q8NHN7; Q8NHN8; Q8NHN9; Q96AA2; Q9HCD3;
+AC   Q9HCL6;
+DT   16-MAY-2006, integrated into UniProtKB/Swiss-Prot.
+DT   25-NOV-2008, sequence version 3.
+DT   03-AUG-2022, entry version 194.
+DE   RecName: Full=Obscurin;
+DE            EC=2.7.11.1 {ECO:0000250|UniProtKB:A2AAJ9};
+DE   AltName: Full=Obscurin-RhoGEF;
+DE   AltName: Full=Obscurin-myosin light chain kinase;
+DE            Short=Obscurin-MLCK;
+GN   Name=OBSCN; Synonyms=KIAA1556, KIAA1639;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA / MRNA] (ISOFORM 3), VARIANTS THR-51;
+RP   ARG-502; ASP-1508 THR-3300; ARG-4381; ARG-4450 AND HIS-4534, FUNCTION, AND
+RP   INTERACTION WITH TTN AND CALMODULIN.
+RC   TISSUE=Heart;
+RX   PubMed=11448995; DOI=10.1083/jcb.200102110;
+RA   Young P.W., Ehler E., Gautel M.;
+RT   "Obscurin, a giant sarcomeric Rho guanine nucleotide exchange factor
+RT   protein involved in sarcomere assembly.";
+RL   J. Cell Biol. 154:123-136(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16710414; DOI=10.1038/nature04727;
+RA   Gregory S.G., Barlow K.F., McLay K.E., Kaul R., Swarbreck D., Dunham A.,
+RA   Scott C.E., Howe K.L., Woodfine K., Spencer C.C.A., Jones M.C., Gillson C.,
+RA   Searle S., Zhou Y., Kokocinski F., McDonald L., Evans R., Phillips K.,
+RA   Atkinson A., Cooper R., Jones C., Hall R.E., Andrews T.D., Lloyd C.,
+RA   Ainscough R., Almeida J.P., Ambrose K.D., Anderson F., Andrew R.W.,
+RA   Ashwell R.I.S., Aubin K., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Beasley H., Bethel G., Bird C.P., Bray-Allen S., Brown J.Y., Brown A.J.,
+RA   Buckley D., Burton J., Bye J., Carder C., Chapman J.C., Clark S.Y.,
+RA   Clarke G., Clee C., Cobley V., Collier R.E., Corby N., Coville G.J.,
+RA   Davies J., Deadman R., Dunn M., Earthrowl M., Ellington A.G., Errington H.,
+RA   Frankish A., Frankland J., French L., Garner P., Garnett J., Gay L.,
+RA   Ghori M.R.J., Gibson R., Gilby L.M., Gillett W., Glithero R.J.,
+RA   Grafham D.V., Griffiths C., Griffiths-Jones S., Grocock R., Hammond S.,
+RA   Harrison E.S.I., Hart E., Haugen E., Heath P.D., Holmes S., Holt K.,
+RA   Howden P.J., Hunt A.R., Hunt S.E., Hunter G., Isherwood J., James R.,
+RA   Johnson C., Johnson D., Joy A., Kay M., Kershaw J.K., Kibukawa M.,
+RA   Kimberley A.M., King A., Knights A.J., Lad H., Laird G., Lawlor S.,
+RA   Leongamornlert D.A., Lloyd D.M., Loveland J., Lovell J., Lush M.J.,
+RA   Lyne R., Martin S., Mashreghi-Mohammadi M., Matthews L., Matthews N.S.W.,
+RA   McLaren S., Milne S., Mistry S., Moore M.J.F., Nickerson T., O'Dell C.N.,
+RA   Oliver K., Palmeiri A., Palmer S.A., Parker A., Patel D., Pearce A.V.,
+RA   Peck A.I., Pelan S., Phelps K., Phillimore B.J., Plumb R., Rajan J.,
+RA   Raymond C., Rouse G., Saenphimmachak C., Sehra H.K., Sheridan E.,
+RA   Shownkeen R., Sims S., Skuce C.D., Smith M., Steward C., Subramanian S.,
+RA   Sycamore N., Tracey A., Tromans A., Van Helmond Z., Wall M., Wallis J.M.,
+RA   White S., Whitehead S.L., Wilkinson J.E., Willey D.L., Williams H.,
+RA   Wilming L., Wray P.W., Wu Z., Coulson A., Vaudin M., Sulston J.E.,
+RA   Durbin R.M., Hubbard T., Wooster R., Dunham I., Carter N.P., McVean G.,
+RA   Ross M.T., Harrow J., Olson M.V., Beck S., Rogers J., Bentley D.R.;
+RT   "The DNA sequence and biological annotation of human chromosome 1.";
+RL   Nature 441:315-321(2006).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 2734-4428 (ISOFORM 5), AND NUCLEOTIDE
+RP   SEQUENCE [MRNA] OF 6009-7968 (ISOFORM 1).
+RC   TISSUE=Cardiac myocyte;
+RX   PubMed=16625316; DOI=10.1007/s10974-005-9025-6;
+RA   Fukuzawa A., Idowu S., Gautel M.;
+RT   "Complete human gene structure of obscurin: implications for isoform
+RT   generation by differential splicing.";
+RL   J. Muscle Res. Cell Motil. 26:427-434(2005).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 5386-7968 (ISOFORM 2), NUCLEOTIDE
+RP   SEQUENCE [LARGE SCALE MRNA] OF 2726-7968 (ISOFORM 4), AND VARIANT VAL-7172.
+RC   TISSUE=Brain;
+RX   PubMed=10997877; DOI=10.1093/dnares/7.4.271;
+RA   Nagase T., Kikuno R., Nakayama M., Hirosawa M., Ohara O.;
+RT   "Prediction of the coding sequences of unidentified human genes. XVIII. The
+RT   complete sequences of 100 new cDNA clones from brain which code for large
+RT   proteins in vitro.";
+RL   DNA Res. 7:273-281(2000).
+RN   [5]
+RP   INTERACTION WITH TTN.
+RX   PubMed=11717165; DOI=10.1161/hh2301.100981;
+RA   Bang M.-L., Centner T., Fornoff F., Geach A.J., Gotthardt M., McNabb M.,
+RA   Witt C.C., Labeit D., Gregorio C.C., Granzier H., Labeit S.;
+RT   "The complete gene sequence of titin, expression of an unusual ~700 kDa
+RT   titin isoform and its interaction with obscurin identify a novel Z-line to
+RT   I-band linking system.";
+RL   Circ. Res. 89:1065-1072(2001).
+RN   [6]
+RP   ALTERNATIVE SPLICING, AND TISSUE SPECIFICITY.
+RX   PubMed=11814696; DOI=10.1016/s0378-1119(01)00795-8;
+RA   Russell M.W., Raeker M.O., Korytkowski K.A., Sonneman K.J.;
+RT   "Identification, tissue expression and chromosomal localization of human
+RT   obscurin-MLCK, a member of the titin and Dbl families of myosin light chain
+RT   kinases.";
+RL   Gene 282:237-246(2002).
+RN   [7]
+RP   SUBCELLULAR LOCATION, AND INTERACTION WITH ANK1.
+RX   PubMed=12527750; DOI=10.1083/jcb.200208109;
+RA   Bagnato P., Barone V., Giacomello E., Rossi D., Sorrentino V.;
+RT   "Binding of an ankyrin-1 isoform to obscurin suggests a molecular link
+RT   between the sarcoplasmic reticulum and myofibrils in striated muscles.";
+RL   J. Cell Biol. 160:245-253(2003).
+RN   [8]
+RP   CHROMOSOMAL TRANSLOCATION WITH PTHB1.
+RX   PubMed=12618763; DOI=10.1038/sj.onc.1206332;
+RA   Vernon E.G., Malik K., Reynolds P., Powlesland R., Dallosso A.R.,
+RA   Jackson S., Henthorn K., Green E.D., Brown K.W.;
+RT   "The parathyroid hormone-responsive B1 gene is interrupted by a
+RT   t(1;7)(q42;p15) breakpoint associated with Wilms' tumour.";
+RL   Oncogene 22:1371-1380(2003).
+RN   [9]
+RP   FUNCTION.
+RX   PubMed=16205939; DOI=10.1007/s00418-005-0069-x;
+RA   Borisov A.B., Sutter S.B., Kontrogianni-Konstantopoulos A., Bloch R.J.,
+RA   Westfall M.V., Russell M.W.;
+RT   "Essential role of obscurin in cardiac myofibrillogenesis and hypertrophic
+RT   response: evidence from small interfering RNA-mediated gene silencing.";
+RL   Histochem. Cell Biol. 125:227-238(2006).
+RN   [10]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-6831 AND SER-7244, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [11]
+RP   PHOSPHATIDYLINOSITOL-PHOSPHATE-BINDING, AND MUTAGENESIS OF ARG-5975 AND
+RP   ARG-5980.
+RX   PubMed=28826662; DOI=10.1016/j.yjmcc.2017.08.004;
+RA   Ackermann M.A., King B., Lieberman N.A.P., Bobbili P.J., Rudloff M.,
+RA   Berndsen C.E., Wright N.T., Hecker P.A., Kontrogianni-Konstantopoulos A.;
+RT   "Novel obscurins mediate cardiomyocyte adhesion and size via the
+RT   PI3K/AKT/mTOR signaling pathway.";
+RL   J. Mol. Cell. Cardiol. 111:27-39(2017).
+RN   [12]
+RP   STRUCTURE BY NMR OF 2826-3806.
+RG   RIKEN structural genomics initiative (RSGI);
+RT   "Solution structure of the Ig domains of human obscurin.";
+RL   Submitted (AUG-2007) to the PDB data bank.
+RN   [13]
+RP   STRUCTURE BY NMR OF 5601-5668.
+RA   Pfuhl M., Gautel M.;
+RT   "Solution structure of the SH3 domain of obscurin.";
+RL   Submitted (APR-2005) to the PDB data bank.
+RN   [14]
+RP   VARIANTS [LARGE SCALE ANALYSIS] VAL-1136; HIS-1792; MET-1930; LYS-2090;
+RP   PHE-2314; GLN-3983; HIS-4558; GLN-4810 AND THR-5071.
+RX   PubMed=16959974; DOI=10.1126/science.1133427;
+RA   Sjoeblom T., Jones S., Wood L.D., Parsons D.W., Lin J., Barber T.D.,
+RA   Mandelker D., Leary R.J., Ptak J., Silliman N., Szabo S., Buckhaults P.,
+RA   Farrell C., Meeh P., Markowitz S.D., Willis J., Dawson D., Willson J.K.V.,
+RA   Gazdar A.F., Hartigan J., Wu L., Liu C., Parmigiani G., Park B.H.,
+RA   Bachman K.E., Papadopoulos N., Vogelstein B., Kinzler K.W.,
+RA   Velculescu V.E.;
+RT   "The consensus coding sequences of human breast and colorectal cancers.";
+RL   Science 314:268-274(2006).
+RN   [15]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ARG-502; SER-804; ARG-1027; SER-1086;
+RP   THR-1090; THR-1091; PRO-1101; ARG-1121; VAL-1133; VAL-1136; GLN-1156;
+RP   HIS-1248; VAL-1532; MET-1566; THR-1601; VAL-3389; GLU-3426; GLY-3834;
+RP   SER-4823; GLN-5598 AND GLN-6473.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [16]
+RP   VARIANT ARG-4492.
+RX   PubMed=25173926; DOI=10.1161/circgenetics.113.000486;
+RA   Girolami F., Iascone M., Tomberli B., Bardi S., Benelli M., Marseglia G.,
+RA   Pescucci C., Pezzoli L., Sana M.E., Basso C., Marziliano N., Merlini P.A.,
+RA   Fornaro A., Cecchi F., Torricelli F., Olivotto I.;
+RT   "Novel alpha-actinin 2 variant associated with familial hypertrophic
+RT   cardiomyopathy and juvenile atrial arrhythmias: a massively parallel
+RT   sequencing study.";
+RL   Circ. Cardiovasc. Genet. 7:741-750(2014).
+CC   -!- FUNCTION: Structural component of striated muscles which plays a role
+CC       in myofibrillogenesis. Probably involved in the assembly of myosin into
+CC       sarcomeric A bands in striated muscle (PubMed:11448995,
+CC       PubMed:16205939). Has serine/threonine protein kinase activity and
+CC       phosphorylates N-cadherin CDH2 and sodium/potassium-transporting ATPase
+CC       subunit ATP1B1 (By similarity). Binds (via the PH domain) strongly to
+CC       phosphatidylinositol 3,4-bisphosphate (PtdIns(3,4)P2) and
+CC       phosphatidylinositol 4,5-bisphosphate (PtdIns(4,5)P2), and to a lesser
+CC       extent to phosphatidylinositol 3-phosphate (PtdIns(3)P),
+CC       phosphatidylinositol 4-phosphate (PtdIns(4)P), phosphatidylinositol 5-
+CC       phosphate (PtdIns(5)P) and phosphatidylinositol 3,4,5-trisphosphate
+CC       (PtdIns(3,4,5)P3) (PubMed:28826662). {ECO:0000250|UniProtKB:A2AAJ9,
+CC       ECO:0000269|PubMed:11448995, ECO:0000269|PubMed:16205939,
+CC       ECO:0000269|PubMed:28826662}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC         Evidence={ECO:0000250|UniProtKB:A2AAJ9};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1; Evidence={ECO:0000250|UniProtKB:A2AAJ9};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000250|UniProtKB:A2AAJ9};
+CC   -!- SUBUNIT: Interacts (via protein kinase domain 2) with CDH2 and (via
+CC       protein kinase domain 1) with ATP1B1 (By similarity). Isoform 3
+CC       interacts with TTN/titin and calmodulin (PubMed:11448995,
+CC       PubMed:11717165). Isoform 3 interacts with ANK1 isoform Mu17/ank1.5
+CC       (PubMed:12527750). {ECO:0000250|UniProtKB:A2AAJ9,
+CC       ECO:0000269|PubMed:11448995, ECO:0000269|PubMed:11717165,
+CC       ECO:0000269|PubMed:12527750}.
+CC   -!- INTERACTION:
+CC       Q5VST9; Q8WZ42: TTN; NbExp=15; IntAct=EBI-941850, EBI-681210;
+CC       Q5VST9-3; P16157: ANK1; NbExp=3; IntAct=EBI-941921, EBI-941686;
+CC       Q5VST9-3; P16157-17: ANK1; NbExp=8; IntAct=EBI-941921, EBI-941819;
+CC   -!- SUBCELLULAR LOCATION: [Isoform 3]: Cytoplasm, myofibril, sarcomere, M
+CC       line {ECO:0000269|PubMed:12527750}. Cytoplasm, myofibril, sarcomere, Z
+CC       line {ECO:0000269|PubMed:12527750}. Note=In differentiating skeletal
+CC       muscle cells, isoform 3 primarily localizes to the sarcomeric M-line
+CC       and less frequently to the Z-disk (PubMed:12527750). Isoform 3
+CC       colocalizes with ANK1 isoform Mu17/ank1.5 at the M-line in
+CC       differentiated skeletal muscle cells (PubMed:12527750).
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm, myofibril, sarcomere, M line
+CC       {ECO:0000250|UniProtKB:A2AAJ9}. Cytoplasm, myofibril, sarcomere, Z line
+CC       {ECO:0000250|UniProtKB:A2AAJ9}. Cell membrane, sarcolemma
+CC       {ECO:0000250|UniProtKB:A2AAJ9}. Nucleus {ECO:0000250|UniProtKB:A2AAJ9}.
+CC       Note=Colocalizes with CDH2 and ATP1B1 to the sarcolemma and to
+CC       intercalating disks in cardiac muscles. Colocalizes with ATP1B1 to M
+CC       line and Z line in cardiac muscles. {ECO:0000250|UniProtKB:A2AAJ9}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=5;
+CC         Comment=Additional isoforms seem to exist.;
+CC       Name=1; Synonyms=B, obscurin-MLCK giant kinase;
+CC         IsoId=Q5VST9-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q5VST9-2; Sequence=VSP_018436;
+CC       Name=3; Synonyms=unc-89-like;
+CC         IsoId=Q5VST9-3; Sequence=VSP_018437, VSP_018438;
+CC       Name=4;
+CC         IsoId=Q5VST9-5; Sequence=VSP_020086, VSP_020087;
+CC       Name=5;
+CC         IsoId=Q5VST9-6; Sequence=VSP_026970;
+CC   -!- PTM: Autophosphorylated by protein kinase domains 1 and 2.
+CC       {ECO:0000250|UniProtKB:A2AAJ9}.
+CC   -!- DISEASE: Note=A chromosomal aberration involving OBSCN has been found
+CC       in Wilms tumor. Translocation t(1;7)(q42;p15) with PTHB1.
+CC       {ECO:0000269|PubMed:12618763}.
+CC   -!- MISCELLANEOUS: [Isoform 3]: Lacks the kinase domain. Initially
+CC       described as obscurin. {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CAMK Ser/Thr
+CC       protein kinase family. {ECO:0000305}.
+CC   -!- CAUTION: Initially the name obscurin was used to describe isoform 3
+CC       which lacks the kinase domains. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=CAC85746.1; Type=Erroneous gene model prediction; Evidence={ECO:0000305};
+CC       Sequence=CAC85749.1; Type=Erroneous gene model prediction; Evidence={ECO:0000305};
+CC       Sequence=CAC85750.1; Type=Erroneous gene model prediction; Evidence={ECO:0000305};
+CC       Sequence=BAB13382.1; Type=Frameshift; Evidence={ECO:0000305};
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AJ002535; CAC44768.1; -; mRNA.
+DR   EMBL; AJ314896; CAC85745.1; -; Genomic_DNA.
+DR   EMBL; AJ314898; CAC85746.1; ALT_SEQ; Genomic_DNA.
+DR   EMBL; AJ314900; CAC85747.1; -; Genomic_DNA.
+DR   EMBL; AJ314901; CAC85749.1; ALT_SEQ; Genomic_DNA.
+DR   EMBL; AJ314903; CAC85750.1; ALT_SEQ; Genomic_DNA.
+DR   EMBL; AJ314904; CAC85751.1; -; Genomic_DNA.
+DR   EMBL; AJ314905; CAC85752.1; -; Genomic_DNA.
+DR   EMBL; AJ314906; CAC85753.1; -; Genomic_DNA.
+DR   EMBL; AJ314907; CAC85754.1; -; Genomic_DNA.
+DR   EMBL; AJ314908; CAC85755.1; -; Genomic_DNA.
+DR   EMBL; AL353593; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL359510; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL670729; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AM231061; CAJ76912.1; -; mRNA.
+DR   EMBL; AB046776; BAB13382.1; ALT_FRAME; mRNA.
+DR   EMBL; AB046859; BAB13465.2; -; mRNA.
+DR   CCDS; CCDS1570.2; -. [Q5VST9-3]
+DR   CCDS; CCDS58065.1; -. [Q5VST9-1]
+DR   RefSeq; NP_001092093.2; NM_001098623.2. [Q5VST9-1]
+DR   RefSeq; NP_443075.3; NM_052843.3. [Q5VST9-3]
+DR   PDB; 1V1C; NMR; -; A=5601-5668.
+DR   PDB; 2CR6; NMR; -; A=2999-3100.
+DR   PDB; 2DKU; NMR; -; A=2915-3004.
+DR   PDB; 2DM7; NMR; -; A=3551-3631.
+DR   PDB; 2E7B; NMR; -; A=3184-3273.
+DR   PDB; 2EDF; NMR; -; A=2826-2915.
+DR   PDB; 2EDH; NMR; -; A=3614-3713.
+DR   PDB; 2EDL; NMR; -; A=3801-3887.
+DR   PDB; 2EDQ; NMR; -; A=3713-3806.
+DR   PDB; 2EDR; NMR; -; A=3361-3449.
+DR   PDB; 2EDT; NMR; -; A=3449-3537.
+DR   PDB; 2EDW; NMR; -; A=3537-3630.
+DR   PDB; 2ENY; NMR; -; A=2735-2825.
+DR   PDB; 2EO1; NMR; -; A=1623-1712.
+DR   PDB; 2GQH; NMR; -; A=3450-3543.
+DR   PDB; 2MWC; NMR; -; A=4337-4429.
+DR   PDB; 2N56; NMR; -; A=4430-4524.
+DR   PDB; 2YZ8; X-ray; 2.00 A; A=3184-3273.
+DR   PDB; 4C4K; X-ray; 1.95 A; O=9-103.
+DR   PDB; 4RSV; X-ray; 2.41 A; A=4337-4429.
+DR   PDB; 4UOW; X-ray; 3.30 A; 0/2/4/6/8/A/C/E/G/I/K/M/O/Q/S/U/W/Y=110-203.
+DR   PDB; 5TZM; X-ray; 1.18 A; A=4431-4521.
+DR   PDB; 6MG9; NMR; -; A=4247-4338.
+DR   PDBsum; 1V1C; -.
+DR   PDBsum; 2CR6; -.
+DR   PDBsum; 2DKU; -.
+DR   PDBsum; 2DM7; -.
+DR   PDBsum; 2E7B; -.
+DR   PDBsum; 2EDF; -.
+DR   PDBsum; 2EDH; -.
+DR   PDBsum; 2EDL; -.
+DR   PDBsum; 2EDQ; -.
+DR   PDBsum; 2EDR; -.
+DR   PDBsum; 2EDT; -.
+DR   PDBsum; 2EDW; -.
+DR   PDBsum; 2ENY; -.
+DR   PDBsum; 2EO1; -.
+DR   PDBsum; 2GQH; -.
+DR   PDBsum; 2MWC; -.
+DR   PDBsum; 2N56; -.
+DR   PDBsum; 2YZ8; -.
+DR   PDBsum; 4C4K; -.
+DR   PDBsum; 4RSV; -.
+DR   PDBsum; 4UOW; -.
+DR   PDBsum; 5TZM; -.
+DR   PDBsum; 6MG9; -.
+DR   SMR; Q5VST9; -.
+DR   BioGRID; 123847; 50.
+DR   DIP; DIP-35727N; -.
+DR   IntAct; Q5VST9; 41.
+DR   MINT; Q5VST9; -.
+DR   GlyGen; Q5VST9; 1 site, 1 O-linked glycan (1 site).
+DR   iPTMnet; Q5VST9; -.
+DR   MetOSite; Q5VST9; -.
+DR   PhosphoSitePlus; Q5VST9; -.
+DR   BioMuta; OBSCN; -.
+DR   DMDM; 215274225; -.
+DR   EPD; Q5VST9; -.
+DR   jPOST; Q5VST9; -.
+DR   MassIVE; Q5VST9; -.
+DR   MaxQB; Q5VST9; -.
+DR   PeptideAtlas; Q5VST9; -.
+DR   PRIDE; Q5VST9; -.
+DR   ProteomicsDB; 65280; -. [Q5VST9-1]
+DR   ProteomicsDB; 65281; -. [Q5VST9-2]
+DR   ProteomicsDB; 65282; -. [Q5VST9-3]
+DR   ProteomicsDB; 65283; -. [Q5VST9-5]
+DR   ProteomicsDB; 65284; -. [Q5VST9-6]
+DR   Antibodypedia; 11615; 42 antibodies from 15 providers.
+DR   DNASU; 84033; -.
+DR   Ensembl; ENST00000284548.16; ENSP00000284548.11; ENSG00000154358.23. [Q5VST9-3]
+DR   Ensembl; ENST00000422127.5; ENSP00000409493.1; ENSG00000154358.23. [Q5VST9-1]
+DR   Ensembl; ENST00000636476.2; ENSP00000489816.2; ENSG00000154358.23. [Q5VST9-2]
+DR   Ensembl; ENST00000662438.1; ENSP00000499633.1; ENSG00000154358.23. [Q5VST9-6]
+DR   GeneID; 84033; -.
+DR   KEGG; hsa:84033; -.
+DR   UCSC; uc001hsn.4; human. [Q5VST9-1]
+DR   CTD; 84033; -.
+DR   DisGeNET; 84033; -.
+DR   GeneCards; OBSCN; -.
+DR   HGNC; HGNC:15719; OBSCN.
+DR   HPA; ENSG00000154358; Tissue enriched (skeletal).
+DR   MIM; 608616; gene.
+DR   neXtProt; NX_Q5VST9; -.
+DR   OpenTargets; ENSG00000154358; -.
+DR   PharmGKB; PA31888; -.
+DR   VEuPathDB; HostDB:ENSG00000154358; -.
+DR   GeneTree; ENSGT00940000154756; -.
+DR   HOGENOM; CLU_000031_0_0_1; -.
+DR   InParanoid; Q5VST9; -.
+DR   PhylomeDB; Q5VST9; -.
+DR   PathwayCommons; Q5VST9; -.
+DR   Reactome; R-HSA-193648; NRAGE signals death through JNK.
+DR   Reactome; R-HSA-416482; G alpha (12/13) signalling events.
+DR   Reactome; R-HSA-8980692; RHOA GTPase cycle.
+DR   Reactome; R-HSA-9013406; RHOQ GTPase cycle.
+DR   SignaLink; Q5VST9; -.
+DR   SIGNOR; Q5VST9; -.
+DR   BioGRID-ORCS; 84033; 13 hits in 1109 CRISPR screens.
+DR   ChiTaRS; OBSCN; human.
+DR   EvolutionaryTrace; Q5VST9; -.
+DR   GeneWiki; OBSCN; -.
+DR   GeneWiki; Obscurin; -.
+DR   GenomeRNAi; 84033; -.
+DR   Pharos; Q5VST9; Tbio.
+DR   PRO; PR:Q5VST9; -.
+DR   Proteomes; UP000005640; Chromosome 1.
+DR   RNAct; Q5VST9; protein.
+DR   Bgee; ENSG00000154358; Expressed in hindlimb stylopod muscle and 118 other tissues.
+DR   ExpressionAtlas; Q5VST9; baseline and differential.
+DR   Genevisible; Q5VST9; HS.
+DR   GO; GO:0005911; C:cell-cell junction; IBA:GO_Central.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IBA:GO_Central.
+DR   GO; GO:0031430; C:M band; ISS:BHF-UCL.
+DR   GO; GO:0030016; C:myofibril; NAS:BHF-UCL.
+DR   GO; GO:0016604; C:nuclear body; IDA:HPA.
+DR   GO; GO:0005886; C:plasma membrane; IDA:HPA.
+DR   GO; GO:0042383; C:sarcolemma; IEA:UniProtKB-SubCell.
+DR   GO; GO:0030018; C:Z disc; ISS:BHF-UCL.
+DR   GO; GO:0030506; F:ankyrin binding; IPI:BHF-UCL.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0005516; F:calmodulin binding; IEA:UniProtKB-KW.
+DR   GO; GO:0050839; F:cell adhesion molecule binding; IBA:GO_Central.
+DR   GO; GO:0005085; F:guanyl-nucleotide exchange factor activity; TAS:Reactome.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0005547; F:phosphatidylinositol-3,4,5-trisphosphate binding; IDA:UniProtKB.
+DR   GO; GO:0043325; F:phosphatidylinositol-3,4-bisphosphate binding; IDA:UniProtKB.
+DR   GO; GO:0032266; F:phosphatidylinositol-3-phosphate binding; IDA:UniProtKB.
+DR   GO; GO:0005546; F:phosphatidylinositol-4,5-bisphosphate binding; IDA:UniProtKB.
+DR   GO; GO:0070273; F:phosphatidylinositol-4-phosphate binding; IDA:UniProtKB.
+DR   GO; GO:0010314; F:phosphatidylinositol-5-phosphate binding; IDA:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0008307; F:structural constituent of muscle; NAS:BHF-UCL.
+DR   GO; GO:0031432; F:titin binding; IPI:BHF-UCL.
+DR   GO; GO:0098609; P:cell-cell adhesion; IBA:GO_Central.
+DR   GO; GO:0036309; P:protein localization to M-band; ISS:BHF-UCL.
+DR   GO; GO:0006468; P:protein phosphorylation; IEA:InterPro.
+DR   GO; GO:0051056; P:regulation of small GTPase mediated signal transduction; TAS:Reactome.
+DR   GO; GO:0045214; P:sarcomere organization; TAS:BHF-UCL.
+DR   CDD; cd00063; FN3; 3.
+DR   CDD; cd00160; RhoGEF; 1.
+DR   CDD; cd12025; SH3_Obscurin_like; 1.
+DR   Gene3D; 1.20.900.10; -; 1.
+DR   Gene3D; 2.30.29.30; -; 1.
+DR   Gene3D; 2.60.40.10; -; 61.
+DR   InterPro; IPR035899; DBL_dom_sf.
+DR   InterPro; IPR000219; DH-domain.
+DR   InterPro; IPR003961; FN3_dom.
+DR   InterPro; IPR036116; FN3_sf.
+DR   InterPro; IPR007110; Ig-like_dom.
+DR   InterPro; IPR036179; Ig-like_dom_sf.
+DR   InterPro; IPR013783; Ig-like_fold.
+DR   InterPro; IPR013098; Ig_I-set.
+DR   InterPro; IPR003599; Ig_sub.
+DR   InterPro; IPR003598; Ig_sub2.
+DR   InterPro; IPR013106; Ig_V-set.
+DR   InterPro; IPR000048; IQ_motif_EF-hand-BS.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR020682; Obscurin.
+DR   InterPro; IPR035526; Obscurin_SH3.
+DR   InterPro; IPR011993; PH-like_dom_sf.
+DR   InterPro; IPR001849; PH_domain.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   InterPro; IPR036028; SH3-like_dom_sf.
+DR   InterPro; IPR001452; SH3_domain.
+DR   InterPro; IPR008266; Tyr_kinase_AS.
+DR   PANTHER; PTHR47633:SF2; PTHR47633:SF2; 6.
+DR   Pfam; PF00041; fn3; 2.
+DR   Pfam; PF07679; I-set; 51.
+DR   Pfam; PF00612; IQ; 1.
+DR   Pfam; PF00069; Pkinase; 2.
+DR   Pfam; PF00621; RhoGEF; 1.
+DR   SMART; SM00060; FN3; 3.
+DR   SMART; SM00409; IG; 56.
+DR   SMART; SM00408; IGc2; 49.
+DR   SMART; SM00406; IGv; 14.
+DR   SMART; SM00015; IQ; 1.
+DR   SMART; SM00233; PH; 1.
+DR   SMART; SM00325; RhoGEF; 1.
+DR   SMART; SM00220; S_TKc; 2.
+DR   SUPFAM; SSF48065; SSF48065; 1.
+DR   SUPFAM; SSF48726; SSF48726; 57.
+DR   SUPFAM; SSF49265; SSF49265; 3.
+DR   SUPFAM; SSF50044; SSF50044; 1.
+DR   SUPFAM; SSF56112; SSF56112; 2.
+DR   PROSITE; PS50010; DH_2; 1.
+DR   PROSITE; PS50853; FN3; 3.
+DR   PROSITE; PS50835; IG_LIKE; 47.
+DR   PROSITE; PS50096; IQ; 1.
+DR   PROSITE; PS50003; PH_DOMAIN; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 2.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+DR   PROSITE; PS00109; PROTEIN_KINASE_TYR; 1.
+DR   PROSITE; PS50002; SH3; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Calmodulin-binding;
+KW   Cell membrane; Chromosomal rearrangement; Cytoplasm; Developmental protein;
+KW   Differentiation; Disulfide bond; Immunoglobulin domain; Kinase;
+KW   Lipid-binding; Magnesium; Membrane; Metal-binding; Muscle protein;
+KW   Nucleotide-binding; Nucleus; Phosphoprotein; Reference proteome; Repeat;
+KW   Serine/threonine-protein kinase; SH3 domain; Transferase.
+FT   CHAIN           1..7968
+FT                   /note="Obscurin"
+FT                   /id="PRO_0000235298"
+FT   DOMAIN          10..100
+FT                   /note="Ig-like 1"
+FT   DOMAIN          110..202
+FT                   /note="Ig-like 2"
+FT   DOMAIN          236..322
+FT                   /note="Ig-like 3"
+FT   DOMAIN          331..414
+FT                   /note="Ig-like 4"
+FT   DOMAIN          420..508
+FT                   /note="Ig-like 5"
+FT   DOMAIN          515..612
+FT                   /note="Fibronectin type-III 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00316"
+FT   DOMAIN          619..698
+FT                   /note="Ig-like 6"
+FT   DOMAIN          701..790
+FT                   /note="Ig-like 7"
+FT   DOMAIN          798..884
+FT                   /note="Ig-like 8"
+FT   DOMAIN          886..977
+FT                   /note="Ig-like 9"
+FT   DOMAIN          978..1066
+FT                   /note="Ig-like 10"
+FT   DOMAIN          1070..1161
+FT                   /note="Ig-like 11"
+FT   DOMAIN          1162..1252
+FT                   /note="Ig-like 12"
+FT   DOMAIN          1254..1345
+FT                   /note="Ig-like 13"
+FT   DOMAIN          1346..1432
+FT                   /note="Ig-like 14"
+FT   DOMAIN          1438..1524
+FT                   /note="Ig-like 15"
+FT   DOMAIN          1530..1621
+FT                   /note="Ig-like 16"
+FT   DOMAIN          1622..1719
+FT                   /note="Ig-like 17"
+FT   DOMAIN          1731..1808
+FT                   /note="Fibronectin type-III 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00316"
+FT   DOMAIN          1809..1894
+FT                   /note="Ig-like 18"
+FT   DOMAIN          1896..1982
+FT                   /note="Ig-like 19"
+FT   DOMAIN          1987..2071
+FT                   /note="Ig-like 20"
+FT   DOMAIN          2077..2162
+FT                   /note="Ig-like 21"
+FT   DOMAIN          2165..2249
+FT                   /note="Ig-like 22"
+FT   DOMAIN          2289..2380
+FT                   /note="Ig-like 23"
+FT   DOMAIN          2468..2559
+FT                   /note="Ig-like 24"
+FT   DOMAIN          2564..2643
+FT                   /note="Ig-like 25"
+FT   DOMAIN          2646..2730
+FT                   /note="Ig-like 26"
+FT   DOMAIN          2736..2823
+FT                   /note="Ig-like 27"
+FT   DOMAIN          2826..2908
+FT                   /note="Ig-like 28"
+FT   DOMAIN          2920..2999
+FT                   /note="Ig-like 29"
+FT   DOMAIN          3003..3092
+FT                   /note="Ig-like 30"
+FT   DOMAIN          3095..3183
+FT                   /note="Ig-like 31"
+FT   DOMAIN          3184..3268
+FT                   /note="Ig-like 32"
+FT   DOMAIN          3273..3356
+FT                   /note="Ig-like 33"
+FT   DOMAIN          3359..3444
+FT                   /note="Ig-like 34"
+FT   DOMAIN          3449..3532
+FT                   /note="Ig-like 35"
+FT   DOMAIN          3537..3620
+FT                   /note="Ig-like 36"
+FT   DOMAIN          3625..3708
+FT                   /note="Ig-like 37"
+FT   DOMAIN          3713..3796
+FT                   /note="Ig-like 38"
+FT   DOMAIN          3801..3884
+FT                   /note="Ig-like 39"
+FT   DOMAIN          3890..3973
+FT                   /note="Ig-like 40"
+FT   DOMAIN          3978..4062
+FT                   /note="Ig-like 41"
+FT   DOMAIN          4068..4160
+FT                   /note="Ig-like 42"
+FT   DOMAIN          4171..4239
+FT                   /note="Ig-like 43"
+FT   DOMAIN          4248..4337
+FT                   /note="Ig-like 44"
+FT   DOMAIN          4340..4427
+FT                   /note="Ig-like 45"
+FT   DOMAIN          4430..4518
+FT                   /note="Ig-like 46"
+FT   DOMAIN          4525..4619
+FT                   /note="Fibronectin type-III 3"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00316"
+FT   DOMAIN          4624..4714
+FT                   /note="Ig-like 47"
+FT   DOMAIN          4872..4901
+FT                   /note="IQ"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00116"
+FT   DOMAIN          4898..4989
+FT                   /note="Ig-like 48"
+FT   DOMAIN          5126..5215
+FT                   /note="Ig-like 49"
+FT   DOMAIN          5260..5349
+FT                   /note="Ig-like 50"
+FT   DOMAIN          5371..5467
+FT                   /note="Ig-like 51"
+FT   DOMAIN          5600..5667
+FT                   /note="SH3"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00192"
+FT   DOMAIN          5693..5877
+FT                   /note="DH"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00062"
+FT   DOMAIN          5895..6004
+FT                   /note="PH"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00145"
+FT   DOMAIN          6014..6097
+FT                   /note="Ig-like 52"
+FT   DOMAIN          6108..6200
+FT                   /note="Ig-like 53"
+FT   DOMAIN          6357..6445
+FT                   /note="Ig-like 54"
+FT   DOMAIN          6468..6721
+FT                   /note="Protein kinase 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   DOMAIN          7463..7552
+FT                   /note="Ig-like 55"
+FT   DOMAIN          7557..7649
+FT                   /note="Fibronectin type-III 4"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00316"
+FT   DOMAIN          7672..7924
+FT                   /note="Protein kinase 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          228..249
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          4749..4785
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          4820..4860
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          5238..5257
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          5554..5596
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          6237..6296
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          6777..6863
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          6952..7176
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          7217..7272
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        4749..4774
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        5574..5590
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        6785..6801
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        7050..7064
+FT                   /note="Pro residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        7077..7091
+FT                   /note="Pro residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        7115..7142
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        7155..7173
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        6587
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000250"
+FT   ACT_SITE        7791
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         5975
+FT                   /ligand="a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-
+FT                   inositol-4,5-bisphosphate)"
+FT                   /ligand_id="ChEBI:CHEBI:58456"
+FT                   /evidence="ECO:0000269|PubMed:28826662"
+FT   BINDING         5980
+FT                   /ligand="a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-
+FT                   inositol-3,4-bisphosphate)"
+FT                   /ligand_id="ChEBI:CHEBI:57658"
+FT                   /evidence="ECO:0000269|PubMed:28826662"
+FT   BINDING         6474..6482
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         6497
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         7678..7686
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         7701
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         395
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         2889
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         4015
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         4750
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         4754
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         4757
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         4788
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         4805
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         5563
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         5569
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         5571
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         5573
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A2AAJ9"
+FT   MOD_RES         6831
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         7244
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   DISULFID        31..82
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        259..311
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        354..404
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        819..870
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        912..962
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1004..1054
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1096..1146
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1188..1238
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1280..1330
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1372..1422
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1464..1514
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1556..1606
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1648..1698
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1723..1791
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        1830..1880
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        2187..2237
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        2311..2361
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        2490..2540
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        2668..2718
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        2848..2898
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        2937..2987
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3117..3167
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3206..3256
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3295..3344
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3383..3432
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3471..3520
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3559..3608
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3647..3696
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3735..3784
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3823..3872
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        3911..3961
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        4000..4050
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        4089..4141
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        4453..4508
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        4919..4971
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        5147..5199
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        6035..6087
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        6129..6182
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   DISULFID        7484..7536
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114"
+FT   VAR_SEQ         3886
+FT                   /note="R -> RALPARFTQDLKTKEASEGATATLQCELSKVAPVEWKKGPETLRDGG
+FT                   RYSLKQDGTRCELQIHDLSVADAGEYSCMCGQERTSATLTVRALPARFTEGLRNEEAME
+FT                   GATATLQCELSKAAPVEWRKGLEALRDGDKYSLRQDGAVCELQIHGLAMADNGVYSCVC
+FT                   GQERTSATLTVRALPARFIEDMRNQKATEGATVTLQCKLRKAAPVEWRKGPNTLKDGDR
+FT                   YSLKQDGTSCELQIRGLVIADAGEYSCICEQERTSATLTVRALPARFIEDVRNHEATEG
+FT                   ATAVLQCELSKAAPVEWRKGSETLRDGDRYSLRQDGTRCELQIRGLAVEDTGEYLCVCG
+FT                   QERTSATLTVRALPARFIDNMTNQEAREGATATLHCELSKVAPVEWRKGPETLRDGDRH
+FT                   SLRQDGTRCELQIRGLSVADAGEYSCVCGQERTSATLTIREATEGATAMLQCELSKVAP
+FT                   VEWRKGPETLRDGDRYNLRQDGTRCELQIHGLSVADTGEYSCVCGQEKTSATLTVK
+FT                   (in isoform 5)"
+FT                   /evidence="ECO:0000305"
+FT                   /id="VSP_026970"
+FT   VAR_SEQ         3888..3913
+FT                   /note="PQPVFREPLQSLQAEEGSTATLQCEL -> LPARIHSRSEDQGGLRRGHSYT
+FT                   AV (in isoform 4)"
+FT                   /evidence="ECO:0000303|PubMed:10997877"
+FT                   /id="VSP_020086"
+FT   VAR_SEQ         3914..7968
+FT                   /note="Missing (in isoform 4)"
+FT                   /evidence="ECO:0000303|PubMed:10997877"
+FT                   /id="VSP_020087"
+FT   VAR_SEQ         5753
+FT                   /note="S -> SS (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:10997877"
+FT                   /id="VSP_018436"
+FT   VAR_SEQ         6221..6620
+FT                   /note="DTTLERADQEVTSVLKRLLGPKAPGPSTGDLTGPGPCPRGAPALQETGSQPP
+FT                   VTGTSEAPAVPPRVPQPLLHEGPEQEPEAIARAQEWTVPIRMEGAAWPGAGTGELLWDV
+FT                   HSHVVRETTQRTYTYQAIDTHTARPPSMQVTIEDVQAQTGGTAQFEAIIEGDPQPSVTW
+FT                   YKDSVQLVDSTRLSQQQEGTTYSLVLRHVASKDAGVYTCLAQNTGGQVLCKAELLVLGG
+FT                   DNEPDSEKQSHRRKLHSFYEVKEEIGRGVFGFVKRVQHKGNKILCAAKFIPLRSRTRAQ
+FT                   AYRERDILAALSHPLVTGLLDQFETRKTLILILELCSSEELLDRLYRKGVVTEAEVKVY
+FT                   IQQLVEGLHYLHSHGVLHLDIKPSNILMVHPAREDIKICDFGFAQNITPAELQ -> VT
+FT                   EQETKVPKKTVIIEETITTVVKSPRGQRRSPSKSPSRSPSRCSASPLRPGLLAPDLLYL
+FT                   PGAGQPRRPEAEPGQKPVVPTLYVTEAEAHSPALPGLSGPQPKWVEVEETIEVRVKKMG
+FT                   PQGVSPTTEVPRSSSGHLFTLPGATPGGDPNSNNSNNKLLAQEAWAQGTAMVGVREPLV
+FT                   FRVDARGSVDWAASGMGSLEEEGTMEEAGEEEGEDGDAFVTEESQDTHSLGDRDPKILT
+FT                   HNGRMLTLADLEDYVPGEGETFHCGGPGPGAPDDPPCEVSVIQREIGEPTVGQPVLLSV
+FT                   GHALGPRGPLGLFRPEPRGASPPGPQVRSLEGTSFLLREAPARPVGSAPWTQSFCTRIR
+FT                   RSADSGQSSFTTELSTQTVNFGTVGETVTLHICPDRDGDEAAQP (in isoform
+FT                   3)"
+FT                   /evidence="ECO:0000303|PubMed:11448995"
+FT                   /id="VSP_018437"
+FT   VAR_SEQ         6621..7968
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:11448995"
+FT                   /id="VSP_018438"
+FT   VARIANT         51
+FT                   /note="A -> T (in dbSNP:rs1771487)"
+FT                   /evidence="ECO:0000269|PubMed:11448995"
+FT                   /id="VAR_026409"
+FT   VARIANT         502
+FT                   /note="Q -> R (in dbSNP:rs1771487)"
+FT                   /evidence="ECO:0000269|PubMed:11448995,
+FT                   ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_034618"
+FT   VARIANT         804
+FT                   /note="G -> S (in dbSNP:rs55950009)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042276"
+FT   VARIANT         908
+FT                   /note="A -> T (in dbSNP:rs1757153)"
+FT                   /id="VAR_047743"
+FT   VARIANT         1027
+FT                   /note="K -> R (in dbSNP:rs55760713)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042277"
+FT   VARIANT         1086
+FT                   /note="A -> S (in dbSNP:rs117147433)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042278"
+FT   VARIANT         1090
+FT                   /note="A -> T (in dbSNP:rs752906025)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042279"
+FT   VARIANT         1091
+FT                   /note="S -> T (in dbSNP:rs965007403)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042280"
+FT   VARIANT         1101
+FT                   /note="A -> P (in dbSNP:rs780907202)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042281"
+FT   VARIANT         1121
+FT                   /note="G -> R"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042282"
+FT   VARIANT         1133
+FT                   /note="L -> V (in dbSNP:rs777214598)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042283"
+FT   VARIANT         1136
+FT                   /note="A -> V (in a colorectal cancer sample; somatic
+FT                   mutation; dbSNP:rs950055015)"
+FT                   /evidence="ECO:0000269|PubMed:16959974,
+FT                   ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_035530"
+FT   VARIANT         1156
+FT                   /note="H -> Q"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042284"
+FT   VARIANT         1248
+FT                   /note="Q -> H (in dbSNP:rs199523598)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042285"
+FT   VARIANT         1508
+FT                   /note="V -> D (in dbSNP:rs7532342)"
+FT                   /id="VAR_034619"
+FT   VARIANT         1532
+FT                   /note="A -> V (in dbSNP:rs453140)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042286"
+FT   VARIANT         1566
+FT                   /note="T -> M (in dbSNP:rs56217040)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042287"
+FT   VARIANT         1601
+FT                   /note="A -> T (in dbSNP:rs55706639)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042288"
+FT   VARIANT         1792
+FT                   /note="R -> H (in a colorectal cancer sample; somatic
+FT                   mutation; dbSNP:rs750681123)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_035531"
+FT   VARIANT         1930
+FT                   /note="V -> M (in a colorectal cancer sample; somatic
+FT                   mutation; dbSNP:rs545316651)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_035532"
+FT   VARIANT         2090
+FT                   /note="E -> K (in a colorectal cancer sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_035533"
+FT   VARIANT         2106
+FT                   /note="D -> E (in dbSNP:rs1188721)"
+FT                   /id="VAR_047744"
+FT   VARIANT         2116
+FT                   /note="F -> L (in dbSNP:rs1188722)"
+FT                   /id="VAR_047745"
+FT   VARIANT         2314
+FT                   /note="S -> F (in a breast cancer sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_035534"
+FT   VARIANT         2529
+FT                   /note="R -> Q (in dbSNP:rs3795783)"
+FT                   /id="VAR_047746"
+FT   VARIANT         2720
+FT                   /note="V -> M (in dbSNP:rs1188697)"
+FT                   /id="VAR_047747"
+FT   VARIANT         2812
+FT                   /note="R -> W (in dbSNP:rs3795785)"
+FT                   /id="VAR_047748"
+FT   VARIANT         3300
+FT                   /note="A -> T (in dbSNP:rs437129)"
+FT                   /evidence="ECO:0000269|PubMed:11448995"
+FT                   /id="VAR_034620"
+FT   VARIANT         3372
+FT                   /note="E -> D (in dbSNP:rs3795789)"
+FT                   /id="VAR_047749"
+FT   VARIANT         3373
+FT                   /note="S -> C (in dbSNP:rs3795790)"
+FT                   /id="VAR_047750"
+FT   VARIANT         3389
+FT                   /note="A -> V (in dbSNP:rs770177081)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042289"
+FT   VARIANT         3426
+FT                   /note="D -> E"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042290"
+FT   VARIANT         3834
+FT                   /note="R -> G"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042291"
+FT   VARIANT         3983
+FT                   /note="R -> Q (in a colorectal cancer sample; somatic
+FT                   mutation; dbSNP:rs539154039)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_035535"
+FT   VARIANT         4039
+FT                   /note="G -> R (in dbSNP:rs435776)"
+FT                   /id="VAR_047751"
+FT   VARIANT         4381
+FT                   /note="H -> R (in dbSNP:rs1150912)"
+FT                   /evidence="ECO:0000269|PubMed:11448995"
+FT                   /id="VAR_034621"
+FT   VARIANT         4450
+FT                   /note="C -> R (in dbSNP:rs1188732)"
+FT                   /evidence="ECO:0000269|PubMed:11448995"
+FT                   /id="VAR_034622"
+FT   VARIANT         4492
+FT                   /note="L -> R (in dbSNP:rs369570923)"
+FT                   /evidence="ECO:0000269|PubMed:25173926"
+FT                   /id="VAR_074295"
+FT   VARIANT         4516
+FT                   /note="R -> W (in dbSNP:rs11810627)"
+FT                   /id="VAR_059429"
+FT   VARIANT         4534
+FT                   /note="R -> H (in dbSNP:rs4653942)"
+FT                   /evidence="ECO:0000269|PubMed:11448995"
+FT                   /id="VAR_026410"
+FT   VARIANT         4558
+FT                   /note="R -> H (in a colorectal cancer sample; somatic
+FT                   mutation; dbSNP:rs199865640)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_035536"
+FT   VARIANT         4642
+FT                   /note="S -> C (in dbSNP:rs1188729)"
+FT                   /id="VAR_056102"
+FT   VARIANT         4662
+FT                   /note="R -> C (in dbSNP:rs3795800)"
+FT                   /id="VAR_056103"
+FT   VARIANT         4666
+FT                   /note="G -> S (in dbSNP:rs3795801)"
+FT                   /id="VAR_056104"
+FT   VARIANT         4810
+FT                   /note="R -> Q (in a breast cancer sample; somatic mutation;
+FT                   dbSNP:rs570805670)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_035537"
+FT   VARIANT         4823
+FT                   /note="A -> S"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042292"
+FT   VARIANT         4962
+FT                   /note="D -> G (in dbSNP:rs373610)"
+FT                   /id="VAR_056105"
+FT   VARIANT         5071
+FT                   /note="A -> T (in a breast cancer sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_035538"
+FT   VARIANT         5269
+FT                   /note="L -> V (in dbSNP:rs369909)"
+FT                   /id="VAR_056106"
+FT   VARIANT         5575
+FT                   /note="R -> H (in dbSNP:rs3795809)"
+FT                   /id="VAR_056107"
+FT   VARIANT         5598
+FT                   /note="R -> Q (in dbSNP:rs867550675)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042293"
+FT   VARIANT         5891
+FT                   /note="Q -> E (in dbSNP:rs1188710)"
+FT                   /id="VAR_056108"
+FT   VARIANT         6473
+FT                   /note="E -> Q"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042294"
+FT   VARIANT         7172
+FT                   /note="A -> V (in dbSNP:rs500049)"
+FT                   /evidence="ECO:0000269|PubMed:10997877"
+FT                   /id="VAR_056109"
+FT   MUTAGEN         5975
+FT                   /note="R->A: Reduced binding to phosphatidylinositol
+FT                   4,5-bisphosphate."
+FT                   /evidence="ECO:0000269|PubMed:28826662"
+FT   MUTAGEN         5980
+FT                   /note="R->A: Reduced binding to phosphatidylinositol
+FT                   3,4-bisphosphate."
+FT                   /evidence="ECO:0000269|PubMed:28826662"
+FT   CONFLICT        888
+FT                   /note="V -> A (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        895
+FT                   /note="L -> P (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        897
+FT                   /note="R -> C (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        899..900
+FT                   /note="KL -> EV (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        904
+FT                   /note="A -> V (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        917
+FT                   /note="A -> D (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        919
+FT                   /note="T -> M (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        937..938
+FT                   /note="CM -> HV (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        941
+FT                   /note="T -> V (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        944
+FT                   /note="T -> M (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        952
+FT                   /note="A -> V (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        957
+FT                   /note="A -> S (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        965
+FT                   /note="G -> R (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        969
+FT                   /note="L -> V (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        972
+FT                   /note="H -> R (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        999
+FT                   /note="S -> N (in Ref. 1; CAC44768)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1011
+FT                   /note="T -> A (in Ref. 1; CAC44768)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1348
+FT                   /note="A -> V (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1355
+FT                   /note="L -> P (in Ref. 1; CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1357
+FT                   /note="H -> R (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1359
+FT                   /note="K -> E (in Ref. 1; CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1360
+FT                   /note="V -> L (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1367
+FT                   /note="I -> S (in Ref. 1; CAC85746/CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1394
+FT                   /note="S -> L (in Ref. 1; CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1397..1398
+FT                   /note="RM -> HV (in Ref. 1; CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1397
+FT                   /note="R -> C (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1401
+FT                   /note="V -> A (in Ref. 1; CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1401
+FT                   /note="V -> T (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1413
+FT                   /note="C -> G (in Ref. 1; CAC85746/CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1417
+FT                   /note="T -> A (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1428
+FT                   /note="R -> Q (in Ref. 1; CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1432
+FT                   /note="S -> H (in Ref. 1; CAC85746)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1445
+FT                   /note="E -> D (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1455
+FT                   /note="Q -> E (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1458
+FT                   /note="A -> T (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1461
+FT                   /note="T -> M (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1524
+FT                   /note="H -> R (in Ref. 1; CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1526
+FT                   /note="H -> Q (in Ref. 1; CAC85749)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1580..1582
+FT                   /note="VRM -> MRV (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1607
+FT                   /note="K -> E (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1610
+FT                   /note="D -> G (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1633
+FT                   /note="H -> C (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1653..1655
+FT                   /note="AQT -> GQM (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1673..1674
+FT                   /note="RV -> HM (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1677..1679
+FT                   /note="VGC -> SGY (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1692
+FT                   /note="E -> D (in Ref. 1; CAC44768/CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1704
+FT                   /note="Q -> R (in Ref. 1; CAC44768/CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1710
+FT                   /note="Q -> H (in Ref. 1; CAC44768/CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1848
+FT                   /note="L -> P (in Ref. 1; CAC44768)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        2014
+FT                   /note="P -> A (in Ref. 1; CAC85750)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        3126
+FT                   /note="V -> M (in Ref. 1; CAC44768)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        4155
+FT                   /note="T -> TG (in Ref. 3; CAC85752)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        4489
+FT                   /note="H -> Q (in Ref. 1; CAC44768)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        4959
+FT                   /note="T -> A (in Ref. 1; CAC44768)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        5243
+FT                   /note="S -> ST (in Ref. 1; CAC85753)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        5391
+FT                   /note="S -> F (in Ref. 4; BAB13465)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        5499..5500
+FT                   /note="LE -> FQ (in Ref. 1; CAC44768)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        6115
+FT                   /note="R -> L (in Ref. 1; CAC44768)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        6570
+FT                   /note="Q -> E (in Ref. 3; CAJ76912)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        6710..6711
+FT                   /note="PS -> SG (in Ref. 3; CAJ76912)"
+FT                   /evidence="ECO:0000305"
+FT   STRAND          9..14
+FT                   /evidence="ECO:0007829|PDB:4C4K"
+FT   STRAND          17..19
+FT                   /evidence="ECO:0007829|PDB:4C4K"
+FT   STRAND          27..37
+FT                   /evidence="ECO:0007829|PDB:4C4K"
+FT   STRAND          40..45
+FT                   /evidence="ECO:0007829|PDB:4C4K"
+FT   STRAND          53..61
+FT                   /evidence="ECO:0007829|PDB:4C4K"
+FT   STRAND          64..69
+FT                   /evidence="ECO:0007829|PDB:4C4K"
+FT   HELIX           74..76
+FT                   /evidence="ECO:0007829|PDB:4C4K"
+FT   STRAND          78..85
+FT                   /evidence="ECO:0007829|PDB:4C4K"
+FT   STRAND          87..97
+FT                   /evidence="ECO:0007829|PDB:4C4K"
+FT   STRAND          110..112
+FT                   /evidence="ECO:0007829|PDB:4UOW"
+FT   STRAND          117..122
+FT                   /evidence="ECO:0007829|PDB:4UOW"
+FT   STRAND          125..137
+FT                   /evidence="ECO:0007829|PDB:4UOW"
+FT   STRAND          142..145
+FT                   /evidence="ECO:0007829|PDB:4UOW"
+FT   STRAND          154..162
+FT                   /evidence="ECO:0007829|PDB:4UOW"
+FT   STRAND          164..171
+FT                   /evidence="ECO:0007829|PDB:4UOW"
+FT   HELIX           176..178
+FT                   /evidence="ECO:0007829|PDB:4UOW"
+FT   STRAND          180..188
+FT                   /evidence="ECO:0007829|PDB:4UOW"
+FT   STRAND          191..202
+FT                   /evidence="ECO:0007829|PDB:4UOW"
+FT   STRAND          1634..1639
+FT                   /evidence="ECO:0007829|PDB:2EO1"
+FT   STRAND          1644..1646
+FT                   /evidence="ECO:0007829|PDB:2EO1"
+FT   STRAND          1653..1655
+FT                   /evidence="ECO:0007829|PDB:2EO1"
+FT   STRAND          1658..1661
+FT                   /evidence="ECO:0007829|PDB:2EO1"
+FT   STRAND          1670..1677
+FT                   /evidence="ECO:0007829|PDB:2EO1"
+FT   STRAND          1680..1685
+FT                   /evidence="ECO:0007829|PDB:2EO1"
+FT   TURN            1690..1692
+FT                   /evidence="ECO:0007829|PDB:2EO1"
+FT   STRAND          1696..1700
+FT                   /evidence="ECO:0007829|PDB:2EO1"
+FT   STRAND          1707..1712
+FT                   /evidence="ECO:0007829|PDB:2EO1"
+FT   STRAND          2745..2750
+FT                   /evidence="ECO:0007829|PDB:2ENY"
+FT   STRAND          2753..2758
+FT                   /evidence="ECO:0007829|PDB:2ENY"
+FT   STRAND          2771..2776
+FT                   /evidence="ECO:0007829|PDB:2ENY"
+FT   STRAND          2784..2788
+FT                   /evidence="ECO:0007829|PDB:2ENY"
+FT   STRAND          2791..2796
+FT                   /evidence="ECO:0007829|PDB:2ENY"
+FT   TURN            2801..2803
+FT                   /evidence="ECO:0007829|PDB:2ENY"
+FT   STRAND          2807..2811
+FT                   /evidence="ECO:0007829|PDB:2ENY"
+FT   STRAND          2814..2818
+FT                   /evidence="ECO:0007829|PDB:2ENY"
+FT   STRAND          2820..2823
+FT                   /evidence="ECO:0007829|PDB:2ENY"
+FT   STRAND          2829..2831
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   STRAND          2836..2838
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   STRAND          2844..2846
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   STRAND          2849..2854
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   STRAND          2859..2863
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   STRAND          2869..2877
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   STRAND          2880..2887
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   TURN            2890..2892
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   STRAND          2894..2899
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   STRAND          2904..2911
+FT                   /evidence="ECO:0007829|PDB:2EDF"
+FT   STRAND          2925..2928
+FT                   /evidence="ECO:0007829|PDB:2DKU"
+FT   STRAND          2931..2938
+FT                   /evidence="ECO:0007829|PDB:2DKU"
+FT   STRAND          2947..2952
+FT                   /evidence="ECO:0007829|PDB:2DKU"
+FT   STRAND          2957..2966
+FT                   /evidence="ECO:0007829|PDB:2DKU"
+FT   STRAND          2969..2976
+FT                   /evidence="ECO:0007829|PDB:2DKU"
+FT   TURN            2979..2981
+FT                   /evidence="ECO:0007829|PDB:2DKU"
+FT   STRAND          2983..2988
+FT                   /evidence="ECO:0007829|PDB:2DKU"
+FT   STRAND          2996..3001
+FT                   /evidence="ECO:0007829|PDB:2DKU"
+FT   STRAND          3006..3009
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   STRAND          3013..3017
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   STRAND          3027..3030
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   STRAND          3037..3042
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   STRAND          3048..3050
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   TURN            3057..3059
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   STRAND          3063..3065
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   TURN            3070..3072
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   STRAND          3074..3080
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   STRAND          3087..3092
+FT                   /evidence="ECO:0007829|PDB:2CR6"
+FT   STRAND          3187..3189
+FT                   /evidence="ECO:0007829|PDB:2YZ8"
+FT   STRAND          3194..3197
+FT                   /evidence="ECO:0007829|PDB:2YZ8"
+FT   STRAND          3202..3210
+FT                   /evidence="ECO:0007829|PDB:2YZ8"
+FT   STRAND          3216..3219
+FT                   /evidence="ECO:0007829|PDB:2YZ8"
+FT   STRAND          3227..3235
+FT                   /evidence="ECO:0007829|PDB:2YZ8"
+FT   STRAND          3238..3243
+FT                   /evidence="ECO:0007829|PDB:2YZ8"
+FT   HELIX           3248..3250
+FT                   /evidence="ECO:0007829|PDB:2YZ8"
+FT   STRAND          3252..3258
+FT                   /evidence="ECO:0007829|PDB:2YZ8"
+FT   STRAND          3261..3270
+FT                   /evidence="ECO:0007829|PDB:2YZ8"
+FT   STRAND          3371..3374
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   STRAND          3386..3388
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   STRAND          3392..3397
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   STRAND          3402..3405
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   STRAND          3407..3410
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   STRAND          3412..3421
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   TURN            3424..3426
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   STRAND          3430..3433
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   STRAND          3438..3441
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   STRAND          3443..3446
+FT                   /evidence="ECO:0007829|PDB:2EDR"
+FT   STRAND          3452..3454
+FT                   /evidence="ECO:0007829|PDB:2EDT"
+FT   STRAND          3459..3462
+FT                   /evidence="ECO:0007829|PDB:2EDT"
+FT   STRAND          3467..3475
+FT                   /evidence="ECO:0007829|PDB:2EDT"
+FT   STRAND          3480..3483
+FT                   /evidence="ECO:0007829|PDB:2EDT"
+FT   STRAND          3490..3509
+FT                   /evidence="ECO:0007829|PDB:2EDT"
+FT   TURN            3512..3514
+FT                   /evidence="ECO:0007829|PDB:2EDT"
+FT   STRAND          3516..3522
+FT                   /evidence="ECO:0007829|PDB:2EDT"
+FT   STRAND          3525..3534
+FT                   /evidence="ECO:0007829|PDB:2EDT"
+FT   STRAND          3548..3550
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   STRAND          3555..3564
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   STRAND          3568..3575
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   STRAND          3578..3581
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   STRAND          3583..3587
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   STRAND          3590..3597
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   TURN            3600..3602
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   STRAND          3604..3610
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   STRAND          3613..3618
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   STRAND          3620..3622
+FT                   /evidence="ECO:0007829|PDB:2DM7"
+FT   STRAND          3628..3630
+FT                   /evidence="ECO:0007829|PDB:2EDH"
+FT   STRAND          3643..3651
+FT                   /evidence="ECO:0007829|PDB:2EDH"
+FT   STRAND          3656..3663
+FT                   /evidence="ECO:0007829|PDB:2EDH"
+FT   STRAND          3667..3675
+FT                   /evidence="ECO:0007829|PDB:2EDH"
+FT   STRAND          3678..3683
+FT                   /evidence="ECO:0007829|PDB:2EDH"
+FT   STRAND          3692..3698
+FT                   /evidence="ECO:0007829|PDB:2EDH"
+FT   STRAND          3701..3709
+FT                   /evidence="ECO:0007829|PDB:2EDH"
+FT   STRAND          3716..3718
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   STRAND          3723..3726
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   STRAND          3731..3739
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   STRAND          3744..3751
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   STRAND          3754..3757
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   STRAND          3759..3763
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   STRAND          3766..3773
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   TURN            3776..3778
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   STRAND          3780..3788
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   STRAND          3790..3798
+FT                   /evidence="ECO:0007829|PDB:2EDQ"
+FT   STRAND          3811..3814
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   STRAND          3820..3824
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   STRAND          3826..3828
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   STRAND          3831..3837
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   STRAND          3842..3848
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   STRAND          3852..3861
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   HELIX           3864..3866
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   STRAND          3870..3874
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   STRAND          3877..3880
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   STRAND          3883..3886
+FT                   /evidence="ECO:0007829|PDB:2EDL"
+FT   STRAND          4257..4262
+FT                   /evidence="ECO:0007829|PDB:6MG9"
+FT   STRAND          4267..4272
+FT                   /evidence="ECO:0007829|PDB:6MG9"
+FT   STRAND          4282..4285
+FT                   /evidence="ECO:0007829|PDB:6MG9"
+FT   STRAND          4294..4301
+FT                   /evidence="ECO:0007829|PDB:6MG9"
+FT   TURN            4302..4304
+FT                   /evidence="ECO:0007829|PDB:6MG9"
+FT   STRAND          4305..4310
+FT                   /evidence="ECO:0007829|PDB:6MG9"
+FT   TURN            4315..4317
+FT                   /evidence="ECO:0007829|PDB:6MG9"
+FT   STRAND          4319..4324
+FT                   /evidence="ECO:0007829|PDB:6MG9"
+FT   STRAND          4329..4337
+FT                   /evidence="ECO:0007829|PDB:6MG9"
+FT   STRAND          4342..4344
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   STRAND          4349..4351
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   STRAND          4353..4365
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   STRAND          4369..4375
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   STRAND          4386..4391
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   HELIX           4392..4394
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   STRAND          4396..4403
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   HELIX           4406..4408
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   STRAND          4410..4416
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   STRAND          4419..4427
+FT                   /evidence="ECO:0007829|PDB:4RSV"
+FT   STRAND          4434..4436
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   STRAND          4441..4444
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   STRAND          4449..4457
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   HELIX           4461..4463
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   STRAND          4464..4468
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   STRAND          4478..4485
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   STRAND          4488..4495
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   HELIX           4498..4500
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   STRAND          4502..4508
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   STRAND          4511..4520
+FT                   /evidence="ECO:0007829|PDB:5TZM"
+FT   STRAND          5604..5609
+FT                   /evidence="ECO:0007829|PDB:1V1C"
+FT   STRAND          5628..5636
+FT                   /evidence="ECO:0007829|PDB:1V1C"
+FT   STRAND          5639..5644
+FT                   /evidence="ECO:0007829|PDB:1V1C"
+FT   STRAND          5654..5657
+FT                   /evidence="ECO:0007829|PDB:1V1C"
+FT   HELIX           5659..5661
+FT                   /evidence="ECO:0007829|PDB:1V1C"
+FT   STRAND          5662..5665
+FT                   /evidence="ECO:0007829|PDB:1V1C"
+SQ   SEQUENCE   7968 AA;  868484 MW;  46550B34565CAC76 CRC64;
+     MDQPQFSGAP RFLTRPKAFV VSVGKDATLS CQIVGNPTPQ VSWEKDQQPV AAGARFRLAQ
+     DGDLYRLTIL DLALGDSGQY VCRARNAIGE AFAAVGLQVD AEAACAEQAP HFLLRPTSIR
+     VREGSEATFR CRVGGSPRPA VSWSKDGRRL GEPDGPRVRV EELGEASALR IRAARPRDGG
+     TYEVRAENPL GAASAAAALV VDSDAADTAS RPGTSTAALL AHLQRRREAM RAEGAPASPP
+     STGTRTCTVT EGKHARLSCY VTGEPKPETV WKKDGQLVTE GRRHVVYEDA QENFVLKILF
+     CKQSDRGLYT CTASNLVGQT YSSVLVVVRE PAVPFKKRLQ DLEVREKESA TFLCEVPQPS
+     TEAAWFKEET RLWASAKYGI EEEGTERRLT VRNVSADDDA VYICETPEGS RTVAELAVQG
+     NLLRKLPRKT AVRVGDTAMF CVELAVPVGP VHWLRNQEEV VAGGRVAISA EGTRHTLTIS
+     QCCLEDVGQV AFMAGDCQTS TQFCVSAPRK PPLQPPVDPV VKARMESSVI LSWSPPPHGE
+     RPVTIDGYLV EKKKLGTYTW IRCHEAEWVA TPELTVADVA EEGNFQFRVS ALNSFGQSPY
+     LEFPGTVHLA PKLAVRTPLK AVQAVEGGEV TFSVDLTVAS AGEWFLDGQA LKASSVYEIH
+     CDRTRHTLTI REVPASLHGA QLKFVANGIE SSIRMEVRAA PGLTANKPPA AAAREVLARL
+     HEEAQLLAEL SDQAAAVTWL KDGRTLSPGP KYEVQASAGR RVLLVRDVAR DDAGLYECVS
+     RGGRIAYQLS VQGLARFLHK DMAGSCVDAV AGGPAQFECE TSEAHVHVHW YKDGMELGHS
+     GERFLQEDVG TRHRLVAATV TRQDEGTYSC RVGEDSVDFR LRVSEPKVVF AKEQLARRKL
+     QAEAGASATL SCEVAQAQTE VTWYKDGKKL SSSSKVCMEA TGCTRRLVVQ QAGQADAGEY
+     SCEAGGQRLS FHLDVKEPKV VFAKDQVAHS EVQAEAGASA TLSCEVAQAQ TEVMWYKDGK
+     KLSSSLKVHV EAKGCRRRLV VQQAGKTDAG DYSCEARGQR VSFRLHITEP KMMFAKEQSV
+     HNEVQAEAGA SAMLSCEVAQ AQTEVTWYKD GKKLSSSSKV GMEVKGCTRR LVLPQAGKAD
+     AGEYSCEAGG QRVSFHLHIT EPKGVFAKEQ SVHNEVQAEA GTTAMLSCEV AQPQTEVTWY
+     KDGKKLSSSS KVRMEVKGCT RRLVVQQVGK ADAGEYSCEA GGQRVSFQLH ITEPKAVFAK
+     EQLVHNEVRT EAGASATLSC EVAQAQTEVT WYKDGKKLSS SSKVRIEAAG CMRQLVVQQA
+     GQADAGEYTC EAGGQRLSFH LDVSEPKAVF AKEQLAHRKV QAEAGAIATL SCEVAQAQTE
+     VTWYKDGKKL SSSSKVRMEA VGCTRRLVVQ QACQADTGEY SCEAGGQRLS FSLDVAEPKV
+     VFAKEQPVHR EVQAQAGAST TLSCEVAQAQ TEVMWYKDGK KLSFSSKVRM EAVGCTRRLV
+     VQQAGQAVAG EYSCEAGSQR LSFHLHVAEP KAVFAKEQPA SREVQAEAGT SATLSCEVAQ
+     AQTEVTWYKD GKKLSSSSKV RMEAVGCTRR LVVQEAGQAD AGEYSCKAGD QRLSFHLHVA
+     EPKVVFAKEQ PAHREVQAEA GASATLSCEV AQAQTEVTWY KDGKKLSSSS KVRVEAVGCT
+     RRLVVQQAGQ AEAGEYSCEA GGQQLSFRLQ VAELEPQISE RPCRREPLVV KEHEDIILTA
+     TLATPSAATV TWLKDGVEIR RSKRHETASQ GDTHTLTVHG AQVLDSAIYS CRVGAEGQDF
+     PVQVEEVAAK FCRLLEPVCG ELGGTVTLAC ELSPACAEVV WRCGNTQLRV GKRFQMVAEG
+     PVRSLTVLGL RAEDAGEYVC ESRDDHTSAQ LTVSVPRVVK FMSGLSTVVA EEGGEATFQC
+     VVSPSDVAVV WFRDGALLQP SEKFAISQSG ASHSLTISDL VLEDAGQITV EAEGASSSAA
+     LRVREAPVLF KKKLEPQTVE ERSSVTLEVE LTRPWPELRW TRNATALAPG KNVEIHAEGA
+     RHRLVLHNVG FADRGFFGCE TPDDKTQAKL TVEMRQVRLV RGLQAVEARE QGTATMEVQL
+     SHADVDGSWT RDGLRFQQGP TCHLAVRGPM HTLTLSGLRP EDSGLMVFKA EGVHTSARLV
+     VTELPVSFSR PLQDVVTTEK EKVTLECELS RPNVDVRWLK DGVELRAGKT MAIAAQGACR
+     SLTIYRCEFA DQGVYVCDAH DAQSSASVKV QGRTYTLIYR RVLAEDAGEI QFVAENAESR
+     AQLRVKELPV TLVRPLRDKI AMEKHRGVLE CQVSRASAQV RWFKGSQELQ PGPKYELVSD
+     GLYRKLIISD VHAEDEDTYT CDAGDVKTSA QFFVEEQSIT IVRGLQDVTV MEPAPAWFEC
+     ETSIPSVRPP KWLLGKTVLQ AGGNVGLEQE GTVHRLMLRR TCSTMTGPVH FTVGKSRSSA
+     RLVVSDIPVV LTRPLEPKTG RELQSVVLSC DFRPAPKAVQ WYKDDTPLSP SEKFKMSLEG
+     QMAELRILRL MPADAGVYRC QAGSAHSSTE VTVEAREVTV TGPLQDAEAT EEGWASFSCE
+     LSHEDEEVEW SLNGMPLYND SFHEISHKGR RHTLVLKSIQ RADAGIVRAS SLKVSTSARL
+     EVRVKPVVFL KALDDLSAEE RGTLALQCEV SDPEAHVVWR KDGVQLGPSD KYDFLHTAGT
+     RGLVVHDVSP EDAGLYTCHV GSEETRARVR VHDLHVGITK RLKTMEVLEG ESCSFECVLS
+     HESASDPAMW TVGGKTVGSS SRFQATRQGR KYILVVREAA PSDAGEVVFS VRGLTSKASL
+     IVRERPAAII KPLEDQWVAP GEDVELRCEL SRAGTPVHWL KDRKAIRKSQ KYDVVCEGTM
+     AMLVIRGASL KDAGEYTCEV EASKSTASLH VEEKANCFTE ELTNLQVEEK GTAVFTCKTE
+     HPAATVTWRK GLLELRASGK HQPSQEGLTL RLTISALEKA DSDTYTCDIG QAQSRAQLLV
+     QGRRVHIIED LEDVDVQEGS SATFRCRISP ANYEPVHWFL DKTPLHANEL NEIDAQPGGY
+     HVLTLRQLAL KDSGTIYFEA GDQRASAALR VTEKPSVFSR ELTDATITEG EDLTLVCETS
+     TCDIPVCWTK DGKTLRGSAR CQLSHEGHRA QLLITGATLQ DSGRYKCEAG GACSSSIVRV
+     HARPVRFQEA LKDLEVLEGG AATLRCVLSS VAAPVKWCYG NNVLRPGDKY SLRQEGAMLE
+     LVVRNLRPQD SGRYSCSFGD QTTSATLTVT ALPAQFIGKL RNKEATEGAT ATLRCELSKA
+     APVEWRKGSE TLRDGDRYCL RQDGAMCELQ IRGLAMVDAA EYSCVCGEER TSASLTIRPM
+     PAHFIGRLRH QESIEGATAT LRCELSKAAP VEWRKGRESL RDGDRHSLRQ DGAVCELQIC
+     GLAVADAGEY SCVCGEERTS ATLTVKALPA KFTEGLRNEE AVEGATAMLW CELSKVAPVE
+     WRKGPENLRD GDRYILRQEG TRCELQICGL AMADAGEYLC VCGQERTSAT LTIRALPARF
+     IEDVKNQEAR EGATAVLQCE LNSAAPVEWR KGSETLRDGD RYSLRQDGTK CELQIRGLAM
+     ADTGEYSCVC GQERTSAMLT VRALPIKFTE GLRNEEATEG ATAVLRCELS KMAPVEWWKG
+     HETLRDGDRH SLRQDGARCE LQIRGLVAED AGEYLCMCGK ERTSAMLTVR AMPSKFIEGL
+     RNEEATEGDT ATLWCELSKA APVEWRKGHE TLRDGDRHSL RQDGSRCELQ IRGLAVVDAG
+     EYSCVCGQER TSATLTVRAL PARFIEDVKN QEAREGATAV LQCELSKAAP VEWRKGSETL
+     RGGDRYSLRQ DGTRCELQIH GLSVADTGEY SCVCGQERTS ATLTVRAPQP VFREPLQSLQ
+     AEEGSTATLQ CELSEPTATV VWSKGGLQLQ ANGRREPRLQ GCTAELVLQD LQREDTGEYT
+     CTCGSQATSA TLTVTAAPVR FLRELQHQEV DEGGTAHLCC ELSRAGASVE WRKGSLQLFP
+     CAKYQMVQDG AAAELLVRGV EQEDAGDYTC DTGHTQSMAS LSVRVPRPKF KTRLQSLEQE
+     TGDIARLCCQ LSDAESGAVV QWLKEGVELH AGPKYEMRSQ GATRELLIHQ LEAKDTGEYA
+     CVTGGQKTAA SLRVTEPEVT IVRGLVDAEV TADEDVEFSC EVSRAGATGV QWCLQGLPLQ
+     SNEVTEVAVR DGRIHTLRLK GVTPEDAGTV SFHLGNHASS AQLTVRAPEV TILEPLQDVQ
+     LSEGQDASFQ CRLSRASGQE ARWALGGVPL QANEMNDITV EQGTLHLLTL HKVTLEDAGT
+     VSFHVGTCSS EAQLKVTAKN TVVRGLENVE ALEGGEALFE CQLSQPEVAA HTWLLDDEPV
+     HTSENAEVVF FENGLRHLLL LKNLRPQDSC RVTFLAGDMV TSAFLTVRGW RLEILEPLKN
+     AAVRAGAQAC FTCTLSEAVP VGEASWYING AAVQPDDSDW TVTADGSHHA LLLRSAQPHH
+     AGEVTFACRD AVASARLTVL GLPDPPEDAE VVARSSHTVT LSWAAPMSDG GGGLCGYRVE
+     VKEGATGQWR LCHELVPGPE CVVDGLAPGE TYRFRVAAVG PVGAGEPVHL PQTVRLAEPP
+     KPVPPQPSAP ESRQVAAGED VSLELEVVAE AGEVIWHKGM ERIQPGGRFE VVSQGRQQML
+     VIKGFTAEDQ GEYHCGLAQG SICPAAATFQ VALSPASVDE APQPSLPPEA AQEGDLHLLW
+     EALARKRRMS REPTLDSISE LPEEDGRSQR LPQEAEEVAP DLSEGYSTAD ELARTGDADL
+     SHTSSDDESR AGTPSLVTYL KKAGRPGTSP LASKVGAPAA PSVKPQQQQE PLAAVRPPLG
+     DLSTKDLGDP SMDKAAVKIQ AAFKGYKVRK EMKQQEGPMF SHTFGDTEAQ VGDALRLECV
+     VASKADVRAR WLKDGVELTD GRHHHIDQLG DGTCSLLITG LDRADAGCYT CQVSNKFGQV
+     THSACVVVSG SESEAESSSG GELDDAFRRA ARRLHRLFRT KSPAEVSDEE LFLSADEGPA
+     EPEEPADWQT YREDEHFICI RFEALTEARQ AVTRFQEMFA TLGIGVEIKL VEQGPRRVEM
+     CISKETPAPV VPPEPLPSLL TSDAAPVFLT ELQNQEVQDG YPVSFDCVVT GQPMPSVRWF
+     KDGKLLEEDD HYMINEDQQG GHQLIITAVV PADMGVYRCL AENSMGVSST KAELRVDLTS
+     TDYDTAADAT ESSSYFSAQG YLSSREQEGT ESTTDEGQLP QVVEELRDLQ VAPGTRLAKF
+     QLKVKGYPAP RLYWFKDGQP LTASAHIRMT DKKILHTLEI ISVTREDSGQ YAAYISNAMG
+     AAYSSARLLV RGPDEPEEKP ASDVHEQLVP PRMLERFTPK KVKKGSSITF SVKVEGRPVP
+     TVHWLREEAE RGVLWIGPDT PGYTVASSAQ QHSLVLLDVG RQHQGTYTCI ASNAAGQALC
+     SASLHVSGLP KVEEQEKVKE ALISTFLQGT TQAISAQGLE TASFADLGGQ RKEEPLAAKE
+     ALGHLSLAEV GTEEFLQKLT SQITEMVSAK ITQAKLQVPG GDSDEDSKTP SASPRHGRSR
+     PSSSIQESSS ESEDGDARGE IFDIYVVTAD YLPLGAEQDA ITLREGQYVE VLDAAHPLRW
+     LVRTKPTKSS PSRQGWVSPA YLDRRLKLSP EWGAAEAPEF PGEAVSEDEY KARLSSVIQE
+     LLSSEQAFVE ELQFLQSHHL QHLERCPHVP IAVAGQKAVI FRNVRDIGRF HSSFLQELQQ
+     CDTDDDVAMC FIKNQAAFEQ YLEFLVGRVQ AESVVVSTAI QEFYKKYAEE ALLAGDPSQP
+     PPPPLQHYLE QPVERVQRYQ ALLKELIRNK ARNRQNCALL EQAYAVVSAL PQRAENKLHV
+     SLMENYPGTL QALGEPIRQG HFIVWEGAPG ARMPWKGHNR HVFLFRNHLV ICKPRRDSRT
+     DTVSYVFRNM MKLSSIDLND QVEGDDRAFE VWQEREDSVR KYLLQARTAI IKSSWVKEIC
+     GIQQRLALPV WRPPDFEEEL ADCTAELGET VKLACRVTGT PKPVISWYKD GKAVQVDPHH
+     ILIEDPDGSC ALILDSLTGV DSGQYMCFAA SAAGNCSTLG KILVQVPPRF VNKVRASPFV
+     EGEDAQFTCT IEGAPYPQIR WYKDGALLTT GNKFQTLSEP RSGLLVLVIR AASKEDLGLY
+     ECELVNRLGS ARASAELRIQ SPMLQAQEQC HREQLVAAVE DTTLERADQE VTSVLKRLLG
+     PKAPGPSTGD LTGPGPCPRG APALQETGSQ PPVTGTSEAP AVPPRVPQPL LHEGPEQEPE
+     AIARAQEWTV PIRMEGAAWP GAGTGELLWD VHSHVVRETT QRTYTYQAID THTARPPSMQ
+     VTIEDVQAQT GGTAQFEAII EGDPQPSVTW YKDSVQLVDS TRLSQQQEGT TYSLVLRHVA
+     SKDAGVYTCL AQNTGGQVLC KAELLVLGGD NEPDSEKQSH RRKLHSFYEV KEEIGRGVFG
+     FVKRVQHKGN KILCAAKFIP LRSRTRAQAY RERDILAALS HPLVTGLLDQ FETRKTLILI
+     LELCSSEELL DRLYRKGVVT EAEVKVYIQQ LVEGLHYLHS HGVLHLDIKP SNILMVHPAR
+     EDIKICDFGF AQNITPAELQ FSQYGSPEFV SPEIIQQNPV SEASDIWAMG VISYLSLTCS
+     SPFAGESDRA TLLNVLEGRV SWSSPMAAHL SEDAKDFIKA TLQRAPQARP SAAQCLSHPW
+     FLKSMPAEEA HFINTKQLKF LLARSRWQRS LMSYKSILVM RSIPELLRGP PDSPSLGVAR
+     HLCRDTGGSS SSSSSSDNEL APFARAKSLP PSPVTHSPLL HPRGFLRPSA SLPEEAEASE
+     RSTEAPAPPA SPEGAGPPAA QGCVPRHSVI RSLFYHQAGE SPEHGALAPG SRRHPARRRH
+     LLKGGYIAGA LPGLREPLME HRVLEEEAAR EEQATLLAKA PSFETALRLP ASGTHLAPGH
+     SHSLEHDSPS TPRPSSEACG EAQRLPSAPS GGAPIRDMGH PQGSKQLPST GGHPGTAQPE
+     RPSPDSPWGQ PAPFCHPKQG SAPQEGCSPH PAVAPCPPGS FPPGSCKEAP LVPSSPFLGQ
+     PQAPPAPAKA SPPLDSKMGP GDISLPGRPK PGPCSSPGSA SQASSSQVSS LRVGSSQVGT
+     EPGPSLDAEG WTQEAEDLSD STPTLQRPQE QATMRKFSLG GRGGYAGVAG YGTFAFGGDA
+     GGMLGQGPMW ARIAWAVSQS EEEEQEEARA ESQSEEQQEA RAESPLPQVS ARPVPEVGRA
+     PTRSSPEPTP WEDIGQVSLV QIRDLSGDAE AADTISLDIS EVDPAYLNLS DLYDIKYLPF
+     EFMIFRKVPK SAQPEPPSPM AEEELAEFPE PTWPWPGELG PHAGLEITEE SEDVDALLAE
+     AAVGRKRKWS SPSRSLFHFP GRHLPLDEPA ELGLRERVKA SVEHISRILK GRPEGLEKEG
+     PPRKKPGLAS FRLSGLKSWD RAPTFLRELS DETVVLGQSV TLACQVSAQP AAQATWSKDG
+     APLESSSRVL ISATLKNFQL LTILVVVAED LGVYTCSVSN ALGTVTTTGV LRKAERPSSS
+     PCPDIGEVYA DGVLLVWKPV ESYGPVTYIV QCSLEGGSWT TLASDIFDCC YLTSKLSRGG
+     TYTFRTACVS KAGMGPYSSP SEQVLLGGPS HLASEEESQG RSAQPLPSTK TFAFQTQIQR
+     GRFSVVRQCW EKASGRALAA KIIPYHPKDK TAVLREYEAL KGLRHPHLAQ LHAAYLSPRH
+     LVLILELCSG PELLPCLAER ASYSESEVKD YLWQMLSATQ YLHNQHILHL DLRSENMIIT
+     EYNLLKVVDL GNAQSLSQEK VLPSDKFKDY LETMAPELLE GQGAVPQTDI WAIGVTAFIM
+     LSAEYPVSSE GARDLQRGLR KGLVRLSRCY AGLSGGAVAF LRSTLCAQPW GRPCASSCLQ
+     CPWLTEEGPA CSRPAPVTFP TARLRVFVRN REKRRALLYK RHNLAQVR
+//

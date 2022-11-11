@@ -1,0 +1,1899 @@
+ID   MET_HUMAN               Reviewed;        1390 AA.
+AC   P08581; A1L467; B5A932; E7EQ94; O60366; Q12875; Q9UDX7; Q9UPL8;
+DT   01-AUG-1988, integrated into UniProtKB/Swiss-Prot.
+DT   07-JUL-2009, sequence version 4.
+DT   12-OCT-2022, entry version 267.
+DE   RecName: Full=Hepatocyte growth factor receptor;
+DE            Short=HGF receptor;
+DE            EC=2.7.10.1;
+DE   AltName: Full=HGF/SF receptor;
+DE   AltName: Full=Proto-oncogene c-Met;
+DE   AltName: Full=Scatter factor receptor;
+DE            Short=SF receptor;
+DE   AltName: Full=Tyrosine-protein kinase Met;
+DE   Flags: Precursor;
+GN   Name=MET;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2).
+RX   PubMed=2819873; DOI=10.1073/pnas.84.18.6379;
+RA   Park M., Dean M., Kaul K., Braun M.J., Gonda M.A., Vande Woude G.;
+RT   "Sequence of MET protooncogene cDNA has features characteristic of the
+RT   tyrosine kinase family of growth-factor receptors.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 84:6379-6383(1987).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RA   Giordano S.;
+RL   Submitted (NOV-1990) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 3), AND ALTERNATIVE SPLICING.
+RX   PubMed=18593464; DOI=10.1186/ar2447;
+RA   Jin P., Zhang J., Sumariwalla P.F., Ni I., Jorgensen B., Crawford D.,
+RA   Phillips S., Feldmann M., Shepard H.M., Paleolog E.M.;
+RT   "Novel splice variants derived from the receptor tyrosine kinase
+RT   superfamily are potential therapeutics for rheumatoid arthritis.";
+RL   Arthritis Res. Ther. 10:R73-R73(2008).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=12853948; DOI=10.1038/nature01782;
+RA   Hillier L.W., Fulton R.S., Fulton L.A., Graves T.A., Pepin K.H.,
+RA   Wagner-McPherson C., Layman D., Maas J., Jaeger S., Walker R., Wylie K.,
+RA   Sekhon M., Becker M.C., O'Laughlin M.D., Schaller M.E., Fewell G.A.,
+RA   Delehaunty K.D., Miner T.L., Nash W.E., Cordes M., Du H., Sun H.,
+RA   Edwards J., Bradshaw-Cordum H., Ali J., Andrews S., Isak A., Vanbrunt A.,
+RA   Nguyen C., Du F., Lamar B., Courtney L., Kalicki J., Ozersky P.,
+RA   Bielicki L., Scott K., Holmes A., Harkins R., Harris A., Strong C.M.,
+RA   Hou S., Tomlinson C., Dauphin-Kohlberg S., Kozlowicz-Reilly A., Leonard S.,
+RA   Rohlfing T., Rock S.M., Tin-Wollam A.-M., Abbott A., Minx P., Maupin R.,
+RA   Strowmatt C., Latreille P., Miller N., Johnson D., Murray J.,
+RA   Woessner J.P., Wendl M.C., Yang S.-P., Schultz B.R., Wallis J.W.,
+RA   Spieth J., Bieri T.A., Nelson J.O., Berkowicz N., Wohldmann P.E.,
+RA   Cook L.L., Hickenbotham M.T., Eldred J., Williams D., Bedell J.A.,
+RA   Mardis E.R., Clifton S.W., Chissoe S.L., Marra M.A., Raymond C., Haugen E.,
+RA   Gillett W., Zhou Y., James R., Phelps K., Iadanoto S., Bubb K., Simms E.,
+RA   Levy R., Clendenning J., Kaul R., Kent W.J., Furey T.S., Baertsch R.A.,
+RA   Brent M.R., Keibler E., Flicek P., Bork P., Suyama M., Bailey J.A.,
+RA   Portnoy M.E., Torrents D., Chinwalla A.T., Gish W.R., Eddy S.R.,
+RA   McPherson J.D., Olson M.V., Eichler E.E., Green E.D., Waterston R.H.,
+RA   Wilson R.K.;
+RT   "The DNA sequence of human chromosome 7.";
+RL   Nature 424:157-164(2003).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=12690205; DOI=10.1126/science.1083423;
+RA   Scherer S.W., Cheung J., MacDonald J.R., Osborne L.R., Nakabayashi K.,
+RA   Herbrick J.-A., Carson A.R., Parker-Katiraee L., Skaug J., Khaja R.,
+RA   Zhang J., Hudek A.K., Li M., Haddad M., Duggan G.E., Fernandez B.A.,
+RA   Kanematsu E., Gentles S., Christopoulos C.C., Choufani S., Kwasnicka D.,
+RA   Zheng X.H., Lai Z., Nusskern D.R., Zhang Q., Gu Z., Lu F., Zeesman S.,
+RA   Nowaczyk M.J., Teshima I., Chitayat D., Shuman C., Weksberg R.,
+RA   Zackai E.H., Grebe T.A., Cox S.R., Kirkpatrick S.J., Rahman N.,
+RA   Friedman J.M., Heng H.H.Q., Pelicci P.G., Lo-Coco F., Belloni E.,
+RA   Shaffer L.G., Pober B., Morton C.C., Gusella J.F., Bruns G.A.P., Korf B.R.,
+RA   Quade B.J., Ligon A.H., Ferguson H., Higgins A.W., Leach N.T.,
+RA   Herrick S.R., Lemyre E., Farra C.G., Kim H.-G., Summers A.M., Gripp K.W.,
+RA   Roberts W., Szatmari P., Winsor E.J.T., Grzeschik K.-H., Teebi A.,
+RA   Minassian B.A., Kere J., Armengol L., Pujana M.A., Estivill X.,
+RA   Wilson M.D., Koop B.F., Tosi S., Moore G.E., Boright A.P., Zlotorynski E.,
+RA   Kerem B., Kroisel P.M., Petek E., Oscier D.G., Mould S.J., Doehner H.,
+RA   Doehner K., Rommens J.M., Vincent J.B., Venter J.C., Li P.W., Mural R.J.,
+RA   Adams M.D., Tsui L.-C.;
+RT   "Human chromosome 7: DNA sequence and biology.";
+RL   Science 300:767-772(2003).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Cerebellum;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1010-1390.
+RX   PubMed=3325883;
+RA   Chan A.M.-L., King H.W.S., Tempest P.R., Deakin E.A., Cooper C.S.,
+RA   Brookes P.;
+RT   "Primary structure of the met protein tyrosine kinase domain.";
+RL   Oncogene 1:229-233(1987).
+RN   [9]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1206-1264.
+RX   PubMed=8247543;
+RA   Lee S.-T., Strunk K.M., Spritz R.A.;
+RT   "A survey of protein tyrosine kinase mRNAs expressed in normal human
+RT   melanocytes.";
+RL   Oncogene 8:3403-3410(1993).
+RN   [10]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1267-1390.
+RX   PubMed=4069211; DOI=10.1038/318385a0;
+RA   Dean M., Park M., le Beau M.M., Robins T.S., Diaz M.O., Rowley J.D.,
+RA   Blair D.G., Vande Woude G.F.;
+RT   "The human met oncogene is related to the tyrosine kinase oncogenes.";
+RL   Nature 318:385-388(1985).
+RN   [11]
+RP   TISSUE SPECIFICITY.
+RX   PubMed=1917129; DOI=10.1002/ijc.2910490302;
+RA   Prat M., Narsimhan R.P., Crepaldi T., Nicotra M.R., Natali P.G.,
+RA   Comoglio P.M.;
+RT   "The receptor encoded by the human c-MET oncogene is expressed in
+RT   hepatocytes, epithelial cells and solid tumors.";
+RL   Int. J. Cancer 49:323-328(1991).
+RN   [12]
+RP   INTERACTION WITH PIK3R1.
+RX   PubMed=1718989; DOI=10.1016/s0021-9258(18)54536-1;
+RA   Graziani A., Gramaglia D., Cantley L.C., Comoglio P.M.;
+RT   "The tyrosine-phosphorylated hepatocyte growth factor/scatter factor
+RT   receptor associates with phosphatidylinositol 3-kinase.";
+RL   J. Biol. Chem. 266:22087-22090(1991).
+RN   [13]
+RP   TISSUE SPECIFICITY.
+RX   PubMed=1719465;
+RA   Di Renzo M.F., Narsimhan R.P., Olivero M., Bretti S., Giordano S.,
+RA   Medico E., Gaglia P., Zara P., Comoglio P.M.;
+RT   "Expression of the Met/HGF receptor in normal and neoplastic human
+RT   tissues.";
+RL   Oncogene 6:1997-2003(1991).
+RN   [14]
+RP   FUNCTION.
+RX   PubMed=1846706; DOI=10.1126/science.1846706;
+RA   Bottaro D.P., Rubin J.S., Faletto D.L., Chan A.M.-L., Kmiecik T.E.,
+RA   Vande Woude G.F., Aaronson S.A.;
+RT   "Identification of the hepatocyte growth factor receptor as the c-met
+RT   proto-oncogene product.";
+RL   Science 251:802-804(1991).
+RN   [15]
+RP   PHOSPHORYLATION AT TYR-1235, AND ATP-BINDING SITE LYS-1110.
+RX   PubMed=1655790; DOI=10.1016/s0021-9258(18)55031-6;
+RA   Ferracini R., Longati P., Naldini L., Vigna E., Comoglio P.M.;
+RT   "Identification of the major autophosphorylation site of the Met/hepatocyte
+RT   growth factor receptor tyrosine kinase.";
+RL   J. Biol. Chem. 266:19558-19564(1991).
+RN   [16]
+RP   PHOSPHORYLATION AT TYR-1349 AND TYR-1356, AND INTERACTION WITH SRC; PLCG1
+RP   AND GRB2.
+RX   PubMed=7513258; DOI=10.1016/0092-8674(94)90318-2;
+RA   Ponzetto C., Bardelli A., Zhen Z., Maina F., dalla Zonca P., Giordano S.,
+RA   Graziani A., Panayotou G., Comoglio P.M.;
+RT   "A multifunctional docking site mediates signaling and transformation by
+RT   the hepatocyte growth factor/scatter factor receptor family.";
+RL   Cell 77:261-271(1994).
+RN   [17]
+RP   FUNCTION IN WOUND HEALING.
+RX   PubMed=8182137; DOI=10.1172/jci117200;
+RA   Nusrat A., Parkos C.A., Bacarra A.E., Godowski P.J., Delp-Archer C.,
+RA   Rosen E.M., Madara J.L.;
+RT   "Hepatocyte growth factor/scatter factor effects on epithelia. Regulation
+RT   of intercellular junctions in transformed and nontransformed cell lines,
+RT   basolateral polarization of c-met receptor in transformed and natural
+RT   intestinal epithelia, and induction of rapid wound repair in a transformed
+RT   model epithelium.";
+RL   J. Clin. Invest. 93:2056-2065(1994).
+RN   [18]
+RP   INTERACTION WITH STAT3.
+RX   PubMed=9440692; DOI=10.1038/34657;
+RA   Boccaccio C., Ando M., Tamagnone L., Bardelli A., Michieli P.,
+RA   Battistini C., Comoglio P.M.;
+RT   "Induction of epithelial tubules by growth factor HGF depends on the STAT
+RT   pathway.";
+RL   Nature 391:285-288(1998).
+RN   [19]
+RP   INTERACTION WITH GRB10.
+RX   PubMed=10454568; DOI=10.1128/mcb.19.9.6217;
+RA   Wang J., Dai H., Yousaf N., Moussaif M., Deng Y., Boufelliga A.,
+RA   Swamy O.R., Leone M.E., Riedel H.;
+RT   "Grb10, a positive, stimulatory signaling adapter in platelet-derived
+RT   growth factor BB-, insulin-like growth factor I-, and insulin-mediated
+RT   mitogenesis.";
+RL   Mol. Cell. Biol. 19:6217-6228(1999).
+RN   [20]
+RP   FUNCTION (MICROBIAL INFECTION), INTERACTION WITH L.MONOCYTOGENES INLB
+RP   (MICROBIAL INFECTION), AND PHOSPHORYLATION (MICROBIAL INFECTION).
+RX   PubMed=11081636; DOI=10.1016/s0092-8674(00)00141-0;
+RA   Shen Y., Naujokas M., Park M., Ireton K.;
+RT   "InIB-dependent internalization of Listeria is mediated by the Met receptor
+RT   tyrosine kinase.";
+RL   Cell 103:501-510(2000).
+RN   [21]
+RP   INTERACTION WITH RANBP9.
+RX   PubMed=12147692; DOI=10.1074/jbc.m205111200;
+RA   Wang D., Li Z., Messing E.M., Wu G.;
+RT   "Activation of Ras/Erk pathway by a novel MET-interacting protein RanBPM.";
+RL   J. Biol. Chem. 277:36216-36222(2002).
+RN   [22]
+RP   UBIQUITINATION, MUTAGENESIS OF TYR-1234; TYR-1235; TYR-1313; TYR-1349;
+RP   TYR-1356 AND TYR-1365, AND CHARACTERIZATION OF VARIANT SER-1003.
+RX   PubMed=12244174; DOI=10.4049/jimmunol.169.7.3793;
+RA   Taher T.E., Tjin E.P., Beuling E.A., Borst J., Spaargaren M., Pals S.T.;
+RT   "c-Cbl is involved in Met signaling in B cells and mediates hepatocyte
+RT   growth factor-induced receptor ubiquitination.";
+RL   J. Immunol. 169:3793-3800(2002).
+RN   [23]
+RP   INTERACTION WITH PLXNB1.
+RX   PubMed=12198496; DOI=10.1038/ncb843;
+RA   Giordano S., Corso S., Conrotto P., Artigiani S., Gilestro G., Barberis D.,
+RA   Tamagnone L., Comoglio P.M.;
+RT   "The semaphorin 4D receptor controls invasive growth by coupling with
+RT   Met.";
+RL   Nat. Cell Biol. 4:720-724(2002).
+RN   [24]
+RP   PHOSPHORYLATION AT TYR-1230; TYR-1234; TYR-1235; TYR-1349 AND TYR-1365, AND
+RP   DEPHOSPHORYLATION AT TYR-1349 AND TYR-1365 BY PTPRJ.
+RX   PubMed=12475979; DOI=10.1074/jbc.m210656200;
+RA   Palka H.L., Park M., Tonks N.K.;
+RT   "Hepatocyte growth factor receptor tyrosine kinase met is a substrate of
+RT   the receptor protein-tyrosine phosphatase DEP-1.";
+RL   J. Biol. Chem. 278:5728-5735(2003).
+RN   [25]
+RP   INTERACTION WITH RANBP9 AND RANBP10.
+RX   PubMed=14684163; DOI=10.1016/j.bbrc.2003.11.124;
+RA   Wang D., Li Z., Schoen S.R., Messing E.M., Wu G.;
+RT   "A novel MET-interacting protein shares high sequence similarity with
+RT   RanBPM, but fails to stimulate MET-induced Ras/Erk signaling.";
+RL   Biochem. Biophys. Res. Commun. 313:320-326(2004).
+RN   [26]
+RP   FUNCTION, AND INTERACTION WITH MUC20.
+RX   PubMed=15314156; DOI=10.1128/mcb.24.17.7456-7468.2004;
+RA   Higuchi T., Orita T., Katsuya K., Yamasaki Y., Akiyama K., Li H.,
+RA   Yamamoto T., Saito Y., Nakamura M.;
+RT   "MUC20 suppresses the hepatocyte growth factor-induced Grb2-Ras pathway by
+RT   binding to a multifunctional docking site of met.";
+RL   Mol. Cell. Biol. 24:7456-7468(2004).
+RN   [27]
+RP   PHOSPHORYLATION AT TYR-1356, AND INTERACTION WITH INPPL1.
+RX   PubMed=15735664; DOI=10.1038/sj.onc.1208558;
+RA   Koch A., Mancini A., El Bounkari O., Tamura T.;
+RT   "The SH2-domain-containing inositol 5-phosphatase (SHIP)-2 binds to c-Met
+RT   directly via tyrosine residue 1356 and involves hepatocyte growth factor
+RT   (HGF)-induced lamellipodium formation, cell scattering and cell
+RT   spreading.";
+RL   Oncogene 24:3436-3447(2005).
+RN   [28]
+RP   REVIEW ON FUNCTION IN ANGIOGENESIS.
+RX   PubMed=16862193; DOI=10.1038/nrc1912;
+RA   Boccaccio C., Comoglio P.M.;
+RT   "Invasive growth: a MET-driven genetic programme for cancer and stem
+RT   cells.";
+RL   Nat. Rev. Cancer 6:637-645(2006).
+RN   [29]
+RP   PHOSPHORYLATION, DEPHOSPHORYLATION BY PTPN1 AND PTPN2, INTERACTION WITH
+RP   PTPN1 AND PTPN2, AND MUTAGENESIS OF TYR-1234 AND TYR-1235.
+RX   PubMed=18819921; DOI=10.1074/jbc.m805916200;
+RA   Sangwan V., Paliouras G.N., Abella J.V., Dube N., Monast A., Tremblay M.L.,
+RA   Park M.;
+RT   "Regulation of the Met receptor-tyrosine kinase by the protein-tyrosine
+RT   phosphatase 1B and T-cell phosphatase.";
+RL   J. Biol. Chem. 283:34374-34383(2008).
+RN   [30]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-977 AND TYR-1003, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [31]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-990; SER-997 AND SER-1000,
+RP   AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [32]
+RP   GLYCOSYLATION [LARGE SCALE ANALYSIS] AT ASN-106.
+RC   TISSUE=Hepatoma;
+RX   PubMed=19196183; DOI=10.1021/pr800826u;
+RA   Cao J., Shen C., Wang H., Shen H., Chen Y., Nie A., Yan G., Lu H., Liu Y.,
+RA   Yang P.;
+RT   "Identification of N-glycosylation sites on secreted proteins of human
+RT   hepatocellular carcinoma cells with a complementary proteomics approach.";
+RL   J. Proteome Res. 8:662-672(2009).
+RN   [33]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT TYR-1003 AND THR-1289, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [34]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=20655987; DOI=10.1016/j.bbcan.2010.07.006;
+RA   Mahtouk K., Tjin E.P., Spaargaren M., Pals S.T.;
+RT   "The HGF/MET pathway as target for the treatment of multiple myeloma and B-
+RT   cell lymphomas.";
+RL   Biochim. Biophys. Acta 1806:208-219(2010).
+RN   [35]
+RP   FUNCTION (MICROBIAL INFECTION), AND SUBUNIT (MICROBIAL INFECTION).
+RX   PubMed=19900460; DOI=10.1016/j.jmb.2009.10.074;
+RA   Ferraris D.M., Gherardi E., Di Y., Heinz D.W., Niemann H.H.;
+RT   "Ligand-mediated dimerization of the Met receptor tyrosine kinase by the
+RT   bacterial invasion protein InlB.";
+RL   J. Mol. Biol. 395:522-532(2010).
+RN   [36]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [37]
+RP   INTERACTION WITH GAB1.
+RX   PubMed=21784853; DOI=10.1074/jbc.m111.239384;
+RA   Chaudhuri A., Xie M.H., Yang B., Mahapatra K., Liu J., Marsters S.,
+RA   Bodepudi S., Ashkenazi A.;
+RT   "Distinct involvement of the Gab1 and Grb2 adaptor proteins in signal
+RT   transduction by the related receptor tyrosine kinases RON and MET.";
+RL   J. Biol. Chem. 286:32762-32774(2011).
+RN   [38]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-990, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [39]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-966, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [40]
+RP   INVOLVEMENT IN OSFD, VARIANT OSFD 964-LEU--ASP-1010 DEL, TISSUE
+RP   SPECIFICITY, AND UBIQUITINATION.
+RX   PubMed=26637977; DOI=10.1016/j.ajhg.2015.11.001;
+RA   Gray M.J., Kannu P., Sharma S., Neyt C., Zhang D., Paria N., Daniel P.B.,
+RA   Whetstone H., Sprenger H.G., Hammerschmidt P., Weng A., Dupuis L.,
+RA   Jobling R., Mendoza-Londono R., Dray M., Su P., Wilson M.J., Kapur R.P.,
+RA   McCarthy E.F., Alman B.A., Howard A., Somers G.R., Marshall C.R.,
+RA   Manners S., Flanagan A.M., Rathjen K.E., Karol L.A., Crawford H.,
+RA   Markie D.M., Rios J.J., Wise C.A., Robertson S.P.;
+RT   "Mutations preventing regulated exon skipping in MET cause osteofibrous
+RT   dysplasia.";
+RL   Am. J. Hum. Genet. 97:837-847(2015).
+RN   [41]
+RP   INVOLVEMENT IN DFNB97, AND VARIANT DFNB97 VAL-841.
+RX   PubMed=25941349; DOI=10.1136/jmedgenet-2015-103023;
+RA   Mujtaba G., Schultz J.M., Imtiaz A., Morell R.J., Friedman T.B., Naz S.;
+RT   "A mutation of MET, encoding hepatocyte growth factor receptor, is
+RT   associated with human DFNB97 hearing loss.";
+RL   J. Med. Genet. 52:548-552(2015).
+RN   [42]
+RP   INTERACTION WITH HSP90AA1 AND HSP90AB1.
+RX   PubMed=26517842; DOI=10.1371/journal.pone.0141786;
+RA   Prince T.L., Kijima T., Tatokoro M., Lee S., Tsutsumi S., Yim K., Rivas C.,
+RA   Alarcon S., Schwartz H., Khamit-Kush K., Scroggins B.T., Beebe K.,
+RA   Trepel J.B., Neckers L.;
+RT   "Client proteins and small molecule inhibitors display distinct binding
+RT   preferences for constitutive and stress-induced HSP90 isoforms and their
+RT   conformationally restricted mutants.";
+RL   PLoS ONE 10:E0141786-E0141786(2015).
+RN   [43]
+RP   INTERACTION WITH LECT2.
+RX   PubMed=27334921; DOI=10.1074/jbc.m116.720375;
+RA   Zheng H., Miyakawa T., Sawano Y., Asano A., Okumura A., Yamagoe S.,
+RA   Tanokura M.;
+RT   "Crystal structure of human leukocyte cell-derived chemotaxin 2 (LECT2)
+RT   reveals a mechanistic basis of functional evolution in a mammalian protein
+RT   with an M23 metalloendopeptidase fold.";
+RL   J. Biol. Chem. 291:17133-17142(2016).
+RN   [44]
+RP   X-RAY CRYSTALLOGRAPHY (2.4 ANGSTROMS) OF 1356-1359 IN COMPLEX WITH GRB2.
+RX   PubMed=11063574; DOI=10.1021/bi0012336;
+RA   Schiering N., Casale E., Caccia P., Giordano P., Battistini C.;
+RT   "Dimer formation through domain swapping in the crystal structure of the
+RT   Grb2-SH2-Ac-pYVNV complex.";
+RL   Biochemistry 39:13376-13382(2000).
+RN   [45]
+RP   X-RAY CRYSTALLOGRAPHY (1.8 ANGSTROMS) OF 1049-1360 IN COMPLEX WITH
+RP   INHIBITOR.
+RX   PubMed=14559966; DOI=10.1073/pnas.1734128100;
+RA   Schiering N., Knapp S., Marconi M., Flocco M.M., Cui J., Perego R.,
+RA   Rusconi L., Cristiani C.;
+RT   "Crystal structure of the tyrosine kinase domain of the hepatocyte growth
+RT   factor receptor c-Met and its complex with the microbial alkaloid K-252a.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:12654-12659(2003).
+RN   [46]
+RP   STRUCTURE BY NMR OF 519-562, AND DISULFIDE BONDS.
+RX   PubMed=15358240; DOI=10.1016/j.bbrc.2004.06.132;
+RA   Kozlov G., Perreault A., Schrag J.D., Park M., Cygler M., Gehring K.,
+RA   Ekiel I.;
+RT   "Insights into function of PSI domains from structure of the Met receptor
+RT   PSI domain.";
+RL   Biochem. Biophys. Res. Commun. 321:234-240(2004).
+RN   [47]
+RP   X-RAY CRYSTALLOGRAPHY (3.22 ANGSTROMS) OF 25-567 IN COMPLEX WITH HGF, AND
+RP   DISULFIDE BONDS.
+RX   PubMed=15167892; DOI=10.1038/sj.emboj.7600243;
+RA   Stamos J., Lazarus R.A., Yao X., Kirchhofer D., Wiesmann C.;
+RT   "Crystal structure of the HGF beta-chain in complex with the Sema domain of
+RT   the Met receptor.";
+RL   EMBO J. 23:2325-2335(2004).
+RN   [48]
+RP   X-RAY CRYSTALLOGRAPHY (2.8 ANGSTROMS) OF 25-740 IN COMPLEX WITH
+RP   L.MONOCYTOGENES INLB, FUNCTION (MICROBIAL INFECTION), INTERACTION WITH
+RP   L.MONOCYTOGENES INLB (MICROBIAL INFECTION), AND DISULFIDE BONDS.
+RX   PubMed=17662939; DOI=10.1016/j.cell.2007.05.037;
+RA   Niemann H.H., Jager V., Butler P.J., van den Heuvel J., Schmidt S.,
+RA   Ferraris D., Gherardi E., Heinz D.W.;
+RT   "Structure of the human receptor tyrosine kinase Met in complex with the
+RT   Listeria invasion protein InlB.";
+RL   Cell 130:235-246(2007).
+RN   [49]
+RP   VARIANTS RCCP THR-1131; LEU-1188; VAL-1195; ILE-1220; HIS-1228; ASN-1228;
+RP   CYS-1230; HIS-1230 AND THR-1250, AND VARIANT VAL-320.
+RX   PubMed=9140397; DOI=10.1038/ng0597-68;
+RA   Schmidt L., Duh F.-M., Chen F., Kishida T., Glenn G., Choyke P.,
+RA   Scherer S.W., Zhuang Z., Lubensky I., Dean M., Allikmets R.,
+RA   Chidambaram A., Bergerheim U.R., Feltis J.T., Casadevall C., Zamarron A.,
+RA   Bernues M., Richard S., Lips C.J.M., Walther M.M., Tsui L.-C., Geil L.,
+RA   Orcutt M.L., Stackhouse T., Lipan J., Slife L., Brauch H., Decker J.,
+RA   Niehans G., Hughson M.D., Moch H., Storkel S., Lerman M.I., Linehan W.M.,
+RA   Zbar B.;
+RT   "Germline and somatic mutations in the tyrosine kinase domain of the MET
+RT   proto-oncogene in papillary renal carcinomas.";
+RL   Nat. Genet. 16:68-73(1997).
+RN   [50]
+RP   VARIANT RCCP ARG-1094, AND CHARACTERIZATION OF VARIANT RCCP ARG-1094.
+RX   PubMed=9563489;
+RA   Schmidt L., Junker K., Weirich G., Glenn G., Choyke P., Lubensky I.,
+RA   Zhuang Z., Jeffers M., Vande Woude G., Neumann H., Walther M.,
+RA   Linehan W.M., Zbar B.;
+RT   "Two North American families with hereditary papillary renal carcinoma and
+RT   identical novel mutations in the MET proto-oncogene.";
+RL   Cancer Res. 58:1719-1722(1998).
+RN   [51]
+RP   VARIANTS RCCP ILE-1092; ARG-1094; ASP-1106; THR-1131; LEU-1188; ASP-1230;
+RP   CYS-1230 AND THR-1250.
+RX   PubMed=10433944; DOI=10.1016/s0002-9440(10)65147-4;
+RA   Lubensky I.A., Schmidt L., Zhuang Z., Weirich G., Pack S., Zambrano N.,
+RA   Walther M.M., Choyke P., Linehan W.M., Zbar B.;
+RT   "Hereditary and sporadic papillary renal carcinomas with c-met mutations
+RT   share a distinct morphological phenotype.";
+RL   Am. J. Pathol. 155:517-526(1999).
+RN   [52]
+RP   VARIANTS HCC ILE-1173; ARG-1244 AND ILE-1250.
+RX   PubMed=9927037;
+RA   Park W.S., Dong S.M., Kim S.Y., Na E.Y., Shin M.S., Pi J.H., Kim B.J.,
+RA   Bae J.H., Hong Y.K., Lee K.S., Lee S.H., Yoo N.J., Jang J.J., Pack S.,
+RA   Zhuang Z., Schmidt L., Zbar B., Lee J.Y.;
+RT   "Somatic mutations in the kinase domain of the Met/hepatocyte growth factor
+RT   receptor gene in childhood hepatocellular carcinomas.";
+RL   Cancer Res. 59:307-310(1999).
+RN   [53]
+RP   VARIANT RCCP ILE-1092, AND CHARACTERIZATION OF VARIANT RCCP ILE-1092.
+RX   PubMed=10417759;
+RX   DOI=10.1002/(sici)1097-0215(19990827)82:5<640::aid-ijc4>3.0.co;2-6;
+RA   Olivero M., Valente G., Bardelli A., Longati P., Ferrero N., Cracco C.,
+RA   Terrone C., Rocca-Rossetti S., Comoglio P.M., Di Renzo M.F.;
+RT   "Novel mutation in the ATP-binding site of the MET oncogene tyrosine kinase
+RT   in a HPRCC family.";
+RL   Int. J. Cancer 82:640-643(1999).
+RN   [54]
+RP   VARIANTS RCCP ILE-1092; LEU-1094; TYR-1094; ASP-1106 AND ASP-1230, AND
+RP   CHARACTERIZATION OF VARIANTS RCCP ILE-1092; LEU-1094; TYR-1094; ASP-1106
+RP   AND ASP-1230.
+RX   PubMed=10327054; DOI=10.1038/sj.onc.1202547;
+RA   Schmidt L., Junker K., Nakaigawa N., Kinjerski T., Weirich G., Miller M.,
+RA   Lubensky I., Neumann H.P.H., Brauch H., Decker J., Vocke C., Brown J.A.,
+RA   Jenkins R., Richard S., Bergerheim U., Gerrard B., Dean M., Linehan W.M.,
+RA   Zbar B.;
+RT   "Novel mutations of the MET proto-oncogene in papillary renal carcinomas.";
+RL   Oncogene 18:2343-2350(1999).
+RN   [55]
+RP   VARIANT GASTRIC CANCER SER-991, VARIANT ILE-992, CHARACTERIZATION OF
+RP   VARIANT GASTRIC CANCER SER-991, AND CHARACTERIZATION OF VARIANT ILE-992.
+RX   PubMed=11042681; DOI=10.1038/sj.onc.1203874;
+RA   Lee J.-H., Han S.-U., Cho H., Jennings B., Gerrard B., Dean M., Schmidt L.,
+RA   Zbar B., Vande Woude G.F.V.;
+RT   "A novel germ line juxtamembrane Met mutation in human gastric cancer.";
+RL   Oncogene 19:4947-4953(2000).
+RN   [56]
+RP   VARIANT GASTRIC CANCER LEU-773.
+RX   PubMed=12920089; DOI=10.1136/jmg.40.8.e97;
+RA   Kim I.-J., Park J.-H., Kang H.C., Shin Y., Lim S.-B., Ku J.-L., Yang H.-K.,
+RA   Lee K.U., Park J.-G.;
+RT   "A novel germline mutation in the MET extracellular domain in a Korean
+RT   patient with the diffuse type of familial gastric cancer.";
+RL   J. Med. Genet. 40:E97-E97(2003).
+RN   [57]
+RP   INTERACTION WITH SPSB1; SPSB2; SPSB3 AND SPSB4.
+RX   PubMed=15713673; DOI=10.1074/jbc.m413897200;
+RA   Wang D., Li Z., Messing E.M., Wu G.;
+RT   "The SPRY domain-containing SOCS box protein 1 (SSB-1) interacts with MET
+RT   and enhances the hepatocyte growth factor-induced Erk-Elk-1-serum response
+RT   element pathway.";
+RL   J. Biol. Chem. 280:16393-16401(2005).
+RN   [58]
+RP   POSSIBLE INVOLVEMENT IN SUSCEPTIBILITY TO AUTS9, AND VARIANTS CYS-970 AND
+RP   ILE-992.
+RX   PubMed=17053076; DOI=10.1073/pnas.0605296103;
+RA   Campbell D.B., Sutcliffe J.S., Ebert P.J., Militerni R., Bravaccio C.,
+RA   Trillo S., Elia M., Schneider C., Melmed R., Sacco R., Persico A.M.,
+RA   Levitt P.;
+RT   "A genetic variant that disrupts MET transcription is associated with
+RT   autism.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 103:16834-16839(2006).
+RN   [59]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLN-143; LEU-156; ASP-168; SER-375; CYS-970
+RP   AND ILE-992.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [60]
+RP   VARIANTS TYR-150; ASP-168; TYR-385; ILE-992 AND ILE-1294, CHARACTERIZATION
+RP   OF VARIANTS TYR-150; ASP-168; TYR-385; ILE-992 AND ILE-1294, AND POSSIBLE
+RP   INVOLVEMENT IN CUP.
+RX   PubMed=20949619; DOI=10.1002/humu.21374;
+RA   Stella G.M., Benvenuti S., Gramaglia D., Scarpa A., Tomezzoli A.,
+RA   Cassoni P., Senetta R., Venesio T., Pozzi E., Bardelli A., Comoglio P.M.;
+RT   "MET mutations in cancers of unknown primary origin (CUPs).";
+RL   Hum. Mutat. 32:44-50(2011).
+RN   [61]
+RP   VARIANT LYS-375, AND CHARACTERIZATION OF VARIANT LYS-375.
+RX   PubMed=28294470; DOI=10.1111/cas.13233;
+RA   Tode N., Kikuchi T., Sakakibara T., Hirano T., Inoue A., Ohkouchi S.,
+RA   Tamada T., Okazaki T., Koarai A., Sugiura H., Niihori T., Aoki Y.,
+RA   Nakayama K., Matsumoto K., Matsubara Y., Yamamoto M., Watanabe A.,
+RA   Nukiwa T., Ichinose M.;
+RT   "Exome sequencing deciphers a germline MET mutation in familial epidermal
+RT   growth factor receptor-mutant lung cancer.";
+RL   Cancer Sci. 108:1263-1270(2017).
+CC   -!- FUNCTION: Receptor tyrosine kinase that transduces signals from the
+CC       extracellular matrix into the cytoplasm by binding to hepatocyte growth
+CC       factor/HGF ligand. Regulates many physiological processes including
+CC       proliferation, scattering, morphogenesis and survival. Ligand binding
+CC       at the cell surface induces autophosphorylation of MET on its
+CC       intracellular domain that provides docking sites for downstream
+CC       signaling molecules. Following activation by ligand, interacts with the
+CC       PI3-kinase subunit PIK3R1, PLCG1, SRC, GRB2, STAT3 or the adapter GAB1.
+CC       Recruitment of these downstream effectors by MET leads to the
+CC       activation of several signaling cascades including the RAS-ERK, PI3
+CC       kinase-AKT, or PLCgamma-PKC. The RAS-ERK activation is associated with
+CC       the morphogenetic effects while PI3K/AKT coordinates prosurvival
+CC       effects. During embryonic development, MET signaling plays a role in
+CC       gastrulation, development and migration of muscles and neuronal
+CC       precursors, angiogenesis and kidney formation. In adults, participates
+CC       in wound healing as well as organ regeneration and tissue remodeling.
+CC       Promotes also differentiation and proliferation of hematopoietic cells.
+CC       May regulate cortical bone osteogenesis (By similarity).
+CC       {ECO:0000250|UniProtKB:P16056}.
+CC   -!- FUNCTION: (Microbial infection) Acts as a receptor for Listeria
+CC       monocytogenes internalin InlB, mediating entry of the pathogen into
+CC       cells. {ECO:0000269|PubMed:11081636, ECO:0000305|PubMed:17662939,
+CC       ECO:0000305|PubMed:19900460}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.10.1;
+CC         Evidence={ECO:0000255|PROSITE-ProRule:PRU10028};
+CC   -!- ACTIVITY REGULATION: In its inactive state, the C-terminal tail
+CC       interacts with the catalytic domain and inhibits the kinase activity.
+CC       Upon ligand binding, the C-terminal tail is displaced and becomes
+CC       phosphorylated, thus increasing the kinase activity.
+CC   -!- SUBUNIT: Heterodimer made of an alpha chain (50 kDa) and a beta chain
+CC       (145 kDa) which are disulfide linked. Binds PLXNB1. Interacts when
+CC       phosphorylated with downstream effectors including STAT3, PIK3R1, SRC,
+CC       PCLG1, GRB2 and GAB1. Interacts with SPSB1, SPSB2 and SPSB4 (By
+CC       similarity). Interacts with INPP5D/SHIP1. When phosphorylated at Tyr-
+CC       1356, interacts with INPPL1/SHIP2. Interacts with RANBP9 and RANBP10,
+CC       as well as SPSB1, SPSB2, SPSB3 and SPSB4. SPSB1 binding occurs in the
+CC       presence and in the absence of HGF, however HGF treatment has a
+CC       positive effect on this interaction. Interacts with MUC20; prevents
+CC       interaction with GRB2 and suppresses hepatocyte growth factor-induced
+CC       cell proliferation. Interacts with GRB10. Interacts with PTPN1 and
+CC       PTPN2. Interacts with LECT2; this interaction may have an antagonistic
+CC       effect on receptor activation (PubMed:27334921). Interacts with
+CC       HSP90AA1 and HSP90AB1; the interaction suppresses MET kinase activity
+CC       (PubMed:26517842). {ECO:0000250|UniProtKB:P16056,
+CC       ECO:0000269|PubMed:10454568, ECO:0000269|PubMed:11063574,
+CC       ECO:0000269|PubMed:12147692, ECO:0000269|PubMed:12198496,
+CC       ECO:0000269|PubMed:14559966, ECO:0000269|PubMed:14684163,
+CC       ECO:0000269|PubMed:15167892, ECO:0000269|PubMed:15314156,
+CC       ECO:0000269|PubMed:15713673, ECO:0000269|PubMed:15735664,
+CC       ECO:0000269|PubMed:1718989, ECO:0000269|PubMed:17662939,
+CC       ECO:0000269|PubMed:18819921, ECO:0000269|PubMed:21784853,
+CC       ECO:0000269|PubMed:26517842, ECO:0000269|PubMed:27334921,
+CC       ECO:0000269|PubMed:7513258, ECO:0000269|PubMed:9440692}.
+CC   -!- SUBUNIT: (Microbial infection) Interacts via extracytoplasmic residues
+CC       25-656 with L.monocytogenes InlB; MET can bind HGF, its endogenous
+CC       ligand, and InlB simultaneously (PubMed:11081636, PubMed:17662939).
+CC       InlB probably dimerizes upon binding to MET, which encourages
+CC       subsequent dimerization of MET (Probable).
+CC       {ECO:0000269|PubMed:11081636, ECO:0000269|PubMed:17662939,
+CC       ECO:0000305|PubMed:19900460}.
+CC   -!- INTERACTION:
+CC       P08581; P22681: CBL; NbExp=15; IntAct=EBI-1039152, EBI-518228;
+CC       P08581; Q96EY1: DNAJA3; NbExp=4; IntAct=EBI-1039152, EBI-356767;
+CC       P08581; Q96EY1-2: DNAJA3; NbExp=2; IntAct=EBI-1039152, EBI-3952284;
+CC       P08581; P00533: EGFR; NbExp=8; IntAct=EBI-1039152, EBI-297353;
+CC       P08581; P09769: FGR; NbExp=2; IntAct=EBI-1039152, EBI-1383732;
+CC       P08581; P14210: HGF; NbExp=7; IntAct=EBI-1039152, EBI-1039104;
+CC       P08581; P14210-6: HGF; NbExp=3; IntAct=EBI-1039152, EBI-6280319;
+CC       P08581; O15357: INPPL1; NbExp=2; IntAct=EBI-1039152, EBI-1384248;
+CC       P08581; P35968: KDR; NbExp=3; IntAct=EBI-1039152, EBI-1005487;
+CC       P08581; P06239: LCK; NbExp=3; IntAct=EBI-1039152, EBI-1348;
+CC       P08581; P07948: LYN; NbExp=2; IntAct=EBI-1039152, EBI-79452;
+CC       P08581; P08581: MET; NbExp=2; IntAct=EBI-1039152, EBI-1039152;
+CC       P08581; P41218: MNDA; NbExp=3; IntAct=EBI-1039152, EBI-2829677;
+CC       P08581; P15941: MUC1; NbExp=2; IntAct=EBI-1039152, EBI-2804728;
+CC       P08581; P16333: NCK1; NbExp=2; IntAct=EBI-1039152, EBI-389883;
+CC       P08581; O43639: NCK2; NbExp=2; IntAct=EBI-1039152, EBI-713635;
+CC       P08581; Q16288: NTRK3; NbExp=2; IntAct=EBI-1039152, EBI-3936704;
+CC       P08581; P27986: PIK3R1; NbExp=6; IntAct=EBI-1039152, EBI-79464;
+CC       P08581; O00459: PIK3R2; NbExp=11; IntAct=EBI-1039152, EBI-346930;
+CC       P08581; Q92569: PIK3R3; NbExp=11; IntAct=EBI-1039152, EBI-79893;
+CC       P08581; P19174: PLCG1; NbExp=10; IntAct=EBI-1039152, EBI-79387;
+CC       P08581; O43157: PLXNB1; NbExp=7; IntAct=EBI-1039152, EBI-1111488;
+CC       P08581; O15031: PLXNB2; NbExp=2; IntAct=EBI-1039152, EBI-722004;
+CC       P08581; Q9ULL4: PLXNB3; NbExp=2; IntAct=EBI-1039152, EBI-311073;
+CC       P08581; P18031: PTPN1; NbExp=3; IntAct=EBI-1039152, EBI-968788;
+CC       P08581; Q06124: PTPN11; NbExp=13; IntAct=EBI-1039152, EBI-297779;
+CC       P08581; P23467: PTPRB; NbExp=2; IntAct=EBI-1039152, EBI-1265766;
+CC       P08581; Q12913: PTPRJ; NbExp=5; IntAct=EBI-1039152, EBI-2264500;
+CC       P08581; Q16827: PTPRO; NbExp=2; IntAct=EBI-1039152, EBI-723739;
+CC       P08581; P20936: RASA1; NbExp=15; IntAct=EBI-1039152, EBI-1026476;
+CC       P08581; Q9UQQ2: SH2B3; NbExp=2; IntAct=EBI-1039152, EBI-7879749;
+CC       P08581; O60880: SH2D1A; NbExp=3; IntAct=EBI-1039152, EBI-6983382;
+CC       P08581; O14796: SH2D1B; NbExp=6; IntAct=EBI-1039152, EBI-3923013;
+CC       P08581; Q9NP31: SH2D2A; NbExp=7; IntAct=EBI-1039152, EBI-490630;
+CC       P08581; Q8N5H7: SH2D3C; NbExp=4; IntAct=EBI-1039152, EBI-745980;
+CC       P08581; Q15464: SHB; NbExp=4; IntAct=EBI-1039152, EBI-4402156;
+CC       P08581; P29353: SHC1; NbExp=5; IntAct=EBI-1039152, EBI-78835;
+CC       P08581; P98077: SHC2; NbExp=2; IntAct=EBI-1039152, EBI-7256023;
+CC       P08581; Q6S5L8: SHC4; NbExp=3; IntAct=EBI-1039152, EBI-9453524;
+CC       P08581; Q96IW2: SHD; NbExp=2; IntAct=EBI-1039152, EBI-4402781;
+CC       P08581; Q9H6Q3: SLA2; NbExp=4; IntAct=EBI-1039152, EBI-1222854;
+CC       P08581; O75159: SOCS5; NbExp=2; IntAct=EBI-1039152, EBI-970130;
+CC       P08581; O14544: SOCS6; NbExp=4; IntAct=EBI-1039152, EBI-3929549;
+CC       P08581; P12931: SRC; NbExp=4; IntAct=EBI-1039152, EBI-621482;
+CC       P08581; Q9ULZ2: STAP1; NbExp=3; IntAct=EBI-1039152, EBI-6083058;
+CC       P08581; P43405: SYK; NbExp=3; IntAct=EBI-1039152, EBI-78302;
+CC       P08581; P42680: TEC; NbExp=2; IntAct=EBI-1039152, EBI-1383480;
+CC       P08581; Q9HBL0: TNS1; NbExp=2; IntAct=EBI-1039152, EBI-3389814;
+CC       P08581; Q63HR2: TNS2; NbExp=2; IntAct=EBI-1039152, EBI-949753;
+CC       P08581; Q68CZ2: TNS3; NbExp=3; IntAct=EBI-1039152, EBI-1220488;
+CC       P08581; Q9UKW4: VAV3; NbExp=2; IntAct=EBI-1039152, EBI-297568;
+CC       P08581; P07947: YES1; NbExp=3; IntAct=EBI-1039152, EBI-515331;
+CC       P08581; P43403: ZAP70; NbExp=2; IntAct=EBI-1039152, EBI-1211276;
+CC       P08581; Q08048: Hgf; Xeno; NbExp=3; IntAct=EBI-1039152, EBI-15655650;
+CC       P08581; P0DQD2: inlB; Xeno; NbExp=4; IntAct=EBI-1039152, EBI-1379295;
+CC       P08581; P35918: Kdr; Xeno; NbExp=3; IntAct=EBI-1039152, EBI-1555005;
+CC       P08581; Q00944: PTK2; Xeno; NbExp=5; IntAct=EBI-1039152, EBI-2896409;
+CC   -!- SUBCELLULAR LOCATION: Membrane; Single-pass type I membrane protein.
+CC   -!- SUBCELLULAR LOCATION: [Isoform 3]: Secreted.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC         Comment=Additional soluble isoforms seem to exist.;
+CC       Name=1;
+CC         IsoId=P08581-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=P08581-2; Sequence=VSP_005005;
+CC       Name=3; Synonyms=Soluble MET variant 4;
+CC         IsoId=P08581-3; Sequence=VSP_042447, VSP_042448;
+CC   -!- TISSUE SPECIFICITY: Expressed in normal hepatocytes as well as in
+CC       epithelial cells lining the stomach, the small and the large intestine.
+CC       Found also in basal keratinocytes of esophagus and skin. High levels
+CC       are found in liver, gastrointestinal tract, thyroid and kidney. Also
+CC       present in the brain. Expressed in metaphyseal bone (at protein level)
+CC       (PubMed:26637977). {ECO:0000269|PubMed:1719465,
+CC       ECO:0000269|PubMed:1917129, ECO:0000269|PubMed:26637977}.
+CC   -!- DOMAIN: The kinase domain is involved in SPSB1 binding.
+CC   -!- DOMAIN: The beta-propeller Sema domain mediates binding to HGF.
+CC   -!- PTM: Autophosphorylated in response to ligand binding on Tyr-1234 and
+CC       Tyr-1235 in the kinase domain leading to further phosphorylation of
+CC       Tyr-1349 and Tyr-1356 in the C-terminal multifunctional docking site.
+CC       Dephosphorylated by PTPRJ at Tyr-1349 and Tyr-1365. Dephosphorylated by
+CC       PTPN1 and PTPN2. {ECO:0000269|PubMed:12475979,
+CC       ECO:0000269|PubMed:15735664, ECO:0000269|PubMed:1655790,
+CC       ECO:0000269|PubMed:18819921, ECO:0000269|PubMed:7513258}.
+CC   -!- PTM: Ubiquitinated. Ubiquitination by CBL regulates MET endocytosis,
+CC       resulting in decreasing plasma membrane receptor abundance, and in
+CC       endosomal degradation and/or recycling of internalized receptors.
+CC       {ECO:0000269|PubMed:12244174, ECO:0000305|PubMed:26637977}.
+CC   -!- PTM: (Microbial infection) Tyrosine phosphorylation is stimulated by
+CC       L.monocytogenes InlB. Tyrosine phosphorylation is maximal 10-20 minutes
+CC       after treatment with InlB and disappears by 60 minutes. The
+CC       phosphorylated residues were not identified.
+CC       {ECO:0000269|PubMed:11081636}.
+CC   -!- DISEASE: Note=Activation of MET after rearrangement with the TPR gene
+CC       produces an oncogenic protein.
+CC   -!- DISEASE: Note=Defects in MET may be associated with gastric cancer.
+CC   -!- DISEASE: Hepatocellular carcinoma (HCC) [MIM:114550]: A primary
+CC       malignant neoplasm of epithelial liver cells. The major risk factors
+CC       for HCC are chronic hepatitis B virus (HBV) infection, chronic
+CC       hepatitis C virus (HCV) infection, prolonged dietary aflatoxin
+CC       exposure, alcoholic cirrhosis, and cirrhosis due to other causes.
+CC       {ECO:0000269|PubMed:9927037}. Note=The disease is caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- DISEASE: Renal cell carcinoma papillary (RCCP) [MIM:605074]: A subtype
+CC       of renal cell carcinoma tending to show a tubulo-papillary architecture
+CC       formed by numerous, irregular, finger-like projections of connective
+CC       tissue. Renal cell carcinoma is a heterogeneous group of sporadic or
+CC       hereditary carcinoma derived from cells of the proximal renal tubular
+CC       epithelium. {ECO:0000269|PubMed:10327054, ECO:0000269|PubMed:10417759,
+CC       ECO:0000269|PubMed:10433944, ECO:0000269|PubMed:9140397,
+CC       ECO:0000269|PubMed:9563489}. Note=The disease is caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- DISEASE: Note=A common allele in the promoter region of the MET shows
+CC       genetic association with susceptibility to autism in some families.
+CC       Functional assays indicate a decrease in MET promoter activity and
+CC       altered binding of specific transcription factor complexes.
+CC   -!- DISEASE: Note=MET activating mutations may be involved in the
+CC       development of a highly malignant, metastatic syndrome known as cancer
+CC       of unknown primary origin (CUP) or primary occult malignancy. Systemic
+CC       neoplastic spread is generally a late event in cancer progression.
+CC       However, in some instances, distant dissemination arises at a very
+CC       early stage, so that metastases reach clinical relevance before primary
+CC       lesions. Sometimes, the primary lesions cannot be identified in spite
+CC       of the progresses in the diagnosis of malignancies.
+CC   -!- DISEASE: Deafness, autosomal recessive, 97 (DFNB97) [MIM:616705]: A
+CC       form of non-syndromic sensorineural hearing loss with prelingual onset.
+CC       Sensorineural deafness results from damage to the neural receptors of
+CC       the inner ear, the nerve pathways to the brain, or the area of the
+CC       brain that receives sound information. {ECO:0000269|PubMed:25941349}.
+CC       Note=The disease is caused by variants affecting the gene represented
+CC       in this entry.
+CC   -!- DISEASE: Osteofibrous dysplasia (OSFD) [MIM:607278]: A congenital
+CC       disorder of osteogenesis characterized by non-neoplastic, radiolucent
+CC       lesions that affect the cortical bone immediately under the periosteum.
+CC       It usually manifests as a painless swelling or anterior bowing of the
+CC       long bones, most commonly the tibia and fibula.
+CC       {ECO:0000269|PubMed:26637977}. Note=Disease susceptibility is
+CC       associated with variants affecting the gene represented in this entry.
+CC       Disease-associated variants identified in 4 families cause the deletion
+CC       of exon 14. This results in the exclusion of an ubiquitination target
+CC       site within the cytoplasmic domain, hence in protein stabilization. The
+CC       persistent presence of MET at the cell surface in conditions of ligand-
+CC       dependent activation retards osteoblastic differentiation.
+CC       {ECO:0000269|PubMed:26637977}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Tyr protein
+CC       kinase family. {ECO:0000255|PROSITE-ProRule:PRU00159}.
+CC   -!- WEB RESOURCE: Name=Atlas of Genetics and Cytogenetics in Oncology and
+CC       Haematology;
+CC       URL="http://atlasgeneticsoncology.org/Genes/METID131.html";
+CC   -!- WEB RESOURCE: Name=Wikipedia; Note=C-MET entry;
+CC       URL="https://en.wikipedia.org/wiki/C-MET";
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; J02958; AAA59591.1; -; mRNA.
+DR   EMBL; X54559; CAB56793.1; -; mRNA.
+DR   EMBL; EU826570; ACF47606.1; -; mRNA.
+DR   EMBL; AC002080; AAB54047.1; -; Genomic_DNA.
+DR   EMBL; AC002543; AAC60383.1; -; Genomic_DNA.
+DR   EMBL; AC004416; AAF66137.2; -; Genomic_DNA.
+DR   EMBL; CH236947; EAL24359.1; -; Genomic_DNA.
+DR   EMBL; CH471070; EAW83509.1; -; Genomic_DNA.
+DR   EMBL; BC130420; AAI30421.1; -; mRNA.
+DR   EMBL; U08818; AAB60323.1; ALT_SEQ; mRNA.
+DR   EMBL; M35074; AAA59590.1; -; mRNA.
+DR   CCDS; CCDS43636.1; -. [P08581-1]
+DR   CCDS; CCDS47689.1; -. [P08581-2]
+DR   PIR; A40175; TVHUME.
+DR   RefSeq; NP_000236.2; NM_000245.3. [P08581-1]
+DR   RefSeq; NP_001120972.1; NM_001127500.2. [P08581-2]
+DR   PDB; 1FYR; X-ray; 2.40 A; I/J/K/L=1356-1359.
+DR   PDB; 1R0P; X-ray; 1.80 A; A=1049-1360.
+DR   PDB; 1R1W; X-ray; 1.80 A; A=1049-1360.
+DR   PDB; 1SHY; X-ray; 3.22 A; B=25-567.
+DR   PDB; 1SSL; NMR; -; A=519-562.
+DR   PDB; 2G15; X-ray; 2.15 A; A=1038-1346.
+DR   PDB; 2RFN; X-ray; 2.50 A; A/B=1048-1351.
+DR   PDB; 2RFS; X-ray; 2.20 A; A=1048-1351.
+DR   PDB; 2UZX; X-ray; 2.80 A; B/D=25-740.
+DR   PDB; 2UZY; X-ray; 4.00 A; B/D=25-740.
+DR   PDB; 2WD1; X-ray; 2.00 A; A=1055-1346.
+DR   PDB; 2WGJ; X-ray; 2.00 A; A=1051-1348.
+DR   PDB; 2WKM; X-ray; 2.20 A; A=1051-1348.
+DR   PDB; 3A4P; X-ray; 2.54 A; A=1049-1360.
+DR   PDB; 3BUX; X-ray; 1.35 A; A/C=997-1009.
+DR   PDB; 3C1X; X-ray; 2.17 A; A=1049-1360.
+DR   PDB; 3CCN; X-ray; 1.90 A; A=1048-1350.
+DR   PDB; 3CD8; X-ray; 2.00 A; A=1048-1350.
+DR   PDB; 3CE3; X-ray; 2.40 A; A=1049-1360.
+DR   PDB; 3CTH; X-ray; 2.30 A; A=1049-1360.
+DR   PDB; 3CTJ; X-ray; 2.50 A; A=1049-1360.
+DR   PDB; 3DKC; X-ray; 1.52 A; A=1049-1360.
+DR   PDB; 3DKF; X-ray; 1.80 A; A=1049-1360.
+DR   PDB; 3DKG; X-ray; 1.91 A; A=1049-1360.
+DR   PDB; 3EFJ; X-ray; 2.60 A; A/B=1048-1351.
+DR   PDB; 3EFK; X-ray; 2.20 A; A/B=1048-1351.
+DR   PDB; 3F66; X-ray; 1.40 A; A/B=1052-1349.
+DR   PDB; 3F82; X-ray; 2.50 A; A=1049-1360.
+DR   PDB; 3I5N; X-ray; 2.00 A; A=1048-1350.
+DR   PDB; 3L8V; X-ray; 2.40 A; A=1049-1360.
+DR   PDB; 3LQ8; X-ray; 2.02 A; A=1051-1348.
+DR   PDB; 3Q6U; X-ray; 1.60 A; A=1048-1348.
+DR   PDB; 3Q6W; X-ray; 1.75 A; A=1048-1348.
+DR   PDB; 3QTI; X-ray; 2.00 A; A/B=1050-1360.
+DR   PDB; 3R7O; X-ray; 2.30 A; A=1048-1348.
+DR   PDB; 3RHK; X-ray; 1.94 A; A/B=1038-1346.
+DR   PDB; 3U6H; X-ray; 2.00 A; A=1048-1351.
+DR   PDB; 3U6I; X-ray; 2.10 A; A=1048-1351.
+DR   PDB; 3VW8; X-ray; 2.10 A; A=1024-1352.
+DR   PDB; 3ZBX; X-ray; 2.20 A; A=1051-1348.
+DR   PDB; 3ZC5; X-ray; 2.20 A; A=1051-1348.
+DR   PDB; 3ZCL; X-ray; 1.40 A; A=1051-1348.
+DR   PDB; 3ZXZ; X-ray; 1.80 A; A=1051-1348.
+DR   PDB; 3ZZE; X-ray; 1.87 A; A=1051-1348.
+DR   PDB; 4AOI; X-ray; 1.90 A; A=1051-1348.
+DR   PDB; 4AP7; X-ray; 1.80 A; A=1051-1348.
+DR   PDB; 4DEG; X-ray; 2.00 A; A=1048-1351.
+DR   PDB; 4DEH; X-ray; 2.00 A; A=1048-1351.
+DR   PDB; 4DEI; X-ray; 2.05 A; A=1048-1351.
+DR   PDB; 4EEV; X-ray; 1.80 A; A=1038-1346.
+DR   PDB; 4GG5; X-ray; 2.42 A; A=1038-1346.
+DR   PDB; 4GG7; X-ray; 2.27 A; A=1038-1346.
+DR   PDB; 4IWD; X-ray; 1.99 A; A=1048-1348.
+DR   PDB; 4K3J; X-ray; 2.80 A; B=39-564.
+DR   PDB; 4KNB; X-ray; 2.40 A; A/B/C/D=1060-1346.
+DR   PDB; 4MXC; X-ray; 1.63 A; A=1038-1346.
+DR   PDB; 4O3T; X-ray; 2.99 A; B=25-567.
+DR   PDB; 4O3U; X-ray; 3.04 A; B=25-567.
+DR   PDB; 4R1V; X-ray; 1.20 A; A=1055-1345.
+DR   PDB; 4R1Y; X-ray; 2.00 A; A=1055-1346.
+DR   PDB; 4XMO; X-ray; 1.75 A; A=1048-1350.
+DR   PDB; 4XYF; X-ray; 1.85 A; A=1048-1351.
+DR   PDB; 5DG5; X-ray; 2.60 A; A/B=1038-1346.
+DR   PDB; 5EOB; X-ray; 1.75 A; A=1038-1346.
+DR   PDB; 5EYC; X-ray; 1.80 A; A=1048-1351.
+DR   PDB; 5EYD; X-ray; 1.85 A; A=1048-1351.
+DR   PDB; 5HLW; X-ray; 1.97 A; A=1057-1355.
+DR   PDB; 5HNI; X-ray; 1.71 A; X/Y=1049-1360.
+DR   PDB; 5HO6; X-ray; 1.97 A; A=1049-1360.
+DR   PDB; 5HOA; X-ray; 2.14 A; A=1049-1360.
+DR   PDB; 5HOR; X-ray; 2.20 A; A=1049-1360.
+DR   PDB; 5HTI; X-ray; 1.66 A; A=1038-1346.
+DR   PDB; 5LSP; X-ray; 2.60 A; A/P=519-743, X/Y=25-35.
+DR   PDB; 5T3Q; X-ray; 2.00 A; A=1048-1350.
+DR   PDB; 5UAB; X-ray; 1.90 A; A=1023-1360.
+DR   PDB; 5UAD; X-ray; 2.25 A; A=1023-1360.
+DR   PDB; 5YA5; X-ray; 1.89 A; A=1038-1346.
+DR   PDB; 6GCU; X-ray; 6.00 A; A/D=25-741.
+DR   PDB; 6I04; X-ray; 3.10 A; A/B=25-564.
+DR   PDB; 6SD9; X-ray; 2.35 A; A=1038-1346.
+DR   PDB; 6SDC; X-ray; 1.67 A; A=1038-1346.
+DR   PDB; 6SDD; X-ray; 1.93 A; A=1038-1346.
+DR   PDB; 6SDE; X-ray; 2.49 A; A=1038-1346.
+DR   PDB; 6UBW; X-ray; 2.00 A; A=1023-1360.
+DR   PDB; 6WVZ; X-ray; 3.10 A; M=39-564.
+DR   PDB; 7B3Q; X-ray; 1.75 A; A=1049-1346.
+DR   PDB; 7B3T; X-ray; 2.23 A; A=1049-1346.
+DR   PDB; 7B3V; X-ray; 1.93 A; A=1049-1346.
+DR   PDB; 7B3W; X-ray; 2.02 A; A=1049-1346.
+DR   PDB; 7B3Z; X-ray; 1.80 A; A=1049-1346.
+DR   PDB; 7B40; X-ray; 1.76 A; A=1049-1346.
+DR   PDB; 7B41; X-ray; 1.97 A; A=1049-1346.
+DR   PDB; 7B42; X-ray; 1.80 A; A=1049-1346.
+DR   PDB; 7B43; X-ray; 1.87 A; A/B=1049-1346.
+DR   PDB; 7B44; X-ray; 1.76 A; A=1049-1346.
+DR   PDB; 7MO7; EM; 4.80 A; B/E=1-1390.
+DR   PDB; 7MO8; EM; 4.50 A; B=1-1390.
+DR   PDB; 7MO9; EM; 4.00 A; E=1-1390.
+DR   PDB; 7MOA; EM; 4.90 A; E=1-1390.
+DR   PDB; 7MOB; EM; 5.00 A; C/D=1-1390.
+DR   PDBsum; 1FYR; -.
+DR   PDBsum; 1R0P; -.
+DR   PDBsum; 1R1W; -.
+DR   PDBsum; 1SHY; -.
+DR   PDBsum; 1SSL; -.
+DR   PDBsum; 2G15; -.
+DR   PDBsum; 2RFN; -.
+DR   PDBsum; 2RFS; -.
+DR   PDBsum; 2UZX; -.
+DR   PDBsum; 2UZY; -.
+DR   PDBsum; 2WD1; -.
+DR   PDBsum; 2WGJ; -.
+DR   PDBsum; 2WKM; -.
+DR   PDBsum; 3A4P; -.
+DR   PDBsum; 3BUX; -.
+DR   PDBsum; 3C1X; -.
+DR   PDBsum; 3CCN; -.
+DR   PDBsum; 3CD8; -.
+DR   PDBsum; 3CE3; -.
+DR   PDBsum; 3CTH; -.
+DR   PDBsum; 3CTJ; -.
+DR   PDBsum; 3DKC; -.
+DR   PDBsum; 3DKF; -.
+DR   PDBsum; 3DKG; -.
+DR   PDBsum; 3EFJ; -.
+DR   PDBsum; 3EFK; -.
+DR   PDBsum; 3F66; -.
+DR   PDBsum; 3F82; -.
+DR   PDBsum; 3I5N; -.
+DR   PDBsum; 3L8V; -.
+DR   PDBsum; 3LQ8; -.
+DR   PDBsum; 3Q6U; -.
+DR   PDBsum; 3Q6W; -.
+DR   PDBsum; 3QTI; -.
+DR   PDBsum; 3R7O; -.
+DR   PDBsum; 3RHK; -.
+DR   PDBsum; 3U6H; -.
+DR   PDBsum; 3U6I; -.
+DR   PDBsum; 3VW8; -.
+DR   PDBsum; 3ZBX; -.
+DR   PDBsum; 3ZC5; -.
+DR   PDBsum; 3ZCL; -.
+DR   PDBsum; 3ZXZ; -.
+DR   PDBsum; 3ZZE; -.
+DR   PDBsum; 4AOI; -.
+DR   PDBsum; 4AP7; -.
+DR   PDBsum; 4DEG; -.
+DR   PDBsum; 4DEH; -.
+DR   PDBsum; 4DEI; -.
+DR   PDBsum; 4EEV; -.
+DR   PDBsum; 4GG5; -.
+DR   PDBsum; 4GG7; -.
+DR   PDBsum; 4IWD; -.
+DR   PDBsum; 4K3J; -.
+DR   PDBsum; 4KNB; -.
+DR   PDBsum; 4MXC; -.
+DR   PDBsum; 4O3T; -.
+DR   PDBsum; 4O3U; -.
+DR   PDBsum; 4R1V; -.
+DR   PDBsum; 4R1Y; -.
+DR   PDBsum; 4XMO; -.
+DR   PDBsum; 4XYF; -.
+DR   PDBsum; 5DG5; -.
+DR   PDBsum; 5EOB; -.
+DR   PDBsum; 5EYC; -.
+DR   PDBsum; 5EYD; -.
+DR   PDBsum; 5HLW; -.
+DR   PDBsum; 5HNI; -.
+DR   PDBsum; 5HO6; -.
+DR   PDBsum; 5HOA; -.
+DR   PDBsum; 5HOR; -.
+DR   PDBsum; 5HTI; -.
+DR   PDBsum; 5LSP; -.
+DR   PDBsum; 5T3Q; -.
+DR   PDBsum; 5UAB; -.
+DR   PDBsum; 5UAD; -.
+DR   PDBsum; 5YA5; -.
+DR   PDBsum; 6GCU; -.
+DR   PDBsum; 6I04; -.
+DR   PDBsum; 6SD9; -.
+DR   PDBsum; 6SDC; -.
+DR   PDBsum; 6SDD; -.
+DR   PDBsum; 6SDE; -.
+DR   PDBsum; 6UBW; -.
+DR   PDBsum; 6WVZ; -.
+DR   PDBsum; 7B3Q; -.
+DR   PDBsum; 7B3T; -.
+DR   PDBsum; 7B3V; -.
+DR   PDBsum; 7B3W; -.
+DR   PDBsum; 7B3Z; -.
+DR   PDBsum; 7B40; -.
+DR   PDBsum; 7B41; -.
+DR   PDBsum; 7B42; -.
+DR   PDBsum; 7B43; -.
+DR   PDBsum; 7B44; -.
+DR   PDBsum; 7MO7; -.
+DR   PDBsum; 7MO8; -.
+DR   PDBsum; 7MO9; -.
+DR   PDBsum; 7MOA; -.
+DR   PDBsum; 7MOB; -.
+DR   AlphaFoldDB; P08581; -.
+DR   SASBDB; P08581; -.
+DR   SMR; P08581; -.
+DR   BioGRID; 110391; 200.
+DR   CORUM; P08581; -.
+DR   DIP; DIP-6023N; -.
+DR   ELM; P08581; -.
+DR   IntAct; P08581; 164.
+DR   MINT; P08581; -.
+DR   STRING; 9606.ENSP00000317272; -.
+DR   BindingDB; P08581; -.
+DR   ChEMBL; CHEMBL3717; -.
+DR   DrugBank; DB06896; 1-(4-fluorophenyl)-N-[3-fluoro-4-(1H-pyrrolo[2,3-b]pyridin-4-yloxy)phenyl]-2-oxo-1,2-dihydropyridine-3-carboxamide.
+DR   DrugBank; DB08791; 1-[(2-NITROPHENYL)SULFONYL]-1H-PYRROLO[3,2-B]PYRIDINE-6-CARBOXAMIDE.
+DR   DrugBank; DB06997; 2-(4-fluorophenyl)-N-{[3-fluoro-4-(1H-pyrrolo[2,3-b]pyridin-4-yloxy)phenyl]carbamoyl}acetamide.
+DR   DrugBank; DB07969; 3-[3-(4-methylpiperazin-1-yl)-7-(trifluoromethyl)quinoxalin-5-yl]phenol.
+DR   DrugBank; DB08079; AMG-208.
+DR   DrugBank; DB16695; Amivantamab.
+DR   DrugBank; DB12742; Amuvatinib.
+DR   DrugBank; DB12267; Brigatinib.
+DR   DrugBank; DB08875; Cabozantinib.
+DR   DrugBank; DB11791; Capmatinib.
+DR   DrugBank; DB08865; Crizotinib.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugBank; DB02152; K-252a.
+DR   DrugBank; DB07369; N-(3-chlorophenyl)-N-methyl-2-oxo-3-[(3,4,5-trimethyl-1H-pyrrol-2-yl)methyl]-2H-indole-5-sulfonamide.
+DR   DrugBank; DB06995; N-({4-[(2-aminopyridin-4-yl)oxy]-3-fluorophenyl}carbamoyl)-2-(4-fluorophenyl)acetamide.
+DR   DrugBank; DB06314; SGX-523.
+DR   DrugBank; DB15133; Tepotinib.
+DR   DrugBank; DB12200; Tivantinib.
+DR   DrugBank; DB11800; Tivozanib.
+DR   DrugCentral; P08581; -.
+DR   GuidetoPHARMACOLOGY; 1815; -.
+DR   GlyConnect; 680; 17 N-Linked glycans (6 sites).
+DR   GlyGen; P08581; 15 sites, 6 Asn glycans (3 sites), 17 N-linked glycans (6 sites).
+DR   iPTMnet; P08581; -.
+DR   PhosphoSitePlus; P08581; -.
+DR   SwissPalm; P08581; -.
+DR   BioMuta; MET; -.
+DR   DMDM; 251757497; -.
+DR   OGP; P08581; -.
+DR   CPTAC; CPTAC-1496; -.
+DR   CPTAC; CPTAC-2784; -.
+DR   EPD; P08581; -.
+DR   jPOST; P08581; -.
+DR   MassIVE; P08581; -.
+DR   MaxQB; P08581; -.
+DR   PaxDb; P08581; -.
+DR   PeptideAtlas; P08581; -.
+DR   PRIDE; P08581; -.
+DR   ProteomicsDB; 52128; -. [P08581-1]
+DR   ProteomicsDB; 52129; -. [P08581-2]
+DR   ProteomicsDB; 52130; -. [P08581-3]
+DR   ABCD; P08581; 52 sequenced antibodies.
+DR   Antibodypedia; 3939; 3233 antibodies from 49 providers.
+DR   CPTC; P08581; 1 antibody.
+DR   DNASU; 4233; -.
+DR   Ensembl; ENST00000318493.11; ENSP00000317272.6; ENSG00000105976.16. [P08581-2]
+DR   Ensembl; ENST00000397752.8; ENSP00000380860.3; ENSG00000105976.16. [P08581-1]
+DR   Ensembl; ENST00000436117.2; ENSP00000410980.2; ENSG00000105976.16. [P08581-3]
+DR   GeneID; 4233; -.
+DR   KEGG; hsa:4233; -.
+DR   MANE-Select; ENST00000397752.8; ENSP00000380860.3; NM_000245.4; NP_000236.2.
+DR   UCSC; uc003vij.4; human. [P08581-1]
+DR   CTD; 4233; -.
+DR   DisGeNET; 4233; -.
+DR   GeneCards; MET; -.
+DR   HGNC; HGNC:7029; MET.
+DR   HPA; ENSG00000105976; Tissue enhanced (liver).
+DR   MalaCards; MET; -.
+DR   MIM; 114550; phenotype.
+DR   MIM; 164860; gene.
+DR   MIM; 605074; phenotype.
+DR   MIM; 607278; phenotype.
+DR   MIM; 616705; phenotype.
+DR   neXtProt; NX_P08581; -.
+DR   OpenTargets; ENSG00000105976; -.
+DR   Orphanet; 90636; Autosomal recessive non-syndromic sensorineural deafness type DFNB.
+DR   Orphanet; 47044; Hereditary papillary renal cell carcinoma.
+DR   Orphanet; 106; NON RARE IN EUROPE: Autism.
+DR   Orphanet; 488265; Osteofibrous dysplasia.
+DR   Orphanet; 319298; Papillary renal cell carcinoma.
+DR   Orphanet; 33402; Pediatric hepatocellular carcinoma.
+DR   Orphanet; 357191; Selection of therapeutic option in non-small cell lung carcinoma.
+DR   PharmGKB; PA30763; -.
+DR   VEuPathDB; HostDB:ENSG00000105976; -.
+DR   eggNOG; KOG1095; Eukaryota.
+DR   eggNOG; KOG3610; Eukaryota.
+DR   GeneTree; ENSGT00940000158022; -.
+DR   HOGENOM; CLU_005158_0_0_1; -.
+DR   InParanoid; P08581; -.
+DR   OMA; DEEPGQC; -.
+DR   OrthoDB; 408584at2759; -.
+DR   PhylomeDB; P08581; -.
+DR   TreeFam; TF317402; -.
+DR   BRENDA; 2.7.10.1; 2681.
+DR   PathwayCommons; P08581; -.
+DR   Reactome; R-HSA-1257604; PIP3 activates AKT signaling.
+DR   Reactome; R-HSA-2219530; Constitutive Signaling by Aberrant PI3K in Cancer.
+DR   Reactome; R-HSA-416550; Sema4D mediated inhibition of cell attachment and migration.
+DR   Reactome; R-HSA-5673001; RAF/MAP kinase cascade.
+DR   Reactome; R-HSA-6806942; MET Receptor Activation.
+DR   Reactome; R-HSA-6807004; Negative regulation of MET activity.
+DR   Reactome; R-HSA-6811558; PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling.
+DR   Reactome; R-HSA-8851805; MET activates RAS signaling.
+DR   Reactome; R-HSA-8851907; MET activates PI3K/AKT signaling.
+DR   Reactome; R-HSA-8865999; MET activates PTPN11.
+DR   Reactome; R-HSA-8874081; MET activates PTK2 signaling.
+DR   Reactome; R-HSA-8875360; InlB-mediated entry of Listeria monocytogenes into host cell.
+DR   Reactome; R-HSA-8875513; MET interacts with TNS proteins.
+DR   Reactome; R-HSA-8875555; MET activates RAP1 and RAC1.
+DR   Reactome; R-HSA-8875656; MET receptor recycling.
+DR   Reactome; R-HSA-8875791; MET activates STAT3.
+DR   Reactome; R-HSA-9022699; MECP2 regulates neuronal receptors and channels.
+DR   Reactome; R-HSA-9734091; Drug-mediated inhibition of MET activation.
+DR   SignaLink; P08581; -.
+DR   SIGNOR; P08581; -.
+DR   BioGRID-ORCS; 4233; 32 hits in 1116 CRISPR screens.
+DR   ChiTaRS; MET; human.
+DR   EvolutionaryTrace; P08581; -.
+DR   GeneWiki; C-Met; -.
+DR   GenomeRNAi; 4233; -.
+DR   Pharos; P08581; Tclin.
+DR   PRO; PR:P08581; -.
+DR   Proteomes; UP000005640; Chromosome 7.
+DR   RNAct; P08581; protein.
+DR   Bgee; ENSG00000105976; Expressed in pigmented layer of retina and 192 other tissues.
+DR   ExpressionAtlas; P08581; baseline and differential.
+DR   Genevisible; P08581; HS.
+DR   GO; GO:0009925; C:basal plasma membrane; IDA:MGI.
+DR   GO; GO:0009986; C:cell surface; HDA:UniProtKB.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016021; C:integral component of membrane; NAS:UniProtKB.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IBA:GO_Central.
+DR   GO; GO:0005886; C:plasma membrane; TAS:Reactome.
+DR   GO; GO:0043235; C:receptor complex; IBA:GO_Central.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0005008; F:hepatocyte growth factor receptor activity; IBA:GO_Central.
+DR   GO; GO:0042802; F:identical protein binding; IPI:IntAct.
+DR   GO; GO:0140677; F:molecular function activator activity; EXP:DisProt.
+DR   GO; GO:0019903; F:protein phosphatase binding; IPI:UniProtKB.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; TAS:Reactome.
+DR   GO; GO:0017154; F:semaphorin receptor activity; IEA:InterPro.
+DR   GO; GO:0004714; F:transmembrane receptor protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:0048754; P:branching morphogenesis of an epithelial tube; IMP:UniProtKB.
+DR   GO; GO:0016477; P:cell migration; IBA:GO_Central.
+DR   GO; GO:0007166; P:cell surface receptor signaling pathway; NAS:UniProtKB.
+DR   GO; GO:0001886; P:endothelial cell morphogenesis; IDA:UniProtKB.
+DR   GO; GO:0061436; P:establishment of skin barrier; IMP:CAFA.
+DR   GO; GO:0001889; P:liver development; IBA:GO_Central.
+DR   GO; GO:0010507; P:negative regulation of autophagy; NAS:ParkinsonsUK-UCL.
+DR   GO; GO:1905098; P:negative regulation of guanyl-nucleotide exchange factor activity; IDA:CAFA.
+DR   GO; GO:1901299; P:negative regulation of hydrogen peroxide-mediated programmed cell death; IMP:BHF-UCL.
+DR   GO; GO:0035024; P:negative regulation of Rho protein signal transduction; IDA:CAFA.
+DR   GO; GO:0051497; P:negative regulation of stress fiber assembly; IDA:CAFA.
+DR   GO; GO:0070495; P:negative regulation of thrombin-activated receptor signaling pathway; IDA:CAFA.
+DR   GO; GO:0007399; P:nervous system development; IBA:GO_Central.
+DR   GO; GO:0030182; P:neuron differentiation; IBA:GO_Central.
+DR   GO; GO:0031016; P:pancreas development; IBA:GO_Central.
+DR   GO; GO:0006909; P:phagocytosis; IBA:GO_Central.
+DR   GO; GO:0050918; P:positive chemotaxis; IDA:UniProtKB.
+DR   GO; GO:2001028; P:positive regulation of endothelial cell chemotaxis; IMP:UniProtKB.
+DR   GO; GO:0033674; P:positive regulation of kinase activity; IBA:GO_Central.
+DR   GO; GO:0031116; P:positive regulation of microtubule polymerization; IMP:CAFA.
+DR   GO; GO:0051897; P:positive regulation of protein kinase B signaling; IBA:GO_Central.
+DR   GO; GO:0045944; P:positive regulation of transcription by RNA polymerase II; IDA:BHF-UCL.
+DR   GO; GO:0071526; P:semaphorin-plexin signaling pathway; IDA:UniProtKB.
+DR   GO; GO:0007165; P:signal transduction; TAS:ProtInc.
+DR   GO; GO:0007169; P:transmembrane receptor protein tyrosine kinase signaling pathway; IBA:GO_Central.
+DR   DisProt; DP02738; -.
+DR   Gene3D; 2.130.10.10; -; 1.
+DR   Gene3D; 2.60.40.10; -; 3.
+DR   InterPro; IPR013783; Ig-like_fold.
+DR   InterPro; IPR014756; Ig_E-set.
+DR   InterPro; IPR002909; IPT_dom.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR031148; Plexin.
+DR   InterPro; IPR002165; Plexin_repeat.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR016201; PSI.
+DR   InterPro; IPR001627; Semap_dom.
+DR   InterPro; IPR036352; Semap_dom_sf.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR008266; Tyr_kinase_AS.
+DR   InterPro; IPR020635; Tyr_kinase_cat_dom.
+DR   InterPro; IPR016244; Tyr_kinase_HGF/MSP_rcpt.
+DR   InterPro; IPR015943; WD40/YVTN_repeat-like_dom_sf.
+DR   PANTHER; PTHR22625; PTHR22625; 1.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   Pfam; PF01437; PSI; 1.
+DR   Pfam; PF01403; Sema; 1.
+DR   Pfam; PF01833; TIG; 3.
+DR   PIRSF; PIRSF000617; TyrPK_HGF-R; 1.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00429; IPT; 4.
+DR   SMART; SM00423; PSI; 1.
+DR   SMART; SM00630; Sema; 1.
+DR   SMART; SM00219; TyrKc; 1.
+DR   SUPFAM; SSF101912; SSF101912; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   SUPFAM; SSF81296; SSF81296; 3.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00109; PROTEIN_KINASE_TYR; 1.
+DR   PROSITE; PS51004; SEMA; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Chromosomal rearrangement;
+KW   Deafness; Disease variant; Disulfide bond; Glycoprotein; Kinase; Membrane;
+KW   Non-syndromic deafness; Nucleotide-binding; Phosphoprotein; Proto-oncogene;
+KW   Receptor; Reference proteome; Repeat; Secreted; Signal; Transferase;
+KW   Transmembrane; Transmembrane helix; Tyrosine-protein kinase;
+KW   Ubl conjugation.
+FT   SIGNAL          1..24
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           25..1390
+FT                   /note="Hepatocyte growth factor receptor"
+FT                   /id="PRO_0000024440"
+FT   TOPO_DOM        25..932
+FT                   /note="Extracellular"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        933..955
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        956..1390
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          27..515
+FT                   /note="Sema"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00352"
+FT   DOMAIN          563..655
+FT                   /note="IPT/TIG 1"
+FT   DOMAIN          657..739
+FT                   /note="IPT/TIG 2"
+FT   DOMAIN          742..836
+FT                   /note="IPT/TIG 3"
+FT   DOMAIN          1078..1345
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1212..1390
+FT                   /note="Interaction with RANBP9"
+FT   REGION          1320..1359
+FT                   /note="Interaction with MUC20"
+FT                   /evidence="ECO:0000269|PubMed:15314156"
+FT   ACT_SITE        1204
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10028"
+FT   BINDING         1084..1092
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         1110
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT   SITE            307..308
+FT                   /note="Cleavage"
+FT                   /evidence="ECO:0000255"
+FT   SITE            1003
+FT                   /note="Required for ligand-induced CBL-mediated
+FT                   ubiquitination"
+FT                   /evidence="ECO:0000269|PubMed:12244174"
+FT   SITE            1009..1010
+FT                   /note="Breakpoint for translocation to form TPR-MET
+FT                   oncogene"
+FT   MOD_RES         966
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:24275569"
+FT   MOD_RES         977
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:18691976"
+FT   MOD_RES         990
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18669648,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         997
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18669648"
+FT   MOD_RES         1000
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18669648"
+FT   MOD_RES         1003
+FT                   /note="Phosphotyrosine"
+FT                   /evidence="ECO:0007744|PubMed:18691976,
+FT                   ECO:0007744|PubMed:19369195"
+FT   MOD_RES         1230
+FT                   /note="Phosphotyrosine"
+FT                   /evidence="ECO:0000269|PubMed:12475979"
+FT   MOD_RES         1234
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:12475979"
+FT   MOD_RES         1235
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:12475979,
+FT                   ECO:0000269|PubMed:1655790"
+FT   MOD_RES         1289
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:19369195"
+FT   MOD_RES         1349
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:12475979,
+FT                   ECO:0000269|PubMed:7513258"
+FT   MOD_RES         1356
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:15735664,
+FT                   ECO:0000269|PubMed:7513258"
+FT   MOD_RES         1365
+FT                   /note="Phosphotyrosine"
+FT                   /evidence="ECO:0000269|PubMed:12475979"
+FT   CARBOHYD        45
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        106
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:19196183"
+FT   CARBOHYD        149
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        202
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        399
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        405
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        607
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        635
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        785
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        879
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        930
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   DISULFID        95..101
+FT   DISULFID        98..160
+FT   DISULFID        133..141
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZX, ECO:0007744|PDB:2UZY"
+FT   DISULFID        172..175
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZX, ECO:0007744|PDB:2UZY"
+FT   DISULFID        298..363
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZX, ECO:0007744|PDB:2UZY"
+FT   DISULFID        385..397
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZY"
+FT   DISULFID        520..538
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZX, ECO:0007744|PDB:2UZY"
+FT   DISULFID        526..561
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZX, ECO:0007744|PDB:2UZY"
+FT   DISULFID        529..545
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZX, ECO:0007744|PDB:2UZY"
+FT   DISULFID        541..551
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZX, ECO:0007744|PDB:2UZY"
+FT   DISULFID        610..624
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZX, ECO:0007744|PDB:2UZY"
+FT   DISULFID        697..709
+FT                   /evidence="ECO:0000269|PubMed:17662939,
+FT                   ECO:0007744|PDB:2UZY"
+FT   VAR_SEQ         755..764
+FT                   /note="SGGSTITGVG -> RHVNIALIQR (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:18593464"
+FT                   /id="VSP_042447"
+FT   VAR_SEQ         755
+FT                   /note="S -> STWWKEPLNIVSFLFCFAS (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:2819873"
+FT                   /id="VSP_005005"
+FT   VAR_SEQ         765..1390
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:18593464"
+FT                   /id="VSP_042448"
+FT   VARIANT         143
+FT                   /note="R -> Q (in dbSNP:rs35469582)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041738"
+FT   VARIANT         150
+FT                   /note="H -> Y (found in a case of cancer of unknown primary
+FT                   origin; the mutated receptor is still functional and can
+FT                   sustain the transformed phenotype; somatic mutation;
+FT                   dbSNP:rs1436957498)"
+FT                   /evidence="ECO:0000269|PubMed:20949619"
+FT                   /id="VAR_064855"
+FT   VARIANT         156
+FT                   /note="S -> L (in dbSNP:rs56311081)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041739"
+FT   VARIANT         168
+FT                   /note="E -> D (found in a case of cancer of unknown primary
+FT                   origin; the mutated receptor is still functional and can
+FT                   sustain the transformed phenotype; somatic mutation;
+FT                   dbSNP:rs55985569)"
+FT                   /evidence="ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:20949619"
+FT                   /id="VAR_041740"
+FT   VARIANT         238
+FT                   /note="L -> S (in dbSNP:rs34349517)"
+FT                   /id="VAR_032478"
+FT   VARIANT         316
+FT                   /note="I -> M (in dbSNP:rs35225896)"
+FT                   /id="VAR_032479"
+FT   VARIANT         320
+FT                   /note="A -> V (in dbSNP:rs35776110)"
+FT                   /evidence="ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006285"
+FT   VARIANT         375
+FT                   /note="N -> K (found in lung cancer also including cases
+FT                   carrying EGFR mutations; unknown pathological significance;
+FT                   decreased hepatocyte growth factor-activated receptor
+FT                   activity; decreased interaction with HGF;
+FT                   dbSNP:rs776693512)"
+FT                   /evidence="ECO:0000269|PubMed:28294470"
+FT                   /id="VAR_079370"
+FT   VARIANT         375
+FT                   /note="N -> S (in dbSNP:rs33917957)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_032480"
+FT   VARIANT         385
+FT                   /note="C -> Y (found in a case of cancer of unknown primary
+FT                   origin; the mutated receptor is still functional and can
+FT                   sustain the transformed phenotype; somatic mutation;
+FT                   dbSNP:rs752055485)"
+FT                   /evidence="ECO:0000269|PubMed:20949619"
+FT                   /id="VAR_064856"
+FT   VARIANT         773
+FT                   /note="P -> L (in gastric cancer; dbSNP:rs771333219)"
+FT                   /evidence="ECO:0000269|PubMed:12920089"
+FT                   /id="VAR_032481"
+FT   VARIANT         841
+FT                   /note="F -> V (in DFNB97; dbSNP:rs794728016)"
+FT                   /evidence="ECO:0000269|PubMed:25941349"
+FT                   /id="VAR_075757"
+FT   VARIANT         964..1010
+FT                   /note="Missing (in OSFD; loss of CBL-mediated
+FT                   destabilization)"
+FT                   /evidence="ECO:0000269|PubMed:26637977"
+FT                   /id="VAR_076584"
+FT   VARIANT         970
+FT                   /note="R -> C (in dbSNP:rs34589476)"
+FT                   /evidence="ECO:0000269|PubMed:17053076,
+FT                   ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_032482"
+FT   VARIANT         991
+FT                   /note="P -> S (in gastric cancer; prolonged tyrosine
+FT                   phosphorylation in response to HGF/SF; transforming
+FT                   activity in athymic nude mice; dbSNP:rs768678989)"
+FT                   /evidence="ECO:0000269|PubMed:11042681"
+FT                   /id="VAR_032483"
+FT   VARIANT         992
+FT                   /note="T -> I (found in a case of cancer of unknown primary
+FT                   origin; the mutated receptor is still functional and can
+FT                   sustain the transformed phenotype; somatic mutation;
+FT                   dbSNP:rs56391007)"
+FT                   /evidence="ECO:0000269|PubMed:11042681,
+FT                   ECO:0000269|PubMed:17053076, ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:20949619"
+FT                   /id="VAR_032484"
+FT   VARIANT         1003
+FT                   /note="Y -> S (probable disease-associated variant found in
+FT                   lesional sample from a patient with sporadically occurring,
+FT                   unilateral osteofibrous dysplasia; somatic mutation;
+FT                   complete loss of ligand-induced CBL-mediated
+FT                   ubiquitination, resulting in protein stabilization)"
+FT                   /evidence="ECO:0000269|PubMed:12244174"
+FT                   /id="VAR_076585"
+FT   VARIANT         1092
+FT                   /note="V -> I (in RCCP; constitutive autophosphorylation;
+FT                   dbSNP:rs786202724)"
+FT                   /evidence="ECO:0000269|PubMed:10327054,
+FT                   ECO:0000269|PubMed:10417759, ECO:0000269|PubMed:10433944"
+FT                   /id="VAR_032485"
+FT   VARIANT         1094
+FT                   /note="H -> L (in RCCP; constitutive autophosphorylation;
+FT                   causes malignant transformation in cell lines)"
+FT                   /evidence="ECO:0000269|PubMed:10327054"
+FT                   /id="VAR_032486"
+FT   VARIANT         1094
+FT                   /note="H -> R (in RCCP; causes malignant transformation in
+FT                   cell lines; dbSNP:rs121913243)"
+FT                   /evidence="ECO:0000269|PubMed:10433944,
+FT                   ECO:0000269|PubMed:9563489"
+FT                   /id="VAR_032487"
+FT   VARIANT         1094
+FT                   /note="H -> Y (in RCCP; constitutive autophosphorylation;
+FT                   causes malignant transformation in cell lines;
+FT                   dbSNP:rs121913244)"
+FT                   /evidence="ECO:0000269|PubMed:10327054"
+FT                   /id="VAR_032488"
+FT   VARIANT         1106
+FT                   /note="H -> D (in RCCP; constitutive autophosphorylation;
+FT                   causes malignant transformation in cell lines)"
+FT                   /evidence="ECO:0000269|PubMed:10327054,
+FT                   ECO:0000269|PubMed:10433944"
+FT                   /id="VAR_032489"
+FT   VARIANT         1131
+FT                   /note="M -> T (in RCCP; germline mutation;
+FT                   dbSNP:rs121913668)"
+FT                   /evidence="ECO:0000269|PubMed:10433944,
+FT                   ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006286"
+FT   VARIANT         1173
+FT                   /note="T -> I (in HCC; dbSNP:rs121913675)"
+FT                   /evidence="ECO:0000269|PubMed:9927037"
+FT                   /id="VAR_032490"
+FT   VARIANT         1188
+FT                   /note="V -> L (in RCCP; germline mutation;
+FT                   dbSNP:rs121913669)"
+FT                   /evidence="ECO:0000269|PubMed:10433944,
+FT                   ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006287"
+FT   VARIANT         1195
+FT                   /note="L -> V (in RCCP; somatic mutation;
+FT                   dbSNP:rs121913673)"
+FT                   /evidence="ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006288"
+FT   VARIANT         1220
+FT                   /note="V -> I (in RCCP; germline mutation;
+FT                   dbSNP:rs121913670)"
+FT                   /evidence="ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006289"
+FT   VARIANT         1228
+FT                   /note="D -> H (in RCCP; somatic mutation;
+FT                   dbSNP:rs121913671)"
+FT                   /evidence="ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006291"
+FT   VARIANT         1228
+FT                   /note="D -> N (in RCCP; germline mutation;
+FT                   dbSNP:rs121913671)"
+FT                   /evidence="ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006290"
+FT   VARIANT         1230
+FT                   /note="Y -> C (in RCCP; germline mutation;
+FT                   dbSNP:rs121913246)"
+FT                   /evidence="ECO:0000269|PubMed:10433944,
+FT                   ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006292"
+FT   VARIANT         1230
+FT                   /note="Y -> D (in RCCP; constitutive autophosphorylation;
+FT                   causes malignant transformation in cell lines)"
+FT                   /evidence="ECO:0000269|PubMed:10327054,
+FT                   ECO:0000269|PubMed:10433944"
+FT                   /id="VAR_032491"
+FT   VARIANT         1230
+FT                   /note="Y -> H (in RCCP; somatic mutation;
+FT                   dbSNP:rs121913247)"
+FT                   /evidence="ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006293"
+FT   VARIANT         1244
+FT                   /note="K -> R (in HCC; dbSNP:rs121913677)"
+FT                   /evidence="ECO:0000269|PubMed:9927037"
+FT                   /id="VAR_032492"
+FT   VARIANT         1250
+FT                   /note="M -> I (in HCC; dbSNP:rs121913676)"
+FT                   /evidence="ECO:0000269|PubMed:9927037"
+FT                   /id="VAR_032493"
+FT   VARIANT         1250
+FT                   /note="M -> T (in RCCP; somatic mutation;
+FT                   dbSNP:rs121913245)"
+FT                   /evidence="ECO:0000269|PubMed:10433944,
+FT                   ECO:0000269|PubMed:9140397"
+FT                   /id="VAR_006294"
+FT   VARIANT         1294
+FT                   /note="V -> I (found in a case of cancer of unknown primary
+FT                   origin; the mutated receptor is still functional and can
+FT                   sustain the transformed phenotype; somatic mutation;
+FT                   dbSNP:rs1263785859)"
+FT                   /evidence="ECO:0000269|PubMed:20949619"
+FT                   /id="VAR_064857"
+FT   MUTAGEN         1234
+FT                   /note="Y->F: Complete loss of kinase activity and of
+FT                   ligand-induced ubiquitination. Alters interaction with
+FT                   PTPN1 and PTPN2. Loss of interaction with PTPN1 and PTPN2;
+FT                   when associated with F-1235."
+FT                   /evidence="ECO:0000269|PubMed:12244174,
+FT                   ECO:0000269|PubMed:18819921"
+FT   MUTAGEN         1235
+FT                   /note="Y->F: Complete loss of kinase activity. Alters
+FT                   interaction with PTPN1 and PTPN2. Loss of interaction with
+FT                   PTPN1 and PTPN2; when associated with F-1234."
+FT                   /evidence="ECO:0000269|PubMed:12244174,
+FT                   ECO:0000269|PubMed:18819921"
+FT   MUTAGEN         1313
+FT                   /note="Y->F: No effect on ligand-induced CBL-mediated
+FT                   ubiquitination; when associated with F-1349, F-1356 and
+FT                   F-1365."
+FT                   /evidence="ECO:0000269|PubMed:12244174"
+FT   MUTAGEN         1349
+FT                   /note="Y->F: No effect on ligand-induced CBL-mediated
+FT                   ubiquitination; when associated with F-1313, F-1356 and
+FT                   F-1365."
+FT                   /evidence="ECO:0000269|PubMed:12244174"
+FT   MUTAGEN         1356
+FT                   /note="Y->F: No effect on ligand-induced CBL-mediated
+FT                   ubiquitination; when associated with F-1313, F-1349 and
+FT                   F-1365."
+FT                   /evidence="ECO:0000269|PubMed:12244174"
+FT   MUTAGEN         1365
+FT                   /note="Y->F: No effect on ligand-induced CBL-mediated
+FT                   ubiquitination; when associated with F-1313, F-1349 and
+FT                   F-1356."
+FT                   /evidence="ECO:0000269|PubMed:12244174"
+FT   CONFLICT        237
+FT                   /note="V -> A (in Ref. 3; ACF47606)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        508
+FT                   /note="K -> R (in Ref. 3; ACF47606)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        720
+FT                   /note="F -> S (in Ref. 3; ACF47606)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1191
+FT                   /note="G -> A (in Ref. 1; AAA59591)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1272
+FT                   /note="L -> V (in Ref. 1; AAA59591, 2; CAB56793 and 6;
+FT                   AAA59590)"
+FT                   /evidence="ECO:0000305"
+FT   HELIX           25..30
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          45..47
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          52..58
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          61..66
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          69..74
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   TURN            75..77
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          80..84
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          89..91
+FT                   /evidence="ECO:0007829|PDB:4K3J"
+FT   STRAND          93..95
+FT                   /evidence="ECO:0007829|PDB:4K3J"
+FT   STRAND          97..99
+FT                   /evidence="ECO:0007829|PDB:1SHY"
+FT   HELIX           103..105
+FT                   /evidence="ECO:0007829|PDB:4O3T"
+FT   STRAND          111..113
+FT                   /evidence="ECO:0007829|PDB:4K3J"
+FT   STRAND          119..123
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          125..133
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          135..139
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          141..145
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          155..160
+FT                   /evidence="ECO:0007829|PDB:4K3J"
+FT   STRAND          166..168
+FT                   /evidence="ECO:0007829|PDB:6WVZ"
+FT   STRAND          173..175
+FT                   /evidence="ECO:0007829|PDB:6I04"
+FT   STRAND          182..189
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          192..199
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   HELIX           205..208
+FT                   /evidence="ECO:0007829|PDB:6WVZ"
+FT   STRAND          213..219
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   HELIX           231..233
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   HELIX           239..241
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   TURN            242..244
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          247..255
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          258..268
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          272..274
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          277..281
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          284..286
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          292..300
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          312..314
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          316..323
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   HELIX           327..333
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          341..349
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          356..366
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   HELIX           367..374
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   HELIX           380..382
+FT                   /evidence="ECO:0007829|PDB:4K3J"
+FT   STRAND          383..385
+FT                   /evidence="ECO:0007829|PDB:4K3J"
+FT   HELIX           387..390
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          392..394
+FT                   /evidence="ECO:0007829|PDB:1SHY"
+FT   TURN            395..397
+FT                   /evidence="ECO:0007829|PDB:4O3T"
+FT   STRAND          418..422
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          424..427
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   TURN            429..436
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          439..447
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          450..457
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          462..466
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          469..471
+FT                   /evidence="ECO:0007829|PDB:4K3J"
+FT   STRAND          476..480
+FT                   /evidence="ECO:0007829|PDB:4K3J"
+FT   STRAND          490..493
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   TURN            496..498
+FT                   /evidence="ECO:0007829|PDB:4O3T"
+FT   STRAND          501..506
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          509..514
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   HELIX           520..522
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   HELIX           526..529
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   HELIX           534..536
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          539..541
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          544..546
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   HELIX           548..550
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          552..554
+FT                   /evidence="ECO:0007829|PDB:2UZX"
+FT   STRAND          557..559
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          564..574
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          580..586
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          589..592
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          595..598
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          602..605
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   HELIX           614..616
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          619..625
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          633..641
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          646..655
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          658..663
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          665..668
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          674..681
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          688..692
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          698..702
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          704..710
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          718..726
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   STRAND          729..739
+FT                   /evidence="ECO:0007829|PDB:5LSP"
+FT   HELIX           1048..1050
+FT                   /evidence="ECO:0007829|PDB:4EEV"
+FT   HELIX           1055..1057
+FT                   /evidence="ECO:0007829|PDB:3F66"
+FT   HELIX           1060..1066
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1067..1069
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1073..1075
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1076..1087
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1090..1098
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1100..1102
+FT                   /evidence="ECO:0007829|PDB:4EEV"
+FT   STRAND          1104..1111
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1118..1132
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1144..1146
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1149..1151
+FT                   /evidence="ECO:0007829|PDB:3F66"
+FT   STRAND          1154..1158
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1165..1170
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   TURN            1172..1174
+FT                   /evidence="ECO:0007829|PDB:3ZCL"
+FT   HELIX           1178..1197
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1207..1209
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1210..1212
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1218..1220
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1224..1226
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   TURN            1227..1230
+FT                   /evidence="ECO:0007829|PDB:7B43"
+FT   HELIX           1232..1234
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1236..1238
+FT                   /evidence="ECO:0007829|PDB:4KNB"
+FT   TURN            1239..1241
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1243..1245
+FT                   /evidence="ECO:0007829|PDB:4KNB"
+FT   HELIX           1247..1249
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1252..1257
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1262..1277
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   STRAND          1283..1287
+FT                   /evidence="ECO:0007829|PDB:4EEV"
+FT   HELIX           1289..1291
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1292..1297
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1310..1319
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1324..1326
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   HELIX           1330..1342
+FT                   /evidence="ECO:0007829|PDB:4R1V"
+FT   TURN            1354..1358
+FT                   /evidence="ECO:0007829|PDB:1R0P"
+SQ   SEQUENCE   1390 AA;  155541 MW;  9CF896D1273905C3 CRC64;
+     MKAPAVLAPG ILVLLFTLVQ RSNGECKEAL AKSEMNVNMK YQLPNFTAET PIQNVILHEH
+     HIFLGATNYI YVLNEEDLQK VAEYKTGPVL EHPDCFPCQD CSSKANLSGG VWKDNINMAL
+     VVDTYYDDQL ISCGSVNRGT CQRHVFPHNH TADIQSEVHC IFSPQIEEPS QCPDCVVSAL
+     GAKVLSSVKD RFINFFVGNT INSSYFPDHP LHSISVRRLK ETKDGFMFLT DQSYIDVLPE
+     FRDSYPIKYV HAFESNNFIY FLTVQRETLD AQTFHTRIIR FCSINSGLHS YMEMPLECIL
+     TEKRKKRSTK KEVFNILQAA YVSKPGAQLA RQIGASLNDD ILFGVFAQSK PDSAEPMDRS
+     AMCAFPIKYV NDFFNKIVNK NNVRCLQHFY GPNHEHCFNR TLLRNSSGCE ARRDEYRTEF
+     TTALQRVDLF MGQFSEVLLT SISTFIKGDL TIANLGTSEG RFMQVVVSRS GPSTPHVNFL
+     LDSHPVSPEV IVEHTLNQNG YTLVITGKKI TKIPLNGLGC RHFQSCSQCL SAPPFVQCGW
+     CHDKCVRSEE CLSGTWTQQI CLPAIYKVFP NSAPLEGGTR LTICGWDFGF RRNNKFDLKK
+     TRVLLGNESC TLTLSESTMN TLKCTVGPAM NKHFNMSIII SNGHGTTQYS TFSYVDPVIT
+     SISPKYGPMA GGTLLTLTGN YLNSGNSRHI SIGGKTCTLK SVSNSILECY TPAQTISTEF
+     AVKLKIDLAN RETSIFSYRE DPIVYEIHPT KSFISGGSTI TGVGKNLNSV SVPRMVINVH
+     EAGRNFTVAC QHRSNSEIIC CTTPSLQQLN LQLPLKTKAF FMLDGILSKY FDLIYVHNPV
+     FKPFEKPVMI SMGNENVLEI KGNDIDPEAV KGEVLKVGNK SCENIHLHSE AVLCTVPNDL
+     LKLNSELNIE WKQAISSTVL GKVIVQPDQN FTGLIAGVVS ISTALLLLLG FFLWLKKRKQ
+     IKDLGSELVR YDARVHTPHL DRLVSARSVS PTTEMVSNES VDYRATFPED QFPNSSQNGS
+     CRQVQYPLTD MSPILTSGDS DISSPLLQNT VHIDLSALNP ELVQAVQHVV IGPSSLIVHF
+     NEVIGRGHFG CVYHGTLLDN DGKKIHCAVK SLNRITDIGE VSQFLTEGII MKDFSHPNVL
+     SLLGICLRSE GSPLVVLPYM KHGDLRNFIR NETHNPTVKD LIGFGLQVAK GMKYLASKKF
+     VHRDLAARNC MLDEKFTVKV ADFGLARDMY DKEYYSVHNK TGAKLPVKWM ALESLQTQKF
+     TTKSDVWSFG VLLWELMTRG APPYPDVNTF DITVYLLQGR RLLQPEYCPD PLYEVMLKCW
+     HPKAEMRPSF SELVSRISAI FSTFIGEHYV HVNATYVNVK CVAPYPSLLS SEDNADDEVD
+     TRPASFWETS
+//

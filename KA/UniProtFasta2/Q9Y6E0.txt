@@ -1,0 +1,708 @@
+ID   STK24_HUMAN             Reviewed;         443 AA.
+AC   Q9Y6E0; O14840; Q5JV92;
+DT   21-FEB-2001, integrated into UniProtKB/Swiss-Prot.
+DT   01-NOV-1999, sequence version 1.
+DT   12-OCT-2022, entry version 204.
+DE   RecName: Full=Serine/threonine-protein kinase 24;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Mammalian STE20-like protein kinase 3;
+DE            Short=MST-3;
+DE   AltName: Full=STE20-like kinase MST3;
+DE   Contains:
+DE     RecName: Full=Serine/threonine-protein kinase 24 36 kDa subunit;
+DE     AltName: Full=Mammalian STE20-like protein kinase 3 N-terminal;
+DE              Short=MST3/N;
+DE   Contains:
+DE     RecName: Full=Serine/threonine-protein kinase 24 12 kDa subunit;
+DE     AltName: Full=Mammalian STE20-like protein kinase 3 C-terminal;
+DE              Short=MST3/C;
+GN   Name=STK24; Synonyms=MST3, STK3;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM A).
+RX   PubMed=9353338; DOI=10.1074/jbc.272.45.28695;
+RA   Schinkmann K., Blenis J.;
+RT   "Cloning and characterization of a human STE20-like protein kinase with
+RT   unusual cofactor requirements.";
+RL   J. Biol. Chem. 272:28695-28703(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM B), PHOSPHORYLATION AT THR-18,
+RP   MUTAGENESIS OF THR-18, AND VARIANT VAL-414.
+RC   TISSUE=Brain;
+RX   PubMed=10644707; DOI=10.1074/jbc.275.4.2513;
+RA   Zhou T.-H., Ling K., Guo J., Zhou H., Wu Y.-L., Jing Q., Ma L., Pei G.;
+RT   "Identification of a human brain-specific isoform of mammalian STE20-like
+RT   kinase 3 that is regulated by cAMP-dependent protein kinase.";
+RL   J. Biol. Chem. 275:2513-2519(2000).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15057823; DOI=10.1038/nature02379;
+RA   Dunham A., Matthews L.H., Burton J., Ashurst J.L., Howe K.L.,
+RA   Ashcroft K.J., Beare D.M., Burford D.C., Hunt S.E., Griffiths-Jones S.,
+RA   Jones M.C., Keenan S.J., Oliver K., Scott C.E., Ainscough R., Almeida J.P.,
+RA   Ambrose K.D., Andrews D.T., Ashwell R.I.S., Babbage A.K., Bagguley C.L.,
+RA   Bailey J., Bannerjee R., Barlow K.F., Bates K., Beasley H., Bird C.P.,
+RA   Bray-Allen S., Brown A.J., Brown J.Y., Burrill W., Carder C., Carter N.P.,
+RA   Chapman J.C., Clamp M.E., Clark S.Y., Clarke G., Clee C.M., Clegg S.C.,
+RA   Cobley V., Collins J.E., Corby N., Coville G.J., Deloukas P., Dhami P.,
+RA   Dunham I., Dunn M., Earthrowl M.E., Ellington A.G., Faulkner L.,
+RA   Frankish A.G., Frankland J., French L., Garner P., Garnett J.,
+RA   Gilbert J.G.R., Gilson C.J., Ghori J., Grafham D.V., Gribble S.M.,
+RA   Griffiths C., Hall R.E., Hammond S., Harley J.L., Hart E.A., Heath P.D.,
+RA   Howden P.J., Huckle E.J., Hunt P.J., Hunt A.R., Johnson C., Johnson D.,
+RA   Kay M., Kimberley A.M., King A., Laird G.K., Langford C.J., Lawlor S.,
+RA   Leongamornlert D.A., Lloyd D.M., Lloyd C., Loveland J.E., Lovell J.,
+RA   Martin S., Mashreghi-Mohammadi M., McLaren S.J., McMurray A., Milne S.,
+RA   Moore M.J.F., Nickerson T., Palmer S.A., Pearce A.V., Peck A.I., Pelan S.,
+RA   Phillimore B., Porter K.M., Rice C.M., Searle S., Sehra H.K., Shownkeen R.,
+RA   Skuce C.D., Smith M., Steward C.A., Sycamore N., Tester J., Thomas D.W.,
+RA   Tracey A., Tromans A., Tubby B., Wall M., Wallis J.M., West A.P.,
+RA   Whitehead S.L., Willey D.L., Wilming L., Wray P.W., Wright M.W., Young L.,
+RA   Coulson A., Durbin R.M., Hubbard T., Sulston J.E., Beck S., Bentley D.R.,
+RA   Rogers J., Ross M.T.;
+RT   "The DNA sequence and analysis of human chromosome 13.";
+RL   Nature 428:522-528(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM A).
+RC   TISSUE=Skin;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   PROTEOLYTIC PROCESSING, SUBCELLULAR LOCATION, AND MUTAGENESIS OF LYS-65 AND
+RP   ASP-321.
+RX   PubMed=12107159; DOI=10.1074/jbc.m202468200;
+RA   Huang C.Y., Wu Y.M., Hsu C.Y., Lee W.S., Lai M.D., Lu T.J., Huang C.L.,
+RA   Leu T.H., Shih H.M., Fang H.I., Robinson D.R., Kung H.J., Yuan C.J.;
+RT   "Caspase activation of mammalian sterile 20-like kinase 3 (Mst3).";
+RL   J. Biol. Chem. 277:34367-34374(2002).
+RN   [7]
+RP   SUBCELLULAR LOCATION, NUCLEAR LOCALIZATION SIGNAL, AND NUCLEAR EXPORT
+RP   SIGNAL.
+RX   PubMed=15304321; DOI=10.1016/j.febslet.2004.07.007;
+RA   Lee W.S., Hsu C.Y., Wang P.L., Huang C.Y., Chang C.H., Yuan C.J.;
+RT   "Identification and characterization of the nuclear import and export
+RT   signals of the mammalian Ste20-like protein kinase 3.";
+RL   FEBS Lett. 572:41-45(2004).
+RN   [8]
+RP   COFACTOR, AND BIOPHYSICOCHEMICAL PROPERTIES.
+RX   PubMed=15917084; DOI=10.1016/j.jinorgbio.2005.03.003;
+RA   Lu T.J., Huang C.Y., Yuan C.J., Lee Y.C., Leu T.H., Chang W.C., Lu T.L.,
+RA   Jeng W.Y., Lai M.D.;
+RT   "Zinc ion acts as a cofactor for serine/threonine kinase MST3 and has a
+RT   distinct role in autophosphorylation of MST3.";
+RL   J. Inorg. Biochem. 99:1306-1313(2005).
+RN   [9]
+RP   FUNCTION, AND SUBCELLULAR LOCATION.
+RX   PubMed=16314523; DOI=10.1128/mcb.25.24.11019-11029.2005;
+RA   Stegert M.R., Hergovich A., Tamaskovic R., Bichsel S.J., Hemmings B.A.;
+RT   "Regulation of NDR protein kinase by hydrophobic motif phosphorylation
+RT   mediated by the mammalian Ste20-like kinase MST3.";
+RL   Mol. Cell. Biol. 25:11019-11029(2005).
+RN   [10]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-320, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17081983; DOI=10.1016/j.cell.2006.09.026;
+RA   Olsen J.V., Blagoev B., Gnad F., Macek B., Kumar C., Mortensen P., Mann M.;
+RT   "Global, in vivo, and site-specific phosphorylation dynamics in signaling
+RT   networks.";
+RL   Cell 127:635-648(2006).
+RN   [11]
+RP   FUNCTION, PHOSPHORYLATION AT THR-190, AND MUTAGENESIS OF THR-190.
+RX   PubMed=17046825; DOI=10.1074/jbc.m605035200;
+RA   Lu T.J., Lai W.Y., Huang C.Y., Hsieh W.J., Yu J.S., Hsieh Y.J., Chang W.T.,
+RA   Leu T.H., Chang W.C., Chuang W.J., Tang M.J., Chen T.Y., Lu T.L., Lai M.D.;
+RT   "Inhibition of cell migration by autophosphorylated mammalian sterile 20-
+RT   like kinase 3 (MST3) involves paxillin and protein-tyrosine phosphatase-
+RT   PEST.";
+RL   J. Biol. Chem. 281:38405-38417(2006).
+RN   [12]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-4 (ISOFORM A), AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [13]
+RP   FUNCTION, AND PHOSPHORYLATION AT THR-190.
+RX   PubMed=19604147; DOI=10.1042/bsr20090096;
+RA   Chen C.B., Ng J.K., Choo P.H., Wu W., Porter A.G.;
+RT   "Mammalian sterile 20-like kinase 3 (MST3) mediates oxidative-stress-
+RT   induced cell death by modulating JNK activation.";
+RL   Biosci. Rep. 29:405-415(2009).
+RN   [14]
+RP   INTERACTION WITH CTTNBP2NL.
+RX   PubMed=18782753; DOI=10.1074/mcp.m800266-mcp200;
+RA   Goudreault M., D'Ambrosio L.M., Kean M.J., Mullin M.J., Larsen B.G.,
+RA   Sanchez A., Chaudhry S., Chen G.I., Sicheri F., Nesvizhskii A.I.,
+RA   Aebersold R., Raught B., Gingras A.C.;
+RT   "A PP2A phosphatase high density interaction network identifies a novel
+RT   striatin-interacting phosphatase and kinase complex linked to the cerebral
+RT   cavernous malformation 3 (CCM3) protein.";
+RL   Mol. Cell. Proteomics 8:157-171(2009).
+RN   [15]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT ALA-2 (ISOFORM A), PHOSPHORYLATION
+RP   [LARGE SCALE ANALYSIS] AT SER-4 (ISOFORM A), CLEAVAGE OF INITIATOR
+RP   METHIONINE [LARGE SCALE ANALYSIS] (ISOFORM A), AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [16]
+RP   FUNCTION.
+RX   PubMed=19855390; DOI=10.1038/nn.2414;
+RA   Lorber B., Howe M.L., Benowitz L.I., Irwin N.;
+RT   "Mst3b, an Ste20-like kinase, regulates axon regeneration in mature CNS and
+RT   PNS pathways.";
+RL   Nat. Neurosci. 12:1407-1414(2009).
+RN   [17]
+RP   FUNCTION.
+RX   PubMed=19782762; DOI=10.1016/j.biocel.2009.09.012;
+RA   Lin C.Y., Wu H.Y., Wang P.L., Yuan C.J.;
+RT   "Mammalian Ste20-like protein kinase 3 induces a caspase-independent
+RT   apoptotic pathway.";
+RL   Int. J. Biochem. Cell Biol. 42:98-105(2010).
+RN   [18]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT ALA-2 (ISOFORM A), PHOSPHORYLATION
+RP   [LARGE SCALE ANALYSIS] AT SER-4 (ISOFORM A), CLEAVAGE OF INITIATOR
+RP   METHIONINE [LARGE SCALE ANALYSIS] (ISOFORM A), AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [19]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [20]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT ALA-2 (ISOFORM A), PHOSPHORYLATION
+RP   [LARGE SCALE ANALYSIS] AT SER-4 (ISOFORM A), CLEAVAGE OF INITIATOR
+RP   METHIONINE [LARGE SCALE ANALYSIS] (ISOFORM A), AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [21]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-190, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [22]
+RP   FUNCTION, AND INTERACTION WITH PDCD10 AND RIPOR1.
+RX   PubMed=27807006; DOI=10.1242/jcs.198614;
+RA   Mardakheh F.K., Self A., Marshall C.J.;
+RT   "RHO binding to FAM65A regulates Golgi reorientation during cell
+RT   migration.";
+RL   J. Cell Sci. 129:4466-4479(2016).
+RN   [23]
+RP   X-RAY CRYSTALLOGRAPHY (1.45 ANGSTROMS) OF 27-315 IN COMPLEX WITH ADENINE;
+RP   ADP AND MANGANESE IONS, SUBUNIT, AND PHOSPHORYLATION AT THR-190.
+RX   PubMed=20124694; DOI=10.1107/s0907444909047507;
+RA   Ko T.P., Jeng W.Y., Liu C.I., Lai M.D., Wu C.L., Chang W.J., Shr H.L.,
+RA   Lu T.J., Wang A.H.;
+RT   "Structures of human MST3 kinase in complex with adenine, ADP and Mn2+.";
+RL   Acta Crystallogr. D 66:145-154(2010).
+RN   [24]
+RP   VARIANTS [LARGE SCALE ANALYSIS] VAL-414 AND ILE-426.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Serine/threonine-protein kinase that acts on both serine and
+CC       threonine residues and promotes apoptosis in response to stress stimuli
+CC       and caspase activation. Mediates oxidative-stress-induced cell death by
+CC       modulating phosphorylation of JNK1-JNK2 (MAPK8 and MAPK9), p38 (MAPK11,
+CC       MAPK12, MAPK13 and MAPK14) during oxidative stress. Plays a role in a
+CC       staurosporine-induced caspase-independent apoptotic pathway by
+CC       regulating the nuclear translocation of AIFM1 and ENDOG and the DNase
+CC       activity associated with ENDOG. Phosphorylates STK38L on 'Thr-442' and
+CC       stimulates its kinase activity. In association with STK26 negatively
+CC       regulates Golgi reorientation in polarized cell migration upon RHO
+CC       activation (PubMed:27807006). Regulates also cellular migration with
+CC       alteration of PTPN12 activity and PXN phosphorylation: phosphorylates
+CC       PTPN12 and inhibits its activity and may regulate PXN phosphorylation
+CC       through PTPN12. May act as a key regulator of axon regeneration in the
+CC       optic nerve and radial nerve. {ECO:0000269|PubMed:16314523,
+CC       ECO:0000269|PubMed:17046825, ECO:0000269|PubMed:19604147,
+CC       ECO:0000269|PubMed:19782762, ECO:0000269|PubMed:19855390,
+CC       ECO:0000269|PubMed:27807006}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000269|PubMed:15917084};
+CC       Name=Mn(2+); Xref=ChEBI:CHEBI:29035;
+CC         Evidence={ECO:0000269|PubMed:15917084};
+CC       Name=Co(2+); Xref=ChEBI:CHEBI:48828;
+CC         Evidence={ECO:0000269|PubMed:15917084};
+CC       Name=Zn(2+); Xref=ChEBI:CHEBI:29105;
+CC         Evidence={ECO:0000269|PubMed:15917084};
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=12.8 uM for manganese ions {ECO:0000269|PubMed:15917084};
+CC         KM=34.9 uM for cobalt ions {ECO:0000269|PubMed:15917084};
+CC         KM=22.7 uM for magnesium ions {ECO:0000269|PubMed:15917084};
+CC         KM=4.1 uM for zinc ions {ECO:0000269|PubMed:15917084};
+CC         Vmax=2623.1 pmol/min/mg enzyme for manganese ions
+CC         {ECO:0000269|PubMed:15917084};
+CC         Vmax=1746.1 pmol/min/mg enzyme for cobalt ions
+CC         {ECO:0000269|PubMed:15917084};
+CC         Vmax=129.1 pmol/min/mg enzyme for magnesium ions
+CC         {ECO:0000269|PubMed:15917084};
+CC         Vmax=22.3 pmol/min/mg enzyme for zinc ions
+CC         {ECO:0000269|PubMed:15917084};
+CC   -!- SUBUNIT: Monomer (PubMed:20124694). Interacts with CTTNBP2NL
+CC       (PubMed:18782753). Interacts with RIPOR1 (via C-terminus); this
+CC       interaction occurs in a PDCD10-dependent and Rho-independent manner
+CC       (PubMed:27807006). Interacts with PDCD10; this interaction is required
+CC       for the association of STK24 with RIPOR1 (PubMed:27807006).
+CC       {ECO:0000269|PubMed:18782753, ECO:0000269|PubMed:20124694,
+CC       ECO:0000269|PubMed:27807006}.
+CC   -!- INTERACTION:
+CC       Q9Y6E0; Q9P2B4: CTTNBP2NL; NbExp=5; IntAct=EBI-740175, EBI-1774273;
+CC       Q9Y6E0; Q9BUL8: PDCD10; NbExp=11; IntAct=EBI-740175, EBI-740195;
+CC       Q9Y6E0; Q5VSL9: STRIP1; NbExp=4; IntAct=EBI-740175, EBI-1773588;
+CC       Q9Y6E0; O43815: STRN; NbExp=4; IntAct=EBI-740175, EBI-1046642;
+CC       Q9Y6E0; Q9Y228: TRAF3IP3; NbExp=2; IntAct=EBI-740175, EBI-765817;
+CC       Q9Y6E0-2; Q9Y376: CAB39; NbExp=3; IntAct=EBI-10299018, EBI-306905;
+CC       Q9Y6E0-2; Q9BUL8: PDCD10; NbExp=9; IntAct=EBI-10299018, EBI-740195;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm. Nucleus. Membrane. Note=The truncated
+CC       form (MST3/N) translocates to the nucleus. Colocalizes with STK38L in
+CC       the membrane.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=B;
+CC         IsoId=Q9Y6E0-1; Sequence=Displayed;
+CC       Name=A;
+CC         IsoId=Q9Y6E0-2; Sequence=VSP_004874;
+CC   -!- TISSUE SPECIFICITY: Isoform A is ubiquitous. Isoform B is expressed in
+CC       brain with high expression in hippocampus and cerebral cortex.
+CC   -!- PTM: Proteolytically processed by caspases during apoptosis.
+CC       Proteolytic cleavage results in kinase activation, nuclear
+CC       translocation of the truncated form (MST3/N) and the induction of
+CC       apoptosis. {ECO:0000269|PubMed:12107159}.
+CC   -!- PTM: Isoform B is activated by phosphorylation by PKA. Oxidative stress
+CC       induces phosphorylation. Activated by autophosphorylation at Thr-190
+CC       and phosphorylation at this site is essential for its function.
+CC       Manganese, magnesium and cobalt-dependent autophosphorylation is mainly
+CC       on threonine residues while zinc-dependent autophosphorylation is on
+CC       both serine and threonine residues. {ECO:0000269|PubMed:10644707,
+CC       ECO:0000269|PubMed:17046825, ECO:0000269|PubMed:19604147,
+CC       ECO:0000269|PubMed:20124694}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. STE Ser/Thr
+CC       protein kinase family. STE20 subfamily. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AF024636; AAB82560.1; -; mRNA.
+DR   EMBL; AF083420; AAD42039.1; -; mRNA.
+DR   EMBL; AL356423; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL137249; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471085; EAX08986.1; -; Genomic_DNA.
+DR   EMBL; BC035578; AAH35578.1; -; mRNA.
+DR   CCDS; CCDS32001.1; -. [Q9Y6E0-2]
+DR   CCDS; CCDS9488.1; -. [Q9Y6E0-1]
+DR   RefSeq; NP_001027467.2; NM_001032296.3. [Q9Y6E0-2]
+DR   RefSeq; NP_003567.2; NM_003576.4. [Q9Y6E0-1]
+DR   PDB; 3A7F; X-ray; 1.55 A; A=27-315.
+DR   PDB; 3A7G; X-ray; 2.00 A; A/B=27-315.
+DR   PDB; 3A7H; X-ray; 1.96 A; A/B=27-315.
+DR   PDB; 3A7I; X-ray; 1.45 A; A=27-315.
+DR   PDB; 3A7J; X-ray; 1.50 A; A=27-315.
+DR   PDB; 3CKW; X-ray; 1.96 A; A=31-323.
+DR   PDB; 3CKX; X-ray; 2.70 A; A=31-323.
+DR   PDB; 3ZHP; X-ray; 2.90 A; C/D=31-301.
+DR   PDB; 4O27; X-ray; 3.19 A; B=30-309.
+DR   PDB; 4QML; X-ray; 1.88 A; A=24-315.
+DR   PDB; 4QMM; X-ray; 1.85 A; A=24-315.
+DR   PDB; 4QMN; X-ray; 2.09 A; A=27-315.
+DR   PDB; 4QMO; X-ray; 1.90 A; A=24-315.
+DR   PDB; 4QMP; X-ray; 2.00 A; A=24-315.
+DR   PDB; 4QMQ; X-ray; 1.77 A; A=24-315.
+DR   PDB; 4QMS; X-ray; 1.88 A; A=24-315.
+DR   PDB; 4QMT; X-ray; 1.50 A; A=24-315.
+DR   PDB; 4QMU; X-ray; 1.55 A; A=24-315.
+DR   PDB; 4QMV; X-ray; 2.40 A; A=24-315.
+DR   PDB; 4QMW; X-ray; 1.60 A; A=24-315.
+DR   PDB; 4QMX; X-ray; 1.88 A; A=24-315.
+DR   PDB; 4QMY; X-ray; 1.88 A; A=24-315.
+DR   PDB; 4QMZ; X-ray; 1.88 A; A=24-315.
+DR   PDB; 4QNA; X-ray; 1.85 A; A=27-315.
+DR   PDB; 4QO9; X-ray; 2.20 A; A/B=24-315.
+DR   PDB; 4U8Z; X-ray; 1.63 A; A=24-310.
+DR   PDB; 4W8D; X-ray; 1.77 A; A=24-310.
+DR   PDB; 4W8E; X-ray; 1.79 A; A=24-311.
+DR   PDB; 7B30; X-ray; 2.10 A; A=4-301.
+DR   PDB; 7B31; X-ray; 1.80 A; A=4-301.
+DR   PDB; 7B32; X-ray; 1.75 A; A=4-301.
+DR   PDB; 7B33; X-ray; 1.90 A; A=4-301.
+DR   PDB; 7B34; X-ray; 2.10 A; A=4-301.
+DR   PDB; 7B35; X-ray; 2.40 A; A/B=4-301.
+DR   PDBsum; 3A7F; -.
+DR   PDBsum; 3A7G; -.
+DR   PDBsum; 3A7H; -.
+DR   PDBsum; 3A7I; -.
+DR   PDBsum; 3A7J; -.
+DR   PDBsum; 3CKW; -.
+DR   PDBsum; 3CKX; -.
+DR   PDBsum; 3ZHP; -.
+DR   PDBsum; 4O27; -.
+DR   PDBsum; 4QML; -.
+DR   PDBsum; 4QMM; -.
+DR   PDBsum; 4QMN; -.
+DR   PDBsum; 4QMO; -.
+DR   PDBsum; 4QMP; -.
+DR   PDBsum; 4QMQ; -.
+DR   PDBsum; 4QMS; -.
+DR   PDBsum; 4QMT; -.
+DR   PDBsum; 4QMU; -.
+DR   PDBsum; 4QMV; -.
+DR   PDBsum; 4QMW; -.
+DR   PDBsum; 4QMX; -.
+DR   PDBsum; 4QMY; -.
+DR   PDBsum; 4QMZ; -.
+DR   PDBsum; 4QNA; -.
+DR   PDBsum; 4QO9; -.
+DR   PDBsum; 4U8Z; -.
+DR   PDBsum; 4W8D; -.
+DR   PDBsum; 4W8E; -.
+DR   PDBsum; 7B30; -.
+DR   PDBsum; 7B31; -.
+DR   PDBsum; 7B32; -.
+DR   PDBsum; 7B33; -.
+DR   PDBsum; 7B34; -.
+DR   PDBsum; 7B35; -.
+DR   AlphaFoldDB; Q9Y6E0; -.
+DR   SMR; Q9Y6E0; -.
+DR   BioGRID; 114011; 136.
+DR   DIP; DIP-40608N; -.
+DR   IntAct; Q9Y6E0; 61.
+DR   MINT; Q9Y6E0; -.
+DR   STRING; 9606.ENSP00000365730; -.
+DR   BindingDB; Q9Y6E0; -.
+DR   ChEMBL; CHEMBL5082; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; Q9Y6E0; -.
+DR   GuidetoPHARMACOLOGY; 2217; -.
+DR   GlyGen; Q9Y6E0; 1 site, 1 O-linked glycan (1 site).
+DR   iPTMnet; Q9Y6E0; -.
+DR   MetOSite; Q9Y6E0; -.
+DR   PhosphoSitePlus; Q9Y6E0; -.
+DR   SwissPalm; Q9Y6E0; -.
+DR   BioMuta; STK24; -.
+DR   DMDM; 13626607; -.
+DR   EPD; Q9Y6E0; -.
+DR   jPOST; Q9Y6E0; -.
+DR   MassIVE; Q9Y6E0; -.
+DR   MaxQB; Q9Y6E0; -.
+DR   PaxDb; Q9Y6E0; -.
+DR   PeptideAtlas; Q9Y6E0; -.
+DR   PRIDE; Q9Y6E0; -.
+DR   ProteomicsDB; 86657; -. [Q9Y6E0-1]
+DR   ProteomicsDB; 86658; -. [Q9Y6E0-2]
+DR   Antibodypedia; 10785; 354 antibodies from 32 providers.
+DR   DNASU; 8428; -.
+DR   Ensembl; ENST00000376547.7; ENSP00000365730.3; ENSG00000102572.15. [Q9Y6E0-1]
+DR   Ensembl; ENST00000539966.6; ENSP00000442539.2; ENSG00000102572.15. [Q9Y6E0-2]
+DR   GeneID; 8428; -.
+DR   KEGG; hsa:8428; -.
+DR   MANE-Select; ENST00000539966.6; ENSP00000442539.2; NM_001032296.4; NP_001027467.2. [Q9Y6E0-2]
+DR   UCSC; uc001vnm.3; human. [Q9Y6E0-1]
+DR   CTD; 8428; -.
+DR   DisGeNET; 8428; -.
+DR   GeneCards; STK24; -.
+DR   HGNC; HGNC:11403; STK24.
+DR   HPA; ENSG00000102572; Low tissue specificity.
+DR   MIM; 604984; gene.
+DR   neXtProt; NX_Q9Y6E0; -.
+DR   OpenTargets; ENSG00000102572; -.
+DR   PharmGKB; PA36210; -.
+DR   VEuPathDB; HostDB:ENSG00000102572; -.
+DR   eggNOG; KOG0201; Eukaryota.
+DR   GeneTree; ENSGT00940000153476; -.
+DR   InParanoid; Q9Y6E0; -.
+DR   OMA; YGCFLDG; -.
+DR   OrthoDB; 967913at2759; -.
+DR   PhylomeDB; Q9Y6E0; -.
+DR   TreeFam; TF354217; -.
+DR   PathwayCommons; Q9Y6E0; -.
+DR   Reactome; R-HSA-111465; Apoptotic cleavage of cellular proteins.
+DR   Reactome; R-HSA-75153; Apoptotic execution phase.
+DR   SABIO-RK; Q9Y6E0; -.
+DR   SignaLink; Q9Y6E0; -.
+DR   SIGNOR; Q9Y6E0; -.
+DR   BioGRID-ORCS; 8428; 18 hits in 1112 CRISPR screens.
+DR   ChiTaRS; STK24; human.
+DR   EvolutionaryTrace; Q9Y6E0; -.
+DR   GeneWiki; STK24; -.
+DR   GenomeRNAi; 8428; -.
+DR   Pharos; Q9Y6E0; Tchem.
+DR   PRO; PR:Q9Y6E0; -.
+DR   Proteomes; UP000005640; Chromosome 13.
+DR   RNAct; Q9Y6E0; protein.
+DR   Bgee; ENSG00000102572; Expressed in secondary oocyte and 208 other tissues.
+DR   ExpressionAtlas; Q9Y6E0; baseline and differential.
+DR   Genevisible; Q9Y6E0; HS.
+DR   GO; GO:0005737; C:cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0070062; C:extracellular exosome; HDA:UniProtKB.
+DR   GO; GO:0005794; C:Golgi apparatus; IBA:GO_Central.
+DR   GO; GO:0000139; C:Golgi membrane; IEA:Ensembl.
+DR   GO; GO:0005730; C:nucleolus; IDA:HPA.
+DR   GO; GO:0005654; C:nucleoplasm; TAS:Reactome.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0045296; F:cadherin binding; HDA:BHF-UCL.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004672; F:protein kinase activity; TAS:ProtInc.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0009267; P:cellular response to starvation; IMP:UniProtKB.
+DR   GO; GO:0097194; P:execution phase of apoptosis; IMP:UniProtKB.
+DR   GO; GO:0008631; P:intrinsic apoptotic signaling pathway in response to oxidative stress; IMP:UniProtKB.
+DR   GO; GO:0030336; P:negative regulation of cell migration; IMP:UniProtKB.
+DR   GO; GO:0048680; P:positive regulation of axon regeneration; IEA:Ensembl.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0048679; P:regulation of axon regeneration; IMP:UniProtKB.
+DR   GO; GO:0042542; P:response to hydrogen peroxide; IDA:UniProtKB.
+DR   GO; GO:0007165; P:signal transduction; TAS:ProtInc.
+DR   Gene3D; 1.10.12.70; -; 1.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR046409; PDC10_dimerisation_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Acetylation; Alternative splicing; Apoptosis; ATP-binding;
+KW   Cytoplasm; Kinase; Magnesium; Membrane; Metal-binding; Nucleotide-binding;
+KW   Nucleus; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Transferase.
+FT   CHAIN           1..443
+FT                   /note="Serine/threonine-protein kinase 24"
+FT                   /id="PRO_0000086711"
+FT   CHAIN           1..325
+FT                   /note="Serine/threonine-protein kinase 24 36 kDa subunit"
+FT                   /id="PRO_0000413618"
+FT   CHAIN           326..443
+FT                   /note="Serine/threonine-protein kinase 24 12 kDa subunit"
+FT                   /id="PRO_0000413619"
+FT   DOMAIN          36..286
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          309..337
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOTIF           278..292
+FT                   /note="Bipartite nuclear localization signal"
+FT   MOTIF           335..386
+FT                   /note="Nuclear export signal (NES)"
+FT   ACT_SITE        156
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         42..50
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT   BINDING         65
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT   BINDING         112..114
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT   BINDING         161
+FT                   /ligand="Mg(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:18420"
+FT   BINDING         174
+FT                   /ligand="Mg(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:18420"
+FT   SITE            325..326
+FT                   /note="Cleavage; by caspase-3, caspase-7 and caspase-8"
+FT   MOD_RES         18
+FT                   /note="Phosphothreonine; by PKA"
+FT                   /evidence="ECO:0000269|PubMed:10644707"
+FT   MOD_RES         190
+FT                   /note="Phosphothreonine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:17046825,
+FT                   ECO:0000269|PubMed:19604147, ECO:0000269|PubMed:20124694,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         320
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:17081983"
+FT   VAR_SEQ         1..26
+FT                   /note="MDSRAQLWGLALNKRRATLPHPGGST -> MAHSPVQSGLPGMQ (in
+FT                   isoform A)"
+FT                   /evidence="ECO:0000303|PubMed:15489334,
+FT                   ECO:0000303|PubMed:9353338"
+FT                   /id="VSP_004874"
+FT   VARIANT         414
+FT                   /note="A -> V (in dbSNP:rs55953606)"
+FT                   /evidence="ECO:0000269|PubMed:10644707,
+FT                   ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041148"
+FT   VARIANT         426
+FT                   /note="L -> I (in dbSNP:rs55897869)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041149"
+FT   MUTAGEN         18
+FT                   /note="T->A: Loss of phosphorylation by PKA."
+FT                   /evidence="ECO:0000269|PubMed:10644707"
+FT   MUTAGEN         65
+FT                   /note="K->A: Loss of activity and autophosphorylation."
+FT                   /evidence="ECO:0000269|PubMed:12107159"
+FT   MUTAGEN         190
+FT                   /note="T->A: Loss of activity and autophosphorylation."
+FT                   /evidence="ECO:0000269|PubMed:17046825"
+FT   MUTAGEN         321
+FT                   /note="D->N: Loss of proteolytic cleavage by caspases."
+FT                   /evidence="ECO:0000269|PubMed:12107159"
+FT   STRAND          27..30
+FT                   /evidence="ECO:0007829|PDB:7B32"
+FT   HELIX           32..34
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          36..44
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          46..55
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   TURN            56..58
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          61..68
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   TURN            69..71
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   TURN            73..75
+FT                   /evidence="ECO:0007829|PDB:4QMT"
+FT   HELIX           76..88
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          97..103
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          106..112
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          116..118
+FT                   /evidence="ECO:0007829|PDB:3A7J"
+FT   HELIX           119..123
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          124..126
+FT                   /evidence="ECO:0007829|PDB:3A7H"
+FT   HELIX           130..149
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   HELIX           159..161
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          162..164
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          166..168
+FT                   /evidence="ECO:0007829|PDB:3ZHP"
+FT   STRAND          170..172
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          183..185
+FT                   /evidence="ECO:0007829|PDB:4QO9"
+FT   STRAND          186..188
+FT                   /evidence="ECO:0007829|PDB:4QMQ"
+FT   HELIX           195..197
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   HELIX           200..203
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   HELIX           211..226
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   TURN            230..233
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   HELIX           236..245
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   STRAND          253..255
+FT                   /evidence="ECO:0007829|PDB:4QML"
+FT   HELIX           257..266
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   HELIX           271..273
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   HELIX           277..280
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   HELIX           284..289
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   HELIX           293..296
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   HELIX           297..309
+FT                   /evidence="ECO:0007829|PDB:3A7I"
+FT   INIT_MET        Q9Y6E0-2:1
+FT                   /note="Removed"
+FT                   /evidence="ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:20068231, ECO:0007744|PubMed:21406692"
+FT   MOD_RES         Q9Y6E0-2:2
+FT                   /note="N-acetylalanine"
+FT                   /evidence="ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:20068231, ECO:0007744|PubMed:21406692"
+FT   MOD_RES         Q9Y6E0-2:4
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18691976,
+FT                   ECO:0007744|PubMed:19369195, ECO:0007744|PubMed:20068231,
+FT                   ECO:0007744|PubMed:21406692"
+SQ   SEQUENCE   443 AA;  49308 MW;  4A9FF1F6B6A88A97 CRC64;
+     MDSRAQLWGL ALNKRRATLP HPGGSTNLKA DPEELFTKLE KIGKGSFGEV FKGIDNRTQK
+     VVAIKIIDLE EAEDEIEDIQ QEITVLSQCD SPYVTKYYGS YLKDTKLWII MEYLGGGSAL
+     DLLEPGPLDE TQIATILREI LKGLDYLHSE KKIHRDIKAA NVLLSEHGEV KLADFGVAGQ
+     LTDTQIKRNT FVGTPFWMAP EVIKQSAYDS KADIWSLGIT AIELARGEPP HSELHPMKVL
+     FLIPKNNPPT LEGNYSKPLK EFVEACLNKE PSFRPTAKEL LKHKFILRNA KKTSYLTELI
+     DRYKRWKAEQ SHDDSSSEDS DAETDGQASG GSDSGDWIFT IREKDPKNLE NGALQPSDLD
+     RNKMKDIPKR PFSQCLSTII SPLFAELKEK SQACGGNLGS IEELRGAIYL AEEACPGISD
+     TMVAQLVQRL QRYSLSGGGT SSH
+//

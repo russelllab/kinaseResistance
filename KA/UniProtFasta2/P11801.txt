@@ -1,0 +1,263 @@
+ID   KPSH1_HUMAN             Reviewed;         424 AA.
+AC   P11801; Q9NY19;
+DT   01-OCT-1989, integrated into UniProtKB/Swiss-Prot.
+DT   23-JAN-2007, sequence version 4.
+DT   12-OCT-2022, entry version 196.
+DE   RecName: Full=Serine/threonine-protein kinase H1;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Protein serine kinase H1;
+DE            Short=PSK-H1;
+GN   Name=PSKH1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], SUBCELLULAR LOCATION, TISSUE SPECIFICITY,
+RP   PHOSPHORYLATION, HOMODIMERIZATION, AND MUTAGENESIS OF ASP-218.
+RX   PubMed=11087665; DOI=10.1006/geno.2000.6365;
+RA   Brede G., Solheim J., Troen G., Prydz H.;
+RT   "Characterization of PSKH1, a novel human protein serine kinase with
+RT   centrosomal, Golgi, and nuclear localization.";
+RL   Genomics 70:82-92(2000).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Colon;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 199-348.
+RX   PubMed=2948189; DOI=10.1073/pnas.84.2.388;
+RA   Hanks S.K.;
+RT   "Homology probing: identification of cDNA clones encoding members of the
+RT   protein-serine kinase family.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 84:388-392(1987).
+RN   [4]
+RP   FUNCTION.
+RX   PubMed=12466556; DOI=10.1093/nar/gkf648;
+RA   Brede G., Solheim J., Prydz H.;
+RT   "PSKH1, a novel splice factor compartment-associated serine kinase.";
+RL   Nucleic Acids Res. 30:5301-5309(2002).
+RN   [5]
+RP   MYRISTOYLATION AT GLY-2, PALMITOYLATION AT CYS-3, AND SUBCELLULAR LOCATION.
+RX   PubMed=14644153; DOI=10.1016/j.yexcr.2003.07.009;
+RA   Brede G., Solheim J., Stang E., Prydz H.;
+RT   "Mutants of the protein serine kinase PSKH1 disassemble the Golgi
+RT   apparatus.";
+RL   Exp. Cell Res. 291:299-312(2003).
+RN   [6]
+RP   VARIANT [LARGE SCALE ANALYSIS] SER-301.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: May be a SFC-associated serine kinase (splicing factor
+CC       compartment-associated serine kinase) with a role in intranuclear SR
+CC       protein (non-snRNP splicing factors containing a serine/arginine-rich
+CC       domain) trafficking and pre-mRNA processing.
+CC       {ECO:0000269|PubMed:12466556}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- ACTIVITY REGULATION: Activity depends on Ca(2+) concentration.
+CC   -!- SUBUNIT: Homodimer.
+CC   -!- INTERACTION:
+CC       P11801; P08238: HSP90AB1; NbExp=3; IntAct=EBI-3922781, EBI-352572;
+CC   -!- SUBCELLULAR LOCATION: Golgi apparatus. Cytoplasm, cytoskeleton,
+CC       microtubule organizing center, centrosome. Nucleus speckle. Endoplasmic
+CC       reticulum membrane; Lipid-anchor. Cell membrane; Lipid-anchor.
+CC       Cytoplasm. Note=Localized in the brefeldin A-sensitive Golgi
+CC       compartment, at centrosomes, in the nucleus with a somewhat speckle-
+CC       like presence, membrane-associated to the endoplasmic reticulum (ER)
+CC       and the plasma membrane (PM), and more diffusely in the cytoplasm.
+CC       Found to concentrate in splicing factor compartments (SFCs) within the
+CC       nucleus of interphase cells. The acylation-negative form may be only
+CC       cytoplasmic and nuclear. Acylation seems to allow the sequestering to
+CC       the intracellular membranes. Myristoylation may mediate targeting to
+CC       the intracellular non-Golgi membranes and palmitoylation may mediate
+CC       the targeting to the Golgi membranes. Dual acylation is required to
+CC       stabilize the interaction with Golgi membranes.
+CC   -!- TISSUE SPECIFICITY: Expressed in all tissues and cell lines tested with
+CC       the highest level of abundance in testis.
+CC       {ECO:0000269|PubMed:11087665}.
+CC   -!- PTM: Autophosphorylated on serine residues.
+CC       {ECO:0000269|PubMed:11087665}.
+CC   -!- PTM: Myristoylated. Required for membrane association. Prerequisite for
+CC       palmitoylation to occur. {ECO:0000269|PubMed:14644153}.
+CC   -!- PTM: Palmitoylated. {ECO:0000269|PubMed:14644153}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CAMK Ser/Thr
+CC       protein kinase family. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AJ272212; CAB91984.1; -; mRNA.
+DR   EMBL; BC062616; AAH62616.1; -; mRNA.
+DR   EMBL; M14504; AAA36519.1; -; mRNA.
+DR   CCDS; CCDS10851.1; -.
+DR   PIR; B26368; B26368.
+DR   PIR; I38138; I38138.
+DR   RefSeq; NP_006733.1; NM_006742.2.
+DR   AlphaFoldDB; P11801; -.
+DR   SMR; P11801; -.
+DR   BioGRID; 111654; 8.
+DR   IntAct; P11801; 55.
+DR   STRING; 9606.ENSP00000291041; -.
+DR   ChEMBL; CHEMBL4524035; -.
+DR   iPTMnet; P11801; -.
+DR   PhosphoSitePlus; P11801; -.
+DR   SwissPalm; P11801; -.
+DR   BioMuta; PSKH1; -.
+DR   DMDM; 17379144; -.
+DR   MassIVE; P11801; -.
+DR   PaxDb; P11801; -.
+DR   PeptideAtlas; P11801; -.
+DR   PRIDE; P11801; -.
+DR   ProteomicsDB; 52804; -.
+DR   Antibodypedia; 29669; 141 antibodies from 29 providers.
+DR   DNASU; 5681; -.
+DR   Ensembl; ENST00000291041.6; ENSP00000291041.4; ENSG00000159792.10.
+DR   GeneID; 5681; -.
+DR   KEGG; hsa:5681; -.
+DR   MANE-Select; ENST00000291041.6; ENSP00000291041.4; NM_006742.3; NP_006733.1.
+DR   UCSC; uc002euv.3; human.
+DR   CTD; 5681; -.
+DR   DisGeNET; 5681; -.
+DR   GeneCards; PSKH1; -.
+DR   HGNC; HGNC:9529; PSKH1.
+DR   HPA; ENSG00000159792; Low tissue specificity.
+DR   MIM; 177015; gene.
+DR   neXtProt; NX_P11801; -.
+DR   OpenTargets; ENSG00000159792; -.
+DR   PharmGKB; PA33874; -.
+DR   VEuPathDB; HostDB:ENSG00000159792; -.
+DR   eggNOG; KOG0032; Eukaryota.
+DR   GeneTree; ENSGT00940000157041; -.
+DR   InParanoid; P11801; -.
+DR   OMA; CPGAPTT; -.
+DR   OrthoDB; 330091at2759; -.
+DR   PhylomeDB; P11801; -.
+DR   TreeFam; TF314166; -.
+DR   BRENDA; 2.7.11.1; 2681.
+DR   PathwayCommons; P11801; -.
+DR   SignaLink; P11801; -.
+DR   BioGRID-ORCS; 5681; 13 hits in 1115 CRISPR screens.
+DR   ChiTaRS; PSKH1; human.
+DR   GeneWiki; PSKH1; -.
+DR   GenomeRNAi; 5681; -.
+DR   Pharos; P11801; Tbio.
+DR   PRO; PR:P11801; -.
+DR   Proteomes; UP000005640; Chromosome 16.
+DR   RNAct; P11801; protein.
+DR   Bgee; ENSG00000159792; Expressed in stromal cell of endometrium and 143 other tissues.
+DR   ExpressionAtlas; P11801; baseline and differential.
+DR   Genevisible; P11801; HS.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0005789; C:endoplasmic reticulum membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005794; C:Golgi apparatus; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005815; C:microtubule organizing center; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016607; C:nuclear speck; IDA:HPA.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0007368; P:determination of left/right symmetry; IEA:Ensembl.
+DR   GO; GO:0007507; P:heart development; IEA:Ensembl.
+DR   GO; GO:0006468; P:protein phosphorylation; IEA:Ensembl.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   ATP-binding; Cell membrane; Cytoplasm; Cytoskeleton; Endoplasmic reticulum;
+KW   Golgi apparatus; Kinase; Lipoprotein; Membrane; Myristate;
+KW   Nucleotide-binding; Nucleus; Palmitate; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Transferase.
+FT   INIT_MET        1
+FT                   /note="Removed"
+FT                   /evidence="ECO:0000305"
+FT   CHAIN           2..424
+FT                   /note="Serine/threonine-protein kinase H1"
+FT                   /id="PRO_0000086167"
+FT   DOMAIN          98..355
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          56..80
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          378..407
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        378..397
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        218
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         104..112
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         127
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         380
+FT                   /note="Phosphoserine; by autocatalysis"
+FT                   /evidence="ECO:0000255"
+FT   MOD_RES         381
+FT                   /note="Phosphoserine; by autocatalysis"
+FT                   /evidence="ECO:0000255"
+FT   LIPID           2
+FT                   /note="N-myristoyl glycine"
+FT                   /evidence="ECO:0000269|PubMed:14644153"
+FT   LIPID           3
+FT                   /note="S-palmitoyl cysteine"
+FT                   /evidence="ECO:0000269|PubMed:14644153"
+FT   VARIANT         301
+FT                   /note="N -> S (in dbSNP:rs35552721)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040614"
+FT   MUTAGEN         218
+FT                   /note="D->A: Loss of autophosphorylation."
+FT                   /evidence="ECO:0000269|PubMed:11087665"
+SQ   SEQUENCE   424 AA;  48035 MW;  B357757DDC12388D CRC64;
+     MGCGTSKVLP EPPKDVQLDL VKKVEPFSGT KSDVYKHFIT EVDSVGPVKA GFPAASQYAH
+     PCPGPPTAGH TEPPSEPPRR ARVAKYRAKF DPRVTAKYDI KALIGRGSFS RVVRVEHRAT
+     RQPYAIKMIE TKYREGREVC ESELRVLRRV RHANIIQLVE VFETQERVYM VMELATGGEL
+     FDRIIAKGSF TERDATRVLQ MVLDGVRYLH ALGITHRDLK PENLLYYHPG TDSKIIITDF
+     GLASARKKGD DCLMKTTCGT PEYIAPEVLV RKPYTNSVDM WALGVIAYIL LSGTMPFEDD
+     NRTRLYRQIL RGKYSYSGEP WPSVSNLAKD FIDRLLTVDP GARMTALQAL RHPWVVSMAA
+     SSSMKNLHRS ISQNLLKRAS SRCQSTKSAQ STRSSRSTRS NKSRRVRERE LRELNLRYQQ
+     QYNG
+//

@@ -1,0 +1,428 @@
+ID   WNK1_HUMAN              Reviewed;        2634 AA.
+AC   Q9H4A3-5;
+DT   02-FEB-2004, integrated into UniProtKB/Swiss-Prot.
+DT   18-MAY-2010, sequence version 2.
+DT   12-OCT-2022, entry version 215.
+DE   RecName: Full=Isoform 4 of Serine/threonine-protein kinase WNK1 {ECO:0000305};
+DE            EC=2.7.11.1 {ECO:0000269|PubMed:10660600};
+DE   AltName: Full=Erythrocyte 65 kDa protein;
+DE            Short=p65;
+DE   AltName: Full=Kinase deficient protein;
+DE   AltName: Full=Protein kinase lysine-deficient 1 {ECO:0000312|HGNC:HGNC:14540};
+DE   AltName: Full=Protein kinase with no lysine 1 {ECO:0000303|PubMed:11571656};
+DE            Short=hWNK1;
+GN   Name=WNK1 {ECO:0000312|HGNC:HGNC:14540};
+GN   Synonyms=HSN2 {ECO:0000303|PubMed:15060842}, KDP, KIAA0344
+GN   {ECO:0000312|EMBL:BAA20802.2}, PRKWNK1 {ECO:0000312|HGNC:HGNC:14540};
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606 {ECO:0000312|EMBL:CAC15059.1};
+RN   [1] {ECO:0000305}
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), TISSUE SPECIFICITY, CHROMOSOMAL
+RP   LOCATION, AND VARIANTS PRO-1056; SER-1506 AND ILE-1808.
+RC   TISSUE=Heart {ECO:0000312|EMBL:CAC15059.1};
+RX   PubMed=11571656; DOI=10.1038/sj.onc.1204726;
+RA   Verissimo F., Jordan P.;
+RT   "WNK kinases, a novel protein kinase subfamily in multi-cellular
+RT   organisms.";
+RL   Oncogene 20:5562-5569(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 6), ALTERNATIVE SPLICING, AND TISSUE
+RP   SPECIFICITY.
+RC   TISSUE=Neuron;
+RX   PubMed=22701532; DOI=10.1371/journal.pone.0037751;
+RA   Vidal-Petiot E., Cheval L., Faugeroux J., Malard T., Doucet A.,
+RA   Jeunemaitre X., Hadchouel J.;
+RT   "A new methodology for quantification of alternatively spliced exons
+RT   reveals a highly tissue-specific expression pattern of WNK1 isoforms.";
+RL   PLoS ONE 7:E37751-E37751(2012).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND VARIANTS PRO-1056; SER-1506 AND
+RP   ILE-1808.
+RG   NHLBI resequencing and genotyping service (RS&G);
+RL   Submitted (DEC-2008) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16541075; DOI=10.1038/nature04569;
+RA   Scherer S.E., Muzny D.M., Buhay C.J., Chen R., Cree A., Ding Y.,
+RA   Dugan-Rocha S., Gill R., Gunaratne P., Harris R.A., Hawes A.C.,
+RA   Hernandez J., Hodgson A.V., Hume J., Jackson A., Khan Z.M., Kovar-Smith C.,
+RA   Lewis L.R., Lozado R.J., Metzker M.L., Milosavljevic A., Miner G.R.,
+RA   Montgomery K.T., Morgan M.B., Nazareth L.V., Scott G., Sodergren E.,
+RA   Song X.-Z., Steffen D., Lovering R.C., Wheeler D.A., Worley K.C., Yuan Y.,
+RA   Zhang Z., Adams C.Q., Ansari-Lari M.A., Ayele M., Brown M.J., Chen G.,
+RA   Chen Z., Clerc-Blankenburg K.P., Davis C., Delgado O., Dinh H.H.,
+RA   Draper H., Gonzalez-Garay M.L., Havlak P., Jackson L.R., Jacob L.S.,
+RA   Kelly S.H., Li L., Li Z., Liu J., Liu W., Lu J., Maheshwari M.,
+RA   Nguyen B.-V., Okwuonu G.O., Pasternak S., Perez L.M., Plopper F.J.H.,
+RA   Santibanez J., Shen H., Tabor P.E., Verduzco D., Waldron L., Wang Q.,
+RA   Williams G.A., Zhang J., Zhou J., Allen C.C., Amin A.G., Anyalebechi V.,
+RA   Bailey M., Barbaria J.A., Bimage K.E., Bryant N.P., Burch P.E.,
+RA   Burkett C.E., Burrell K.L., Calderon E., Cardenas V., Carter K., Casias K.,
+RA   Cavazos I., Cavazos S.R., Ceasar H., Chacko J., Chan S.N., Chavez D.,
+RA   Christopoulos C., Chu J., Cockrell R., Cox C.D., Dang M., Dathorne S.R.,
+RA   David R., Davis C.M., Davy-Carroll L., Deshazo D.R., Donlin J.E.,
+RA   D'Souza L., Eaves K.A., Egan A., Emery-Cohen A.J., Escotto M., Flagg N.,
+RA   Forbes L.D., Gabisi A.M., Garza M., Hamilton C., Henderson N.,
+RA   Hernandez O., Hines S., Hogues M.E., Huang M., Idlebird D.G., Johnson R.,
+RA   Jolivet A., Jones S., Kagan R., King L.M., Leal B., Lebow H., Lee S.,
+RA   LeVan J.M., Lewis L.C., London P., Lorensuhewa L.M., Loulseged H.,
+RA   Lovett D.A., Lucier A., Lucier R.L., Ma J., Madu R.C., Mapua P.,
+RA   Martindale A.D., Martinez E., Massey E., Mawhiney S., Meador M.G.,
+RA   Mendez S., Mercado C., Mercado I.C., Merritt C.E., Miner Z.L., Minja E.,
+RA   Mitchell T., Mohabbat F., Mohabbat K., Montgomery B., Moore N., Morris S.,
+RA   Munidasa M., Ngo R.N., Nguyen N.B., Nickerson E., Nwaokelemeh O.O.,
+RA   Nwokenkwo S., Obregon M., Oguh M., Oragunye N., Oviedo R.J., Parish B.J.,
+RA   Parker D.N., Parrish J., Parks K.L., Paul H.A., Payton B.A., Perez A.,
+RA   Perrin W., Pickens A., Primus E.L., Pu L.-L., Puazo M., Quiles M.M.,
+RA   Quiroz J.B., Rabata D., Reeves K., Ruiz S.J., Shao H., Sisson I.,
+RA   Sonaike T., Sorelle R.P., Sutton A.E., Svatek A.F., Svetz L.A.,
+RA   Tamerisa K.S., Taylor T.R., Teague B., Thomas N., Thorn R.D., Trejos Z.Y.,
+RA   Trevino B.K., Ukegbu O.N., Urban J.B., Vasquez L.I., Vera V.A.,
+RA   Villasana D.M., Wang L., Ward-Moore S., Warren J.T., Wei X., White F.,
+RA   Williamson A.L., Wleczyk R., Wooden H.S., Wooden S.H., Yen J., Yoon L.,
+RA   Yoon V., Zorrilla S.E., Nelson D., Kucherlapati R., Weinstock G.,
+RA   Gibbs R.A.;
+RT   "The finished DNA sequence of human chromosome 12.";
+RL   Nature 440:346-351(2006).
+RN   [5] {ECO:0000305}
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1-668 (ISOFORMS 1/2), FUNCTION, CATALYTIC
+RP   ACTIVITY, SUBCELLULAR LOCATION, AND TISSUE SPECIFICITY.
+RC   TISSUE=Mammary carcinoma;
+RX   PubMed=10660600; DOI=10.1074/jbc.275.6.4311;
+RA   Moore T.M., Garg R., Johnson C., Coptcoat M.J., Ridley A.J., Morris J.D.H.;
+RT   "PSK, a novel STE20-like kinase derived from prostatic carcinoma that
+RT   activates the JNK MAPK pathway and regulates actin cytoskeletal
+RT   organisation.";
+RL   J. Biol. Chem. 275:4311-4322(2000).
+RN   [6] {ECO:0000305}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 69-2382 (ISOFORM 2), AND VARIANTS
+RP   PRO-1056 AND SER-1506.
+RC   TISSUE=Brain {ECO:0000312|EMBL:BAA20802.2};
+RX   PubMed=9205841; DOI=10.1093/dnares/4.2.141;
+RA   Nagase T., Ishikawa K., Nakajima D., Ohira M., Seki N., Miyajima N.,
+RA   Tanaka A., Kotani H., Nomura N., Ohara O.;
+RT   "Prediction of the coding sequences of unidentified human genes. VII. The
+RT   complete sequences of 100 new cDNA clones from brain which can code for
+RT   large proteins in vitro.";
+RL   DNA Res. 4:141-150(1997).
+RN   [7] {ECO:0000305}
+RP   SEQUENCE REVISION TO N-TERMINUS.
+RX   PubMed=12168954; DOI=10.1093/dnares/9.3.99;
+RA   Nakajima D., Okazaki N., Yamakawa H., Kikuno R., Ohara O., Nagase T.;
+RT   "Construction of expression-ready cDNA clones for KIAA genes: manual
+RT   curation of 330 KIAA cDNA clones.";
+RL   DNA Res. 9:99-106(2002).
+RN   [8]
+RP   PROTEIN SEQUENCE OF 163-175, AND GLYCOSYLATION.
+RX   PubMed=2507249; DOI=10.1002/9780470513828.ch7;
+RA   Hart G.W., Haltiwanger R.S., Holt G.D., Kelly W.G.;
+RT   "Nucleoplasmic and cytoplasmic glycoproteins.";
+RL   Ciba Found. Symp. 145:102-118(1989).
+RN   [9] {ECO:0000305}
+RP   PARTIAL NUCLEOTIDE SEQUENCE [MRNA] (N-TERMINUS OF ISOFORM 3), ALTERNATIVE
+RP   PROMOTER USAGE, ALTERNATIVE SPLICING, AND TISSUE SPECIFICITY.
+RC   TISSUE=Kidney {ECO:0000269|PubMed:14645531};
+RX   PubMed=14645531; DOI=10.1128/mcb.23.24.9208-9221.2003;
+RA   Delaloy C., Lu J., Houot A.-M., Disse-Nicodeme S., Gasc J.-M., Corvol P.,
+RA   Jeunemaitre X.;
+RT   "Multiple promoters in the WNK1 gene: one controls expression of a kidney-
+RT   specific kinase-defective isoform.";
+RL   Mol. Cell. Biol. 23:9208-9221(2003).
+RN   [10] {ECO:0000305}
+RP   PARTIAL NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1/4/5).
+RC   TISSUE=Placenta {ECO:0000269|PubMed:15489334};
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [11]
+RP   IDENTIFICATION (ISOFORMS 4/5), FUNCTION, AND INVOLVEMENT IN HSAN2A.
+RX   PubMed=15060842; DOI=10.1086/420795;
+RA   Lafreniere R.G., MacDonald M.L.E., Dube M.-P., MacFarlane J.,
+RA   O'Driscoll M., Brais B., Meilleur S., Brinkman R.R., Dadivas O., Pape T.,
+RA   Platon C., Radomski C., Risler J., Thompson J., Guerra-Escobio A.-M.,
+RA   Davar G., Breakefield X.O., Pimstone S.N., Green R., Pryse-Phillips W.,
+RA   Goldberg Y.P., Younghusband H.B., Hayden M.R., Sherrington R.,
+RA   Rouleau G.A., Samuels M.E.;
+RT   "Identification of a novel gene (HSN2) causing hereditary sensory and
+RT   autonomic neuropathy type II through the study of Canadian genetic
+RT   isolates.";
+RL   Am. J. Hum. Genet. 74:1064-1073(2004).
+RN   [12] {ECO:0000305}
+RP   INVOLVEMENT IN PHA2C.
+RX   PubMed=11498583; DOI=10.1126/science.1062844;
+RA   Wilson F.H., Disse-Nicodeme S., Choate K.A., Ishikawa K.,
+RA   Nelson-Williams C., Desitter I., Gunel M., Milford D.V., Lipkin G.W.,
+RA   Achard J.-M., Feely M.P., Dussol B., Berland Y., Unwin R.J., Mayan H.,
+RA   Simon D.B., Farfel Z., Jeunemaitre X., Lifton R.P.;
+RT   "Human hypertension caused by mutations in WNK kinases.";
+RL   Science 293:1107-1112(2001).
+RN   [13]
+RP   INVOLVEMENT IN HSAN2A.
+RX   PubMed=15911806; DOI=10.1212/01.wnl.0000161849.29944.43;
+RA   Roddier K., Thomas T., Marleau G., Gagnon A.M., Dicaire M.J., St Denis A.,
+RA   Gosselin I., Sarrazin A.M., Larbrisseau A., Lambert M., Vanasse M.,
+RA   Gaudet D., Rouleau G.A., Brais B.;
+RT   "Two mutations in the HSN2 gene explain the high prevalence of HSAN2 in
+RT   French Canadians.";
+RL   Neurology 64:1762-1767(2005).
+RN   [14]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-2002 AND SER-2032, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17081983; DOI=10.1016/j.cell.2006.09.026;
+RA   Olsen J.V., Blagoev B., Gnad F., Macek B., Kumar C., Mortensen P., Mann M.;
+RT   "Global, in vivo, and site-specific phosphorylation dynamics in signaling
+RT   networks.";
+RL   Cell 127:635-648(2006).
+RN   [15]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1261, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=16964243; DOI=10.1038/nbt1240;
+RA   Beausoleil S.A., Villen J., Gerber S.A., Rush J., Gygi S.P.;
+RT   "A probability-based approach for high-throughput protein phosphorylation
+RT   analysis and site localization.";
+RL   Nat. Biotechnol. 24:1285-1292(2006).
+RN   [16]
+RP   ALTERNATIVE SPLICING (ISOFORMS 4 AND 5), AND INVOLVEMENT IN HSAN2A.
+RX   PubMed=18521183; DOI=10.1172/jci34088;
+RA   Shekarabi M., Girard N., Riviere J.B., Dion P., Houle M., Toulouse A.,
+RA   Lafreniere R.G., Vercauteren F., Hince P., Laganiere J., Rochefort D.,
+RA   Faivre L., Samuels M., Rouleau G.A.;
+RT   "Mutations in the nervous system--specific HSN2 exon of WNK1 cause
+RT   hereditary sensory neuropathy type II.";
+RL   J. Clin. Invest. 118:2496-2505(2008).
+RN   [17]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18220336; DOI=10.1021/pr0705441;
+RA   Cantin G.T., Yi W., Lu B., Park S.K., Xu T., Lee J.-D., Yates J.R. III;
+RT   "Combining protein-based IMAC, peptide-based IMAC, and MudPIT for efficient
+RT   phosphoproteomic analysis.";
+RL   J. Proteome Res. 7:1346-1351(2008).
+RN   [18]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-19; SER-1261; SER-2011;
+RP   SER-2012; SER-2027; SER-2029 AND SER-2032, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [19]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J., Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in a
+RT   refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [20]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1978, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [21]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-19; SER-1261; SER-1978;
+RP   SER-2032 AND SER-2121, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE
+RP   ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [22]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [23]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-2027; SER-2029 AND SER-2032,
+RP   AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [24]
+RP   UBIQUITINATION BY KLHL2.
+RX   PubMed=23838290; DOI=10.1016/j.bbrc.2013.06.104;
+RA   Takahashi D., Mori T., Wakabayashi M., Mori Y., Susa K., Zeniya M.,
+RA   Sohara E., Rai T., Sasaki S., Uchida S.;
+RT   "KLHL2 interacts with and ubiquitinates WNK kinases.";
+RL   Biochem. Biophys. Res. Commun. 437:457-462(2013).
+RN   [25]
+RP   INTERACTION WITH KLHL3.
+RX   PubMed=23387299; DOI=10.1042/bj20121903;
+RA   Ohta A., Schumacher F.R., Mehellou Y., Johnson C., Knebel A.,
+RA   Macartney T.J., Wood N.T., Alessi D.R., Kurz T.;
+RT   "The CUL3-KLHL3 E3 ligase complex mutated in Gordon's hypertension syndrome
+RT   interacts with and ubiquitylates WNK isoforms: disease-causing mutations in
+RT   KLHL3 and WNK4 disrupt interaction.";
+RL   Biochem. J. 451:111-122(2013).
+RN   [26]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-19; SER-167; SER-174;
+RP   SER-1261; SER-2029; SER-2032; SER-2370 AND SER-2372, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [27]
+RP   UBIQUITINATION, AND INTERACTION WITH KLHL3.
+RX   PubMed=23576762; DOI=10.1073/pnas.1304592110;
+RA   Shibata S., Zhang J., Puthumana J., Stone K.L., Lifton R.P.;
+RT   "Kelch-like 3 and Cullin 3 regulate electrolyte homeostasis via
+RT   ubiquitination and degradation of WNK4.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 110:7838-7843(2013).
+RN   [28]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-167; SER-174; SER-1978 AND
+RP   SER-2027, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [29] {ECO:0007744|PDB:4PWN}
+RP   X-RAY CRYSTALLOGRAPHY (1.84 ANGSTROMS) OF 210-482.
+RX   PubMed=24803536; DOI=10.1126/scisignal.2005050;
+RA   Piala A.T., Moon T.M., Akella R., He H., Cobb M.H., Goldsmith E.J.;
+RT   "Chloride sensing by WNK1 involves inhibition of autophosphorylation.";
+RL   Sci. Signal. 7:RA41-RA41(2014).
+RN   [30] {ECO:0007744|PDB:5TF9}
+RP   X-RAY CRYSTALLOGRAPHY (2.50 ANGSTROMS) OF 206-483 IN COMPLEX WITH ATP AND
+RP   ALLOSTERIC INHIBITOR.
+RX   PubMed=27712055; DOI=10.1021/acschembio.6b00511;
+RA   Yamada K., Zhang J.H., Xie X., Reinhardt J., Xie A.Q., LaSala D., Kohls D.,
+RA   Yowe D., Burdick D., Yoshisue H., Wakai H., Schmidt I., Gunawan J.,
+RA   Yasoshima K., Yue Q.K., Kato M., Mogi M., Idamakanti N., Kreder N.,
+RA   Drueckes P., Pandey P., Kawanami T., Huang W., Yagi Y.I., Deng Z.,
+RA   Park H.M.;
+RT   "Discovery and characterization of allosteric WNK kinase inhibitors.";
+RL   ACS Chem. Biol. 11:3338-3346(2016).
+RN   [31]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLY-1199 AND GLU-1799.
+RX   PubMed=16959974; DOI=10.1126/science.1133427;
+RA   Sjoeblom T., Jones S., Wood L.D., Parsons D.W., Lin J., Barber T.D.,
+RA   Mandelker D., Leary R.J., Ptak J., Silliman N., Szabo S., Buckhaults P.,
+RA   Farrell C., Meeh P., Markowitz S.D., Willis J., Dawson D., Willson J.K.V.,
+RA   Gazdar A.F., Hartigan J., Wu L., Liu C., Parmigiani G., Park B.H.,
+RA   Bachman K.E., Papadopoulos N., Vogelstein B., Kinzler K.W.,
+RA   Velculescu V.E.;
+RT   "The consensus coding sequences of human breast and colorectal cancers.";
+RL   Science 314:268-274(2006).
+RN   [32]
+RP   VARIANTS [LARGE SCALE ANALYSIS] THR-141; VAL-149; GLN-419; THR-509;
+RP   GLY-527; ILE-665; ALA-674; ARG-823; VAL-1546; GLU-1799; ILE-1808; LEU-1823;
+RP   HIS-1957; CYS-2190; LEU-2362 AND TRP-2380.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative promoter usage, Alternative splicing; Named isoforms=6;
+CC         Comment=WNK1 is a complex 33-exons gene, in total 9 WNK1 exons are
+CC         alternatively spliced, some expressed in a tissue-specific manner.
+CC         Additional isoforms seems to exist.;
+CC       Name=1 {ECO:0000269|PubMed:11571656}; Synonyms=L-WNK1;
+CC         IsoId=Q9H4A3-1; Sequence=Displayed;
+CC       Name=2 {ECO:0000303|PubMed:9205841};
+CC         IsoId=Q9H4A3-2; Sequence=VSP_040269, VSP_050638;
+CC       Name=3; Synonyms=KS-WNK1, Kidney-Specific;
+CC         IsoId=Q9H4A3-4; Sequence=VSP_050634, VSP_050637;
+CC       Name=4; Synonyms=Brain and spinal cord variant;
+CC         IsoId=Q9H4A3-5; Sequence=VSP_040268;
+CC       Name=5; Synonyms=Dorsal root ganglia and sciatic nerve variant, DRG and
+CC       sciatic nerve variant;
+CC         IsoId=Q9H4A3-6; Sequence=VSP_040267, VSP_040270;
+CC       Name=6;
+CC         IsoId=Q9H4A3-7; Sequence=VSP_040267, VSP_053767;
+CC   -!- MISCELLANEOUS: Contains the nervous system-specific exon HSN2. Produced
+CC       by alternative splicing. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS73419.1; -.
+DR   RefSeq; NP_998820.3; NM_213655.4.
+DR   ProteomicsDB; 80807; -.
+DR   Ensembl; ENST00000340908.9; ENSP00000341292.5; ENSG00000060237.19.
+DR   Proteomes; UP000005640; Chromosome 12.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   2634 AA;  279538 MW;  2F95DCDA28619B4C CRC64;
+     MSGGAAEKQS STPGSLFLSP PAPAPKNGSS SDSSVGEKLG AAAADAVTGR TEEYRRRRHT
+     MDKDSRGAAA TTTTTEHRFF RRSVICDSNA TALELPGLPL SLPQPSIPAA VPQSAPPEPH
+     REETVTATAT SQVAQQPPAA AAPGEQAVAG PAPSTVPSST SKDRPVSQPS LVGSKEEPPP
+     ARSGSGGGSA KEPQEERSQQ QDDIEELETK AVGMSNDGRF LKFDIEIGRG SFKTVYKGLD
+     TETTVEVAWC ELQDRKLTKS ERQRFKEEAE MLKGLQHPNI VRFYDSWEST VKGKKCIVLV
+     TELMTSGTLK TYLKRFKVMK IKVLRSWCRQ ILKGLQFLHT RTPPIIHRDL KCDNIFITGP
+     TGSVKIGDLG LATLKRASFA KSVIGTPEFM APEMYEEKYD ESVDVYAFGM CMLEMATSEY
+     PYSECQNAAQ IYRRVTSGVK PASFDKVAIP EVKEIIEGCI RQNKDERYSI KDLLNHAFFQ
+     EETGVRVELA EEDDGEKIAI KLWLRIEDIK KLKGKYKDNE AIEFSFDLER DVPEDVAQEM
+     VESGYVCEGD HKTMAKAIKD RVSLIKRKRE QRQLVREEQE KKKQEESSLK QQVEQSSASQ
+     TGIKQLPSAS TGIPTASTTS ASVSTQVEPE EPEADQHQQL QYQQPSISVL SDGTVDSGQG
+     SSVFTESRVS SQQTVSYGSQ HEQAHSTGTV PGHIPSTVQA QSQPHGVYPP SSVPRRGRSM
+     SVCVPIFLLL PLCPASLPVL FHPTASTVCT SFSFPPPDCP EETFAEKLSK ALESVLPMHS
+     ASQRKHRRSS LPSLFVSTPQ SMAHPCGGTP TYPESQIFFP TIHERPVSFS PPPTCPPKVA
+     ISQRRKSTSF LEAQTHHFQP LLRTVGQSLL PPGGSPTNWT PEAVVMLGTT ASRVTGESCE
+     IQVHPMFEPS QVYSDYRPGL VLPEEAHYFI PQEAVYVAGV HYQARVAEQY EGIPYNSSVL
+     SSPMKQIPEQ KPVQGGPTSS SVFEFPSGQA FLVGHLQNLR LDSGLGPGSP LSSISAPIST
+     DATRLKFHPV FVPHSAPAVL THNNESRSNC VFEFHVHTPS SSSGEGGGIL PQRVYRNRQV
+     AVDLNQEELP PQSVGLHGYL QPVTEEKHNY HAPELTVSVV EPIGQNWPIG SPEYSSDSSQ
+     ITSSDPSDFQ SPPPTGGAAA PFGSDVSMPF IHLPQTVLQE SPLFFCFPQG TTSQQVLTAS
+     FSSGGSALHP QAQGQSQGQP SSSSLTGVSS SQPIQHPQQQ QGIQQTAPPQ QTVQYSLSQT
+     STSSEATTAQ PVSQPQAPQV LPQVSAGKQS TQGVSQVAPA EPVAVAQTQA TQPTTLASSV
+     DSAHSDVASG MSDGNENVPS SSGRHEGRTT KRHYRKSVRS RSRHEKTSRP KLRILNVSNK
+     GDRVVECQLE THNRKMVTFK FDLDGDNPEE IATIMVNNDF ILAIERESFV DQVREIIEKA
+     DEMLSEDVSV EPEGDQGLES LQGKDDYGFS GSQKLEGEFK QPIPASSMPQ QIGIPTSSLT
+     QVVHSAGRRF IVSPVPESRL RESKVFPSEI TDTVAASTAQ SPGMNLSHSA SSLSLQQAFS
+     ELRRAQMTEG PNTAPPNFSH TGPTFPVVPP FLSSIAGVPT TAAATAPVPA TSSPPNDIST
+     SVIQSEVTVP TEEGIAGVAT STGVVTSGGL PIPPVSESPV LSSVVSSITI PAVVSISTTS
+     PSLQVPTSTS EIVVSSTALY PSVTVSATSA SAGGSTATPG PKPPAVVSQQ AAGSTTVGAT
+     LTSVSTTTSF PSTASQLCIQ LSSSTSTPTL AETVVVSAHS LDKTSHSSTT GLAFSLSAPS
+     SSSSPGAGVS SYISQPGGLH PLVIPSVIAS TPILPQAAGP TSTPLLPQVP SIPPLVQPVA
+     NVPAVQQTLI HSQPQPALLP NQPHTHCPEV DSDTQPKAPG IDDIKTLEEK LRSLFSEHSS
+     SGAQHASVSL ETSLVIESTV TPGIPTTAVA PSKLLTSTTS TCLPPTNLPL GTVALPVTPV
+     VTPGQVSTPV STTTSGVKPG TAPSKPPLTK APVLPVGTEL PAGTLPSEQL PPFPGPSLTQ
+     SQQPLEDLDA QLRRTLSPEM ITVTSAVGPV SMAAPTAITE AGTQPQKGVS QVKEGPVLAT
+     SSGAGVFKMG RFQVSVAADG AQKEGKNKSE DAKSVHFESS TSESSVLSSS SPESTLVKPE
+     PNGITIPGIS SDVPESAHKT TASEAKSDTG QPTKVGRFQV TTTANKVGRF SVSKTEDKIT
+     DTKKEGPVAS PPFMDLEQAV LPAVIPKKEK PELSEPSHLN GPSSDPEAAF LSRDVDDGSG
+     SPHSPHQLSS KSLPSQNLSQ SLSNSFNSSY MSSDNESDIE DEDLKLELRR LRDKHLKEIQ
+     DLQSRQKHEI ESLYTKLGKV PPAVIIPPAA PLSGRRRRPT KSKGSKSSRS SSLGNKSPQL
+     SGNLSGQSAA SVLHPQQTLH PPGNIPESGQ NQLLQPLKPS PSSDNLYSAF TSDGAISVPS
+     LSAPGQGTSS TNTVGATVNS QAAQAQPPAM TSSRKGTFTD DLHKLVDNWA RDAMNLSGRR
+     GSKGHMNYEG PGMARKFSAP GQLCISMTSN LGGSAPISAA SATSLGHFTK SMCPPQQYGF
+     PATPFGAQWS GTGGPAPQPL GQFQPVGTAS LQNFNISNLQ KSISNPPGSN LRTT
+//

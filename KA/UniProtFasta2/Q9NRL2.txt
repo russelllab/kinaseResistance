@@ -1,0 +1,650 @@
+ID   BAZ1A_HUMAN             Reviewed;        1556 AA.
+AC   Q9NRL2; Q9NZ15; Q9P065; Q9UIG1; Q9Y3V3;
+DT   30-AUG-2002, integrated into UniProtKB/Swiss-Prot.
+DT   17-OCT-2006, sequence version 2.
+DT   12-OCT-2022, entry version 208.
+DE   RecName: Full=Bromodomain adjacent to zinc finger domain protein 1A;
+DE   AltName: Full=ATP-dependent chromatin-remodeling protein;
+DE   AltName: Full=ATP-utilizing chromatin assembly and remodeling factor 1;
+DE            Short=hACF1;
+DE   AltName: Full=CHRAC subunit ACF1;
+DE   AltName: Full=Williams syndrome transcription factor-related chromatin-remodeling factor 180;
+DE            Short=WCRF180;
+DE   AltName: Full=hWALp1;
+GN   Name=BAZ1A; Synonyms=ACF1, WCRF180; ORFNames=HSPC317;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), IDENTIFICATION BY MASS
+RP   SPECTROMETRY, IDENTIFICATION IN THE CHRAC COMPLEX, AND VARIANT LYS-1366.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=10880450; DOI=10.1093/emboj/19.13.3377;
+RA   Poot R.A., Dellaire G., Huelsmann B.B., Grimaldi M.A., Corona D.F.V.,
+RA   Becker P.B., Bickmore W.A., Varga-Weisz P.D.;
+RT   "HuCHRAC, a human ISWI chromatin remodelling complex contains hACF1 and two
+RT   novel histone-fold proteins.";
+RL   EMBO J. 19:3377-3387(2000).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2).
+RX   PubMed=10655480; DOI=10.1073/pnas.97.3.1038;
+RA   Bochar D.A., Savard J., Wang W., Lafleur D.W., Moore P., Cote J.,
+RA   Shiekhattar R.;
+RT   "A family of chromatin remodeling factors related to Williams syndrome
+RT   transcription factor.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 97:1038-1043(2000).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RC   TISSUE=Testis;
+RX   PubMed=10662543; DOI=10.1006/geno.1999.6071;
+RA   Jones M.H., Hamana N., Nezu J., Shimane M.;
+RT   "A novel family of bromodomain genes.";
+RL   Genomics 63:40-45(2000).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=12508121; DOI=10.1038/nature01348;
+RA   Heilig R., Eckenberg R., Petit J.-L., Fonknechten N., Da Silva C.,
+RA   Cattolico L., Levy M., Barbe V., De Berardinis V., Ureta-Vidal A.,
+RA   Pelletier E., Vico V., Anthouard V., Rowen L., Madan A., Qin S., Sun H.,
+RA   Du H., Pepin K., Artiguenave F., Robert C., Cruaud C., Bruels T.,
+RA   Jaillon O., Friedlander L., Samson G., Brottier P., Cure S., Segurens B.,
+RA   Aniere F., Samain S., Crespeau H., Abbasi N., Aiach N., Boscus D.,
+RA   Dickhoff R., Dors M., Dubois I., Friedman C., Gouyvenoux M., James R.,
+RA   Madan A., Mairey-Estrada B., Mangenot S., Martins N., Menard M., Oztas S.,
+RA   Ratcliffe A., Shaffer T., Trask B., Vacherie B., Bellemere C., Belser C.,
+RA   Besnard-Gonnet M., Bartol-Mavel D., Boutard M., Briez-Silla S.,
+RA   Combette S., Dufosse-Laurent V., Ferron C., Lechaplais C., Louesse C.,
+RA   Muselet D., Magdelenat G., Pateau E., Petit E., Sirvain-Trukniewicz P.,
+RA   Trybou A., Vega-Czarny N., Bataille E., Bluet E., Bordelais I., Dubois M.,
+RA   Dumont C., Guerin T., Haffray S., Hammadi R., Muanga J., Pellouin V.,
+RA   Robert D., Wunderle E., Gauguet G., Roy A., Sainte-Marthe L., Verdier J.,
+RA   Verdier-Discala C., Hillier L.W., Fulton L., McPherson J., Matsuda F.,
+RA   Wilson R., Scarpelli C., Gyapay G., Wincker P., Saurin W., Quetier F.,
+RA   Waterston R., Hood L., Weissenbach J.;
+RT   "The DNA sequence and analysis of human chromosome 14.";
+RL   Nature 421:601-607(2003).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 1-540 (ISOFORM 1).
+RC   TISSUE=Umbilical cord blood;
+RA   Ye M., Zhang Q.-H., Zhou J., Shen Y., Wu X.-Y., Guan Z.Q., Wang L.,
+RA   Fan H.-Y., Mao Y.-F., Dai M., Huang Q.-H., Chen S.-J., Chen Z.;
+RT   "Human partial CDS from CD34+ stem cells.";
+RL   Submitted (MAY-1999) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 746-1556 (ISOFORM 1), AND VARIANT
+RP   LYS-1366.
+RC   TISSUE=Uterus;
+RX   PubMed=17974005; DOI=10.1186/1471-2164-8-399;
+RA   Bechtel S., Rosenfelder H., Duda A., Schmidt C.P., Ernst U.,
+RA   Wellenreuther R., Mehrle A., Schuster C., Bahr A., Bloecker H., Heubner D.,
+RA   Hoerlein A., Michel G., Wedler H., Koehrer K., Ottenwaelder B., Poustka A.,
+RA   Wiemann S., Schupp I.;
+RT   "The full-ORF clone resource of the German cDNA consortium.";
+RL   BMC Genomics 8:399-399(2007).
+RN   [8]
+RP   IDENTIFICATION IN THE ACF-5 ISWI CHROMATIN REMODELING COMPLEX, AND
+RP   INTERACTION WITH SMARCA5.
+RX   PubMed=12198550; DOI=10.1038/nature01024;
+RA   Hakimi M.-A., Bochar D.A., Schmiesing J.A., Dong Y., Barak O.G.,
+RA   Speicher D.W., Yokomori K., Shiekhattar R.;
+RT   "A chromatin remodelling complex that loads cohesin onto human
+RT   chromosomes.";
+RL   Nature 418:994-998(2002).
+RN   [9]
+RP   FUNCTION, IDENTIFICATION IN THE CHRAC ISWI CHROMATIN REMODELING COMPLEX,
+RP   INTERACTION WITH SMARCA5; CHRAC1 AND POLE3, AND MUTAGENESIS OF
+RP   667-ILE--LEU-933.
+RX   PubMed=12434153; DOI=10.1038/ng1046;
+RA   Collins N., Poot R.A., Kukimoto I., Garcia-Jimenez C., Dellaire G.,
+RA   Varga-Weisz P.D.;
+RT   "An ACF1-ISWI chromatin-remodeling complex is required for DNA replication
+RT   through heterochromatin.";
+RL   Nat. Genet. 32:627-632(2002).
+RN   [10]
+RP   FUNCTION, IDENTIFICATION IN THE CHRAC ISWI CHROMATIN REMODELING COMPLEX,
+RP   INTERACTION WITH SMARCA5; POLE3 AND CHRAC1, AND MUTAGENESIS OF
+RP   1-MET--ASN-128.
+RX   PubMed=14759371; DOI=10.1016/s1097-2765(03)00523-9;
+RA   Kukimoto I., Elderkin S., Grimaldi M., Oelgeschlager T., Varga-Weisz P.D.;
+RT   "The histone-fold protein complex CHRAC-15/17 enhances nucleosome sliding
+RT   and assembly mediated by ACF.";
+RL   Mol. Cell 13:265-277(2004).
+RN   [11]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1413 AND SER-1417, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17081983; DOI=10.1016/j.cell.2006.09.026;
+RA   Olsen J.V., Blagoev B., Gnad F., Macek B., Kumar C., Mortensen P., Mann M.;
+RT   "Global, in vivo, and site-specific phosphorylation dynamics in signaling
+RT   networks.";
+RL   Cell 127:635-648(2006).
+RN   [12]
+RP   FUNCTION.
+RX   PubMed=17099699; DOI=10.1038/nsmb1170;
+RA   Yang J.G., Madrid T.S., Sevastopoulos E., Narlikar G.J.;
+RT   "The chromatin-remodeling enzyme ACF is an ATP-dependent DNA length sensor
+RT   that regulates nucleosome spacing.";
+RL   Nat. Struct. Mol. Biol. 13:1078-1083(2006).
+RN   [13]
+RP   FUNCTION, AND INTERACTION WITH NCOR1.
+RX   PubMed=17519354; DOI=10.1210/me.2007-0095;
+RA   Ewing A.K., Attner M., Chakravarti D.;
+RT   "Novel regulatory role for human Acf1 in transcriptional repression of
+RT   vitamin D3 receptor-regulated genes.";
+RL   Mol. Endocrinol. 21:1791-1806(2007).
+RN   [14]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1402; SER-1413 AND SER-1417,
+RP   AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [15]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-270; SER-702 AND SER-960, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [16]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-270; SER-1371 AND SER-1402,
+RP   AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [17]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [18]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-731; SER-1281; SER-1339 AND
+RP   SER-1413, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [19]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-731; SER-961; SER-1281;
+RP   SER-1320; SER-1339; SER-1353; SER-1363; SER-1413; SER-1417 AND THR-1547,
+RP   AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [20]
+RP   FUNCTION, IDENTIFICATION IN THE ACF-1 ISWI CHROMATIN REMODELING COMPLEX,
+RP   IDENTIFICATION IN THE ACF-5 ISWI CHROMATIN REMODELING COMPLEX, AND
+RP   INTERACTION WITH SMARCA1 AND SMARCA5.
+RX   PubMed=28801535; DOI=10.15252/embr.201744011;
+RA   Oppikofer M., Bai T., Gan Y., Haley B., Liu P., Sandoval W., Ciferri C.,
+RA   Cochran A.G.;
+RT   "Expansion of the ISWI chromatin remodeler family with new active
+RT   complexes.";
+RL   EMBO Rep. 18:1697-1706(2017).
+RN   [21]
+RP   SUMOYLATION [LARGE SCALE ANALYSIS] AT LYS-952, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=28112733; DOI=10.1038/nsmb.3366;
+RA   Hendriks I.A., Lyon D., Young C., Jensen L.J., Vertegaal A.C.,
+RA   Nielsen M.L.;
+RT   "Site-specific mapping of the human SUMO proteome reveals co-modification
+RT   with phosphorylation.";
+RL   Nat. Struct. Mol. Biol. 24:325-336(2017).
+CC   -!- FUNCTION: Regulatory subunit of the ATP-dependent ACF-1 and ACF-5 ISWI
+CC       chromatin remodeling complexes, which form ordered nucleosome arrays on
+CC       chromatin and slide edge- and center-positioned histone octamers away
+CC       from their original location on the DNA template to facilitate access
+CC       to DNA during DNA-templated processes such as DNA replication,
+CC       transcription, and repair (PubMed:17099699, PubMed:28801535). Both
+CC       complexes regulate the spacing of nucleosomes along the chromatin and
+CC       have the ability to slide mononucleosomes to the center of a DNA
+CC       template in an ATP-dependent manner (PubMed:14759371, PubMed:17099699,
+CC       PubMed:28801535). The ACF-1 ISWI chromatin remodeling complex has a
+CC       lower ATP hydrolysis rate than the ACF-5 ISWI chromatin remodeling
+CC       complex (PubMed:28801535). Has a role in sensing the length of DNA
+CC       which flank nucleosomes, which modulates the nucleosome spacing
+CC       activity of the ACF-5 ISWI chromatin remodeling complex
+CC       (PubMed:17099699). Involved in DNA replication and together with
+CC       SMARCA5/SNF2H is required for replication of pericentric
+CC       heterochromatin in S-phase (PubMed:12434153). May have a role in
+CC       nuclear receptor-mediated transcription repression (PubMed:17519354).
+CC       {ECO:0000269|PubMed:12434153, ECO:0000269|PubMed:14759371,
+CC       ECO:0000269|PubMed:17099699, ECO:0000269|PubMed:17519354,
+CC       ECO:0000269|PubMed:28801535}.
+CC   -!- SUBUNIT: Component of the ACF-1 ISWI chromatin remodeling complex at
+CC       least composed of SMARCA1 and BAZ1A, which regulates the spacing of
+CC       histone octamers on the DNA template to facilitate access to DNA
+CC       (PubMed:28801535). Within the ACF-1 ISWI chromatin remodeling complex
+CC       interacts with SMARCA1; the interaction is direct (PubMed:28801535).
+CC       Component of the ACF-5 ISWI chromatin remodeling complex (also called
+CC       the ACF complex) at least composed of BAZ1A and SMARCA5/SNF2H, which
+CC       regulates the spacing of histone octamers on the DNA template to
+CC       facilitate access to DNA (PubMed:10880450, PubMed:12198550,
+CC       PubMed:28801535). Within the ACF-5 ISWI chromatin remodeling complex
+CC       interacts with SMARCA5/SNF2H; the interaction is direct
+CC       (PubMed:10880450, PubMed:12198550, PubMed:28801535). Component of the
+CC       CHRAC ISWI chromatin remodeling complex at least composed of
+CC       SMARCA5/SNF2H, BAZ1A/ACF1, CHRAC1 and POLE3; the complex preferentially
+CC       binds DNA through the CHRAC1-POLE3 heterodimer and possesses ATP-
+CC       dependent nucleosome-remodeling activity (PubMed:10880450,
+CC       PubMed:12434153, PubMed:14759371). Within the complex interacts (via N-
+CC       terminus) with POLE3-CHRAC1 heterodimer; the interaction is direct and
+CC       is required for the complex to preferentially bind to DNA
+CC       (PubMed:10880450, PubMed:12434153, PubMed:14759371). Within the complex
+CC       interacts with SMARCA5/SNF2H; the interaction is direct and promotes
+CC       the interaction with the POLE3-CHRAC1 heterodimer (PubMed:10880450,
+CC       PubMed:12434153, PubMed:14759371). Interacts with NCOR1 (via its RD1
+CC       domain); the interaction corepresses a number of NCOR1-regulated genes
+CC       (PubMed:17519354). {ECO:0000269|PubMed:10880450,
+CC       ECO:0000269|PubMed:12198550, ECO:0000269|PubMed:12434153,
+CC       ECO:0000269|PubMed:14759371, ECO:0000269|PubMed:17519354,
+CC       ECO:0000269|PubMed:28801535}.
+CC   -!- INTERACTION:
+CC       Q9NRL2; P42858: HTT; NbExp=4; IntAct=EBI-927511, EBI-466029;
+CC       Q9NRL2; O60264: SMARCA5; NbExp=3; IntAct=EBI-927511, EBI-352588;
+CC       Q9NRL2; O95365: ZBTB7A; NbExp=2; IntAct=EBI-927511, EBI-2795384;
+CC   -!- SUBCELLULAR LOCATION: Nucleus. Note=May target the CHRAC complex to
+CC       heterochromatin.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=Q9NRL2-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q9NRL2-2; Sequence=VSP_000551;
+CC   -!- TISSUE SPECIFICITY: Highly expressed in testis and at low or
+CC       undetectable levels in other tissues analyzed.
+CC   -!- MISCELLANEOUS: Stimulated by double-stranded DNA and nucleosomal DNA.
+CC   -!- SIMILARITY: Belongs to the WAL family. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAF28995.1; Type=Frameshift; Evidence={ECO:0000305};
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AF213467; AAF70601.1; -; mRNA.
+DR   EMBL; AF221130; AAF32366.1; -; mRNA.
+DR   EMBL; AB032252; BAA89209.1; -; mRNA.
+DR   EMBL; AL121603; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL355885; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471078; EAW65900.1; -; Genomic_DNA.
+DR   EMBL; AF161435; AAF28995.1; ALT_FRAME; mRNA.
+DR   EMBL; AL050089; CAB43261.1; -; mRNA.
+DR   CCDS; CCDS41943.1; -. [Q9NRL2-2]
+DR   CCDS; CCDS9651.1; -. [Q9NRL2-1]
+DR   PIR; T08738; T08738.
+DR   RefSeq; NP_038476.2; NM_013448.2. [Q9NRL2-1]
+DR   RefSeq; NP_872589.1; NM_182648.1. [Q9NRL2-2]
+DR   PDB; 5UIY; X-ray; 1.69 A; A/B/C/D=1425-1538.
+DR   PDBsum; 5UIY; -.
+DR   AlphaFoldDB; Q9NRL2; -.
+DR   SMR; Q9NRL2; -.
+DR   BioGRID; 116347; 109.
+DR   ComplexPortal; CPX-434; ACF chromatin remodeling complex.
+DR   ComplexPortal; CPX-785; CHRAC chromatin remodeling complex.
+DR   CORUM; Q9NRL2; -.
+DR   DIP; DIP-36071N; -.
+DR   IntAct; Q9NRL2; 45.
+DR   MINT; Q9NRL2; -.
+DR   STRING; 9606.ENSP00000353458; -.
+DR   BindingDB; Q9NRL2; -.
+DR   ChEMBL; CHEMBL4105737; -.
+DR   iPTMnet; Q9NRL2; -.
+DR   MetOSite; Q9NRL2; -.
+DR   PhosphoSitePlus; Q9NRL2; -.
+DR   SwissPalm; Q9NRL2; -.
+DR   BioMuta; BAZ1A; -.
+DR   DMDM; 116241266; -.
+DR   EPD; Q9NRL2; -.
+DR   jPOST; Q9NRL2; -.
+DR   MassIVE; Q9NRL2; -.
+DR   MaxQB; Q9NRL2; -.
+DR   PaxDb; Q9NRL2; -.
+DR   PeptideAtlas; Q9NRL2; -.
+DR   PRIDE; Q9NRL2; -.
+DR   ProteomicsDB; 82383; -. [Q9NRL2-1]
+DR   ProteomicsDB; 82384; -. [Q9NRL2-2]
+DR   Antibodypedia; 113; 137 antibodies from 24 providers.
+DR   DNASU; 11177; -.
+DR   Ensembl; ENST00000358716.8; ENSP00000351555.4; ENSG00000198604.11. [Q9NRL2-2]
+DR   Ensembl; ENST00000360310.6; ENSP00000353458.1; ENSG00000198604.11. [Q9NRL2-1]
+DR   Ensembl; ENST00000382422.6; ENSP00000371859.2; ENSG00000198604.11. [Q9NRL2-1]
+DR   GeneID; 11177; -.
+DR   KEGG; hsa:11177; -.
+DR   MANE-Select; ENST00000360310.6; ENSP00000353458.1; NM_013448.3; NP_038476.2.
+DR   UCSC; uc001wsk.4; human. [Q9NRL2-1]
+DR   CTD; 11177; -.
+DR   DisGeNET; 11177; -.
+DR   GeneCards; BAZ1A; -.
+DR   HGNC; HGNC:960; BAZ1A.
+DR   HPA; ENSG00000198604; Tissue enhanced (bone).
+DR   MIM; 605680; gene.
+DR   neXtProt; NX_Q9NRL2; -.
+DR   OpenTargets; ENSG00000198604; -.
+DR   PharmGKB; PA25270; -.
+DR   VEuPathDB; HostDB:ENSG00000198604; -.
+DR   eggNOG; KOG1245; Eukaryota.
+DR   GeneTree; ENSGT00940000158135; -.
+DR   HOGENOM; CLU_002479_1_0_1; -.
+DR   InParanoid; Q9NRL2; -.
+DR   OMA; CEATGKD; -.
+DR   OrthoDB; 858930at2759; -.
+DR   PhylomeDB; Q9NRL2; -.
+DR   TreeFam; TF316326; -.
+DR   PathwayCommons; Q9NRL2; -.
+DR   SignaLink; Q9NRL2; -.
+DR   BioGRID-ORCS; 11177; 21 hits in 1101 CRISPR screens.
+DR   ChiTaRS; BAZ1A; human.
+DR   GenomeRNAi; 11177; -.
+DR   Pharos; Q9NRL2; Tbio.
+DR   PRO; PR:Q9NRL2; -.
+DR   Proteomes; UP000005640; Chromosome 14.
+DR   RNAct; Q9NRL2; protein.
+DR   Bgee; ENSG00000198604; Expressed in sperm and 194 other tissues.
+DR   ExpressionAtlas; Q9NRL2; baseline and differential.
+DR   Genevisible; Q9NRL2; HS.
+DR   GO; GO:0016590; C:ACF complex; IPI:ComplexPortal.
+DR   GO; GO:0008623; C:CHRAC; IDA:UniProtKB.
+DR   GO; GO:0000228; C:nuclear chromosome; IBA:GO_Central.
+DR   GO; GO:0005634; C:nucleus; IDA:ComplexPortal.
+DR   GO; GO:0005721; C:pericentric heterochromatin; IC:ComplexPortal.
+DR   GO; GO:0003677; F:DNA binding; IBA:GO_Central.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0006338; P:chromatin remodeling; IDA:ComplexPortal.
+DR   GO; GO:0006261; P:DNA-templated DNA replication; IDA:UniProtKB.
+DR   GO; GO:0006334; P:nucleosome assembly; IDA:ComplexPortal.
+DR   GO; GO:0045740; P:positive regulation of DNA replication; IMP:ComplexPortal.
+DR   GO; GO:0006275; P:regulation of DNA replication; IMP:ComplexPortal.
+DR   GO; GO:0006355; P:regulation of DNA-templated transcription; IBA:GO_Central.
+DR   GO; GO:0031445; P:regulation of heterochromatin assembly; IBA:GO_Central.
+DR   GO; GO:0006357; P:regulation of transcription by RNA polymerase II; NAS:BHF-UCL.
+DR   CDD; cd05504; Bromo_Acf1_like; 1.
+DR   Gene3D; 1.20.920.10; -; 1.
+DR   Gene3D; 3.30.40.10; -; 1.
+DR   InterPro; IPR037325; Acf1_Bromo.
+DR   InterPro; IPR001487; Bromodomain.
+DR   InterPro; IPR036427; Bromodomain-like_sf.
+DR   InterPro; IPR018359; Bromodomain_CS.
+DR   InterPro; IPR018501; DDT_dom.
+DR   InterPro; IPR028942; WHIM1_dom.
+DR   InterPro; IPR028941; WHIM2_dom.
+DR   InterPro; IPR013136; WSTF_Acf1_Cbp146.
+DR   InterPro; IPR019786; Zinc_finger_PHD-type_CS.
+DR   InterPro; IPR011011; Znf_FYVE_PHD.
+DR   InterPro; IPR001965; Znf_PHD.
+DR   InterPro; IPR019787; Znf_PHD-finger.
+DR   InterPro; IPR013083; Znf_RING/FYVE/PHD.
+DR   Pfam; PF00439; Bromodomain; 1.
+DR   Pfam; PF02791; DDT; 1.
+DR   Pfam; PF00628; PHD; 1.
+DR   Pfam; PF10537; WAC_Acf1_DNA_bd; 1.
+DR   Pfam; PF15612; WHIM1; 1.
+DR   Pfam; PF15613; WSD; 1.
+DR   PRINTS; PR00503; BROMODOMAIN.
+DR   SMART; SM00297; BROMO; 1.
+DR   SMART; SM00571; DDT; 1.
+DR   SMART; SM00249; PHD; 1.
+DR   SUPFAM; SSF47370; SSF47370; 1.
+DR   SUPFAM; SSF57903; SSF57903; 1.
+DR   PROSITE; PS00633; BROMODOMAIN_1; 1.
+DR   PROSITE; PS50014; BROMODOMAIN_2; 1.
+DR   PROSITE; PS50827; DDT; 1.
+DR   PROSITE; PS51136; WAC; 1.
+DR   PROSITE; PS01359; ZF_PHD_1; 1.
+DR   PROSITE; PS50016; ZF_PHD_2; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; Bromodomain; Coiled coil;
+KW   Isopeptide bond; Metal-binding; Nucleus; Phosphoprotein;
+KW   Reference proteome; Transcription; Transcription regulation;
+KW   Ubl conjugation; Zinc; Zinc-finger.
+FT   CHAIN           1..1556
+FT                   /note="Bromodomain adjacent to zinc finger domain protein
+FT                   1A"
+FT                   /id="PRO_0000211167"
+FT   DOMAIN          22..128
+FT                   /note="WAC"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00475"
+FT   DOMAIN          422..487
+FT                   /note="DDT"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00063"
+FT   DOMAIN          1446..1516
+FT                   /note="Bromo"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00035"
+FT   ZN_FING         1148..1198
+FT                   /note="PHD-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00146"
+FT   REGION          1..133
+FT                   /note="Required for interaction with NCOR1"
+FT                   /evidence="ECO:0000269|PubMed:17519354"
+FT   REGION          1..128
+FT                   /note="Required for interaction with the CHRAC1-POLE3
+FT                   heterodimer. Required for interaction with the CHRAC1-POLE3
+FT                   heterodimer"
+FT                   /evidence="ECO:0000269|PubMed:14759371"
+FT   REGION          662..754
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          667..933
+FT                   /note="Required for interaction with SMARCA5 and formation
+FT                   of the CHRAC ISWI chromatin remodeling complex"
+FT                   /evidence="ECO:0000269|PubMed:12434153"
+FT   REGION          841..877
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          941..966
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          1202..1376
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          1399..1431
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COILED          306..397
+FT                   /evidence="ECO:0000255"
+FT   COILED          634..709
+FT                   /evidence="ECO:0000255"
+FT   COMPBIAS        662..704
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        711..725
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        841..876
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        949..966
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1202..1216
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1217..1255
+FT                   /note="Acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1274..1340
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOD_RES         270
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:19690332,
+FT                   ECO:0007744|PubMed:20068231"
+FT   MOD_RES         702
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:19690332"
+FT   MOD_RES         731
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:21406692,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         960
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:O88379"
+FT   MOD_RES         961
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         1281
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:21406692,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         1320
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         1339
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:O88379"
+FT   MOD_RES         1353
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:O88379"
+FT   MOD_RES         1363
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         1371
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:20068231"
+FT   MOD_RES         1402
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18669648,
+FT                   ECO:0007744|PubMed:20068231"
+FT   MOD_RES         1413
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:17081983,
+FT                   ECO:0007744|PubMed:18669648, ECO:0007744|PubMed:21406692,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         1417
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:17081983,
+FT                   ECO:0007744|PubMed:18669648, ECO:0007744|PubMed:23186163"
+FT   MOD_RES         1547
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   CROSSLNK        952
+FT                   /note="Glycyl lysine isopeptide (Lys-Gly) (interchain with
+FT                   G-Cter in SUMO2)"
+FT                   /evidence="ECO:0007744|PubMed:28112733"
+FT   VAR_SEQ         504..535
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:10655480"
+FT                   /id="VSP_000551"
+FT   VARIANT         344
+FT                   /note="D -> E (in dbSNP:rs1133285)"
+FT                   /id="VAR_028049"
+FT   VARIANT         1366
+FT                   /note="N -> K (in dbSNP:rs1044140)"
+FT                   /evidence="ECO:0000269|PubMed:10880450,
+FT                   ECO:0000269|PubMed:17974005"
+FT                   /id="VAR_048423"
+FT   MUTAGEN         1..128
+FT                   /note="Missing: Abolishes interaction with the CHRAC1-POLE3
+FT                   heterodimer."
+FT                   /evidence="ECO:0000269|PubMed:14759371"
+FT   MUTAGEN         667..933
+FT                   /note="Missing: Abolishes interaction with SMARCA5/SNF2H,
+FT                   and abolishes the formation of the CHRACISWI chromatin
+FT                   remodeling complex."
+FT                   /evidence="ECO:0000269|PubMed:12434153"
+FT   CONFLICT        135
+FT                   /note="R -> T (in Ref. 3; BAA89209)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        236
+FT                   /note="D -> E (in Ref. 3; BAA89209)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        494
+FT                   /note="K -> Q (in Ref. 6; AAF28995)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        503..508
+FT                   /note="KDLTEA -> QDFTEP (in Ref. 6; AAF28995)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        525
+FT                   /note="S -> P (in Ref. 6; AAF28995)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        536..540
+FT                   /note="GCSLK -> AALKF (in Ref. 6; AAF28995)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        551
+FT                   /note="E -> D (in Ref. 1; AAF70601)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        730
+FT                   /note="V -> F (in Ref. 3; BAA89209)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        769
+FT                   /note="P -> L (in Ref. 3; BAA89209)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1201
+FT                   /note="S -> C (in Ref. 3; BAA89209)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1206
+FT                   /note="S -> F (in Ref. 3; BAA89209)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1409
+FT                   /note="R -> K (in Ref. 1; AAF70601 and 7; CAB43261)"
+FT                   /evidence="ECO:0000305"
+FT   HELIX           1436..1447
+FT                   /evidence="ECO:0007829|PDB:5UIY"
+FT   HELIX           1449..1454
+FT                   /evidence="ECO:0007829|PDB:5UIY"
+FT   TURN            1460..1462
+FT                   /evidence="ECO:0007829|PDB:5UIY"
+FT   HELIX           1466..1469
+FT                   /evidence="ECO:0007829|PDB:5UIY"
+FT   HELIX           1476..1484
+FT                   /evidence="ECO:0007829|PDB:5UIY"
+FT   HELIX           1491..1508
+FT                   /evidence="ECO:0007829|PDB:5UIY"
+FT   HELIX           1514..1532
+FT                   /evidence="ECO:0007829|PDB:5UIY"
+SQ   SEQUENCE   1556 AA;  178702 MW;  4D78B9A8ADBF715B CRC64;
+     MPLLHRKPFV RQKPPADLRP DEEVFYCKVT NEIFRHYDDF FERTILCNSL VWSCAVTGRP
+     GLTYQEALES EKKARQNLQS FPEPLIIPVL YLTSLTHRSR LHEICDDIFA YVKDRYFVEE
+     TVEVIRNNGA RLQCRILEVL PPSHQNGFAN GHVNSVDGET IIISDSDDSE TQSCSFQNGK
+     KKDAIDPLLF KYKVQPTKKE LHESAIVKAT QISRRKHLFS RDKLKLFLKQ HCEPQDGVIK
+     IKASSLSTYK IAEQDFSYFF PDDPPTFIFS PANRRRGRPP KRIHISQEDN VANKQTLASY
+     RSKATKERDK LLKQEEMKSL AFEKAKLKRE KADALEAKKK EKEDKEKKRE ELKKIVEEER
+     LKKKEEKERL KVEREKEREK LREEKRKYVE YLKQWSKPRE DMECDDLKEL PEPTPVKTRL
+     PPEIFGDALM VLEFLNAFGE LFDLQDEFPD GVTLEVLEEA LVGNDSEGPL CELLFFFLTA
+     IFQAIAEEEE EVAKEQLTDA DTKDLTEALD EDADPTKSAL SAVASLAAAW PQLHQGCSLK
+     SLDLDSCTLS EILRLHILAS GADVTSANAK YRYQKRGGFD ATDDACMELR LSNPSLVKKL
+     SSTSVYDLTP GEKMKILHAL CGKLLTLVST RDFIEDYVDI LRQAKQEFRE LKAEQHRKER
+     EEAAARIRKR KEEKLKEQEQ KMKEKQEKLK EDEQRNSTAD ISIGEEERED FDTSIESKDT
+     EQKELDQDMV TEDEDDPGSH KRGRRGKRGQ NGFKEFTRQE QINCVTREPL TADEEEALKQ
+     EHQRKEKELL EKIQSAIACT NIFPLGRDRM YRRYWIFPSI PGLFIEEDYS GLTEDMLLPR
+     PSSFQNNVQS QDPQVSTKTG EPLMSESTSN IDQGPRDHSV QLPKPVHKPN RWCFYSSCEQ
+     LDQLIEALNS RGHRESALKE TLLQEKSRIC AQLARFSEEK FHFSDKPQPD SKPTYSRGRS
+     SNAYDPSQMC AEKQLELRLR DFLLDIEDRI YQGTLGAIKV TDRHIWRSAL ESGRYELLSE
+     ENKENGIIKT VNEDVEEMEI DEQTKVIVKD RLLGIKTETP STVSTNASTP QSVSSVVHYL
+     AMALFQIEQG IERRFLKAPL DASDSGRSYK TVLDRWRESL LSSASLSQVF LHLSTLDRSV
+     IWSKSILNAR CKICRKKGDA ENMVLCDGCD RGHHTYCVRP KLKTVPEGDW FCPECRPKQR
+     SRRLSSRQRP SLESDEDVED SMGGEDDEVD GDEEEGQSEE EEYEVEQDED DSQEEEEVSL
+     PKRGRPQVRL PVKTRGKLSS SFSSRGQQQE PGRYPSRSQQ STPKTTVSSK TGRSLRKINS
+     APPTETKSLR IASRSTRHSH GPLQADVFVE LLSPRRKRRG RKSANNTPEN SPNFPNFRVI
+     ATKSSEQSRS VNIASKLSLQ ESESKRRCRK RQSPEPSPVT LGRRSSGRQG GVHELSAFEQ
+     LVVELVRHDD SWPFLKLVSK IQVPDYYDII KKPIALNIIR EKVNKCEYKL ASEFIDDIEL
+     MFSNCFEYNP RNTSEAKAGT RLQAFFHIQA QKLGLHVTPS NVDQVSTPPA AKKSRI
+//

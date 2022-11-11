@@ -1,0 +1,2297 @@
+ID   RET_HUMAN               Reviewed;        1114 AA.
+AC   P07949; A8K6Z2; Q15250; Q9BTB0; Q9H4A2;
+DT   01-AUG-1988, integrated into UniProtKB/Swiss-Prot.
+DT   01-JUN-1994, sequence version 3.
+DT   12-OCT-2022, entry version 268.
+DE   RecName: Full=Proto-oncogene tyrosine-protein kinase receptor Ret {ECO:0000305};
+DE            EC=2.7.10.1;
+DE   AltName: Full=Cadherin family member 12;
+DE   AltName: Full=Proto-oncogene c-Ret;
+DE   Contains:
+DE     RecName: Full=Soluble RET kinase fragment;
+DE   Contains:
+DE     RecName: Full=Extracellular cell-membrane anchored RET cadherin 120 kDa fragment;
+DE   Flags: Precursor;
+GN   Name=RET {ECO:0000312|HGNC:HGNC:9967};
+GN   Synonyms=CDHF12, CDHR16, PTC, RET51;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2).
+RC   TISSUE=Prostate;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15164054; DOI=10.1038/nature02462;
+RA   Deloukas P., Earthrowl M.E., Grafham D.V., Rubenfield M., French L.,
+RA   Steward C.A., Sims S.K., Jones M.C., Searle S., Scott C., Howe K.,
+RA   Hunt S.E., Andrews T.D., Gilbert J.G.R., Swarbreck D., Ashurst J.L.,
+RA   Taylor A., Battles J., Bird C.P., Ainscough R., Almeida J.P.,
+RA   Ashwell R.I.S., Ambrose K.D., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Banerjee R., Bates K., Beasley H., Bray-Allen S., Brown A.J., Brown J.Y.,
+RA   Burford D.C., Burrill W., Burton J., Cahill P., Camire D., Carter N.P.,
+RA   Chapman J.C., Clark S.Y., Clarke G., Clee C.M., Clegg S., Corby N.,
+RA   Coulson A., Dhami P., Dutta I., Dunn M., Faulkner L., Frankish A.,
+RA   Frankland J.A., Garner P., Garnett J., Gribble S., Griffiths C.,
+RA   Grocock R., Gustafson E., Hammond S., Harley J.L., Hart E., Heath P.D.,
+RA   Ho T.P., Hopkins B., Horne J., Howden P.J., Huckle E., Hynds C.,
+RA   Johnson C., Johnson D., Kana A., Kay M., Kimberley A.M., Kershaw J.K.,
+RA   Kokkinaki M., Laird G.K., Lawlor S., Lee H.M., Leongamornlert D.A.,
+RA   Laird G., Lloyd C., Lloyd D.M., Loveland J., Lovell J., McLaren S.,
+RA   McLay K.E., McMurray A., Mashreghi-Mohammadi M., Matthews L., Milne S.,
+RA   Nickerson T., Nguyen M., Overton-Larty E., Palmer S.A., Pearce A.V.,
+RA   Peck A.I., Pelan S., Phillimore B., Porter K., Rice C.M., Rogosin A.,
+RA   Ross M.T., Sarafidou T., Sehra H.K., Shownkeen R., Skuce C.D., Smith M.,
+RA   Standring L., Sycamore N., Tester J., Thorpe A., Torcasso W., Tracey A.,
+RA   Tromans A., Tsolas J., Wall M., Walsh J., Wang H., Weinstock K., West A.P.,
+RA   Willey D.L., Whitehead S.L., Wilming L., Wray P.W., Young L., Chen Y.,
+RA   Lovering R.C., Moschonas N.K., Siebert R., Fechtel K., Bentley D.,
+RA   Durbin R.M., Hubbard T., Doucette-Stamm L., Beck S., Smith D.R., Rogers J.;
+RT   "The DNA sequence and comparative analysis of human chromosome 10.";
+RL   Nature 429:375-381(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2), AND VARIANT CYS-982.
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1-280 (ISOFORMS 1/2).
+RX   PubMed=2660074;
+RA   Takahashi M.;
+RT   "Isolation of ret proto-oncogene cDNA with an amino-terminal signal
+RT   sequence.";
+RL   Oncogene 4:805-806(1989).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 255-1114 (ISOFORM 1).
+RX   PubMed=3078962;
+RA   Takahashi M., Buma Y., Iwamoto T., Inaguma Y., Ikeda H., Hiai H.;
+RT   "Cloning and expression of the ret proto-oncogene encoding a tyrosine
+RT   kinase with two potential transmembrane domains.";
+RL   Oncogene 3:571-578(1988).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 588-1063 (ISOFORM 2), AND CHROMOSOMAL
+RP   TRANSLOCATION WITH TRIM27.
+RX   PubMed=3037315; DOI=10.1128/mcb.7.4.1378-1385.1987;
+RA   Takahashi M., Cooper G.M.;
+RT   "ret transforming gene encodes a fusion protein homologous to tyrosine
+RT   kinases.";
+RL   Mol. Cell. Biol. 7:1378-1385(1987).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 713-1114 (ISOFORM 1), AND CHROMOSOMAL
+RP   TRANSLOCATION WITH GOLGA5.
+RC   TISSUE=Fibroblast;
+RX   PubMed=2734021;
+RA   Ishizaka Y., Ochiai M., Tahira T., Suhimura T., Nahao M.;
+RT   "Activation of the ret-II oncogene without a sequence encoding a
+RT   transmembrane domain and transforming activity of two ret-II oncogene
+RT   products differing in carboxy-termini due to alternative splicing.";
+RL   Oncogene 4:789-794(1989).
+RN   [8]
+RP   ERRATUM OF PUBMED:2734021.
+RA   Ishizaka Y., Ochiai M., Tahira T., Suhimura T., Nahao M.;
+RL   Oncogene 4:1415-1415(1989).
+RN   [9]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 713-1114 (ISOFORM 1), AND CHROMOSOMAL
+RP   TRANSLOCATION WITH CCDC6.
+RC   TISSUE=Thyroid papillary carcinoma;
+RX   PubMed=2406025; DOI=10.1016/0092-8674(90)90659-3;
+RA   Grieco M., Santoro M., Berlingieri M.T., Melillo R.M., Donghi R.,
+RA   Bongarzone I., Pierotti M.A., Della Porta G., Fusco A., Vecchio G.;
+RT   "PTC is a novel rearranged form of the ret proto-oncogene and is frequently
+RT   detected in vivo in human thyroid papillary carcinomas.";
+RL   Cell 60:557-563(1990).
+RN   [10]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 713-770 (ISOFORMS 1/2), AND CHROMOSOMAL
+RP   TRANSLOCATION WITH PCM1.
+RX   PubMed=10980597; DOI=10.1038/sj.onc.1203772;
+RA   Corvi R., Berger N., Balczon R., Romeo G.;
+RT   "RET/PCM-1: a novel fusion gene in papillary thyroid carcinoma.";
+RL   Oncogene 19:4236-4242(2000).
+RN   [11]
+RP   CHROMOSOMAL TRANSLOCATION WITH TRIM33 AND TRIM24.
+RX   PubMed=10439047; DOI=10.1038/sj.onc.1202824;
+RA   Klugbauer S., Rabes H.M.;
+RT   "The transcription coactivator HTIF1 and a related protein are fused to the
+RT   RET receptor tyrosine kinase in childhood papillary thyroid carcinomas.";
+RL   Oncogene 18:4388-4393(1999).
+RN   [12]
+RP   PHOSPHORYLATION AT TYR-1015 AND TYR-1062.
+RX   PubMed=11061555; DOI=10.1210/jcem.85.10.6882;
+RA   Salvatore D., Barone M.V., Salvatore G., Melillo R.M., Chiappetta G.,
+RA   Mineo A., Fenzi G., Vecchio G., Fusco A., Santoro M.;
+RT   "Tyrosines 1015 and 1062 are in vivo autophosphorylation sites in ret and
+RT   ret-derived oncoproteins.";
+RL   J. Clin. Endocrinol. Metab. 85:3898-3907(2000).
+RN   [13]
+RP   PHOSPHORYLATION AT TYR-806; TYR-809; TYR-900; TYR-905; TYR-981; TYR-1015;
+RP   TYR-1062; TYR-1090 AND TYR-1096.
+RX   PubMed=14711813; DOI=10.1074/jbc.m312600200;
+RA   Kawamoto Y., Takeda K., Okuno Y., Yamakawa Y., Ito Y., Taguchi R., Kato M.,
+RA   Suzuki H., Takahashi M., Nakashima I.;
+RT   "Identification of RET autophosphorylation sites by mass spectrometry.";
+RL   J. Biol. Chem. 279:14213-14224(2004).
+RN   [14]
+RP   CHROMOSOMAL TRANSLOCATION WITH TRIM27.
+RX   PubMed=12787916; DOI=10.1016/s0027-5107(03)00056-3;
+RA   Saenko V., Rogounovitch T., Shimizu-Yoshida Y., Abrosimov A., Lushnikov E.,
+RA   Roumiantsev P., Matsumoto N., Nakashima M., Meirmanov S., Ohtsuru A.,
+RA   Namba H., Tsyb A., Yamashita S.;
+RT   "Novel tumorigenic rearrangement, Delta rfp/ret, in a papillary thyroid
+RT   carcinoma from externally irradiated patient.";
+RL   Mutat. Res. 527:81-90(2003).
+RN   [15]
+RP   RETRACTED PAPER.
+RX   PubMed=16778204; DOI=10.1158/0008-5472.can-06-0228;
+RA   Iervolino A., Iuliano R., Trapasso F., Viglietto G., Melillo R.M.,
+RA   Carlomagno F., Santoro M., Fusco A.;
+RT   "The receptor-type protein tyrosine phosphatase J antagonizes the
+RT   biochemical and biological effects of RET-derived oncoproteins.";
+RL   Cancer Res. 66:6280-6287(2006).
+RN   [16]
+RP   RETRACTION NOTICE OF PUBMED:16778204.
+RX   PubMed=30552125; DOI=10.1158/0008-5472.can-18-3456;
+RA   Iervolino A., Iuliano R., Trapasso F., Viglietto G., Melillo R.M.,
+RA   Carlomagno F., Santoro M., Fusco A.;
+RL   Cancer Res. 78:6907-6907(2018).
+RN   [17]
+RP   ACTIVITY REGULATION.
+RX   PubMed=17884497; DOI=10.1016/j.bmcl.2007.07.104;
+RA   Graham Robinett R., Freemerman A.J., Skinner M.A., Shewchuk L., Lackey K.;
+RT   "The discovery of substituted 4-(3-hydroxyanilino)-quinolines as potent RET
+RT   kinase inhibitors.";
+RL   Bioorg. Med. Chem. Lett. 17:5886-5893(2007).
+RN   [18]
+RP   ACTIVITY REGULATION BY SORAFENIB.
+RX   PubMed=17664273; DOI=10.1074/jbc.m703461200;
+RA   Plaza-Menacho I., Mologni L., Sala E., Gambacorti-Passerini C., Magee A.I.,
+RA   Links T.P., Hofstra R.M.W., Barford D., Isacke C.M.;
+RT   "Sorafenib functions to potently suppress RET tyrosine kinase activity by
+RT   direct enzymatic inhibition and promoting RET lysosomal degradation
+RT   independent of proteasomal targeting.";
+RL   J. Biol. Chem. 282:29230-29240(2007).
+RN   [19]
+RP   ACTIVITY REGULATION BY 3- AND 4-SUBSTITUTED BETA-CARBOLIN-1-ONES.
+RX   PubMed=19053769; DOI=10.1021/jm8007823;
+RA   Cincinelli R., Cassinelli G., Dallavalle S., Lanzi C., Merlini L.,
+RA   Botta M., Tuccinardi T., Martinelli A., Penco S., Zunino F.;
+RT   "Synthesis, modeling, and RET protein kinase inhibitory activity of 3- and
+RT   4-substituted beta-carbolin-1-ones.";
+RL   J. Med. Chem. 51:7777-7787(2008).
+RN   [20]
+RP   INTERACTION WITH CD2AP, AND MUTAGENESIS OF LYS-758.
+RX   PubMed=18753381; DOI=10.1523/jneurosci.2738-08.2008;
+RA   Tsui C.C., Pierchala B.A.;
+RT   "CD2AP and Cbl-3/Cbl-c constitute a critical checkpoint in the regulation
+RT   of ret signal transduction.";
+RL   J. Neurosci. 28:8789-8800(2008).
+RN   [21]
+RP   INTERACTION WITH AIP.
+RX   PubMed=19366855; DOI=10.1210/jc.2008-1980;
+RA   Vargiolu M., Fusco D., Kurelac I., Dirnberger D., Baumeister R., Morra I.,
+RA   Melcarne A., Rimondini R., Romeo G., Bonora E.;
+RT   "The tyrosine kinase receptor RET interacts in vivo with aryl hydrocarbon
+RT   receptor-interacting protein to alter survivin availability.";
+RL   J. Clin. Endocrinol. Metab. 94:2571-2578(2009).
+RN   [22]
+RP   INDUCTION BY NKX2-1; PHOX2B; SOX10 AND PAX3.
+RX   PubMed=19853745; DOI=10.1016/j.jpedsurg.2008.11.055;
+RA   Leon T.Y.Y., Ngan E.S.W., Poon H.-C., So M.-T., Lui V.C.H., Tam P.K.H.,
+RA   Garcia-Barcelo M.M.;
+RT   "Transcriptional regulation of RET by Nkx2-1, Phox2b, Sox10, and Pax3.";
+RL   J. Pediatr. Surg. 44:1904-1912(2009).
+RN   [23]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-696, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [24]
+RP   FUNCTION IN DEVELOPMENT OF MECHANORECEPTORS.
+RX   PubMed=20064382; DOI=10.1016/j.neuron.2009.12.014;
+RA   Ma Q.;
+RT   "RETouching upon mechanoreceptors.";
+RL   Neuron 64:773-776(2009).
+RN   [25]
+RP   ACTIVITY REGULATION, AND REVIEW ON KINASE INHIBITORS.
+RX   PubMed=20605972; DOI=10.1210/er.2009-0031;
+RA   Ye L., Santarpia L., Gagel R.F.;
+RT   "The evolving field of tyrosine kinase inhibitors in the treatment of
+RT   endocrine tumors.";
+RL   Endocr. Rev. 31:578-599(2010).
+RN   [26]
+RP   ACTIVITY REGULATION.
+RX   PubMed=20409618; DOI=10.1016/j.ejmech.2010.03.017;
+RA   Brandt W., Mologni L., Preu L., Lemcke T., Gambacorti-Passerini C.,
+RA   Kunick C.;
+RT   "Inhibitors of the RET tyrosine kinase based on a 2-(alkylsulfanyl)-4-(3-
+RT   thienyl)nicotinonitrile scaffold.";
+RL   Eur. J. Med. Chem. 45:2919-2927(2010).
+RN   [27]
+RP   FUNCTION IN PITUITARY.
+RX   PubMed=20616503; DOI=10.1159/000318502;
+RA   Garcia-Lavandeira M., Diaz-Rodriguez E., Garcia-Rendueles M.E.,
+RA   Rodrigues J.S., Perez-Romero S., Bravo S.B., Alvarez C.V.;
+RT   "Functional role of the RET dependence receptor, GFRa co-receptors and
+RT   ligands in the pituitary.";
+RL   Front. Horm. Res. 38:127-138(2010).
+RN   [28]
+RP   FUNCTION IN CELL ADHESION/MIGRATION.
+RX   PubMed=20702524; DOI=10.1210/jc.2010-0771;
+RA   Cockburn J.G., Richardson D.S., Gujral T.S., Mulligan L.M.;
+RT   "RET-mediated cell adhesion and migration require multiple integrin
+RT   subunits.";
+RL   J. Clin. Endocrinol. Metab. 95:E342-E346(2010).
+RN   [29]
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=19823924; DOI=10.1007/s10895-009-0548-x;
+RA   Richardson D.S., Mulligan L.M.;
+RT   "Direct visualization of vesicle maturation and plasma membrane protein
+RT   trafficking.";
+RL   J. Fluoresc. 20:401-405(2010).
+RN   [30]
+RP   ACTIVITY REGULATION.
+RX   PubMed=21134556; DOI=10.1016/j.surg.2010.09.026;
+RA   Samadi A.K., Mukerji R., Shah A., Timmermann B.N., Cohen M.S.;
+RT   "A novel RET inhibitor with potent efficacy against medullary thyroid
+RT   cancer in vivo.";
+RL   Surgery 148:1228-1236(2010).
+RN   [31]
+RP   FUNCTION IN CELL ADHESION, FUNCTION IN APOPTOSIS, PROTEOLYTIC PROCESSING BY
+RP   CASPASE-3 AT ASP-707 AND ASP-1017, MUTAGENESIS OF ASP-707; LYS-758 AND
+RP   708-ALA--SER-1114, AND SUBUNIT.
+RX   PubMed=21357690; DOI=10.1074/jbc.m110.195461;
+RA   Cabrera J.R., Bouzas-Rodriguez J., Tauszig-Delamasure S., Mehlen P.;
+RT   "RET modulates cell adhesion via its cleavage by caspase in sympathetic
+RT   neurons.";
+RL   J. Biol. Chem. 286:14628-14638(2011).
+RN   [32]
+RP   INTERACTION WITH PTK2/FAK1, AND FUNCTION IN PTK2/FAK1 PHOSPHORYLATION.
+RX   PubMed=21454698; DOI=10.1074/jbc.m110.168500;
+RA   Plaza-Menacho I., Morandi A., Mologni L., Boender P.,
+RA   Gambacorti-Passerini C., Magee A.I., Hofstra R.M.W., Knowles P.,
+RA   McDonald N.Q., Isacke C.M.;
+RT   "Focal adhesion kinase (FAK) binds RET kinase via its FERM domain, priming
+RT   a direct and reciprocal RET-FAK transactivation mechanism.";
+RL   J. Biol. Chem. 286:17292-17302(2011).
+RN   [33]
+RP   INTERACTION WITH GDNF, AND SUBCELLULAR LOCATION.
+RX   PubMed=21994944; DOI=10.1074/jbc.m111.246413;
+RA   Geng Z., Xu F.Y., Huang S.H., Chen Z.Y.;
+RT   "Sorting protein-related receptor SorLA controls regulated secretion of
+RT   glial cell line-derived neurotrophic factor.";
+RL   J. Biol. Chem. 286:41871-41882(2011).
+RN   [34]
+RP   INTERACTION WITH GFRA1, AND SUBCELLULAR LOCATION.
+RX   PubMed=23333276; DOI=10.1016/j.celrep.2012.12.011;
+RA   Glerup S., Lume M., Olsen D., Nyengaard J.R., Vaegter C.B., Gustafsen C.,
+RA   Christensen E.I., Kjolby M., Hay-Schmidt A., Bender D., Madsen P.,
+RA   Saarma M., Nykjaer A., Petersen C.M.;
+RT   "SorLA controls neurotrophic activity by sorting of GDNF and its receptors
+RT   GFRalpha1 and RET.";
+RL   Cell Rep. 3:186-199(2013).
+RN   [35]
+RP   INTERACTION WITH GFRAL, SUBCELLULAR LOCATION, FUNCTION, AND MUTAGENESIS OF
+RP   TYR-1062.
+RX   PubMed=28953886; DOI=10.1038/nature24042;
+RA   Hsu J.Y., Crawley S., Chen M., Ayupova D.A., Lindhout D.A., Higbee J.,
+RA   Kutach A., Joo W., Gao Z., Fu D., To C., Mondal K., Li B., Kekatpure A.,
+RA   Wang M., Laird T., Horner G., Chan J., McEntee M., Lopez M.,
+RA   Lakshminarasimhan D., White A., Wang S.P., Yao J., Yie J., Matern H.,
+RA   Solloway M., Haldankar R., Parsons T., Tang J., Shen W.D., Alice Chen Y.,
+RA   Tian H., Allan B.B.;
+RT   "Non-homeostatic body weight regulation through a brainstem-restricted
+RT   receptor for GDF15.";
+RL   Nature 550:255-259(2017).
+RN   [36]
+RP   ERRATUM OF PUBMED:28953886.
+RX   PubMed=29144449; DOI=10.1038/nature24481;
+RA   Hsu J.Y., Crawley S., Chen M., Ayupova D.A., Lindhout D.A., Higbee J.,
+RA   Kutach A., Joo W., Gao Z., Fu D., To C., Mondal K., Li B., Kekatpure A.,
+RA   Wang M., Laird T., Horner G., Chan J., McEntee M., Lopez M.,
+RA   Lakshminarasimhan D., White A., Wang S.P., Yao J., Yie J., Matern H.,
+RA   Solloway M., Haldankar R., Parsons T., Tang J., Shen W.D., Alice Chen Y.,
+RA   Tian H., Allan B.B.;
+RT   "Non-homeostatic body weight regulation through a brainstem-restricted
+RT   receptor for GDF15.";
+RL   Nature 551:398-398(2017).
+RN   [37]
+RP   FUNCTION, AND INTERACTION WITH GFRAL.
+RX   PubMed=28846097; DOI=10.1038/nm.4392;
+RA   Mullican S.E., Lin-Schmidt X., Chin C.N., Chavez J.A., Furman J.L.,
+RA   Armstrong A.A., Beck S.C., South V.J., Dinh T.Q., Cash-Mason T.D.,
+RA   Cavanaugh C.R., Nelson S., Huang C., Hunter M.J., Rangwala S.M.;
+RT   "GFRAL is the receptor for GDF15 and the ligand promotes weight loss in
+RT   mice and nonhuman primates.";
+RL   Nat. Med. 23:1150-1157(2017).
+RN   [38]
+RP   FUNCTION, INTERACTION WITH GFRAL, AND PHOSPHORYLATION AT TYR-905 AND
+RP   TYR-1062.
+RX   PubMed=28846099; DOI=10.1038/nm.4394;
+RA   Yang L., Chang C.C., Sun Z., Madsen D., Zhu H., Padkjaer S.B., Wu X.,
+RA   Huang T., Hultman K., Paulsen S.J., Wang J., Bugge A., Frantzen J.B.,
+RA   Noergaard P., Jeppesen J.F., Yang Z., Secher A., Chen H., Li X., John L.M.,
+RA   Shan B., He Z., Gao X., Su J., Hansen K.T., Yang W., Joergensen S.B.;
+RT   "GFRAL is the receptor for GDF15 and is required for the anti-obesity
+RT   effects of the ligand.";
+RL   Nat. Med. 23:1158-1166(2017).
+RN   [39] {ECO:0007744|PDB:2IVS, ECO:0007744|PDB:2IVT, ECO:0007744|PDB:2IVU, ECO:0007744|PDB:2IVV}
+RP   X-RAY CRYSTALLOGRAPHY (2.0 ANGSTROMS) OF 705-1013 ALONE AND IN COMPLEX WITH
+RP   INHIBITORS, IDENTIFICATION BY MASS SPECTROMETRY, AND PHOSPHORYLATION AT
+RP   TYR-900 AND TYR-905.
+RX   PubMed=16928683; DOI=10.1074/jbc.m605604200;
+RA   Knowles P.P., Murray-Rust J., Kjaer S., Scott R.P., Hanrahan S.,
+RA   Santoro M., Ibanez C.F., McDonald N.Q.;
+RT   "Structure and chemical inhibition of the RET tyrosine kinase domain.";
+RL   J. Biol. Chem. 281:33577-33587(2006).
+RN   [40] {ECO:0007744|PDB:2X2K, ECO:0007744|PDB:2X2L, ECO:0007744|PDB:2X2M}
+RP   X-RAY CRYSTALLOGRAPHY (2.00 ANGSTROMS) OF 705-1013 IN COMPLEX WITH
+RP   INHIBITORS, ACTIVITY REGULATION, AND PHOSPHORYLATION AT TYR-905.
+RX   PubMed=20117004; DOI=10.1016/j.bmc.2010.01.011;
+RA   Mologni L., Rostagno R., Brussolo S., Knowles P.P., Kjaer S.,
+RA   Murray-Rust J., Rosso E., Zambon A., Scapozza L., McDonald N.Q.,
+RA   Lucchini V., Gambacorti-Passerini C.;
+RT   "Synthesis, structure-activity relationship and crystallographic studies of
+RT   3-substituted indolin-2-one RET inhibitors.";
+RL   Bioorg. Med. Chem. 18:1482-1496(2010).
+RN   [41] {ECO:0007744|PDB:2X2U}
+RP   X-RAY CRYSTALLOGRAPHY (2.00 ANGSTROMS) OF 29-270, GLYCOSYLATION AT ASN-151,
+RP   AND DISULFIDE BOND.
+RX   PubMed=20473317; DOI=10.1038/nsmb.1808;
+RA   Kjaer S., Hanrahan S., Totty N., McDonald N.Q.;
+RT   "Mammal-restricted elements predispose human RET to folding impairment by
+RT   HSCR mutations.";
+RL   Nat. Struct. Mol. Biol. 17:726-731(2010).
+RN   [42]
+RP   REVIEW ON HSCR VARIANTS.
+RX   PubMed=9359036;
+RA   Hofstra R.M.W., Osinga J., Buys C.H.C.M.;
+RT   "Mutations in Hirschsprung disease: when does a mutation contribute to the
+RT   phenotype.";
+RL   Eur. J. Hum. Genet. 5:180-185(1997).
+RN   [43]
+RP   REVIEW ON VARIANTS.
+RX   PubMed=9067749;
+RX   DOI=10.1002/(sici)1098-1004(1997)9:2<97::aid-humu1>3.0.co;2-m;
+RA   Eng C., Mulligan L.M.;
+RT   "Mutations of the RET proto-oncogene in the multiple endocrine neoplasia
+RT   type 2 syndromes, related sporadic tumours, and Hirschsprung disease.";
+RL   Hum. Mutat. 9:97-109(1997).
+RN   [44]
+RP   VARIANTS MEN2A/MTC TRP-611; SER-618; ARG-620; TYR-620 AND ARG-634.
+RX   PubMed=8103403; DOI=10.1093/hmg/2.7.851;
+RA   Donis-Keller H., Dou S., Chi D., Carlson K.M., Toshima K., Lairmore T.C.,
+RA   Howe J.R., Moley J.F., Goodfellow P., Wells S.A. Jr.;
+RT   "Mutations in the RET proto-oncogene are associated with MEN 2A and FMTC.";
+RL   Hum. Mol. Genet. 2:851-856(1993).
+RN   [45]
+RP   VARIANTS MEN2A GLY-618; 632-ASP--ARG-634; GLY-634; PHE-634; TYR-634 AND
+RP   SER-634.
+RX   PubMed=8099202; DOI=10.1038/363458a0;
+RA   Mulligan L.M., Kwok J.B.J., Healey C.S., Elsdon M.J., Eng C., Gardner E.,
+RA   Love D.R., Mole S.E., Moore J.K., Papi L., Ponder M.A., Telenius H.,
+RA   Tunnacliffe A., Ponder B.A.J.;
+RT   "Germ-line mutations of the RET proto-oncogene in multiple endocrine
+RT   neoplasia type 2A.";
+RL   Nature 363:458-460(1993).
+RN   [46]
+RP   VARIANTS HSCR1 PRO-40; LEU-399; GLN-762; PRO-765; GLN-897; GLY-972 AND
+RP   LEU-973.
+RX   PubMed=7704557; DOI=10.1159/000472371;
+RA   Yin L., Barone V., Seri M., Bolino A., Bocciardi R., Ceccherini I.,
+RA   Pasini B., Tocco T., Lerone M., Cywes S., Moore S., Vanderwinden J.-M.,
+RA   Abramowicz M.J., Kristoffersson U., Larsson L.T., Hamel B.C.J., Silengo M.,
+RA   Martucciello G., Romeo G.;
+RT   "Heterogeneity and low detection rate of RET mutations in Hirschsprung
+RT   disease.";
+RL   Eur. J. Hum. Genet. 2:272-280(1994).
+RN   [47]
+RP   VARIANT MEN2B THR-918.
+RX   PubMed=7911697; DOI=10.1093/hmg/3.2.237;
+RA   Eng C., Smith D.P., Mulligan L.M., Nagai M.A., Healey C.S., Ponder M.A.,
+RA   Gardner E., Scheumann G.F., Jackson C.E., Tunnacliffe A., Ponder B.A.J.;
+RT   "Point mutation within the tyrosine kinase domain of the RET proto-oncogene
+RT   in multiple endocrine neoplasia type 2B and related sporadic tumours.";
+RL   Hum. Mol. Genet. 3:237-241(1994).
+RN   [48]
+RP   VARIANTS MEN2A/MTC ARG-618; SER-618; PHE-620; ARG-620; PHE-634; GLY-634 AND
+RP   TYR-634.
+RX   PubMed=7915165; DOI=10.1093/hmg/3.4.635;
+RA   Xue F., Yu H., Maurer L.H., Memoli V.A., Nutile-Mcmenemy N., Schuster M.K.,
+RA   Browden D.W., Mao J.-I., Noll W.W.;
+RT   "Germline RET mutations in MEN 2A and FMTC and their detection by simple
+RT   DNA diagnostic tests.";
+RL   Hum. Mol. Genet. 3:635-638(1994).
+RN   [49]
+RP   VARIANTS MTC/MEN2A TYR-609; ARG-618; SER-618 AND SER-620.
+RX   PubMed=7849720; DOI=10.1093/hmg/3.10.1895;
+RA   Blaugrund J.E., Johns M.M. Jr., Eby Y.J., Ball D.W., Baylin S.B.,
+RA   Hruban R.H., Sidransky D.;
+RT   "RET proto-oncogene mutations in inherited and sporadic medullary thyroid
+RT   cancer.";
+RL   Hum. Mol. Genet. 3:1895-1897(1994).
+RN   [50]
+RP   VARIANTS MTC, AND VARIANTS MEN2A.
+RX   PubMed=7874109; DOI=10.1093/hmg/3.11.1939;
+RA   Schuffenecker I., Billaud M., Calender A., Chambe B., Ginet N.,
+RA   Calmettes C., Modigliani E., Lenoir G.M.;
+RT   "RET proto-oncogene mutations in French MEN 2A and FMTC families.";
+RL   Hum. Mol. Genet. 3:1939-1943(1994).
+RN   [51]
+RP   VARIANTS HSCR1 TRP-609; ARG-618 AND ARG-620, VARIANT MEN2A ARG-618, AND
+RP   VARIANT MTC ARG-620.
+RX   PubMed=7881414; DOI=10.1093/hmg/3.12.2163;
+RA   Mulligan L.M., Eng C., Attie T., Lyonnet S., Marsh D.J., Hyland V.J.,
+RA   Robinson B.G., Frilling A., Verellen-Dumoulin C., Safar A., Venter D.J.,
+RA   Munnich A., Ponder B.A.J.;
+RT   "Diverse phenotypes associated with exon 10 mutations of the RET proto-
+RT   oncogene.";
+RL   Hum. Mol. Genet. 3:2163-2167(1994).
+RN   [52]
+RP   VARIANT MEN2B THR-918.
+RX   PubMed=7906866; DOI=10.1038/367375a0;
+RA   Hofstra R.M.W., Landsvater R.M., Ceccherini I., Stulp R.P., Stelwagen T.,
+RA   Luo Y., Pasini B., Hoeppener J.W.M., Ploos van Amstel H.K., Romeo G.,
+RA   Lips C.J.M., Buys C.H.C.M.;
+RT   "A mutation in the RET proto-oncogene associated with multiple endocrine
+RT   neoplasia type 2B and sporadic medullary thyroid carcinoma.";
+RL   Nature 367:375-376(1994).
+RN   [53]
+RP   VARIANTS HSCR1 PRO-765; GLN-897 AND GLY-972.
+RX   PubMed=8114938; DOI=10.1038/367377a0;
+RA   Romeo G., Ronchetto P., Luo Y., Barone V., Seri M., Ceccherini I.,
+RA   Pasini B., Bocciardi R., Lerone M., Kaarlainen H., Martucciello G.;
+RT   "Point mutations affecting the tyrosine kinase domain of the RET proto-
+RT   oncogene in Hirschsprung's disease.";
+RL   Nature 367:377-378(1994).
+RN   [54]
+RP   VARIANTS HSCR1 LEU-32; LEU-64; GLN-330 AND LEU-393.
+RX   PubMed=8114939; DOI=10.1038/367378a0;
+RA   Edery P., Lyonnet S., Mulligan L.M., Pelet A., Dow E., Abel L., Holder S.,
+RA   Nihoul-Fkete C., Ponder B.A.J., Munnich A.;
+RT   "Mutations of the RET proto-oncogene in Hirschsprung's disease.";
+RL   Nature 367:378-380(1994).
+RN   [55]
+RP   VARIANT MEN2B THR-918.
+RX   PubMed=7906417; DOI=10.1073/pnas.91.4.1579;
+RA   Carlson K.M., Dou S., Chi D., Scavarda N., Toshima K., Jackson C.E.,
+RA   Wells S.A. Jr., Goodfellow P.J., Donis-Keller H.;
+RT   "Single missense mutation in the tyrosine kinase catalytic domain of the
+RT   RET protooncogene is associated with multiple endocrine neoplasia type
+RT   2B.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 91:1579-1583(1994).
+RN   [56]
+RP   VARIANTS MTC; MEN2A AND MEN2B.
+RX   PubMed=8625130;
+RX   DOI=10.1002/1097-0142(19950801)76:3<479::aid-cncr2820760319>3.0.co;2-m;
+RA   Komminoth P., Kunz E.K., Matias-Guiu X., Hiort O., Christiansen G.,
+RA   Colomer A., Roth J., Heitz P.U.;
+RT   "Analysis of RET protooncogene point mutations distinguishes heritable from
+RT   nonheritable medullary thyroid carcinomas.";
+RL   Cancer 76:479-489(1995).
+RN   [57]
+RP   VARIANTS MEN2A SER-618; SER-620; ARG-634 AND TYR-634.
+RX   PubMed=7860065; DOI=10.1007/bf00209399;
+RA   Takiguchi-Shirahama S., Koyama K., Miyauchi A., Wakasugi T., Oishi S.,
+RA   Takami H., Hikiji K., Nakamura Y.;
+RT   "Germline mutations of the RET proto-oncogene in eight Japanese patients
+RT   with multiple endocrine neoplasia type 2A (MEN2A).";
+RL   Hum. Genet. 95:187-190(1995).
+RN   [58]
+RP   VARIANTS HSCR1 LEU-20; SER-93; GLN-330; TYR-609 AND ARG-620, AND VARIANT
+RP   CYS-982.
+RC   TISSUE=Blood;
+RX   PubMed=7633441; DOI=10.1093/hmg/4.5.821;
+RA   Angrist M., Bolk S., Thiel B., Puffenberger E.G., Hofstra R.M.W.,
+RA   Buys C.H.C.M., Cass D.T., Chakravarti A.;
+RT   "Mutation analysis of the RET receptor tyrosine kinase in Hirschsprung
+RT   disease.";
+RL   Hum. Mol. Genet. 4:821-830(1995).
+RN   [59]
+RP   VARIANTS HSCR1.
+RC   TISSUE=Leukocyte;
+RX   PubMed=7581377; DOI=10.1093/hmg/4.8.1381;
+RA   Attie T., Pelet A., Edery P., Eng C., Mulligan L.M., Amiel J., Boutrand L.,
+RA   Beldjord C., Nihoul-Fekete C., Munnich A., Ponder B.A.J., Lyonnet S.;
+RT   "Diversity of RET proto-oncogene mutations in familial and sporadic
+RT   Hirschsprung disease.";
+RL   Hum. Mol. Genet. 4:1381-1386(1995).
+RN   [60]
+RP   VARIANT MEN2B THR-918, AND VARIANT TYR-922.
+RX   PubMed=8595427; DOI=10.1093/hmg/4.10.1987;
+RA   Kitamura Y., Scavarda N., Wells S.A. Jr., Jackson C.E., Goodfellow P.J.;
+RT   "Two maternally derived missense mutations in the tyrosine kinase domain of
+RT   the RET protooncogene in a patient with de novo MEN 2B.";
+RL   Hum. Mol. Genet. 4:1987-1988(1995).
+RN   [61]
+RP   VARIANT MTC ASP-768.
+RX   PubMed=7845675;
+RA   Eng C., Smith D.P., Mulligan L.M., Healey C.S., Zvelebil M.J.,
+RA   Stonehouse T.J., Ponder M.A., Jackson C.E., Waterfield M.D., Ponder B.A.J.;
+RT   "A novel point mutation in the tyrosine kinase domain of the RET proto-
+RT   oncogene in sporadic medullary thyroid carcinoma and in a family with
+RT   FMTC.";
+RL   Oncogene 10:509-513(1995).
+RN   [62]
+RP   VARIANTS MTC ASP-768 AND LEU-804.
+RX   PubMed=7784092;
+RA   Bolino A., Schuffenecker I., Luo Y., Seri M., Silengo M., Tocco T.,
+RA   Chabrier G., Houdent C., Murat A., Schlumberger M., Tournaire J.,
+RA   Lenoir G.M., Romeo G.;
+RT   "RET mutations in exons 13 and 14 of FMTC patients.";
+RL   Oncogene 10:2415-2419(1995).
+RN   [63]
+RP   VARIANTS HSCR1 TYR-157; LYS-359; TYR-609; ARG-620; ASN-1059 DEL AND
+RP   PRO-1061.
+RA   Hofstra R.M.W., Osinga J., Stulp R.P., Scheffer H., Meijers C.,
+RA   Buys C.H.C.M.;
+RT   "Mutations in three genes are found associated with the development of
+RT   Hirschsprung disease: RET, EDNRB and EDN3.";
+RL   Am. J. Hum. Genet. 59:A263-A263(1996).
+RN   [64]
+RP   VARIANTS HSCR1 PRO-40 AND PRO-765.
+RX   PubMed=9043870; DOI=10.1159/000472232;
+RA   Yin L., Seri M., Barone V., Tocco T., Scaranari M., Romeo G.;
+RT   "Prevalence and parental origin of de novo RET mutations in Hirschsprung's
+RT   disease.";
+RL   Eur. J. Hum. Genet. 4:356-358(1996).
+RN   [65]
+RP   VARIANTS MTC/MEN2A.
+RX   PubMed=8557249; DOI=10.1007/bf00218825;
+RA   Landsvater R.M., Jansen R.P.M., Hofstra R.M.W., Buys C.H.C.M., Lips C.J.M.,
+RA   van Amstel H.K.P.;
+RT   "Mutation analysis of the RET proto-oncogene in Dutch families with MEN 2A,
+RT   MEN 2B and FMTC: two novel mutations and one de novo mutation for MEN 2A.";
+RL   Hum. Genet. 97:11-14(1996).
+RN   [66]
+RP   VARIANTS MEN2A, VARIANT MTC ASP-768, AND VARIANT MEN2B THR-918.
+RX   PubMed=8807338;
+RX   DOI=10.1002/(sici)1098-1004(1996)8:1<64::aid-humu9>3.0.co;2-p;
+RA   Kambouris M., Jackson C.E., Feldman G.L.;
+RT   "Diagnosis of multiple endocrine neoplasia [MEN] 2A, 2B and familial
+RT   medullary thyroid cancer [FMTC] by multiplex PCR and heteroduplex analyses
+RT   of RET proto-oncogene mutations.";
+RL   Hum. Mutat. 8:64-70(1996).
+RN   [67]
+RP   VARIANTS MEN2A.
+RX   PubMed=8626834; DOI=10.1210/jcem.81.5.8626834;
+RA   Frank-Raue K., Hoeppner W., Frilling A., Kotzerke J., Dralle H., Haase R.,
+RA   Mann K., Seif F., Kirchner R., Rendl J., Deckart H.F., Ritter M.M.,
+RA   Hampel R., Klempa J., Scholz G.H., Raue F., Bogner U., Brabant G.,
+RA   Grussendorf M., Hartenstein C.H., Heidemann P., Hensen J., Doerr A.G.,
+RA   Hoehne T., Hoernig-Franz I., Huefner M., Kress J., Langer H.J.,
+RA   Lottermoser K., Schweikert H.U., Kusterer K., Menken U., Mercier J.,
+RA   Oelkers W., Sauer J., Simon D., Starrach G., Ziegler R.;
+RT   "Mutations of the ret protooncogene in German multiple endocrine neoplasia
+RT   families: relation between genotype and phenotype.";
+RL   J. Clin. Endocrinol. Metab. 81:1780-1783(1996).
+RN   [68]
+RP   VARIANT MEN2A HIS-GLU-LEU-CYS-634 INS.
+RX   PubMed=9097963; DOI=10.1093/hmg/6.4.587;
+RA   Hoeppner W., Ritter M.M.;
+RT   "A duplication of 12 bp in the critical cysteine rich domain of the RET
+RT   proto-oncogene results in a distinct phenotype of multiple endocrine
+RT   neoplasia type 2A.";
+RL   Hum. Mol. Genet. 6:587-590(1997).
+RN   [69]
+RP   VARIANTS HSCR1 PRO-180; GLN-313; ARG-620 AND PHE-791.
+RX   PubMed=9090527;
+RX   DOI=10.1002/(sici)1098-1004(1997)9:3<243::aid-humu5>3.0.co;2-8;
+RA   Seri M., Yin L., Barone V., Bolino A., Celli I., Bocciardi R., Pasini B.,
+RA   Ceccherini I., Lerone M., Kristoffersson U., Larsson L.T., Casasa J.M.,
+RA   Cass D.T., Abramowicz M.J., Vanderwinden J.-M., Kravcenkiene I., Baric I.,
+RA   Silengo M., Martucciello G., Romeo G.;
+RT   "Frequency of RET mutations in long- and short-segment Hirschsprung
+RT   disease.";
+RL   Hum. Mutat. 9:243-249(1997).
+RN   [70]
+RP   VARIANT MTC ARG-618, AND VARIANT HSCR1 ARG-618.
+RX   PubMed=9259198;
+RX   DOI=10.1002/(sici)1098-1004(1997)10:2<155::aid-humu7>3.0.co;2-j;
+RA   Peretz H., Luboshitsky R., Baron E., Biton A., Gershoni R., Usher S.,
+RA   Grynberg E., Yakobson E., Graff E., Lapidot M.;
+RT   "Cys 618 Arg mutation in the RET proto-oncogene associated with familial
+RT   medullary thyroid carcinoma and maternally transmitted Hirschsprung's
+RT   disease suggesting a role for imprinting.";
+RL   Hum. Mutat. 10:155-159(1997).
+RN   [71]
+RP   VARIANT MEN2B PHE-883.
+RC   TISSUE=Peripheral blood leukocyte;
+RX   PubMed=9360560; DOI=10.1210/jcem.82.11.4508;
+RA   Gimm O., Marsh D.J., Andrew S.D., Frilling A., Dahia P.L.M., Mulligan L.M.,
+RA   Zajac J.D., Robinson B.G., Eng C.;
+RT   "Germline dinucleotide mutation in codon 883 of the RET proto-oncogene in
+RT   multiple endocrine neoplasia type 2B without codon 918 mutation.";
+RL   J. Clin. Endocrinol. Metab. 82:3902-3904(1997).
+RN   [72]
+RP   VARIANT MTC ALA-891.
+RX   PubMed=9398735; DOI=10.1210/jcem.82.12.4439;
+RA   Hofstra R.M.W., Fattoruso O., Quadro L., Wu Y., Libroia A., Verga U.,
+RA   Colantuoni V., Buys C.H.C.M.;
+RT   "A novel point mutation in the intracellular domain of the ret
+RT   protooncogene in a family with medullary thyroid carcinoma.";
+RL   J. Clin. Endocrinol. Metab. 82:4176-4178(1997).
+RN   [73]
+RP   VARIANTS HSCR1 SER-174 AND TYR-197.
+RX   PubMed=9094028; DOI=10.1016/s0022-3468(97)90616-3;
+RA   Kusafuka T., Wang Y., Puri P.;
+RT   "Mutation analysis of the RET, the endothelin-B receptor, and the
+RT   endothelin-3 genes in sporadic cases of Hirschsprung's disease.";
+RL   J. Pediatr. Surg. 32:501-504(1997).
+RN   [74]
+RP   VARIANTS MTC; MEN2A AND MEN2B, AND VARIANT SER-691.
+RX   PubMed=9223675; DOI=10.1038/sj.onc.1201102;
+RA   Kitamura Y., Goodfellow P.J., Shimizu K., Nagahama M., Ito K., Kitagawa W.,
+RA   Akasu H., Takami H., Tanaka S., Wells S.A. Jr.;
+RT   "Novel germline RET proto-oncogene mutations associated with medullary
+RT   thyroid carcinoma (MTC): mutation analysis in Japanese patients with MTC.";
+RL   Oncogene 14:3103-3106(1997).
+RN   [75]
+RP   VARIANT MEN2B PHE-883.
+RX   PubMed=9294615; DOI=10.1038/sj.onc.1201481;
+RA   Smith D.P., Houghton C., Ponder B.A.J.;
+RT   "Germline mutation of RET codon 883 in two cases of de novo MEN 2B.";
+RL   Oncogene 15:1213-1217(1997).
+RN   [76]
+RP   VARIANT HSCR1 LEU-1039, AND VARIANT SER-691.
+RX   PubMed=9497256; DOI=10.1086/301759;
+RA   Amiel J., Salomon R., Attie T., Pelet A., Trang H., Mokhtari M.,
+RA   Gaultier C., Munnich A., Lyonnet S.;
+RT   "Mutations of the RET-GDNF signaling pathway in Ondine's curse.";
+RL   Am. J. Hum. Genet. 62:715-717(1998).
+RN   [77]
+RP   VARIANT MTC GLY-611.
+RX   PubMed=9677065;
+RX   DOI=10.1002/(sici)1096-8628(19980707)78:3<271::aid-ajmg13>3.0.co;2-c;
+RA   Oriola J., Paramo C., Halperin I., Garcia-Mayor R.V., Rivera-Fillat F.;
+RT   "Novel point mutation in exon 10 of the RET proto-oncogene in a family with
+RT   medullary thyroid carcinoma.";
+RL   Am. J. Med. Genet. 78:271-273(1998).
+RN   [78]
+RP   VARIANT CYS-982.
+RX   PubMed=9760196; DOI=10.1007/s004390050797;
+RA   Svensson P.J., Anvret M., Molander M.L., Nordenskjold A.;
+RT   "Phenotypic variation in a family with mutations in two Hirschsprung-
+RT   related genes (RET and endothelin receptor B).";
+RL   Hum. Genet. 103:145-148(1998).
+RN   [79]
+RP   VARIANTS MEN2A TYR-609; SER-618; ARG-620 AND TRP-620, AND VARIANTS HSCR1
+RP   TYR-609; SER-618; ARG-620 AND TRP-620.
+RX   PubMed=9384613; DOI=10.1093/hmg/7.1.129;
+RA   Decker R.A., Peacock M.L., Watson P.;
+RT   "Hirschsprung disease in MEN 2A: increased spectrum of RET exon 10
+RT   genotypes and strong genotype-phenotype correlation.";
+RL   Hum. Mol. Genet. 7:129-134(1998).
+RN   [80]
+RP   VARIANT MEN2A CYS-ARG-THR-636 INS.
+RX   PubMed=9452064; DOI=10.1002/humu.1380110143;
+RA   Hoeppner W., Dralle H., Brabant G.;
+RT   "Duplication of 9 base pairs in the critical cysteine-rich domain of the
+RT   RET proto-oncogene causes multiple endocrine neoplasia type 2A.";
+RL   Hum. Mutat. Suppl. 1:S128-S130(1998).
+RN   [81]
+RP   VARIANT MTC MET-804.
+RX   PubMed=9452077; DOI=10.1002/humu.1380110156;
+RA   Fattoruso O., Quadro L., Libroia A., Verga U., Lupoli G., Cascone E.,
+RA   Colantuoni V.;
+RT   "A GTG to ATG novel point mutation at codon 804 in exon 14 of the RET
+RT   proto-oncogene in two families affected by familial medullary thyroid
+RT   carcinoma.";
+RL   Hum. Mutat. Suppl. 1:S167-S171(1998).
+RN   [82]
+RP   VARIANTS MTC/MEN2A PHE-790 AND PHE-791.
+RX   PubMed=9506724; DOI=10.1210/jcem.83.3.4619;
+RA   Berndt I., Reuter M., Saller B., Frank-Raue K., Groth P., Grussendorf M.,
+RA   Raue F., Ritter M.M., Hoeppner W.;
+RT   "A new hot spot for mutations in the ret protooncogene causing familial
+RT   medullary thyroid carcinoma and multiple endocrine neoplasia type 2A.";
+RL   J. Clin. Endocrinol. Metab. 83:770-774(1998).
+RN   [83]
+RP   VARIANTS MTC AND MEN2A.
+RX   PubMed=9621513; DOI=10.1007/s100380050048;
+RA   Shirahama S., Ogura K., Takami H., Ito K., Tohsen T., Miyauchi A.,
+RA   Nakamura Y.;
+RT   "Mutational analysis of the RET proto-oncogene in 71 Japanese patients with
+RT   medullary thyroid carcinoma.";
+RL   J. Hum. Genet. 43:101-106(1998).
+RN   [84]
+RP   VARIANTS HSCR1 LYS-626 AND GLN-813.
+RX   PubMed=10090908; DOI=10.1086/302329;
+RA   Auricchio A., Griseri P., Carpentieri M.L., Betsos N., Staiano A.,
+RA   Tozzi A., Priolo M., Thompson H., Bocciardi R., Romeo G., Ballabio A.,
+RA   Ceccherini I.;
+RT   "Double heterozygosity for a RET substitution interfering with splicing and
+RT   an EDNRB missense mutation in Hirschsprung disease.";
+RL   Am. J. Hum. Genet. 64:1216-1221(1999).
+RN   [85]
+RP   VARIANTS HSCR1 ASN-1059 DEL AND PRO-1061.
+RX   PubMed=10484767; DOI=10.1093/hmg/8.11.1989;
+RA   Geneste O., Bidaud C., De Vita G., Hofstra R.M.W., Tartare-Deckert S.,
+RA   Buys C.H.C.M., Lenoir G.M., Santoro M., Billaud M.;
+RT   "Two distinct mutations of the RET receptor causing Hirschsprung's disease
+RT   impair the binding of signalling effectors to a multifunctional docking
+RT   site.";
+RL   Hum. Mol. Genet. 8:1989-1999(1999).
+RN   [86]
+RP   VARIANT MTC GLU-GLU-CYS-531 INS.
+RX   PubMed=10323403; DOI=10.1210/jcem.84.5.5665;
+RA   Pigny P., Bauters C., Wemeau J.-L., Houcke M.L., Crepin M., Caron P.,
+RA   Giraud S., Calender A., Buisine M.-P., Kerckaert J.-P., Porchet N.;
+RT   "A novel 9-base pair duplication in RET exon 8 in familial medullary
+RT   thyroid carcinoma.";
+RL   J. Clin. Endocrinol. Metab. 84:1700-1704(1999).
+RN   [87]
+RP   VARIANT MEN2A GLY-640.
+RX   PubMed=10522989; DOI=10.1210/jcem.84.10.6056;
+RA   Tessitore A., Sinisi A.A., Pasquali D., Cardone M., Vitale D.,
+RA   Bellastella A., Colantuoni V.;
+RT   "A novel case of multiple endocrine neoplasia type 2A associated with two
+RT   de novo mutations of the RET protooncogene.";
+RL   J. Clin. Endocrinol. Metab. 84:3522-3527(1999).
+RN   [88]
+RP   VARIANTS MTC MET-804 AND LEU-844.
+RX   PubMed=10826520; DOI=10.1055/s-2000-5806;
+RA   Bartsch D.K., Hasse C., Schug C., Barth P., Rothmund M., Hoeppner W.;
+RT   "A RET double mutation in the germline of a kindred with FMTC.";
+RL   Exp. Clin. Endocrinol. Diabetes 108:128-132(2000).
+RN   [89]
+RP   VARIANT GLN-600.
+RX   PubMed=10612852;
+RX   DOI=10.1002/(sici)1098-1004(200001)15:1<122::aid-humu41>3.0.co;2-7;
+RA   Saez M.E., Ruiz A., Cebrian A., Morales F., Robledo M., Antinolo G.,
+RA   Borrego S.;
+RT   "A new germline mutation, R600Q, within the coding region of RET proto-
+RT   oncogene: a rare polymorphism or a MEN 2 causing mutation?";
+RL   Hum. Mutat. 15:122-122(2000).
+RN   [90]
+RP   VARIANTS HSCR1 LEU-32; CYS-77; TRP-360 AND LYS-394.
+RX   PubMed=10618407; DOI=10.1073/pnas.97.1.268;
+RA   Bolk S., Pelet A., Hofstra R.M.W., Angrist M., Salomon R., Croaker D.,
+RA   Buys C.H.C.M., Lyonnet S., Chakravarti A.;
+RT   "A human model for multigenic inheritance: phenotypic expression in
+RT   Hirschsprung disease requires both the RET gene and a new 9q31 locus.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 97:268-273(2000).
+RN   [91]
+RP   VARIANTS MTC GLY-639; GLY-641 AND PHE-922.
+RX   PubMed=11692159; DOI=10.1007/s001090100250;
+RA   Kalinin V.N., Amosenko F.A., Shabanov M.A., Lubchenko L.N., Hosch S.B.,
+RA   Garkavtseva R.F., Izbicki J.R.;
+RT   "Three novel mutations in the RET proto-oncogene.";
+RL   J. Mol. Med. 79:609-612(2001).
+RN   [92]
+RP   VARIANTS PHEOCHROMOCYTOMA ARG-634; GLY-634; TYR-634; SER-634; PHE-634;
+RP   TRP-634 AND PHE-791.
+RX   PubMed=12000816; DOI=10.1056/nejmoa020152;
+RG   The Freiburg-Warsaw-Columbus pheochromocytoma study group;
+RA   Neumann H.P.H., Bausch B., McWhinney S.R., Bender B.U., Gimm O., Franke G.,
+RA   Schipper J., Klisch J., Altehoefer C., Zerres K., Januszewicz A.,
+RA   Smith W.M., Munk R., Manz T., Glaesker S., Apel T.W., Treier M.,
+RA   Reineke M., Walz M.K., Hoang-Vu C., Brauckhoff M., Klein-Franke A.,
+RA   Klose P., Schmidt H., Maier-Woelfle M., Peczkowska M., Szmigielski C.,
+RA   Eng C.;
+RT   "Germ-line mutations in nonsyndromic pheochromocytoma.";
+RL   N. Engl. J. Med. 346:1459-1466(2002).
+RN   [93]
+RP   VARIANT HIS-114.
+RX   PubMed=12086152; DOI=10.1620/tjem.196.241;
+RA   Kanai M., Numakura C., Sasaki A., Shirahata E., Akaba K., Hashimoto M.,
+RA   Hasegawa H., Shirasawa S., Hayasaka K.;
+RT   "Congenital central hypoventilation syndrome: a novel mutation of the RET
+RT   gene in an isolated case.";
+RL   Tohoku J. Exp. Med. 196:241-246(2002).
+RN   [94]
+RP   VARIANTS HIS-67; HIS-114; GLU-432; ASN-489; SER-691 AND CYS-982.
+RX   PubMed=14566559; DOI=10.1007/s00439-003-1036-z;
+RA   Sasaki A., Kanai M., Kijima K., Akaba K., Hashimoto M., Hasegawa H.,
+RA   Otaki S., Koizumi T., Kusuda S., Ogawa Y., Tuchiya K., Yamamoto W.,
+RA   Nakamura T., Hayasaka K.;
+RT   "Molecular analysis of congenital central hypoventilation syndrome.";
+RL   Hum. Genet. 114:22-26(2003).
+RN   [95]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLY-145; TRP-360 AND GLU-593.
+RX   PubMed=16959974; DOI=10.1126/science.1133427;
+RA   Sjoeblom T., Jones S., Wood L.D., Parsons D.W., Lin J., Barber T.D.,
+RA   Mandelker D., Leary R.J., Ptak J., Silliman N., Szabo S., Buckhaults P.,
+RA   Farrell C., Meeh P., Markowitz S.D., Willis J., Dawson D., Willson J.K.V.,
+RA   Gazdar A.F., Hartigan J., Wu L., Liu C., Parmigiani G., Park B.H.,
+RA   Bachman K.E., Papadopoulos N., Vogelstein B., Kinzler K.W.,
+RA   Velculescu V.E.;
+RT   "The consensus coding sequences of human breast and colorectal cancers.";
+RL   Science 314:268-274(2006).
+RN   [96]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLN-163; ASN-278; MET-292; ASN-489;
+RP   SER-691; THR-749; SER-826; LEU-844; CYS-982 AND TYR-1112.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [97]
+RP   VARIANTS THR-198; ALA-376; HIS-394; ILE-778; SER-894; THR-918; LEU-1049 AND
+RP   SER-1067, POSSIBLE INVOLVEMENT IN RENAL AGENESIS, AND CHARACTERIZATION OF
+RP   VARIANTS THR-198; ALA-376; HIS-394; ILE-778; SER-894; LEU-1049 AND
+RP   SER-1067.
+RX   PubMed=18252215; DOI=10.1016/j.ajhg.2007.10.008;
+RA   Skinner M.A., Safford S.D., Reeves J.G., Jackson M.E., Freemerman A.J.;
+RT   "Renal aplasia in humans is associated with RET mutations.";
+RL   Am. J. Hum. Genet. 82:344-351(2008).
+RN   [98]
+RP   VARIANTS HSCR1 549-LYS-GLY-550 DEL; CYS-114; GLY-145; LEU-155; PRO-175;
+RP   ALA-278; PRO-278; ASN-300; GLN-313; ILE-316; LEU-339; TYR-353; GLN-360;
+RP   MET-397; MET-412; ARG-423; LYS-480; GLN-595; LEU-679; GLN-694; SER-783;
+RP   ARG-830; THR-907; LEU-961; VAL-1052; CYS-1062 AND THR-1064, AND VARIANTS
+RP   HIS-114; ASN-278 AND MET-292.
+RX   PubMed=22174939; DOI=10.1371/journal.pone.0028986;
+RA   So M.T., Leon T.Y., Cheng G., Tang C.S., Miao X.P., Cornes B.K., Diem N.N.,
+RA   Cui L., Ngan E.S., Lui V.C., Wu X.Z., Wang B., Wang H., Yuan Z.W.,
+RA   Huang L.M., Li L., Xia H., Zhu D., Liu J., Nguyen T.L., Chan I.H.,
+RA   Chung P.H., Liu X.L., Zhang R., Wong K.K., Sham P.C., Cherny S.S.,
+RA   Tam P.K., Garcia-Barcelo M.M.;
+RT   "RET mutational spectrum in Hirschsprung disease: evaluation of 601 Chinese
+RT   patients.";
+RL   PLoS ONE 6:E28986-E28986(2011).
+CC   -!- FUNCTION: Receptor tyrosine-protein kinase involved in numerous
+CC       cellular mechanisms including cell proliferation, neuronal navigation,
+CC       cell migration, and cell differentiation upon binding with glial cell
+CC       derived neurotrophic factor family ligands. Phosphorylates PTK2/FAK1.
+CC       Regulates both cell death/survival balance and positional information.
+CC       Required for the molecular mechanisms orchestration during intestine
+CC       organogenesis; involved in the development of enteric nervous system
+CC       and renal organogenesis during embryonic life, and promotes the
+CC       formation of Peyer's patch-like structures, a major component of the
+CC       gut-associated lymphoid tissue. Modulates cell adhesion via its
+CC       cleavage by caspase in sympathetic neurons and mediates cell migration
+CC       in an integrin (e.g. ITGB1 and ITGB3)-dependent manner. Involved in the
+CC       development of the neural crest. Active in the absence of ligand,
+CC       triggering apoptosis through a mechanism that requires receptor
+CC       intracellular caspase cleavage. Acts as a dependence receptor; in the
+CC       presence of the ligand GDNF in somatotrophs (within pituitary),
+CC       promotes survival and down regulates growth hormone (GH) production,
+CC       but triggers apoptosis in absence of GDNF. Regulates nociceptor
+CC       survival and size. Triggers the differentiation of rapidly adapting
+CC       (RA) mechanoreceptors. Mediator of several diseases such as
+CC       neuroendocrine cancers; these diseases are characterized by aberrant
+CC       integrins-regulated cell migration. Mediates, through interaction with
+CC       GDF15-receptor GFRAL, GDF15-induced cell-signaling in the brainstem
+CC       which induces inhibition of food-intake. Activates MAPK- and AKT-
+CC       signaling pathways (PubMed:28846097, PubMed:28953886, PubMed:28846099).
+CC       Isoform 1 in complex with GFRAL induces higher activation of MAPK-
+CC       signaling pathway than isoform 2 in complex with GFRAL
+CC       (PubMed:28846099). {ECO:0000269|PubMed:20064382,
+CC       ECO:0000269|PubMed:20616503, ECO:0000269|PubMed:20702524,
+CC       ECO:0000269|PubMed:21357690, ECO:0000269|PubMed:21454698,
+CC       ECO:0000269|PubMed:28846097, ECO:0000269|PubMed:28846099,
+CC       ECO:0000269|PubMed:28953886}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.10.1;
+CC         Evidence={ECO:0000255|PROSITE-ProRule:PRU10028};
+CC   -!- ACTIVITY REGULATION: Repressed by 4-(3-hydroxyanilino)-quinolines
+CC       derivatives, indolin-2-one-derivatives, 2-(alkylsulfanyl)-4-(3-thienyl)
+CC       nicotinonitrile analogs, 3- and 4-substituted beta-carbolin-1-ones,
+CC       vandetanib, motesanib, sorafenib (BAY 43-9006), cabozantinib (XL184),
+CC       sunitinib, and withaferin A (WA). Inactivation by sorafenib both
+CC       reduces kinase activity and promotes lysosomal degradation.
+CC       {ECO:0000269|PubMed:17664273, ECO:0000269|PubMed:17884497,
+CC       ECO:0000269|PubMed:19053769, ECO:0000269|PubMed:20117004,
+CC       ECO:0000269|PubMed:20409618, ECO:0000269|PubMed:20605972,
+CC       ECO:0000269|PubMed:21134556}.
+CC   -!- SUBUNIT: Phosphorylated form interacts with the PBT domain of DOK2,
+CC       DOK4 and DOK5 (By similarity). The phosphorylated form interacts with
+CC       PLCG1 and GRB7 (By similarity). Interacts (not phosphorylated) with
+CC       PTK2/FAK1 (via FERM domain) (PubMed:21454698). Extracellular cell-
+CC       membrane anchored RET cadherin fragments form complex in neurons with
+CC       reduced trophic status, preferentially at the contact sites between
+CC       somas (PubMed:21357690). Interacts with AIP in the pituitary gland;
+CC       this interaction prevents the formation of the AIP-survivin complex
+CC       (PubMed:19366855). Binds to ARTN (By similarity). Interacts (inactive)
+CC       with CBLC and CD2AP; dissociates upon activation by GDNF which
+CC       increases CBLC:CD2AP interaction (PubMed:18753381). Interacts (via the
+CC       extracellular domain) with GFRAL (via the extracellular domain); the
+CC       interaction mediates cellular signaling upon interaction of GFRAL with
+CC       its ligand GDF15 (PubMed:28953886, PubMed:28846097, PubMed:28846099).
+CC       Interaction with GFRAL requires previous GDF15-binding to GFRAL
+CC       (PubMed:28846097, PubMed:28846099). Interacts with GFRA1; in the
+CC       presence of SORL1, the GFRA1/RET complex is targeted to endosomes
+CC       (PubMed:23333276). Interacts with GDNF (PubMed:21994944).
+CC       {ECO:0000250|UniProtKB:P35546, ECO:0000269|PubMed:18753381,
+CC       ECO:0000269|PubMed:19366855, ECO:0000269|PubMed:21357690,
+CC       ECO:0000269|PubMed:21454698, ECO:0000269|PubMed:21994944,
+CC       ECO:0000269|PubMed:23333276, ECO:0000269|PubMed:28846097,
+CC       ECO:0000269|PubMed:28846099, ECO:0000269|PubMed:28953886}.
+CC   -!- INTERACTION:
+CC       P07949; Q9UM73: ALK; NbExp=2; IntAct=EBI-2480756, EBI-357361;
+CC       P07949; P22455: FGFR4; NbExp=2; IntAct=EBI-2480756, EBI-6256193;
+CC       P07949; Q7Z3S9: NOTCH2NLA; NbExp=3; IntAct=EBI-2480756, EBI-945833;
+CC       P07949; P40763: STAT3; NbExp=3; IntAct=EBI-2480756, EBI-518675;
+CC       P07949; Q62985: Sh2b1; Xeno; NbExp=3; IntAct=EBI-2480756, EBI-7395583;
+CC       P07949-2; Q7Z3S9: NOTCH2NLA; NbExp=3; IntAct=EBI-4423689, EBI-945833;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:19823924,
+CC       ECO:0000269|PubMed:21994944, ECO:0000269|PubMed:23333276,
+CC       ECO:0000269|PubMed:28953886}; Single-pass type I membrane protein
+CC       {ECO:0000269|PubMed:19823924}. Endosome membrane
+CC       {ECO:0000269|PubMed:19823924, ECO:0000269|PubMed:23333276}; Single-pass
+CC       type I membrane protein {ECO:0000269|PubMed:19823924}.
+CC       Note=Predominantly located on the plasma membrane. In the presence of
+CC       SORL1 and GFRA1, directed to endosomes. {ECO:0000269|PubMed:23333276}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1; Synonyms=RET51;
+CC         IsoId=P07949-1; Sequence=Displayed;
+CC       Name=2; Synonyms=RET9;
+CC         IsoId=P07949-2; Sequence=VSP_040735;
+CC   -!- INDUCTION: Positively regulated by NKX2-1, PHOX2B, SOX10 and PAX3.
+CC       {ECO:0000269|PubMed:19853745}.
+CC   -!- PTM: Autophosphorylated on C-terminal tyrosine residues upon ligand
+CC       stimulation. {ECO:0000269|PubMed:11061555, ECO:0000269|PubMed:14711813,
+CC       ECO:0000269|PubMed:16928683, ECO:0000269|PubMed:20117004,
+CC       ECO:0000269|PubMed:28846099}.
+CC   -!- PTM: Proteolytically cleaved by caspase-3. The soluble RET kinase
+CC       fragment is able to induce cell death. The extracellular cell-membrane
+CC       anchored RET cadherin fragment accelerates cell adhesion in sympathetic
+CC       neurons. {ECO:0000269|PubMed:21357690}.
+CC   -!- POLYMORPHISM: The Cys-982 polymorphism may be associated with an
+CC       increased risk for developing Hirschsprung disease.
+CC   -!- DISEASE: Colorectal cancer (CRC) [MIM:114500]: A complex disease
+CC       characterized by malignant lesions arising from the inner wall of the
+CC       large intestine (the colon) and the rectum. Genetic alterations are
+CC       often associated with progression from premalignant lesion (adenoma) to
+CC       invasive adenocarcinoma. Risk factors for cancer of the colon and
+CC       rectum include colon polyps, long-standing ulcerative colitis, and
+CC       genetic family history. Note=The disease may be caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- DISEASE: Hirschsprung disease 1 (HSCR1) [MIM:142623]: A disorder of
+CC       neural crest development characterized by absence of enteric ganglia
+CC       along a variable length of the intestine. It is the most common cause
+CC       of congenital intestinal obstruction. Early symptoms range from
+CC       complete acute neonatal obstruction, characterized by vomiting,
+CC       abdominal distention and failure to pass stool, to chronic constipation
+CC       in the older child. {ECO:0000269|PubMed:10090908,
+CC       ECO:0000269|PubMed:10484767, ECO:0000269|PubMed:10618407,
+CC       ECO:0000269|PubMed:22174939, ECO:0000269|PubMed:7581377,
+CC       ECO:0000269|PubMed:7633441, ECO:0000269|PubMed:7704557,
+CC       ECO:0000269|PubMed:7881414, ECO:0000269|PubMed:8114938,
+CC       ECO:0000269|PubMed:8114939, ECO:0000269|PubMed:9043870,
+CC       ECO:0000269|PubMed:9090527, ECO:0000269|PubMed:9094028,
+CC       ECO:0000269|PubMed:9259198, ECO:0000269|PubMed:9384613,
+CC       ECO:0000269|PubMed:9497256, ECO:0000269|Ref.63}. Note=The disease is
+CC       caused by variants affecting the gene represented in this entry.
+CC   -!- DISEASE: Medullary thyroid carcinoma (MTC) [MIM:155240]: Rare tumor
+CC       derived from the C cells of the thyroid. Three hereditary forms are
+CC       known, that are transmitted in an autosomal dominant fashion: (a)
+CC       multiple neoplasia type 2A (MEN2A), (b) multiple neoplasia type IIB
+CC       (MEN2B) and (c) familial MTC (FMTC), which occurs in 25-30% of
+CC       MTC cases and where MTC is the only clinical manifestation.
+CC       {ECO:0000269|PubMed:10323403, ECO:0000269|PubMed:10826520,
+CC       ECO:0000269|PubMed:11692159, ECO:0000269|PubMed:7784092,
+CC       ECO:0000269|PubMed:7845675, ECO:0000269|PubMed:7849720,
+CC       ECO:0000269|PubMed:7874109, ECO:0000269|PubMed:7881414,
+CC       ECO:0000269|PubMed:7915165, ECO:0000269|PubMed:8103403,
+CC       ECO:0000269|PubMed:8557249, ECO:0000269|PubMed:8625130,
+CC       ECO:0000269|PubMed:8807338, ECO:0000269|PubMed:9223675,
+CC       ECO:0000269|PubMed:9259198, ECO:0000269|PubMed:9398735,
+CC       ECO:0000269|PubMed:9452077, ECO:0000269|PubMed:9506724,
+CC       ECO:0000269|PubMed:9621513, ECO:0000269|PubMed:9677065}. Note=The
+CC       disease is caused by variants affecting the gene represented in this
+CC       entry.
+CC   -!- DISEASE: Multiple neoplasia 2B (MEN2B) [MIM:162300]: Uncommon inherited
+CC       cancer syndrome characterized by predisposition to MTC and
+CC       phaeochromocytoma which is associated with marfanoid habitus, mucosal
+CC       neuromas, skeletal and ophthalmic abnormalities, and ganglioneuromas of
+CC       the intestine tract. Then the disease progresses rapidly with the
+CC       development of metastatic MTC and a pheochromocytome in 50% of cases.
+CC       {ECO:0000269|PubMed:7906417, ECO:0000269|PubMed:7906866,
+CC       ECO:0000269|PubMed:7911697, ECO:0000269|PubMed:8595427,
+CC       ECO:0000269|PubMed:8807338, ECO:0000269|PubMed:9294615,
+CC       ECO:0000269|PubMed:9360560}. Note=The disease is caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- DISEASE: Pheochromocytoma (PCC) [MIM:171300]: A catecholamine-producing
+CC       tumor of chromaffin tissue of the adrenal medulla or sympathetic
+CC       paraganglia. The cardinal symptom, reflecting the increased secretion
+CC       of epinephrine and norepinephrine, is hypertension, which may be
+CC       persistent or intermittent. {ECO:0000269|PubMed:12000816}. Note=Disease
+CC       susceptibility is associated with variants affecting the gene
+CC       represented in this entry.
+CC   -!- DISEASE: Multiple neoplasia 2A (MEN2A) [MIM:171400]: The most frequent
+CC       form of medullary thyroid cancer (MTC). It is an inherited cancer
+CC       syndrome characterized by MTC, phaeochromocytoma and/or
+CC       hyperparathyroidism. {ECO:0000269|PubMed:10522989,
+CC       ECO:0000269|PubMed:7860065, ECO:0000269|PubMed:7874109,
+CC       ECO:0000269|PubMed:7881414, ECO:0000269|PubMed:7915165,
+CC       ECO:0000269|PubMed:8099202, ECO:0000269|PubMed:8103403,
+CC       ECO:0000269|PubMed:8626834, ECO:0000269|PubMed:8807338,
+CC       ECO:0000269|PubMed:9097963, ECO:0000269|PubMed:9384613,
+CC       ECO:0000269|PubMed:9452064}. Note=The disease is caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- DISEASE: Note=Various chromosomal aberrations involving RET are known.
+CC       Some of them have been found in papillary thyroid carcinomas (PTCs)
+CC       (PubMed:12787916, PubMed:2406025, PubMed:10980597, PubMed:10439047).
+CC       Inversion inv(10)(q11.2;q21) generates the RET/CCDC6 (PTC1) oncogene
+CC       (PubMed:2406025). Inversion inv(10)(q11.2;q11.2) generates the
+CC       RET/NCOA4 (PTC3) oncogene. Translocation t(10;14)(q11;q32) with GOLGA5
+CC       generates the RET/GOLGA5 (PTC5) oncogene (PubMed:2734021).
+CC       Translocation t(8;10)(p21.3;q11.2) with PCM1 generates the PCM1/RET
+CC       fusion (PubMed:10980597). Translocation t(6;10)(p21.3;q11.2) with
+CC       TRIM27/RFP generates the Delta RFP/RET oncogene (PubMed:12787916).
+CC       Translocation t(1;10)(p13;q11) with TRIM33 generates the TRIM33/RET
+CC       (PTC7) oncogene (PubMed:10439047). Translocation t(7;10)(q32;q11) with
+CC       TRIM24/TIF1 generates the TRIM24/RET (PTC6) oncogene (PubMed:10439047).
+CC       Translocation t(6;10)(p21.3;q11.2) with TRIM27/RFP generates the
+CC       TRIM27/RET oncogene (PubMed:3037315). {ECO:0000269|PubMed:10439047,
+CC       ECO:0000269|PubMed:10980597, ECO:0000269|PubMed:12787916,
+CC       ECO:0000269|PubMed:2406025, ECO:0000269|PubMed:2734021,
+CC       ECO:0000269|PubMed:3037315}.
+CC   -!- DISEASE: Note=Mutations in RET have been detected in patients with
+CC       renal agenesis suggesting a possible involvement of this gene in
+CC       disease pathogenesis.
+CC   -!- MISCELLANEOUS: Treatment with withaferin A (WA) leads tumor regression
+CC       in medullary thyroid carcinomas (MTC).
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Tyr protein
+CC       kinase family. {ECO:0000255|PROSITE-ProRule:PRU00159}.
+CC   -!- CAUTION: Original thought to be dephosphorylated by PTPRJ on Tyr-905,
+CC       Tyr-1015 and Tyr-1062. However this paper was retracted due to
+CC       manipulation of immunoblot data. {ECO:0000305|PubMed:16778204,
+CC       ECO:0000305|PubMed:30552125}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA36524.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=AAA36786.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=CAA33787.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=CAC14882.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC   -!- WEB RESOURCE: Name=Atlas of Genetics and Cytogenetics in Oncology and
+CC       Haematology;
+CC       URL="http://atlasgeneticsoncology.org/Genes/RETID76.html";
+CC   -!- WEB RESOURCE: Name=MEN2 RET database;
+CC       URL="http://www.arup.utah.edu/database/MEN2/MEN2_welcome.php";
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AK291807; BAF84496.1; -; mRNA.
+DR   EMBL; AC010864; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC004257; AAH04257.1; -; mRNA.
+DR   EMBL; X15262; CAA33333.1; -; mRNA.
+DR   EMBL; X12949; CAA31408.1; -; mRNA.
+DR   EMBL; M16029; AAA36786.1; ALT_INIT; mRNA.
+DR   EMBL; X15786; CAA33787.1; ALT_INIT; mRNA.
+DR   EMBL; M31213; AAA36524.1; ALT_INIT; mRNA.
+DR   EMBL; AJ297349; CAC14882.1; ALT_INIT; mRNA.
+DR   CCDS; CCDS53525.1; -. [P07949-2]
+DR   CCDS; CCDS7200.1; -. [P07949-1]
+DR   PIR; A27203; TVHURE.
+DR   PIR; A34630; A34630.
+DR   PIR; B34735; B34735.
+DR   PIR; S05582; S05582.
+DR   RefSeq; NP_065681.1; NM_020630.4. [P07949-2]
+DR   RefSeq; NP_066124.1; NM_020975.4. [P07949-1]
+DR   PDB; 2IVS; X-ray; 2.00 A; A/B=705-1013.
+DR   PDB; 2IVT; X-ray; 2.60 A; A=705-1013.
+DR   PDB; 2IVU; X-ray; 2.50 A; A=705-1013.
+DR   PDB; 2IVV; X-ray; 2.25 A; A=705-1013.
+DR   PDB; 2X2K; X-ray; 2.60 A; A=705-1013.
+DR   PDB; 2X2L; X-ray; 2.00 A; A=705-1013.
+DR   PDB; 2X2M; X-ray; 2.50 A; A/B=705-1013.
+DR   PDB; 2X2U; X-ray; 2.00 A; A=29-270.
+DR   PDB; 4CKI; X-ray; 2.12 A; A=705-1013.
+DR   PDB; 4CKJ; X-ray; 1.65 A; A=705-1013.
+DR   PDB; 4UX8; EM; 24.00 A; A/B=29-635.
+DR   PDB; 5AMN; X-ray; 2.57 A; A=705-1012.
+DR   PDB; 5FM2; X-ray; 3.30 A; A=659-1013.
+DR   PDB; 5FM3; X-ray; 2.95 A; A=659-1013.
+DR   PDB; 6FEK; X-ray; 2.30 A; A=705-1013.
+DR   PDB; 6GL7; EM; 6.30 A; E/F=29-635.
+DR   PDB; 6I82; X-ray; 2.05 A; A/B=705-1013.
+DR   PDB; 6I83; X-ray; 1.88 A; A=705-1013.
+DR   PDB; 6NE7; X-ray; 1.99 A; A=705-1013.
+DR   PDB; 6NEC; X-ray; 1.87 A; A/C=705-1013.
+DR   PDB; 6NJA; X-ray; 1.92 A; A=705-1013.
+DR   PDB; 6Q2J; EM; 4.10 A; E/F=29-635.
+DR   PDB; 6Q2N; EM; 4.40 A; E/F=29-635.
+DR   PDB; 6Q2O; EM; 3.65 A; E/F=29-635.
+DR   PDB; 6Q2R; EM; 4.30 A; E/F/Y/Z=29-635.
+DR   PDB; 6Q2S; EM; 3.80 A; E/F=29-635.
+DR   PDB; 6VHG; X-ray; 2.30 A; A=705-1013.
+DR   PDB; 7DU8; X-ray; 2.75 A; A/B=705-1013.
+DR   PDB; 7DU9; X-ray; 2.31 A; A/B=705-1013.
+DR   PDB; 7DUA; X-ray; 1.64 A; A/B=705-1013.
+DR   PDB; 7JU5; X-ray; 1.90 A; A/B=705-1013.
+DR   PDB; 7JU6; X-ray; 2.06 A; A/B=705-1013.
+DR   PDB; 7NZN; X-ray; 2.39 A; A=705-1013.
+DR   PDB; 7RUN; X-ray; 3.51 A; A/B=705-1013.
+DR   PDBsum; 2IVS; -.
+DR   PDBsum; 2IVT; -.
+DR   PDBsum; 2IVU; -.
+DR   PDBsum; 2IVV; -.
+DR   PDBsum; 2X2K; -.
+DR   PDBsum; 2X2L; -.
+DR   PDBsum; 2X2M; -.
+DR   PDBsum; 2X2U; -.
+DR   PDBsum; 4CKI; -.
+DR   PDBsum; 4CKJ; -.
+DR   PDBsum; 4UX8; -.
+DR   PDBsum; 5AMN; -.
+DR   PDBsum; 5FM2; -.
+DR   PDBsum; 5FM3; -.
+DR   PDBsum; 6FEK; -.
+DR   PDBsum; 6GL7; -.
+DR   PDBsum; 6I82; -.
+DR   PDBsum; 6I83; -.
+DR   PDBsum; 6NE7; -.
+DR   PDBsum; 6NEC; -.
+DR   PDBsum; 6NJA; -.
+DR   PDBsum; 6Q2J; -.
+DR   PDBsum; 6Q2N; -.
+DR   PDBsum; 6Q2O; -.
+DR   PDBsum; 6Q2R; -.
+DR   PDBsum; 6Q2S; -.
+DR   PDBsum; 6VHG; -.
+DR   PDBsum; 7DU8; -.
+DR   PDBsum; 7DU9; -.
+DR   PDBsum; 7DUA; -.
+DR   PDBsum; 7JU5; -.
+DR   PDBsum; 7JU6; -.
+DR   PDBsum; 7NZN; -.
+DR   PDBsum; 7RUN; -.
+DR   AlphaFoldDB; P07949; -.
+DR   SMR; P07949; -.
+DR   BioGRID; 111911; 141.
+DR   CORUM; P07949; -.
+DR   DIP; DIP-41449N; -.
+DR   IntAct; P07949; 205.
+DR   MINT; P07949; -.
+DR   STRING; 9606.ENSP00000347942; -.
+DR   BindingDB; P07949; -.
+DR   ChEMBL; CHEMBL2041; -.
+DR   DrugBank; DB01809; 1-Ter-Butyl-3-P-Tolyl-1h-Pyrazolo[3,4-D]Pyrimidin-4-Ylamine.
+DR   DrugBank; DB12742; Amuvatinib.
+DR   DrugBank; DB08875; Cabozantinib.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugBank; DB09078; Lenvatinib.
+DR   DrugBank; DB08901; Ponatinib.
+DR   DrugBank; DB15822; Pralsetinib.
+DR   DrugBank; DB08896; Regorafenib.
+DR   DrugBank; DB15685; Selpercatinib.
+DR   DrugBank; DB00398; Sorafenib.
+DR   DrugBank; DB05294; Vandetanib.
+DR   DrugCentral; P07949; -.
+DR   GuidetoPHARMACOLOGY; 2185; -.
+DR   GlyGen; P07949; 13 sites.
+DR   iPTMnet; P07949; -.
+DR   PhosphoSitePlus; P07949; -.
+DR   BioMuta; RET; -.
+DR   DMDM; 547807; -.
+DR   EPD; P07949; -.
+DR   jPOST; P07949; -.
+DR   MassIVE; P07949; -.
+DR   MaxQB; P07949; -.
+DR   PaxDb; P07949; -.
+DR   PeptideAtlas; P07949; -.
+DR   PRIDE; P07949; -.
+DR   ProteomicsDB; 52047; -. [P07949-1]
+DR   ProteomicsDB; 52048; -. [P07949-2]
+DR   TopDownProteomics; P07949-2; -. [P07949-2]
+DR   Antibodypedia; 1904; 1243 antibodies from 40 providers.
+DR   DNASU; 5979; -.
+DR   Ensembl; ENST00000340058.6; ENSP00000344798.4; ENSG00000165731.21. [P07949-2]
+DR   Ensembl; ENST00000355710.8; ENSP00000347942.3; ENSG00000165731.21. [P07949-1]
+DR   GeneID; 5979; -.
+DR   KEGG; hsa:5979; -.
+DR   MANE-Select; ENST00000355710.8; ENSP00000347942.3; NM_020975.6; NP_066124.1.
+DR   UCSC; uc001jak.2; human. [P07949-1]
+DR   CTD; 5979; -.
+DR   DisGeNET; 5979; -.
+DR   GeneCards; RET; -.
+DR   GeneReviews; RET; -.
+DR   HGNC; HGNC:9967; RET.
+DR   HPA; ENSG00000165731; Group enriched (adrenal gland, brain, parathyroid gland).
+DR   MalaCards; RET; -.
+DR   MIM; 114500; phenotype.
+DR   MIM; 142623; phenotype.
+DR   MIM; 155240; phenotype.
+DR   MIM; 162300; phenotype.
+DR   MIM; 164761; gene.
+DR   MIM; 171300; phenotype.
+DR   MIM; 171400; phenotype.
+DR   neXtProt; NX_P07949; -.
+DR   OpenTargets; ENSG00000165731; -.
+DR   Orphanet; 146; Differentiated thyroid carcinoma.
+DR   Orphanet; 99361; Familial medullary thyroid carcinoma.
+DR   Orphanet; 99803; Haddad syndrome.
+DR   Orphanet; 29072; Hereditary pheochromocytoma-paraganglioma.
+DR   Orphanet; 388; Hirschsprung disease.
+DR   Orphanet; 247698; Multiple endocrine neoplasia type 2A.
+DR   Orphanet; 247709; Multiple endocrine neoplasia type 2B.
+DR   Orphanet; 1848; Renal agenesis, bilateral.
+DR   Orphanet; 93100; Renal agenesis, unilateral.
+DR   Orphanet; 357191; Selection of therapeutic option in non-small cell lung carcinoma.
+DR   Orphanet; 276621; Sporadic pheochromocytoma/secreting paraganglioma.
+DR   PharmGKB; PA34335; -.
+DR   VEuPathDB; HostDB:ENSG00000165731; -.
+DR   eggNOG; KOG0200; Eukaryota.
+DR   GeneTree; ENSGT00940000158499; -.
+DR   HOGENOM; CLU_009530_0_0_1; -.
+DR   InParanoid; P07949; -.
+DR   OMA; FHLGQHL; -.
+DR   OrthoDB; 507784at2759; -.
+DR   PhylomeDB; P07949; -.
+DR   TreeFam; TF317640; -.
+DR   BRENDA; 2.7.10.1; 2681.
+DR   PathwayCommons; P07949; -.
+DR   Reactome; R-HSA-5673001; RAF/MAP kinase cascade.
+DR   Reactome; R-HSA-8853659; RET signaling.
+DR   SignaLink; P07949; -.
+DR   SIGNOR; P07949; -.
+DR   BioGRID-ORCS; 5979; 17 hits in 1108 CRISPR screens.
+DR   ChiTaRS; RET; human.
+DR   EvolutionaryTrace; P07949; -.
+DR   GeneWiki; RET_proto-oncogene; -.
+DR   GenomeRNAi; 5979; -.
+DR   Pharos; P07949; Tclin.
+DR   PRO; PR:P07949; -.
+DR   Proteomes; UP000005640; Chromosome 10.
+DR   RNAct; P07949; protein.
+DR   Bgee; ENSG00000165731; Expressed in substantia nigra pars reticulata and 129 other tissues.
+DR   ExpressionAtlas; P07949; baseline and differential.
+DR   Genevisible; P07949; HS.
+DR   GO; GO:0030424; C:axon; IBA:GO_Central.
+DR   GO; GO:0030425; C:dendrite; IEA:Ensembl.
+DR   GO; GO:0005769; C:early endosome; IEA:Ensembl.
+DR   GO; GO:0010008; C:endosome membrane; IDA:UniProtKB.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0045121; C:membrane raft; IEA:Ensembl.
+DR   GO; GO:0043025; C:neuronal cell body; IEA:Ensembl.
+DR   GO; GO:0005886; C:plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0098797; C:plasma membrane protein complex; IDA:CAFA.
+DR   GO; GO:0043235; C:receptor complex; IDA:MGI.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0005509; F:calcium ion binding; IDA:FlyBase.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; TAS:ProtInc.
+DR   GO; GO:0038023; F:signaling receptor activity; TAS:ProtInc.
+DR   GO; GO:0004714; F:transmembrane receptor protein tyrosine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0006919; P:activation of cysteine-type endopeptidase activity involved in apoptotic process; IMP:UniProtKB.
+DR   GO; GO:0007411; P:axon guidance; TAS:Reactome.
+DR   GO; GO:0071300; P:cellular response to retinoic acid; IMP:BHF-UCL.
+DR   GO; GO:0001838; P:embryonic epithelial tube formation; IEA:Ensembl.
+DR   GO; GO:0048484; P:enteric nervous system development; IEA:Ensembl.
+DR   GO; GO:0035860; P:glial cell-derived neurotrophic factor receptor signaling pathway; IDA:UniProtKB.
+DR   GO; GO:0007156; P:homophilic cell adhesion via plasma membrane adhesion molecules; IEA:InterPro.
+DR   GO; GO:0060384; P:innervation; IEA:Ensembl.
+DR   GO; GO:0097021; P:lymphocyte migration into lymphoid organs; ISS:UniProtKB.
+DR   GO; GO:0000165; P:MAPK cascade; IEA:Ensembl.
+DR   GO; GO:0033619; P:membrane protein proteolysis; IDA:UniProtKB.
+DR   GO; GO:0001755; P:neural crest cell migration; IEA:Ensembl.
+DR   GO; GO:0007158; P:neuron cell-cell adhesion; IMP:UniProtKB.
+DR   GO; GO:0042551; P:neuron maturation; IEA:Ensembl.
+DR   GO; GO:0061146; P:Peyer's patch morphogenesis; ISS:UniProtKB.
+DR   GO; GO:0033630; P:positive regulation of cell adhesion mediated by integrin; IDA:UniProtKB.
+DR   GO; GO:0030335; P:positive regulation of cell migration; IDA:UniProtKB.
+DR   GO; GO:0045793; P:positive regulation of cell size; IEA:Ensembl.
+DR   GO; GO:0045893; P:positive regulation of DNA-templated transcription; ISS:UniProtKB.
+DR   GO; GO:2001241; P:positive regulation of extrinsic apoptotic signaling pathway in absence of ligand; IMP:UniProtKB.
+DR   GO; GO:0010628; P:positive regulation of gene expression; IEA:Ensembl.
+DR   GO; GO:0033674; P:positive regulation of kinase activity; IBA:GO_Central.
+DR   GO; GO:0043410; P:positive regulation of MAPK cascade; IDA:UniProtKB.
+DR   GO; GO:0072300; P:positive regulation of metanephric glomerulus development; ISS:UniProtKB.
+DR   GO; GO:0014042; P:positive regulation of neuron maturation; IEA:Ensembl.
+DR   GO; GO:0010976; P:positive regulation of neuron projection development; IMP:BHF-UCL.
+DR   GO; GO:0033141; P:positive regulation of peptidyl-serine phosphorylation of STAT protein; IEA:Ensembl.
+DR   GO; GO:0051897; P:positive regulation of protein kinase B signaling; IMP:UniProtKB.
+DR   GO; GO:0007497; P:posterior midgut development; TAS:ProtInc.
+DR   GO; GO:0006468; P:protein phosphorylation; TAS:ProtInc.
+DR   GO; GO:0050770; P:regulation of axonogenesis; IEA:Ensembl.
+DR   GO; GO:0030155; P:regulation of cell adhesion; IDA:UniProtKB.
+DR   GO; GO:0048265; P:response to pain; ISS:UniProtKB.
+DR   GO; GO:0009410; P:response to xenobiotic stimulus; IEA:Ensembl.
+DR   GO; GO:0060041; P:retina development in camera-type eye; IEA:Ensembl.
+DR   GO; GO:0007165; P:signal transduction; TAS:ProtInc.
+DR   GO; GO:0007169; P:transmembrane receptor protein tyrosine kinase signaling pathway; IBA:GO_Central.
+DR   GO; GO:0035799; P:ureter maturation; IEA:Ensembl.
+DR   GO; GO:0001657; P:ureteric bud development; IEA:Ensembl.
+DR   InterPro; IPR002126; Cadherin-like_dom.
+DR   InterPro; IPR015919; Cadherin-like_sf.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR041163; Ret_CLD1.
+DR   InterPro; IPR040667; Ret_CLD3.
+DR   InterPro; IPR041317; RET_CLD4.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR008266; Tyr_kinase_AS.
+DR   InterPro; IPR020635; Tyr_kinase_cat_dom.
+DR   InterPro; IPR016249; Tyr_kinase_Ret_rcpt.
+DR   Pfam; PF00028; Cadherin; 1.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   Pfam; PF17756; RET_CLD1; 1.
+DR   Pfam; PF17812; RET_CLD3; 1.
+DR   Pfam; PF17813; RET_CLD4; 1.
+DR   PIRSF; PIRSF000631; TyrPK_receptor_Ret; 1.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00219; TyrKc; 1.
+DR   SUPFAM; SSF49313; SSF49313; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS50268; CADHERIN_2; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00109; PROTEIN_KINASE_TYR; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Cell adhesion;
+KW   Cell membrane; Chromosomal rearrangement; Disease variant; Disulfide bond;
+KW   Endosome; Glycoprotein; Hirschsprung disease; Kinase; Membrane;
+KW   Nucleotide-binding; Phosphoprotein; Proto-oncogene; Reference proteome;
+KW   Signal; Transferase; Transmembrane; Transmembrane helix;
+KW   Tyrosine-protein kinase.
+FT   SIGNAL          1..28
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           29..1114
+FT                   /note="Proto-oncogene tyrosine-protein kinase receptor Ret"
+FT                   /id="PRO_0000024450"
+FT   CHAIN           29..707
+FT                   /note="Extracellular cell-membrane anchored RET cadherin
+FT                   120 kDa fragment"
+FT                   /id="PRO_0000415292"
+FT   CHAIN           708..1017
+FT                   /note="Soluble RET kinase fragment"
+FT                   /id="PRO_0000415293"
+FT   TOPO_DOM        29..635
+FT                   /note="Extracellular"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        636..657
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        658..1114
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          168..272
+FT                   /note="Cadherin"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00043"
+FT   DOMAIN          724..1016
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   ACT_SITE        874
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10028"
+FT   BINDING         730..738
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         758
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         805..807
+FT                   /ligand="semaxanib"
+FT                   /ligand_id="ChEBI:CHEBI:91083"
+FT                   /ligand_note="inhibitor"
+FT                   /evidence="ECO:0000269|PubMed:20117004,
+FT                   ECO:0007744|PDB:2X2M"
+FT   SITE            587..588
+FT                   /note="Breakpoint for translocation to form the TRIM27/RET
+FT                   oncogene"
+FT   SITE            707..708
+FT                   /note="Cleavage; by caspase-3"
+FT   SITE            712..713
+FT                   /note="Breakpoint for translocation to form PCM1-RET; RET-
+FT                   CCDC6; RET-GOLGA5; RET-TRIM24 and RET-TRIM33 oncogenes"
+FT   SITE            1017..1018
+FT                   /note="Cleavage; by caspase-3"
+FT   MOD_RES         696
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:19369195"
+FT   MOD_RES         806
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:14711813"
+FT   MOD_RES         809
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:14711813"
+FT   MOD_RES         900
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:14711813,
+FT                   ECO:0000269|PubMed:16928683"
+FT   MOD_RES         905
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:14711813,
+FT                   ECO:0000269|PubMed:16928683, ECO:0000269|PubMed:20117004,
+FT                   ECO:0000269|PubMed:28846099"
+FT   MOD_RES         981
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:14711813"
+FT   MOD_RES         1015
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:11061555"
+FT   MOD_RES         1062
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:11061555,
+FT                   ECO:0000269|PubMed:14711813, ECO:0000269|PubMed:28846099"
+FT   MOD_RES         1090
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:14711813"
+FT   MOD_RES         1096
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:14711813"
+FT   CARBOHYD        98
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        151
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:20473317"
+FT   CARBOHYD        199
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        336
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        343
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        361
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        367
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        377
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        394
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        448
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        468
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        554
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   DISULFID        137..142
+FT                   /evidence="ECO:0000269|PubMed:20473317"
+FT   VAR_SEQ         1064..1114
+FT                   /note="MSDPNWPGESPVPLTRADGTNTGFPRYPNDSVYANWMLSPSAAKLMDTFDS
+FT                   -> RISHAFTRF (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:14702039,
+FT                   ECO:0000303|PubMed:15489334, ECO:0000303|PubMed:3037315"
+FT                   /id="VSP_040735"
+FT   VARIANT         20
+FT                   /note="P -> L (in HSCR1; sporadic form)"
+FT                   /evidence="ECO:0000269|PubMed:7633441"
+FT                   /id="VAR_009459"
+FT   VARIANT         32
+FT                   /note="S -> L (in HSCR1; familial form; dbSNP:rs76764689)"
+FT                   /evidence="ECO:0000269|PubMed:10618407,
+FT                   ECO:0000269|PubMed:8114939"
+FT                   /id="VAR_006295"
+FT   VARIANT         40
+FT                   /note="L -> P (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:7704557,
+FT                   ECO:0000269|PubMed:9043870"
+FT                   /id="VAR_009492"
+FT   VARIANT         64
+FT                   /note="P -> L (in HSCR1; familial form; dbSNP:rs77596424)"
+FT                   /evidence="ECO:0000269|PubMed:8114939"
+FT                   /id="VAR_006296"
+FT   VARIANT         67
+FT                   /note="R -> H (in dbSNP:rs192489011)"
+FT                   /evidence="ECO:0000269|PubMed:14566559"
+FT                   /id="VAR_018153"
+FT   VARIANT         77
+FT                   /note="R -> C (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:10618407"
+FT                   /id="VAR_009460"
+FT   VARIANT         93
+FT                   /note="G -> S (in HSCR1; unknown pathological significance;
+FT                   dbSNP:rs1477699803)"
+FT                   /evidence="ECO:0000269|PubMed:7633441"
+FT                   /id="VAR_006297"
+FT   VARIANT         114
+FT                   /note="R -> C (in HSCR1; unknown pathological significance;
+FT                   dbSNP:rs747483905)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067101"
+FT   VARIANT         114
+FT                   /note="R -> H (in dbSNP:rs76397662)"
+FT                   /evidence="ECO:0000269|PubMed:12086152,
+FT                   ECO:0000269|PubMed:14566559, ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_018154"
+FT   VARIANT         142
+FT                   /note="C -> S (in HSCR1; sporadic form)"
+FT                   /id="VAR_006298"
+FT   VARIANT         145
+FT                   /note="V -> G (in HSCR1; also in a colorectal cancer
+FT                   sample; somatic mutation; dbSNP:rs1588863999)"
+FT                   /evidence="ECO:0000269|PubMed:16959974,
+FT                   ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_035711"
+FT   VARIANT         155
+FT                   /note="P -> L (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067102"
+FT   VARIANT         157
+FT                   /note="C -> Y (in HSCR1; unknown pathological
+FT                   significance)"
+FT                   /evidence="ECO:0000269|Ref.63"
+FT                   /id="VAR_009461"
+FT   VARIANT         163
+FT                   /note="R -> Q (in a colorectal adenocarcinoma sample;
+FT                   somatic mutation; dbSNP:rs149403911)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041762"
+FT   VARIANT         174
+FT                   /note="F -> S (in HSCR1; sporadic form)"
+FT                   /evidence="ECO:0000269|PubMed:9094028"
+FT                   /id="VAR_009462"
+FT   VARIANT         175
+FT                   /note="R -> P (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067103"
+FT   VARIANT         180
+FT                   /note="R -> P (in HSCR1; sporadic form)"
+FT                   /evidence="ECO:0000269|PubMed:9090527"
+FT                   /id="VAR_009463"
+FT   VARIANT         197
+FT                   /note="C -> Y (in HSCR1; sporadic form)"
+FT                   /evidence="ECO:0000269|PubMed:9094028"
+FT                   /id="VAR_009464"
+FT   VARIANT         198
+FT                   /note="P -> T (in a patient with renal agenesis; unknown
+FT                   pathological significance; prevents phosphorylation in
+FT                   response to GDNF; dbSNP:rs76736111)"
+FT                   /evidence="ECO:0000269|PubMed:18252215"
+FT                   /id="VAR_044392"
+FT   VARIANT         231
+FT                   /note="R -> H (in HSCR1; familial form; dbSNP:rs79661516)"
+FT                   /id="VAR_006299"
+FT   VARIANT         251
+FT                   /note="E -> K (in HSCR1; familial form; dbSNP:rs562449603)"
+FT                   /id="VAR_006300"
+FT   VARIANT         278
+FT                   /note="T -> A (in HSCR1; dbSNP:rs541929171)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067104"
+FT   VARIANT         278
+FT                   /note="T -> N (found in two patients with Hirschsprung
+FT                   disease; dbSNP:rs35118262)"
+FT                   /evidence="ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_041763"
+FT   VARIANT         278
+FT                   /note="T -> P (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067105"
+FT   VARIANT         287
+FT                   /note="R -> Q (in HSCR1; sporadic form;
+FT                   dbSNP:rs1564491460)"
+FT                   /id="VAR_006301"
+FT   VARIANT         292
+FT                   /note="V -> M (found in patients with Hirschsprung disease;
+FT                   unknown pathological significance; dbSNP:rs34682185)"
+FT                   /evidence="ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_041764"
+FT   VARIANT         300
+FT                   /note="D -> N (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067106"
+FT   VARIANT         313
+FT                   /note="R -> Q (in HSCR1; dbSNP:rs77702891)"
+FT                   /evidence="ECO:0000269|PubMed:22174939,
+FT                   ECO:0000269|PubMed:9090527"
+FT                   /id="VAR_009465"
+FT   VARIANT         316
+FT                   /note="S -> I (in HSCR1; dbSNP:rs1060499894)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067107"
+FT   VARIANT         330
+FT                   /note="R -> Q (in HSCR1; dbSNP:rs80236571)"
+FT                   /evidence="ECO:0000269|PubMed:7633441,
+FT                   ECO:0000269|PubMed:8114939"
+FT                   /id="VAR_006302"
+FT   VARIANT         339
+FT                   /note="S -> L (in HSCR1; dbSNP:rs774829203)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067108"
+FT   VARIANT         353
+FT                   /note="D -> Y (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067109"
+FT   VARIANT         359
+FT                   /note="N -> K (in HSCR1; unknown pathological
+FT                   significance)"
+FT                   /evidence="ECO:0000269|Ref.63"
+FT                   /id="VAR_009466"
+FT   VARIANT         360
+FT                   /note="R -> Q (in HSCR1; dbSNP:rs762472027)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067110"
+FT   VARIANT         360
+FT                   /note="R -> W (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:10618407,
+FT                   ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_009467"
+FT   VARIANT         376
+FT                   /note="V -> A (in a patient with renal agenesis; unknown
+FT                   pathological significance; constitutively phosphorylated;
+FT                   expressed only the immature intracellular form)"
+FT                   /evidence="ECO:0000269|PubMed:18252215"
+FT                   /id="VAR_044393"
+FT   VARIANT         393
+FT                   /note="F -> L (in HSCR1; familial form; dbSNP:rs78098482)"
+FT                   /evidence="ECO:0000269|PubMed:8114939"
+FT                   /id="VAR_006303"
+FT   VARIANT         394
+FT                   /note="N -> H (in a patient with renal agenesis; unknown
+FT                   pathological significance; prevents phosphorylation in
+FT                   response to GDNF)"
+FT                   /evidence="ECO:0000269|PubMed:18252215"
+FT                   /id="VAR_044394"
+FT   VARIANT         394
+FT                   /note="N -> K (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:10618407"
+FT                   /id="VAR_009468"
+FT   VARIANT         397
+FT                   /note="V -> M (in HSCR1; dbSNP:rs183729115)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067111"
+FT   VARIANT         399
+FT                   /note="P -> L (in HSCR1; sporadic form;
+FT                   dbSNP:rs1554818362)"
+FT                   /evidence="ECO:0000269|PubMed:7704557"
+FT                   /id="VAR_006304"
+FT   VARIANT         412
+FT                   /note="V -> M (in HSCR1; dbSNP:rs746970700)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067112"
+FT   VARIANT         423
+FT                   /note="G -> R (in HSCR1; dbSNP:rs767601598)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067113"
+FT   VARIANT         432
+FT                   /note="A -> E (found in a patient with congenital central
+FT                   hypoventilation syndrome; unknown pathological
+FT                   significance; dbSNP:rs552057730)"
+FT                   /evidence="ECO:0000269|PubMed:14566559"
+FT                   /id="VAR_018155"
+FT   VARIANT         475
+FT                   /note="R -> Q (in HSCR1; sporadic form; dbSNP:rs138624658)"
+FT                   /id="VAR_006305"
+FT   VARIANT         480
+FT                   /note="E -> K (in HSCR1; dbSNP:rs537874538)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067114"
+FT   VARIANT         489
+FT                   /note="D -> N (in dbSNP:rs9282834)"
+FT                   /evidence="ECO:0000269|PubMed:14566559,
+FT                   ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_018156"
+FT   VARIANT         531
+FT                   /note="C -> CEEC (in MTC; familial form)"
+FT                   /evidence="ECO:0000269|PubMed:10323403"
+FT                   /id="VAR_009469"
+FT   VARIANT         549..550
+FT                   /note="Missing (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067115"
+FT   VARIANT         593
+FT                   /note="G -> E (in a colorectal cancer sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_035712"
+FT   VARIANT         595
+FT                   /note="E -> Q (in HSCR1; dbSNP:rs1483605155)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067116"
+FT   VARIANT         600
+FT                   /note="R -> Q (in dbSNP:rs377767393)"
+FT                   /evidence="ECO:0000269|PubMed:10612852"
+FT                   /id="VAR_008966"
+FT   VARIANT         609
+FT                   /note="C -> G (in MEN2A; dbSNP:rs77558292)"
+FT                   /id="VAR_009470"
+FT   VARIANT         609
+FT                   /note="C -> R (in MEN2A; dbSNP:rs77558292)"
+FT                   /id="VAR_009471"
+FT   VARIANT         609
+FT                   /note="C -> W (in HSCR1; familial form; dbSNP:rs377767396)"
+FT                   /evidence="ECO:0000269|PubMed:7881414"
+FT                   /id="VAR_006307"
+FT   VARIANT         609
+FT                   /note="C -> Y (in MTC, MEN2A and HSCR1; familial and
+FT                   sporadic forms; dbSNP:rs77939446)"
+FT                   /evidence="ECO:0000269|PubMed:7633441,
+FT                   ECO:0000269|PubMed:7849720, ECO:0000269|PubMed:9384613,
+FT                   ECO:0000269|Ref.63"
+FT                   /id="VAR_006306"
+FT   VARIANT         611
+FT                   /note="C -> G (in MTC; familial form; dbSNP:rs377767391)"
+FT                   /evidence="ECO:0000269|PubMed:9677065"
+FT                   /id="VAR_009472"
+FT   VARIANT         611
+FT                   /note="C -> R (in MEN2A; dbSNP:rs377767391)"
+FT                   /id="VAR_009473"
+FT   VARIANT         611
+FT                   /note="C -> S (in MEN2A; dbSNP:rs377767391)"
+FT                   /id="VAR_009474"
+FT   VARIANT         611
+FT                   /note="C -> W (in MEN2A and MTC; familial form;
+FT                   dbSNP:rs80069458)"
+FT                   /evidence="ECO:0000269|PubMed:8103403"
+FT                   /id="VAR_006308"
+FT   VARIANT         611
+FT                   /note="C -> Y (in MEN2A; dbSNP:rs377767397)"
+FT                   /id="VAR_006309"
+FT   VARIANT         618
+FT                   /note="C -> F (in MEN2A and MTC; familial form;
+FT                   dbSNP:rs79781594)"
+FT                   /id="VAR_006312"
+FT   VARIANT         618
+FT                   /note="C -> G (in MEN2A; dbSNP:rs76262710)"
+FT                   /evidence="ECO:0000269|PubMed:8099202"
+FT                   /id="VAR_006310"
+FT   VARIANT         618
+FT                   /note="C -> R (in MEN2A, MTC and HSCR1; dbSNP:rs76262710)"
+FT                   /evidence="ECO:0000269|PubMed:7849720,
+FT                   ECO:0000269|PubMed:7881414, ECO:0000269|PubMed:7915165,
+FT                   ECO:0000269|PubMed:9259198"
+FT                   /id="VAR_006311"
+FT   VARIANT         618
+FT                   /note="C -> S (in MEN2A, HSCR1 and MTC; familial and
+FT                   sporadic forms; dbSNP:rs79781594)"
+FT                   /evidence="ECO:0000269|PubMed:7849720,
+FT                   ECO:0000269|PubMed:7860065, ECO:0000269|PubMed:7915165,
+FT                   ECO:0000269|PubMed:8103403, ECO:0000269|PubMed:9384613"
+FT                   /id="VAR_006313"
+FT   VARIANT         618
+FT                   /note="C -> Y (in MEN2A and MTC; familial form;
+FT                   dbSNP:rs79781594)"
+FT                   /id="VAR_006314"
+FT   VARIANT         620
+FT                   /note="C -> F (in MEN2A and MTC; familial form;
+FT                   dbSNP:rs77503355)"
+FT                   /evidence="ECO:0000269|PubMed:7915165"
+FT                   /id="VAR_006318"
+FT   VARIANT         620
+FT                   /note="C -> G (in MEN2A and MTC; familial and sporadic
+FT                   forms; dbSNP:rs77316810)"
+FT                   /id="VAR_006315"
+FT   VARIANT         620
+FT                   /note="C -> R (in MEN2A, MTC and HSCR1; familial and
+FT                   sporadic forms; dbSNP:rs77316810)"
+FT                   /evidence="ECO:0000269|PubMed:7633441,
+FT                   ECO:0000269|PubMed:7881414, ECO:0000269|PubMed:7915165,
+FT                   ECO:0000269|PubMed:8103403, ECO:0000269|PubMed:9090527,
+FT                   ECO:0000269|PubMed:9384613, ECO:0000269|Ref.63"
+FT                   /id="VAR_006316"
+FT   VARIANT         620
+FT                   /note="C -> S (in MEN2A and MTC; familial form;
+FT                   dbSNP:rs77503355)"
+FT                   /evidence="ECO:0000269|PubMed:7849720,
+FT                   ECO:0000269|PubMed:7860065"
+FT                   /id="VAR_006317"
+FT   VARIANT         620
+FT                   /note="C -> W (in MEN2A and HSCR1; dbSNP:rs79890926)"
+FT                   /evidence="ECO:0000269|PubMed:9384613"
+FT                   /id="VAR_009475"
+FT   VARIANT         620
+FT                   /note="C -> Y (in MEN2A; dbSNP:rs77503355)"
+FT                   /evidence="ECO:0000269|PubMed:8103403"
+FT                   /id="VAR_006319"
+FT   VARIANT         626
+FT                   /note="Q -> K (in HSCR1; sporadic form;
+FT                   dbSNP:rs1255575160)"
+FT                   /evidence="ECO:0000269|PubMed:10090908"
+FT                   /id="VAR_009476"
+FT   VARIANT         630
+FT                   /note="C -> F (in MEN2A and MTC; familial form;
+FT                   dbSNP:rs377767405)"
+FT                   /id="VAR_006320"
+FT   VARIANT         630
+FT                   /note="C -> S (in MTC; sporadic form; dbSNP:rs377767405)"
+FT                   /id="VAR_009477"
+FT   VARIANT         630
+FT                   /note="C -> Y (in MTC; familial and sporadic forms;
+FT                   dbSNP:rs377767405)"
+FT                   /id="VAR_009478"
+FT   VARIANT         631
+FT                   /note="D -> G (in thyroid carcinoma; somatic mutation;
+FT                   dbSNP:rs121913308)"
+FT                   /id="VAR_006321"
+FT   VARIANT         632..634
+FT                   /note="ELC -> DVR (in MEN2A; dbSNP:rs377767408)"
+FT                   /id="VAR_006322"
+FT   VARIANT         634..635
+FT                   /note="CR -> WG (in MEN2A)"
+FT                   /id="VAR_006329"
+FT   VARIANT         634
+FT                   /note="C -> CHELC (in MEN2A)"
+FT                   /evidence="ECO:0000269|PubMed:9097963"
+FT                   /id="VAR_009479"
+FT   VARIANT         634
+FT                   /note="C -> F (in MEN2A and pheochromocytoma;
+FT                   dbSNP:rs75996173)"
+FT                   /evidence="ECO:0000269|PubMed:12000816,
+FT                   ECO:0000269|PubMed:7915165, ECO:0000269|PubMed:8099202"
+FT                   /id="VAR_006324"
+FT   VARIANT         634
+FT                   /note="C -> G (in MEN2A and pheochromocytoma;
+FT                   dbSNP:rs75076352)"
+FT                   /evidence="ECO:0000269|PubMed:12000816,
+FT                   ECO:0000269|PubMed:7915165, ECO:0000269|PubMed:8099202"
+FT                   /id="VAR_006323"
+FT   VARIANT         634
+FT                   /note="C -> R (in MEN2A, pheochromocytoma and MTC; familial
+FT                   form; also found as somatic mutation in a sporadic thyroid
+FT                   carcinoma; dbSNP:rs75076352)"
+FT                   /evidence="ECO:0000269|PubMed:12000816,
+FT                   ECO:0000269|PubMed:7860065, ECO:0000269|PubMed:8103403"
+FT                   /id="VAR_006326"
+FT   VARIANT         634
+FT                   /note="C -> S (in MEN2A, pheochromocytoma and MTC; familial
+FT                   form; dbSNP:rs75076352)"
+FT                   /evidence="ECO:0000269|PubMed:12000816,
+FT                   ECO:0000269|PubMed:8099202"
+FT                   /id="VAR_006327"
+FT   VARIANT         634
+FT                   /note="C -> W (in MEN2A, pheochromocytoma and MTC; familial
+FT                   form; dbSNP:rs77709286)"
+FT                   /evidence="ECO:0000269|PubMed:12000816"
+FT                   /id="VAR_006328"
+FT   VARIANT         634
+FT                   /note="C -> Y (in MEN2A, pheochromocytoma and MTC; familial
+FT                   form; dbSNP:rs75996173)"
+FT                   /evidence="ECO:0000269|PubMed:12000816,
+FT                   ECO:0000269|PubMed:7860065, ECO:0000269|PubMed:7915165,
+FT                   ECO:0000269|PubMed:8099202"
+FT                   /id="VAR_006325"
+FT   VARIANT         636
+FT                   /note="T -> TCRT (in MEN2A)"
+FT                   /evidence="ECO:0000269|PubMed:9452064"
+FT                   /id="VAR_006330"
+FT   VARIANT         639
+FT                   /note="A -> G (in MTC; sporadic form)"
+FT                   /evidence="ECO:0000269|PubMed:11692159"
+FT                   /id="VAR_012743"
+FT   VARIANT         640
+FT                   /note="A -> G (in MEN2A; dbSNP:rs78935588)"
+FT                   /evidence="ECO:0000269|PubMed:10522989"
+FT                   /id="VAR_009480"
+FT   VARIANT         641
+FT                   /note="A -> G (in MTC; sporadic form)"
+FT                   /evidence="ECO:0000269|PubMed:11692159"
+FT                   /id="VAR_012744"
+FT   VARIANT         679
+FT                   /note="P -> L (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067117"
+FT   VARIANT         690
+FT                   /note="S -> P (in HSCR1; sporadic form)"
+FT                   /id="VAR_006331"
+FT   VARIANT         691
+FT                   /note="G -> S (in dbSNP:rs1799939)"
+FT                   /evidence="ECO:0000269|PubMed:14566559,
+FT                   ECO:0000269|PubMed:17344846, ECO:0000269|PubMed:9223675,
+FT                   ECO:0000269|PubMed:9497256"
+FT                   /id="VAR_006332"
+FT   VARIANT         694
+FT                   /note="R -> Q (in HSCR1; dbSNP:rs141185224)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067118"
+FT   VARIANT         749
+FT                   /note="R -> T (in dbSNP:rs34288963)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041765"
+FT   VARIANT         762
+FT                   /note="E -> Q (in HSCR1; sporadic form)"
+FT                   /evidence="ECO:0000269|PubMed:7704557"
+FT                   /id="VAR_009481"
+FT   VARIANT         765
+FT                   /note="S -> P (in HSCR1; dbSNP:rs75075748)"
+FT                   /evidence="ECO:0000269|PubMed:7704557,
+FT                   ECO:0000269|PubMed:8114938, ECO:0000269|PubMed:9043870"
+FT                   /id="VAR_009493"
+FT   VARIANT         767
+FT                   /note="S -> R (in HSCR1; sporadic form)"
+FT                   /id="VAR_006334"
+FT   VARIANT         768
+FT                   /note="E -> D (in MTC; familial and sporadic forms;
+FT                   dbSNP:rs78014899)"
+FT                   /evidence="ECO:0000269|PubMed:7784092,
+FT                   ECO:0000269|PubMed:7845675, ECO:0000269|PubMed:8807338"
+FT                   /id="VAR_006335"
+FT   VARIANT         778
+FT                   /note="V -> I (in a patient with renal agenesis; unknown
+FT                   pathological significance; constitutively phosphorylated;
+FT                   dbSNP:rs75686697)"
+FT                   /evidence="ECO:0000269|PubMed:18252215"
+FT                   /id="VAR_044395"
+FT   VARIANT         783
+FT                   /note="N -> S (in HSCR1; dbSNP:rs587778656)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067119"
+FT   VARIANT         790
+FT                   /note="L -> F (in MEN2A and MTC; familial form;
+FT                   dbSNP:rs75030001)"
+FT                   /evidence="ECO:0000269|PubMed:9506724"
+FT                   /id="VAR_009482"
+FT   VARIANT         791
+FT                   /note="Y -> F (in HSCR1, pheochromocytoma, MTC and MEN2A;
+FT                   familial form; dbSNP:rs77724903)"
+FT                   /evidence="ECO:0000269|PubMed:12000816,
+FT                   ECO:0000269|PubMed:9090527, ECO:0000269|PubMed:9506724"
+FT                   /id="VAR_009483"
+FT   VARIANT         804
+FT                   /note="V -> L (in MTC; familial form; dbSNP:rs79658334)"
+FT                   /evidence="ECO:0000269|PubMed:7784092"
+FT                   /id="VAR_006336"
+FT   VARIANT         804
+FT                   /note="V -> M (in MTC; familial form; dbSNP:rs79658334)"
+FT                   /evidence="ECO:0000269|PubMed:10826520,
+FT                   ECO:0000269|PubMed:9452077"
+FT                   /id="VAR_006337"
+FT   VARIANT         813
+FT                   /note="R -> Q (in HSCR1; sporadic form;
+FT                   dbSNP:rs1318733775)"
+FT                   /evidence="ECO:0000269|PubMed:10090908"
+FT                   /id="VAR_009484"
+FT   VARIANT         826
+FT                   /note="Y -> S (in dbSNP:rs34617196)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041766"
+FT   VARIANT         830
+FT                   /note="G -> R (in HSCR1; dbSNP:rs200127630)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067120"
+FT   VARIANT         844
+FT                   /note="R -> L (in MTC; familial form; dbSNP:rs55947360)"
+FT                   /evidence="ECO:0000269|PubMed:10826520,
+FT                   ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_011582"
+FT   VARIANT         873
+FT                   /note="R -> Q (in HSCR1; sporadic form;
+FT                   dbSNP:rs1451004715)"
+FT                   /id="VAR_006338"
+FT   VARIANT         883
+FT                   /note="A -> F (in MEN2B; somatic mutation in sporadic
+FT                   medullary thyroid carcinoma; requires 2 nucleotide
+FT                   substitutions; dbSNP:rs377767429)"
+FT                   /evidence="ECO:0000269|PubMed:9294615,
+FT                   ECO:0000269|PubMed:9360560"
+FT                   /id="VAR_009485"
+FT   VARIANT         891
+FT                   /note="S -> A (in MTC; familial form; dbSNP:rs75234356)"
+FT                   /evidence="ECO:0000269|PubMed:9398735"
+FT                   /id="VAR_009486"
+FT   VARIANT         893
+FT                   /note="F -> L (in HSCR1; sporadic form)"
+FT                   /id="VAR_006339"
+FT   VARIANT         894
+FT                   /note="G -> S (in a patient with renal agenesis; unknown
+FT                   pathological significance; constitutively phosphorylated;
+FT                   expressed only the immature intracellular form)"
+FT                   /evidence="ECO:0000269|PubMed:18252215"
+FT                   /id="VAR_044396"
+FT   VARIANT         897
+FT                   /note="R -> Q (in HSCR1; sporadic form; dbSNP:rs76087194)"
+FT                   /evidence="ECO:0000269|PubMed:7704557,
+FT                   ECO:0000269|PubMed:8114938"
+FT                   /id="VAR_006340"
+FT   VARIANT         907
+FT                   /note="K -> E (in HSCR1; sporadic form; dbSNP:rs377767430)"
+FT                   /id="VAR_006341"
+FT   VARIANT         907
+FT                   /note="K -> T (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067121"
+FT   VARIANT         918
+FT                   /note="M -> T (in MEN2B and MTC; sporadic form; somatic
+FT                   mutation; also found in a patient with renal agenesis;
+FT                   dbSNP:rs74799832)"
+FT                   /evidence="ECO:0000269|PubMed:18252215,
+FT                   ECO:0000269|PubMed:7906417, ECO:0000269|PubMed:7906866,
+FT                   ECO:0000269|PubMed:7911697, ECO:0000269|PubMed:8595427,
+FT                   ECO:0000269|PubMed:8807338"
+FT                   /id="VAR_006342"
+FT   VARIANT         921
+FT                   /note="E -> K (in HSCR1; sporadic form)"
+FT                   /id="VAR_006343"
+FT   VARIANT         922
+FT                   /note="S -> F (in MTC; sporadic form; dbSNP:rs377767432)"
+FT                   /evidence="ECO:0000269|PubMed:11692159"
+FT                   /id="VAR_012745"
+FT   VARIANT         922
+FT                   /note="S -> Y (in dbSNP:rs377767432)"
+FT                   /evidence="ECO:0000269|PubMed:8595427"
+FT                   /id="VAR_009487"
+FT   VARIANT         946
+FT                   /note="T -> M (in MEN2B and MTC; familial form)"
+FT                   /id="VAR_006345"
+FT   VARIANT         961
+FT                   /note="F -> L (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067122"
+FT   VARIANT         972
+FT                   /note="R -> G (in HSCR1; familial form; dbSNP:rs76534745)"
+FT                   /evidence="ECO:0000269|PubMed:7704557,
+FT                   ECO:0000269|PubMed:8114938"
+FT                   /id="VAR_006346"
+FT   VARIANT         973
+FT                   /note="P -> L (in HSCR1; familial form)"
+FT                   /evidence="ECO:0000269|PubMed:7704557"
+FT                   /id="VAR_006347"
+FT   VARIANT         980
+FT                   /note="M -> T (in HSCR1; sporadic form)"
+FT                   /id="VAR_006348"
+FT   VARIANT         982
+FT                   /note="R -> C (in dbSNP:rs17158558)"
+FT                   /evidence="ECO:0000269|PubMed:14566559,
+FT                   ECO:0000269|PubMed:15489334, ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:7633441, ECO:0000269|PubMed:9760196"
+FT                   /id="VAR_006349"
+FT   VARIANT         1039
+FT                   /note="P -> L (in HSCR1; dbSNP:rs79853121)"
+FT                   /evidence="ECO:0000269|PubMed:9497256"
+FT                   /id="VAR_018157"
+FT   VARIANT         1039
+FT                   /note="P -> Q (in dbSNP:rs79853121)"
+FT                   /id="VAR_009488"
+FT   VARIANT         1049
+FT                   /note="P -> L (in a patient with renal agenesis; unknown
+FT                   pathological significance; prevents phosphorylation in
+FT                   response to GDNF; dbSNP:rs1490712863)"
+FT                   /evidence="ECO:0000269|PubMed:18252215"
+FT                   /id="VAR_044397"
+FT   VARIANT         1052
+FT                   /note="L -> V (in HSCR1; dbSNP:rs1564501947)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067123"
+FT   VARIANT         1059
+FT                   /note="Missing (in HSCR1)"
+FT                   /evidence="ECO:0000269|PubMed:10484767, ECO:0000269|Ref.63"
+FT                   /id="VAR_009489"
+FT   VARIANT         1061
+FT                   /note="L -> P (in HSCR1; dbSNP:rs536486113)"
+FT                   /evidence="ECO:0000269|PubMed:10484767, ECO:0000269|Ref.63"
+FT                   /id="VAR_009490"
+FT   VARIANT         1062
+FT                   /note="Y -> C (in HSCR1; dbSNP:rs587778659)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_067124"
+FT   VARIANT         1064
+FT                   /note="M -> T (in HSCR1; familial form; dbSNP:rs149513065)"
+FT                   /evidence="ECO:0000269|PubMed:22174939"
+FT                   /id="VAR_009491"
+FT   VARIANT         1067
+FT                   /note="P -> S (in a patient with renal agenesis; unknown
+FT                   pathological significance; prevents phosphorylation in
+FT                   response to GDNF; dbSNP:rs775583354)"
+FT                   /evidence="ECO:0000269|PubMed:18252215"
+FT                   /id="VAR_044398"
+FT   VARIANT         1112
+FT                   /note="F -> Y (in a bladder transitional cell carcinoma
+FT                   sample; somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041767"
+FT   MUTAGEN         707
+FT                   /note="D->N: Impaired cleavage by caspase-3 and loss of
+FT                   induced cell death."
+FT                   /evidence="ECO:0000269|PubMed:21357690"
+FT   MUTAGEN         708..1114
+FT                   /note="Missing: Loss of induced cell death, but increased
+FT                   cell aggregation."
+FT                   /evidence="ECO:0000269|PubMed:21357690"
+FT   MUTAGEN         758
+FT                   /note="K->R: Loss of kinase activity. No effect on
+FT                   interaction with and dissociation from CBLC and CD2AP."
+FT                   /evidence="ECO:0000269|PubMed:18753381,
+FT                   ECO:0000269|PubMed:21357690"
+FT   MUTAGEN         1062
+FT                   /note="Y->F: Abolishes GFRAL-mediated MAPK1/MAPK2
+FT                   phosphorylation."
+FT                   /evidence="ECO:0000269|PubMed:28953886"
+FT   CONFLICT        647
+FT                   /note="I -> V (in Ref. 6; AAA36786)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        664
+FT                   /note="A -> S (in Ref. 1; BAF84496)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        750
+FT                   /note="A -> G (in Ref. 9; AAA36524)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        904
+FT                   /note="S -> P (in Ref. 6; AAA36786)"
+FT                   /evidence="ECO:0000305"
+FT   STRAND          30..32
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          34..41
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          49..52
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          70..73
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   HELIX           75..77
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          79..82
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          85..88
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   TURN            90..92
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          94..99
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   HELIX           103..111
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          120..126
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   TURN            139..141
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          142..152
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   HELIX           157..159
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   HELIX           162..166
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          174..178
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          184..187
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   HELIX           191..196
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          202..208
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          212..215
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          222..227
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   TURN            231..233
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          235..245
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   STRAND          252..263
+FT                   /evidence="ECO:0007829|PDB:2X2U"
+FT   HELIX           705..710
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   TURN            715..717
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           721..723
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   STRAND          724..733
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   STRAND          736..744
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           746..748
+FT                   /evidence="ECO:0007829|PDB:6NEC"
+FT   STRAND          751..759
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           766..781
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   STRAND          790..794
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   STRAND          796..798
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   STRAND          801..805
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           812..819
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   STRAND          822..826
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   STRAND          844..846
+FT                   /evidence="ECO:0007829|PDB:6NJA"
+FT   HELIX           848..867
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           877..879
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   STRAND          880..883
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           884..886
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   STRAND          887..890
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           893..895
+FT                   /evidence="ECO:0007829|PDB:7JU5"
+FT   TURN            900..902
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           915..917
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           920..925
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           930..945
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           957..959
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           960..965
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           978..987
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           992..994
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+FT   HELIX           998..1010
+FT                   /evidence="ECO:0007829|PDB:7DUA"
+SQ   SEQUENCE   1114 AA;  124319 MW;  A3DA0CE01A19A441 CRC64;
+     MAKATSGAAG LRLLLLLLLP LLGKVALGLY FSRDAYWEKL YVDQAAGTPL LYVHALRDAP
+     EEVPSFRLGQ HLYGTYRTRL HENNWICIQE DTGLLYLNRS LDHSSWEKLS VRNRGFPLLT
+     VYLKVFLSPT SLREGECQWP GCARVYFSFF NTSFPACSSL KPRELCFPET RPSFRIRENR
+     PPGTFHQFRL LPVQFLCPNI SVAYRLLEGE GLPFRCAPDS LEVSTRWALD REQREKYELV
+     AVCTVHAGAR EEVVMVPFPV TVYDEDDSAP TFPAGVDTAS AVVEFKRKED TVVATLRVFD
+     ADVVPASGEL VRRYTSTLLP GDTWAQQTFR VEHWPNETSV QANGSFVRAT VHDYRLVLNR
+     NLSISENRTM QLAVLVNDSD FQGPGAGVLL LHFNVSVLPV SLHLPSTYSL SVSRRARRFA
+     QIGKVCVENC QAFSGINVQY KLHSSGANCS TLGVVTSAED TSGILFVNDT KALRRPKCAE
+     LHYMVVATDQ QTSRQAQAQL LVTVEGSYVA EEAGCPLSCA VSKRRLECEE CGGLGSPTGR
+     CEWRQGDGKG ITRNFSTCSP STKTCPDGHC DVVETQDINI CPQDCLRGSI VGGHEPGEPR
+     GIKAGYGTCN CFPEEEKCFC EPEDIQDPLC DELCRTVIAA AVLFSFIVSV LLSAFCIHCY
+     HKFAHKPPIS SAEMTFRRPA QAFPVSYSSS GARRPSLDSM ENQVSVDAFK ILEDPKWEFP
+     RKNLVLGKTL GEGEFGKVVK ATAFHLKGRA GYTTVAVKML KENASPSELR DLLSEFNVLK
+     QVNHPHVIKL YGACSQDGPL LLIVEYAKYG SLRGFLRESR KVGPGYLGSG GSRNSSSLDH
+     PDERALTMGD LISFAWQISQ GMQYLAEMKL VHRDLAARNI LVAEGRKMKI SDFGLSRDVY
+     EEDSYVKRSQ GRIPVKWMAI ESLFDHIYTT QSDVWSFGVL LWEIVTLGGN PYPGIPPERL
+     FNLLKTGHRM ERPDNCSEEM YRLMLQCWKQ EPDKRPVFAD ISKDLEKMMV KRRDYLDLAA
+     STPSDSLIYD DGLSEEETPL VDCNNAPLPR ALPSTWIENK LYGMSDPNWP GESPVPLTRA
+     DGTNTGFPRY PNDSVYANWM LSPSAAKLMD TFDS
+//

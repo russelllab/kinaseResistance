@@ -1,0 +1,581 @@
+ID   GAK_HUMAN               Reviewed;        1311 AA.
+AC   O14976; Q5U4P5; Q9BVY6;
+DT   29-AUG-2001, integrated into UniProtKB/Swiss-Prot.
+DT   29-AUG-2001, sequence version 2.
+DT   12-OCT-2022, entry version 204.
+DE   RecName: Full=Cyclin-G-associated kinase;
+DE            EC=2.7.11.1;
+GN   Name=GAK;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), AND CHARACTERIZATION.
+RC   TISSUE=Fibroblast;
+RX   PubMed=9299234; DOI=10.1006/geno.1997.4873;
+RA   Kimura S.H., Tsuruga H., Yabuta N., Endo Y., Nojima H.;
+RT   "Structure, expression, and chromosomal localization of human GAK.";
+RL   Genomics 44:179-187(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2), AND NUCLEOTIDE SEQUENCE
+RP   [LARGE SCALE MRNA] OF 981-1311 (ISOFORM 1).
+RC   TISSUE=Ovary, and Placenta;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [3]
+RP   FUNCTION, AND SUBCELLULAR LOCATION.
+RX   PubMed=10625686; DOI=10.1074/jbc.275.2.1365;
+RA   Greener T., Zhao X., Nojima H., Eisenberg E., Greene L.E.;
+RT   "Role of cyclin G-associated kinase in uncoating clathrin-coated vesicles
+RT   from non-neuronal cells.";
+RL   J. Biol. Chem. 275:1365-1370(2000).
+RN   [4]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-16; SER-456; SER-770;
+RP   SER-826; SER-829; SER-834 AND SER-1096, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [5]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-826; SER-829 AND SER-834, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [6]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT SER-2, CLEAVAGE OF INITIATOR
+RP   METHIONINE [LARGE SCALE ANALYSIS], AND IDENTIFICATION BY MASS SPECTROMETRY
+RP   [LARGE SCALE ANALYSIS].
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J., Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in a
+RT   refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [7]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT SER-2, PHOSPHORYLATION [LARGE SCALE
+RP   ANALYSIS] AT SER-16; SER-826; SER-829; SER-834; SER-939; SER-1176 AND
+RP   SER-1185, CLEAVAGE OF INITIATOR METHIONINE [LARGE SCALE ANALYSIS], AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [8]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-826 AND SER-829, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [9]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [10]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-829, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [11]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-776; THR-794; SER-826 AND
+RP   SER-829, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [12]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-783, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [13]
+RP   X-RAY CRYSTALLOGRAPHY (2.1 ANGSTROMS) OF 12-347.
+RG   Midwest center for structural genomics (MCSG);
+RT   "Crystal structure of the human cyclin G associated kinase (GAK).";
+RL   Submitted (JUL-2011) to the PDB data bank.
+RN   [14]
+RP   VARIANTS [LARGE SCALE ANALYSIS] LEU-144; MET-580; TYR-787; ARG-877;
+RP   ASP-962; MET-1051; HIS-1120; LEU-1137; ASN-1168; ARG-1265 AND ASN-1297.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Associates with cyclin G and CDK5. Seems to act as an auxilin
+CC       homolog that is involved in the uncoating of clathrin-coated vesicles
+CC       by Hsc70 in non-neuronal cells. Expression oscillates slightly during
+CC       the cell cycle, peaking at G1. {ECO:0000269|PubMed:10625686}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- INTERACTION:
+CC       O14976; Q9NQ11: ATP13A2; NbExp=2; IntAct=EBI-714707, EBI-6308763;
+CC       O14976; P11142: HSPA8; NbExp=7; IntAct=EBI-714707, EBI-351896;
+CC       O14976; Q5S007: LRRK2; NbExp=11; IntAct=EBI-714707, EBI-5323863;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm, perinuclear region
+CC       {ECO:0000269|PubMed:10625686}. Golgi apparatus, trans-Golgi network
+CC       {ECO:0000269|PubMed:10625686}. Cell junction, focal adhesion
+CC       {ECO:0000305|PubMed:10625686}. Note=Localizes to the perinuclear area
+CC       and to the trans-Golgi network. Also seen on the plasma membrane,
+CC       probably at focal adhesions.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=O14976-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=O14976-2; Sequence=VSP_054479;
+CC   -!- TISSUE SPECIFICITY: Ubiquitous. Highest in testis.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Ser/Thr protein
+CC       kinase family. {ECO:0000255|PROSITE-ProRule:PRU00159}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; D88435; BAA22623.1; -; mRNA.
+DR   EMBL; BC000816; AAH00816.1; -; mRNA.
+DR   EMBL; BC008668; AAH08668.1; -; mRNA.
+DR   EMBL; BC085005; AAH85005.1; -; mRNA.
+DR   CCDS; CCDS3340.1; -. [O14976-1]
+DR   CCDS; CCDS82902.1; -. [O14976-2]
+DR   RefSeq; NP_001305063.1; NM_001318134.1. [O14976-2]
+DR   RefSeq; NP_005246.2; NM_005255.3. [O14976-1]
+DR   PDB; 4C57; X-ray; 2.55 A; A/B=14-351.
+DR   PDB; 4C58; X-ray; 2.16 A; A=14-351.
+DR   PDB; 4C59; X-ray; 2.80 A; A=14-351.
+DR   PDB; 4O38; X-ray; 2.10 A; A/B=12-347.
+DR   PDB; 4Y8D; X-ray; 2.10 A; A/B=14-351.
+DR   PDB; 5Y7Z; X-ray; 2.80 A; A/B=25-335.
+DR   PDB; 5Y80; X-ray; 2.50 A; A=25-335.
+DR   PDBsum; 4C57; -.
+DR   PDBsum; 4C58; -.
+DR   PDBsum; 4C59; -.
+DR   PDBsum; 4O38; -.
+DR   PDBsum; 4Y8D; -.
+DR   PDBsum; 5Y7Z; -.
+DR   PDBsum; 5Y80; -.
+DR   AlphaFoldDB; O14976; -.
+DR   SMR; O14976; -.
+DR   BioGRID; 108853; 184.
+DR   IntAct; O14976; 104.
+DR   MINT; O14976; -.
+DR   STRING; 9606.ENSP00000314499; -.
+DR   BindingDB; O14976; -.
+DR   ChEMBL; CHEMBL4355; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; O14976; -.
+DR   GuidetoPHARMACOLOGY; 2027; -.
+DR   DEPOD; GAK; -.
+DR   GlyGen; O14976; 1 site, 1 O-linked glycan (1 site).
+DR   iPTMnet; O14976; -.
+DR   PhosphoSitePlus; O14976; -.
+DR   SwissPalm; O14976; -.
+DR   BioMuta; GAK; -.
+DR   EPD; O14976; -.
+DR   jPOST; O14976; -.
+DR   MassIVE; O14976; -.
+DR   MaxQB; O14976; -.
+DR   PaxDb; O14976; -.
+DR   PeptideAtlas; O14976; -.
+DR   PRIDE; O14976; -.
+DR   ProteomicsDB; 48350; -. [O14976-1]
+DR   ABCD; O14976; 2 sequenced antibodies.
+DR   Antibodypedia; 22165; 334 antibodies from 33 providers.
+DR   DNASU; 2580; -.
+DR   Ensembl; ENST00000314167.9; ENSP00000314499.4; ENSG00000178950.18. [O14976-1]
+DR   Ensembl; ENST00000511163.5; ENSP00000421361.1; ENSG00000178950.18. [O14976-2]
+DR   GeneID; 2580; -.
+DR   KEGG; hsa:2580; -.
+DR   MANE-Select; ENST00000314167.9; ENSP00000314499.4; NM_005255.4; NP_005246.2.
+DR   UCSC; uc003gbm.6; human. [O14976-1]
+DR   CTD; 2580; -.
+DR   DisGeNET; 2580; -.
+DR   GeneCards; GAK; -.
+DR   HGNC; HGNC:4113; GAK.
+DR   HPA; ENSG00000178950; Low tissue specificity.
+DR   MIM; 602052; gene.
+DR   neXtProt; NX_O14976; -.
+DR   OpenTargets; ENSG00000178950; -.
+DR   PharmGKB; PA28528; -.
+DR   VEuPathDB; HostDB:ENSG00000178950; -.
+DR   eggNOG; KOG0431; Eukaryota.
+DR   eggNOG; KOG1989; Eukaryota.
+DR   eggNOG; KOG2283; Eukaryota.
+DR   GeneTree; ENSGT00940000159527; -.
+DR   HOGENOM; CLU_007537_0_0_1; -.
+DR   InParanoid; O14976; -.
+DR   OMA; HYKNTNL; -.
+DR   OrthoDB; 826336at2759; -.
+DR   PhylomeDB; O14976; -.
+DR   TreeFam; TF105165; -.
+DR   PathwayCommons; O14976; -.
+DR   Reactome; R-HSA-432722; Golgi Associated Vesicle Biogenesis.
+DR   Reactome; R-HSA-8856828; Clathrin-mediated endocytosis.
+DR   SignaLink; O14976; -.
+DR   SIGNOR; O14976; -.
+DR   BioGRID-ORCS; 2580; 448 hits in 1119 CRISPR screens.
+DR   ChiTaRS; GAK; human.
+DR   GeneWiki; GAK_(protein); -.
+DR   GenomeRNAi; 2580; -.
+DR   Pharos; O14976; Tchem.
+DR   PRO; PR:O14976; -.
+DR   Proteomes; UP000005640; Chromosome 4.
+DR   RNAct; O14976; protein.
+DR   Bgee; ENSG00000178950; Expressed in pancreatic ductal cell and 204 other tissues.
+DR   ExpressionAtlas; O14976; baseline and differential.
+DR   Genevisible; O14976; HS.
+DR   GO; GO:0005737; C:cytoplasm; IBA:GO_Central.
+DR   GO; GO:0005829; C:cytosol; TAS:Reactome.
+DR   GO; GO:0005925; C:focal adhesion; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005794; C:Golgi apparatus; IDA:ParkinsonsUK-UCL.
+DR   GO; GO:0043231; C:intracellular membrane-bounded organelle; IDA:HPA.
+DR   GO; GO:0016020; C:membrane; HDA:UniProtKB.
+DR   GO; GO:0048471; C:perinuclear region of cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0098793; C:presynapse; IEA:GOC.
+DR   GO; GO:0031982; C:vesicle; IDA:ParkinsonsUK-UCL.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0051087; F:chaperone binding; TAS:BHF-UCL.
+DR   GO; GO:0030276; F:clathrin binding; IBA:GO_Central.
+DR   GO; GO:0030332; F:cyclin binding; ISS:ParkinsonsUK-UCL.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; TAS:ProtInc.
+DR   GO; GO:0007049; P:cell cycle; IEA:UniProtKB-KW.
+DR   GO; GO:0051085; P:chaperone cofactor-dependent protein refolding; TAS:BHF-UCL.
+DR   GO; GO:0072318; P:clathrin coat disassembly; IMP:ParkinsonsUK-UCL.
+DR   GO; GO:1905224; P:clathrin-coated pit assembly; IMP:ParkinsonsUK-UCL.
+DR   GO; GO:0072583; P:clathrin-dependent endocytosis; IMP:ParkinsonsUK-UCL.
+DR   GO; GO:0007029; P:endoplasmic reticulum organization; ISS:ParkinsonsUK-UCL.
+DR   GO; GO:0007030; P:Golgi organization; IMP:ParkinsonsUK-UCL.
+DR   GO; GO:0090160; P:Golgi to lysosome transport; IMP:ParkinsonsUK-UCL.
+DR   GO; GO:0010977; P:negative regulation of neuron projection development; IDA:ParkinsonsUK-UCL.
+DR   GO; GO:0034067; P:protein localization to Golgi apparatus; IMP:ParkinsonsUK-UCL.
+DR   GO; GO:0072659; P:protein localization to plasma membrane; IMP:ParkinsonsUK-UCL.
+DR   GO; GO:0006468; P:protein phosphorylation; IEA:InterPro.
+DR   GO; GO:0006898; P:receptor-mediated endocytosis; IMP:ParkinsonsUK-UCL.
+DR   GO; GO:0016191; P:synaptic vesicle uncoating; ISS:BHF-UCL.
+DR   CDD; cd06257; DnaJ; 1.
+DR   Gene3D; 1.10.287.110; -; 1.
+DR   Gene3D; 3.90.190.10; -; 1.
+DR   InterPro; IPR035892; C2_domain_sf.
+DR   InterPro; IPR001623; DnaJ_domain.
+DR   InterPro; IPR036869; J_dom_sf.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR029021; Prot-tyrosine_phosphatase-like.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   InterPro; IPR014020; Tensin_C2-dom.
+DR   InterPro; IPR029023; Tensin_phosphatase.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   Pfam; PF10409; PTEN_C2; 1.
+DR   SMART; SM00271; DnaJ; 1.
+DR   SMART; SM01326; PTEN_C2; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF46565; SSF46565; 1.
+DR   SUPFAM; SSF49562; SSF49562; 1.
+DR   SUPFAM; SSF52799; SSF52799; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS51182; C2_TENSIN; 1.
+DR   PROSITE; PS50076; DNAJ_2; 1.
+DR   PROSITE; PS51181; PPASE_TENSIN; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Acetylation; Alternative splicing; ATP-binding; Cell cycle;
+KW   Cell junction; Cytoplasm; Golgi apparatus; Kinase; Methylation;
+KW   Nucleotide-binding; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Transferase.
+FT   INIT_MET        1
+FT                   /note="Removed"
+FT                   /evidence="ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:19413330"
+FT   CHAIN           2..1311
+FT                   /note="Cyclin-G-associated kinase"
+FT                   /id="PRO_0000085958"
+FT   DOMAIN          40..314
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   DOMAIN          399..566
+FT                   /note="Phosphatase tensin-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00590"
+FT   DOMAIN          572..710
+FT                   /note="C2 tensin-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00589"
+FT   DOMAIN          1247..1311
+FT                   /note="J"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00286"
+FT   REGION          709..729
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          749..788
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          801..860
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          913..1035
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          1047..1150
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        801..822
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        965..996
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1066..1080
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1110..1128
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1130..1144
+FT                   /note="Pro residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        173
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   MOD_RES         2
+FT                   /note="N-acetylserine"
+FT                   /evidence="ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:19413330"
+FT   MOD_RES         2
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:P97874"
+FT   MOD_RES         16
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18691976,
+FT                   ECO:0007744|PubMed:19369195"
+FT   MOD_RES         456
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18691976"
+FT   MOD_RES         770
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18691976"
+FT   MOD_RES         776
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         783
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:24275569"
+FT   MOD_RES         794
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         811
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:P97874"
+FT   MOD_RES         826
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18669648,
+FT                   ECO:0007744|PubMed:18691976, ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:19690332, ECO:0007744|PubMed:23186163"
+FT   MOD_RES         829
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18669648,
+FT                   ECO:0007744|PubMed:18691976, ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:19690332, ECO:0007744|PubMed:21406692,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         834
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18669648,
+FT                   ECO:0007744|PubMed:18691976, ECO:0007744|PubMed:19369195"
+FT   MOD_RES         939
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:19369195"
+FT   MOD_RES         1096
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18691976"
+FT   MOD_RES         1123
+FT                   /note="Omega-N-methylarginine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q99KY4"
+FT   MOD_RES         1176
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:19369195"
+FT   MOD_RES         1185
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:19369195"
+FT   VAR_SEQ         49..127
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_054479"
+FT   VARIANT         144
+FT                   /note="S -> L (in dbSNP:rs768962219)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040505"
+FT   VARIANT         580
+FT                   /note="V -> M (in dbSNP:rs34255232)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040506"
+FT   VARIANT         787
+FT                   /note="D -> Y (in dbSNP:rs34585705)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040507"
+FT   VARIANT         877
+FT                   /note="Q -> R (in dbSNP:rs149842313)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040508"
+FT   VARIANT         962
+FT                   /note="G -> D (in a lung neuroendocrine carcinoma sample;
+FT                   somatic mutation; dbSNP:rs773153935)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040509"
+FT   VARIANT         1051
+FT                   /note="T -> M (in dbSNP:rs35227944)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040510"
+FT   VARIANT         1120
+FT                   /note="Q -> H (in dbSNP:rs55801437)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040511"
+FT   VARIANT         1137
+FT                   /note="P -> L (in dbSNP:rs56169884)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040512"
+FT   VARIANT         1168
+FT                   /note="S -> N (in dbSNP:rs56326341)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040513"
+FT   VARIANT         1265
+FT                   /note="K -> R (in dbSNP:rs2306242)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040514"
+FT   VARIANT         1297
+FT                   /note="D -> N (in dbSNP:rs1134921)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040515"
+FT   CONFLICT        607
+FT                   /note="R -> C (in Ref. 2; AAH85005)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1113
+FT                   /note="P -> A (in Ref. 1; BAA22623)"
+FT                   /evidence="ECO:0000305"
+FT   TURN            27..30
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   STRAND          32..35
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   STRAND          38..47
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   STRAND          50..59
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   TURN            60..62
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   STRAND          65..75
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   HELIX           76..92
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   STRAND          101..107
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   TURN            109..111
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   STRAND          115..124
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   STRAND          127..129
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   HELIX           130..138
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   HELIX           145..163
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   STRAND          165..167
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   HELIX           176..178
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   STRAND          179..181
+FT                   /evidence="ECO:0007829|PDB:4Y8D"
+FT   STRAND          187..189
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   HELIX           208..219
+FT                   /evidence="ECO:0007829|PDB:5Y80"
+FT   HELIX           224..226
+FT                   /evidence="ECO:0007829|PDB:5Y80"
+FT   HELIX           229..232
+FT                   /evidence="ECO:0007829|PDB:5Y80"
+FT   HELIX           242..258
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   TURN            262..265
+FT                   /evidence="ECO:0007829|PDB:5Y80"
+FT   HELIX           268..272
+FT                   /evidence="ECO:0007829|PDB:5Y80"
+FT   HELIX           286..288
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   HELIX           289..295
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   HELIX           300..302
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   HELIX           306..319
+FT                   /evidence="ECO:0007829|PDB:4O38"
+FT   HELIX           329..332
+FT                   /evidence="ECO:0007829|PDB:4O38"
+SQ   SEQUENCE   1311 AA;  143191 MW;  0ACE45DF57A5F981 CRC64;
+     MSLLQSALDF LAGPGSLGGA SGRDQSDFVG QTVELGELRL RVRRVLAEGG FAFVYEAQDV
+     GSGREYALKR LLSNEEEKNR AIIQEVCFMK KLSGHPNIVQ FCSAASIGKE ESDTGQAEFL
+     LLTELCKGQL VEFLKKMESR GPLSCDTVLK IFYQTCRAVQ HMHRQKPPII HRDLKVENLL
+     LSNQGTIKLC DFGSATTISH YPDYSWSAQR RALVEEEITR NTTPMYRTPE IIDLYSNFPI
+     GEKQDIWALG CILYLLCFRQ HPFEDGAKLR IVNGKYSIPP HDTQYTVFHS LIRAMLQVNP
+     EERLSIAEVV HQLQEIAAAR NVNPKSPITE LLEQNGGYGS ATLSRGPPPP VGPAGSGYSG
+     GLALAEYDQP YGGFLDILRG GTERLFTNLK DTSSKVIQSV ANYAKGDLDI SYITSRIAVM
+     SFPAEGVESA LKNNIEDVRL FLDSKHPGHY AVYNLSPRTY RPSRFHNRVS ECGWAARRAP
+     HLHTLYNICR NMHAWLRQDH KNVCVVHCMD GRAASAVAVC SFLCFCRLFS TAEAAVYMFS
+     MKRCPPGIWP SHKRYIEYMC DMVAEEPITP HSKPILVRAV VMTPVPLFSK QRSGCRPFCE
+     VYVGDERVAS TSQEYDKMRD FKIEDGKAVI PLGVTVQGDV LIVIYHARST LGGRLQAKMA
+     SMKMFQIQFH TGFVPRNATT VKFAKYDLDA CDIQEKYPDL FQVNLEVEVE PRDRPSREAP
+     PWENSSMRGL NPKILFSSRE EQQDILSKFG KPELPRQPGS TAQYDAGAGS PEAEPTDSDS
+     PPSSSADASR FLHTLDWQEE KEAETGAENA SSKESESALM EDRDESEVSD EGGSPISSEG
+     QEPRADPEPP GLAAGLVQQD LVFEVETPAV LPEPVPQEDG VDLLGLHSEV GAGPAVPPQA
+     CKAPSSNTDL LSCLLGPPEA ASQGPPEDLL SEDPLLLASP APPLSVQSTP RGGPPAAADP
+     FGPLLPSSGN NSQPCSNPDL FGEFLNSDSV TVPPSFPSAH SAPPPSCSAD FLHLGDLPGE
+     PSKMTASSSN PDLLGGWAAW TETAASAVAP TPATEGPLFS PGGQPAPCGS QASWTKSQNP
+     DPFADLGDLS SGLQGSPAGF PPGGFIPKTA TTPKGSSSWQ TSRPPAQGAS WPPQAKPPPK
+     ACTQPRPNYA SNFSVIGARE ERGVRAPSFA QKPKVSENDF EDLLSNQGFS SRSDKKGPKT
+     IAEMRKQDLA KDTDPLKLKL LDWIEGKERN IRALLSTLHT VLWDGESRWT PVGMADLVAP
+     EQVKKHYRRA VLAVHPDKAA GQPYEQHAKM IFMELNDAWS EFENQGSRPL F
+//

@@ -1,0 +1,743 @@
+ID   FER_HUMAN               Reviewed;         822 AA.
+AC   P16591; B2RCR4; B4DSQ2; H2FLB8;
+DT   01-AUG-1990, integrated into UniProtKB/Swiss-Prot.
+DT   16-MAY-2006, sequence version 2.
+DT   12-OCT-2022, entry version 223.
+DE   RecName: Full=Tyrosine-protein kinase Fer;
+DE            EC=2.7.10.2;
+DE   AltName: Full=Feline encephalitis virus-related kinase FER;
+DE   AltName: Full=Fujinami poultry sarcoma/Feline sarcoma-related protein Fer;
+DE   AltName: Full=Proto-oncogene c-Fer;
+DE   AltName: Full=Tyrosine kinase 3;
+DE   AltName: Full=p94-Fer;
+GN   Name=FER; Synonyms=TYK3;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), AND VARIANT VAL-439.
+RX   PubMed=2725517; DOI=10.1128/mcb.9.4.1587-1593.1989;
+RA   Hao Q.-L., Heisterkamp N., Groffen J.;
+RT   "Isolation and sequence analysis of a novel human tyrosine kinase gene.";
+RL   Mol. Cell. Biol. 9:1587-1593(1989).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 3), ALTERNATIVE PROMOTER USAGE,
+RP   FUNCTION, IDENTIFICATION BY MASS SPECTROMETRY, AND TISSUE SPECIFICITY.
+RC   TISSUE=Testis;
+RX   PubMed=22223638; DOI=10.1074/jbc.m111.327106;
+RA   Makovski A., Yaffe E., Shpungin S., Nir U.;
+RT   "Intronic promoter drives the BORIS-regulated expression of FerT in colon
+RT   carcinoma cells.";
+RL   J. Biol. Chem. 287:6100-6112(2012).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1 AND 2).
+RC   TISSUE=Brain;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15372022; DOI=10.1038/nature02919;
+RA   Schmutz J., Martin J., Terry A., Couronne O., Grimwood J., Lowry S.,
+RA   Gordon L.A., Scott D., Xie G., Huang W., Hellsten U., Tran-Gyamfi M.,
+RA   She X., Prabhakar S., Aerts A., Altherr M., Bajorek E., Black S.,
+RA   Branscomb E., Caoile C., Challacombe J.F., Chan Y.M., Denys M.,
+RA   Detter J.C., Escobar J., Flowers D., Fotopulos D., Glavina T., Gomez M.,
+RA   Gonzales E., Goodstein D., Grigoriev I., Groza M., Hammon N., Hawkins T.,
+RA   Haydu L., Israni S., Jett J., Kadner K., Kimball H., Kobayashi A.,
+RA   Lopez F., Lou Y., Martinez D., Medina C., Morgan J., Nandkeshwar R.,
+RA   Noonan J.P., Pitluck S., Pollard M., Predki P., Priest J., Ramirez L.,
+RA   Retterer J., Rodriguez A., Rogers S., Salamov A., Salazar A., Thayer N.,
+RA   Tice H., Tsai M., Ustaszewska A., Vo N., Wheeler J., Wu K., Yang J.,
+RA   Dickson M., Cheng J.-F., Eichler E.E., Olsen A., Pennacchio L.A.,
+RA   Rokhsar D.S., Richardson P., Lucas S.M., Myers R.M., Rubin E.M.;
+RT   "The DNA sequence and comparative analysis of human chromosome 5.";
+RL   Nature 431:268-274(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 686-741.
+RX   PubMed=8247543;
+RA   Lee S.-T., Strunk K.M., Spritz R.A.;
+RT   "A survey of protein tyrosine kinase mRNAs expressed in normal human
+RT   melanocytes.";
+RL   Oncogene 8:3403-3410(1993).
+RN   [7]
+RP   TISSUE SPECIFICITY.
+RX   PubMed=2156206;
+RA   Krolewski J.J., Lee R., Eddy R., Shows T.B., Dalla-Favera R.;
+RT   "Identification and chromosomal mapping of new human tyrosine kinase
+RT   genes.";
+RL   Oncogene 5:277-282(1990).
+RN   [8]
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=1990274; DOI=10.1128/mcb.11.2.1180-1183.1991;
+RA   Hao Q.-L., Ferris D.K., White G., Heisterkamp N., Groffen J.;
+RT   "Nuclear and cytoplasmic location of the FER tyrosine kinase.";
+RL   Mol. Cell. Biol. 11:1180-1183(1991).
+RN   [9]
+RP   FUNCTION IN PHOSPHORYLATION OF CTNND1, AUTOPHOSPHORYLATION, SUBUNIT, AND
+RP   INTERACTION WITH CTNND1.
+RX   PubMed=7623846; DOI=10.1128/mcb.15.8.4553;
+RA   Kim L., Wong T.W.;
+RT   "The cytoplasmic tyrosine kinase FER is associated with the catenin-like
+RT   substrate pp120 and is activated by growth factors.";
+RL   Mol. Cell. Biol. 15:4553-4561(1995).
+RN   [10]
+RP   FUNCTION IN PHOSPHORYLATION OF CTTN, INTERACTION WITH CTTN; CTNND1 AND
+RP   PDGFR, MUTAGENESIS OF LYS-591, AND SUBCELLULAR LOCATION.
+RX   PubMed=9722593; DOI=10.1074/jbc.273.36.23542;
+RA   Kim L., Wong T.W.;
+RT   "Growth factor-dependent phosphorylation of the actin-binding protein
+RT   cortactin is mediated by the cytoplasmic tyrosine kinase FER.";
+RL   J. Biol. Chem. 273:23542-23548(1998).
+RN   [11]
+RP   FUNCTION IN PHOSPHORYLATION OF PECAM1; PTPN11 AND GAB1, SUBCELLULAR
+RP   LOCATION, CATALYTIC ACTIVITY, MUTAGENESIS OF ARG-483, AND INTERACTION WITH
+RP   PECAM1.
+RX   PubMed=12972546; DOI=10.1091/mbc.e03-02-0080;
+RA   Kogata N., Masuda M., Kamioka Y., Yamagishi A., Endo A., Okada M.,
+RA   Mochizuki N.;
+RT   "Identification of Fer tyrosine kinase localized on microtubules as a
+RT   platelet endothelial cell adhesion molecule-1 phosphorylating kinase in
+RT   vascular endothelial cells.";
+RL   Mol. Biol. Cell 14:3553-3564(2003).
+RN   [12]
+RP   FUNCTION IN PHOSPHORYLATION OF JUP AND IN REGULATION OF PROTEIN
+RP   PHOSPHORYLATION.
+RX   PubMed=14517306; DOI=10.1128/mcb.23.20.7391-7402.2003;
+RA   Miravet S., Piedra J., Castano J., Raurell I., Franci C., Dunach M.,
+RA   Garcia de Herreros A.;
+RT   "Tyrosine phosphorylation of plakoglobin causes contrary effects on its
+RT   association with desmosomes and adherens junction components and modulates
+RT   beta-catenin-mediated transcription.";
+RL   Mol. Cell. Biol. 23:7391-7402(2003).
+RN   [13]
+RP   SUBCELLULAR LOCATION, LIPID-BINDING, AND DOMAIN.
+RX   PubMed=16418535; DOI=10.1083/jcb.200508091;
+RA   Tsujita K., Suetsugu S., Sasaki N., Furutani M., Oikawa T., Takenawa T.;
+RT   "Coordination between the actin cytoskeleton and membrane deformation by a
+RT   novel membrane tubulation domain of PCH proteins is involved in
+RT   endocytosis.";
+RL   J. Cell Biol. 172:269-279(2006).
+RN   [14]
+RP   IDENTIFICATION OF ISOFORM 3, AND TISSUE SPECIFICITY.
+RX   PubMed=18985748; DOI=10.1002/dvdy.21789;
+RA   Kierszenbaum A.L., Rivkin E., Tres L.L.;
+RT   "Expression of Fer testis (FerT) tyrosine kinase transcript variants and
+RT   distribution sites of FerT during the development of the acrosome-
+RT   acroplaxome-manchette complex in rat spermatids.";
+RL   Dev. Dyn. 237:3882-3891(2008).
+RN   [15]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT TYR-402 AND SER-434, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [16]
+RP   FUNCTION IN PHOSPHORYLATION OF PTK2/FAK1, FUNCTION IN REGULATION OF ACTIN
+RP   CYTOSKELETON, SUBUNIT, AND IDENTIFICATION IN A COMPLEX WITH CTTN AND
+RP   PTK2/FAK1.
+RX   PubMed=19339212; DOI=10.1016/j.bbamcr.2009.01.015;
+RA   Oh M.A., Choi S., Lee M.J., Choi M.C., Lee S.A., Ko W., Cance W.G.,
+RA   Oh E.S., Buday L., Kim S.H., Lee J.W.;
+RT   "Specific tyrosine phosphorylation of focal adhesion kinase mediated by Fer
+RT   tyrosine kinase in suspended hepatocytes.";
+RL   Biochim. Biophys. Acta 1793:781-791(2009).
+RN   [17]
+RP   INTERACTION WITH HSP90.
+RX   PubMed=19159681; DOI=10.1016/j.cellsig.2008.12.011;
+RA   Hikri E., Shpungin S., Nir U.;
+RT   "Hsp90 and a tyrosine embedded in the Hsp90 recognition loop are required
+RT   for the Fer tyrosine kinase activity.";
+RL   Cell. Signal. 21:588-596(2009).
+RN   [18]
+RP   FUNCTION IN IL6 SIGNALING PATHWAY; CELL PROLIFERATION AND IN
+RP   PHOSPHORYLATION OF STAT3, AND INTERACTION WITH STAT3.
+RX   PubMed=19147545; DOI=10.1158/1541-7786.mcr-08-0117;
+RA   Zoubeidi A., Rocha J., Zouanat F.Z., Hamel L., Scarlata E., Aprikian A.G.,
+RA   Chevalier S.;
+RT   "The Fer tyrosine kinase cooperates with interleukin-6 to activate signal
+RT   transducer and activator of transcription 3 and promote human prostate
+RT   cancer cell growth.";
+RL   Mol. Cancer Res. 7:142-155(2009).
+RN   [19]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT TYR-402 AND SER-434, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [20]
+RP   FUNCTION IN REGULATION OF ACTIN CYTOSKELETON AND CELL MIGRATION, CATALYTIC
+RP   ACTIVITY, DOMAIN, LIPID-BINDING, AND ACTIVITY REGULATION.
+RX   PubMed=19738202; DOI=10.1126/scisignal.2000393;
+RA   Itoh T., Hasegawa J., Tsujita K., Kanaho Y., Takenawa T.;
+RT   "The tyrosine kinase Fer is a downstream target of the PLD-PA pathway that
+RT   regulates cell migration.";
+RL   Sci. Signal. 2:RA52-RA52(2009).
+RN   [21]
+RP   FUNCTION IN CELL PROLIFERATION, PHOSPHORYLATION, AND INTERACTION WITH FLT3.
+RX   PubMed=20111072; DOI=10.1038/leu.2009.301;
+RA   Voisset E., Lopez S., Chaix A., Georges C., Hanssens K., Prebet T.,
+RA   Dubreuil P., De Sepulveda P.;
+RT   "FES kinases are required for oncogenic FLT3 signaling.";
+RL   Leukemia 24:721-728(2010).
+RN   [22]
+RP   FUNCTION IN ACTIVATION OF NF-KAPPA-B DOWNSTREAM OF EGFR AND CELL
+RP   PROLIFERATION, INTERACTION WITH EGFR, AND PHOSPHORYLATION.
+RX   PubMed=21518868; DOI=10.1073/pnas.1105369108;
+RA   Guo C., Stark G.R.;
+RT   "FER tyrosine kinase (FER) overexpression mediates resistance to quinacrine
+RT   through EGF-dependent activation of NF-kappaB.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 108:7968-7973(2011).
+RN   [23]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-434, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [24]
+RP   STRUCTURE BY NMR OF 453-557.
+RG   Northeast structural genomics consortium (NESG);
+RT   "Solution structure of SH2 domain of proto-oncogene tyrosine-protein kinase
+RT   FER from Homo sapiens, Northeast structural genomics consortium (NESG)
+RT   target HR3461D.";
+RL   Submitted (AUG-2009) to the PDB data bank.
+RN   [25]
+RP   REVIEW.
+RX   PubMed=11994747; DOI=10.1038/nrm783;
+RA   Greer P.;
+RT   "Closing in on the biological functions of Fps/Fes and Fer.";
+RL   Nat. Rev. Mol. Cell Biol. 3:278-289(2002).
+RN   [26]
+RP   VARIANT VAL-439.
+RX   PubMed=1651563; DOI=10.1126/science.1651563;
+RA   Nishisho I., Nakamura Y., Miyoshi Y., Miki Y., Ando H., Horii A.,
+RA   Koyama K., Utsunomiya J., Baba S., Hedge P., Markham A., Krush A.J.,
+RA   Petersen G.M., Hamilton S.R., Nilbert M.C., Levy D.B., Bryan T.M.,
+RA   Preisinger A.C., Smith K.J., Su L.-K., Kinzler K.W., Vogelstein B.;
+RT   "Mutations of chromosome 5q21 genes in FAP and colorectal cancer
+RT   patients.";
+RL   Science 253:665-669(1991).
+RN   [27]
+RP   VARIANTS [LARGE SCALE ANALYSIS] PHE-128; GLN-404; VAL-412; VAL-439;
+RP   PRO-443; CYS-460 AND GLN-813.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Tyrosine-protein kinase that acts downstream of cell surface
+CC       receptors for growth factors and plays a role in the regulation of the
+CC       actin cytoskeleton, microtubule assembly, lamellipodia formation, cell
+CC       adhesion, cell migration and chemotaxis. Acts downstream of EGFR, KIT,
+CC       PDGFRA and PDGFRB. Acts downstream of EGFR to promote activation of NF-
+CC       kappa-B and cell proliferation. May play a role in the regulation of
+CC       the mitotic cell cycle. Plays a role in the insulin receptor signaling
+CC       pathway and in activation of phosphatidylinositol 3-kinase. Acts
+CC       downstream of the activated FCER1 receptor and plays a role in FCER1
+CC       (high affinity immunoglobulin epsilon receptor)-mediated signaling in
+CC       mast cells. Plays a role in the regulation of mast cell degranulation.
+CC       Plays a role in leukocyte recruitment and diapedesis in response to
+CC       bacterial lipopolysaccharide (LPS). Plays a role in synapse
+CC       organization, trafficking of synaptic vesicles, the generation of
+CC       excitatory postsynaptic currents and neuron-neuron synaptic
+CC       transmission. Plays a role in neuronal cell death after brain damage.
+CC       Phosphorylates CTTN, CTNND1, PTK2/FAK1, GAB1, PECAM1 and PTPN11. May
+CC       phosphorylate JUP and PTPN1. Can phosphorylate STAT3, but the
+CC       biological relevance of this depends on cell type and stimulus.
+CC       {ECO:0000269|PubMed:12972546, ECO:0000269|PubMed:14517306,
+CC       ECO:0000269|PubMed:19147545, ECO:0000269|PubMed:19339212,
+CC       ECO:0000269|PubMed:19738202, ECO:0000269|PubMed:20111072,
+CC       ECO:0000269|PubMed:21518868, ECO:0000269|PubMed:22223638,
+CC       ECO:0000269|PubMed:7623846, ECO:0000269|PubMed:9722593}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.10.2;
+CC         Evidence={ECO:0000255|PROSITE-ProRule:PRU10028,
+CC         ECO:0000269|PubMed:12972546, ECO:0000269|PubMed:19738202};
+CC   -!- ACTIVITY REGULATION: Activated by phosphatidic acid binding. Activated
+CC       by hydrogen peroxide (in vitro). Activated by reactive oxygen species
+CC       (ROS). {ECO:0000269|PubMed:19738202}.
+CC   -!- SUBUNIT: Homotrimer. Interacts with ARHGDIA, IRS1, JAK1, NRP1, PIK3R1,
+CC       PLEC and TMF1. Interacts with PPP1CA and regulates its phosphorylation
+CC       at 'Thr-320' (By similarity). Interacts with CTNND1, EGFR, FLT3,
+CC       PECAM1, PDGFR and STAT3. Interacts (via SH2 domain) with CTTN.
+CC       Interacts with HSP90; this stabilizes phosphorylated FER and protects
+CC       FER against proteasomal degradation. Component of a complex that
+CC       contains at least FER, CTTN and PTK2/FAK1. {ECO:0000250,
+CC       ECO:0000269|PubMed:12972546, ECO:0000269|PubMed:19147545,
+CC       ECO:0000269|PubMed:19159681, ECO:0000269|PubMed:19339212,
+CC       ECO:0000269|PubMed:20111072, ECO:0000269|PubMed:21518868,
+CC       ECO:0000269|PubMed:7623846, ECO:0000269|PubMed:9722593}.
+CC   -!- INTERACTION:
+CC       P16591; Q16543: CDC37; NbExp=3; IntAct=EBI-1380661, EBI-295634;
+CC       P16591; P08238: HSP90AB1; NbExp=2; IntAct=EBI-1380661, EBI-352572;
+CC       P16591; O42486: Bcat; Xeno; NbExp=2; IntAct=EBI-1380661, EBI-972394;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm. Cytoplasm, cytoskeleton. Cell
+CC       membrane; Peripheral membrane protein; Cytoplasmic side. Cell
+CC       projection. Cell junction. Membrane; Peripheral membrane protein;
+CC       Cytoplasmic side. Nucleus. Cytoplasm, cell cortex. Note=Associated with
+CC       the chromatin. Detected on microtubules in polarized and motile
+CC       vascular endothelial cells. Colocalizes with F-actin at the cell
+CC       cortex. Colocalizes with PECAM1 and CTNND1 at nascent cell-cell
+CC       contacts.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative promoter usage, Alternative splicing; Named isoforms=3;
+CC       Name=1; Synonyms=p94;
+CC         IsoId=P16591-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=P16591-2; Sequence=VSP_041765;
+CC       Name=3; Synonyms=FerT, p47;
+CC         IsoId=P16591-3; Sequence=VSP_043846, VSP_043847;
+CC   -!- TISSUE SPECIFICITY: Isoform 1 is detected in normal colon and in
+CC       fibroblasts (at protein level). Isoform 3 is detected in normal testis,
+CC       in colon carcinoma-derived metastases in lung, liver and ovary, and in
+CC       colon carcinoma and hepato carcinoma cell lines (at protein level).
+CC       Isoform 3 is not detected in normal colon or in normal fibroblasts (at
+CC       protein level). Widely expressed. {ECO:0000269|PubMed:18985748,
+CC       ECO:0000269|PubMed:2156206, ECO:0000269|PubMed:22223638}.
+CC   -!- DOMAIN: The coiled coil domains mediate homooligomerization and are
+CC       required for location at microtubules.
+CC   -!- DOMAIN: The N-terminal region including the first coiled coil domain
+CC       mediates interaction with phosphoinositide-containing membranes.
+CC   -!- PTM: Autophosphorylated. {ECO:0000269|PubMed:20111072,
+CC       ECO:0000269|PubMed:21518868}.
+CC   -!- PTM: Polyubiquitinated; this leads to proteasomal degradation.
+CC       {ECO:0000250}.
+CC   -!- MISCELLANEOUS: [Isoform 3]: Produced by alternative promoter usage.
+CC       {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Tyr protein
+CC       kinase family. Fes/fps subfamily. {ECO:0000255|PROSITE-
+CC       ProRule:PRU00159}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; J03358; AAA61190.1; -; mRNA.
+DR   EMBL; JQ412173; AEY69041.1; -; mRNA.
+DR   EMBL; AK299855; BAG61714.1; -; mRNA.
+DR   EMBL; AK315234; BAG37661.1; -; mRNA.
+DR   EMBL; AC034207; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC008871; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC109481; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC008955; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC010228; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC011421; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC116428; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471086; EAW49055.1; -; Genomic_DNA.
+DR   CCDS; CCDS4098.1; -. [P16591-1]
+DR   CCDS; CCDS78044.1; -. [P16591-3]
+DR   PIR; A31943; TVHUFE.
+DR   RefSeq; NP_001294957.1; NM_001308028.1. [P16591-2]
+DR   RefSeq; NP_001294960.1; NM_001308031.1. [P16591-3]
+DR   RefSeq; NP_001294967.1; NM_001308038.1.
+DR   RefSeq; NP_005237.2; NM_005246.3. [P16591-1]
+DR   RefSeq; XP_011541573.1; XM_011543271.2. [P16591-1]
+DR   RefSeq; XP_016864719.1; XM_017009230.1. [P16591-1]
+DR   RefSeq; XP_016864720.1; XM_017009231.1. [P16591-1]
+DR   PDB; 2KK6; NMR; -; A=453-557.
+DR   PDB; 6KC4; X-ray; 1.37 A; A/C/E/G/I/K=453-552.
+DR   PDBsum; 2KK6; -.
+DR   PDBsum; 6KC4; -.
+DR   AlphaFoldDB; P16591; -.
+DR   BMRB; P16591; -.
+DR   SMR; P16591; -.
+DR   BioGRID; 108532; 29.
+DR   CORUM; P16591; -.
+DR   IntAct; P16591; 22.
+DR   MINT; P16591; -.
+DR   STRING; 9606.ENSP00000281092; -.
+DR   BindingDB; P16591; -.
+DR   ChEMBL; CHEMBL3982; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; P16591; -.
+DR   GuidetoPHARMACOLOGY; 2022; -.
+DR   iPTMnet; P16591; -.
+DR   PhosphoSitePlus; P16591; -.
+DR   BioMuta; FER; -.
+DR   DMDM; 97536202; -.
+DR   EPD; P16591; -.
+DR   jPOST; P16591; -.
+DR   MassIVE; P16591; -.
+DR   MaxQB; P16591; -.
+DR   PaxDb; P16591; -.
+DR   PeptideAtlas; P16591; -.
+DR   PRIDE; P16591; -.
+DR   ProteomicsDB; 53382; -. [P16591-1]
+DR   ProteomicsDB; 53383; -. [P16591-2]
+DR   ProteomicsDB; 53384; -. [P16591-3]
+DR   Antibodypedia; 2083; 598 antibodies from 39 providers.
+DR   DNASU; 2241; -.
+DR   Ensembl; ENST00000281092.9; ENSP00000281092.4; ENSG00000151422.14. [P16591-1]
+DR   Ensembl; ENST00000618353.1; ENSP00000484767.1; ENSG00000151422.14. [P16591-3]
+DR   GeneID; 2241; -.
+DR   KEGG; hsa:2241; -.
+DR   MANE-Select; ENST00000281092.9; ENSP00000281092.4; NM_005246.4; NP_005237.2.
+DR   UCSC; uc031skp.2; human. [P16591-1]
+DR   CTD; 2241; -.
+DR   DisGeNET; 2241; -.
+DR   GeneCards; FER; -.
+DR   HGNC; HGNC:3655; FER.
+DR   HPA; ENSG00000151422; Low tissue specificity.
+DR   MIM; 176942; gene.
+DR   neXtProt; NX_P16591; -.
+DR   OpenTargets; ENSG00000151422; -.
+DR   PharmGKB; PA28095; -.
+DR   VEuPathDB; HostDB:ENSG00000151422; -.
+DR   eggNOG; KOG0194; Eukaryota.
+DR   GeneTree; ENSGT00940000154997; -.
+DR   HOGENOM; CLU_005265_0_0_1; -.
+DR   InParanoid; P16591; -.
+DR   OMA; NQFQQLT; -.
+DR   OrthoDB; 556386at2759; -.
+DR   PhylomeDB; P16591; -.
+DR   TreeFam; TF315363; -.
+DR   BRENDA; 2.7.10.2; 2681.
+DR   PathwayCommons; P16591; -.
+DR   Reactome; R-HSA-1433557; Signaling by SCF-KIT.
+DR   SignaLink; P16591; -.
+DR   SIGNOR; P16591; -.
+DR   BioGRID-ORCS; 2241; 19 hits in 1113 CRISPR screens.
+DR   ChiTaRS; FER; human.
+DR   EvolutionaryTrace; P16591; -.
+DR   GeneWiki; FER_(gene); -.
+DR   GenomeRNAi; 2241; -.
+DR   Pharos; P16591; Tclin.
+DR   PRO; PR:P16591; -.
+DR   Proteomes; UP000005640; Chromosome 5.
+DR   RNAct; P16591; protein.
+DR   Bgee; ENSG00000151422; Expressed in calcaneal tendon and 185 other tissues.
+DR   ExpressionAtlas; P16591; baseline and differential.
+DR   Genevisible; P16591; HS.
+DR   GO; GO:0070161; C:anchoring junction; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005938; C:cell cortex; IEA:UniProtKB-SubCell.
+DR   GO; GO:0042995; C:cell projection; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005737; C:cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0031234; C:extrinsic component of cytoplasmic side of plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0045098; C:type III intermediate filament; IEA:Ensembl.
+DR   GO; GO:0003779; F:actin binding; IEA:Ensembl.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0045296; F:cadherin binding; IEA:Ensembl.
+DR   GO; GO:0070097; F:delta-catenin binding; IEA:Ensembl.
+DR   GO; GO:0005154; F:epidermal growth factor receptor binding; IDA:UniProtKB.
+DR   GO; GO:0045295; F:gamma-catenin binding; IEA:Ensembl.
+DR   GO; GO:0008289; F:lipid binding; IDA:UniProtKB.
+DR   GO; GO:0004715; F:non-membrane spanning protein tyrosine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0008157; F:protein phosphatase 1 binding; IEA:Ensembl.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:1990782; F:protein tyrosine kinase binding; IEA:Ensembl.
+DR   GO; GO:0005102; F:signaling receptor binding; IBA:GO_Central.
+DR   GO; GO:0031267; F:small GTPase binding; IEA:Ensembl.
+DR   GO; GO:0031532; P:actin cytoskeleton reorganization; ISS:UniProtKB.
+DR   GO; GO:0034333; P:adherens junction assembly; IEA:Ensembl.
+DR   GO; GO:0120179; P:adherens junction disassembly; IEA:Ensembl.
+DR   GO; GO:0007155; P:cell adhesion; IBA:GO_Central.
+DR   GO; GO:0030154; P:cell differentiation; IBA:GO_Central.
+DR   GO; GO:0008283; P:cell population proliferation; IEA:InterPro.
+DR   GO; GO:0044331; P:cell-cell adhesion mediated by cadherin; ISS:UniProtKB.
+DR   GO; GO:0032869; P:cellular response to insulin stimulus; ISS:UniProtKB.
+DR   GO; GO:0036006; P:cellular response to macrophage colony-stimulating factor stimulus; IMP:UniProtKB.
+DR   GO; GO:0034614; P:cellular response to reactive oxygen species; ISS:UniProtKB.
+DR   GO; GO:0006935; P:chemotaxis; IBA:GO_Central.
+DR   GO; GO:0019221; P:cytokine-mediated signaling pathway; IMP:UniProtKB.
+DR   GO; GO:0050904; P:diapedesis; ISS:UniProtKB.
+DR   GO; GO:0035426; P:extracellular matrix-cell signaling; ISS:UniProtKB.
+DR   GO; GO:0038095; P:Fc-epsilon receptor signaling pathway; ISS:UniProtKB.
+DR   GO; GO:0007281; P:germ cell development; IEA:Ensembl.
+DR   GO; GO:0045087; P:innate immune response; IBA:GO_Central.
+DR   GO; GO:0038028; P:insulin receptor signaling pathway via phosphatidylinositol 3-kinase; ISS:UniProtKB.
+DR   GO; GO:0070102; P:interleukin-6-mediated signaling pathway; IMP:UniProtKB.
+DR   GO; GO:0035556; P:intracellular signal transduction; TAS:ProtInc.
+DR   GO; GO:0038109; P:Kit signaling pathway; ISS:UniProtKB.
+DR   GO; GO:0000226; P:microtubule cytoskeleton organization; IMP:UniProtKB.
+DR   GO; GO:0033007; P:negative regulation of mast cell activation involved in immune response; ISS:UniProtKB.
+DR   GO; GO:0018108; P:peptidyl-tyrosine phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0048008; P:platelet-derived growth factor receptor signaling pathway; ISS:UniProtKB.
+DR   GO; GO:0030838; P:positive regulation of actin filament polymerization; IMP:UniProtKB.
+DR   GO; GO:0030335; P:positive regulation of cell migration; IMP:UniProtKB.
+DR   GO; GO:0008284; P:positive regulation of cell population proliferation; IMP:CACAO.
+DR   GO; GO:0051092; P:positive regulation of NF-kappaB transcription factor activity; IMP:UniProtKB.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; TAS:ProtInc.
+DR   GO; GO:0042058; P:regulation of epidermal growth factor receptor signaling pathway; IMP:UniProtKB.
+DR   GO; GO:0010762; P:regulation of fibroblast migration; IEA:Ensembl.
+DR   GO; GO:0010591; P:regulation of lamellipodium assembly; IDA:UniProtKB.
+DR   GO; GO:0043304; P:regulation of mast cell degranulation; IBA:GO_Central.
+DR   GO; GO:0001932; P:regulation of protein phosphorylation; ISS:UniProtKB.
+DR   GO; GO:0032496; P:response to lipopolysaccharide; ISS:UniProtKB.
+DR   GO; GO:0036119; P:response to platelet-derived growth factor; ISS:UniProtKB.
+DR   GO; GO:0060009; P:Sertoli cell development; IEA:Ensembl.
+DR   GO; GO:0034446; P:substrate adhesion-dependent cell spreading; ISS:UniProtKB.
+DR   GO; GO:0007169; P:transmembrane receptor protein tyrosine kinase signaling pathway; IBA:GO_Central.
+DR   GO; GO:0007260; P:tyrosine phosphorylation of STAT protein; IDA:UniProtKB.
+DR   CDD; cd07686; F-BAR_Fer; 1.
+DR   CDD; cd10361; SH2_Fps_family; 1.
+DR   Gene3D; 1.20.1270.60; -; 1.
+DR   Gene3D; 3.30.505.10; -; 1.
+DR   InterPro; IPR027267; AH/BAR_dom_sf.
+DR   InterPro; IPR031160; F_BAR.
+DR   InterPro; IPR001060; FCH_dom.
+DR   InterPro; IPR028539; Fer.
+DR   InterPro; IPR037452; Fer_F-BAR.
+DR   InterPro; IPR035849; Fes/Fps/Fer_SH2.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR000980; SH2.
+DR   InterPro; IPR036860; SH2_dom_sf.
+DR   InterPro; IPR016250; Tyr-prot_kinase_Fes/Fps.
+DR   InterPro; IPR008266; Tyr_kinase_AS.
+DR   InterPro; IPR020635; Tyr_kinase_cat_dom.
+DR   PANTHER; PTHR24418:SF227; PTHR24418:SF227; 1.
+DR   Pfam; PF00611; FCH; 1.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   Pfam; PF00017; SH2; 1.
+DR   PIRSF; PIRSF000632; TyrPK_fps; 1.
+DR   PRINTS; PR00401; SH2DOMAIN.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00055; FCH; 1.
+DR   SMART; SM00252; SH2; 1.
+DR   SMART; SM00219; TyrKc; 1.
+DR   SUPFAM; SSF103657; SSF103657; 1.
+DR   SUPFAM; SSF55550; SSF55550; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS51741; F_BAR; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00109; PROTEIN_KINASE_TYR; 1.
+DR   PROSITE; PS50001; SH2; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative promoter usage; Alternative splicing;
+KW   ATP-binding; Cell junction; Cell membrane; Cell projection; Coiled coil;
+KW   Cytoplasm; Cytoskeleton; Kinase; Lipid-binding; Membrane;
+KW   Nucleotide-binding; Nucleus; Phosphoprotein; Proto-oncogene;
+KW   Reference proteome; SH2 domain; Transferase; Tyrosine-protein kinase;
+KW   Ubl conjugation.
+FT   CHAIN           1..822
+FT                   /note="Tyrosine-protein kinase Fer"
+FT                   /id="PRO_0000088084"
+FT   DOMAIN          1..259
+FT                   /note="F-BAR"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01077"
+FT   DOMAIN          460..550
+FT                   /note="SH2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00191"
+FT   DOMAIN          563..816
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1..300
+FT                   /note="Important for interaction with membranes containing
+FT                   phosphoinositides"
+FT   COILED          123..185
+FT                   /evidence="ECO:0000255"
+FT   COILED          301..390
+FT                   /evidence="ECO:0000255"
+FT   ACT_SITE        684
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10028"
+FT   BINDING         569..577
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         591
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         402
+FT                   /note="Phosphotyrosine"
+FT                   /evidence="ECO:0007744|PubMed:18691976,
+FT                   ECO:0007744|PubMed:19369195"
+FT   MOD_RES         434
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18691976,
+FT                   ECO:0007744|PubMed:19369195, ECO:0007744|PubMed:23186163"
+FT   MOD_RES         615
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250|UniProtKB:P70451"
+FT   MOD_RES         714
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250|UniProtKB:P70451"
+FT   VAR_SEQ         1..369
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:22223638"
+FT                   /id="VSP_043846"
+FT   VAR_SEQ         1..175
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_041765"
+FT   VAR_SEQ         370..412
+FT                   /note="LRCTEAKFSAQKELLEQKVQENDGKEPPPVVNYEEDARSVTSM -> MEQKM
+FT                   KCPHCKDQLESGFGSQSCKTCALMFSSEPSTSEVHRDQ (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:22223638"
+FT                   /id="VSP_043847"
+FT   VARIANT         128
+FT                   /note="V -> F (in dbSNP:rs35150210)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041691"
+FT   VARIANT         404
+FT                   /note="E -> Q (in an ovarian Endometrioid carcinoma sample;
+FT                   somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041692"
+FT   VARIANT         412
+FT                   /note="M -> V (in dbSNP:rs33940843)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041693"
+FT   VARIANT         439
+FT                   /note="L -> V (in dbSNP:rs2229086)"
+FT                   /evidence="ECO:0000269|PubMed:1651563,
+FT                   ECO:0000269|PubMed:17344846, ECO:0000269|PubMed:2725517"
+FT                   /id="VAR_006282"
+FT   VARIANT         443
+FT                   /note="A -> P (in dbSNP:rs34259824)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041694"
+FT   VARIANT         460
+FT                   /note="W -> C (in a lung small cell carcinoma sample;
+FT                   somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041695"
+FT   VARIANT         507
+FT                   /note="I -> T (in dbSNP:rs34204308)"
+FT                   /id="VAR_051695"
+FT   VARIANT         813
+FT                   /note="E -> Q (in dbSNP:rs56097357)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041696"
+FT   MUTAGEN         483
+FT                   /note="R->Q: Abolishes kinase activity. Abolishes location
+FT                   at microtubules."
+FT                   /evidence="ECO:0000269|PubMed:12972546"
+FT   MUTAGEN         591
+FT                   /note="K->R: Abolishes kinase activity."
+FT                   /evidence="ECO:0000269|PubMed:9722593"
+FT   CONFLICT        219
+FT                   /note="I -> L (in Ref. 3; BAG61714)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        234
+FT                   /note="S -> N (in Ref. 3; BAG61714)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        426
+FT                   /note="H -> Q (in Ref. 3; BAG61714)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        447
+FT                   /note="M -> L (in Ref. 2; AEY69041)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        485
+FT                   /note="S -> G (in Ref. 2; AEY69041)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        492
+FT                   /note="Y -> H (in Ref. 2; AEY69041)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        505
+FT                   /note="F -> L (in Ref. 3; BAG61714)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        558
+FT                   /note="L -> F (in Ref. 2; AEY69041)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        730
+FT                   /note="E -> G (in Ref. 3; BAG61714)"
+FT                   /evidence="ECO:0000305"
+FT   HELIX           455..457
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+FT   STRAND          461..464
+FT                   /evidence="ECO:0007829|PDB:2KK6"
+FT   HELIX           467..473
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+FT   STRAND          479..484
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+FT   STRAND          486..488
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+FT   STRAND          492..498
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+FT   STRAND          501..510
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+FT   STRAND          513..518
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+FT   STRAND          521..523
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+FT   HELIX           524..534
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+FT   TURN            540..542
+FT                   /evidence="ECO:0007829|PDB:6KC4"
+SQ   SEQUENCE   822 AA;  94638 MW;  BD42DF6C03419C76 CRC64;
+     MGFGSDLKNS HEAVLKLQDW ELRLLETVKK FMALRIKSDK EYASTLQNLC NQVDKESTVQ
+     MNYVSNVSKS WLLMIQQTEQ LSRIMKTHAE DLNSGPLHRL TMMIKDKQQV KKSYIGVHQQ
+     IEAEMIKVTK TELEKLKCSY RQLIKEMNSA KEKYKEALAK GKETEKAKER YDKATMKLHM
+     LHNQYVLALK GAQLHQNQYY DITLPLLLDS LQKMQEEMIK ALKGIFDEYS QITSLVTEEI
+     VNVHKEIQMS VEQIDPSTEY NNFIDVHRTT AAKEQEIEFD TSLLEENENL QANEIMWNNL
+     TAESLQVMLK TLAEELMQTQ QMLLNKEEAV LELEKRIEES SETCEKKSDI VLLLSQKQAL
+     EELKQSVQQL RCTEAKFSAQ KELLEQKVQE NDGKEPPPVV NYEEDARSVT SMERKERLSK
+     FESIRHSIAG IIRSPKSALG SSALSDMISI SEKPLAEQDW YHGAIPRIEA QELLKKQGDF
+     LVRESHGKPG EYVLSVYSDG QRRHFIIQYV DNMYRFEGTG FSNIPQLIDH HYTTKQVITK
+     KSGVVLLNPI PKDKKWILSH EDVILGELLG KGNFGEVYKG TLKDKTSVAV KTCKEDLPQE
+     LKIKFLQEAK ILKQYDHPNI VKLIGVCTQR QPVYIIMELV SGGDFLTFLR RKKDELKLKQ
+     LVKFSLDAAA GMLYLESKNC IHRDLAARNC LVGENNVLKI SDFGMSRQED GGVYSSSGLK
+     QIPIKWTAPE ALNYGRYSSE SDVWSFGILL WETFSLGVCP YPGMTNQQAR EQVERGYRMS
+     APQHCPEDIS KIMMKCWDYK PENRPKFSEL QKELTIIKRK LT
+//

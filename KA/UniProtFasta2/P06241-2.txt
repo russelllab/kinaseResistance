@@ -1,0 +1,557 @@
+ID   FYN_HUMAN               Reviewed;         534 AA.
+AC   P06241-2;
+DT   01-JAN-1988, integrated into UniProtKB/Swiss-Prot.
+DT   23-JAN-2007, sequence version 3.
+DT   12-OCT-2022, entry version 264.
+DE   RecName: Full=Isoform 2 of Tyrosine-protein kinase Fyn;
+DE            EC=2.7.10.2;
+DE   AltName: Full=Proto-oncogene Syn;
+DE   AltName: Full=Proto-oncogene c-Fyn;
+DE   AltName: Full=Src-like kinase;
+DE            Short=SLK;
+DE   AltName: Full=p59-Fyn;
+GN   Name=FYN;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=3099169; DOI=10.1128/mcb.6.12.4195-4201.1986;
+RA   Kawakami T., Pennington C.Y., Robbins K.C.;
+RT   "Isolation and oncogenic potential of a novel human src-like gene.";
+RL   Mol. Cell. Biol. 6:4195-4201(1986).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RC   TISSUE=Placenta;
+RX   PubMed=3526330; DOI=10.1073/pnas.83.15.5459;
+RA   Semba K., Nishizawa M., Miyajima N., Yoshida M.C., Sukegawa J.,
+RA   Yamanashi Y., Sasaki M., Yamamoto T., Toyoshima K.;
+RT   "Yes-related protooncogene, syn, belongs to the protein-tyrosine kinase
+RT   family.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 83:5459-5463(1986).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2), AND FUNCTION.
+RC   TISSUE=T-cell;
+RX   PubMed=7822789;
+RA   Rigley K., Slocombe P., Proudfoot K., Wahid S., Mandair K., Bebbington C.;
+RT   "Human p59fyn(T) regulates OKT3-induced calcium influx by a mechanism
+RT   distinct from PIP2 hydrolysis in Jurkat T cells.";
+RL   J. Immunol. 154:1136-1145(1995).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RX   PubMed=19054851; DOI=10.1038/nmeth.1273;
+RA   Goshima N., Kawamura Y., Fukumoto A., Miura A., Honma R., Satoh R.,
+RA   Wakamatsu A., Yamamoto J., Kimura K., Nishikawa T., Andoh T., Iida Y.,
+RA   Ishikawa K., Ito E., Kagawa N., Kaminaga C., Kanehori K., Kawakami B.,
+RA   Kenmochi K., Kimura R., Kobayashi M., Kuroita T., Kuwayama H., Maruyama Y.,
+RA   Matsuo K., Minami K., Mitsubori M., Mori M., Morishita R., Murase A.,
+RA   Nishikawa A., Nishikawa S., Okamoto T., Sakagami N., Sakamoto Y.,
+RA   Sasaki Y., Seki T., Sono S., Sugiyama A., Sumiya T., Takayama T.,
+RA   Takayama Y., Takeda H., Togashi T., Yahata K., Yamada H., Yanagisawa Y.,
+RA   Endo Y., Imamoto F., Kisu Y., Tanaka S., Isogai T., Imai J., Watanabe S.,
+RA   Nomura N.;
+RT   "Human protein factory for converting the transcriptome into an in vitro-
+RT   expressed proteome.";
+RL   Nat. Methods 5:1011-1017(2008).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=14574404; DOI=10.1038/nature02055;
+RA   Mungall A.J., Palmer S.A., Sims S.K., Edwards C.A., Ashurst J.L.,
+RA   Wilming L., Jones M.C., Horton R., Hunt S.E., Scott C.E., Gilbert J.G.R.,
+RA   Clamp M.E., Bethel G., Milne S., Ainscough R., Almeida J.P., Ambrose K.D.,
+RA   Andrews T.D., Ashwell R.I.S., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Banerjee R., Barker D.J., Barlow K.F., Bates K., Beare D.M., Beasley H.,
+RA   Beasley O., Bird C.P., Blakey S.E., Bray-Allen S., Brook J., Brown A.J.,
+RA   Brown J.Y., Burford D.C., Burrill W., Burton J., Carder C., Carter N.P.,
+RA   Chapman J.C., Clark S.Y., Clark G., Clee C.M., Clegg S., Cobley V.,
+RA   Collier R.E., Collins J.E., Colman L.K., Corby N.R., Coville G.J.,
+RA   Culley K.M., Dhami P., Davies J., Dunn M., Earthrowl M.E., Ellington A.E.,
+RA   Evans K.A., Faulkner L., Francis M.D., Frankish A., Frankland J.,
+RA   French L., Garner P., Garnett J., Ghori M.J., Gilby L.M., Gillson C.J.,
+RA   Glithero R.J., Grafham D.V., Grant M., Gribble S., Griffiths C.,
+RA   Griffiths M.N.D., Hall R., Halls K.S., Hammond S., Harley J.L., Hart E.A.,
+RA   Heath P.D., Heathcott R., Holmes S.J., Howden P.J., Howe K.L., Howell G.R.,
+RA   Huckle E., Humphray S.J., Humphries M.D., Hunt A.R., Johnson C.M.,
+RA   Joy A.A., Kay M., Keenan S.J., Kimberley A.M., King A., Laird G.K.,
+RA   Langford C., Lawlor S., Leongamornlert D.A., Leversha M., Lloyd C.R.,
+RA   Lloyd D.M., Loveland J.E., Lovell J., Martin S., Mashreghi-Mohammadi M.,
+RA   Maslen G.L., Matthews L., McCann O.T., McLaren S.J., McLay K., McMurray A.,
+RA   Moore M.J.F., Mullikin J.C., Niblett D., Nickerson T., Novik K.L.,
+RA   Oliver K., Overton-Larty E.K., Parker A., Patel R., Pearce A.V., Peck A.I.,
+RA   Phillimore B.J.C.T., Phillips S., Plumb R.W., Porter K.M., Ramsey Y.,
+RA   Ranby S.A., Rice C.M., Ross M.T., Searle S.M., Sehra H.K., Sheridan E.,
+RA   Skuce C.D., Smith S., Smith M., Spraggon L., Squares S.L., Steward C.A.,
+RA   Sycamore N., Tamlyn-Hall G., Tester J., Theaker A.J., Thomas D.W.,
+RA   Thorpe A., Tracey A., Tromans A., Tubby B., Wall M., Wallis J.M.,
+RA   West A.P., White S.S., Whitehead S.L., Whittaker H., Wild A., Willey D.J.,
+RA   Wilmer T.E., Wood J.M., Wray P.W., Wyatt J.C., Young L., Younger R.M.,
+RA   Bentley D.R., Coulson A., Durbin R.M., Hubbard T., Sulston J.E., Dunham I.,
+RA   Rogers J., Beck S.;
+RT   "The DNA sequence and analysis of human chromosome 6.";
+RL   Nature 425:805-811(2003).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 3).
+RC   TISSUE=Blood;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [8]
+RP   MYRISTOYLATION AT GLY-2, AND PHOSPHORYLATION AT TYR-531.
+RX   PubMed=1699196;
+RA   Peters D.J., McGrew B.R., Perron D.C., Liptak L.M., Laudano A.P.;
+RT   "In vivo phosphorylation and membrane association of the fyn proto-oncogene
+RT   product in IM-9 human lymphoblasts.";
+RL   Oncogene 5:1313-1319(1990).
+RN   [9]
+RP   DEPHOSPHORYLATION AT TYR-531 BY PTPRC.
+RX   PubMed=1533589; DOI=10.1002/eji.1830220510;
+RA   Mustelin T., Pessa-Morikawa T., Autero M., Gassmann M., Andersson L.C.,
+RA   Gahmberg C.G., Burn P.;
+RT   "Regulation of the p59fyn protein tyrosine kinase by the CD45
+RT   phosphotyrosine phosphatase.";
+RL   Eur. J. Immunol. 22:1173-1178(1992).
+RN   [10]
+RP   INTERACTION WITH PIK3R1.
+RX   PubMed=8394019; DOI=10.1073/pnas.90.15.7366;
+RA   Prasad K.V., Janssen O., Kapeller R., Raab M., Cantley L.C., Rudd C.E.;
+RT   "Src-homology 3 domain of protein kinase p59fyn mediates binding to
+RT   phosphatidylinositol 3-kinase in T cells.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 90:7366-7370(1993).
+RN   [11]
+RP   PALMITOYLATION.
+RX   PubMed=8206991; DOI=10.1016/s0021-9258(19)89447-4;
+RA   Alland L., Peseckis S.M., Atherton R.E., Berthiaume L., Resh M.D.;
+RT   "Dual myristylation and palmitylation of Src family member p59fyn affects
+RT   subcellular localization.";
+RL   J. Biol. Chem. 269:16701-16705(1994).
+RN   [12]
+RP   FUNCTION IN PHOSPHORYLATION OF CD28.
+RX   PubMed=7568038; DOI=10.1073/pnas.92.19.8891;
+RA   Raab M., Cai Y.C., Bunnell S.C., Heyeck S.D., Berg L.J., Rudd C.E.;
+RT   "p56Lck and p59Fyn regulate CD28 binding to phosphatidylinositol 3-kinase,
+RT   growth factor receptor-bound protein GRB-2, and T cell-specific protein-
+RT   tyrosine kinase ITK: implications for T-cell costimulation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 92:8891-8895(1995).
+RN   [13]
+RP   INTERACTION WITH KIT.
+RX   PubMed=9038210; DOI=10.1074/jbc.272.9.5915;
+RA   Price D.J., Rivnay B., Fu Y., Jiang S., Avraham S., Avraham H.;
+RT   "Direct association of Csk homologous kinase (CHK) with the
+RT   diphosphorylated site Tyr568/570 of the activated c-KIT in
+RT   megakaryocytes.";
+RL   J. Biol. Chem. 272:5915-5920(1997).
+RN   [14]
+RP   INTERACTION WITH NEDD9.
+RX   PubMed=9360983; DOI=10.1074/jbc.272.46.29083;
+RA   Tachibana K., Urano T., Fujita H., Ohashi Y., Kamiguchi K., Iwata S.,
+RA   Hirai H., Morimoto C.;
+RT   "Tyrosine phosphorylation of Crk-associated substrates by focal adhesion
+RT   kinase. A putative mechanism for the integrin-mediated tyrosine
+RT   phosphorylation of Crk-associated substrates.";
+RL   J. Biol. Chem. 272:29083-29090(1997).
+RN   [15]
+RP   INTERACTION WITH FYB1.
+RC   TISSUE=Tonsil;
+RX   PubMed=9207119; DOI=10.1073/pnas.94.14.7493;
+RA   da Silva A.J., Li Z., de Vera C., Canto E., Findell P., Rudd C.E.;
+RT   "Cloning of a novel T-cell protein FYB that binds FYN and SH2-domain-
+RT   containing leukocyte protein 76 and modulates interleukin 2 production.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 94:7493-7498(1997).
+RN   [16]
+RP   INTERACTION WITH CAV1.
+RX   PubMed=9741627; DOI=10.1016/s0092-8674(00)81604-9;
+RA   Wary K.K., Mariotti A., Zurzolo C., Giancotti F.G.;
+RT   "A requirement for caveolin-1 and associated kinase Fyn in integrin
+RT   signaling and anchorage-dependent cell growth.";
+RL   Cell 94:625-634(1998).
+RN   [17]
+RP   TISSUE SPECIFICITY, PHOSPHORYLATION, AND ALTERNATIVE SPLICING.
+RX   PubMed=10196263; DOI=10.1128/jvi.73.5.3709-3717.1999;
+RA   Weil R., Levraud J.P., Dodon M.D., Bessia C., Hazan U., Kourilsky P.,
+RA   Israel A.;
+RT   "Altered expression of tyrosine kinases of the Src and Syk families in
+RT   human T-cell leukemia virus type 1-infected T-cell lines.";
+RL   J. Virol. 73:3709-3717(1999).
+RN   [18]
+RP   INTERACTION WITH EPHA8.
+RX   PubMed=10498895; DOI=10.1038/sj.onc.1202917;
+RA   Choi S., Park S.;
+RT   "Phosphorylation at Tyr-838 in the kinase domain of EphA8 modulates Fyn
+RT   binding to the Tyr-615 site by enhancing tyrosine kinase activity.";
+RL   Oncogene 18:5413-5422(1999).
+RN   [19]
+RP   INTERACTION WITH PAG1.
+RX   PubMed=10790433; DOI=10.1084/jem.191.9.1591;
+RA   Brdicka T., Pavlistova D., Bruyns E., Leo A., Korinek V., Angelisova P.,
+RA   Scherer J., Shevchenko A., Shevchenko A., Hilgert I., Cerny J., Drbal K.,
+RA   Kuramitsu Y., Horejsi V., Schraven B.;
+RT   "Phosphoprotein associated with glycosphingolipid-enriched microdomains
+RT   (PAG), a novel ubiquitously expressed transmembrane adaptor protein, binds
+RT   the protein tyrosine kinase csk and is involved in regulation of T cell
+RT   activation.";
+RL   J. Exp. Med. 191:1591-1604(2000).
+RN   [20]
+RP   FUNCTION IN PHOSPHORYLATION OF VAV1.
+RX   PubMed=11005864; DOI=10.1073/pnas.97.20.10923;
+RA   Huang J., Tilly D., Altman A., Sugie K., Grey H.M.;
+RT   "T-cell receptor antagonists induce Vav phosphorylation by selective
+RT   activation of Fyn kinase.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 97:10923-10929(2000).
+RN   [21]
+RP   FUNCTION IN PHOSPHORYLATION OF SNCA.
+RX   PubMed=11162638; DOI=10.1006/bbrc.2000.4253;
+RA   Nakamura T., Yamashita H., Takahashi T., Nakamura S.;
+RT   "Activated Fyn phosphorylates alpha-synuclein at tyrosine residue 125.";
+RL   Biochem. Biophys. Res. Commun. 280:1085-1092(2001).
+RN   [22]
+RP   INTERACTION WITH HEV ORF3 PROTEIN (MICROBIAL INFECTION).
+RX   PubMed=11518702; DOI=10.1074/jbc.m101546200;
+RA   Korkaya H., Jameel S., Gupta D., Tyagi S., Kumar R., Zafrullah M.,
+RA   Mazumdar M., Lal S.K., Xiaofang L., Sehgal D., Das S.R., Sahal D.;
+RT   "The ORF3 protein of hepatitis E virus binds to Src homology 3 domains and
+RT   activates MAPK.";
+RL   J. Biol. Chem. 276:42389-42400(2001).
+RN   [23]
+RP   FUNCTION.
+RX   PubMed=11536198; DOI=10.1002/neu.1066;
+RA   Wolf R.M., Wilkes J.J., Chao M.V., Resh M.D.;
+RT   "Tyrosine phosphorylation of p190 RhoGAP by Fyn regulates oligodendrocyte
+RT   differentiation.";
+RL   J. Neurobiol. 49:62-78(2001).
+RN   [24]
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=12218089; DOI=10.4049/jimmunol.169.6.2813;
+RA   Yasuda K., Nagafuku M., Shima T., Okada M., Yagi T., Yamada T., Minaki Y.,
+RA   Kato A., Tani-Ichi S., Hamaoka T., Kosugi A.;
+RT   "Fyn is essential for tyrosine phosphorylation of Csk-binding
+RT   protein/phosphoprotein associated with glycolipid-enriched microdomains in
+RT   lipid rafts in resting T cells.";
+RL   J. Immunol. 169:2813-2817(2002).
+RN   [25]
+RP   FUNCTION IN PHOSPHORYLATION OF ARHGAP32.
+RX   PubMed=12788081; DOI=10.1016/s0006-291x(03)00923-9;
+RA   Taniguchi S., Liu H., Nakazawa T., Yokoyama K., Tezuka T., Yamamoto T.;
+RT   "p250GAP, a neural RhoGAP protein, is associated with and phosphorylated by
+RT   Fyn.";
+RL   Biochem. Biophys. Res. Commun. 306:151-155(2003).
+RN   [26]
+RP   FUNCTION IN PHOSPHORYLATION OF TRPC6.
+RX   PubMed=14761972; DOI=10.1074/jbc.m311274200;
+RA   Hisatsune C., Kuroda Y., Nakamura K., Inoue T., Nakamura T., Michikawa T.,
+RA   Mizutani A., Mikoshiba K.;
+RT   "Regulation of TRPC6 channel activity by tyrosine phosphorylation.";
+RL   J. Biol. Chem. 279:18887-18894(2004).
+RN   [27]
+RP   FUNCTION.
+RX   PubMed=15557120; DOI=10.1083/jcb.200405053;
+RA   Meriane M., Tcherkezian J., Webber C.A., Danek E.I., Triki I.,
+RA   McFarlane S., Bloch-Gallego E., Lamarche-Vane N.;
+RT   "Phosphorylation of DCC by Fyn mediates Netrin-1 signaling in growth cone
+RT   guidance.";
+RL   J. Cell Biol. 167:687-698(2004).
+RN   [28]
+RP   FUNCTION IN PHOSPHORYLATION OF WAS.
+RX   PubMed=14707117; DOI=10.1084/jem.20030976;
+RA   Badour K., Zhang J., Shi F., Leng Y., Collins M., Siminovitch K.A.;
+RT   "Fyn and PTP-PEST-mediated regulation of Wiskott-Aldrich syndrome protein
+RT   (WASp) tyrosine phosphorylation is required for coupling T cell antigen
+RT   receptor engagement to WASp effector function and T cell activation.";
+RL   J. Exp. Med. 199:99-112(2004).
+RN   [29]
+RP   INTERACTION WITH UNC119.
+RX   PubMed=14757743; DOI=10.1084/jem.20030589;
+RA   Gorska M.M., Stafford S.J., Cen O., Sur S., Alam R.;
+RT   "Unc119, a novel activator of Lck/Fyn, is essential for T cell
+RT   activation.";
+RL   J. Exp. Med. 199:369-379(2004).
+RN   [30]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=15489916; DOI=10.1038/sj.onc.1208074;
+RA   Palacios E.H., Weiss A.;
+RT   "Function of the Src-family kinases, Lck and Fyn, in T-cell development and
+RT   activation.";
+RL   Oncogene 23:7990-8000(2004).
+RN   [31]
+RP   FUNCTION IN PHOSPHORYLATION OF MAP2.
+RX   PubMed=15536091; DOI=10.1074/jbc.m411380200;
+RA   Zamora-Leon S.P., Bresnick A., Backer J.M., Shafit-Zagardo B.;
+RT   "Fyn phosphorylates human MAP-2c on tyrosine 67.";
+RL   J. Biol. Chem. 280:1962-1970(2005).
+RN   [32]
+RP   PHOSPHORYLATION AT THR-12, AND SUBCELLULAR LOCATION.
+RX   PubMed=15537652; DOI=10.1074/jbc.m402053200;
+RA   He Z., Cho Y.Y., Ma W.Y., Choi H.S., Bode A.M., Dong Z.;
+RT   "Regulation of ultraviolet B-induced phosphorylation of histone H3 at
+RT   serine 10 by Fyn kinase.";
+RL   J. Biol. Chem. 280:2446-2454(2005).
+RN   [33]
+RP   INTERACTION WITH ITCH, AND FUNCTION.
+RX   PubMed=16387660; DOI=10.1016/j.molcel.2005.11.014;
+RA   Yang C., Zhou W., Jeon M.S., Demydenko D., Harada Y., Zhou H., Liu Y.C.;
+RT   "Negative regulation of the E3 ubiquitin ligase itch via Fyn-mediated
+RT   tyrosine phosphorylation.";
+RL   Mol. Cell 21:135-141(2006).
+RN   [34]
+RP   FUNCTION IN PHOSPHORYLATION OF AGAP2.
+RX   PubMed=16841086; DOI=10.1038/sj.cdd.4402011;
+RA   Tang X., Feng Y., Ye K.;
+RT   "Src-family tyrosine kinase fyn phosphorylates phosphatidylinositol 3-
+RT   kinase enhancer-activating Akt, preventing its apoptotic cleavage and
+RT   promoting cell survival.";
+RL   Cell Death Differ. 14:368-377(2007).
+RN   [35]
+RP   INTERACTION WITH PRMT8.
+RX   PubMed=17925405; DOI=10.1074/jbc.m704650200;
+RA   Sayegh J., Webb K., Cheng D., Bedford M.T., Clarke S.G.;
+RT   "Regulation of protein arginine methyltransferase 8 (PRMT8) activity by its
+RT   N-terminal domain.";
+RL   J. Biol. Chem. 282:36444-36453(2007).
+RN   [36]
+RP   FUNCTION IN PHOSPHORYLATION OF CTNND1.
+RX   PubMed=17194753; DOI=10.1128/mcb.01974-06;
+RA   Castano J., Solanas G., Casagolda D., Raurell I., Villagrasa P.,
+RA   Bustelo X.R., Garcia de Herreros A., Dunach M.;
+RT   "Specific phosphorylation of p120-catenin regulatory domain differently
+RT   modulates its binding to RhoA.";
+RL   Mol. Cell. Biol. 27:1745-1757(2007).
+RN   [37]
+RP   FUNCTION IN PHOSPHORYLATION OF PAG1.
+RX   PubMed=18056706; DOI=10.1074/jbc.m705215200;
+RA   Solheim S.A., Torgersen K.M., Tasken K., Berge T.;
+RT   "Regulation of FynT function by dual domain docking on PAG/Cbp.";
+RL   J. Biol. Chem. 283:2773-2783(2008).
+RN   [38]
+RP   FUNCTION IN PHOSPHORYLATION OF KIRREL1.
+RX   PubMed=18258597; DOI=10.1074/jbc.m707247200;
+RA   Harita Y., Kurihara H., Kosako H., Tezuka T., Sekine T., Igarashi T.,
+RA   Hattori S.;
+RT   "Neph1, a component of the kidney slit diaphragm, is tyrosine-
+RT   phosphorylated by the Src family tyrosine kinase and modulates
+RT   intracellular signaling by binding to Grb2.";
+RL   J. Biol. Chem. 283:9177-9186(2008).
+RN   [39]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-21, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Platelet;
+RX   PubMed=18088087; DOI=10.1021/pr0704130;
+RA   Zahedi R.P., Lewandrowski U., Wiesner J., Wortelkamp S., Moebius J.,
+RA   Schuetz C., Walter U., Gambaryan S., Sickmann A.;
+RT   "Phosphoproteome of resting human platelets.";
+RL   J. Proteome Res. 7:526-534(2008).
+RN   [40]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-21 AND TYR-531, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [41]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-21, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [42]
+RP   INTERACTION WITH FASLG.
+RX   PubMed=19807924; DOI=10.1186/1471-2172-10-53;
+RA   Voss M., Lettau M., Janssen O.;
+RT   "Identification of SH3 domain interaction partners of human FasL (CD178) by
+RT   phage display screening.";
+RL   BMC Immunol. 10:53-53(2009).
+RN   [43]
+RP   FUNCTION IN PHOSPHORYLATION OF NPHS1.
+RX   PubMed=19179337; DOI=10.1074/jbc.m806851200;
+RA   Harita Y., Kurihara H., Kosako H., Tezuka T., Sekine T., Igarashi T.,
+RA   Ohsawa I., Ohta S., Hattori S.;
+RT   "Phosphorylation of nephrin triggers Ca2+ signaling by recruitment and
+RT   activation of phospholipase C-{gamma}1.";
+RL   J. Biol. Chem. 284:8951-8962(2009).
+RN   [44]
+RP   FUNCTION IN PHOSPHORYLATION OF DPYSL2.
+RX   PubMed=19652227; DOI=10.1074/jbc.m109.000240;
+RA   Uchida Y., Ohshima T., Yamashita N., Ogawara M., Sasaki Y., Nakamura F.,
+RA   Goshima Y.;
+RT   "Semaphorin3A signaling mediated by Fyn-dependent tyrosine phosphorylation
+RT   of collapsin response mediator protein 2 at tyrosine 32.";
+RL   J. Biol. Chem. 284:27393-27401(2009).
+RN   [45]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-21, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [46]
+RP   FUNCTION IN PTK2B/PYK2 PHOSPHORYLATION.
+RX   PubMed=20028775; DOI=10.1189/jlb.0409227;
+RA   Collins M., Tremblay M., Chapman N., Curtiss M., Rothman P.B.,
+RA   Houtman J.C.;
+RT   "The T cell receptor-mediated phosphorylation of Pyk2 tyrosines 402 and 580
+RT   occurs via a distinct mechanism than other receptor systems.";
+RL   J. Leukoc. Biol. 87:691-701(2010).
+RN   [47]
+RP   FUNCTION, AND INTERACTION WITH RUNX3.
+RX   PubMed=20100835; DOI=10.1074/jbc.m109.071381;
+RA   Goh Y.M., Cinghu S., Hong E.T., Lee Y.S., Kim J.H., Jang J.W., Li Y.H.,
+RA   Chi X.Z., Lee K.S., Wee H., Ito Y., Oh B.C., Bae S.C.;
+RT   "Src kinase phosphorylates RUNX3 at tyrosine residues and localizes the
+RT   protein in the cytoplasm.";
+RL   J. Biol. Chem. 285:10122-10129(2010).
+RN   [48]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-21, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [49]
+RP   FUNCTION IN TCR SIGNALING, PHOSPHORYLATION, AND DEPHOSPHORYLATION AT
+RP   TYR-420 BY PTPN2.
+RX   PubMed=22080863; DOI=10.1172/jci59492;
+RA   Wiede F., Shields B.J., Chew S.H., Kyparissoudis K., van Vliet C.,
+RA   Galic S., Tremblay M.L., Russell S.M., Godfrey D.I., Tiganis T.;
+RT   "T cell protein tyrosine phosphatase attenuates T cell signaling to
+RT   maintain tolerance in mice.";
+RL   J. Clin. Invest. 121:4758-4774(2011).
+RN   [50]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-21 AND SER-26, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [51]
+RP   INTERACTION WITH FYB2 AND FYB1.
+RX   PubMed=27335501; DOI=10.4049/jimmunol.1501913;
+RA   Jung S.H., Yoo E.H., Yu M.J., Song H.M., Kang H.Y., Cho J.Y., Lee J.R.;
+RT   "ARAP, a novel adaptor protein, is required for TCR signaling and integrin-
+RT   mediated adhesion.";
+RL   J. Immunol. 197:942-952(2016).
+RN   [52]
+RP   X-RAY CRYSTALLOGRAPHY (1.9 ANGSTROMS) OF SH3 DOMAIN.
+RX   PubMed=7687536; DOI=10.2210/pdb1shf/pdb;
+RA   Noble M.E.M., Musacchio A., Saraste M., Courtneidge S.A., Wierenga R.K.;
+RT   "Crystal structure of the SH3 domain in human Fyn; comparison of the three-
+RT   dimensional structures of SH3 domains in tyrosine kinases and spectrin.";
+RL   EMBO J. 12:2617-2624(1993).
+RN   [53]
+RP   X-RAY CRYSTALLOGRAPHY (2.3 ANGSTROMS) OF 81-142.
+RX   PubMed=7664083; DOI=10.1038/nsb0894-546;
+RA   Musacchio A., Saraste M., Wilmanns M.;
+RT   "High-resolution crystal structures of tyrosine kinase SH3 domains
+RT   complexed with proline-rich peptides.";
+RL   Nat. Struct. Biol. 1:546-551(1994).
+RN   [54]
+RP   STRUCTURE BY NMR.
+RX   PubMed=8961927; DOI=10.1021/bi9620969;
+RA   Renzoni D.A., Pugh D.J., Siligardi G., Das P., Morton C.J., Rossi C.,
+RA   Waterfield M.D., Campbell I.D., Ladbury J.E.;
+RT   "Structural and thermodynamic characterization of the interaction of the
+RT   SH3 domain from Fyn with the proline-rich binding site on the p85 subunit
+RT   of PI3-kinase.";
+RL   Biochemistry 35:15646-15653(1996).
+RN   [55]
+RP   X-RAY CRYSTALLOGRAPHY (2.5 ANGSTROMS) OF 85-141 IN COMPLEX WITH NEF.
+RX   PubMed=8681387; DOI=10.1016/s0092-8674(00)81276-3;
+RA   Lee C.H., Saksela K., Mirza U.A., Chait B.T., Kuriyan J.;
+RT   "Crystal structure of the conserved core of HIV-1 Nef complexed with a Src
+RT   family SH3 domain.";
+RL   Cell 85:931-942(1996).
+RN   [56]
+RP   STRUCTURE BY NMR OF SH3 DOMAIN.
+RX   PubMed=8805554; DOI=10.1016/s0969-2126(96)00076-7;
+RA   Morton C.J., Pugh D.J.R., Brown E.L.J., Kahmann J.D., Renzoni D.A.C.,
+RA   Campbell I.D.;
+RT   "Solution structure and peptide binding of the SH3 domain from human Fyn.";
+RL   Structure 4:705-714(1996).
+RN   [57]
+RP   STRUCTURE BY NMR OF SH2 DOMAIN.
+RX   PubMed=9351806; DOI=10.1016/s0969-2126(97)00283-9;
+RA   Mulhern T.D., Shaw G.L., Morton C.J., Day A.J., Campbell I.D.;
+RT   "The SH2 domain from the tyrosine kinase Fyn in complex with a
+RT   phosphotyrosyl peptide reveals insights into domain stability and binding
+RT   specificity.";
+RL   Structure 5:1313-1323(1997).
+RN   [58]
+RP   X-RAY CRYSTALLOGRAPHY (2.5 ANGSTROMS) OF 84-144 IN COMPLEX WITH SLAMF1 AND
+RP   SH2D1A.
+RX   PubMed=12545174; DOI=10.1038/ncb920;
+RA   Chan B., Lanyi A., Song H.K., Griesbach J., Simarro-Grande M., Poy F.,
+RA   Howie D., Sumegi J., Terhorst C., Eck M.J.;
+RT   "SAP couples Fyn to SLAM immune receptors.";
+RL   Nat. Cell Biol. 5:155-160(2003).
+RN   [59]
+RP   VARIANTS [LARGE SCALE ANALYSIS] LEU-243; ARG-410 AND GLU-506.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1; Synonyms=B;
+CC         IsoId=P06241-1; Sequence=Displayed;
+CC       Name=2; Synonyms=T;
+CC         IsoId=P06241-2; Sequence=VSP_024110;
+CC       Name=3;
+CC         IsoId=P06241-3; Sequence=VSP_024108;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS5095.1; -.
+DR   RefSeq; NP_694592.1; NM_153047.3.
+DR   ProteomicsDB; 51878; -.
+DR   Ensembl; ENST00000368678.8; ENSP00000357667.4; ENSG00000010810.17.
+DR   Ensembl; ENST00000368682.7; ENSP00000357671.3; ENSG00000010810.17.
+DR   Ensembl; ENST00000538466.5; ENSP00000440646.1; ENSG00000010810.17.
+DR   Proteomes; UP000005640; Chromosome 6.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   534 AA;  60141 MW;  FA082D40A24C2802 CRC64;
+     MGCVQCKDKE ATKLTEERDG SLNQSSGYRY GTDPTPQHYP SFGVTSIPNY NNFHAAGGQG
+     LTVFGGVNSS SHTGTLRTRG GTGVTLFVAL YDYEARTEDD LSFHKGEKFQ ILNSSEGDWW
+     EARSLTTGET GYIPSNYVAP VDSIQAEEWY FGKLGRKDAE RQLLSFGNPR GTFLIRESET
+     TKGAYSLSIR DWDDMKGDHV KHYKIRKLDN GGYYITTRAQ FETLQQLVQH YSEKADGLCF
+     NLTVIASSCT PQTSGLAKDA WEVARRSLCL EKKLGQGCFA EVWLGTWNGN TKVAIKTLKP
+     GTMSPESFLE EAQIMKKLKH DKLVQLYAVV SEEPIYIVTE YMNKGSLLDF LKDGEGRALK
+     LPNLVDMAAQ VAAGMAYIER MNYIHRDLRS ANILVGNGLI CKIADFGLAR LIEDNEYTAR
+     QGAKFPIKWT APEAALYGRF TIKSDVWSFG ILLTELVTKG RVPYPGMNNR EVLEQVERGY
+     RMPCPQDCPI SLHELMIHCW KKDPEERPTF EYLQSFLEDY FTATEPQYQP GENL
+//

@@ -1,0 +1,770 @@
+ID   TAOK1_HUMAN             Reviewed;        1001 AA.
+AC   Q7L7X3; A2RUT8; B7ZLV6; Q96L75; Q9H2K7; Q9H7S5; Q9P2I6;
+DT   25-OCT-2005, integrated into UniProtKB/Swiss-Prot.
+DT   05-JUL-2004, sequence version 1.
+DT   12-OCT-2022, entry version 170.
+DE   RecName: Full=Serine/threonine-protein kinase TAO1;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Kinase from chicken homolog B;
+DE            Short=hKFC-B;
+DE   AltName: Full=MARK Kinase;
+DE            Short=MARKK;
+DE   AltName: Full=Prostate-derived sterile 20-like kinase 2;
+DE            Short=PSK-2;
+DE            Short=PSK2;
+DE            Short=Prostate-derived STE20-like kinase 2;
+DE   AltName: Full=Thousand and one amino acid protein kinase 1;
+DE            Short=TAOK1;
+DE            Short=hTAOK1;
+GN   Name=TAOK1; Synonyms=KIAA1361, MAP3K16, MARKK;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), FUNCTION, TISSUE SPECIFICITY, AND
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=13679851; DOI=10.1038/sj.onc.1206605;
+RA   Yustein J.T., Xia L., Kahlenburg J.M., Robinson D., Templeton D.,
+RA   Kung H.-J.;
+RT   "Comparative studies of a new subfamily of human Ste20-like kinases:
+RT   homodimerization, subcellular localization, and selective activation of
+RT   MKK3 and p38.";
+RL   Oncogene 22:6129-6141(2003).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RA   Jenkins S.G., D'Andrea R.J., Gamble J.R., Vadas M.A.;
+RT   "Characterization of human TAO1.";
+RL   Submitted (JUL-2001) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RA   Matsuda A., Yoneta S.;
+RT   "T cell activating gene.";
+RL   Patent number WO2004058805, 15-JUL-2004.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Brain;
+RX   PubMed=10718198; DOI=10.1093/dnares/7.1.65;
+RA   Nagase T., Kikuno R., Ishikawa K., Hirosawa M., Ohara O.;
+RT   "Prediction of the coding sequences of unidentified human genes. XVI. The
+RT   complete sequences of 150 new cDNA clones from brain which code for large
+RT   proteins in vitro.";
+RL   DNA Res. 7:65-73(2000).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2).
+RC   TISSUE=Placenta;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16625196; DOI=10.1038/nature04689;
+RA   Zody M.C., Garber M., Adams D.J., Sharpe T., Harrow J., Lupski J.R.,
+RA   Nicholson C., Searle S.M., Wilming L., Young S.K., Abouelleil A.,
+RA   Allen N.R., Bi W., Bloom T., Borowsky M.L., Bugalter B.E., Butler J.,
+RA   Chang J.L., Chen C.-K., Cook A., Corum B., Cuomo C.A., de Jong P.J.,
+RA   DeCaprio D., Dewar K., FitzGerald M., Gilbert J., Gibson R., Gnerre S.,
+RA   Goldstein S., Grafham D.V., Grocock R., Hafez N., Hagopian D.S., Hart E.,
+RA   Norman C.H., Humphray S., Jaffe D.B., Jones M., Kamal M., Khodiyar V.K.,
+RA   LaButti K., Laird G., Lehoczky J., Liu X., Lokyitsang T., Loveland J.,
+RA   Lui A., Macdonald P., Major J.E., Matthews L., Mauceli E., McCarroll S.A.,
+RA   Mihalev A.H., Mudge J., Nguyen C., Nicol R., O'Leary S.B., Osoegawa K.,
+RA   Schwartz D.C., Shaw-Smith C., Stankiewicz P., Steward C., Swarbreck D.,
+RA   Venkataraman V., Whittaker C.A., Yang X., Zimmer A.R., Bradley A.,
+RA   Hubbard T., Birren B.W., Rogers J., Lander E.S., Nusbaum C.;
+RT   "DNA sequence of human chromosome 17 and analysis of rearrangement in the
+RT   human lineage.";
+RL   Nature 440:1045-1049(2006).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1 AND 3).
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [9]
+RP   TISSUE SPECIFICITY.
+RX   PubMed=9786855; DOI=10.1074/jbc.273.44.28625;
+RA   Hutchison M., Berman K.S., Cobb M.H.;
+RT   "Isolation of TAO1, a protein kinase that activates MEKs in stress-
+RT   activated protein kinase cascades.";
+RL   J. Biol. Chem. 273:28625-28632(1998).
+RN   [10]
+RP   FUNCTION.
+RX   PubMed=12665513; DOI=10.1074/jbc.m301173200;
+RA   Chen Z., Raman M., Chen L., Lee S.F., Gilman A.G., Cobb M.H.;
+RT   "TAO (thousand-and-one amino acid) protein kinases mediate signaling from
+RT   carbachol to p38 mitogen-activated protein kinase and ternary complex
+RT   factors.";
+RL   J. Biol. Chem. 278:22278-22283(2003).
+RN   [11]
+RP   FUNCTION, PROTEOLYTIC PROCESSING, AND MUTAGENESIS OF LYS-57 AND ASP-376.
+RX   PubMed=16407310; DOI=10.1074/jbc.m513769200;
+RA   Zihni C., Mitsopoulos C., Tavares I.A., Ridley A.J., Morris J.D.;
+RT   "Prostate-derived sterile 20-like kinase 2 (PSK2) regulates apoptotic
+RT   morphology via C-Jun N-terminal kinase and Rho kinase-1.";
+RL   J. Biol. Chem. 281:7317-7323(2006).
+RN   [12]
+RP   INTERACTION WITH MAP3K7.
+RX   PubMed=16893890; DOI=10.1074/jbc.m603627200;
+RA   Huangfu W.C., Omori E., Akira S., Matsumoto K., Ninomiya-Tsuji J.;
+RT   "Osmotic stress activates the TAK1-JNK pathway while blocking TAK1-mediated
+RT   NF-kappaB activation: TAO2 regulates TAK1 pathways.";
+RL   J. Biol. Chem. 281:28802-28810(2006).
+RN   [13]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-421, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=16964243; DOI=10.1038/nbt1240;
+RA   Beausoleil S.A., Villen J., Gerber S.A., Rush J., Gygi S.P.;
+RT   "A probability-based approach for high-throughput protein phosphorylation
+RT   analysis and site localization.";
+RL   Nat. Biotechnol. 24:1285-1292(2006).
+RN   [14]
+RP   FUNCTION, PHOSPHORYLATION BY ATM, INDUCTION, AND MUTAGENESIS OF ASP-169;
+RP   THR-643; THR-785 AND SER-990.
+RX   PubMed=17396146; DOI=10.1038/sj.emboj.7601668;
+RA   Raman M., Earnest S., Zhang K., Zhao Y., Cobb M.H.;
+RT   "TAO kinases mediate activation of p38 in response to DNA damage.";
+RL   EMBO J. 26:2005-2014(2007).
+RN   [15]
+RP   POSSIBLE ROLE IN SPINDLE CHECKPOINT.
+RX   PubMed=17417629; DOI=10.1038/ncb1569;
+RA   Draviam V.M., Stegmeier F., Nalepa G., Sowa M.E., Chen J., Liang A.,
+RA   Hannon G.J., Sorger P.K., Harper J.W., Elledge S.J.;
+RT   "A functional genomic screen identifies a role for TAO1 kinase in spindle-
+RT   checkpoint signalling.";
+RL   Nat. Cell Biol. 9:556-564(2007).
+RN   [16]
+RP   FUNCTION.
+RX   PubMed=17900936; DOI=10.1016/j.cellbi.2007.08.006;
+RA   Wu M.F., Wang S.G.;
+RT   "Human TAO kinase 1 induces apoptosis in SH-SY5Y cells.";
+RL   Cell Biol. Int. 32:151-156(2008).
+RN   [17]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-421 AND SER-965, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Platelet;
+RX   PubMed=18088087; DOI=10.1021/pr0704130;
+RA   Zahedi R.P., Lewandrowski U., Wiesner J., Wortelkamp S., Moebius J.,
+RA   Schuetz C., Walter U., Gambaryan S., Sickmann A.;
+RT   "Phosphoproteome of resting human platelets.";
+RL   J. Proteome Res. 7:526-534(2008).
+RN   [18]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-421, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [19]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-421 AND SER-445, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [20]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J., Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in a
+RT   refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [21]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-9; SER-421 AND THR-669, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [22]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-9 AND SER-421, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [23]
+RP   LACK OF ROLE IN SPINDLE CHECKPOINT.
+RX   PubMed=19904549; DOI=10.1007/s00412-009-0244-2;
+RA   Hubner N.C., Wang L.H., Kaulich M., Descombes P., Poser I., Nigg E.A.;
+RT   "Re-examination of siRNA specificity questions role of PICH and Tao1 in the
+RT   spindle checkpoint and identifies Mad2 as a sensitive target for small
+RT   RNAs.";
+RL   Chromosoma 119:149-165(2010).
+RN   [24]
+RP   LACK OF ROLE IN SPINDLE CHECKPOINT.
+RX   PubMed=20162290; DOI=10.1007/s00412-010-0261-1;
+RA   Westhorpe F.G., Diez M.A., Gurden M.D., Tighe A., Taylor S.S.;
+RT   "Re-evaluating the role of Tao1 in the spindle checkpoint.";
+RL   Chromosoma 119:371-379(2010).
+RN   [25]
+RP   PHOSPHORYLATION BY LRRK2.
+RX   PubMed=20949042; DOI=10.1371/journal.pone.0013191;
+RA   Zach S., Felk S., Gillardon F.;
+RT   "Signal transduction protein array analysis links LRRK2 to Ste20 kinases
+RT   and PKC zeta that modulate neuronal plasticity.";
+RL   PLoS ONE 5:E13191-E13191(2010).
+RN   [26]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [27]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-421, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [28]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-9; SER-421; SER-445 AND
+RP   SER-965, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [29]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [30]
+RP   VARIANT [LARGE SCALE ANALYSIS] THR-855.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [31]
+RP   VARIANTS DDIB GLY-17; PHE-111; GLU-298; ALA-305; 544-GLN--THR-1001 DEL;
+RP   781-GLU--THR-1001 DEL AND 830-GLU--THR-1001 DEL, AND INVOLVEMENT IN DDIB.
+RX   PubMed=31230721; DOI=10.1016/j.ajhg.2019.05.005;
+RA   Dulovic-Mahlow M., Trinh J., Kandaswamy K.K., Braathen G.J., Di Donato N.,
+RA   Rahikkala E., Beblo S., Werber M., Krajka V., Busk O.L., Baumann H.,
+RA   Al-Sannaa N.A., Hinrichs F., Affan R., Navot N., Al Balwi M.A., Oprea G.,
+RA   Holla O.L., Weiss M.E.R., Jamra R.A., Kahlert A.K., Kishore S., Tveten K.,
+RA   Vos M., Rolfs A., Lohmann K.;
+RT   "De Novo Variants in TAOK1 Cause Neurodevelopmental Disorders.";
+RL   Am. J. Hum. Genet. 105:213-220(2019).
+RN   [32]
+RP   VARIANTS DDIB ILE-150; ARG-167; 220-GLU--THR-1001 DEL; VAL-231; PHE-315;
+RP   PRO-548; 605-ARG--THR-1001 DEL; 607-GLN--THR-1001 DEL; 695-ARG--THR-1001
+RP   DEL; 702-ARG--THR-1001 DEL AND 709-ARG--THR-1001 DEL, FUNCTION, AND
+RP   CHARACTERIZATION OF VARIANTS DDIB ARG-167 AND PRO-548.
+RX   PubMed=33565190; DOI=10.1002/humu.24176;
+RA   van Woerden G.M., Bos M., de Konink C., Distel B., Avagliano Trezza R.,
+RA   Shur N.E., Baranano K., Mahida S., Chassevent A., Schreiber A., Erwin A.L.,
+RA   Gripp K.W., Rehman F., Brulleman S., McCormack R., de Geus G., Kalsner L.,
+RA   Sorlin A., Bruel A.L., Koolen D.A., Gabriel M.K., Rossi M.,
+RA   Fitzpatrick D.R., Wilkie A.O.M., Calpena E., Johnson D., Brooks A.,
+RA   van Slegtenhorst M., Fleischer J., Groepper D., Lindstrom K., Innes A.M.,
+RA   Goodwin A., Humberson J., Noyes A., Langley K.G., Telegrafi A., Blevins A.,
+RA   Hoffman J., Guillen Sacoto M.J., Juusola J., Monaghan K.G., Punj S.,
+RA   Simon M., Pfundt R., Elgersma Y., Kleefstra T.;
+RT   "TAOK1 is associated with neurodevelopmental disorder and essential for
+RT   neuronal maturation and cortical development.";
+RL   Hum. Mutat. 42:445-459(2021).
+CC   -!- FUNCTION: Serine/threonine-protein kinase involved in various processes
+CC       such as p38/MAPK14 stress-activated MAPK cascade, DNA damage response
+CC       and regulation of cytoskeleton stability. Phosphorylates MAP2K3, MAP2K6
+CC       and MARK2. Acts as an activator of the p38/MAPK14 stress-activated MAPK
+CC       cascade by mediating phosphorylation and subsequent activation of the
+CC       upstream MAP2K3 and MAP2K6 kinases. Involved in G-protein coupled
+CC       receptor signaling to p38/MAPK14. In response to DNA damage, involved
+CC       in the G2/M transition DNA damage checkpoint by activating the
+CC       p38/MAPK14 stress-activated MAPK cascade, probably by mediating
+CC       phosphorylation of MAP2K3 and MAP2K6. Acts as a regulator of
+CC       cytoskeleton stability by phosphorylating 'Thr-208' of MARK2, leading
+CC       to activate MARK2 kinase activity and subsequent phosphorylation and
+CC       detachment of MAPT/TAU from microtubules. Also acts as a regulator of
+CC       apoptosis: regulates apoptotic morphological changes, including cell
+CC       contraction, membrane blebbing and apoptotic bodies formation via
+CC       activation of the MAPK8/JNK cascade. Plays an essential role in the
+CC       regulation of neuronal development in the central nervous system
+CC       (PubMed:33565190). Also plays a role in the regulation of neuronal
+CC       migration to the cortical plate (By similarity).
+CC       {ECO:0000250|UniProtKB:Q5F2E8, ECO:0000269|PubMed:12665513,
+CC       ECO:0000269|PubMed:13679851, ECO:0000269|PubMed:16407310,
+CC       ECO:0000269|PubMed:17396146, ECO:0000269|PubMed:17900936,
+CC       ECO:0000269|PubMed:33565190}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- ACTIVITY REGULATION: Serine/threonine-protein kinase activity is
+CC       inhibited by SPRED1.
+CC   -!- SUBUNIT: Self-associates. Interacts with MAP2K3 (By similarity).
+CC       Interacts with SPRED1 (By similarity). Interacts with TESK1; the
+CC       interaction inhibits TAOK1 kinase activity (By similarity). Interacts
+CC       with MAP3K7. {ECO:0000250, ECO:0000250|UniProtKB:O88664,
+CC       ECO:0000269|PubMed:16893890}.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:13679851}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1;
+CC         IsoId=Q7L7X3-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q7L7X3-2; Sequence=VSP_015964, VSP_015965, VSP_015966;
+CC       Name=3;
+CC         IsoId=Q7L7X3-3; Sequence=VSP_043706;
+CC   -!- TISSUE SPECIFICITY: Highly expressed in the testis, and to a lower
+CC       extent also expressed in brain, placenta, colon and skeletal muscle.
+CC       {ECO:0000269|PubMed:13679851, ECO:0000269|PubMed:9786855}.
+CC   -!- INDUCTION: In response to DNA damage. {ECO:0000269|PubMed:17396146}.
+CC   -!- PTM: Proteolytically processed by caspase-3 (CASP3).
+CC       {ECO:0000269|PubMed:16407310}.
+CC   -!- PTM: Autophosphorylated (By similarity). Phosphorylated by ATM in
+CC       response to DNA damage. Phosphorylated by LRRK2. {ECO:0000250,
+CC       ECO:0000269|PubMed:17396146, ECO:0000269|PubMed:20949042}.
+CC   -!- DISEASE: Developmental delay with or without intellectual impairment or
+CC       behavioral abnormalities (DDIB) [MIM:619575]: An autosomal dominant
+CC       disorder characterized by a highly variable phenotype of developmental
+CC       delay, intellectual disability, learning or behavioral problems,
+CC       muscular hypotonia, and neonatal feeding difficulties.
+CC       {ECO:0000269|PubMed:31230721, ECO:0000269|PubMed:33565190}. Note=The
+CC       disease is caused by variants affecting the gene represented in this
+CC       entry.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. STE Ser/Thr
+CC       protein kinase family. STE20 subfamily. {ECO:0000305}.
+CC   -!- CAUTION: Was initially thought to play a role in the spindle checkpoint
+CC       (PubMed:17417629). However, it was later shown that it is not the case
+CC       and that phenotypes initially observed are the cause of the siRNA used
+CC       that has an off-target effect resulting in MAD2L1 inhibition
+CC       (PubMed:19904549 and PubMed:20162290). {ECO:0000305|PubMed:17417629}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=BAA92599.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AF263312; AAG38502.1; -; mRNA.
+DR   EMBL; AY049015; AAL12217.1; -; mRNA.
+DR   EMBL; CQ834802; CAH05616.1; -; mRNA.
+DR   EMBL; AB037782; BAA92599.1; ALT_INIT; mRNA.
+DR   EMBL; AK024376; BAB14901.1; -; mRNA.
+DR   EMBL; AC068025; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC068588; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC090698; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471159; EAW51188.1; -; Genomic_DNA.
+DR   EMBL; BC133039; AAI33040.1; -; mRNA.
+DR   EMBL; BC144067; AAI44068.1; -; mRNA.
+DR   CCDS; CCDS32601.1; -. [Q7L7X3-1]
+DR   CCDS; CCDS56024.1; -. [Q7L7X3-3]
+DR   RefSeq; NP_065842.1; NM_020791.2. [Q7L7X3-1]
+DR   RefSeq; NP_079418.1; NM_025142.1. [Q7L7X3-3]
+DR   RefSeq; XP_011523362.1; XM_011525060.2.
+DR   AlphaFoldDB; Q7L7X3; -.
+DR   SMR; Q7L7X3; -.
+DR   BioGRID; 121607; 35.
+DR   DIP; DIP-39709N; -.
+DR   IntAct; Q7L7X3; 24.
+DR   MINT; Q7L7X3; -.
+DR   STRING; 9606.ENSP00000261716; -.
+DR   BindingDB; Q7L7X3; -.
+DR   ChEMBL; CHEMBL5261; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; Q7L7X3; -.
+DR   GuidetoPHARMACOLOGY; 2233; -.
+DR   GlyGen; Q7L7X3; 1 site, 1 O-linked glycan (1 site).
+DR   iPTMnet; Q7L7X3; -.
+DR   MetOSite; Q7L7X3; -.
+DR   PhosphoSitePlus; Q7L7X3; -.
+DR   BioMuta; TAOK1; -.
+DR   DMDM; 74759012; -.
+DR   EPD; Q7L7X3; -.
+DR   jPOST; Q7L7X3; -.
+DR   MassIVE; Q7L7X3; -.
+DR   MaxQB; Q7L7X3; -.
+DR   PaxDb; Q7L7X3; -.
+DR   PeptideAtlas; Q7L7X3; -.
+DR   PRIDE; Q7L7X3; -.
+DR   ProteomicsDB; 68829; -. [Q7L7X3-1]
+DR   ProteomicsDB; 68830; -. [Q7L7X3-2]
+DR   ProteomicsDB; 68831; -. [Q7L7X3-3]
+DR   Antibodypedia; 2089; 390 antibodies from 31 providers.
+DR   DNASU; 57551; -.
+DR   Ensembl; ENST00000261716.8; ENSP00000261716.3; ENSG00000160551.12. [Q7L7X3-1]
+DR   Ensembl; ENST00000536202.1; ENSP00000438819.1; ENSG00000160551.12. [Q7L7X3-3]
+DR   GeneID; 57551; -.
+DR   KEGG; hsa:57551; -.
+DR   MANE-Select; ENST00000261716.8; ENSP00000261716.3; NM_020791.4; NP_065842.1.
+DR   UCSC; uc002hdz.3; human. [Q7L7X3-1]
+DR   CTD; 57551; -.
+DR   DisGeNET; 57551; -.
+DR   GeneCards; TAOK1; -.
+DR   HGNC; HGNC:29259; TAOK1.
+DR   HPA; ENSG00000160551; Low tissue specificity.
+DR   MalaCards; TAOK1; -.
+DR   MIM; 610266; gene.
+DR   MIM; 619575; phenotype.
+DR   neXtProt; NX_Q7L7X3; -.
+DR   OpenTargets; ENSG00000160551; -.
+DR   Orphanet; 178469; Autosomal dominant non-syndromic intellectual disability.
+DR   PharmGKB; PA134872946; -.
+DR   VEuPathDB; HostDB:ENSG00000160551; -.
+DR   eggNOG; KOG0577; Eukaryota.
+DR   GeneTree; ENSGT00940000155796; -.
+DR   HOGENOM; CLU_000288_2_2_1; -.
+DR   InParanoid; Q7L7X3; -.
+DR   OMA; XAKVMAN; -.
+DR   PhylomeDB; Q7L7X3; -.
+DR   TreeFam; TF351444; -.
+DR   PathwayCommons; Q7L7X3; -.
+DR   Reactome; R-HSA-141444; Amplification of signal from unattached kinetochores via a MAD2 inhibitory signal.
+DR   Reactome; R-HSA-2467813; Separation of Sister Chromatids.
+DR   Reactome; R-HSA-2500257; Resolution of Sister Chromatid Cohesion.
+DR   Reactome; R-HSA-5663220; RHO GTPases Activate Formins.
+DR   Reactome; R-HSA-68877; Mitotic Prometaphase.
+DR   Reactome; R-HSA-9648025; EML4 and NUDC in mitotic spindle formation.
+DR   SignaLink; Q7L7X3; -.
+DR   SIGNOR; Q7L7X3; -.
+DR   BioGRID-ORCS; 57551; 55 hits in 1127 CRISPR screens.
+DR   ChiTaRS; TAOK1; human.
+DR   GeneWiki; TAOK1; -.
+DR   GenomeRNAi; 57551; -.
+DR   Pharos; Q7L7X3; Tchem.
+DR   PRO; PR:Q7L7X3; -.
+DR   Proteomes; UP000005640; Chromosome 17.
+DR   RNAct; Q7L7X3; protein.
+DR   Bgee; ENSG00000160551; Expressed in corpus callosum and 196 other tissues.
+DR   ExpressionAtlas; Q7L7X3; baseline and differential.
+DR   Genevisible; Q7L7X3; HS.
+DR   GO; GO:0005737; C:cytoplasm; IBA:GO_Central.
+DR   GO; GO:0005829; C:cytosol; TAS:Reactome.
+DR   GO; GO:0070062; C:extracellular exosome; HDA:UniProtKB.
+DR   GO; GO:0015630; C:microtubule cytoskeleton; IMP:ARUK-UCL.
+DR   GO; GO:0048471; C:perinuclear region of cytoplasm; IMP:ARUK-UCL.
+DR   GO; GO:0043014; F:alpha-tubulin binding; IDA:ARUK-UCL.
+DR   GO; GO:0005524; F:ATP binding; NAS:HGNC-UCL.
+DR   GO; GO:0048487; F:beta-tubulin binding; IDA:ARUK-UCL.
+DR   GO; GO:0016301; F:kinase activity; IDA:ARUK-UCL.
+DR   GO; GO:0004672; F:protein kinase activity; ISS:ARUK-UCL.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0043539; F:protein serine/threonine kinase activator activity; ISS:ARUK-UCL.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; ISS:UniProtKB.
+DR   GO; GO:0048156; F:tau protein binding; NAS:ARUK-UCL.
+DR   GO; GO:0050321; F:tau-protein kinase activity; NAS:ARUK-UCL.
+DR   GO; GO:0016740; F:transferase activity; NAS:HGNC-UCL.
+DR   GO; GO:0006974; P:cellular response to DNA damage stimulus; IDA:UniProtKB.
+DR   GO; GO:0021954; P:central nervous system neuron development; IMP:UniProtKB.
+DR   GO; GO:0006281; P:DNA repair; IEA:UniProtKB-KW.
+DR   GO; GO:0097194; P:execution phase of apoptosis; IDA:UniProtKB.
+DR   GO; GO:0035556; P:intracellular signal transduction; IBA:GO_Central.
+DR   GO; GO:0000165; P:MAPK cascade; IBA:GO_Central.
+DR   GO; GO:0000226; P:microtubule cytoskeleton organization; IMP:ARUK-UCL.
+DR   GO; GO:0007095; P:mitotic G2 DNA damage checkpoint signaling; IMP:UniProtKB.
+DR   GO; GO:0007026; P:negative regulation of microtubule depolymerization; IMP:ARUK-UCL.
+DR   GO; GO:0070050; P:neuron cellular homeostasis; IMP:ARUK-UCL.
+DR   GO; GO:0048812; P:neuron projection morphogenesis; IBA:GO_Central.
+DR   GO; GO:0016310; P:phosphorylation; IDA:ARUK-UCL.
+DR   GO; GO:0046330; P:positive regulation of JNK cascade; IDA:UniProtKB.
+DR   GO; GO:1901985; P:positive regulation of protein acetylation; IMP:ARUK-UCL.
+DR   GO; GO:0032874; P:positive regulation of stress-activated MAPK cascade; IMP:UniProtKB.
+DR   GO; GO:0046777; P:protein autophosphorylation; ISS:ARUK-UCL.
+DR   GO; GO:0006468; P:protein phosphorylation; IBA:GO_Central.
+DR   GO; GO:0032956; P:regulation of actin cytoskeleton organization; ISS:ARUK-UCL.
+DR   GO; GO:0051493; P:regulation of cytoskeleton organization; ISS:UniProtKB.
+DR   GO; GO:0043408; P:regulation of MAPK cascade; IBA:GO_Central.
+DR   GO; GO:0070507; P:regulation of microtubule cytoskeleton organization; ISS:ARUK-UCL.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; Apoptosis; ATP-binding; Coiled coil; Cytoplasm;
+KW   Disease variant; DNA damage; DNA repair; Intellectual disability; Kinase;
+KW   Nucleotide-binding; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Transferase.
+FT   CHAIN           1..1001
+FT                   /note="Serine/threonine-protein kinase TAO1"
+FT                   /id="PRO_0000086728"
+FT   DOMAIN          28..281
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          324..433
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          567..587
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          911..1001
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COILED          458..651
+FT                   /evidence="ECO:0000255"
+FT   COILED          754..877
+FT                   /evidence="ECO:0000255"
+FT   COMPBIAS        340..374
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        400..415
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        958..1001
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        151
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         34..42
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         57
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000305"
+FT   MOD_RES         9
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:19690332, ECO:0007744|PubMed:23186163"
+FT   MOD_RES         421
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:16964243,
+FT                   ECO:0007744|PubMed:18088087, ECO:0007744|PubMed:18669648,
+FT                   ECO:0007744|PubMed:18691976, ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:19690332, ECO:0007744|PubMed:21406692,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         445
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18669648,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         669
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:19369195"
+FT   MOD_RES         965
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18088087,
+FT                   ECO:0007744|PubMed:23186163"
+FT   VAR_SEQ         1..174
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_015964"
+FT   VAR_SEQ         569..716
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_043706"
+FT   VAR_SEQ         569..572
+FT                   /note="ELNE -> VLMS (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_015965"
+FT   VAR_SEQ         573..1001
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_015966"
+FT   VARIANT         17
+FT                   /note="E -> G (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:31230721"
+FT                   /id="VAR_086415"
+FT   VARIANT         111
+FT                   /note="S -> F (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:31230721"
+FT                   /id="VAR_086416"
+FT   VARIANT         150
+FT                   /note="R -> I (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086417"
+FT   VARIANT         167
+FT                   /note="L -> R (in DDIB; affects neuron maturation and
+FT                   migration)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086418"
+FT   VARIANT         220..1001
+FT                   /note="Missing (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086419"
+FT   VARIANT         231
+FT                   /note="M -> V (in DDIB; unknown pathological significance)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086420"
+FT   VARIANT         298
+FT                   /note="K -> E (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:31230721"
+FT                   /id="VAR_086421"
+FT   VARIANT         305
+FT                   /note="D -> A (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:31230721"
+FT                   /id="VAR_086422"
+FT   VARIANT         315
+FT                   /note="L -> F (in DDIB; unknown pathological significance)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086423"
+FT   VARIANT         544..1001
+FT                   /note="Missing (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:31230721"
+FT                   /id="VAR_086424"
+FT   VARIANT         548
+FT                   /note="L -> P (in DDIB; affects neuron maturation and
+FT                   migration)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086425"
+FT   VARIANT         605..1001
+FT                   /note="Missing (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086426"
+FT   VARIANT         607..1001
+FT                   /note="Missing (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086427"
+FT   VARIANT         695..1001
+FT                   /note="Missing (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086428"
+FT   VARIANT         702..1001
+FT                   /note="Missing (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086429"
+FT   VARIANT         709..1001
+FT                   /note="Missing (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:33565190"
+FT                   /id="VAR_086430"
+FT   VARIANT         781..1001
+FT                   /note="Missing (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:31230721"
+FT                   /id="VAR_086431"
+FT   VARIANT         830..1001
+FT                   /note="Missing (in DDIB)"
+FT                   /evidence="ECO:0000269|PubMed:31230721"
+FT                   /id="VAR_086432"
+FT   VARIANT         855
+FT                   /note="A -> T (in dbSNP:rs34151057)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041204"
+FT   MUTAGEN         57
+FT                   /note="K->A: Abolishes kinase activity, ability to activate
+FT                   the MAPK8/JNK cascade and cleavage by caspase-3 (CASP3)."
+FT                   /evidence="ECO:0000269|PubMed:16407310"
+FT   MUTAGEN         169
+FT                   /note="D->A: Loss of serine/threonine-protein kinase
+FT                   activity."
+FT                   /evidence="ECO:0000269|PubMed:17396146"
+FT   MUTAGEN         376
+FT                   /note="D->N: Does not abolish cleavage by caspase-3
+FT                   (CASP3)."
+FT                   /evidence="ECO:0000269|PubMed:16407310"
+FT   MUTAGEN         643
+FT                   /note="T->A: Abolishes phosphorylation by ATM; when
+FT                   associated with A-785 and A-990."
+FT                   /evidence="ECO:0000269|PubMed:17396146"
+FT   MUTAGEN         785
+FT                   /note="T->A: Abolishes phosphorylation by ATM; when
+FT                   associated with A-643 and A-990."
+FT                   /evidence="ECO:0000269|PubMed:17396146"
+FT   MUTAGEN         990
+FT                   /note="S->A: Abolishes phosphorylation by ATM; when
+FT                   associated with A-643 and A-785."
+FT                   /evidence="ECO:0000269|PubMed:17396146"
+FT   CONFLICT        251
+FT                   /note="S -> T (in Ref. 5; BAB14901)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        257
+FT                   /note="F -> S (in Ref. 1; AAG38502)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        860
+FT                   /note="R -> C (in Ref. 1; AAG38502)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   1001 AA;  116070 MW;  82941DEAEADC7651 CRC64;
+     MPSTNRAGSL KDPEIAELFF KEDPEKLFTD LREIGHGSFG AVYFARDVRT NEVVAIKKMS
+     YSGKQSTEKW QDIIKEVKFL QRIKHPNSIE YKGCYLREHT AWLVMEYCLG SASDLLEVHK
+     KPLQEVEIAA ITHGALQGLA YLHSHTMIHR DIKAGNILLT EPGQVKLADF GSASMASPAN
+     SFVGTPYWMA PEVILAMDEG QYDGKVDVWS LGITCIELAE RKPPLFNMNA MSALYHIAQN
+     ESPTLQSNEW SDYFRNFVDS CLQKIPQDRP TSEELLKHIF VLRERPETVL IDLIQRTKDA
+     VRELDNLQYR KMKKLLFQEA HNGPAVEAQE EEEEQDHGVG RTGTVNSVGS NQSIPSMSIS
+     ASSQSSSVNS LPDVSDDKSE LDMMEGDHTV MSNSSVIHLK PEEENYREEG DPRTRASDPQ
+     SPPQVSRHKS HYRNREHFAT IRTASLVTRQ MQEHEQDSEL REQMSGYKRM RRQHQKQLMT
+     LENKLKAEMD EHRLRLDKDL ETQRNNFAAE MEKLIKKHQA AMEKEAKVMS NEEKKFQQHI
+     QAQQKKELNS FLESQKREYK LRKEQLKEEL NENQSTPKKE KQEWLSKQKE NIQHFQAEEE
+     ANLLRRQRQY LELECRRFKR RMLLGRHNLE QDLVREELNK RQTQKDLEHA MLLRQHESMQ
+     ELEFRHLNTI QKMRCELIRL QHQTELTNQL EYNKRREREL RRKHVMEVRQ QPKSLKSKEL
+     QIKKQFQDTC KIQTRQYKAL RNHLLETTPK SEHKAVLKRL KEEQTRKLAI LAEQYDHSIN
+     EMLSTQALRL DEAQEAECQV LKMQLQQELE LLNAYQSKIK MQAEAQHDRE LRELEQRVSL
+     RRALLEQKIE EEMLALQNER TERIRSLLER QAREIEAFDS ESMRLGFSNM VLSNLSPEAF
+     SHSYPGASGW SHNPTGGPGP HWGHPMGGPP QAWGHPMQGG PQPWGHPSGP MQGVPRGSSM
+     GVRNSPQALR RTASGGRTEQ GMSRSTSVTS QISNGSHMSY T
+//

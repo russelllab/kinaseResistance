@@ -1,0 +1,382 @@
+ID   PRKX_HUMAN              Reviewed;         358 AA.
+AC   P51817;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   01-OCT-1996, sequence version 1.
+DT   12-OCT-2022, entry version 187.
+DE   RecName: Full=cAMP-dependent protein kinase catalytic subunit PRKX;
+DE            Short=PrKX;
+DE            Short=Protein kinase X;
+DE            Short=Protein kinase X-linked;
+DE            Short=Serine/threonine-protein kinase PRKX;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Protein kinase PKX1;
+GN   Name=PRKX; Synonyms=PKX1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], AND TISSUE SPECIFICITY.
+RC   TISSUE=Fetal brain;
+RX   PubMed=7633447; DOI=10.1093/hmg/4.5.869;
+RA   Klink A., Schiebel K., Winkelmann M., Rao E., Horsthemke B.,
+RA   Luedecke H.-J., Claussen U., Scherer G., Rappold G.;
+RT   "The human protein kinase gene PKX1 on Xp22.3 displays Xp/Yp homology and
+RT   is a site of chromosomal instability.";
+RL   Hum. Mol. Genet. 4:869-878(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Blood;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [3]
+RP   CHROMOSOMAL TRANSLOCATION WITH PRKY.
+RX   PubMed=9302280; DOI=10.1093/hmg/6.11.1985;
+RA   Schiebel K., Winkelmann M., Mertz A., Xu X., Page D.C., Weil D., Petit C.,
+RA   Rappold G.A.;
+RT   "Abnormal XY interchange between a novel isolated protein kinase gene,
+RT   PRKY, and its homologue, PRKX, accounts for one third of all (Y+)XX males
+RT   and (Y-)XY females.";
+RL   Hum. Mol. Genet. 6:1985-1989(1997).
+RN   [4]
+RP   FUNCTION IN MYELOID CELL DIFFERENTIATION, TISSUE SPECIFICITY, AND INDUCTION
+RP   BY PMA.
+RX   PubMed=9860982; DOI=10.1073/pnas.95.26.15412;
+RA   Semizarov D., Glesne D., Laouar A., Schiebel K., Huberman E.;
+RT   "A lineage-specific protein kinase crucial for myeloid maturation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 95:15412-15417(1998).
+RN   [5]
+RP   CATALYTIC ACTIVITY, KINETIC PARAMETERS, INTERACTION WITH PRKAR1A AND PKI,
+RP   ACTIVITY REGULATION BY PRKAR1A AND PKI, SUBCELLULAR LOCATION, AND
+RP   AUTOPHOSPHORYLATION.
+RX   PubMed=10026146; DOI=10.1074/jbc.274.9.5370;
+RA   Zimmermann B., Chiorini J.A., Ma Y., Kotin R.M., Herberg F.W.;
+RT   "PrKX is a novel catalytic subunit of the cAMP-dependent protein kinase
+RT   regulated by the regulatory subunit type I.";
+RL   J. Biol. Chem. 274:5370-5378(1999).
+RN   [6]
+RP   FUNCTION IN CREB-DEPENDENT TRANSCRIPTION, FUNCTION IN RENAL EPITHELIAL CELL
+RP   MIGRATION AND TUBULOGENESIS, CATALYTIC ACTIVITY, KINETIC PARAMETERS,
+RP   ACTIVITY REGULATION, SUBCELLULAR LOCATION, MUTAGENESIS OF LYS-78, AND
+RP   DEVELOPMENTAL STAGE.
+RX   PubMed=12082174; DOI=10.1073/pnas.132051799;
+RA   Li X., Li H.P., Amsler K., Hyink D., Wilson P.D., Burrow C.R.;
+RT   "PRKX, a phylogenetically and functionally distinct cAMP-dependent protein
+RT   kinase, activates renal epithelial cell migration and morphogenesis.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:9260-9265(2002).
+RN   [7]
+RP   FUNCTION IN NEPHROGENESIS, MUTAGENESIS OF HIS-93 AND TRP-202, TISSUE
+RP   SPECIFICITY, AND DEVELOPMENTAL STAGE.
+RX   PubMed=16236808; DOI=10.1681/asn.2005030240;
+RA   Li X., Hyink D.P., Polgar K., Gusella G.L., Wilson P.D., Burrow C.R.;
+RT   "Protein kinase X activates ureteric bud branching morphogenesis in
+RT   developing mouse metanephric kidney.";
+RL   J. Am. Soc. Nephrol. 16:3543-3552(2005).
+RN   [8]
+RP   TISSUE SPECIFICITY, AND DEVELOPMENTAL STAGE.
+RX   PubMed=15879576; DOI=10.1369/jhc.4a6568.2005;
+RA   Li W., Yu Z.X., Kotin R.M.;
+RT   "Profiles of PrKX expression in developmental mouse embryo and human
+RT   tissues.";
+RL   J. Histochem. Cytochem. 53:1003-1009(2005).
+RN   [9]
+RP   FUNCTION IN MYELOID CELL DIFFERENTIATION, FUNCTION IN PHOSPHORYLATION OF
+RP   SMAD6, AUTOPHOSPHORYLATION, SUBCELLULAR LOCATION, INTERACTION WITH GPKOW;
+RP   PRKAR1A; SMAD6, AND INDUCTION BY PMA.
+RX   PubMed=16491121; DOI=10.1038/sj.onc.1209436;
+RA   Glesne D., Huberman E.;
+RT   "Smad6 is a protein kinase X phosphorylation substrate and is required for
+RT   HL-60 cell differentiation.";
+RL   Oncogene 25:4086-4098(2006).
+RN   [10]
+RP   FUNCTION IN NEPHROGENESIS, FUNCTION IN PHOSPHORYLATION OF PKD1, AND
+RP   INTERACTION WITH PKD1.
+RX   PubMed=17980165; DOI=10.1016/j.bbadis.2007.09.003;
+RA   Li X., Burrow C.R., Polgar K., Hyink D.P., Gusella G.L., Wilson P.D.;
+RT   "Protein kinase X (PRKX) can rescue the effects of polycystic kidney
+RT   disease-1 gene (PKD1) deficiency.";
+RL   Biochim. Biophys. Acta 1782:1-9(2008).
+RN   [11]
+RP   FUNCTION IN NEPHROGENESIS, AND INTERACTION WITH PIN1.
+RX   PubMed=19367327; DOI=10.1038/ki.2009.95;
+RA   Li X., Hyink D.P., Radbill B., Sudol M., Zhang H., Zheleznova N.N.,
+RA   Wilson P.D.;
+RT   "Protein kinase-X interacts with Pin-1 and Polycystin-1 during mouse kidney
+RT   development.";
+RL   Kidney Int. 76:54-62(2009).
+RN   [12]
+RP   ACTIVITY REGULATION, INTERACTION WITH PRKAR1A AND PRKAR1B, AND MUTAGENESIS
+RP   OF ARG-283.
+RX   PubMed=20819953; DOI=10.1074/jbc.m110.155150;
+RA   Diskar M., Zenn H.M., Kaupisch A., Kaufholz M., Brockmeyer S., Sohmen D.,
+RA   Berrera M., Zaccolo M., Boshart M., Herberg F.W., Prinz A.;
+RT   "Regulation of cAMP-dependent protein kinases: the human protein kinase X
+RT   (PrKX) reveals the role of the catalytic subunit alphaH-alphaI loop.";
+RL   J. Biol. Chem. 285:35910-35918(2010).
+RN   [13]
+RP   FUNCTION IN ANGIOGENESIS.
+RX   PubMed=21684272; DOI=10.1016/j.ydbio.2011.05.673;
+RA   Li X., Iomini C., Hyink D., Wilson P.D.;
+RT   "PRKX critically regulates endothelial cell proliferation, migration, and
+RT   vascular-like structure formation.";
+RL   Dev. Biol. 356:475-485(2011).
+RN   [14]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT MET-1, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=22814378; DOI=10.1073/pnas.1210303109;
+RA   Van Damme P., Lasa M., Polevoda B., Gazquez C., Elosegui-Artola A.,
+RA   Kim D.S., De Juan-Pardo E., Demeyer K., Hole K., Larrea E., Timmerman E.,
+RA   Prieto J., Arnesen T., Sherman F., Gevaert K., Aldabe R.;
+RT   "N-terminal acetylome analyses and functional insights of the N-terminal
+RT   acetyltransferase NatB.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:12449-12454(2012).
+CC   -!- FUNCTION: Serine/threonine protein kinase regulated by and mediating
+CC       cAMP signaling in cells. Acts through phosphorylation of downstream
+CC       targets that may include CREB, SMAD6 and PKD1 and has multiple
+CC       functions in cellular differentiation and epithelial morphogenesis.
+CC       Regulates myeloid cell differentiation through SMAD6 phosphorylation.
+CC       Involved in nephrogenesis by stimulating renal epithelial cell
+CC       migration and tubulogenesis. Also involved in angiogenesis through
+CC       stimulation of endothelial cell proliferation, migration and vascular-
+CC       like structure formation. {ECO:0000269|PubMed:12082174,
+CC       ECO:0000269|PubMed:16236808, ECO:0000269|PubMed:16491121,
+CC       ECO:0000269|PubMed:17980165, ECO:0000269|PubMed:19367327,
+CC       ECO:0000269|PubMed:21684272, ECO:0000269|PubMed:9860982}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC         Evidence={ECO:0000269|PubMed:10026146, ECO:0000269|PubMed:12082174};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1; Evidence={ECO:0000269|PubMed:10026146,
+CC         ECO:0000269|PubMed:12082174};
+CC   -!- ACTIVITY REGULATION: Binding of cAMP to the PRKAR1A or PRKAR1B
+CC       regulatory subunits induces dissociation of the holoenzyme
+CC       heterotetramer. The released monomeric PRKX is then active and able to
+CC       phosphorylate its substrates. {ECO:0000269|PubMed:10026146,
+CC       ECO:0000269|PubMed:12082174, ECO:0000269|PubMed:20819953}.
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=127 uM for ATP (in the presence of 10 mM magnesium chloride)
+CC         {ECO:0000269|PubMed:10026146, ECO:0000269|PubMed:12082174};
+CC         KM=58 uM for kemptide (in the presence of 10 mM magnesium chloride)
+CC         {ECO:0000269|PubMed:10026146, ECO:0000269|PubMed:12082174};
+CC         KM=6.7 uM for kemptide (in the presence of 1 uM Br-cAMP at 30 degrees
+CC         Celsius) {ECO:0000269|PubMed:10026146, ECO:0000269|PubMed:12082174};
+CC   -!- SUBUNIT: Like other cAMP-dependent protein kinases, the inactive
+CC       holoenzyme is probably composed of 2 PRKX catalytic subunits and a
+CC       dimer of regulatory subunits. Interacts (cAMP-dependent) specifically
+CC       with the regulatory subunits PRKAR1A and PRKAR1B. Compared to other
+CC       cAMP-dependent serine/threonine protein kinases, does not interact with
+CC       the 2 other PKA regulatory subunits PRKAR2A and PRKAR2B. Interacts with
+CC       cAMP-dependent protein kinase inhibitor/PKI proteins; inhibits PRKX.
+CC       Interacts with GPKOW. Interacts with SMAD6. Interacts with PKD1;
+CC       involved in differentiation and controlled morphogenesis of the kidney.
+CC       Interacts with PIN1 (via WW domain). {ECO:0000269|PubMed:10026146,
+CC       ECO:0000269|PubMed:16491121, ECO:0000269|PubMed:17980165,
+CC       ECO:0000269|PubMed:19367327, ECO:0000269|PubMed:20819953}.
+CC   -!- INTERACTION:
+CC       P51817; Q92917: GPKOW; NbExp=2; IntAct=EBI-4302903, EBI-746309;
+CC       P51817; P08238: HSP90AB1; NbExp=3; IntAct=EBI-4302903, EBI-352572;
+CC       P51817; P10644: PRKAR1A; NbExp=2; IntAct=EBI-4302903, EBI-476431;
+CC       P51817; O43541: SMAD6; NbExp=5; IntAct=EBI-4302903, EBI-976374;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm. Nucleus. Note=cAMP induces nuclear
+CC       translocation.
+CC   -!- TISSUE SPECIFICITY: Widely expressed (at protein level). Specifically
+CC       expressed in blood by macrophages and granulocytes according to
+CC       PubMed:9860982. {ECO:0000269|PubMed:15879576,
+CC       ECO:0000269|PubMed:16236808, ECO:0000269|PubMed:7633447,
+CC       ECO:0000269|PubMed:9860982}.
+CC   -!- DEVELOPMENTAL STAGE: Expression is developmentally regulated being high
+CC       and specific in a wide range of developing tissues including liver,
+CC       kidney, brain and pancreas (at protein level).
+CC       {ECO:0000269|PubMed:12082174, ECO:0000269|PubMed:15879576,
+CC       ECO:0000269|PubMed:16236808}.
+CC   -!- INDUCTION: Up-regulated by phorbol 12-myristate 13-acetate (PMA).
+CC       {ECO:0000269|PubMed:16491121, ECO:0000269|PubMed:9860982}.
+CC   -!- PTM: Phosphorylated; autophosphorylates in vitro.
+CC   -!- DISEASE: Note=A chromosomal aberration involving PRKX is a cause of sex
+CC       reversal disorder. Translocation t(X;Y)(p22;p11) with PRKY. Chromosomal
+CC       translocations proximal to PRKY account for about 30% of the cases of
+CC       sex reversal disorder in XX males and XY females.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. AGC Ser/Thr
+CC       protein kinase family. cAMP subfamily. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; X85545; CAA59733.1; -; mRNA.
+DR   EMBL; BC041073; AAH41073.1; -; mRNA.
+DR   CCDS; CCDS14125.1; -.
+DR   PIR; I38121; I38121.
+DR   RefSeq; NP_005035.1; NM_005044.4.
+DR   AlphaFoldDB; P51817; -.
+DR   SMR; P51817; -.
+DR   BioGRID; 111599; 44.
+DR   IntAct; P51817; 16.
+DR   STRING; 9606.ENSP00000262848; -.
+DR   BindingDB; P51817; -.
+DR   ChEMBL; CHEMBL5818; -.
+DR   DrugCentral; P51817; -.
+DR   GuidetoPHARMACOLOGY; 2175; -.
+DR   iPTMnet; P51817; -.
+DR   PhosphoSitePlus; P51817; -.
+DR   BioMuta; PRKX; -.
+DR   DMDM; 1709648; -.
+DR   EPD; P51817; -.
+DR   jPOST; P51817; -.
+DR   MassIVE; P51817; -.
+DR   MaxQB; P51817; -.
+DR   PaxDb; P51817; -.
+DR   PeptideAtlas; P51817; -.
+DR   PRIDE; P51817; -.
+DR   ProteomicsDB; 56426; -.
+DR   Antibodypedia; 7924; 236 antibodies from 29 providers.
+DR   DNASU; 5613; -.
+DR   Ensembl; ENST00000262848.6; ENSP00000262848.5; ENSG00000183943.6.
+DR   GeneID; 5613; -.
+DR   KEGG; hsa:5613; -.
+DR   MANE-Select; ENST00000262848.6; ENSP00000262848.5; NM_005044.5; NP_005035.1.
+DR   UCSC; uc010nde.4; human.
+DR   CTD; 5613; -.
+DR   DisGeNET; 5613; -.
+DR   GeneCards; PRKX; -.
+DR   HGNC; HGNC:9441; PRKX.
+DR   HPA; ENSG00000183943; Tissue enhanced (thyroid).
+DR   MIM; 300083; gene.
+DR   neXtProt; NX_P51817; -.
+DR   OpenTargets; ENSG00000183943; -.
+DR   PharmGKB; PA33786; -.
+DR   VEuPathDB; HostDB:ENSG00000183943; -.
+DR   eggNOG; KOG0616; Eukaryota.
+DR   GeneTree; ENSGT00940000159832; -.
+DR   HOGENOM; CLU_000288_63_5_1; -.
+DR   InParanoid; P51817; -.
+DR   OMA; QEDPPRY; -.
+DR   OrthoDB; 963519at2759; -.
+DR   PhylomeDB; P51817; -.
+DR   TreeFam; TF313399; -.
+DR   BRENDA; 2.7.11.1; 2681.
+DR   PathwayCommons; P51817; -.
+DR   Reactome; R-HSA-111931; PKA-mediated phosphorylation of CREB.
+DR   Reactome; R-HSA-442720; CREB1 phosphorylation through the activation of Adenylate Cyclase.
+DR   Reactome; R-HSA-9660821; ADORA2B mediated anti-inflammatory cytokines production.
+DR   Reactome; R-HSA-9664323; FCGR3A-mediated IL10 synthesis.
+DR   SABIO-RK; P51817; -.
+DR   SignaLink; P51817; -.
+DR   SIGNOR; P51817; -.
+DR   BioGRID-ORCS; 5613; 8 hits in 731 CRISPR screens.
+DR   ChiTaRS; PRKX; human.
+DR   GenomeRNAi; 5613; -.
+DR   Pharos; P51817; Tchem.
+DR   PRO; PR:P51817; -.
+DR   Proteomes; UP000005640; Chromosome X.
+DR   RNAct; P51817; protein.
+DR   Bgee; ENSG00000183943; Expressed in ganglionic eminence and 153 other tissues.
+DR   ExpressionAtlas; P51817; baseline and differential.
+DR   Genevisible; P51817; HS.
+DR   GO; GO:0005952; C:cAMP-dependent protein kinase complex; IBA:GO_Central.
+DR   GO; GO:0005737; C:cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0005654; C:nucleoplasm; IDA:HPA.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004691; F:cAMP-dependent protein kinase activity; IDA:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0001525; P:angiogenesis; IMP:UniProtKB.
+DR   GO; GO:0007155; P:cell adhesion; IMP:UniProtKB.
+DR   GO; GO:0031589; P:cell-substrate adhesion; IMP:UniProtKB.
+DR   GO; GO:0043542; P:endothelial cell migration; IMP:UniProtKB.
+DR   GO; GO:0001935; P:endothelial cell proliferation; IMP:UniProtKB.
+DR   GO; GO:0060562; P:epithelial tube morphogenesis; IDA:UniProtKB.
+DR   GO; GO:0060993; P:kidney morphogenesis; IDA:UniProtKB.
+DR   GO; GO:0030099; P:myeloid cell differentiation; IDA:UniProtKB.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0030155; P:regulation of cell adhesion; IDA:UniProtKB.
+DR   GO; GO:0030334; P:regulation of cell migration; IDA:UniProtKB.
+DR   GO; GO:2000696; P:regulation of epithelial cell differentiation involved in kidney development; IDA:UniProtKB.
+DR   GO; GO:0007165; P:signal transduction; IBA:GO_Central.
+DR   InterPro; IPR000961; AGC-kinase_C.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00133; S_TK_X; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS51285; AGC_KINASE_CTER; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   Acetylation; Angiogenesis; ATP-binding; cAMP; Chromosomal rearrangement;
+KW   Cytoplasm; Developmental protein; Differentiation; Kinase;
+KW   Nucleotide-binding; Nucleus; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Transferase.
+FT   CHAIN           1..358
+FT                   /note="cAMP-dependent protein kinase catalytic subunit
+FT                   PRKX"
+FT                   /id="PRO_0000086582"
+FT   DOMAIN          49..303
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   DOMAIN          304..358
+FT                   /note="AGC-kinase C-terminal"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00618"
+FT   REGION          1..34
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        172
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         55..63
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         78
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         1
+FT                   /note="N-acetylmethionine"
+FT                   /evidence="ECO:0007744|PubMed:22814378"
+FT   MOD_RES         203
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q922R0"
+FT   VARIANT         43
+FT                   /note="V -> A (in dbSNP:rs3752362)"
+FT                   /id="VAR_061744"
+FT   MUTAGEN         78
+FT                   /note="K->R: Loss of function."
+FT                   /evidence="ECO:0000269|PubMed:12082174"
+FT   MUTAGEN         93
+FT                   /note="H->Q: Constitutive kinase activity; when associated
+FT                   with R-202."
+FT                   /evidence="ECO:0000269|PubMed:16236808"
+FT   MUTAGEN         202
+FT                   /note="W->R: Constitutive kinase activity; when associated
+FT                   with Q-93."
+FT                   /evidence="ECO:0000269|PubMed:16236808"
+FT   MUTAGEN         283
+FT                   /note="R->L: Increases the affinity for PRKAR2A and
+FT                   PRKAR2B."
+FT                   /evidence="ECO:0000269|PubMed:20819953"
+SQ   SEQUENCE   358 AA;  40896 MW;  B603834E3541CB56 CRC64;
+     MEAPGLAQAA AAESDSRKVA EETPDGAPAL CPSPEALSPE PPVYSLQDFD TLATVGTGTF
+     GRVHLVKEKT AKHFFALKVM SIPDVIRLKQ EQHVHNEKSV LKEVSHPFLI RLFWTWHDER
+     FLYMLMEYVP GGELFSYLRN RGRFSSTTGL FYSAEIICAI EYLHSKEIVY RDLKPENILL
+     DRDGHIKLTD FGFAKKLVDR TWTLCGTPEY LAPEVIQSKG HGRAVDWWAL GILIFEMLSG
+     FPPFFDDNPF GIYQKILAGK IDFPRHLDFH VKDLIKKLLV VDRTRRLGNM KNGANDVKHH
+     RWFRSVDWEA VPQRKLKPPI VPKIAGDGDT SNFETYPEND WDTAAPVPQK DLEIFKNF
+//

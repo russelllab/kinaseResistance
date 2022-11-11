@@ -1,0 +1,768 @@
+ID   EPHB1_HUMAN             Reviewed;         984 AA.
+AC   P54762; A8K593; B3KTB2; B5A969; O43569; O95142; O95143; Q0VG87;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   01-OCT-1996, sequence version 1.
+DT   12-OCT-2022, entry version 221.
+DE   RecName: Full=Ephrin type-B receptor 1;
+DE            EC=2.7.10.1;
+DE   AltName: Full=ELK;
+DE   AltName: Full=EPH tyrosine kinase 2;
+DE   AltName: Full=EPH-like kinase 6;
+DE            Short=EK6;
+DE            Short=hEK6;
+DE   AltName: Full=Neuronally-expressed EPH-related tyrosine kinase;
+DE            Short=NET;
+DE   AltName: Full=Tyrosine-protein kinase receptor EPH-2;
+DE   Flags: Precursor;
+GN   Name=EPHB1; Synonyms=ELK, EPHT2, HEK6, NET;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RC   TISSUE=Fetal brain;
+RX   PubMed=8666391; DOI=10.1006/geno.1995.9985;
+RA   Tang X.X., Biegel J.A., Nycum L.M., Yoshioka A., Brodeur G.M.,
+RA   Pleasure D.E., Ikegaki N.;
+RT   "cDNA cloning, molecular characterization, and chromosomal localization of
+RT   NET(EPHT2), a human EPH-related receptor protein-tyrosine kinase gene
+RT   preferentially expressed in brain.";
+RL   Genomics 29:426-437(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), FUNCTION IN CELL ADHESION, FUNCTION
+RP   IN JUN CASCADE ACTIVATION, INTERACTION WITH NCK1, MUTAGENESIS OF TYR-594
+RP   AND LYS-651, AND VARIANT TRP-973.
+RC   TISSUE=Kidney;
+RX   PubMed=9430661; DOI=10.1074/jbc.273.3.1303;
+RA   Stein E., Huynh-Do U., Lane A.A., Cerretti D.P., Daniel T.O.;
+RT   "Nck recruitment to Eph receptor, EphB1/ELK, couples ligand activation to
+RT   c-Jun kinase.";
+RL   J. Biol. Chem. 273:1303-1308(1998).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 3), AND ALTERNATIVE SPLICING.
+RX   PubMed=18593464; DOI=10.1186/ar2447;
+RA   Jin P., Zhang J., Sumariwalla P.F., Ni I., Jorgensen B., Crawford D.,
+RA   Phillips S., Feldmann M., Shepard H.M., Paleolog E.M.;
+RT   "Novel splice variants derived from the receptor tyrosine kinase
+RT   superfamily are potential therapeutics for rheumatoid arthritis.";
+RL   Arthritis Res. Ther. 10:R73-R73(2008).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1 AND 2).
+RC   TISSUE=Tongue;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16641997; DOI=10.1038/nature04728;
+RA   Muzny D.M., Scherer S.E., Kaul R., Wang J., Yu J., Sudbrak R., Buhay C.J.,
+RA   Chen R., Cree A., Ding Y., Dugan-Rocha S., Gill R., Gunaratne P.,
+RA   Harris R.A., Hawes A.C., Hernandez J., Hodgson A.V., Hume J., Jackson A.,
+RA   Khan Z.M., Kovar-Smith C., Lewis L.R., Lozado R.J., Metzker M.L.,
+RA   Milosavljevic A., Miner G.R., Morgan M.B., Nazareth L.V., Scott G.,
+RA   Sodergren E., Song X.-Z., Steffen D., Wei S., Wheeler D.A., Wright M.W.,
+RA   Worley K.C., Yuan Y., Zhang Z., Adams C.Q., Ansari-Lari M.A., Ayele M.,
+RA   Brown M.J., Chen G., Chen Z., Clendenning J., Clerc-Blankenburg K.P.,
+RA   Chen R., Chen Z., Davis C., Delgado O., Dinh H.H., Dong W., Draper H.,
+RA   Ernst S., Fu G., Gonzalez-Garay M.L., Garcia D.K., Gillett W., Gu J.,
+RA   Hao B., Haugen E., Havlak P., He X., Hennig S., Hu S., Huang W.,
+RA   Jackson L.R., Jacob L.S., Kelly S.H., Kube M., Levy R., Li Z., Liu B.,
+RA   Liu J., Liu W., Lu J., Maheshwari M., Nguyen B.-V., Okwuonu G.O.,
+RA   Palmeiri A., Pasternak S., Perez L.M., Phelps K.A., Plopper F.J., Qiang B.,
+RA   Raymond C., Rodriguez R., Saenphimmachak C., Santibanez J., Shen H.,
+RA   Shen Y., Subramanian S., Tabor P.E., Verduzco D., Waldron L., Wang J.,
+RA   Wang J., Wang Q., Williams G.A., Wong G.K.-S., Yao Z., Zhang J., Zhang X.,
+RA   Zhao G., Zhou J., Zhou Y., Nelson D., Lehrach H., Reinhardt R.,
+RA   Naylor S.L., Yang H., Olson M., Weinstock G., Gibbs R.A.;
+RT   "The DNA sequence, annotation and analysis of human chromosome 3.";
+RL   Nature 440:1194-1198(2006).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [7]
+RP   PROTEIN SEQUENCE OF 18-32.
+RX   PubMed=15340161; DOI=10.1110/ps.04682504;
+RA   Zhang Z., Henzel W.J.;
+RT   "Signal peptide prediction based on analysis of experimentally verified
+RT   cleavage sites.";
+RL   Protein Sci. 13:2819-2824(2004).
+RN   [8]
+RP   INTERACTION WITH GRB2 AND GRB10, MUTAGENESIS OF TYR-928, AND
+RP   PHOSPHORYLATION AT TYR-928.
+RX   PubMed=8798570; DOI=10.1074/jbc.271.38.23588;
+RA   Stein E., Cerretti D.P., Daniel T.O.;
+RT   "Ligand activation of ELK receptor tyrosine kinase promotes its association
+RT   with Grb10 and Grb2 in vascular endothelial cells.";
+RL   J. Biol. Chem. 271:23588-23593(1996).
+RN   [9]
+RP   NOMENCLATURE.
+RX   PubMed=9267020; DOI=10.1016/s0092-8674(00)80500-0;
+RG   Eph nomenclature committee;
+RT   "Unified nomenclature for Eph family receptors and their ligands, the
+RT   ephrins.";
+RL   Cell 90:403-404(1997).
+RN   [10]
+RP   FUNCTION IN ANGIOGENESIS, FUNCTION IN CELL ADHESION, INTERACTION WITH ACP1,
+RP   AND MUTAGENESIS OF TYR-928.
+RX   PubMed=9499402; DOI=10.1101/gad.12.5.667;
+RA   Stein E., Lane A.A., Cerretti D.P., Schoecklmann H.O., Schroff A.D.,
+RA   Van Etten R.L., Daniel T.O.;
+RT   "Eph receptors discriminate specific ligand oligomers to determine
+RT   alternative signaling complexes, attachment, and assembly responses.";
+RL   Genes Dev. 12:667-678(1998).
+RN   [11]
+RP   INTERACTION WITH EPHB6.
+RX   PubMed=11713248; DOI=10.1074/jbc.m108011200;
+RA   Freywald A., Sharfe N., Roifman C.M.;
+RT   "The kinase-null EphB6 receptor undergoes transphosphorylation in a complex
+RT   with EphB1.";
+RL   J. Biol. Chem. 277:3823-3828(2002).
+RN   [12]
+RP   INTERACTION WITH GRB7, FUNCTION, PHOSPHORYLATION AT TYR-928, AND
+RP   MUTAGENESIS OF TYR-928.
+RX   PubMed=12223469; DOI=10.1074/jbc.m203165200;
+RA   Han D.C., Shen T.L., Miao H., Wang B., Guan J.L.;
+RT   "EphB1 associates with Grb7 and regulates cell migration.";
+RL   J. Biol. Chem. 277:45655-45661(2002).
+RN   [13]
+RP   FUNCTION IN CELL MIGRATION, FUNCTION IN ERK CASCADE ACTIVATION, INTERACTION
+RP   WITH GRB2; SHC1 AND SRC, AND MUTAGENESIS OF TYR-600 AND TYR-778.
+RX   PubMed=12925710; DOI=10.1083/jcb.200302073;
+RA   Vindis C., Cerretti D.P., Daniel T.O., Huynh-Do U.;
+RT   "EphB1 recruits c-Src and p52Shc to activate MAPK/ERK and promote
+RT   chemotaxis.";
+RL   J. Cell Biol. 162:661-671(2003).
+RN   [14]
+RP   FUNCTION IN ERK CASCADE ACTIVATION, UBIQUITINATION BY CBL, INTERACTION WITH
+RP   CBL, MUTAGENESIS OF LYS-651, AUTOPHOSPHORYLATION, IDENTIFICATION OF EFNB1
+RP   AS LIGAND, AND SUBCELLULAR LOCATION.
+RX   PubMed=18034775; DOI=10.1111/j.1600-0854.2007.00679.x;
+RA   Fasen K., Cerretti D.P., Huynh-Do U.;
+RT   "Ligand binding induces Cbl-dependent EphB1 receptor degradation through
+RT   the lysosomal pathway.";
+RL   Traffic 9:251-266(2008).
+RN   [15]
+RP   STRUCTURE BY NMR OF 899-984.
+RG   RIKEN structural genomics initiative (RSGI);
+RT   "Solution structure of the C-terminal SAM-domain of mouse ephrin type-B
+RT   receptor 1 precursor (EC 2.7.1.112).";
+RL   Submitted (JUL-2007) to the PDB data bank.
+RN   [16]
+RP   STRUCTURE BY NMR OF 434-528.
+RG   RIKEN structural genomics initiative (RSGI);
+RT   "Solution structures of the FN3 domain of human ephrin type-B receptor 1.";
+RL   Submitted (FEB-2009) to the PDB data bank.
+RN   [17]
+RP   VARIANTS [LARGE SCALE ANALYSIS] VAL-18; MET-387; THR-707; VAL-719; GLN-743;
+RP   THR-912 AND MET-981.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Receptor tyrosine kinase which binds promiscuously
+CC       transmembrane ephrin-B family ligands residing on adjacent cells,
+CC       leading to contact-dependent bidirectional signaling into neighboring
+CC       cells. The signaling pathway downstream of the receptor is referred to
+CC       as forward signaling while the signaling pathway downstream of the
+CC       ephrin ligand is referred to as reverse signaling. Cognate/functional
+CC       ephrin ligands for this receptor include EFNB1, EFNB2 and EFNB3. During
+CC       nervous system development, regulates retinal axon guidance redirecting
+CC       ipsilaterally ventrotemporal retinal ganglion cells axons at the optic
+CC       chiasm midline. This probably requires repulsive interaction with
+CC       EFNB2. In the adult nervous system together with EFNB3, regulates
+CC       chemotaxis, proliferation and polarity of the hippocampus neural
+CC       progenitors. In addition to its role in axon guidance also plays an
+CC       important redundant role with other ephrin-B receptors in development
+CC       and maturation of dendritic spines and synapse formation. May also
+CC       regulate angiogenesis. More generally, may play a role in targeted cell
+CC       migration and adhesion. Upon activation by EFNB1 and probably other
+CC       ephrin-B ligands activates the MAPK/ERK and the JNK signaling cascades
+CC       to regulate cell migration and adhesion respectively. Involved in the
+CC       maintenance of the pool of satellite cells (muscle stem cells) by
+CC       promoting their self-renewal and reducing their activation and
+CC       differentiation (By similarity). {ECO:0000250|UniProtKB:Q8CBF3,
+CC       ECO:0000269|PubMed:12223469, ECO:0000269|PubMed:12925710,
+CC       ECO:0000269|PubMed:18034775, ECO:0000269|PubMed:9430661,
+CC       ECO:0000269|PubMed:9499402}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.10.1;
+CC         Evidence={ECO:0000255|PROSITE-ProRule:PRU10028};
+CC   -!- SUBUNIT: Heterotetramer upon binding of the ligand. The heterotetramer
+CC       is composed of an ephrin dimer and a receptor dimer. Oligomerization is
+CC       probably required to induce biological responses (By similarity).
+CC       Interacts with EPHB6; transphosphorylates EPHB6 to form an active
+CC       signaling complex. Interacts with PICK1 (By similarity). Interacts
+CC       (through Tyr-594) with NCK1 (via SH2 domain); activates the JUN cascade
+CC       to regulate cell adhesion (By similarity). The ligand-activated form
+CC       interacts (through Tyr-928) with GRB7 and GRB10 (via SH2 domains). The
+CC       ligand-activated form interacts (residues within the catalytic domain)
+CC       with GRB2 (via SH2 domain). Interacts with GRB2, SHC1 and SRC;
+CC       activates the MAPK/ERK cascade to regulate cell migration. Interacts
+CC       with CBL; regulates receptor degradation through ubiquitination.
+CC       Interacts with ACP1. {ECO:0000250|UniProtKB:Q8CBF3,
+CC       ECO:0000269|PubMed:11713248, ECO:0000269|PubMed:12223469,
+CC       ECO:0000269|PubMed:12925710, ECO:0000269|PubMed:18034775,
+CC       ECO:0000269|PubMed:8798570, ECO:0000269|PubMed:9430661,
+CC       ECO:0000269|PubMed:9499402}.
+CC   -!- INTERACTION:
+CC       P54762; Q13322: GRB10; NbExp=2; IntAct=EBI-80252, EBI-80275;
+CC       P54762; P62993: GRB2; NbExp=2; IntAct=EBI-80252, EBI-401755;
+CC       P54762; Q14451: GRB7; NbExp=4; IntAct=EBI-80252, EBI-970191;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:18034775};
+CC       Single-pass type I membrane protein {ECO:0000269|PubMed:18034775}.
+CC       Early endosome membrane {ECO:0000269|PubMed:18034775}. Cell projection,
+CC       dendrite {ECO:0000250|UniProtKB:Q8CBF3}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1;
+CC         IsoId=P54762-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=P54762-5; Sequence=VSP_056017;
+CC       Name=3;
+CC         IsoId=P54762-6; Sequence=VSP_056018, VSP_056019;
+CC   -!- TISSUE SPECIFICITY: Preferentially expressed in brain.
+CC   -!- PTM: Phosphorylated. Autophosphorylation is stimulated by the ligand
+CC       EFNB1. Required for interaction with SH2 domain-containing interactors,
+CC       for activation of the MAPK/ERK and JUN signaling cascades and for
+CC       ubiquitination by CBL. {ECO:0000269|PubMed:12223469,
+CC       ECO:0000269|PubMed:18034775, ECO:0000269|PubMed:8798570}.
+CC   -!- PTM: Ubiquitinated; (EFNB1)ligand-induced poly- and/or multi-
+CC       ubiquitination by CBL is regulated by SRC and leads to lysosomal
+CC       degradation. {ECO:0000269|PubMed:18034775}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Tyr protein
+CC       kinase family. Ephrin receptor subfamily. {ECO:0000255|PROSITE-
+CC       ProRule:PRU00159}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAB94627.1; Type=Miscellaneous discrepancy; Note=wrong intron-exon boundaries.; Evidence={ECO:0000305};
+CC       Sequence=AAB94628.1; Type=Miscellaneous discrepancy; Note=wrong intron-exon boundaries.; Evidence={ECO:0000305};
+CC       Sequence=AAD02031.1; Type=Miscellaneous discrepancy; Note=Chimeric cDNA.; Evidence={ECO:0000305};
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; L40636; AAB08520.1; -; mRNA.
+DR   EMBL; AF037331; AAD02030.1; -; mRNA.
+DR   EMBL; AF037332; AAD02031.1; ALT_SEQ; mRNA.
+DR   EMBL; AF037333; AAB94627.1; ALT_SEQ; mRNA.
+DR   EMBL; AF037334; AAB94628.1; ALT_SEQ; mRNA.
+DR   EMBL; EU826607; ACF47643.1; -; mRNA.
+DR   EMBL; AK095305; BAG53024.1; -; mRNA.
+DR   EMBL; AK291208; BAF83897.1; -; mRNA.
+DR   EMBL; AC016931; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC016951; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC063918; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC073244; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC092969; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC111744; AAI11745.1; -; mRNA.
+DR   CCDS; CCDS46921.1; -. [P54762-1]
+DR   RefSeq; NP_004432.1; NM_004441.4. [P54762-1]
+DR   PDB; 2DJS; NMR; -; A=434-528.
+DR   PDB; 2EAO; NMR; -; A=899-984.
+DR   PDB; 3ZFX; X-ray; 2.50 A; A/B/C/D/E/F/G/H/I=602-896.
+DR   PDB; 5MJA; X-ray; 2.14 A; A/B=602-896.
+DR   PDB; 5MJB; X-ray; 2.23 A; A/B=602-896.
+DR   PDB; 6UMW; X-ray; 1.98 A; A=602-896.
+DR   PDB; 7KPL; X-ray; 2.71 A; A=611-889.
+DR   PDB; 7KPM; X-ray; 1.61 A; A=611-889.
+DR   PDBsum; 2DJS; -.
+DR   PDBsum; 2EAO; -.
+DR   PDBsum; 3ZFX; -.
+DR   PDBsum; 5MJA; -.
+DR   PDBsum; 5MJB; -.
+DR   PDBsum; 6UMW; -.
+DR   PDBsum; 7KPL; -.
+DR   PDBsum; 7KPM; -.
+DR   AlphaFoldDB; P54762; -.
+DR   SMR; P54762; -.
+DR   BioGRID; 108361; 19.
+DR   IntAct; P54762; 27.
+DR   MINT; P54762; -.
+DR   STRING; 9606.ENSP00000381097; -.
+DR   BindingDB; P54762; -.
+DR   ChEMBL; CHEMBL5072; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; P54762; -.
+DR   GuidetoPHARMACOLOGY; 1830; -.
+DR   GlyGen; P54762; 4 sites.
+DR   iPTMnet; P54762; -.
+DR   PhosphoSitePlus; P54762; -.
+DR   BioMuta; EPHB1; -.
+DR   DMDM; 1706663; -.
+DR   EPD; P54762; -.
+DR   jPOST; P54762; -.
+DR   MassIVE; P54762; -.
+DR   MaxQB; P54762; -.
+DR   PaxDb; P54762; -.
+DR   PeptideAtlas; P54762; -.
+DR   PRIDE; P54762; -.
+DR   ProteomicsDB; 3673; -.
+DR   ProteomicsDB; 56716; -. [P54762-1]
+DR   Antibodypedia; 33398; 584 antibodies from 39 providers.
+DR   DNASU; 2047; -.
+DR   Ensembl; ENST00000398015.8; ENSP00000381097.3; ENSG00000154928.19. [P54762-1]
+DR   Ensembl; ENST00000493838.1; ENSP00000419574.1; ENSG00000154928.19. [P54762-5]
+DR   GeneID; 2047; -.
+DR   KEGG; hsa:2047; -.
+DR   MANE-Select; ENST00000398015.8; ENSP00000381097.3; NM_004441.5; NP_004432.1.
+DR   UCSC; uc003eqt.4; human. [P54762-1]
+DR   CTD; 2047; -.
+DR   DisGeNET; 2047; -.
+DR   GeneCards; EPHB1; -.
+DR   HGNC; HGNC:3392; EPHB1.
+DR   HPA; ENSG00000154928; Tissue enhanced (brain).
+DR   MIM; 600600; gene.
+DR   neXtProt; NX_P54762; -.
+DR   OpenTargets; ENSG00000154928; -.
+DR   PharmGKB; PA27824; -.
+DR   VEuPathDB; HostDB:ENSG00000154928; -.
+DR   eggNOG; KOG0196; Eukaryota.
+DR   GeneTree; ENSGT00940000155297; -.
+DR   HOGENOM; CLU_000288_141_0_1; -.
+DR   InParanoid; P54762; -.
+DR   OMA; MACKACP; -.
+DR   PhylomeDB; P54762; -.
+DR   TreeFam; TF315608; -.
+DR   BRENDA; 2.7.10.1; 2681.
+DR   PathwayCommons; P54762; -.
+DR   Reactome; R-HSA-2682334; EPH-Ephrin signaling.
+DR   Reactome; R-HSA-3928662; EPHB-mediated forward signaling.
+DR   Reactome; R-HSA-3928664; Ephrin signaling.
+DR   Reactome; R-HSA-3928665; EPH-ephrin mediated repulsion of cells.
+DR   SignaLink; P54762; -.
+DR   SIGNOR; P54762; -.
+DR   BioGRID-ORCS; 2047; 6 hits in 1105 CRISPR screens.
+DR   ChiTaRS; EPHB1; human.
+DR   EvolutionaryTrace; P54762; -.
+DR   GeneWiki; EPH_receptor_B1; -.
+DR   GenomeRNAi; 2047; -.
+DR   Pharos; P54762; Tchem.
+DR   PRO; PR:P54762; -.
+DR   Proteomes; UP000005640; Chromosome 3.
+DR   RNAct; P54762; protein.
+DR   Bgee; ENSG00000154928; Expressed in cortical plate and 137 other tissues.
+DR   ExpressionAtlas; P54762; baseline and differential.
+DR   Genevisible; P54762; HS.
+DR   GO; GO:0030424; C:axon; IEA:Ensembl.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0030425; C:dendrite; IEA:UniProtKB-SubCell.
+DR   GO; GO:0031901; C:early endosome membrane; IDA:UniProtKB.
+DR   GO; GO:0005783; C:endoplasmic reticulum; IDA:HPA.
+DR   GO; GO:0070062; C:extracellular exosome; HDA:UniProtKB.
+DR   GO; GO:0005576; C:extracellular region; TAS:Reactome.
+DR   GO; GO:0032433; C:filopodium tip; IEA:Ensembl.
+DR   GO; GO:0098978; C:glutamatergic synapse; IEA:Ensembl.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0045121; C:membrane raft; IEA:Ensembl.
+DR   GO; GO:0043005; C:neuron projection; IBA:GO_Central.
+DR   GO; GO:0005886; C:plasma membrane; IDA:HPA.
+DR   GO; GO:0043235; C:receptor complex; IBA:GO_Central.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0008046; F:axon guidance receptor activity; IEA:Ensembl.
+DR   GO; GO:0044877; F:protein-containing complex binding; IEA:Ensembl.
+DR   GO; GO:0004714; F:transmembrane receptor protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:0005005; F:transmembrane-ephrin receptor activity; IDA:UniProtKB.
+DR   GO; GO:0001525; P:angiogenesis; IDA:UniProtKB.
+DR   GO; GO:0007411; P:axon guidance; ISS:UniProtKB.
+DR   GO; GO:0048593; P:camera-type eye morphogenesis; IEA:Ensembl.
+DR   GO; GO:0060326; P:cell chemotaxis; IDA:UniProtKB.
+DR   GO; GO:0031589; P:cell-substrate adhesion; IDA:UniProtKB.
+DR   GO; GO:0021952; P:central nervous system projection neuron axonogenesis; ISS:UniProtKB.
+DR   GO; GO:0060996; P:dendritic spine development; ISS:UniProtKB.
+DR   GO; GO:0060997; P:dendritic spine morphogenesis; ISS:UniProtKB.
+DR   GO; GO:0050965; P:detection of temperature stimulus involved in sensory perception of pain; ISS:UniProtKB.
+DR   GO; GO:0048013; P:ephrin receptor signaling pathway; IDA:UniProtKB.
+DR   GO; GO:0030010; P:establishment of cell polarity; ISS:UniProtKB.
+DR   GO; GO:0021934; P:hindbrain tangential cell migration; IEA:Ensembl.
+DR   GO; GO:0001771; P:immunological synapse formation; IEA:Ensembl.
+DR   GO; GO:0050804; P:modulation of chemical synaptic transmission; IEA:Ensembl.
+DR   GO; GO:1902725; P:negative regulation of satellite cell differentiation; ISS:UniProtKB.
+DR   GO; GO:1902723; P:negative regulation of skeletal muscle satellite cell proliferation; ISS:UniProtKB.
+DR   GO; GO:0061351; P:neural precursor cell proliferation; ISS:UniProtKB.
+DR   GO; GO:0022008; P:neurogenesis; ISS:UniProtKB.
+DR   GO; GO:0021631; P:optic nerve morphogenesis; IEA:Ensembl.
+DR   GO; GO:0033674; P:positive regulation of kinase activity; IBA:GO_Central.
+DR   GO; GO:0051965; P:positive regulation of synapse assembly; ISS:UniProtKB.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0070372; P:regulation of ERK1 and ERK2 cascade; IDA:UniProtKB.
+DR   GO; GO:0046328; P:regulation of JNK cascade; IDA:UniProtKB.
+DR   GO; GO:1901214; P:regulation of neuron death; IMP:UniProtKB.
+DR   GO; GO:0031290; P:retinal ganglion cell axon guidance; ISS:UniProtKB.
+DR   GO; GO:0014719; P:skeletal muscle satellite cell activation; ISS:UniProtKB.
+DR   GO; GO:0007169; P:transmembrane receptor protein tyrosine kinase signaling pathway; IBA:GO_Central.
+DR   CDD; cd10476; EphR_LBD_B1; 1.
+DR   CDD; cd00063; FN3; 2.
+DR   CDD; cd09551; SAM_EPH-B1; 1.
+DR   Gene3D; 1.10.150.50; -; 1.
+DR   Gene3D; 2.60.40.10; -; 2.
+DR   InterPro; IPR027936; Eph_TM.
+DR   InterPro; IPR034231; EphB1_rcpt_lig-bd.
+DR   InterPro; IPR042819; EphB1_SAM.
+DR   InterPro; IPR001090; Ephrin_rcpt_lig-bd_dom.
+DR   InterPro; IPR003961; FN3_dom.
+DR   InterPro; IPR036116; FN3_sf.
+DR   InterPro; IPR008979; Galactose-bd-like_sf.
+DR   InterPro; IPR009030; Growth_fac_rcpt_cys_sf.
+DR   InterPro; IPR013783; Ig-like_fold.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR001660; SAM.
+DR   InterPro; IPR013761; SAM/pointed_sf.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR008266; Tyr_kinase_AS.
+DR   InterPro; IPR020635; Tyr_kinase_cat_dom.
+DR   InterPro; IPR016257; Tyr_kinase_ephrin_rcpt.
+DR   InterPro; IPR001426; Tyr_kinase_rcpt_V_CS.
+DR   Pfam; PF14575; EphA2_TM; 1.
+DR   Pfam; PF01404; Ephrin_lbd; 1.
+DR   Pfam; PF00041; fn3; 2.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   Pfam; PF00536; SAM_1; 1.
+DR   PIRSF; PIRSF000666; TyrPK_ephrin_receptor; 1.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00615; EPH_lbd; 1.
+DR   SMART; SM00060; FN3; 2.
+DR   SMART; SM00454; SAM; 1.
+DR   SMART; SM00219; TyrKc; 1.
+DR   SUPFAM; SSF47769; SSF47769; 1.
+DR   SUPFAM; SSF49265; SSF49265; 1.
+DR   SUPFAM; SSF49785; SSF49785; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   SUPFAM; SSF57184; SSF57184; 1.
+DR   PROSITE; PS01186; EGF_2; 1.
+DR   PROSITE; PS51550; EPH_LBD; 1.
+DR   PROSITE; PS50853; FN3; 2.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00109; PROTEIN_KINASE_TYR; 1.
+DR   PROSITE; PS00790; RECEPTOR_TYR_KIN_V_1; 1.
+DR   PROSITE; PS00791; RECEPTOR_TYR_KIN_V_2; 1.
+DR   PROSITE; PS50105; SAM_DOMAIN; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Cell adhesion;
+KW   Cell membrane; Cell projection; Direct protein sequencing; Endosome;
+KW   Glycoprotein; Kinase; Membrane; Neurogenesis; Nucleotide-binding;
+KW   Phosphoprotein; Receptor; Reference proteome; Repeat; Signal; Transferase;
+KW   Transmembrane; Transmembrane helix; Tyrosine-protein kinase;
+KW   Ubl conjugation.
+FT   SIGNAL          1..17
+FT                   /evidence="ECO:0000269|PubMed:15340161"
+FT   CHAIN           18..984
+FT                   /note="Ephrin type-B receptor 1"
+FT                   /id="PRO_0000016824"
+FT   TOPO_DOM        18..540
+FT                   /note="Extracellular"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        541..563
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        564..984
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          19..201
+FT                   /note="Eph LBD"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00883"
+FT   DOMAIN          322..432
+FT                   /note="Fibronectin type-III 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00316"
+FT   DOMAIN          433..528
+FT                   /note="Fibronectin type-III 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00316"
+FT   DOMAIN          619..882
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   DOMAIN          911..975
+FT                   /note="SAM"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00184"
+FT   MOTIF           982..984
+FT                   /note="PDZ-binding"
+FT                   /evidence="ECO:0000255"
+FT   ACT_SITE        744
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10028"
+FT   BINDING         625..633
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         651
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000305"
+FT   MOD_RES         600
+FT                   /note="Phosphotyrosine"
+FT                   /evidence="ECO:0000250|UniProtKB:P54753"
+FT   MOD_RES         928
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250"
+FT   CARBOHYD        334
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        426
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        480
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   VAR_SEQ         1..439
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_056017"
+FT   VAR_SEQ         158..242
+FT                   /note="VNTEVRSFGPLTRNGFYLAFQDYGACMSLLSVRVFFKKCPSIVQNFAVFPET
+FT                   MTGAESTSLVIARGTCIPNAEEVDVPIKLYCNG -> LALQGHSRPARKLKAAPTAPPT
+FT                   AAPLQRRLPSAPVGPVITERTLTLQKWHALASHQVPAMLSPSSMRRPSFWSGTLQGRQV
+FT                   GGMM (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:18593464"
+FT                   /id="VSP_056018"
+FT   VAR_SEQ         243..984
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:18593464"
+FT                   /id="VSP_056019"
+FT   VARIANT         18
+FT                   /note="M -> V (in dbSNP:rs55650774)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042165"
+FT   VARIANT         87
+FT                   /note="T -> S (in dbSNP:rs1042794)"
+FT                   /id="VAR_011801"
+FT   VARIANT         152
+FT                   /note="G -> R (in dbSNP:rs1042793)"
+FT                   /id="VAR_011802"
+FT   VARIANT         367
+FT                   /note="R -> G (in dbSNP:rs1042789)"
+FT                   /id="VAR_011803"
+FT   VARIANT         387
+FT                   /note="T -> M (in dbSNP:rs56396912)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042166"
+FT   VARIANT         485
+FT                   /note="R -> S (in dbSNP:rs1042788)"
+FT                   /id="VAR_011804"
+FT   VARIANT         707
+FT                   /note="S -> T (in an ovarian undifferentiated carcinoma
+FT                   sample; somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042167"
+FT   VARIANT         719
+FT                   /note="I -> V (in a gastric adenocarcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042168"
+FT   VARIANT         743
+FT                   /note="R -> Q (in a gastric adenocarcinoma sample; somatic
+FT                   mutation; dbSNP:rs1338928289)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042169"
+FT   VARIANT         847
+FT                   /note="M -> T (in dbSNP:rs1042785)"
+FT                   /id="VAR_011805"
+FT   VARIANT         912
+FT                   /note="A -> T (in dbSNP:rs56345346)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042170"
+FT   VARIANT         973
+FT                   /note="R -> W (in dbSNP:rs1042784)"
+FT                   /evidence="ECO:0000269|PubMed:9430661"
+FT                   /id="VAR_058479"
+FT   VARIANT         981
+FT                   /note="T -> M (in dbSNP:rs56186270)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042171"
+FT   MUTAGEN         594
+FT                   /note="Y->F: Loss of interaction with NCK1."
+FT                   /evidence="ECO:0000269|PubMed:9430661"
+FT   MUTAGEN         600
+FT                   /note="Y->F: Loss of interaction with SHC1 and SRC."
+FT                   /evidence="ECO:0000269|PubMed:12925710"
+FT   MUTAGEN         651
+FT                   /note="K->R: Kinase-dead mutant. Unable to
+FT                   autophosphorylate, to interact with SH2 domain-containing
+FT                   interactors, to activate the MAPK/ERK and JUN signaling
+FT                   cascades. Not ubiquitinated by CBL."
+FT                   /evidence="ECO:0000269|PubMed:18034775,
+FT                   ECO:0000269|PubMed:9430661"
+FT   MUTAGEN         778
+FT                   /note="Y->F: Loss of interaction with SHC1."
+FT                   /evidence="ECO:0000269|PubMed:12925710"
+FT   MUTAGEN         928
+FT                   /note="Y->F: Disrupts binding with the GRB10 SH2 domain,
+FT                   providing evidence for phosphorylation. Disrupts
+FT                   interaction with GRB7 and ACP1."
+FT                   /evidence="ECO:0000269|PubMed:12223469,
+FT                   ECO:0000269|PubMed:8798570, ECO:0000269|PubMed:9499402"
+FT   CONFLICT        12
+FT                   /note="A -> E (in Ref. 2; AAD02030/AAB94627/AAB94628)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        185
+FT                   /note="S -> I (in Ref. 2;
+FT                   AAD02030/AAD02031/AAB94627/AAB94628)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        274
+FT                   /note="T -> R (in Ref. 2;
+FT                   AAD02030/AAD02031/AAB94627/AAB94628)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        336
+FT                   /note="T -> S (in Ref. 2;
+FT                   AAD02030/AAD02031/AAB94627/AAB94628)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        752
+FT                   /note="V -> L (in Ref. 6; AAI11745)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        813
+FT                   /note="V -> H (in Ref. 2; AAD02030/AAB94627)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        819
+FT                   /note="S -> Y (in Ref. 2; AAD02030/AAB94627)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        881
+FT                   /note="M -> I (in Ref. 4; BAF83897)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        903
+FT                   /note="L -> H (in Ref. 4; BAF83897)"
+FT                   /evidence="ECO:0000305"
+FT   STRAND          441..445
+FT                   /evidence="ECO:0007829|PDB:2DJS"
+FT   STRAND          447..453
+FT                   /evidence="ECO:0007829|PDB:2DJS"
+FT   STRAND          464..473
+FT                   /evidence="ECO:0007829|PDB:2DJS"
+FT   STRAND          482..495
+FT                   /evidence="ECO:0007829|PDB:2DJS"
+FT   STRAND          501..512
+FT                   /evidence="ECO:0007829|PDB:2DJS"
+FT   STRAND          514..517
+FT                   /evidence="ECO:0007829|PDB:2DJS"
+FT   STRAND          521..524
+FT                   /evidence="ECO:0007829|PDB:2DJS"
+FT   HELIX           616..618
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          619..627
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          632..638
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          646..652
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           659..673
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          683..687
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          689..692
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          694..698
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           705..710
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   TURN            711..714
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           718..737
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           747..749
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          750..752
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          758..760
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          783..786
+FT                   /evidence="ECO:0007829|PDB:5MJB"
+FT   HELIX           788..790
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           793..798
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           803..818
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   TURN            824..827
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           830..838
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           851..860
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           865..867
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           871..883
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   HELIX           885..887
+FT                   /evidence="ECO:0007829|PDB:7KPM"
+FT   STRAND          889..891
+FT                   /evidence="ECO:0007829|PDB:3ZFX"
+FT   HELIX           916..921
+FT                   /evidence="ECO:0007829|PDB:2EAO"
+FT   TURN            922..924
+FT                   /evidence="ECO:0007829|PDB:2EAO"
+FT   HELIX           926..928
+FT                   /evidence="ECO:0007829|PDB:2EAO"
+FT   HELIX           929..935
+FT                   /evidence="ECO:0007829|PDB:2EAO"
+FT   HELIX           940..943
+FT                   /evidence="ECO:0007829|PDB:2EAO"
+FT   HELIX           948..954
+FT                   /evidence="ECO:0007829|PDB:2EAO"
+FT   HELIX           959..975
+FT                   /evidence="ECO:0007829|PDB:2EAO"
+SQ   SEQUENCE   984 AA;  109885 MW;  8044160E24E93A92 CRC64;
+     MALDYLLLLL LASAVAAMEE TLMDTRTATA ELGWTANPAS GWEEVSGYDE NLNTIRTYQV
+     CNVFEPNQNN WLLTTFINRR GAHRIYTEMR FTVRDCSSLP NVPGSCKETF NLYYYETDSV
+     IATKKSAFWS EAPYLKVDTI AADESFSQVD FGGRLMKVNT EVRSFGPLTR NGFYLAFQDY
+     GACMSLLSVR VFFKKCPSIV QNFAVFPETM TGAESTSLVI ARGTCIPNAE EVDVPIKLYC
+     NGDGEWMVPI GRCTCKPGYE PENSVACKAC PAGTFKASQE AEGCSHCPSN SRSPAEASPI
+     CTCRTGYYRA DFDPPEVACT SVPSGPRNVI SIVNETSIIL EWHPPRETGG RDDVTYNIIC
+     KKCRADRRSC SRCDDNVEFV PRQLGLTECR VSISSLWAHT PYTFDIQAIN GVSSKSPFPP
+     QHVSVNITTN QAAPSTVPIM HQVSATMRSI TLSWPQPEQP NGIILDYEIR YYEKEHNEFN
+     SSMARSQTNT ARIDGLRPGM VYVVQVRART VAGYGKFSGK MCFQTLTDDD YKSELREQLP
+     LIAGSAAAGV VFVVSLVAIS IVCSRKRAYS KEAVYSDKLQ HYSTGRGSPG MKIYIDPFTY
+     EDPNEAVREF AKEIDVSFVK IEEVIGAGEF GEVYKGRLKL PGKREIYVAI KTLKAGYSEK
+     QRRDFLSEAS IMGQFDHPNI IRLEGVVTKS RPVMIITEFM ENGALDSFLR QNDGQFTVIQ
+     LVGMLRGIAA GMKYLAEMNY VHRDLAARNI LVNSNLVCKV SDFGLSRYLQ DDTSDPTYTS
+     SLGGKIPVRW TAPEAIAYRK FTSASDVWSY GIVMWEVMSF GERPYWDMSN QDVINAIEQD
+     YRLPPPMDCP AALHQLMLDC WQKDRNSRPR FAEIVNTLDK MIRNPASLKT VATITAVPSQ
+     PLLDRSIPDF TAFTTVDDWL SAIKMVQYRD SFLTAGFTSL QLVTQMTSED LLRIGITLAG
+     HQKKILNSIH SMRVQISQSP TAMA
+//

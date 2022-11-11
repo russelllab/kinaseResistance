@@ -1,0 +1,371 @@
+ID   CDK15_HUMAN             Reviewed;         435 AA.
+AC   Q96Q40; A8K8R9; B8ZZX0; C9J1N8; C9K003; F8W6H8; Q4ZG86; Q53TV1; Q6ZMR9;
+AC   Q8IUP1;
+DT   19-OCT-2002, integrated into UniProtKB/Swiss-Prot.
+DT   02-MAR-2010, sequence version 2.
+DT   12-OCT-2022, entry version 181.
+DE   RecName: Full=Cyclin-dependent kinase 15;
+DE            EC=2.7.11.22 {ECO:0000269|PubMed:24866247};
+DE   AltName: Full=Amyotrophic lateral sclerosis 2 chromosomal region candidate gene 7 protein;
+DE   AltName: Full=Cell division protein kinase 15;
+DE   AltName: Full=Serine/threonine-protein kinase ALS2CR7;
+DE   AltName: Full=Serine/threonine-protein kinase PFTAIRE-2;
+GN   Name=CDK15; Synonyms=ALS2CR7, PFTK2;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 4).
+RC   TISSUE=Testis;
+RX   PubMed=11586298; DOI=10.1038/ng1001-166;
+RA   Hadano S., Hand C.K., Osuga H., Yanagisawa Y., Otomo A., Devon R.S.,
+RA   Miyamoto N., Showguchi-Miyata J., Okada Y., Singaraja R., Figlewicz D.A.,
+RA   Kwiatkowski T., Hosler B.A., Sagie T., Skaug J., Nasir J., Brown R.H. Jr.,
+RA   Scherer S.W., Rouleau G.A., Hayden M.R., Ikeda J.-E.;
+RT   "A gene encoding a putative GTPase regulator is mutated in familial
+RT   amyotrophic lateral sclerosis 2.";
+RL   Nat. Genet. 29:166-173(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 4 AND 6).
+RC   TISSUE=Glial tumor, and Testis;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15815621; DOI=10.1038/nature03466;
+RA   Hillier L.W., Graves T.A., Fulton R.S., Fulton L.A., Pepin K.H., Minx P.,
+RA   Wagner-McPherson C., Layman D., Wylie K., Sekhon M., Becker M.C.,
+RA   Fewell G.A., Delehaunty K.D., Miner T.L., Nash W.E., Kremitzki C., Oddy L.,
+RA   Du H., Sun H., Bradshaw-Cordum H., Ali J., Carter J., Cordes M., Harris A.,
+RA   Isak A., van Brunt A., Nguyen C., Du F., Courtney L., Kalicki J.,
+RA   Ozersky P., Abbott S., Armstrong J., Belter E.A., Caruso L., Cedroni M.,
+RA   Cotton M., Davidson T., Desai A., Elliott G., Erb T., Fronick C., Gaige T.,
+RA   Haakenson W., Haglund K., Holmes A., Harkins R., Kim K., Kruchowski S.S.,
+RA   Strong C.M., Grewal N., Goyea E., Hou S., Levy A., Martinka S., Mead K.,
+RA   McLellan M.D., Meyer R., Randall-Maher J., Tomlinson C.,
+RA   Dauphin-Kohlberg S., Kozlowicz-Reilly A., Shah N., Swearengen-Shahid S.,
+RA   Snider J., Strong J.T., Thompson J., Yoakum M., Leonard S., Pearman C.,
+RA   Trani L., Radionenko M., Waligorski J.E., Wang C., Rock S.M.,
+RA   Tin-Wollam A.-M., Maupin R., Latreille P., Wendl M.C., Yang S.-P., Pohl C.,
+RA   Wallis J.W., Spieth J., Bieri T.A., Berkowicz N., Nelson J.O., Osborne J.,
+RA   Ding L., Meyer R., Sabo A., Shotland Y., Sinha P., Wohldmann P.E.,
+RA   Cook L.L., Hickenbotham M.T., Eldred J., Williams D., Jones T.A., She X.,
+RA   Ciccarelli F.D., Izaurralde E., Taylor J., Schmutz J., Myers R.M.,
+RA   Cox D.R., Huang X., McPherson J.D., Mardis E.R., Clifton S.W., Warren W.C.,
+RA   Chinwalla A.T., Eddy S.R., Marra M.A., Ovcharenko I., Furey T.S.,
+RA   Miller W., Eichler E.E., Bork P., Suyama M., Torrents D., Waterston R.H.,
+RA   Wilson R.K.;
+RT   "Generation and annotation of the DNA sequences of human chromosomes 2 and
+RT   4.";
+RL   Nature 434:724-731(2005).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 3).
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   NOMENCLATURE.
+RX   PubMed=12471243; DOI=10.1126/science.1075762;
+RA   Manning G., Whyte D.B., Martinez R., Hunter T., Sudarsanam S.;
+RT   "The protein kinase complement of the human genome.";
+RL   Science 298:1912-1934(2002).
+RN   [7]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLY-64; GLU-93; ARG-127; ILE-255 AND
+RP   ASP-276.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [8]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RX   PubMed=24866247; DOI=10.1016/j.bbrc.2014.05.070;
+RA   Park M.H., Kim S.Y., Kim Y.J., Chung Y.H.;
+RT   "ALS2CR7 (CDK15) attenuates TRAIL induced apoptosis by inducing
+RT   phosphorylation of survivin Thr34.";
+RL   Biochem. Biophys. Res. Commun. 450:129-134(2014).
+CC   -!- FUNCTION: Serine/threonine-protein kinase that acts like an
+CC       antiapoptotic protein that counters TRAIL/TNFSF10-induced apoptosis by
+CC       inducing phosphorylation of BIRC5 at 'Thr-34'.
+CC       {ECO:0000269|PubMed:24866247}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.22;
+CC         Evidence={ECO:0000269|PubMed:24866247};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.22; Evidence={ECO:0000269|PubMed:24866247};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420; Evidence={ECO:0000250};
+CC   -!- INTERACTION:
+CC       Q96Q40; Q16543: CDC37; NbExp=2; IntAct=EBI-1051975, EBI-295634;
+CC       Q96Q40; Q13451: FKBP5; NbExp=2; IntAct=EBI-1051975, EBI-306914;
+CC       Q96Q40; P08238: HSP90AB1; NbExp=2; IntAct=EBI-1051975, EBI-352572;
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=5;
+CC       Name=1;
+CC         IsoId=Q96Q40-1; Sequence=Displayed;
+CC       Name=3;
+CC         IsoId=Q96Q40-3; Sequence=VSP_023745;
+CC       Name=4;
+CC         IsoId=Q96Q40-4; Sequence=VSP_038765;
+CC       Name=5;
+CC         IsoId=Q96Q40-5; Sequence=VSP_047226;
+CC       Name=6;
+CC         IsoId=Q96Q40-6; Sequence=VSP_059406, VSP_059407, VSP_059408;
+CC   -!- MISCELLANEOUS: [Isoform 5]: May be due to competing acceptor splice
+CC       site. {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CMGC Ser/Thr
+CC       protein kinase family. CDC2/CDKX subfamily. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAH38807.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AB053308; BAB69017.1; -; mRNA.
+DR   EMBL; AK131512; BAD18656.1; -; mRNA.
+DR   EMBL; AK292434; BAF85123.1; -; mRNA.
+DR   EMBL; AC007242; AAX93182.1; -; Genomic_DNA.
+DR   EMBL; AC007358; AAX88914.1; -; Genomic_DNA.
+DR   EMBL; CH471063; EAW70295.1; -; Genomic_DNA.
+DR   EMBL; CH471063; EAW70297.1; -; Genomic_DNA.
+DR   EMBL; BC038807; AAH38807.1; ALT_INIT; mRNA.
+DR   CCDS; CCDS2350.1; -. [Q96Q40-4]
+DR   CCDS; CCDS58746.1; -. [Q96Q40-3]
+DR   CCDS; CCDS58747.1; -. [Q96Q40-5]
+DR   RefSeq; NP_001248364.1; NM_001261435.1. [Q96Q40-5]
+DR   RefSeq; NP_001248365.1; NM_001261436.1. [Q96Q40-3]
+DR   RefSeq; NP_631897.1; NM_139158.2. [Q96Q40-4]
+DR   RefSeq; XP_005246838.1; XM_005246781.3.
+DR   RefSeq; XP_005246839.1; XM_005246782.4. [Q96Q40-4]
+DR   AlphaFoldDB; Q96Q40; -.
+DR   SMR; Q96Q40; -.
+DR   BioGRID; 122381; 127.
+DR   IntAct; Q96Q40; 94.
+DR   MINT; Q96Q40; -.
+DR   STRING; 9606.ENSP00000406472; -.
+DR   BindingDB; Q96Q40; -.
+DR   ChEMBL; CHEMBL5856; -.
+DR   DrugBank; DB00171; ATP.
+DR   DrugBank; DB06486; Enzastaurin.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; Q96Q40; -.
+DR   iPTMnet; Q96Q40; -.
+DR   PhosphoSitePlus; Q96Q40; -.
+DR   BioMuta; CDK15; -.
+DR   DMDM; 290457634; -.
+DR   EPD; Q96Q40; -.
+DR   jPOST; Q96Q40; -.
+DR   MassIVE; Q96Q40; -.
+DR   MaxQB; Q96Q40; -.
+DR   PaxDb; Q96Q40; -.
+DR   PeptideAtlas; Q96Q40; -.
+DR   PRIDE; Q96Q40; -.
+DR   ProteomicsDB; 29785; -.
+DR   ProteomicsDB; 77819; -. [Q96Q40-1]
+DR   ProteomicsDB; 77821; -. [Q96Q40-3]
+DR   ProteomicsDB; 77822; -. [Q96Q40-4]
+DR   Antibodypedia; 19940; 254 antibodies from 26 providers.
+DR   DNASU; 65061; -.
+DR   Ensembl; ENST00000260967.6; ENSP00000260967.2; ENSG00000138395.17. [Q96Q40-4]
+DR   Ensembl; ENST00000410091.7; ENSP00000386901.3; ENSG00000138395.17. [Q96Q40-4]
+DR   Ensembl; ENST00000434439.1; ENSP00000412775.1; ENSG00000138395.17. [Q96Q40-3]
+DR   Ensembl; ENST00000450471.6; ENSP00000406472.2; ENSG00000138395.17. [Q96Q40-5]
+DR   Ensembl; ENST00000652192.3; ENSP00000498608.2; ENSG00000138395.17. [Q96Q40-1]
+DR   GeneID; 65061; -.
+DR   KEGG; hsa:65061; -.
+DR   MANE-Select; ENST00000652192.3; ENSP00000498608.2; NM_001366386.2; NP_001353315.1.
+DR   UCSC; uc002uys.4; human. [Q96Q40-1]
+DR   CTD; 65061; -.
+DR   DisGeNET; 65061; -.
+DR   GeneCards; CDK15; -.
+DR   HGNC; HGNC:14434; CDK15.
+DR   HPA; ENSG00000138395; Group enriched (epididymis, ovary).
+DR   MIM; 616147; gene.
+DR   neXtProt; NX_Q96Q40; -.
+DR   OpenTargets; ENSG00000138395; -.
+DR   PharmGKB; PA165696414; -.
+DR   VEuPathDB; HostDB:ENSG00000138395; -.
+DR   eggNOG; KOG0594; Eukaryota.
+DR   GeneTree; ENSGT00940000159606; -.
+DR   HOGENOM; CLU_000288_181_1_1; -.
+DR   InParanoid; Q96Q40; -.
+DR   OMA; YMAQHPG; -.
+DR   OrthoDB; 1010560at2759; -.
+DR   PhylomeDB; Q96Q40; -.
+DR   TreeFam; TF106508; -.
+DR   BRENDA; 2.7.11.22; 2681.
+DR   PathwayCommons; Q96Q40; -.
+DR   SignaLink; Q96Q40; -.
+DR   BioGRID-ORCS; 65061; 10 hits in 1102 CRISPR screens.
+DR   ChiTaRS; CDK15; human.
+DR   GenomeRNAi; 65061; -.
+DR   Pharos; Q96Q40; Tchem.
+DR   PRO; PR:Q96Q40; -.
+DR   Proteomes; UP000005640; Chromosome 2.
+DR   RNAct; Q96Q40; protein.
+DR   Bgee; ENSG00000138395; Expressed in corpus epididymis and 116 other tissues.
+DR   ExpressionAtlas; Q96Q40; baseline and differential.
+DR   Genevisible; Q96Q40; HS.
+DR   GO; GO:0005737; C:cytoplasm; IBA:GO_Central.
+DR   GO; GO:0005829; C:cytosol; IBA:GO_Central.
+DR   GO; GO:0005634; C:nucleus; IBA:GO_Central.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0030332; F:cyclin binding; IBA:GO_Central.
+DR   GO; GO:0004693; F:cyclin-dependent protein serine/threonine kinase activity; IBA:GO_Central.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IBA:GO_Central.
+DR   GO; GO:0000083; P:regulation of transcription involved in G1/S transition of mitotic cell cycle; IBA:GO_Central.
+DR   CDD; cd07870; STKc_PFTAIRE2; 1.
+DR   InterPro; IPR042761; CDK15_STKc.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; ATP-binding; Kinase; Magnesium; Metal-binding;
+KW   Nucleotide-binding; Reference proteome; Serine/threonine-protein kinase;
+KW   Transferase.
+FT   CHAIN           1..435
+FT                   /note="Cyclin-dependent kinase 15"
+FT                   /id="PRO_0000085619"
+FT   DOMAIN          103..387
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   ACT_SITE        224
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         109..117
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         132
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   VAR_SEQ         1..51
+FT                   /note="Missing (in isoform 4)"
+FT                   /evidence="ECO:0000303|PubMed:11586298"
+FT                   /id="VSP_038765"
+FT   VAR_SEQ         182..202
+FT                   /note="Missing (in isoform 6)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_059406"
+FT   VAR_SEQ         337..366
+FT                   /note="EWFPLPTPRSLHVVWNRLGRVPEAEDLASQ -> GGSKKQHGWHTDIGQHRT
+FT                   AAMQPCSRNVSF (in isoform 6)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_059407"
+FT   VAR_SEQ         367..435
+FT                   /note="Missing (in isoform 6)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_059408"
+FT   VAR_SEQ         400..405
+FT                   /note="Missing (in isoform 5)"
+FT                   /evidence="ECO:0000305"
+FT                   /id="VSP_047226"
+FT   VAR_SEQ         401..435
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_023745"
+FT   VARIANT         64
+FT                   /note="R -> G (in dbSNP:rs34776344)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042016"
+FT   VARIANT         93
+FT                   /note="K -> E (in a renal clear cell carcinoma sample;
+FT                   somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042017"
+FT   VARIANT         127
+FT                   /note="Q -> R (in dbSNP:rs56135556)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042018"
+FT   VARIANT         255
+FT                   /note="T -> I (in dbSNP:rs34851370)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042019"
+FT   VARIANT         276
+FT                   /note="E -> D (in a breast infiltrating ductal carcinoma
+FT                   sample; somatic mutation; dbSNP:rs1490814436)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042020"
+SQ   SEQUENCE   435 AA;  49023 MW;  B415BBBE322EAB33 CRC64;
+     MGQELCAKTV QPGCSCYHCS EGGEAHSCRR SQPETTEAAF KLTDLKEASC SMTSFHPRGL
+     QAARAQKFKS KRPRSNSDCF QEEDLRQGFQ WRKSLPFGAA SSYLNLEKLG EGSYATVYKG
+     ISRINGQLVA LKVISMNAEE GVPFTAIREA SLLKGLKHAN IVLLHDIIHT KETLTFVFEY
+     MHTDLAQYMS QHPGGLHPHN VRLFMFQLLR GLAYIHHQHV LHRDLKPQNL LISHLGELKL
+     ADFGLARAKS IPSQTYSSEV VTLWYRPPDA LLGATEYSSE LDIWGAGCIF IEMFQGQPLF
+     PGVSNILEQL EKIWEVLGVP TEDTWPGVSK LPNYNPEWFP LPTPRSLHVV WNRLGRVPEA
+     EDLASQMLKG FPRDRVSAQE ALVHDYFSAL PSQLYQLPDE ESLFTVSGVR LKPEMCDLLA
+     SYQKGHHPAQ FSKCW
+//

@@ -1,0 +1,283 @@
+ID   CSKP_HUMAN              Reviewed;         897 AA.
+AC   O14936-3;
+DT   15-JUL-1999, integrated into UniProtKB/Swiss-Prot.
+DT   17-APR-2007, sequence version 3.
+DT   12-OCT-2022, entry version 233.
+DE   RecName: Full=Isoform 3 of Peripheral plasma membrane protein CASK {ECO:0000305};
+DE            Short=hCASK;
+DE            EC=2.7.11.1 {ECO:0000269|PubMed:18423203};
+DE   AltName: Full=Calcium/calmodulin-dependent serine protein kinase;
+DE   AltName: Full=Protein lin-2 homolog;
+GN   Name=CASK {ECO:0000312|HGNC:HGNC:1497}; Synonyms=LIN2;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2), AND INTERACTION WITH SDC2 AND
+RP   EPB41.
+RC   TISSUE=Brain, Liver, and Lung;
+RX   PubMed=9660868; DOI=10.1083/jcb.142.1.129;
+RA   Cohen A.R., Woods D.F., Marfatia S.M., Walther Z., Chishti A.H.,
+RA   Anderson J.M.;
+RT   "Human CASK/LIN-2 binds syndecan-2 and protein 4.1 and localizes to the
+RT   basolateral membrane of epithelial cells.";
+RL   J. Cell Biol. 142:129-138(1998).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 3).
+RA   Zha D., Hu G.;
+RT   "The human homolog of the rat CASK, Drosophila Camguk and C.elegans Lin-2
+RT   genes.";
+RL   Submitted (NOV-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 5).
+RC   TISSUE=Kidney;
+RA   Ding L., Saijo K., Kawai K., Akaza H., Ugai H., Yokoyama K.K., Ohno T.;
+RT   "Putative alternative splicing form of human CASK mRNA (partial codes).";
+RL   Submitted (FEB-2000) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2).
+RC   TISSUE=Colon carcinoma;
+RA   Yan Y., Merlin D.;
+RT   "Caco2-BBE calcium/calmodulin-dependent serine protein kinase.";
+RL   Submitted (AUG-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15772651; DOI=10.1038/nature03440;
+RA   Ross M.T., Grafham D.V., Coffey A.J., Scherer S., McLay K., Muzny D.,
+RA   Platzer M., Howell G.R., Burrows C., Bird C.P., Frankish A., Lovell F.L.,
+RA   Howe K.L., Ashurst J.L., Fulton R.S., Sudbrak R., Wen G., Jones M.C.,
+RA   Hurles M.E., Andrews T.D., Scott C.E., Searle S., Ramser J., Whittaker A.,
+RA   Deadman R., Carter N.P., Hunt S.E., Chen R., Cree A., Gunaratne P.,
+RA   Havlak P., Hodgson A., Metzker M.L., Richards S., Scott G., Steffen D.,
+RA   Sodergren E., Wheeler D.A., Worley K.C., Ainscough R., Ambrose K.D.,
+RA   Ansari-Lari M.A., Aradhya S., Ashwell R.I., Babbage A.K., Bagguley C.L.,
+RA   Ballabio A., Banerjee R., Barker G.E., Barlow K.F., Barrett I.P.,
+RA   Bates K.N., Beare D.M., Beasley H., Beasley O., Beck A., Bethel G.,
+RA   Blechschmidt K., Brady N., Bray-Allen S., Bridgeman A.M., Brown A.J.,
+RA   Brown M.J., Bonnin D., Bruford E.A., Buhay C., Burch P., Burford D.,
+RA   Burgess J., Burrill W., Burton J., Bye J.M., Carder C., Carrel L.,
+RA   Chako J., Chapman J.C., Chavez D., Chen E., Chen G., Chen Y., Chen Z.,
+RA   Chinault C., Ciccodicola A., Clark S.Y., Clarke G., Clee C.M., Clegg S.,
+RA   Clerc-Blankenburg K., Clifford K., Cobley V., Cole C.G., Conquer J.S.,
+RA   Corby N., Connor R.E., David R., Davies J., Davis C., Davis J., Delgado O.,
+RA   Deshazo D., Dhami P., Ding Y., Dinh H., Dodsworth S., Draper H.,
+RA   Dugan-Rocha S., Dunham A., Dunn M., Durbin K.J., Dutta I., Eades T.,
+RA   Ellwood M., Emery-Cohen A., Errington H., Evans K.L., Faulkner L.,
+RA   Francis F., Frankland J., Fraser A.E., Galgoczy P., Gilbert J., Gill R.,
+RA   Gloeckner G., Gregory S.G., Gribble S., Griffiths C., Grocock R., Gu Y.,
+RA   Gwilliam R., Hamilton C., Hart E.A., Hawes A., Heath P.D., Heitmann K.,
+RA   Hennig S., Hernandez J., Hinzmann B., Ho S., Hoffs M., Howden P.J.,
+RA   Huckle E.J., Hume J., Hunt P.J., Hunt A.R., Isherwood J., Jacob L.,
+RA   Johnson D., Jones S., de Jong P.J., Joseph S.S., Keenan S., Kelly S.,
+RA   Kershaw J.K., Khan Z., Kioschis P., Klages S., Knights A.J., Kosiura A.,
+RA   Kovar-Smith C., Laird G.K., Langford C., Lawlor S., Leversha M., Lewis L.,
+RA   Liu W., Lloyd C., Lloyd D.M., Loulseged H., Loveland J.E., Lovell J.D.,
+RA   Lozado R., Lu J., Lyne R., Ma J., Maheshwari M., Matthews L.H.,
+RA   McDowall J., McLaren S., McMurray A., Meidl P., Meitinger T., Milne S.,
+RA   Miner G., Mistry S.L., Morgan M., Morris S., Mueller I., Mullikin J.C.,
+RA   Nguyen N., Nordsiek G., Nyakatura G., O'dell C.N., Okwuonu G., Palmer S.,
+RA   Pandian R., Parker D., Parrish J., Pasternak S., Patel D., Pearce A.V.,
+RA   Pearson D.M., Pelan S.E., Perez L., Porter K.M., Ramsey Y., Reichwald K.,
+RA   Rhodes S., Ridler K.A., Schlessinger D., Schueler M.G., Sehra H.K.,
+RA   Shaw-Smith C., Shen H., Sheridan E.M., Shownkeen R., Skuce C.D.,
+RA   Smith M.L., Sotheran E.C., Steingruber H.E., Steward C.A., Storey R.,
+RA   Swann R.M., Swarbreck D., Tabor P.E., Taudien S., Taylor T., Teague B.,
+RA   Thomas K., Thorpe A., Timms K., Tracey A., Trevanion S., Tromans A.C.,
+RA   d'Urso M., Verduzco D., Villasana D., Waldron L., Wall M., Wang Q.,
+RA   Warren J., Warry G.L., Wei X., West A., Whitehead S.L., Whiteley M.N.,
+RA   Wilkinson J.E., Willey D.L., Williams G., Williams L., Williamson A.,
+RA   Williamson H., Wilming L., Woodmansey R.L., Wray P.W., Yen J., Zhang J.,
+RA   Zhou J., Zoghbi H., Zorilla S., Buck D., Reinhardt R., Poustka A.,
+RA   Rosenthal A., Lehrach H., Meindl A., Minx P.J., Hillier L.W., Willard H.F.,
+RA   Wilson R.K., Waterston R.H., Rice C.M., Vaudin M., Coulson A., Nelson D.L.,
+RA   Weinstock G., Sulston J.E., Durbin R.M., Hubbard T., Gibbs R.A., Beck S.,
+RA   Rogers J., Bentley D.R.;
+RT   "The DNA sequence of the human X chromosome.";
+RL   Nature 434:325-337(2005).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 4).
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 5-926 (ISOFORM 2).
+RC   TISSUE=Brain;
+RA   Totoki Y., Toyoda A., Takeda T., Sakaki Y., Tanaka A., Yokoyama S.,
+RA   Ohara O., Nagase T., Kikuno R.F.;
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 173-926 (ISOFORM 1), NUCLEOTIDE SEQUENCE
+RP   [MRNA] OF 27-926 (ISOFORM 3), AND TISSUE SPECIFICITY.
+RC   TISSUE=Fetus;
+RX   PubMed=11003712; DOI=10.1007/s003350010170;
+RA   Stevenson D., Laverty H.G., Wenwieser S., Douglas M., Wilson J.B.;
+RT   "Mapping and expression analysis of the human CASK gene.";
+RL   Mamm. Genome 11:934-937(2000).
+RN   [9]
+RP   INTERACTION WITH KIRREL3.
+RX   PubMed=19012874; DOI=10.1016/j.ajhg.2008.10.020;
+RA   Bhalla K., Luo Y., Buchan T., Beachem M.A., Guzauskas G.F., Ladd S.,
+RA   Bratcher S.J., Schroer R.J., Balsamo J., DuPont B.R., Lilien J.,
+RA   Srivastava A.K.;
+RT   "Alterations in CDH15 and KIRREL3 in patients with mild to severe
+RT   intellectual disability.";
+RL   Am. J. Hum. Genet. 83:703-713(2008).
+RN   [10]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-51, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [11]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-313, PHOSPHORYLATION [LARGE
+RP   SCALE ANALYSIS] AT SER-571 (ISOFORM 3), PHOSPHORYLATION [LARGE SCALE
+RP   ANALYSIS] AT SER-577 (ISOFORM 4), PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT
+RP   SER-192 (ISOFORM 5), AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE
+RP   ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [12]
+RP   X-RAY CRYSTALLOGRAPHY (1.9 ANGSTROMS) OF 489-572.
+RX   PubMed=9546224; DOI=10.1038/nsb0498-317;
+RA   Daniels D.L., Cohen A.R., Anderson J.M., Bruenger A.T.;
+RT   "Crystal structure of the hCASK PDZ domain reveals the structural basis of
+RT   class II PDZ domain target recognition.";
+RL   Nat. Struct. Biol. 5:317-325(1998).
+RN   [13]
+RP   X-RAY CRYSTALLOGRAPHY (1.85 ANGSTROMS) OF 1-337 IN COMPLEX WITH AMP,
+RP   CATALYTIC ACTIVITY, COFACTOR, ACTIVITY REGULATION, BIOPHYSICOCHEMICAL
+RP   PROPERTIES, PHOSPHORYLATION OF NRXN1, AND PHOSPHORYLATION AT SER-151 AND
+RP   SER-155.
+RX   PubMed=18423203; DOI=10.1016/j.cell.2008.02.036;
+RA   Mukherjee K., Sharma M., Urlaub H., Bourenkov G.P., Jahn R., Suedhof T.C.,
+RA   Wahl M.C.;
+RT   "CASK functions as a Mg2+-independent neurexin kinase.";
+RL   Cell 133:328-339(2008).
+RN   [14]
+RP   VARIANT [LARGE SCALE ANALYSIS] VAL-96.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [15]
+RP   INVOLVEMENT IN MICPCH SYNDROME.
+RX   PubMed=19165920; DOI=10.1038/ng.194;
+RA   Najm J., Horn D., Wimplinger I., Golden J.A., Chizhikov V.V., Sudi J.,
+RA   Christian S.L., Ullmann R., Kuechler A., Haas C.A., Flubacher A.,
+RA   Charnas L.R., Uyanik G., Frank U., Klopocki E., Dobyns W.B., Kutsche K.;
+RT   "Mutations of CASK cause an X-linked brain malformation phenotype with
+RT   microcephaly and hypoplasia of the brainstem and cerebellum.";
+RL   Nat. Genet. 40:1065-1067(2008).
+RN   [16]
+RP   ERRATUM OF PUBMED:19165920.
+RA   Najm J., Horn D., Wimplinger I., Golden J.A., Chizhikov V.V., Sudi J.,
+RA   Christian S.L., Ullmann R., Kuechler A., Haas C.A., Flubacher A.,
+RA   Charnas L.R., Uyanik G., Frank U., Klopocki E., Dobyns W.B., Kutsche K.;
+RL   Nat. Genet. 40:1384-1384(2008).
+RN   [17]
+RP   VARIANT FGS4 LEU-28, AND CHARACTERIZATION OF VARIANT FGS4 LEU-28.
+RX   PubMed=19200522; DOI=10.1016/j.ajhg.2008.12.018;
+RA   Piluso G., D'Amico F., Saccone V., Bismuto E., Rotundo I.L.,
+RA   Di Domenico M., Aurino S., Schwartz C.E., Neri G., Nigro V.;
+RT   "A missense mutation in CASK causes FG syndrome in an Italian family.";
+RL   Am. J. Hum. Genet. 84:162-177(2009).
+RN   [18]
+RP   VARIANTS [LARGE SCALE ANALYSIS] MICPCH HIS-268; SER-396 AND GLY-710.
+RX   PubMed=19377476; DOI=10.1038/ng.367;
+RA   Tarpey P.S., Smith R., Pleasance E., Whibley A., Edkins S., Hardy C.,
+RA   O'Meara S., Latimer C., Dicks E., Menzies A., Stephens P., Blow M.,
+RA   Greenman C., Xue Y., Tyler-Smith C., Thompson D., Gray K., Andrews J.,
+RA   Barthorpe S., Buck G., Cole J., Dunmore R., Jones D., Maddison M.,
+RA   Mironenko T., Turner R., Turrell K., Varian J., West S., Widaa S., Wray P.,
+RA   Teague J., Butler A., Jenkinson A., Jia M., Richardson D., Shepherd R.,
+RA   Wooster R., Tejada M.I., Martinez F., Carvill G., Goliath R.,
+RA   de Brouwer A.P., van Bokhoven H., Van Esch H., Chelly J., Raynaud M.,
+RA   Ropers H.H., Abidi F.E., Srivastava A.K., Cox J., Luo Y., Mallya U.,
+RA   Moon J., Parnau J., Mohammed S., Tolmie J.L., Shoubridge C., Corbett M.,
+RA   Gardner A., Haan E., Rujirabanjerd S., Shaw M., Vandeleur L., Fullston T.,
+RA   Easton D.F., Boyle J., Partington M., Hackett A., Field M., Skinner C.,
+RA   Stevenson R.E., Bobrow M., Turner G., Schwartz C.E., Gecz J., Raymond F.L.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "A systematic, large-scale resequencing screen of X-chromosome coding exons
+RT   in mental retardation.";
+RL   Nat. Genet. 41:535-543(2009).
+RN   [19]
+RP   VARIANT 19-GLY--TYR-926 DEL.
+RX   PubMed=23662938; DOI=10.1111/epi.12203;
+RA   Kodera H., Kato M., Nord A.S., Walsh T., Lee M., Yamanaka G., Tohyama J.,
+RA   Nakamura K., Nakagawa E., Ikeda T., Ben-Zeev B., Lev D., Lerman-Sagie T.,
+RA   Straussberg R., Tanabe S., Ueda K., Amamoto M., Ohta S., Nonoda Y.,
+RA   Nishiyama K., Tsurusaki Y., Nakashima M., Miyake N., Hayasaka K.,
+RA   King M.C., Matsumoto N., Saitsu H.;
+RT   "Targeted capture and sequencing for detection of mutations causing early
+RT   onset epileptic encephalopathy.";
+RL   Epilepsia 54:1262-1269(2013).
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=6;
+CC       Name=1;
+CC         IsoId=O14936-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=O14936-2; Sequence=VSP_024426;
+CC       Name=3;
+CC         IsoId=O14936-3; Sequence=VSP_024422, VSP_024424;
+CC       Name=4;
+CC         IsoId=O14936-4; Sequence=VSP_024424, VSP_024426;
+CC       Name=5;
+CC         IsoId=O14936-5; Sequence=VSP_024421, VSP_024423, VSP_024424;
+CC       Name=6;
+CC         IsoId=O14936-6; Sequence=VSP_024425, VSP_024426;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS48094.1; -.
+DR   RefSeq; NP_001119527.1; NM_001126055.2.
+DR   ProteomicsDB; 48320; -.
+DR   Ensembl; ENST00000644347.1; ENSP00000494183.1; ENSG00000147044.23.
+DR   Proteomes; UP000005640; Chromosome X.
+PE   1: Evidence at protein level;
+FT   MOD_RES         571
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:24275569"
+SQ   SEQUENCE   897 AA;  102114 MW;  8B3BC03D2EF717CA CRC64;
+     MADDDVLFED VYELCEVIGK GPFSVVRRCI NRETGQQFAV KIVDVAKFTS SPGLSTEDLK
+     REASICHMLK HPHIVELLET YSSDGMLYMV FEFMDGADLC FEIVKRADAG FVYSEAVASH
+     YMRQILEALR YCHDNNIIHR DVKPHCVLLA SKENSAPVKL GGFGVAIQLG ESGLVAGGRV
+     GTPHFMAPEV VKREPYGKPV DVWGCGVILF ILLSGCLPFY GTKERLFEGI IKGKYKMNPR
+     QWSHISESAK DLVRRMLMLD PAERITVYEA LNHPWLKERD RYAYKIHLPE TVEQLRKFNA
+     RRKLKGAVLA AVSSHKFNSF YGDPPEELPD FSEDPTSSGA VSQVLDSLEE IHALTDCSEK
+     DLDFLHSVFQ DQHLHTLLDL YDKINTKSSP QIRNPPSDAV QRAKEVLEEI SCYPENNDAK
+     ELKRILTQPH FMALLQTHDV VAHEVYSDEA LRVTPPPTSP YLNGDSPESA NGDMDMENVT
+     RVRLVQFQKN TDEPMGITLK MNELNHCIVA RIMHGGMIHR QGTLHVGDEI REINGISVAN
+     QTVEQLQKML REMRGSITFK IVPSYRTQSS SCEDLPSTTQ PKGRQIYVRA QFEYDPAKDD
+     LIPCKEAGIR FRVGDIIQII SKDDHNWWQG KLENSKNGTA GLIPSPELQE WRVACIAMEK
+     TKQEQQASCT WFGKKKKQYK DKYLAKHNAV FDQLDLVTYE EVVKLPAFKR KTLVLLGAHG
+     VGRRHIKNTL ITKHPDRFAY PIPHTTRPPK KDEENGKNYY FVSHDQMMQD ISNNEYLEYG
+     SHEDAMYGTK LETIRKIHEQ GLIAILDVEP QALKVLRTAE FAPFVVFIAA PTITPGLNED
+     ESLQRLQKES DILQRTYAHY FDLTIINNEI DETIRHLEEA VELVCTAPQW VPVSWVY
+//

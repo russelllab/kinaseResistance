@@ -1,0 +1,421 @@
+ID   TXK_HUMAN               Reviewed;         527 AA.
+AC   P42681; Q14220;
+DT   01-NOV-1995, integrated into UniProtKB/Swiss-Prot.
+DT   17-OCT-2006, sequence version 3.
+DT   12-OCT-2022, entry version 201.
+DE   RecName: Full=Tyrosine-protein kinase TXK;
+DE            EC=2.7.10.2 {ECO:0000269|PubMed:17177976};
+DE   AltName: Full=Protein-tyrosine kinase 4;
+DE   AltName: Full=Resting lymphocyte kinase;
+GN   Name=TXK; Synonyms=PTK4, RLK;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], VARIANT HIS-45, AND TISSUE SPECIFICITY.
+RC   TISSUE=Blood;
+RX   PubMed=7951233; DOI=10.1093/hmg/3.6.897;
+RA   Haire R.N., Ohta Y., Lewis J.E., Fu S.M., Kroisel P.M., Litman G.W.;
+RT   "TXK, a novel human tyrosine kinase expressed in T cells shares sequence
+RT   identity with Tec family kinases and maps to 4p12.";
+RL   Hum. Mol. Genet. 3:897-901(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   TISSUE=Blood;
+RX   PubMed=8632917;
+RA   Ohta Y., Haire R.N., Amemiya C.T., Litman R.T., Trager T., Riess O.,
+RA   Litman G.W.;
+RT   "Human Txk: genomic organization, structure and contiguous physical linkage
+RT   with the Tec gene.";
+RL   Oncogene 12:937-942(1996).
+RN   [3]
+RP   FUNCTION IN PHOSPHORYLATION OF CTLA4, AND MUTAGENESIS OF LYS-299.
+RX   PubMed=9813138; DOI=10.1006/bbrc.1998.9559;
+RA   Schneider H., Schwartzberg P.L., Rudd C.E.;
+RT   "Resting lymphocyte kinase (Rlk/Txk) phosphorylates the YVKM motif and
+RT   regulates PI 3-kinase binding to T-cell antigen CTLA-4.";
+RL   Biochem. Biophys. Res. Commun. 252:14-19(1998).
+RN   [4]
+RP   TISSUE SPECIFICITY, AND FUNCTION.
+RX   PubMed=10523612; DOI=10.1084/jem.190.8.1147;
+RA   Kashiwakura J., Suzuki N., Nagafuchi H., Takeno M., Takeba Y.,
+RA   Shimoyama Y., Sakane T.;
+RT   "Txk, a nonreceptor tyrosine kinase of the Tec family, is expressed in T
+RT   helper type 1 cells and regulates interferon gamma production in human T
+RT   lymphocytes.";
+RL   J. Exp. Med. 190:1147-1154(1999).
+RN   [5]
+RP   FUNCTION IN PHOSPHORYLATION OF PLCG1.
+RX   PubMed=11564877; DOI=10.1128/mcb.21.20.6939-6950.2001;
+RA   Veri M.C., DeBell K.E., Seminario M.C., DiBaldassarre A., Reischl I.,
+RA   Rawat R., Graham L., Noviello C., Rellahan B.L., Miscia S., Wange R.L.,
+RA   Bonvini E.;
+RT   "Membrane raft-dependent regulation of phospholipase Cgamma-1 activation in
+RT   T lymphocytes.";
+RL   Mol. Cell. Biol. 21:6939-6950(2001).
+RN   [6]
+RP   AUTOPHOSPHORYLATION, PHOSPHORYLATION AT TYR-91 AND TYR-420, ACTIVITY
+RP   REGULATION, AND MUTAGENESIS OF TYR-91.
+RX   PubMed=12081135; DOI=10.1248/bpb.25.718;
+RA   Kashiwakura J., Suzuki N., Takeno M., Itoh S., Oku T., Sakane T.,
+RA   Nakajin S., Toyoshima S.;
+RT   "Evidence of autophosphorylation in Txk: Y91 is an autophosphorylation
+RT   site.";
+RL   Biol. Pharm. Bull. 25:718-721(2002).
+RN   [7]
+RP   FUNCTION.
+RX   PubMed=11859127; DOI=10.4049/jimmunol.168.5.2365;
+RA   Takeba Y., Nagafuchi H., Takeno M., Kashiwakura J., Suzuki N.;
+RT   "Txk, a member of nonreceptor tyrosine kinase of Tec family, acts as a Th1
+RT   cell-specific transcription factor and regulates IFN-gamma gene
+RT   transcription.";
+RL   J. Immunol. 168:2365-2370(2002).
+RN   [8]
+RP   FUNCTION, CATALYTIC ACTIVITY, INTERACTION WITH PARP1 AND EEF1A1, AND
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=17177976; DOI=10.1111/j.1365-2249.2006.03249.x;
+RA   Maruyama T., Nara K., Yoshikawa H., Suzuki N.;
+RT   "Txk, a member of the non-receptor tyrosine kinase of the Tec family, forms
+RT   a complex with poly(ADP-ribose) polymerase 1 and elongation factor 1alpha
+RT   and regulates interferon-gamma gene transcription in Th1 cells.";
+RL   Clin. Exp. Immunol. 147:164-175(2007).
+RN   [9]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=19290923; DOI=10.1111/j.1600-065x.2008.00757.x;
+RA   Readinger J.A., Mueller K.L., Venegas A.M., Horai R., Schwartzberg P.L.;
+RT   "Tec kinases regulate T-lymphocyte development and function: new insights
+RT   into the roles of Itk and Rlk/Txk.";
+RL   Immunol. Rev. 228:93-114(2009).
+RN   [10]
+RP   STRUCTURE BY NMR OF 140-251.
+RG   RIKEN structural genomics initiative (RSGI);
+RT   "Solution structure of the SH2 domain of human tyrosine-protein kinase
+RT   TXK.";
+RL   Submitted (OCT-2006) to the PDB data bank.
+RN   [11]
+RP   VARIANTS [LARGE SCALE ANALYSIS] HIS-45; CYS-63 AND GLN-336.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Non-receptor tyrosine kinase that plays a redundant role with
+CC       ITK in regulation of the adaptive immune response. Regulates the
+CC       development, function and differentiation of conventional T-cells and
+CC       nonconventional NKT-cells. When antigen presenting cells (APC) activate
+CC       T-cell receptor (TCR), a series of phosphorylation leads to the
+CC       recruitment of TXK to the cell membrane, where it is phosphorylated at
+CC       Tyr-420. Phosphorylation leads to TXK full activation. Contributes also
+CC       to signaling from many receptors and participates in multiple
+CC       downstream pathways, including regulation of the actin cytoskeleton.
+CC       Like ITK, can phosphorylate PLCG1, leading to its localization in lipid
+CC       rafts and activation, followed by subsequent cleavage of its
+CC       substrates. In turn, the endoplasmic reticulum releases calcium in the
+CC       cytoplasm and the nuclear activator of activated T-cells (NFAT)
+CC       translocates into the nucleus to perform its transcriptional duty.
+CC       Plays a role in the positive regulation of IFNG transcription in T-
+CC       helper 1 cells as part of an IFNG promoter-binding complex with PARP1
+CC       and EEF1A1 (PubMed:11859127, PubMed:17177976). Within the complex,
+CC       phosphorylates both PARP1 and EEF1A1 (PubMed:17177976). Phosphorylates
+CC       also key sites in LCP2 leading to the up-regulation of Th1 preferred
+CC       cytokine IL-2. Phosphorylates 'Tyr-201' of CTLA4 which leads to the
+CC       association of PI-3 kinase with the CTLA4 receptor.
+CC       {ECO:0000269|PubMed:10523612, ECO:0000269|PubMed:11564877,
+CC       ECO:0000269|PubMed:11859127, ECO:0000269|PubMed:17177976,
+CC       ECO:0000269|PubMed:9813138}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.10.2;
+CC         Evidence={ECO:0000269|PubMed:17177976};
+CC   -!- ACTIVITY REGULATION: Activated by phosphorylation by FYN.
+CC       {ECO:0000269|PubMed:12081135}.
+CC   -!- SUBUNIT: Interacts with PARP1 and EEF1A1 (PubMed:17177976). Interacts
+CC       with SH2D2A (By similarity). Interacts with FYN (By similarity).
+CC       {ECO:0000250|UniProtKB:P42682, ECO:0000269|PubMed:17177976}.
+CC   -!- INTERACTION:
+CC       P42681; Q8NA61-2: CBY2; NbExp=3; IntAct=EBI-7877438, EBI-11524851;
+CC       P42681; P46108: CRK; NbExp=3; IntAct=EBI-7877438, EBI-886;
+CC       P42681; O60496: DOK2; NbExp=3; IntAct=EBI-7877438, EBI-1046024;
+CC       P42681; Q16828: DUSP6; NbExp=3; IntAct=EBI-7877438, EBI-746870;
+CC       P42681; Q5JST6: EFHC2; NbExp=3; IntAct=EBI-7877438, EBI-2349927;
+CC       P42681; Q13322-4: GRB10; NbExp=3; IntAct=EBI-7877438, EBI-12353035;
+CC       P42681; P62993: GRB2; NbExp=3; IntAct=EBI-7877438, EBI-401755;
+CC       P42681; Q13422-7: IKZF1; NbExp=3; IntAct=EBI-7877438, EBI-11522367;
+CC       P42681; Q9H2S9: IKZF4; NbExp=3; IntAct=EBI-7877438, EBI-1640423;
+CC       P42681; O75564-2: JRK; NbExp=3; IntAct=EBI-7877438, EBI-17181882;
+CC       P42681; P10721: KIT; NbExp=3; IntAct=EBI-7877438, EBI-1379503;
+CC       P42681; O43639: NCK2; NbExp=3; IntAct=EBI-7877438, EBI-713635;
+CC       P42681; P27986-2: PIK3R1; NbExp=3; IntAct=EBI-7877438, EBI-9090282;
+CC       P42681; Q9GZV8: PRDM14; NbExp=3; IntAct=EBI-7877438, EBI-3957793;
+CC       P42681; Q9NYW8: RBAK; NbExp=3; IntAct=EBI-7877438, EBI-1210429;
+CC       P42681; O14543: SOCS3; NbExp=3; IntAct=EBI-7877438, EBI-714146;
+CC       P42681; O14544: SOCS6; NbExp=3; IntAct=EBI-7877438, EBI-3929549;
+CC       P42681; Q9UGK3: STAP2; NbExp=3; IntAct=EBI-7877438, EBI-1553984;
+CC       P42681; Q8IZW8: TNS4; NbExp=3; IntAct=EBI-7877438, EBI-7543499;
+CC       P42681; Q96SQ5: ZNF587; NbExp=3; IntAct=EBI-7877438, EBI-6427977;
+CC       P42681; Q3KQV3: ZNF792; NbExp=3; IntAct=EBI-7877438, EBI-10240849;
+CC       P42681; Q9Y2P0: ZNF835; NbExp=3; IntAct=EBI-7877438, EBI-5667516;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:17177976}. Nucleus
+CC       {ECO:0000269|PubMed:17177976}. Cell membrane
+CC       {ECO:0000269|PubMed:17177976}; Peripheral membrane protein
+CC       {ECO:0000269|PubMed:17177976}. Note=Localizes in the vicinity of cell
+CC       surface receptors in the plasma membrane after receptor stimulation.
+CC       Translocates into the nucleus and enhances IFN-gamma gene transcription
+CC       in T-cells.
+CC   -!- TISSUE SPECIFICITY: Expressed in T-cells and some myeloid cell lines.
+CC       Expressed in Th1/Th0 cells with IFN-gamma-producing potential.
+CC       {ECO:0000269|PubMed:10523612, ECO:0000269|PubMed:7951233}.
+CC   -!- PTM: Phosphorylated at Tyr-420 by FYN. Autophosphorylation at Tyr-91 is
+CC       critical for the activation of TXK, leading to the up-regulation of
+CC       IFN-gamma gene transcription. {ECO:0000269|PubMed:12081135}.
+CC   -!- PTM: The cysteine string at the N-terminus is palmitoylated and
+CC       required for the proper subcellular location. {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Tyr protein
+CC       kinase family. TEC subfamily. {ECO:0000255|PROSITE-ProRule:PRU00159}.
+CC   -!- CAUTION: Unlike the other TEC subfamily members, TXK is activated
+CC       independently of the activity of phosphatidylinositol 3-kinase,
+CC       consistent with its lack of a PH domain. Membrane association is
+CC       performed through palmitoylation at the N-terminus. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; L27071; AAA74557.1; -; mRNA.
+DR   EMBL; U34379; AAB60412.1; -; Genomic_DNA.
+DR   EMBL; U34367; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34368; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34369; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34370; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34371; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34372; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34373; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34374; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34375; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34376; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34377; AAB60412.1; JOINED; Genomic_DNA.
+DR   EMBL; U34378; AAB60412.1; JOINED; Genomic_DNA.
+DR   CCDS; CCDS3480.1; -.
+DR   PIR; I84483; I84483.
+DR   RefSeq; NP_003319.2; NM_003328.2.
+DR   PDB; 2DM0; NMR; -; A=140-251.
+DR   PDBsum; 2DM0; -.
+DR   AlphaFoldDB; P42681; -.
+DR   SMR; P42681; -.
+DR   BioGRID; 113145; 39.
+DR   IntAct; P42681; 85.
+DR   MINT; P42681; -.
+DR   STRING; 9606.ENSP00000264316; -.
+DR   BindingDB; P42681; -.
+DR   ChEMBL; CHEMBL4367; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugBank; DB15035; Zanubrutinib.
+DR   DrugCentral; P42681; -.
+DR   GuidetoPHARMACOLOGY; 2268; -.
+DR   iPTMnet; P42681; -.
+DR   PhosphoSitePlus; P42681; -.
+DR   BioMuta; TXK; -.
+DR   DMDM; 116242835; -.
+DR   MassIVE; P42681; -.
+DR   PaxDb; P42681; -.
+DR   PeptideAtlas; P42681; -.
+DR   PRIDE; P42681; -.
+DR   ProteomicsDB; 55527; -.
+DR   Antibodypedia; 23802; 272 antibodies from 33 providers.
+DR   DNASU; 7294; -.
+DR   Ensembl; ENST00000264316.9; ENSP00000264316.4; ENSG00000074966.11.
+DR   GeneID; 7294; -.
+DR   KEGG; hsa:7294; -.
+DR   MANE-Select; ENST00000264316.9; ENSP00000264316.4; NM_003328.3; NP_003319.2.
+DR   UCSC; uc003gxx.4; human.
+DR   CTD; 7294; -.
+DR   DisGeNET; 7294; -.
+DR   GeneCards; TXK; -.
+DR   HGNC; HGNC:12434; TXK.
+DR   HPA; ENSG00000074966; Tissue enhanced (epididymis, lymphoid tissue).
+DR   MIM; 600058; gene.
+DR   neXtProt; NX_P42681; -.
+DR   OpenTargets; ENSG00000074966; -.
+DR   PharmGKB; PA37090; -.
+DR   VEuPathDB; HostDB:ENSG00000074966; -.
+DR   eggNOG; KOG0197; Eukaryota.
+DR   GeneTree; ENSGT00940000160857; -.
+DR   HOGENOM; CLU_000288_7_2_1; -.
+DR   InParanoid; P42681; -.
+DR   OMA; GDVRHYQ; -.
+DR   OrthoDB; 1047190at2759; -.
+DR   PhylomeDB; P42681; -.
+DR   TreeFam; TF351634; -.
+DR   BRENDA; 2.7.10.2; 2681.
+DR   PathwayCommons; P42681; -.
+DR   Reactome; R-HSA-2871809; FCERI mediated Ca+2 mobilization.
+DR   SignaLink; P42681; -.
+DR   SIGNOR; P42681; -.
+DR   BioGRID-ORCS; 7294; 20 hits in 1108 CRISPR screens.
+DR   ChiTaRS; TXK; human.
+DR   EvolutionaryTrace; P42681; -.
+DR   GeneWiki; TXK_(gene); -.
+DR   GenomeRNAi; 7294; -.
+DR   Pharos; P42681; Tchem.
+DR   PRO; PR:P42681; -.
+DR   Proteomes; UP000005640; Chromosome 4.
+DR   RNAct; P42681; protein.
+DR   Bgee; ENSG00000074966; Expressed in granulocyte and 108 other tissues.
+DR   ExpressionAtlas; P42681; baseline and differential.
+DR   Genevisible; P42681; HS.
+DR   GO; GO:0005737; C:cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004715; F:non-membrane spanning protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:0007202; P:activation of phospholipase C activity; ISS:UniProtKB.
+DR   GO; GO:0002250; P:adaptive immune response; ISS:UniProtKB.
+DR   GO; GO:0007229; P:integrin-mediated signaling pathway; IBA:GO_Central.
+DR   GO; GO:0001819; P:positive regulation of cytokine production; ISS:UniProtKB.
+DR   GO; GO:0032729; P:positive regulation of interferon-gamma production; IDA:UniProtKB.
+DR   GO; GO:0060335; P:positive regulation of interferon-gamma-mediated signaling pathway; IDA:UniProtKB.
+DR   GO; GO:0045944; P:positive regulation of transcription by RNA polymerase II; IDA:NTNU_SB.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0010468; P:regulation of gene expression; IDA:GO_Central.
+DR   GO; GO:0010543; P:regulation of platelet activation; IBA:GO_Central.
+DR   GO; GO:0050852; P:T cell receptor signaling pathway; ISS:UniProtKB.
+DR   GO; GO:0042246; P:tissue regeneration; IBA:GO_Central.
+DR   CDD; cd10398; SH2_Tec_Txk; 1.
+DR   CDD; cd11907; SH3_TXK; 1.
+DR   Gene3D; 3.30.505.10; -; 1.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR000980; SH2.
+DR   InterPro; IPR036860; SH2_dom_sf.
+DR   InterPro; IPR036028; SH3-like_dom_sf.
+DR   InterPro; IPR001452; SH3_domain.
+DR   InterPro; IPR035870; Txk_SH2.
+DR   InterPro; IPR035579; TXK_SH3.
+DR   InterPro; IPR008266; Tyr_kinase_AS.
+DR   InterPro; IPR020635; Tyr_kinase_cat_dom.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   Pfam; PF00017; SH2; 1.
+DR   Pfam; PF00018; SH3_1; 1.
+DR   PRINTS; PR00401; SH2DOMAIN.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00252; SH2; 1.
+DR   SMART; SM00326; SH3; 1.
+DR   SMART; SM00219; TyrKc; 1.
+DR   SUPFAM; SSF50044; SSF50044; 1.
+DR   SUPFAM; SSF55550; SSF55550; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00109; PROTEIN_KINASE_TYR; 1.
+DR   PROSITE; PS50001; SH2; 1.
+DR   PROSITE; PS50002; SH3; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Adaptive immunity; ATP-binding; Cell membrane; Cytoplasm;
+KW   Immunity; Kinase; Lipoprotein; Membrane; Nucleotide-binding; Nucleus;
+KW   Palmitate; Phosphoprotein; Reference proteome; SH2 domain; SH3 domain;
+KW   Transcription; Transcription regulation; Transferase;
+KW   Tyrosine-protein kinase.
+FT   CHAIN           1..527
+FT                   /note="Tyrosine-protein kinase TXK"
+FT                   /id="PRO_0000088175"
+FT   DOMAIN          82..142
+FT                   /note="SH3"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00192"
+FT   DOMAIN          150..246
+FT                   /note="SH2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00191"
+FT   DOMAIN          271..527
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          35..79
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOTIF           68..73
+FT                   /note="Nuclear localization signal"
+FT                   /evidence="ECO:0000255"
+FT   COMPBIAS        47..66
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        390
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10028"
+FT   BINDING         277..285
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         299
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         91
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:12081135"
+FT   MOD_RES         420
+FT                   /note="Phosphotyrosine; by FYN and autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:12081135"
+FT   VARIANT         45
+FT                   /note="R -> H (in dbSNP:rs7658300)"
+FT                   /evidence="ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:7951233"
+FT                   /id="VAR_028368"
+FT   VARIANT         63
+FT                   /note="R -> C (in dbSNP:rs41265727)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041869"
+FT   VARIANT         336
+FT                   /note="R -> Q (in dbSNP:rs11724347)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_028369"
+FT   MUTAGEN         91
+FT                   /note="Y->A: Reduces expression levels if IFN-gamma."
+FT                   /evidence="ECO:0000269|PubMed:12081135"
+FT   MUTAGEN         299
+FT                   /note="K->A: Impairs kinase activity."
+FT                   /evidence="ECO:0000269|PubMed:9813138"
+FT   STRAND          148..151
+FT                   /evidence="ECO:0007829|PDB:2DM0"
+FT   HELIX           157..167
+FT                   /evidence="ECO:0007829|PDB:2DM0"
+FT   STRAND          175..178
+FT                   /evidence="ECO:0007829|PDB:2DM0"
+FT   STRAND          181..189
+FT                   /evidence="ECO:0007829|PDB:2DM0"
+FT   STRAND          193..197
+FT                   /evidence="ECO:0007829|PDB:2DM0"
+FT   STRAND          200..207
+FT                   /evidence="ECO:0007829|PDB:2DM0"
+FT   STRAND          213..218
+FT                   /evidence="ECO:0007829|PDB:2DM0"
+FT   HELIX           224..231
+FT                   /evidence="ECO:0007829|PDB:2DM0"
+FT   STRAND          237..239
+FT                   /evidence="ECO:0007829|PDB:2DM0"
+SQ   SEQUENCE   527 AA;  61258 MW;  BCCA081F4155CAA6 CRC64;
+     MILSSYNTIQ SVFCCCCCCS VQKRQMRTQI SLSTDEELPE KYTQRRRPWL SQLSNKKQSN
+     TGRVQPSKRK PLPPLPPSEV AEEKIQVKAL YDFLPREPCN LALRRAEEYL ILEKYNPHWW
+     KARDRLGNEG LIPSNYVTEN KITNLEIYEW YHRNITRNQA EHLLRQESKE GAFIVRDSRH
+     LGSYTISVFM GARRSTEAAI KHYQIKKNDS GQWYVAERHA FQSIPELIWY HQHNAAGLMT
+     RLRYPVGLMG SCLPATAGFS YEKWEIDPSE LAFIKEIGSG QFGVVHLGEW RSHIQVAIKA
+     INEGSMSEED FIEEAKVMMK LSHSKLVQLY GVCIQRKPLY IVTEFMENGC LLNYLRENKG
+     KLRKEMLLSV CQDICEGMEY LERNGYIHRD LAARNCLVSS TCIVKISDFG MTRYVLDDEY
+     VSSFGAKFPI KWSPPEVFLF NKYSSKSDVW SFGVLMWEVF TEGKMPFENK SNLQVVEAIS
+     EGFRLYRPHL APMSIYEVMY SCWHEKPEGR PTFAELLRAV TEIAETW
+//

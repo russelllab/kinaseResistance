@@ -1,0 +1,300 @@
+ID   ST17B_HUMAN             Reviewed;         372 AA.
+AC   O94768;
+DT   20-JUN-2001, integrated into UniProtKB/Swiss-Prot.
+DT   01-MAY-1999, sequence version 1.
+DT   12-OCT-2022, entry version 186.
+DE   RecName: Full=Serine/threonine-protein kinase 17B;
+DE            EC=2.7.11.1;
+DE   AltName: Full=DAP kinase-related apoptosis-inducing protein kinase 2;
+GN   Name=STK17B; Synonyms=DRAK2;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], FUNCTION, SUBCELLULAR LOCATION, TISSUE
+RP   SPECIFICITY, AND MUTAGENESIS OF LYS-62.
+RC   TISSUE=Liver, and Placenta;
+RX   PubMed=9786912; DOI=10.1074/jbc.273.44.29066;
+RA   Sanjo H., Kawai T., Akira S.;
+RT   "DRAKs, novel serine/threonine kinases related to death-associated protein
+RT   kinase that trigger apoptosis.";
+RL   J. Biol. Chem. 273:29066-29071(1998).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=B-cell;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [3]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [4]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [5]
+RP   VARIANT [LARGE SCALE ANALYSIS] PHE-320.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Phosphorylates myosin light chains (By similarity). Acts as a
+CC       positive regulator of apoptosis. {ECO:0000250,
+CC       ECO:0000269|PubMed:9786912}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- SUBUNIT: Interacts with CHP1; the interaction induces CHP1 to
+CC       translocate from the Golgi to the nucleus. {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:9786912}. Cell
+CC       membrane {ECO:0000250}. Endoplasmic reticulum-Golgi intermediate
+CC       compartment {ECO:0000250}. Note=Colocalizes with STK17B at the plasma
+CC       membrane. {ECO:0000250}.
+CC   -!- TISSUE SPECIFICITY: Highly expressed in placenta, lung, pancreas. Lower
+CC       levels in heart, brain, liver, skeletal muscle and kidney.
+CC       {ECO:0000269|PubMed:9786912}.
+CC   -!- PTM: Autophosphorylated.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CAMK Ser/Thr
+CC       protein kinase family. DAP kinase subfamily. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AB011421; BAA34127.1; -; mRNA.
+DR   EMBL; BC016040; AAH16040.1; -; mRNA.
+DR   CCDS; CCDS2315.1; -.
+DR   RefSeq; NP_004217.1; NM_004226.3.
+DR   RefSeq; XP_011510470.1; XM_011512168.2.
+DR   RefSeq; XP_011510471.1; XM_011512169.1.
+DR   RefSeq; XP_011510472.1; XM_011512170.1.
+DR   PDB; 3LM0; X-ray; 2.35 A; A=25-329.
+DR   PDB; 3LM5; X-ray; 2.29 A; A=25-329.
+DR   PDB; 6QF4; X-ray; 2.50 A; A=18-329.
+DR   PDB; 6Y6F; X-ray; 1.98 A; A=25-329.
+DR   PDB; 6Y6H; X-ray; 1.95 A; A=25-329.
+DR   PDB; 6ZJF; X-ray; 1.75 A; A=25-329.
+DR   PDB; 7AKG; X-ray; 2.08 A; A=25-329.
+DR   PDBsum; 3LM0; -.
+DR   PDBsum; 3LM5; -.
+DR   PDBsum; 6QF4; -.
+DR   PDBsum; 6Y6F; -.
+DR   PDBsum; 6Y6H; -.
+DR   PDBsum; 6ZJF; -.
+DR   PDBsum; 7AKG; -.
+DR   AlphaFoldDB; O94768; -.
+DR   SMR; O94768; -.
+DR   BioGRID; 114684; 37.
+DR   IntAct; O94768; 27.
+DR   STRING; 9606.ENSP00000263955; -.
+DR   BindingDB; O94768; -.
+DR   ChEMBL; CHEMBL3980; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugBank; DB04216; Quercetin.
+DR   DrugCentral; O94768; -.
+DR   GlyGen; O94768; 1 site, 1 O-linked glycan (1 site).
+DR   iPTMnet; O94768; -.
+DR   PhosphoSitePlus; O94768; -.
+DR   BioMuta; STK17B; -.
+DR   CPTAC; CPTAC-1034; -.
+DR   EPD; O94768; -.
+DR   jPOST; O94768; -.
+DR   MassIVE; O94768; -.
+DR   PaxDb; O94768; -.
+DR   PeptideAtlas; O94768; -.
+DR   PRIDE; O94768; -.
+DR   ProteomicsDB; 50432; -.
+DR   Antibodypedia; 19872; 435 antibodies from 43 providers.
+DR   DNASU; 9262; -.
+DR   Ensembl; ENST00000263955.9; ENSP00000263955.4; ENSG00000081320.11.
+DR   Ensembl; ENST00000409228.5; ENSP00000386853.1; ENSG00000081320.11.
+DR   GeneID; 9262; -.
+DR   KEGG; hsa:9262; -.
+DR   MANE-Select; ENST00000263955.9; ENSP00000263955.4; NM_004226.4; NP_004217.1.
+DR   CTD; 9262; -.
+DR   DisGeNET; 9262; -.
+DR   GeneCards; STK17B; -.
+DR   HGNC; HGNC:11396; STK17B.
+DR   HPA; ENSG00000081320; Group enriched (bone marrow, lymphoid tissue).
+DR   MIM; 604727; gene.
+DR   neXtProt; NX_O94768; -.
+DR   OpenTargets; ENSG00000081320; -.
+DR   PharmGKB; PA36204; -.
+DR   VEuPathDB; HostDB:ENSG00000081320; -.
+DR   eggNOG; KOG0032; Eukaryota.
+DR   GeneTree; ENSGT00940000154014; -.
+DR   HOGENOM; CLU_000288_63_0_1; -.
+DR   InParanoid; O94768; -.
+DR   OMA; FYMLESK; -.
+DR   OrthoDB; 1156450at2759; -.
+DR   PhylomeDB; O94768; -.
+DR   TreeFam; TF314166; -.
+DR   BRENDA; 2.7.11.1; 2681.
+DR   PathwayCommons; O94768; -.
+DR   SignaLink; O94768; -.
+DR   SIGNOR; O94768; -.
+DR   BioGRID-ORCS; 9262; 9 hits in 1116 CRISPR screens.
+DR   ChiTaRS; STK17B; human.
+DR   EvolutionaryTrace; O94768; -.
+DR   GenomeRNAi; 9262; -.
+DR   Pharos; O94768; Tchem.
+DR   PRO; PR:O94768; -.
+DR   Proteomes; UP000005640; Chromosome 2.
+DR   RNAct; O94768; protein.
+DR   Bgee; ENSG00000081320; Expressed in epithelium of nasopharynx and 172 other tissues.
+DR   ExpressionAtlas; O94768; baseline and differential.
+DR   Genevisible; O94768; HS.
+DR   GO; GO:0015629; C:actin cytoskeleton; IEA:Ensembl.
+DR   GO; GO:0005793; C:endoplasmic reticulum-Golgi intermediate compartment; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IDA:UniProtKB.
+DR   GO; GO:0004672; F:protein kinase activity; ISS:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0006915; P:apoptotic process; IEA:UniProtKB-KW.
+DR   GO; GO:0035556; P:intracellular signal transduction; IDA:UniProtKB.
+DR   GO; GO:0043065; P:positive regulation of apoptotic process; IBA:GO_Central.
+DR   GO; GO:2000271; P:positive regulation of fibroblast apoptotic process; IMP:UniProtKB.
+DR   GO; GO:0046777; P:protein autophosphorylation; ISS:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   CDD; cd14198; STKc_DRAK2; 1.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   InterPro; IPR042763; ST17B_STKc.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Apoptosis; ATP-binding; Cell membrane; Kinase; Membrane;
+KW   Nucleotide-binding; Nucleus; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Transferase.
+FT   CHAIN           1..372
+FT                   /note="Serine/threonine-protein kinase 17B"
+FT                   /id="PRO_0000086706"
+FT   DOMAIN          33..293
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          305..362
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        333..362
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        158
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         39..47
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         62
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT   VARIANT         320
+FT                   /note="S -> F (in dbSNP:rs34740616)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041147"
+FT   MUTAGEN         62
+FT                   /note="K->A: Loss of activity and of apoptotic function."
+FT                   /evidence="ECO:0000269|PubMed:9786912"
+FT   HELIX           25..31
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   STRAND          32..41
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   STRAND          43..52
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   TURN            53..55
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   STRAND          58..68
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           74..86
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           87..89
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   STRAND          96..101
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   STRAND          103..111
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           118..122
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           124..129
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           132..151
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           161..163
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   STRAND          164..167
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   TURN            169..172
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   STRAND          175..177
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           180..182
+FT                   /evidence="ECO:0007829|PDB:3LM5"
+FT   HELIX           194..196
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           199..201
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           204..207
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           214..230
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           240..249
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           256..259
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           264..273
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           278..280
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           284..288
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+FT   HELIX           291..293
+FT                   /evidence="ECO:0007829|PDB:6ZJF"
+SQ   SEQUENCE   372 AA;  42344 MW;  7E69FFAED6DC1FF3 CRC64;
+     MSRRRFDCRS ISGLLTTTPQ IPIKMENFNN FYILTSKELG RGKFAVVRQC ISKSTGQEYA
+     AKFLKKRRRG QDCRAEILHE IAVLELAKSC PRVINLHEVY ENTSEIILIL EYAAGGEIFS
+     LCLPELAEMV SENDVIRLIK QILEGVYYLH QNNIVHLDLK PQNILLSSIY PLGDIKIVDF
+     GMSRKIGHAC ELREIMGTPE YLAPEILNYD PITTATDMWN IGIIAYMLLT HTSPFVGEDN
+     QETYLNISQV NVDYSEETFS SVSQLATDFI QSLLVKNPEK RPTAEICLSH SWLQQWDFEN
+     LFHPEETSSS SQTQDHSVRS SEDKTSKSSC NGTCGDREDK ENIPEDSSMV SKRFRFDDSL
+     PNPHELVSDL LC
+//

@@ -1,0 +1,337 @@
+ID   MYLK2_HUMAN             Reviewed;         596 AA.
+AC   Q9H1R3; Q569L1; Q96I84;
+DT   19-OCT-2002, integrated into UniProtKB/Swiss-Prot.
+DT   23-JAN-2007, sequence version 3.
+DT   12-OCT-2022, entry version 199.
+DE   RecName: Full=Myosin light chain kinase 2, skeletal/cardiac muscle;
+DE            Short=MLCK2;
+DE            EC=2.7.11.18;
+GN   Name=MYLK2;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], FUNCTION, AND VARIANTS CMH VAL-87 AND GLU-95.
+RC   TISSUE=Skeletal muscle;
+RX   PubMed=11733062; DOI=10.1016/s0092-8674(01)00586-4;
+RA   Davis J.S., Hassanzadeh S., Winitsky S., Lin H., Satorius C., Vemuri R.,
+RA   Aletras A.H., Wen H., Epstein N.D.;
+RT   "The overall pattern of cardiac contraction depends on a spatial gradient
+RT   of myosin regulatory light chain phosphorylation.";
+RL   Cell 107:631-641(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Skeletal muscle;
+RA   Stanchi F., Lanfranchi G.;
+RT   "Full-length sequencing of 100 cDNA clones from human adult skeletal
+RT   muscle.";
+RL   Submitted (FEB-2000) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=11780052; DOI=10.1038/414865a;
+RA   Deloukas P., Matthews L.H., Ashurst J.L., Burton J., Gilbert J.G.R.,
+RA   Jones M., Stavrides G., Almeida J.P., Babbage A.K., Bagguley C.L.,
+RA   Bailey J., Barlow K.F., Bates K.N., Beard L.M., Beare D.M., Beasley O.P.,
+RA   Bird C.P., Blakey S.E., Bridgeman A.M., Brown A.J., Buck D., Burrill W.D.,
+RA   Butler A.P., Carder C., Carter N.P., Chapman J.C., Clamp M., Clark G.,
+RA   Clark L.N., Clark S.Y., Clee C.M., Clegg S., Cobley V.E., Collier R.E.,
+RA   Connor R.E., Corby N.R., Coulson A., Coville G.J., Deadman R., Dhami P.D.,
+RA   Dunn M., Ellington A.G., Frankland J.A., Fraser A., French L., Garner P.,
+RA   Grafham D.V., Griffiths C., Griffiths M.N.D., Gwilliam R., Hall R.E.,
+RA   Hammond S., Harley J.L., Heath P.D., Ho S., Holden J.L., Howden P.J.,
+RA   Huckle E., Hunt A.R., Hunt S.E., Jekosch K., Johnson C.M., Johnson D.,
+RA   Kay M.P., Kimberley A.M., King A., Knights A., Laird G.K., Lawlor S.,
+RA   Lehvaeslaiho M.H., Leversha M.A., Lloyd C., Lloyd D.M., Lovell J.D.,
+RA   Marsh V.L., Martin S.L., McConnachie L.J., McLay K., McMurray A.A.,
+RA   Milne S.A., Mistry D., Moore M.J.F., Mullikin J.C., Nickerson T.,
+RA   Oliver K., Parker A., Patel R., Pearce T.A.V., Peck A.I.,
+RA   Phillimore B.J.C.T., Prathalingam S.R., Plumb R.W., Ramsay H., Rice C.M.,
+RA   Ross M.T., Scott C.E., Sehra H.K., Shownkeen R., Sims S., Skuce C.D.,
+RA   Smith M.L., Soderlund C., Steward C.A., Sulston J.E., Swann R.M.,
+RA   Sycamore N., Taylor R., Tee L., Thomas D.W., Thorpe A., Tracey A.,
+RA   Tromans A.C., Vaudin M., Wall M., Wallis J.M., Whitehead S.L.,
+RA   Whittaker P., Willey D.L., Williams L., Williams S.A., Wilming L.,
+RA   Wray P.W., Hubbard T., Durbin R.M., Bentley D.R., Beck S., Rogers J.;
+RT   "The DNA sequence and comparative analysis of human chromosome 20.";
+RL   Nature 414:865-871(2001).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Muscle;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [5]
+RP   X-RAY CRYSTALLOGRAPHY (2.6 ANGSTROMS) OF 566-587 IN COMPLEX WITH CENTRIN,
+RP   AND SUBUNIT.
+RA   Radu L., Miron S., Durand D., Assairi L., Blouquit Y., Charbonnier J.B.;
+RT   "Structural features of the complexes formed by Scherffelia dubia
+RT   centrin.";
+RL   Submitted (JAN-2011) to the PDB data bank.
+RN   [6]
+RP   VARIANTS [LARGE SCALE ANALYSIS] VAL-117; VAL-142; ALA-144 AND ASN-324.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Implicated in the level of global muscle contraction and
+CC       cardiac function. Phosphorylates a specific serine in the N-terminus of
+CC       a myosin light chain. {ECO:0000269|PubMed:11733062}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[myosin light chain] = ADP + H(+) + O-phospho-L-
+CC         seryl-[myosin light chain]; Xref=Rhea:RHEA:22004, Rhea:RHEA-
+CC         COMP:13684, Rhea:RHEA-COMP:13685, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:29999, ChEBI:CHEBI:30616, ChEBI:CHEBI:83421,
+CC         ChEBI:CHEBI:456216; EC=2.7.11.18;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[myosin light chain] = ADP + H(+) + O-
+CC         phospho-L-threonyl-[myosin light chain]; Xref=Rhea:RHEA:53900,
+CC         Rhea:RHEA-COMP:13686, Rhea:RHEA-COMP:13687, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:30013, ChEBI:CHEBI:30616, ChEBI:CHEBI:61977,
+CC         ChEBI:CHEBI:456216; EC=2.7.11.18;
+CC   -!- SUBUNIT: May interact with centrin. {ECO:0000269|Ref.5}.
+CC   -!- INTERACTION:
+CC       Q9H1R3; P08238: HSP90AB1; NbExp=3; IntAct=EBI-356910, EBI-352572;
+CC       Q9H1R3; Q06413: MEF2C; NbExp=2; IntAct=EBI-356910, EBI-2684075;
+CC       Q9H1R3; Q9BYV2: TRIM54; NbExp=2; IntAct=EBI-356910, EBI-2130429;
+CC       Q9H1R3; O76024: WFS1; NbExp=3; IntAct=EBI-356910, EBI-720609;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm. Note=Colocalizes with phosphorylated
+CC       myosin light chain (RLCP) at filaments of the myofibrils.
+CC   -!- TISSUE SPECIFICITY: Heart and skeletal muscles. Increased expression in
+CC       the apical tissue compared to the interventricular septal tissue.
+CC   -!- DISEASE: Cardiomyopathy, familial hypertrophic (CMH) [MIM:192600]: A
+CC       hereditary heart disorder characterized by ventricular hypertrophy,
+CC       which is usually asymmetric and often involves the interventricular
+CC       septum. The symptoms include dyspnea, syncope, collapse, palpitations,
+CC       and chest pain. They can be readily provoked by exercise. The disorder
+CC       has inter- and intrafamilial variability ranging from benign to
+CC       malignant forms with high risk of cardiac failure and sudden cardiac
+CC       death. {ECO:0000269|PubMed:11733062}. Note=The disease is caused by
+CC       variants affecting the gene represented in this entry.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CAMK Ser/Thr
+CC       protein kinase family. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AF325549; AAK15494.1; -; mRNA.
+DR   EMBL; AJ272502; CAC81354.1; -; mRNA.
+DR   EMBL; AL160175; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC007753; AAH07753.1; -; mRNA.
+DR   EMBL; BC069627; AAH69627.1; -; mRNA.
+DR   EMBL; BC092413; AAH92413.1; -; mRNA.
+DR   EMBL; BC127622; AAI27623.1; -; mRNA.
+DR   CCDS; CCDS13191.1; -.
+DR   RefSeq; NP_149109.1; NM_033118.3.
+DR   PDB; 2LV6; Other; -; B=566-591.
+DR   PDB; 3KF9; X-ray; 2.60 A; B/D=566-587.
+DR   PDBsum; 2LV6; -.
+DR   PDBsum; 3KF9; -.
+DR   AlphaFoldDB; Q9H1R3; -.
+DR   BMRB; Q9H1R3; -.
+DR   SMR; Q9H1R3; -.
+DR   BioGRID; 124494; 85.
+DR   IntAct; Q9H1R3; 89.
+DR   MINT; Q9H1R3; -.
+DR   STRING; 9606.ENSP00000365162; -.
+DR   BindingDB; Q9H1R3; -.
+DR   ChEMBL; CHEMBL2777; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugBank; DB04825; Prenylamine.
+DR   DrugCentral; Q9H1R3; -.
+DR   GuidetoPHARMACOLOGY; 1553; -.
+DR   iPTMnet; Q9H1R3; -.
+DR   PhosphoSitePlus; Q9H1R3; -.
+DR   BioMuta; MYLK2; -.
+DR   DMDM; 24211884; -.
+DR   EPD; Q9H1R3; -.
+DR   jPOST; Q9H1R3; -.
+DR   MassIVE; Q9H1R3; -.
+DR   MaxQB; Q9H1R3; -.
+DR   PaxDb; Q9H1R3; -.
+DR   PeptideAtlas; Q9H1R3; -.
+DR   PRIDE; Q9H1R3; -.
+DR   ProteomicsDB; 80445; -.
+DR   Antibodypedia; 25246; 154 antibodies from 25 providers.
+DR   DNASU; 85366; -.
+DR   Ensembl; ENST00000375985.5; ENSP00000365152.4; ENSG00000101306.11.
+DR   Ensembl; ENST00000375994.6; ENSP00000365162.2; ENSG00000101306.11.
+DR   GeneID; 85366; -.
+DR   KEGG; hsa:85366; -.
+DR   MANE-Select; ENST00000375985.5; ENSP00000365152.4; NM_033118.4; NP_149109.1.
+DR   UCSC; uc002wwq.3; human.
+DR   CTD; 85366; -.
+DR   DisGeNET; 85366; -.
+DR   GeneCards; MYLK2; -.
+DR   HGNC; HGNC:16243; MYLK2.
+DR   HPA; ENSG00000101306; Tissue enriched (skeletal).
+DR   MalaCards; MYLK2; -.
+DR   MIM; 192600; phenotype.
+DR   MIM; 606566; gene.
+DR   neXtProt; NX_Q9H1R3; -.
+DR   OpenTargets; ENSG00000101306; -.
+DR   Orphanet; 155; NON RARE IN EUROPE: Familial isolated hypertrophic cardiomyopathy.
+DR   PharmGKB; PA31389; -.
+DR   VEuPathDB; HostDB:ENSG00000101306; -.
+DR   eggNOG; KOG0032; Eukaryota.
+DR   GeneTree; ENSGT00940000161489; -.
+DR   HOGENOM; CLU_000288_90_1_1; -.
+DR   InParanoid; Q9H1R3; -.
+DR   OMA; PPDPKKD; -.
+DR   OrthoDB; 218222at2759; -.
+DR   PhylomeDB; Q9H1R3; -.
+DR   TreeFam; TF314166; -.
+DR   BRENDA; 2.7.11.18; 2681.
+DR   PathwayCommons; Q9H1R3; -.
+DR   SignaLink; Q9H1R3; -.
+DR   SIGNOR; Q9H1R3; -.
+DR   BioGRID-ORCS; 85366; 15 hits in 1102 CRISPR screens.
+DR   EvolutionaryTrace; Q9H1R3; -.
+DR   GeneWiki; MYLK2; -.
+DR   GenomeRNAi; 85366; -.
+DR   Pharos; Q9H1R3; Tchem.
+DR   PRO; PR:Q9H1R3; -.
+DR   Proteomes; UP000005640; Chromosome 20.
+DR   RNAct; Q9H1R3; protein.
+DR   Bgee; ENSG00000101306; Expressed in hindlimb stylopod muscle and 120 other tissues.
+DR   Genevisible; Q9H1R3; HS.
+DR   GO; GO:0005737; C:cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0030017; C:sarcomere; IC:BHF-UCL.
+DR   GO; GO:0045202; C:synapse; IEA:GOC.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0005516; F:calmodulin binding; ISS:BHF-UCL.
+DR   GO; GO:0004683; F:calmodulin-dependent protein kinase activity; ISS:BHF-UCL.
+DR   GO; GO:0032027; F:myosin light chain binding; IBA:GO_Central.
+DR   GO; GO:0004687; F:myosin light chain kinase activity; IDA:BHF-UCL.
+DR   GO; GO:0060048; P:cardiac muscle contraction; IC:BHF-UCL.
+DR   GO; GO:0055008; P:cardiac muscle tissue morphogenesis; IMP:BHF-UCL.
+DR   GO; GO:0007274; P:neuromuscular synaptic transmission; IEA:Ensembl.
+DR   GO; GO:0018107; P:peptidyl-threonine phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0010628; P:positive regulation of gene expression; IDA:UniProtKB.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0032971; P:regulation of muscle filament sliding; IDA:BHF-UCL.
+DR   GO; GO:0035914; P:skeletal muscle cell differentiation; IDA:UniProtKB.
+DR   GO; GO:0014816; P:skeletal muscle satellite cell differentiation; IEA:Ensembl.
+DR   GO; GO:0006941; P:striated muscle contraction; IDA:BHF-UCL.
+DR   CDD; cd14190; STKc_MLCK2; 1.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR042717; MLCK2_STKc.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Acetylation; ATP-binding; Calmodulin-binding; Cardiomyopathy;
+KW   Cytoplasm; Disease variant; Kinase; Nucleotide-binding; Phosphoprotein;
+KW   Reference proteome; Serine/threonine-protein kinase; Transferase.
+FT   INIT_MET        1
+FT                   /note="Removed"
+FT                   /evidence="ECO:0000250|UniProtKB:P07313"
+FT   CHAIN           2..596
+FT                   /note="Myosin light chain kinase 2, skeletal/cardiac
+FT                   muscle"
+FT                   /id="PRO_0000086408"
+FT   DOMAIN          285..540
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1..224
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          574..586
+FT                   /note="Calmodulin-binding"
+FT                   /evidence="ECO:0000250"
+FT   COMPBIAS        39..59
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        188..204
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        406
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         291..299
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         314
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         2
+FT                   /note="N-acetylalanine"
+FT                   /evidence="ECO:0000250|UniProtKB:P07313"
+FT   MOD_RES         143
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q8VCR8"
+FT   MOD_RES         149
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q8VCR8"
+FT   MOD_RES         151
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q8VCR8"
+FT   MOD_RES         445
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000250|UniProtKB:P20689"
+FT   VARIANT         87
+FT                   /note="A -> V (in CMH; dbSNP:rs121908107)"
+FT                   /evidence="ECO:0000269|PubMed:11733062"
+FT                   /id="VAR_014197"
+FT   VARIANT         95
+FT                   /note="A -> E (in CMH; dbSNP:rs121908108)"
+FT                   /evidence="ECO:0000269|PubMed:11733062"
+FT                   /id="VAR_014198"
+FT   VARIANT         117
+FT                   /note="A -> V (in a lung neuroendocrine carcinoma sample;
+FT                   somatic mutation; dbSNP:rs1229709568)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040860"
+FT   VARIANT         142
+FT                   /note="G -> V (in dbSNP:rs56385445)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040861"
+FT   VARIANT         144
+FT                   /note="P -> A (in dbSNP:rs34396614)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040862"
+FT   VARIANT         324
+FT                   /note="K -> N (in dbSNP:rs34146416)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040863"
+FT   CONFLICT        355..361
+FT                   /note="IVLFMEY -> GGVCAHS (in Ref. 4; AAH07753)"
+FT                   /evidence="ECO:0000305"
+FT   HELIX           567..586
+FT                   /evidence="ECO:0007829|PDB:3KF9"
+SQ   SEQUENCE   596 AA;  64685 MW;  671A2B5DE9453ADE CRC64;
+     MATENGAVEL GIQNPSTDKA PKGPTGERPL AAGKDPGPPD PKKAPDPPTL KKDAKAPASE
+     KGDGTLAQPS TSSQGPKGEG DRGGGPAEGS AGPPAALPQQ TATPETSVKK PKAEQGASGS
+     QDPGKPRVGK KAAEGQAAAR RGSPAFLHSP SCPAIISSSE KLLAKKPPSE ASELTFEGVP
+     MTHSPTDPRP AKAEEGKNIL AESQKEVGEK TPGQAGQAKM QGDTSRGIEF QAVPSEKSEV
+     GQALCLTARE EDCFQILDDC PPPPAPFPHR MVELRTGNVS SEFSMNSKEA LGGGKFGAVC
+     TCMEKATGLK LAAKVIKKQT PKDKEMVLLE IEVMNQLNHR NLIQLYAAIE TPHEIVLFME
+     YIEGGELFER IVDEDYHLTE VDTMVFVRQI CDGILFMHKM RVLHLDLKPE NILCVNTTGH
+     LVKIIDFGLA RRYNPNEKLK VNFGTPEFLS PEVVNYDQIS DKTDMWSMGV ITYMLLSGLS
+     PFLGDDDTET LNNVLSGNWY FDEETFEAVS DEAKDFVSNL IVKDQRARMN AAQCLAHPWL
+     NNLAEKAKRC NRRLKSQILL KKYLMKRRWK KNFIAVSAAN RFKKISSSGA LMALGV
+//

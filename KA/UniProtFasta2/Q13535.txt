@@ -1,0 +1,915 @@
+ID   ATR_HUMAN               Reviewed;        2644 AA.
+AC   Q13535; Q59HB2; Q7KYL3; Q93051; Q9BXK4;
+DT   29-MAR-2005, integrated into UniProtKB/Swiss-Prot.
+DT   05-JUL-2004, sequence version 3.
+DT   12-OCT-2022, entry version 203.
+DE   RecName: Full=Serine/threonine-protein kinase ATR;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Ataxia telangiectasia and Rad3-related protein;
+DE   AltName: Full=FRAP-related protein 1;
+GN   Name=ATR; Synonyms=FRP1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=8978690; DOI=10.1002/j.1460-2075.1996.tb01054.x;
+RA   Bentley N.J., Holtzman D.A., Flaggs G., Keegan K.S., DeMaggio A.,
+RA   Ford J.C., Hoekstra M., Carr A.M.;
+RT   "The Schizosaccharomyces pombe rad3 checkpoint gene.";
+RL   EMBO J. 15:6641-6651(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), AND TISSUE SPECIFICITY.
+RC   TISSUE=T-cell;
+RX   PubMed=8610130; DOI=10.1073/pnas.93.7.2850;
+RA   Cimprich K.A., Shin T.B., Keith C.T., Schreiber S.L.;
+RT   "cDNA cloning and gene mapping of a candidate human cell cycle checkpoint
+RT   protein.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 93:2850-2855(1996).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA / MRNA] OF 433-526 (ISOFORMS 1 AND 2), AND
+RP   TISSUE SPECIFICITY.
+RX   PubMed=11470508; DOI=10.1016/s0378-1119(01)00543-1;
+RA   Mannino J.L., Kim W.-J., Wernick M., Nguyen S.V., Braquet R., Adamson A.W.,
+RA   Den Z., Batzer M.A., Collins C.C., Brown K.D.;
+RT   "Evidence for alternate splicing within the mRNA transcript encoding the
+RT   DNA damage response kinase ATR.";
+RL   Gene 272:35-43(2001).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 2155-2644 (ISOFORM 3).
+RC   TISSUE=Brain;
+RA   Totoki Y., Toyoda A., Takeda T., Sakaki Y., Tanaka A., Yokoyama S.,
+RA   Ohara O., Nagase T., Kikuno R.F.;
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   SUBCELLULAR LOCATION, AND TISSUE SPECIFICITY.
+RX   PubMed=8843195; DOI=10.1101/gad.10.19.2423;
+RA   Keegan K.S., Holtzman D.A., Plug A.W., Christenson E.R., Brainerd E.E.,
+RA   Flaggs G., Bentley N.J., Taylor E.M., Meyn M.S., Moss S.B., Carr A.M.,
+RA   Ashley T., Hoekstra M.F.;
+RT   "The Atr and Atm protein kinases associate with different sites along
+RT   meiotically pairing chromosomes.";
+RL   Genes Dev. 10:2423-2437(1996).
+RN   [6]
+RP   ACTIVITY REGULATION.
+RX   PubMed=9766667;
+RA   Sarkaria J.N., Tibbetts R.S., Busby E.C., Kennedy A.P., Hill D.E.,
+RA   Abraham R.T.;
+RT   "Inhibition of phosphoinositide 3-kinase related kinases by the
+RT   radiosensitizing agent wortmannin.";
+RL   Cancer Res. 58:4375-4382(1998).
+RN   [7]
+RP   FUNCTION, AUTOPHOSPHORYLATION, AND MUTAGENESIS OF ASP-2475.
+RX   PubMed=9427750; DOI=10.1093/emboj/17.1.159;
+RA   Cliby W.A., Roberts C.J., Cimprich K.A., Stringer C.M., Lamb J.R.,
+RA   Schreiber S.L., Friend S.H.;
+RT   "Overexpression of a kinase-inactive ATR protein causes sensitivity to DNA-
+RT   damaging agents and defects in cell cycle checkpoints.";
+RL   EMBO J. 17:159-169(1998).
+RN   [8]
+RP   FUNCTION, AND MUTAGENESIS OF ASP-2494.
+RX   PubMed=9636169; DOI=10.1073/pnas.95.13.7445;
+RA   Wright J.A., Keegan K.S., Herendeen D.R., Bentley N.J., Carr A.M.,
+RA   Hoekstra M.F., Concannon P.;
+RT   "Protein kinase mutants of human ATR increase sensitivity to UV and
+RT   ionizing radiation and abrogate cell cycle checkpoint control.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 95:7445-7450(1998).
+RN   [9]
+RP   INTERACTION WITH HDAC2, AND IDENTIFICATION IN A COMPLEX CONTAINING HDAC2
+RP   AND CHD4.
+RX   PubMed=10545197; DOI=10.1021/bi991614n;
+RA   Schmidt D.R., Schreiber S.L.;
+RT   "Molecular association between ATR and two components of the nucleosome
+RT   remodeling and deacetylating complex, HDAC2 and CHD4.";
+RL   Biochemistry 38:14711-14717(1999).
+RN   [10]
+RP   FUNCTION, AND MUTAGENESIS OF LYS-2327 AND ASP-2475.
+RX   PubMed=9925639; DOI=10.1101/gad.13.2.152;
+RA   Tibbetts R.S., Brumbaugh K.M., Williams J.M., Sarkaria J.N., Cliby W.A.,
+RA   Shieh S.-Y., Taya Y., Prives C., Abraham R.T.;
+RT   "A role for ATR in the DNA damage-induced phosphorylation of p53.";
+RL   Genes Dev. 13:152-157(1999).
+RN   [11]
+RP   COFACTOR, AND FUNCTION.
+RX   PubMed=10608806; DOI=10.1074/jbc.274.53.37538;
+RA   Kim S.-T., Lim D.-S., Canman C.E., Kastan M.B.;
+RT   "Substrate specificities and identification of putative substrates of ATM
+RT   kinase family members.";
+RL   J. Biol. Chem. 274:37538-37543(1999).
+RN   [12]
+RP   FUNCTION, AUTOPHOSPHORYLATION, MUTAGENESIS OF ASP-2494, AND ACTIVITY
+RP   REGULATION.
+RX   PubMed=10597277; DOI=10.1038/sj.onc.1203077;
+RA   Hall-Jackson C.A., Cross D.A.E., Morrice N., Smythe C.;
+RT   "ATR is a caffeine-sensitive, DNA-activated protein kinase with a substrate
+RT   specificity distinct from DNA-PK.";
+RL   Oncogene 18:6707-6713(1999).
+RN   [13]
+RP   FUNCTION.
+RX   PubMed=10859164;
+RA   Liu Q., Guntuku S., Cui X.-S., Matsuoka S., Cortez D., Tamai K., Luo G.,
+RA   Carattini-Rivera S., DeMayo F., Bradley A., Donehower L.A., Elledge S.J.;
+RT   "Chk1 is an essential kinase that is regulated by Atr and required for the
+RT   G(2)/M DNA damage checkpoint.";
+RL   Genes Dev. 14:1448-1459(2000).
+RN   [14]
+RP   FUNCTION, SUBCELLULAR LOCATION, AND MUTAGENESIS OF LYS-2327.
+RX   PubMed=11114888; DOI=10.1101/gad.851000;
+RA   Tibbetts R.S., Cortez D., Brumbaugh K.M., Scully R., Livingston D.,
+RA   Elledge S.J., Abraham R.T.;
+RT   "Functional interactions between BRCA1 and the checkpoint kinase ATR during
+RT   genotoxic stress.";
+RL   Genes Dev. 14:2989-3002(2000).
+RN   [15]
+RP   FUNCTION.
+RX   PubMed=11673449; DOI=10.1074/jbc.c100569200;
+RA   Ward I.M., Chen J.;
+RT   "Histone H2AX is phosphorylated in an ATR-dependent manner in response to
+RT   replicational stress.";
+RL   J. Biol. Chem. 276:47759-47762(2001).
+RN   [16]
+RP   FUNCTION, AND INTERACTION WITH RAD17.
+RX   PubMed=11418864; DOI=10.1038/35082110;
+RA   Bao S., Tibbetts R.S., Brumbaugh K.M., Fang Y., Richardson D.A., Ali A.,
+RA   Chen S.M., Abraham R.T., Wang X.-F.;
+RT   "ATR/ATM-mediated phosphorylation of human Rad17 is required for genotoxic
+RT   stress responses.";
+RL   Nature 411:969-974(2001).
+RN   [17]
+RP   FUNCTION, SUBCELLULAR LOCATION, AND INTERACTION WITH ATRIP.
+RX   PubMed=11721054; DOI=10.1126/science.1065521;
+RA   Cortez D., Guntuku S., Qin J., Elledge S.J.;
+RT   "ATR and ATRIP: partners in checkpoint signaling.";
+RL   Science 294:1713-1716(2001).
+RN   [18]
+RP   FUNCTION.
+RX   PubMed=12526805; DOI=10.1016/s0092-8674(02)01113-3;
+RA   Casper A.M., Nghiem P., Arlt M.F., Glover T.W.;
+RT   "ATR regulates fragile site stability.";
+RL   Cell 111:779-789(2002).
+RN   [19]
+RP   FUNCTION, AND SUBCELLULAR LOCATION.
+RX   PubMed=11865061; DOI=10.1128/mcb.22.6.1834-1843.2002;
+RA   Hammond E.M., Denko N.C., Dorie M.J., Abraham R.T., Giaccia A.J.;
+RT   "Hypoxia links ATR and p53 through replication arrest.";
+RL   Mol. Cell. Biol. 22:1834-1843(2002).
+RN   [20]
+RP   DNA-BINDING, AND MUTAGENESIS OF LYS-2327.
+RX   PubMed=12011431; DOI=10.1073/pnas.102167799;
+RA   Uensal-Kacmaz K., Makhov A.M., Griffith J.D., Sancar A.;
+RT   "Preferential binding of ATR protein to UV-damaged DNA.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:6673-6678(2002).
+RN   [21]
+RP   FUNCTION, SUBCELLULAR LOCATION, AND MUTAGENESIS OF ASP-2475.
+RX   PubMed=12814551; DOI=10.1016/s0960-9822(03)00376-2;
+RA   Barr S.M., Leung C.G., Chang E.E., Cimprich K.A.;
+RT   "ATR kinase activity regulates the intranuclear translocation of ATR and
+RT   RPA following ionizing radiation.";
+RL   Curr. Biol. 13:1047-1051(2003).
+RN   [22]
+RP   INTERACTION WITH CLSPN.
+RX   PubMed=12766152; DOI=10.1074/jbc.m301136200;
+RA   Chini C.C.S., Chen J.;
+RT   "Human claspin is required for replication checkpoint control.";
+RL   J. Biol. Chem. 278:30057-30062(2003).
+RN   [23]
+RP   FUNCTION, INTERACTION WITH MSH2, AND IDENTIFICATION BY MASS SPECTROMETRY.
+RX   PubMed=14657349; DOI=10.1073/pnas.2536810100;
+RA   Wang Y., Qin J.;
+RT   "MSH2 and ATR form a signaling module and regulate two branches of the
+RT   damage response to DNA methylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:15387-15392(2003).
+RN   [24]
+RP   FUNCTION, DNA-BINDING, AND IDENTIFICATION IN A COMPLEX WITH RPA AND ATRIP.
+RX   PubMed=12791985; DOI=10.1126/science.1083430;
+RA   Zou L., Elledge S.J.;
+RT   "Sensing DNA damage through ATRIP recognition of RPA-ssDNA complexes.";
+RL   Science 300:1542-1548(2003).
+RN   [25]
+RP   INTERACTION WITH BCR-ABL.
+RX   PubMed=15050919; DOI=10.1016/s1535-6108(04)00056-x;
+RA   Dierov J., Dierova R., Carroll M.;
+RT   "BCR/ABL translocates to the nucleus and disrupts an ATR-dependent intra-S
+RT   phase checkpoint.";
+RL   Cancer Cell 5:275-285(2004).
+RN   [26]
+RP   FUNCTION.
+RX   PubMed=14742437; DOI=10.1074/jbc.c300554200;
+RA   Ward I.M., Minn K., Chen J.;
+RT   "UV-induced ataxia-telangiectasia-mutated and Rad3-related (ATR) activation
+RT   requires replication stress.";
+RL   J. Biol. Chem. 279:9677-9680(2004).
+RN   [27]
+RP   DNA-BINDING, AND SUBCELLULAR LOCATION.
+RX   PubMed=14871897; DOI=10.1074/jbc.m314212200;
+RA   Dart D.A., Adams K.E., Akerman I., Lakin N.D.;
+RT   "Recruitment of the cell cycle checkpoint kinase ATR to chromatin during S-
+RT   phase.";
+RL   J. Biol. Chem. 279:16433-16440(2004).
+RN   [28]
+RP   FUNCTION.
+RX   PubMed=15314022; DOI=10.1101/gad.1196104;
+RA   Andreassen P.R., D'Andrea A.D., Taniguchi T.;
+RT   "ATR couples FANCD2 monoubiquitination to the DNA-damage response.";
+RL   Genes Dev. 18:1958-1963(2004).
+RN   [29]
+RP   FUNCTION.
+RX   PubMed=15496423; DOI=10.1093/hmg/ddh335;
+RA   Alderton G.K., Joenje H., Varon R., Borglum A.D., Jeggo P.A.,
+RA   O'Driscoll M.;
+RT   "Seckel syndrome exhibits cellular features demonstrating defects in the
+RT   ATR-signalling pathway.";
+RL   Hum. Mol. Genet. 13:3127-3138(2004).
+RN   [30]
+RP   FUNCTION, SUBUNIT, IDENTIFICATION IN A COMPLEX WITH ATRIP AND RPA1,
+RP   DNA-BINDING, AND ACTIVITY REGULATION.
+RX   PubMed=14729973; DOI=10.1128/mcb.24.3.1292-1300.2003;
+RA   Uensal-Kacmaz K., Sancar A.;
+RT   "Quaternary structure of ATR and effects of ATRIP and replication protein A
+RT   on its DNA binding and kinase activities.";
+RL   Mol. Cell. Biol. 24:1292-1300(2004).
+RN   [31]
+RP   FUNCTION.
+RX   PubMed=15210935; DOI=10.1073/pnas.0403410101;
+RA   Cortez D., Glick G., Elledge S.J.;
+RT   "Minichromosome maintenance proteins are direct targets of the ATM and ATR
+RT   checkpoint kinases.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 101:10078-10083(2004).
+RN   [32]
+RP   INTERACTION WITH EEF1E1.
+RX   PubMed=15680327; DOI=10.1016/j.cell.2004.11.054;
+RA   Park B.-J., Kang J.W., Lee S.W., Choi S.-J., Shin Y.K., Ahn Y.H.,
+RA   Choi Y.H., Choi D., Lee K.S., Kim S.;
+RT   "The haploinsufficient tumor suppressor p18 upregulates p53 via
+RT   interactions with ATM/ATR.";
+RL   Cell 120:209-221(2005).
+RN   [33]
+RP   INTERACTION WITH ATRIP.
+RX   PubMed=15758953; DOI=10.1038/nature03442;
+RA   Falck J., Coates J., Jackson S.P.;
+RT   "Conserved modes of recruitment of ATM, ATR and DNA-PKcs to sites of DNA
+RT   damage.";
+RL   Nature 434:605-611(2005).
+RN   [34]
+RP   ACTIVITY REGULATION.
+RX   PubMed=16530042; DOI=10.1016/j.cell.2005.12.041;
+RA   Kumagai A., Lee J., Yoo H.Y., Dunphy W.G.;
+RT   "TopBP1 activates the ATR-ATRIP complex.";
+RL   Cell 124:943-955(2006).
+RN   [35]
+RP   INTERACTION WITH CEP164, AND SUBCELLULAR LOCATION.
+RX   PubMed=18283122; DOI=10.1101/gad.1627708;
+RA   Sivasubramaniam S., Sun X., Pan Y.R., Wang S., Lee E.Y.;
+RT   "Cep164 is a mediator protein required for the maintenance of genomic
+RT   stability through modulation of MDC1, RPA, and CHK1.";
+RL   Genes Dev. 22:587-600(2008).
+RN   [36]
+RP   INVOLVEMENT IN SCKL1.
+RX   PubMed=12640452; DOI=10.1038/ng1129;
+RA   O'Driscoll M., Ruiz-Perez V.L., Woods C.G., Jeggo P.A., Goodship J.A.;
+RT   "A splicing mutation affecting expression of ataxia-telangiectasia and
+RT   Rad3-related protein (ATR) results in Seckel syndrome.";
+RL   Nat. Genet. 33:497-501(2003).
+RN   [37]
+RP   FUNCTION IN DNA DAMAGE RESPONSE, INTERACTION WITH PPP5C,
+RP   AUTOPHOSPHORYLATION, AND SUBCELLULAR LOCATION.
+RX   PubMed=16260606; DOI=10.1128/mcb.25.22.9910-9919.2005;
+RA   Zhang J., Bao S., Furumai R., Kucera K.S., Ali A., Dean N.M., Wang X.F.;
+RT   "Protein phosphatase 5 is required for ATR-mediated checkpoint
+RT   activation.";
+RL   Mol. Cell. Biol. 25:9910-9919(2005).
+RN   [38]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-428 AND THR-1989, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [39]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [40]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J., Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in a
+RT   refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [41]
+RP   INTERACTION WITH TTI1.
+RX   PubMed=20810650; DOI=10.1101/gad.1934210;
+RA   Hurov K.E., Cotta-Ramusino C., Elledge S.J.;
+RT   "A genetic screen identifies the Triple T complex required for DNA damage
+RT   signaling and ATM and ATR stability.";
+RL   Genes Dev. 24:1939-1950(2010).
+RN   [42]
+RP   INTERACTION WITH TELO2.
+RX   PubMed=20801936; DOI=10.1101/gad.1956410;
+RA   Takai H., Xie Y., de Lange T., Pavletich N.P.;
+RT   "Tel2 structure and function in the Hsp90-dependent maturation of mTOR and
+RT   ATR complexes.";
+RL   Genes Dev. 24:2019-2030(2010).
+RN   [43]
+RP   INTERACTION WITH TELO2 AND TTI1.
+RX   PubMed=20427287; DOI=10.1074/jbc.m110.121699;
+RA   Kaizuka T., Hara T., Oshiro N., Kikkawa U., Yonezawa K., Takehana K.,
+RA   Iemura S., Natsume T., Mizushima N.;
+RT   "Tti1 and Tel2 are critical factors in mammalian target of rapamycin
+RT   complex assembly.";
+RL   J. Biol. Chem. 285:20109-20116(2010).
+RN   [44]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [45]
+RP   FUNCTION IN DNA REPAIR, AND PHOSPHORYLATION AT SER-428.
+RX   PubMed=21144835; DOI=10.1016/j.bbrc.2010.12.005;
+RA   Kang Y., Cheong H.M., Lee J.H., Song P.I., Lee K.H., Kim S.Y., Jun J.Y.,
+RA   You H.J.;
+RT   "Protein phosphatase 5 is necessary for ATR-mediated DNA repair.";
+RL   Biochem. Biophys. Res. Commun. 404:476-481(2011).
+RN   [46]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [47]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-435; SER-436 AND THR-1989,
+RP   AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [48]
+RP   FUNCTION, ACTIVITY REGULATION, AND INTERACTION WITH ETAA1.
+RX   PubMed=27723720; DOI=10.1038/ncb3415;
+RA   Bass T.E., Luzwick J.W., Kavanaugh G., Carroll C., Dungrawala H.,
+RA   Glick G.G., Feldkamp M.D., Putney R., Chazin W.J., Cortez D.;
+RT   "ETAA1 acts at stalled replication forks to maintain genome integrity.";
+RL   Nat. Cell Biol. 18:1185-1195(2016).
+RN   [49]
+RP   FUNCTION, ACTIVITY REGULATION, AND INTERACTION WITH ETAA1.
+RX   PubMed=27723717; DOI=10.1038/ncb3422;
+RA   Haahr P., Hoffmann S., Tollenaere M.A., Ho T., Toledo L.I., Mann M.,
+RA   Bekker-Jensen S., Raeschle M., Mailand N.;
+RT   "Activation of the ATR kinase by the RPA-binding protein ETAA1.";
+RL   Nat. Cell Biol. 18:1196-1207(2016).
+RN   [50]
+RP   FUNCTION, AND INTERACTION WITH UHRF2.
+RX   PubMed=33848395; DOI=10.1111/gtc.12851;
+RA   Hanaki S., Habara M., Shimada M.;
+RT   "UV-induced activation of ATR is mediated by UHRF2.";
+RL   Genes Cells 26:447-454(2021).
+RN   [51]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ALA-64; TYR-90; ASN-297; ILE-316; MET-959;
+RP   HIS-1087; GLY-1213; PRO-1488; ASN-1607; SER-1612; GLY-2002; ALA-2120;
+RP   ASP-2132; ILE-2233; GLN-2425; ALA-2434; LYS-2438 AND GLN-2537.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [52]
+RP   VARIANT FCTCS ARG-2144.
+RX   PubMed=22341969; DOI=10.1016/j.ajhg.2012.01.007;
+RA   Tanaka A., Weinel S., Nagy N., O'Driscoll M., Lai-Cheong J.E.,
+RA   Kulp-Shorten C.L., Knable A., Carpenter G., Fisher S.A., Hiragun M.,
+RA   Yanase Y., Hide M., Callen J., McGrath J.A.;
+RT   "Germline mutation in ATR in autosomal- dominant oropharyngeal cancer
+RT   syndrome.";
+RL   Am. J. Hum. Genet. 90:511-517(2012).
+CC   -!- FUNCTION: Serine/threonine protein kinase which activates checkpoint
+CC       signaling upon genotoxic stresses such as ionizing radiation (IR),
+CC       ultraviolet light (UV), or DNA replication stalling, thereby acting as
+CC       a DNA damage sensor. Recognizes the substrate consensus sequence [ST]-
+CC       Q. Phosphorylates BRCA1, CHEK1, MCM2, RAD17, RPA2, SMC1 and p53/TP53,
+CC       which collectively inhibit DNA replication and mitosis and promote DNA
+CC       repair, recombination and apoptosis. Phosphorylates 'Ser-139' of
+CC       histone variant H2AX at sites of DNA damage, thereby regulating DNA
+CC       damage response mechanism. Required for FANCD2 ubiquitination. Critical
+CC       for maintenance of fragile site stability and efficient regulation of
+CC       centrosome duplication. Positively regulates the restart of stalled
+CC       replication forks following activation by the KHDC3L-OOEP scaffold
+CC       complex (By similarity). {ECO:0000250|UniProtKB:Q9JKK8,
+CC       ECO:0000269|PubMed:10597277, ECO:0000269|PubMed:10608806,
+CC       ECO:0000269|PubMed:10859164, ECO:0000269|PubMed:11114888,
+CC       ECO:0000269|PubMed:11418864, ECO:0000269|PubMed:11673449,
+CC       ECO:0000269|PubMed:11721054, ECO:0000269|PubMed:11865061,
+CC       ECO:0000269|PubMed:12526805, ECO:0000269|PubMed:12791985,
+CC       ECO:0000269|PubMed:12814551, ECO:0000269|PubMed:14657349,
+CC       ECO:0000269|PubMed:14729973, ECO:0000269|PubMed:14742437,
+CC       ECO:0000269|PubMed:15210935, ECO:0000269|PubMed:15314022,
+CC       ECO:0000269|PubMed:15496423, ECO:0000269|PubMed:16260606,
+CC       ECO:0000269|PubMed:21144835, ECO:0000269|PubMed:27723717,
+CC       ECO:0000269|PubMed:27723720, ECO:0000269|PubMed:33848395,
+CC       ECO:0000269|PubMed:9427750, ECO:0000269|PubMed:9636169,
+CC       ECO:0000269|PubMed:9925639}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- COFACTOR:
+CC       Name=Mn(2+); Xref=ChEBI:CHEBI:29035;
+CC         Evidence={ECO:0000269|PubMed:10608806};
+CC   -!- ACTIVITY REGULATION: Serine/threonine-protein kinase activity is
+CC       directly stimulated by TOPBP1 (PubMed:16530042). ATR kinase activity is
+CC       also directly activated by ETAA1, independently of TOPBP1
+CC       (PubMed:27723720, PubMed:27723717). Activated by DNA and inhibited by
+CC       BCR-ABL oncogene (PubMed:10597277). Slightly activated by ATRIP
+CC       (PubMed:14729973). Inhibited by caffeine, wortmannin and LY294002
+CC       (PubMed:9766667). {ECO:0000269|PubMed:10597277,
+CC       ECO:0000269|PubMed:14729973, ECO:0000269|PubMed:16530042,
+CC       ECO:0000269|PubMed:27723717, ECO:0000269|PubMed:27723720,
+CC       ECO:0000269|PubMed:9766667}.
+CC   -!- SUBUNIT: Forms a heterodimer with ATRIP.(PubMed:11721054). Binds to
+CC       DNA, and to UV-damaged DNA with higher affinity. Interacts with RAD17,
+CC       MSH2 and HDAC2. Present in a complex containing ATRIP and RPA-coated
+CC       single-stranded DNA. Present in a complex containing CHD4 and HDAC2.
+CC       Interacts with EEF1E1, the interaction is enhanced by UV irradiation.
+CC       Interacts with CLSPN and CEP164. Interacts with TELO2 and TTI1.
+CC       Interacts with BCR-ABL after genotoxic stress. Interacts with UHRF2;
+CC       this interaction promotes ATR activation. {ECO:0000250,
+CC       ECO:0000269|PubMed:10545197, ECO:0000269|PubMed:11418864,
+CC       ECO:0000269|PubMed:11721054, ECO:0000269|PubMed:12766152,
+CC       ECO:0000269|PubMed:12791985, ECO:0000269|PubMed:14657349,
+CC       ECO:0000269|PubMed:14729973, ECO:0000269|PubMed:15050919,
+CC       ECO:0000269|PubMed:15680327, ECO:0000269|PubMed:15758953,
+CC       ECO:0000269|PubMed:16260606, ECO:0000269|PubMed:18283122,
+CC       ECO:0000269|PubMed:20427287, ECO:0000269|PubMed:20801936,
+CC       ECO:0000269|PubMed:20810650, ECO:0000269|PubMed:33848395}.
+CC   -!- INTERACTION:
+CC       Q13535; Q8WXE1: ATRIP; NbExp=4; IntAct=EBI-968983, EBI-747353;
+CC       Q13535; Q99459: CDC5L; NbExp=3; IntAct=EBI-968983, EBI-374880;
+CC       Q13535; P50750: CDK9; NbExp=3; IntAct=EBI-968983, EBI-1383449;
+CC       Q13535; Q9BW66: CINP; NbExp=5; IntAct=EBI-968983, EBI-739784;
+CC       Q13535; Q9Y6K9: IKBKG; NbExp=2; IntAct=EBI-968983, EBI-81279;
+CC       Q13535; O43156: TTI1; NbExp=2; IntAct=EBI-968983, EBI-1055680;
+CC   -!- SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:11114888,
+CC       ECO:0000269|PubMed:11721054, ECO:0000269|PubMed:11865061,
+CC       ECO:0000269|PubMed:12814551, ECO:0000269|PubMed:14871897,
+CC       ECO:0000269|PubMed:16260606, ECO:0000269|PubMed:18283122,
+CC       ECO:0000269|PubMed:8843195}. Chromosome {ECO:0000250|UniProtKB:Q9JKK8}.
+CC       Note=Depending on the cell type, it can also be found in PML nuclear
+CC       bodies. Recruited to chromatin during S-phase. Redistributes to
+CC       discrete nuclear foci upon DNA damage, hypoxia or replication fork
+CC       stalling.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1;
+CC         IsoId=Q13535-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q13535-2; Sequence=VSP_013305, VSP_013304;
+CC       Name=3;
+CC         IsoId=Q13535-3; Sequence=VSP_036907, VSP_036908;
+CC   -!- TISSUE SPECIFICITY: Ubiquitous, with highest expression in testis.
+CC       Isoform 2 is found in pancreas, placenta and liver but not in heart,
+CC       testis and ovary. {ECO:0000269|PubMed:11470508,
+CC       ECO:0000269|PubMed:8610130, ECO:0000269|PubMed:8843195}.
+CC   -!- PTM: Phosphorylated; autophosphorylates in vitro.
+CC       {ECO:0000269|PubMed:21144835}.
+CC   -!- DISEASE: Seckel syndrome 1 (SCKL1) [MIM:210600]: A rare autosomal
+CC       recessive disorder characterized by proportionate dwarfism of prenatal
+CC       onset associated with low birth weight, growth retardation, severe
+CC       microcephaly with a bird-headed like appearance, and intellectual
+CC       disability. {ECO:0000269|PubMed:12640452}. Note=The disease is caused
+CC       by variants affecting the gene represented in this entry.
+CC   -!- DISEASE: Cutaneous telangiectasia and cancer syndrome, familial (FCTCS)
+CC       [MIM:614564]: A disease characterized by cutaneous telangiectases in
+CC       infancy with patchy alopecia over areas of affected skin, thinning of
+CC       the lateral eyebrows, and mild dental and nail anomalies. Affected
+CC       individuals are at increased risk of developing oropharyngeal cancer,
+CC       and other malignancies have been reported as well.
+CC       {ECO:0000269|PubMed:22341969}. Note=The disease is caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- SIMILARITY: Belongs to the PI3/PI4-kinase family. ATM subfamily.
+CC       {ECO:0000305}.
+CC   -!- WEB RESOURCE: Name=Atlas of Genetics and Cytogenetics in Oncology and
+CC       Haematology;
+CC       URL="http://atlasgeneticsoncology.org/Genes/ATRID728ch3q23.html";
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; Y09077; CAA70298.1; -; mRNA.
+DR   EMBL; U76308; AAC50929.1; -; mRNA.
+DR   EMBL; U49844; AAC50405.1; -; mRNA.
+DR   EMBL; AF325699; AAK26749.1; -; Genomic_DNA.
+DR   EMBL; AB208847; BAD92084.1; -; mRNA.
+DR   CCDS; CCDS3124.1; -. [Q13535-1]
+DR   RefSeq; NP_001175.2; NM_001184.3. [Q13535-1]
+DR   RefSeq; XP_016862132.1; XM_017006643.1.
+DR   PDB; 5YZ0; EM; 4.70 A; A/B=1-2644.
+DR   PDBsum; 5YZ0; -.
+DR   AlphaFoldDB; Q13535; -.
+DR   SMR; Q13535; -.
+DR   BioGRID; 107027; 207.
+DR   ComplexPortal; CPX-3622; ATR-ATRIP DNA damage-sensing kinase complex.
+DR   CORUM; Q13535; -.
+DR   DIP; DIP-35308N; -.
+DR   IntAct; Q13535; 54.
+DR   MINT; Q13535; -.
+DR   STRING; 9606.ENSP00000343741; -.
+DR   BindingDB; Q13535; -.
+DR   ChEMBL; CHEMBL5024; -.
+DR   DrugBank; DB14917; Ceralasertib.
+DR   GuidetoPHARMACOLOGY; 1935; -.
+DR   CarbonylDB; Q13535; -.
+DR   iPTMnet; Q13535; -.
+DR   PhosphoSitePlus; Q13535; -.
+DR   BioMuta; ATR; -.
+DR   DMDM; 62286460; -.
+DR   CPTAC; CPTAC-3214; -.
+DR   CPTAC; CPTAC-3215; -.
+DR   EPD; Q13535; -.
+DR   jPOST; Q13535; -.
+DR   MassIVE; Q13535; -.
+DR   MaxQB; Q13535; -.
+DR   PaxDb; Q13535; -.
+DR   PeptideAtlas; Q13535; -.
+DR   PRIDE; Q13535; -.
+DR   ProteomicsDB; 59521; -. [Q13535-1]
+DR   ProteomicsDB; 59522; -. [Q13535-2]
+DR   ProteomicsDB; 59523; -. [Q13535-3]
+DR   Antibodypedia; 18078; 546 antibodies from 39 providers.
+DR   CPTC; Q13535; 1 antibody.
+DR   DNASU; 545; -.
+DR   Ensembl; ENST00000350721.9; ENSP00000343741.4; ENSG00000175054.16. [Q13535-1]
+DR   Ensembl; ENST00000661310.1; ENSP00000499589.1; ENSG00000175054.16. [Q13535-2]
+DR   GeneID; 545; -.
+DR   KEGG; hsa:545; -.
+DR   MANE-Select; ENST00000350721.9; ENSP00000343741.4; NM_001184.4; NP_001175.2.
+DR   UCSC; uc003eux.5; human. [Q13535-1]
+DR   CTD; 545; -.
+DR   DisGeNET; 545; -.
+DR   GeneCards; ATR; -.
+DR   HGNC; HGNC:882; ATR.
+DR   HPA; ENSG00000175054; Low tissue specificity.
+DR   MalaCards; ATR; -.
+DR   MIM; 210600; phenotype.
+DR   MIM; 601215; gene.
+DR   MIM; 614564; phenotype.
+DR   neXtProt; NX_Q13535; -.
+DR   OpenTargets; ENSG00000175054; -.
+DR   Orphanet; 313846; Familial cutaneous telangiectasia and oropharyngeal cancer predisposition syndrome.
+DR   Orphanet; 808; Seckel syndrome.
+DR   PharmGKB; PA74; -.
+DR   VEuPathDB; HostDB:ENSG00000175054; -.
+DR   eggNOG; KOG0890; Eukaryota.
+DR   GeneTree; ENSGT00940000155714; -.
+DR   HOGENOM; CLU_000178_2_1_1; -.
+DR   InParanoid; Q13535; -.
+DR   OMA; YTVYSQM; -.
+DR   OrthoDB; 80538at2759; -.
+DR   PhylomeDB; Q13535; -.
+DR   TreeFam; TF101183; -.
+DR   BRENDA; 2.7.11.1; 2681.
+DR   PathwayCommons; Q13535; -.
+DR   Reactome; R-HSA-1221632; Meiotic synapsis.
+DR   Reactome; R-HSA-176187; Activation of ATR in response to replication stress.
+DR   Reactome; R-HSA-3371453; Regulation of HSF1-mediated heat shock response.
+DR   Reactome; R-HSA-5685938; HDR through Single Strand Annealing (SSA).
+DR   Reactome; R-HSA-5693607; Processing of DNA double-strand break ends.
+DR   Reactome; R-HSA-5693616; Presynaptic phase of homologous DNA pairing and strand exchange.
+DR   Reactome; R-HSA-6783310; Fanconi Anemia Pathway.
+DR   Reactome; R-HSA-6796648; TP53 Regulates Transcription of DNA Repair Genes.
+DR   Reactome; R-HSA-6804756; Regulation of TP53 Activity through Phosphorylation.
+DR   Reactome; R-HSA-69473; G2/M DNA damage checkpoint.
+DR   Reactome; R-HSA-9709570; Impaired BRCA2 binding to RAD51.
+DR   SignaLink; Q13535; -.
+DR   SIGNOR; Q13535; -.
+DR   BioGRID-ORCS; 545; 717 hits in 1121 CRISPR screens.
+DR   ChiTaRS; ATR; human.
+DR   GeneWiki; Ataxia_telangiectasia_and_Rad3_related; -.
+DR   GenomeRNAi; 545; -.
+DR   Pharos; Q13535; Tchem.
+DR   PRO; PR:Q13535; -.
+DR   Proteomes; UP000005640; Chromosome 3.
+DR   RNAct; Q13535; protein.
+DR   Bgee; ENSG00000175054; Expressed in Brodmann (1909) area 23 and 203 other tissues.
+DR   ExpressionAtlas; Q13535; baseline and differential.
+DR   Genevisible; Q13535; HS.
+DR   GO; GO:0070310; C:ATR-ATRIP complex; IPI:ComplexPortal.
+DR   GO; GO:0005694; C:chromosome; ISS:UniProtKB.
+DR   GO; GO:0005794; C:Golgi apparatus; IDA:HPA.
+DR   GO; GO:0005654; C:nucleoplasm; IDA:HPA.
+DR   GO; GO:0005634; C:nucleus; IBA:GO_Central.
+DR   GO; GO:0016605; C:PML body; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+DR   GO; GO:0032405; F:MutLalpha complex binding; IDA:MGI.
+DR   GO; GO:0032407; F:MutSalpha complex binding; IDA:MGI.
+DR   GO; GO:0004672; F:protein kinase activity; IDA:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0006974; P:cellular response to DNA damage stimulus; IDA:UniProtKB.
+DR   GO; GO:0071480; P:cellular response to gamma radiation; IDA:BHF-UCL.
+DR   GO; GO:0034644; P:cellular response to UV; IMP:BHF-UCL.
+DR   GO; GO:0000077; P:DNA damage checkpoint signaling; IDA:UniProtKB.
+DR   GO; GO:0006281; P:DNA repair; TAS:ProtInc.
+DR   GO; GO:0006260; P:DNA replication; TAS:Reactome.
+DR   GO; GO:0097695; P:establishment of protein-containing complex localization to telomere; IC:BHF-UCL.
+DR   GO; GO:0097694; P:establishment of RNA localization to telomere; IMP:BHF-UCL.
+DR   GO; GO:0036297; P:interstrand cross-link repair; TAS:Reactome.
+DR   GO; GO:0008156; P:negative regulation of DNA replication; IMP:UniProtKB.
+DR   GO; GO:0006139; P:nucleobase-containing compound metabolic process; IC:ComplexPortal.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IDA:BHF-UCL.
+DR   GO; GO:0043517; P:positive regulation of DNA damage response, signal transduction by p53 class mediator; IMP:BHF-UCL.
+DR   GO; GO:1904884; P:positive regulation of telomerase catalytic core complex assembly; IMP:BHF-UCL.
+DR   GO; GO:0032212; P:positive regulation of telomere maintenance via telomerase; ISS:BHF-UCL.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:BHF-UCL.
+DR   GO; GO:0070198; P:protein localization to chromosome, telomeric region; IMP:BHF-UCL.
+DR   GO; GO:0006468; P:protein phosphorylation; IBA:GO_Central.
+DR   GO; GO:1900034; P:regulation of cellular response to heat; TAS:Reactome.
+DR   GO; GO:2000779; P:regulation of double-strand break repair; IC:ComplexPortal.
+DR   GO; GO:0031297; P:replication fork processing; ISS:UniProtKB.
+DR   GO; GO:0090399; P:replicative senescence; IMP:BHF-UCL.
+DR   GO; GO:0046685; P:response to arsenic-containing substance; IEA:Ensembl.
+DR   GO; GO:0009410; P:response to xenobiotic stimulus; IEA:Ensembl.
+DR   GO; GO:0000723; P:telomere maintenance; IBA:GO_Central.
+DR   Gene3D; 1.10.1070.11; -; 1.
+DR   Gene3D; 1.25.10.10; -; 2.
+DR   Gene3D; 1.25.40.10; -; 1.
+DR   InterPro; IPR011989; ARM-like.
+DR   InterPro; IPR016024; ARM-type_fold.
+DR   InterPro; IPR003152; FATC_dom.
+DR   InterPro; IPR021133; HEAT_type_2.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000403; PI3/4_kinase_cat_dom.
+DR   InterPro; IPR036940; PI3/4_kinase_cat_sf.
+DR   InterPro; IPR018936; PI3/4_kinase_CS.
+DR   InterPro; IPR003151; PIK-rel_kinase_FAT.
+DR   InterPro; IPR014009; PIK_FAT.
+DR   InterPro; IPR011990; TPR-like_helical_dom_sf.
+DR   InterPro; IPR012993; UME.
+DR   Pfam; PF02259; FAT; 1.
+DR   Pfam; PF02260; FATC; 1.
+DR   Pfam; PF00454; PI3_PI4_kinase; 1.
+DR   Pfam; PF08064; UME; 1.
+DR   SMART; SM01343; FATC; 1.
+DR   SMART; SM00146; PI3Kc; 1.
+DR   SMART; SM00802; UME; 1.
+DR   SUPFAM; SSF48371; SSF48371; 2.
+DR   SUPFAM; SSF48452; SSF48452; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS51189; FAT; 1.
+DR   PROSITE; PS51190; FATC; 1.
+DR   PROSITE; PS50077; HEAT_REPEAT; 1.
+DR   PROSITE; PS00916; PI3_4_KINASE_2; 1.
+DR   PROSITE; PS50290; PI3_4_KINASE_3; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Chromosome;
+KW   Disease variant; DNA damage; DNA repair; DNA-binding; Dwarfism;
+KW   Intellectual disability; Kinase; Manganese; Nucleotide-binding; Nucleus;
+KW   Phosphoprotein; Reference proteome; Repeat;
+KW   Serine/threonine-protein kinase; Transferase.
+FT   CHAIN           1..2644
+FT                   /note="Serine/threonine-protein kinase ATR"
+FT                   /id="PRO_0000088844"
+FT   REPEAT          799..835
+FT                   /note="HEAT 1"
+FT   REPEAT          1329..1365
+FT                   /note="HEAT 2"
+FT   DOMAIN          1640..2185
+FT                   /note="FAT"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00534"
+FT   DOMAIN          2296..2604
+FT                   /note="PI3K/PI4K catalytic"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00269"
+FT   DOMAIN          2612..2644
+FT                   /note="FATC"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00534,
+FT                   ECO:0000255|PROSITE-ProRule:PRU00535"
+FT   REGION          418..450
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          2302..2308
+FT                   /note="G-loop"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00269"
+FT   REGION          2472..2480
+FT                   /note="Catalytic loop"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00269"
+FT   REGION          2492..2516
+FT                   /note="Activation loop"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00269"
+FT   COMPBIAS        418..444
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOD_RES         428
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:21144835,
+FT                   ECO:0007744|PubMed:18691976"
+FT   MOD_RES         435
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         436
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         1989
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:18691976,
+FT                   ECO:0007744|PubMed:23186163"
+FT   VAR_SEQ         450
+FT                   /note="E -> D (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:11470508"
+FT                   /id="VSP_013305"
+FT   VAR_SEQ         451..514
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:11470508"
+FT                   /id="VSP_013304"
+FT   VAR_SEQ         2588..2610
+FT                   /note="AKTHVLDIEQRLQGVIKTRNRVT -> VSRRYSLIWAVVLISTNELDMQL
+FT                   (in isoform 3)"
+FT                   /evidence="ECO:0000303|Ref.4"
+FT                   /id="VSP_036907"
+FT   VAR_SEQ         2611..2644
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|Ref.4"
+FT                   /id="VSP_036908"
+FT   VARIANT         64
+FT                   /note="T -> A (in dbSNP:rs35306038)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041584"
+FT   VARIANT         90
+FT                   /note="H -> Y (in dbSNP:rs28897763)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041585"
+FT   VARIANT         211
+FT                   /note="M -> T (in dbSNP:rs2227928)"
+FT                   /id="VAR_050532"
+FT   VARIANT         297
+FT                   /note="K -> N (in dbSNP:rs2229033)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041586"
+FT   VARIANT         316
+FT                   /note="V -> I (in dbSNP:rs28897764)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041587"
+FT   VARIANT         959
+FT                   /note="V -> M (in dbSNP:rs28910271)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041588"
+FT   VARIANT         1087
+FT                   /note="Y -> H (in dbSNP:rs34253059)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041589"
+FT   VARIANT         1213
+FT                   /note="S -> G (in dbSNP:rs34766606)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041590"
+FT   VARIANT         1488
+FT                   /note="A -> P (in a lung squamous cell carcinoma sample;
+FT                   somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041591"
+FT   VARIANT         1526
+FT                   /note="I -> V (in dbSNP:rs34124242)"
+FT                   /id="VAR_050533"
+FT   VARIANT         1607
+FT                   /note="S -> N (in dbSNP:rs55724025)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041592"
+FT   VARIANT         1612
+FT                   /note="N -> S (in dbSNP:rs55894265)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041593"
+FT   VARIANT         2002
+FT                   /note="A -> G (in a lung adenocarcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041594"
+FT   VARIANT         2120
+FT                   /note="G -> A (in dbSNP:rs35134774)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041595"
+FT   VARIANT         2132
+FT                   /note="Y -> D (in dbSNP:rs28910273)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041596"
+FT   VARIANT         2144
+FT                   /note="Q -> R (in FCTCS; dbSNP:rs387906797)"
+FT                   /evidence="ECO:0000269|PubMed:22341969"
+FT                   /id="VAR_067919"
+FT   VARIANT         2233
+FT                   /note="S -> I (in a lung large cell carcinoma sample;
+FT                   somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041597"
+FT   VARIANT         2425
+FT                   /note="R -> Q (in dbSNP:rs2229032)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041598"
+FT   VARIANT         2434
+FT                   /note="P -> A (in dbSNP:rs33972295)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041599"
+FT   VARIANT         2438
+FT                   /note="E -> K (in a breast pleomorphic lobular carcinoma
+FT                   sample; somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041600"
+FT   VARIANT         2537
+FT                   /note="E -> Q (in a breast infiltrating ductal carcinoma
+FT                   sample; somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041601"
+FT   MUTAGEN         2327
+FT                   /note="K->R: Abolishes kinase activity."
+FT                   /evidence="ECO:0000269|PubMed:11114888,
+FT                   ECO:0000269|PubMed:12011431, ECO:0000269|PubMed:9925639"
+FT   MUTAGEN         2475
+FT                   /note="D->A: Abolishes kinase activity; increases
+FT                   sensitivity to IR and impairs translocation to nuclear foci
+FT                   upon DNA damage."
+FT                   /evidence="ECO:0000269|PubMed:12814551,
+FT                   ECO:0000269|PubMed:9427750, ECO:0000269|PubMed:9925639"
+FT   MUTAGEN         2494
+FT                   /note="D->E: Abolishes kinase activity; reduces cell
+FT                   viability, augments sensitivity to IR and UV."
+FT                   /evidence="ECO:0000269|PubMed:10597277,
+FT                   ECO:0000269|PubMed:9636169"
+FT   CONFLICT        92
+FT                   /note="A -> R (in Ref. 1; CAA70298/AAC50929)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   2644 AA;  301367 MW;  11BC22297FB9A802 CRC64;
+     MGEHGLELAS MIPALRELGS ATPEEYNTVV QKPRQILCQF IDRILTDVNV VAVELVKKTD
+     SQPTSVMLLD FIQHIMKSSP LMFVNVSGSH EAKGSCIEFS NWIITRLLRI AATPSCHLLH
+     KKICEVICSL LFLFKSKSPA IFGVLTKELL QLFEDLVYLH RRNVMGHAVE WPVVMSRFLS
+     QLDEHMGYLQ SAPLQLMSMQ NLEFIEVTLL MVLTRIIAIV FFRRQELLLW QIGCVLLEYG
+     SPKIKSLAIS FLTELFQLGG LPAQPASTFF SSFLELLKHL VEMDTDQLKL YEEPLSKLIK
+     TLFPFEAEAY RNIEPVYLNM LLEKLCVMFE DGVLMRLKSD LLKAALCHLL QYFLKFVPAG
+     YESALQVRKV YVRNICKALL DVLGIEVDAE YLLGPLYAAL KMESMEIIEE IQCQTQQENL
+     SSNSDGISPK RRRLSSSLNP SKRAPKQTEE IKHVDMNQKS ILWSALKQKA ESLQISLEYS
+     GLKNPVIEML EGIAVVLQLT ALCTVHCSHQ NMNCRTFKDC QHKSKKKPSV VITWMSLDFY
+     TKVLKSCRSL LESVQKLDLE ATIDKVVKIY DALIYMQVNS SFEDHILEDL CGMLSLPWIY
+     SHSDDGCLKL TTFAANLLTL SCRISDSYSP QAQSRCVFLL TLFPRRIFLE WRTAVYNWAL
+     QSSHEVIRAS CVSGFFILLQ QQNSCNRVPK ILIDKVKDDS DIVKKEFASI LGQLVCTLHG
+     MFYLTSSLTE PFSEHGHVDL FCRNLKATSQ HECSSSQLKA SVCKPFLFLL KKKIPSPVKL
+     AFIDNLHHLC KHLDFREDET DVKAVLGTLL NLMEDPDKDV RVAFSGNIKH ILESLDSEDG
+     FIKELFVLRM KEAYTHAQIS RNNELKDTLI LTTGDIGRAA KGDLVPFALL HLLHCLLSKS
+     ASVSGAAYTE IRALVAAKSV KLQSFFSQYK KPICQFLVES LHSSQMTALP NTPCQNADVR
+     KQDVAHQREM ALNTLSEIAN VFDFPDLNRF LTRTLQVLLP DLAAKASPAA SALIRTLGKQ
+     LNVNRREILI NNFKYIFSHL VCSCSKDELE RALHYLKNET EIELGSLLRQ DFQGLHNELL
+     LRIGEHYQQV FNGLSILASF ASSDDPYQGP RDIISPELMA DYLQPKLLGI LAFFNMQLLS
+     SSVGIEDKKM ALNSLMSLMK LMGPKHVSSV RVKMMTTLRT GLRFKDDFPE LCCRAWDCFV
+     RCLDHACLGS LLSHVIVALL PLIHIQPKET AAIFHYLIIE NRDAVQDFLH EIYFLPDHPE
+     LKKIKAVLQE YRKETSESTD LQTTLQLSMK AIQHENVDVR IHALTSLKET LYKNQEKLIK
+     YATDSETVEP IISQLVTVLL KGCQDANSQA RLLCGECLGE LGAIDPGRLD FSTTETQGKD
+     FTFVTGVEDS SFAYGLLMEL TRAYLAYADN SRAQDSAAYA IQELLSIYDC REMETNGPGH
+     QLWRRFPEHV REILEPHLNT RYKSSQKSTD WSGVKKPIYL SKLGSNFAEW SASWAGYLIT
+     KVRHDLASKI FTCCSIMMKH DFKVTIYLLP HILVYVLLGC NQEDQQEVYA EIMAVLKHDD
+     QHTINTQDIA SDLCQLSTQT VFSMLDHLTQ WARHKFQALK AEKCPHSKSN RNKVDSMVST
+     VDYEDYQSVT RFLDLIPQDT LAVASFRSKA YTRAVMHFES FITEKKQNIQ EHLGFLQKLY
+     AAMHEPDGVA GVSAIRKAEP SLKEQILEHE SLGLLRDATA CYDRAIQLEP DQIIHYHGVV
+     KSMLGLGQLS TVITQVNGVH ANRSEWTDEL NTYRVEAAWK LSQWDLVENY LAADGKSTTW
+     SVRLGQLLLS AKKRDITAFY DSLKLVRAEQ IVPLSAASFE RGSYQRGYEY IVRLHMLCEL
+     EHSIKPLFQH SPGDSSQEDS LNWVARLEMT QNSYRAKEPI LALRRALLSL NKRPDYNEMV
+     GECWLQSARV ARKAGHHQTA YNALLNAGES RLAELYVERA KWLWSKGDVH QALIVLQKGV
+     ELCFPENETP PEGKNMLIHG RAMLLVGRFM EETANFESNA IMKKYKDVTA CLPEWEDGHF
+     YLAKYYDKLM PMVTDNKMEK QGDLIRYIVL HFGRSLQYGN QFIYQSMPRM LTLWLDYGTK
+     AYEWEKAGRS DRVQMRNDLG KINKVITEHT NYLAPYQFLT AFSQLISRIC HSHDEVFVVL
+     MEIIAKVFLA YPQQAMWMMT AVSKSSYPMR VNRCKEILNK AIHMKKSLEK FVGDATRLTD
+     KLLELCNKPV DGSSSTLSMS THFKMLKKLV EEATFSEILI PLQSVMIPTL PSILGTHANH
+     ASHEPFPGHW AYIAGFDDMV EILASLQKPK KISLKGSDGK FYIMMCKPKD DLRKDCRLME
+     FNSLINKCLR KDAESRRREL HIRTYAVIPL NDECGIIEWV NNTAGLRPIL TKLYKEKGVY
+     MTGKELRQCM LPKSAALSEK LKVFREFLLP RHPPIFHEWF LRTFPDPTSW YSSRSAYCRS
+     TAVMSMVGYI LGLGDRHGEN ILFDSLTGEC VHVDFNCLFN KGETFEVPEI VPFRLTHNMV
+     NGMGPMGTEG LFRRACEVTM RLMRDQREPL MSVLKTFLHD PLVEWSKPVK GHSKAPLNET
+     GEVVNEKAKT HVLDIEQRLQ GVIKTRNRVT GLPLSIEGHV HYLIQEATDE NLLCQMYLGW
+     TPYM
+//

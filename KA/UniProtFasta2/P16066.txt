@@ -1,0 +1,443 @@
+ID   ANPRA_HUMAN             Reviewed;        1061 AA.
+AC   P16066; B0ZBF0; Q5SR08; Q6P4Q3;
+DT   01-APR-1990, integrated into UniProtKB/Swiss-Prot.
+DT   01-APR-1990, sequence version 1.
+DT   12-OCT-2022, entry version 220.
+DE   RecName: Full=Atrial natriuretic peptide receptor 1 {ECO:0000305};
+DE            EC=4.6.1.2 {ECO:0000269|PubMed:1672777};
+DE   AltName: Full=Atrial natriuretic peptide receptor type A;
+DE            Short=ANP-A;
+DE            Short=ANPR-A;
+DE            Short=NPR-A;
+DE   AltName: Full=Guanylate cyclase A;
+DE            Short=GC-A;
+DE   Flags: Precursor;
+GN   Name=NPR1 {ECO:0000312|HGNC:HGNC:7943}; Synonyms=ANPRA;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Kidney;
+RX   PubMed=2569967; DOI=10.1002/j.1460-2075.1989.tb03518.x;
+RA   Lowe D.G., Chang M.S., Hellmiss R., Chen E., Singh S., Garbers D.L.,
+RA   Goeddel D.V.;
+RT   "Human atrial natriuretic peptide receptor defines a new paradigm for
+RT   second messenger signal transduction.";
+RL   EMBO J. 8:1377-1384(1989).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   TISSUE=Blood;
+RX   PubMed=9618281; DOI=10.1006/bbrc.1998.8693;
+RA   Takahashi Y., Nakayama T., Soma M., Izumi Y., Kanmatsuse K.;
+RT   "Organization of the human natriuretic peptide receptor A gene.";
+RL   Biochem. Biophys. Res. Commun. 246:736-739(1998).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RA   Maeda N., Knowles J.W.;
+RT   "Identification of functional polymorphisms in noncoding regions of the
+RT   human natriuretic peptide receptor A gene.";
+RL   Submitted (SEP-1999) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RG   NHLBI resequencing and genotyping service (RS&G);
+RL   Submitted (DEC-2007) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16710414; DOI=10.1038/nature04727;
+RA   Gregory S.G., Barlow K.F., McLay K.E., Kaul R., Swarbreck D., Dunham A.,
+RA   Scott C.E., Howe K.L., Woodfine K., Spencer C.C.A., Jones M.C., Gillson C.,
+RA   Searle S., Zhou Y., Kokocinski F., McDonald L., Evans R., Phillips K.,
+RA   Atkinson A., Cooper R., Jones C., Hall R.E., Andrews T.D., Lloyd C.,
+RA   Ainscough R., Almeida J.P., Ambrose K.D., Anderson F., Andrew R.W.,
+RA   Ashwell R.I.S., Aubin K., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Beasley H., Bethel G., Bird C.P., Bray-Allen S., Brown J.Y., Brown A.J.,
+RA   Buckley D., Burton J., Bye J., Carder C., Chapman J.C., Clark S.Y.,
+RA   Clarke G., Clee C., Cobley V., Collier R.E., Corby N., Coville G.J.,
+RA   Davies J., Deadman R., Dunn M., Earthrowl M., Ellington A.G., Errington H.,
+RA   Frankish A., Frankland J., French L., Garner P., Garnett J., Gay L.,
+RA   Ghori M.R.J., Gibson R., Gilby L.M., Gillett W., Glithero R.J.,
+RA   Grafham D.V., Griffiths C., Griffiths-Jones S., Grocock R., Hammond S.,
+RA   Harrison E.S.I., Hart E., Haugen E., Heath P.D., Holmes S., Holt K.,
+RA   Howden P.J., Hunt A.R., Hunt S.E., Hunter G., Isherwood J., James R.,
+RA   Johnson C., Johnson D., Joy A., Kay M., Kershaw J.K., Kibukawa M.,
+RA   Kimberley A.M., King A., Knights A.J., Lad H., Laird G., Lawlor S.,
+RA   Leongamornlert D.A., Lloyd D.M., Loveland J., Lovell J., Lush M.J.,
+RA   Lyne R., Martin S., Mashreghi-Mohammadi M., Matthews L., Matthews N.S.W.,
+RA   McLaren S., Milne S., Mistry S., Moore M.J.F., Nickerson T., O'Dell C.N.,
+RA   Oliver K., Palmeiri A., Palmer S.A., Parker A., Patel D., Pearce A.V.,
+RA   Peck A.I., Pelan S., Phelps K., Phillimore B.J., Plumb R., Rajan J.,
+RA   Raymond C., Rouse G., Saenphimmachak C., Sehra H.K., Sheridan E.,
+RA   Shownkeen R., Sims S., Skuce C.D., Smith M., Steward C., Subramanian S.,
+RA   Sycamore N., Tracey A., Tromans A., Van Helmond Z., Wall M., Wallis J.M.,
+RA   White S., Whitehead S.L., Wilkinson J.E., Willey D.L., Williams H.,
+RA   Wilming L., Wray P.W., Wu Z., Coulson A., Vaudin M., Sulston J.E.,
+RA   Durbin R.M., Hubbard T., Wooster R., Dunham I., Carter N.P., McVean G.,
+RA   Ross M.T., Harrow J., Olson M.V., Beck S., Rogers J., Bentley D.R.;
+RT   "The DNA sequence and biological annotation of human chromosome 1.";
+RL   Nature 441:315-321(2006).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Placenta;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 634-1048.
+RC   TISSUE=Retina;
+RX   PubMed=7954658; DOI=10.1007/bf02088585;
+RA   Pardhasaradhi K., Kutty R.K., Gentleman S., Krishna G.;
+RT   "Expression of mRNA for atrial natriuretic peptide receptor guanylate
+RT   cyclase (ANPRA) in human retina.";
+RL   Cell. Mol. Neurobiol. 14:1-7(1994).
+RN   [9]
+RP   LIGAND-BINDING.
+RX   PubMed=1660465; DOI=10.1016/s0021-9258(18)54463-x;
+RA   Bennett B.D., Bennett G.L., Vitangcol R.V., Jewett J.R., Burnier J.,
+RA   Henzel W., Lowe D.G.;
+RT   "Extracellular domain-IgG fusion proteins for three human natriuretic
+RT   peptide receptors. Hormone pharmacology and application to solid phase
+RT   screening of synthetic peptide antisera.";
+RL   J. Biol. Chem. 266:23060-23067(1991).
+RN   [10]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RX   PubMed=1672777; DOI=10.1126/science.1672777;
+RA   Koller K.J., Lowe D.G., Bennett G.L., Minamino N., Kangawa K., Matsuo H.,
+RA   Goeddel D.V.;
+RT   "Selective activation of the B natriuretic peptide receptor by C-type
+RT   natriuretic peptide (CNP).";
+RL   Science 252:120-123(1991).
+RN   [11]
+RP   PHOSPHORYLATION AT SER-519; SER-529; THR-532; SER-534 AND SER-538.
+RX   PubMed=20977274; DOI=10.1021/bi101700e;
+RA   Yoder A.R., Stone M.D., Griffin T.J., Potter L.R.;
+RT   "Mass spectrometric identification of phosphorylation sites in guanylyl
+RT   cyclase A and B.";
+RL   Biochemistry 49:10137-10145(2010).
+RN   [12]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [13]
+RP   VARIANTS [LARGE SCALE ANALYSIS] VAL-182; CYS-270; MET-755; GLN-939 AND
+RP   LYS-967.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Receptor for the atrial natriuretic peptide NPPA/ANP and the
+CC       brain natriuretic peptide NPPB/BNP which are potent vasoactive hormones
+CC       playing a key role in cardiovascular homeostasis. Has guanylate cyclase
+CC       activity upon binding of the ligand. {ECO:0000269|PubMed:1672777}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=GTP = 3',5'-cyclic GMP + diphosphate; Xref=Rhea:RHEA:13665,
+CC         ChEBI:CHEBI:33019, ChEBI:CHEBI:37565, ChEBI:CHEBI:57746; EC=4.6.1.2;
+CC         Evidence={ECO:0000269|PubMed:1672777};
+CC       PhysiologicalDirection=left-to-right; Xref=Rhea:RHEA:13666;
+CC         Evidence={ECO:0000305|PubMed:1672777};
+CC   -!- SUBUNIT: Homodimer. {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Membrane; Single-pass type I membrane protein.
+CC   -!- PTM: Phosphorylation of the protein kinase-like domain is required for
+CC       full activation by ANP. {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the adenylyl cyclase class-4/guanylyl cyclase
+CC       family. {ECO:0000255|PROSITE-ProRule:PRU00099}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; X15357; CAA33417.1; -; mRNA.
+DR   EMBL; AB010491; BAA31199.1; -; Genomic_DNA.
+DR   EMBL; AF190631; AAF01340.1; -; Genomic_DNA.
+DR   EMBL; EU326310; ACA05918.1; -; Genomic_DNA.
+DR   EMBL; AL713889; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471121; EAW53284.1; -; Genomic_DNA.
+DR   EMBL; BC063304; AAH63304.1; -; mRNA.
+DR   EMBL; S72628; AAD14112.1; -; mRNA.
+DR   CCDS; CCDS1051.1; -.
+DR   PIR; S04459; OYHUAR.
+DR   RefSeq; NP_000897.3; NM_000906.3.
+DR   AlphaFoldDB; P16066; -.
+DR   SMR; P16066; -.
+DR   BioGRID; 110941; 12.
+DR   ComplexPortal; CPX-35; ANPR-A receptor complex.
+DR   DIP; DIP-46246N; -.
+DR   IntAct; P16066; 5.
+DR   MINT; P16066; -.
+DR   STRING; 9606.ENSP00000357669; -.
+DR   BindingDB; P16066; -.
+DR   ChEMBL; CHEMBL1988; -.
+DR   DrugBank; DB01612; Amyl Nitrite.
+DR   DrugBank; DB01613; Erythrityl tetranitrate.
+DR   DrugBank; DB00883; Isosorbide dinitrate.
+DR   DrugBank; DB04899; Nesiritide.
+DR   DrugBank; DB00727; Nitroglycerin.
+DR   DrugBank; DB00325; Nitroprusside.
+DR   DrugBank; DB05034; Ularitide.
+DR   DrugCentral; P16066; -.
+DR   GuidetoPHARMACOLOGY; 1747; -.
+DR   TCDB; 8.A.85.1.6; the guanylate cyclase (gc) family.
+DR   GlyGen; P16066; 7 sites.
+DR   iPTMnet; P16066; -.
+DR   PhosphoSitePlus; P16066; -.
+DR   BioMuta; NPR1; -.
+DR   DMDM; 113912; -.
+DR   EPD; P16066; -.
+DR   jPOST; P16066; -.
+DR   MassIVE; P16066; -.
+DR   MaxQB; P16066; -.
+DR   PaxDb; P16066; -.
+DR   PeptideAtlas; P16066; -.
+DR   PRIDE; P16066; -.
+DR   ProteomicsDB; 53265; -.
+DR   ABCD; P16066; 1 sequenced antibody.
+DR   Antibodypedia; 20386; 316 antibodies from 31 providers.
+DR   DNASU; 4881; -.
+DR   Ensembl; ENST00000368680.4; ENSP00000357669.3; ENSG00000169418.10.
+DR   GeneID; 4881; -.
+DR   KEGG; hsa:4881; -.
+DR   MANE-Select; ENST00000368680.4; ENSP00000357669.3; NM_000906.4; NP_000897.3.
+DR   UCSC; uc001fcs.5; human.
+DR   CTD; 4881; -.
+DR   DisGeNET; 4881; -.
+DR   GeneCards; NPR1; -.
+DR   HGNC; HGNC:7943; NPR1.
+DR   HPA; ENSG00000169418; Tissue enhanced (adipose).
+DR   MIM; 108960; gene.
+DR   neXtProt; NX_P16066; -.
+DR   OpenTargets; ENSG00000169418; -.
+DR   PharmGKB; PA31736; -.
+DR   VEuPathDB; HostDB:ENSG00000169418; -.
+DR   eggNOG; KOG1023; Eukaryota.
+DR   GeneTree; ENSGT00940000156223; -.
+DR   HOGENOM; CLU_001072_1_3_1; -.
+DR   InParanoid; P16066; -.
+DR   OMA; KCAYEKS; -.
+DR   OrthoDB; 229634at2759; -.
+DR   PhylomeDB; P16066; -.
+DR   TreeFam; TF106338; -.
+DR   BRENDA; 4.6.1.2; 2681.
+DR   PathwayCommons; P16066; -.
+DR   Reactome; R-HSA-5578768; Physiological factors.
+DR   SignaLink; P16066; -.
+DR   SIGNOR; P16066; -.
+DR   BioGRID-ORCS; 4881; 17 hits in 1104 CRISPR screens.
+DR   ChiTaRS; NPR1; human.
+DR   GeneWiki; NPR1; -.
+DR   GenomeRNAi; 4881; -.
+DR   Pharos; P16066; Tclin.
+DR   PRO; PR:P16066; -.
+DR   Proteomes; UP000005640; Chromosome 1.
+DR   RNAct; P16066; protein.
+DR   Bgee; ENSG00000169418; Expressed in descending thoracic aorta and 174 other tissues.
+DR   ExpressionAtlas; P16066; baseline and differential.
+DR   Genevisible; P16066; HS.
+DR   GO; GO:1990620; C:ANPR-A receptor complex; IEA:Ensembl.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005886; C:plasma membrane; IBA:GO_Central.
+DR   GO; GO:0043235; C:receptor complex; IDA:MGI.
+DR   GO; GO:0005524; F:ATP binding; IEA:InterPro.
+DR   GO; GO:0008528; F:G protein-coupled peptide receptor activity; NAS:UniProtKB.
+DR   GO; GO:0005525; F:GTP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004383; F:guanylate cyclase activity; IDA:UniProtKB.
+DR   GO; GO:0042562; F:hormone binding; IPI:UniProtKB.
+DR   GO; GO:0016941; F:natriuretic peptide receptor activity; IDA:UniProtKB.
+DR   GO; GO:0017046; F:peptide hormone binding; IPI:UniProtKB.
+DR   GO; GO:0001653; F:peptide receptor activity; IBA:GO_Central.
+DR   GO; GO:0004672; F:protein kinase activity; IEA:InterPro.
+DR   GO; GO:0097746; P:blood vessel diameter maintenance; NAS:UniProtKB.
+DR   GO; GO:0007589; P:body fluid secretion; TAS:UniProtKB.
+DR   GO; GO:0007166; P:cell surface receptor signaling pathway; NAS:UniProtKB.
+DR   GO; GO:0006182; P:cGMP biosynthetic process; IDA:GO_Central.
+DR   GO; GO:0019934; P:cGMP-mediated signaling; IEA:Ensembl.
+DR   GO; GO:0042417; P:dopamine metabolic process; IEA:Ensembl.
+DR   GO; GO:0016525; P:negative regulation of angiogenesis; TAS:UniProtKB.
+DR   GO; GO:0030308; P:negative regulation of cell growth; NAS:UniProtKB.
+DR   GO; GO:0048662; P:negative regulation of smooth muscle cell proliferation; IEA:Ensembl.
+DR   GO; GO:0010753; P:positive regulation of cGMP-mediated signaling; IEA:Ensembl.
+DR   GO; GO:0035815; P:positive regulation of renal sodium excretion; TAS:UniProtKB.
+DR   GO; GO:0035810; P:positive regulation of urine volume; TAS:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IEA:InterPro.
+DR   GO; GO:0007168; P:receptor guanylyl cyclase signaling pathway; IDA:UniProtKB.
+DR   GO; GO:0008217; P:regulation of blood pressure; NAS:UniProtKB.
+DR   GO; GO:0043114; P:regulation of vascular permeability; TAS:UniProtKB.
+DR   GO; GO:0007165; P:signal transduction; IBA:GO_Central.
+DR   CDD; cd07302; CHD; 1.
+DR   Gene3D; 3.30.70.1230; -; 1.
+DR   InterPro; IPR001054; A/G_cyclase.
+DR   InterPro; IPR018297; A/G_cyclase_CS.
+DR   InterPro; IPR001828; ANF_lig-bd_rcpt.
+DR   InterPro; IPR001170; ANPR/GUC.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR029787; Nucleotide_cyclase.
+DR   InterPro; IPR028082; Peripla_BP_I.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   Pfam; PF01094; ANF_receptor; 1.
+DR   Pfam; PF00211; Guanylate_cyc; 1.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   PRINTS; PR00255; NATPEPTIDER.
+DR   SMART; SM00044; CYCc; 1.
+DR   SUPFAM; SSF53822; SSF53822; 1.
+DR   SUPFAM; SSF55073; SSF55073; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00458; ANF_RECEPTORS; 1.
+DR   PROSITE; PS00452; GUANYLATE_CYCLASE_1; 1.
+DR   PROSITE; PS50125; GUANYLATE_CYCLASE_2; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+PE   1: Evidence at protein level;
+KW   cGMP biosynthesis; Chloride; Disulfide bond; Glycoprotein; GTP-binding;
+KW   Lyase; Membrane; Nucleotide-binding; Phosphoprotein; Receptor;
+KW   Reference proteome; Signal; Transmembrane; Transmembrane helix; Vasoactive.
+FT   SIGNAL          1..32
+FT   CHAIN           33..1061
+FT                   /note="Atrial natriuretic peptide receptor 1"
+FT                   /id="PRO_0000012360"
+FT   TOPO_DOM        33..473
+FT                   /note="Extracellular"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        474..494
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        495..1061
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          528..805
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   DOMAIN          876..1006
+FT                   /note="Guanylate cyclase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00099"
+FT   BINDING         85
+FT                   /ligand="chloride"
+FT                   /ligand_id="ChEBI:CHEBI:17996"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         117
+FT                   /ligand="chloride"
+FT                   /ligand_id="ChEBI:CHEBI:17996"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         118
+FT                   /ligand="chloride"
+FT                   /ligand_id="ChEBI:CHEBI:17996"
+FT                   /evidence="ECO:0000250"
+FT   MOD_RES         519
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         529
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         532
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         534
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         538
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         542
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:P18910"
+FT   MOD_RES         545
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000250|UniProtKB:P18910"
+FT   CARBOHYD        34
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        45
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        212
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        338
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        379
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        386
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        427
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   DISULFID        92..118
+FT                   /evidence="ECO:0000250"
+FT   DISULFID        196..245
+FT                   /evidence="ECO:0000250"
+FT   DISULFID        455..464
+FT                   /evidence="ECO:0000250"
+FT   VARIANT         182
+FT                   /note="A -> V (in dbSNP:rs56019647)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042214"
+FT   VARIANT         270
+FT                   /note="F -> C (in a breast pleomorphic lobular carcinoma
+FT                   sample; somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042215"
+FT   VARIANT         755
+FT                   /note="V -> M (in dbSNP:rs55837780)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042216"
+FT   VARIANT         939
+FT                   /note="R -> Q (in dbSNP:rs35240348)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042217"
+FT   VARIANT         967
+FT                   /note="E -> K (in dbSNP:rs35479618)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042218"
+FT   CONFLICT        344
+FT                   /note="G -> V (in Ref. 7; AAH63304)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   1061 AA;  118919 MW;  E6B5BD0FCA32F70D CRC64;
+     MPGPRRPAGS RLRLLLLLLL PPLLLLLRGS HAGNLTVAVV LPLANTSYPW SWARVGPAVE
+     LALAQVKARP DLLPGWTVRT VLGSSENALG VCSDTAAPLA AVDLKWEHNP AVFLGPGCVY
+     AAAPVGRFTA HWRVPLLTAG APALGFGVKD EYALTTRAGP SYAKLGDFVA ALHRRLGWER
+     QALMLYAYRP GDEEHCFFLV EGLFMRVRDR LNITVDHLEF AEDDLSHYTR LLRTMPRKGR
+     VIYICSSPDA FRTLMLLALE AGLCGEDYVF FHLDIFGQSL QGGQGPAPRR PWERGDGQDV
+     SARQAFQAAK IITYKDPDNP EYLEFLKQLK HLAYEQFNFT MEDGLVNTIP ASFHDGLLLY
+     IQAVTETLAH GGTVTDGENI TQRMWNRSFQ GVTGYLKIDS SGDRETDFSL WDMDPENGAF
+     RVVLNYNGTS QELVAVSGRK LNWPLGYPPP DIPKCGFDNE DPACNQDHLS TLEVLALVGS
+     LSLLGILIVS FFIYRKMQLE KELASELWRV RWEDVEPSSL ERHLRSAGSR LTLSGRGSNY
+     GSLLTTEGQF QVFAKTAYYK GNLVAVKRVN RKRIELTRKV LFELKHMRDV QNEHLTRFVG
+     ACTDPPNICI LTEYCPRGSL QDILENESIT LDWMFRYSLT NDIVKGMLFL HNGAICSHGN
+     LKSSNCVVDG RFVLKITDYG LESFRDLDPE QGHTVYAKKL WTAPELLRMA SPPVRGSQAG
+     DVYSFGIILQ EIALRSGVFH VEGLDLSPKE IIERVTRGEQ PPFRPSLALQ SHLEELGLLM
+     QRCWAEDPQE RPPFQQIRLT LRKFNRENSS NILDNLLSRM EQYANNLEEL VEERTQAYLE
+     EKRKAEALLY QILPHSVAEQ LKRGETVQAE AFDSVTIYFS DIVGFTALSA ESTPMQVVTL
+     LNDLYTCFDA VIDNFDVYKV ETIGDAYMVV SGLPVRNGRL HACEVARMAL ALLDAVRSFR
+     IRHRPQEQLR LRIGIHTGPV CAGVVGLKMP RYCLFGDTVN TASRMESNGE ALKIHLSSET
+     KAVLEEFGGF ELELRGDVEM KGKGKVRTYW LLGERGSSTR G
+//

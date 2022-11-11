@@ -1,0 +1,301 @@
+ID   CTRO_HUMAN              Reviewed;        1544 AA.
+AC   O14578-3;
+DT   30-MAY-2000, integrated into UniProtKB/Swiss-Prot.
+DT   04-JAN-2005, sequence version 2.
+DT   12-OCT-2022, entry version 203.
+DE   RecName: Full=Isoform 3 of Citron Rho-interacting kinase;
+DE            Short=CRIK;
+DE            EC=2.7.11.1 {ECO:0000250|UniProtKB:P49025};
+DE   AltName: Full=Serine/threonine-protein kinase 21;
+GN   Name=CIT; Synonyms=CRIK, KIAA0949, STK21;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RA   Huang C.Q., Wu S.L., Shan Y.X., Liu S., Xiao P.J.;
+RL   Submitted (MAR-2003) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2).
+RA   Mao Y., Xie Y., Wu Q.;
+RT   "Cloning and characterizing a novel human CRIK-SK gene.";
+RL   Submitted (JAN-2003) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 4).
+RX   PubMed=15983625; DOI=10.1038/sj.mp.4001703;
+RA   Lyons-Warren A., Chang J.J., Balkissoon R., Kamiya A., Garant M.,
+RA   Nurnberger J., Scheftner W., Reich T., McMahon F., Kelsoe J., Gershon E.,
+RA   Coryell W., Byerley W., Berrettini W., Depaulo R., McInnis M., Sawa A.;
+RT   "Evidence of association between bipolar disorder and Citron on chromosome
+RT   12q24.";
+RL   Mol. Psychiatry 10:807-809(2005).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 3).
+RC   TISSUE=Brain;
+RX   PubMed=10231032; DOI=10.1093/dnares/6.1.63;
+RA   Nagase T., Ishikawa K., Suyama M., Kikuno R., Hirosawa M., Miyajima N.,
+RA   Tanaka A., Kotani H., Nomura N., Ohara O.;
+RT   "Prediction of the coding sequences of unidentified human genes. XIII. The
+RT   complete sequences of 100 new cDNA clones from brain which code for large
+RT   proteins in vitro.";
+RL   DNA Res. 6:63-70(1999).
+RN   [5]
+RP   SEQUENCE REVISION.
+RA   Ohara O., Nagase T., Kikuno R.;
+RL   Submitted (JAN-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16541075; DOI=10.1038/nature04569;
+RA   Scherer S.E., Muzny D.M., Buhay C.J., Chen R., Cree A., Ding Y.,
+RA   Dugan-Rocha S., Gill R., Gunaratne P., Harris R.A., Hawes A.C.,
+RA   Hernandez J., Hodgson A.V., Hume J., Jackson A., Khan Z.M., Kovar-Smith C.,
+RA   Lewis L.R., Lozado R.J., Metzker M.L., Milosavljevic A., Miner G.R.,
+RA   Montgomery K.T., Morgan M.B., Nazareth L.V., Scott G., Sodergren E.,
+RA   Song X.-Z., Steffen D., Lovering R.C., Wheeler D.A., Worley K.C., Yuan Y.,
+RA   Zhang Z., Adams C.Q., Ansari-Lari M.A., Ayele M., Brown M.J., Chen G.,
+RA   Chen Z., Clerc-Blankenburg K.P., Davis C., Delgado O., Dinh H.H.,
+RA   Draper H., Gonzalez-Garay M.L., Havlak P., Jackson L.R., Jacob L.S.,
+RA   Kelly S.H., Li L., Li Z., Liu J., Liu W., Lu J., Maheshwari M.,
+RA   Nguyen B.-V., Okwuonu G.O., Pasternak S., Perez L.M., Plopper F.J.H.,
+RA   Santibanez J., Shen H., Tabor P.E., Verduzco D., Waldron L., Wang Q.,
+RA   Williams G.A., Zhang J., Zhou J., Allen C.C., Amin A.G., Anyalebechi V.,
+RA   Bailey M., Barbaria J.A., Bimage K.E., Bryant N.P., Burch P.E.,
+RA   Burkett C.E., Burrell K.L., Calderon E., Cardenas V., Carter K., Casias K.,
+RA   Cavazos I., Cavazos S.R., Ceasar H., Chacko J., Chan S.N., Chavez D.,
+RA   Christopoulos C., Chu J., Cockrell R., Cox C.D., Dang M., Dathorne S.R.,
+RA   David R., Davis C.M., Davy-Carroll L., Deshazo D.R., Donlin J.E.,
+RA   D'Souza L., Eaves K.A., Egan A., Emery-Cohen A.J., Escotto M., Flagg N.,
+RA   Forbes L.D., Gabisi A.M., Garza M., Hamilton C., Henderson N.,
+RA   Hernandez O., Hines S., Hogues M.E., Huang M., Idlebird D.G., Johnson R.,
+RA   Jolivet A., Jones S., Kagan R., King L.M., Leal B., Lebow H., Lee S.,
+RA   LeVan J.M., Lewis L.C., London P., Lorensuhewa L.M., Loulseged H.,
+RA   Lovett D.A., Lucier A., Lucier R.L., Ma J., Madu R.C., Mapua P.,
+RA   Martindale A.D., Martinez E., Massey E., Mawhiney S., Meador M.G.,
+RA   Mendez S., Mercado C., Mercado I.C., Merritt C.E., Miner Z.L., Minja E.,
+RA   Mitchell T., Mohabbat F., Mohabbat K., Montgomery B., Moore N., Morris S.,
+RA   Munidasa M., Ngo R.N., Nguyen N.B., Nickerson E., Nwaokelemeh O.O.,
+RA   Nwokenkwo S., Obregon M., Oguh M., Oragunye N., Oviedo R.J., Parish B.J.,
+RA   Parker D.N., Parrish J., Parks K.L., Paul H.A., Payton B.A., Perez A.,
+RA   Perrin W., Pickens A., Primus E.L., Pu L.-L., Puazo M., Quiles M.M.,
+RA   Quiroz J.B., Rabata D., Reeves K., Ruiz S.J., Shao H., Sisson I.,
+RA   Sonaike T., Sorelle R.P., Sutton A.E., Svatek A.F., Svetz L.A.,
+RA   Tamerisa K.S., Taylor T.R., Teague B., Thomas N., Thorn R.D., Trejos Z.Y.,
+RA   Trevino B.K., Ukegbu O.N., Urban J.B., Vasquez L.I., Vera V.A.,
+RA   Villasana D.M., Wang L., Ward-Moore S., Warren J.T., Wei X., White F.,
+RA   Williamson A.L., Wleczyk R., Wooden H.S., Wooden S.H., Yen J., Yoon L.,
+RA   Yoon V., Zorrilla S.E., Nelson D., Kucherlapati R., Weinstock G.,
+RA   Gibbs R.A.;
+RT   "The finished DNA sequence of human chromosome 12.";
+RL   Nature 440:346-351(2006).
+RN   [7]
+RP   FUNCTION, AND INTERACTION WITH KIF14.
+RX   PubMed=16431929; DOI=10.1083/jcb.200511061;
+RA   Gruneberg U., Neef R., Li X., Chan E.H.Y., Chalamalasetty R.B., Nigg E.A.,
+RA   Barr F.A.;
+RT   "KIF14 and citron kinase act together to promote efficient cytokinesis.";
+RL   J. Cell Biol. 172:363-372(2006).
+RN   [8]
+RP   FUNCTION.
+RX   PubMed=16236794; DOI=10.1091/mbc.e05-06-0569;
+RA   Kamijo K., Ohara N., Abe M., Uchimura T., Hosoya H., Lee J.S., Miki T.;
+RT   "Dissecting the role of Rho-mediated signaling in contractile ring
+RT   formation.";
+RL   Mol. Biol. Cell 17:43-55(2006).
+RN   [9]
+RP   INTERACTION WITH TTC3.
+RX   PubMed=17488780; DOI=10.1242/jcs.000703;
+RA   Berto G., Camera P., Fusco C., Imarisio S., Ambrogio C., Chiarle R.,
+RA   Silengo L., Di Cunto F.;
+RT   "The Down syndrome critical region protein TTC3 inhibits neuronal
+RT   differentiation via RhoA and Citron kinase.";
+RL   J. Cell Sci. 120:1859-1867(2007).
+RN   [10]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-440, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [11]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J., Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in a
+RT   refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [12]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-433 AND SER-440, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [13]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT LYS-1721, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19608861; DOI=10.1126/science.1175371;
+RA   Choudhary C., Kumar C., Gnad F., Nielsen M.L., Rehman M., Walther T.C.,
+RA   Olsen J.V., Mann M.;
+RT   "Lysine acetylation targets protein complexes and co-regulates major
+RT   cellular functions.";
+RL   Science 325:834-840(2009).
+RN   [14]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-440, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [15]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [16]
+RP   FUNCTION IN PHOSPHORYLATION OF MYL9/MLC2.
+RX   PubMed=21457715; DOI=10.1016/j.febslet.2011.03.054;
+RA   Tan I., Lai J., Yong J., Li S.F., Leung T.;
+RT   "Chelerythrine perturbs lamellar actomyosin filaments by selective
+RT   inhibition of myotonic dystrophy kinase-related Cdc42-binding kinase.";
+RL   FEBS Lett. 585:1260-1268(2011).
+RN   [17]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-440, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [18]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT MET-1, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=22814378; DOI=10.1073/pnas.1210303109;
+RA   Van Damme P., Lasa M., Polevoda B., Gazquez C., Elosegui-Artola A.,
+RA   Kim D.S., De Juan-Pardo E., Demeyer K., Hole K., Larrea E., Timmerman E.,
+RA   Prieto J., Arnesen T., Sherman F., Gevaert K., Aldabe R.;
+RT   "N-terminal acetylome analyses and functional insights of the N-terminal
+RT   acetyltransferase NatB.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:12449-12454(2012).
+RN   [19]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-433; SER-440; SER-480;
+RP   SER-582; SER-1940; SER-1993 AND THR-2013, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [20]
+RP   FUNCTION, INVOLVEMENT IN MCPH17, VARIANTS MCPH17 VAL-106; GLN-126 AND
+RP   VAL-230, AND CHARACTERIZATION OF VARIANTS MCPH17 VAL-106; GLN-126 AND
+RP   VAL-230.
+RX   PubMed=27453578; DOI=10.1016/j.ajhg.2016.07.004;
+RA   Li H., Bielas S.L., Zaki M.S., Ismail S., Farfara D., Um K., Rosti R.O.,
+RA   Scott E.C., Tu S., Chi N.C., Gabriel S., Erson-Omay E.Z.,
+RA   Ercan-Sencicek A.G., Yasuno K., Caglayan A.O., Kaymakcalan H., Ekici B.,
+RA   Bilguvar K., Gunel M., Gleeson J.G.;
+RT   "Biallelic mutations in Citron kinase Link mitotic cytokinesis to human
+RT   primary microcephaly.";
+RL   Am. J. Hum. Genet. 99:501-510(2016).
+RN   [21]
+RP   INVOLVEMENT IN MCPH17.
+RX   PubMed=27453579; DOI=10.1016/j.ajhg.2016.07.003;
+RA   Harding B.N., Moccia A., Drunat S., Soukarieh O., Tubeuf H., Chitty L.S.,
+RA   Verloes A., Gressens P., El Ghouzzi V., Joriot S., Di Cunto F., Martins A.,
+RA   Passemard S., Bielas S.L.;
+RT   "Mutations in Citron kinase cause recessive microlissencephaly with
+RT   multinucleated neurons.";
+RL   Am. J. Hum. Genet. 99:511-520(2016).
+RN   [22]
+RP   INVOLVEMENT IN MCPH17.
+RX   PubMed=27503289; DOI=10.1007/s00439-016-1722-2;
+RA   Shaheen R., Hashem A., Abdel-Salam G.M., Al-Fadhli F., Ewida N.,
+RA   Alkuraya F.S.;
+RT   "Mutations in CIT, encoding citron rho-interacting serine/threonine kinase,
+RT   cause severe primary microcephaly in humans.";
+RL   Hum. Genet. 135:1191-1197(2016).
+RN   [23]
+RP   INVOLVEMENT IN MCPH17.
+RX   PubMed=27519304; DOI=10.1007/s00439-016-1724-0;
+RA   Basit S., Al-Harbi K.M., Alhijji S.A., Albalawi A.M., Alharby E.,
+RA   Eldardear A., Samman M.I.;
+RT   "CIT, a gene involved in neurogenic cytokinesis, is mutated in human
+RT   primary microcephaly.";
+RL   Hum. Genet. 135:1199-1207(2016).
+RN   [24]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLU-7; GLN-9 AND PHE-183.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=4;
+CC       Name=1; Synonyms=Long;
+CC         IsoId=O14578-1; Sequence=Displayed;
+CC       Name=2; Synonyms=Short, CRIK-SK;
+CC         IsoId=O14578-2; Sequence=VSP_012434, VSP_012435;
+CC       Name=3;
+CC         IsoId=O14578-3; Sequence=VSP_014507, VSP_014508, VSP_014509;
+CC       Name=4;
+CC         IsoId=O14578-4; Sequence=VSP_043301;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   ProteomicsDB; 48096; -.
+DR   Proteomes; UP000005640; Chromosome 12.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   1544 AA;  177035 MW;  309A4BA63CB1419D CRC64;
+     MEQEMTRLHR RVSEVEAVLS QKEVELKASE TQRSLLEQDL ATYITECSSL KRSLEQARME
+     VSQEDDKALQ LLHDIREQSR KLQEIKEQEY QAQVEEMRLM MNQLEEDLVS ARRRSDLYES
+     ELRESRLAAE EFKRKATECQ HKLLKAKDQG KPEVGEYAKL EKINAEQQLK IQELQEKLEK
+     AVKASTEATE LLQNIRQAKE RAERELEKLQ NREDSSEGIR KKLVEAEELE EKHREAQVSA
+     QHLEVHLKQK EQHYEEKIKV LDNQIKKDLA DKETLENMMQ RHEEEAHEKG KILSEQKAMI
+     NAMDSKIRSL EQRIVELSEA NKLAANSSLF TQRNMKAQEE MISELRQQKF YLETQAGKLE
+     AQNRKLEEQL EKISHQDHSD KNRLLELETR LREVSLEHEE QKLELKRQLT ELQLSLQERE
+     SQLTALQAAR AALESQLRQA KTELEETTAE AEEEIQALTA HRDEIQRKFD ALRNSCTVIT
+     DLEEQLNQLT EDNAELNNQN FYLSKQLDEA SGANDEIVQL RSEVDHLRRE ITEREMQLTS
+     QKQTMEALKT TCTMLEEQVM DLEALNDELL EKERQWEAWR SVLGDEKSQF ECRVRELQRM
+     LDTEKQSRAR ADQRITESRQ VVELAVKEHK AEILALQQAL KEQKLKAESL SDKLNDLEKK
+     HAMLEMNARS LQQKLETERE LKQRLLEEQA KLQQQMDLQK NHIFRLTQGL QEALDRADLL
+     KTERSDLEYQ LENIQVLYSH EKVKMEGTIS QQTKLIDFLQ AKMDQPAKKK KVPLQYNELK
+     LALEKEKARC AELEEALQKT RIELRSAREE AAHRKATDHP HPSTPATARQ QIAMSAIVRS
+     PEHQPSAMSL LAPPSSRRKE SSTPEEFSRR LKERMHHNIP HRFNVGLNMR ATKCAVCLDT
+     VHFGRQASKC LECQVMCHPK CSTCLPATCG LPAEYATHFT EAFCRDKMNS PGLQTKEPSS
+     SLHLEGWMKV PRNNKRGQQG WDRKYIVLEG SKVLIYDNEA REAGQRPVEE FELCLPDGDV
+     SIHGAVGASE LANTAKADVP YILKMESHPH TTCWPGRTLY LLAPSFPDKQ RWVTALESVV
+     AGGRVSREKA EADAKLLGNS LLKLEGDDRL DMNCTLPFSD QVVLVGTEEG LYALNVLKNS
+     LTHVPGIGAV FQIYIIKDLE KLLMIAGEER ALCLVDVKKV KQSLAQSHLP AQPDISPNIF
+     EAVKGCHLFG AGKIENGLCI CAAMPSKVVI LRYNENLSKY CIRKEIETSE PCSCIHFTNY
+     SILIGTNKFY EIDMKQYTLE EFLDKNDHSL APAVFAASSN SFPVSIVQVN SAGQREEYLL
+     CFHEFGVFVD SYGRRSRTDD LKWSRLPLAF AYREPYLFVT HFNSLEVIEI QARSSAGTPA
+     RAYLDIPNPR YLGPAISSGA IYLASSYQDK LRVICCKGNL VKESGTEHHR GPSTSRSPNK
+     RGPPTYNEHI TKRVASSPAP PEGPSHPREP STPHRYREGR TELRRDKSPG RPLEREKSPG
+     RMLSTRRERS PGRLFEDSSR GRLPAGAVRT PLSQVNKVWD QSSV
+//

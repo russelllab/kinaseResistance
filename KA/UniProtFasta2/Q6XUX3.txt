@@ -1,0 +1,424 @@
+ID   DUSTY_HUMAN             Reviewed;         929 AA.
+AC   Q6XUX3; B7ZL64; O75060; Q17R94; Q5RKT0; Q6IN87; Q6P997; Q86Y03; Q9P1S5;
+DT   02-MAY-2006, integrated into UniProtKB/Swiss-Prot.
+DT   18-MAY-2010, sequence version 2.
+DT   12-OCT-2022, entry version 158.
+DE   RecName: Full=Dual serine/threonine and tyrosine protein kinase;
+DE            EC=2.7.12.1;
+DE   AltName: Full=Dusty protein kinase;
+DE            Short=Dusty PK;
+DE   AltName: Full=RIP-homologous kinase;
+DE   AltName: Full=Receptor-interacting serine/threonine-protein kinase 5;
+DE   AltName: Full=Sugen kinase 496;
+DE            Short=SgK496;
+GN   Name=DSTYK; Synonyms=KIAA0472, RIP5, RIPK5, SGK496; ORFNames=HDCMD38P;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), SUBCELLULAR LOCATION, AND TISSUE
+RP   SPECIFICITY.
+RC   TISSUE=Brain;
+RX   PubMed=17123648; DOI=10.1016/j.bbaexp.2006.10.004;
+RA   Peng J., Dong W., Chen Y., Mo R., Cheng J.-F., Hui C.-C., Mohandas N.,
+RA   Huang C.-H.;
+RT   "Dusty protein kinases: primary structure, gene evolution, tissue specific
+RT   expression and unique features of the catalytic domain.";
+RL   Biochim. Biophys. Acta 1759:562-572(2006).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 4).
+RC   TISSUE=Dendritic cell;
+RA   Zhao Z., Huang X., Li N., Zhu X., Cao X.;
+RT   "A novel gene from human dendritic cell.";
+RL   Submitted (MAY-1998) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16710414; DOI=10.1038/nature04727;
+RA   Gregory S.G., Barlow K.F., McLay K.E., Kaul R., Swarbreck D., Dunham A.,
+RA   Scott C.E., Howe K.L., Woodfine K., Spencer C.C.A., Jones M.C., Gillson C.,
+RA   Searle S., Zhou Y., Kokocinski F., McDonald L., Evans R., Phillips K.,
+RA   Atkinson A., Cooper R., Jones C., Hall R.E., Andrews T.D., Lloyd C.,
+RA   Ainscough R., Almeida J.P., Ambrose K.D., Anderson F., Andrew R.W.,
+RA   Ashwell R.I.S., Aubin K., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Beasley H., Bethel G., Bird C.P., Bray-Allen S., Brown J.Y., Brown A.J.,
+RA   Buckley D., Burton J., Bye J., Carder C., Chapman J.C., Clark S.Y.,
+RA   Clarke G., Clee C., Cobley V., Collier R.E., Corby N., Coville G.J.,
+RA   Davies J., Deadman R., Dunn M., Earthrowl M., Ellington A.G., Errington H.,
+RA   Frankish A., Frankland J., French L., Garner P., Garnett J., Gay L.,
+RA   Ghori M.R.J., Gibson R., Gilby L.M., Gillett W., Glithero R.J.,
+RA   Grafham D.V., Griffiths C., Griffiths-Jones S., Grocock R., Hammond S.,
+RA   Harrison E.S.I., Hart E., Haugen E., Heath P.D., Holmes S., Holt K.,
+RA   Howden P.J., Hunt A.R., Hunt S.E., Hunter G., Isherwood J., James R.,
+RA   Johnson C., Johnson D., Joy A., Kay M., Kershaw J.K., Kibukawa M.,
+RA   Kimberley A.M., King A., Knights A.J., Lad H., Laird G., Lawlor S.,
+RA   Leongamornlert D.A., Lloyd D.M., Loveland J., Lovell J., Lush M.J.,
+RA   Lyne R., Martin S., Mashreghi-Mohammadi M., Matthews L., Matthews N.S.W.,
+RA   McLaren S., Milne S., Mistry S., Moore M.J.F., Nickerson T., O'Dell C.N.,
+RA   Oliver K., Palmeiri A., Palmer S.A., Parker A., Patel D., Pearce A.V.,
+RA   Peck A.I., Pelan S., Phelps K., Phillimore B.J., Plumb R., Rajan J.,
+RA   Raymond C., Rouse G., Saenphimmachak C., Sehra H.K., Sheridan E.,
+RA   Shownkeen R., Sims S., Skuce C.D., Smith M., Steward C., Subramanian S.,
+RA   Sycamore N., Tracey A., Tromans A., Van Helmond Z., Wall M., Wallis J.M.,
+RA   White S., Whitehead S.L., Wilkinson J.E., Willey D.L., Williams H.,
+RA   Wilming L., Wray P.W., Wu Z., Coulson A., Vaudin M., Sulston J.E.,
+RA   Durbin R.M., Hubbard T., Wooster R., Dunham I., Carter N.P., McVean G.,
+RA   Ross M.T., Harrow J., Olson M.V., Beck S., Rogers J., Bentley D.R.;
+RT   "The DNA sequence and biological annotation of human chromosome 1.";
+RL   Nature 441:315-321(2006).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1; 2 AND 3).
+RC   TISSUE=Brain, Eye, Muscle, Placenta, and Skin;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 565-929 (ISOFORM 1).
+RC   TISSUE=Brain;
+RX   PubMed=9455484; DOI=10.1093/dnares/4.5.345;
+RA   Seki N., Ohira M., Nagase T., Ishikawa K., Miyajima N., Nakajima D.,
+RA   Nomura N., Ohara O.;
+RT   "Characterization of cDNA clones in size-fractionated cDNA libraries from
+RT   human brain.";
+RL   DNA Res. 4:345-349(1997).
+RN   [6]
+RP   FUNCTION, TISSUE SPECIFICITY, AND MUTAGENESIS OF LYS-681.
+RX   PubMed=15178406; DOI=10.1016/j.bbrc.2004.04.194;
+RA   Zha J., Zhou Q., Xu L.G., Chen D., Li L., Zhai Z., Shu H.B.;
+RT   "RIP5 is a RIP-homologous inducer of cell death.";
+RL   Biochem. Biophys. Res. Commun. 319:298-303(2004).
+RN   [7]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J., Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in a
+RT   refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [8]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [9]
+RP   INVOLVEMENT IN CAKUT1, VARIANTS CAKUT1 GLN-29; GLY-200 AND LEU-843,
+RP   FUNCTION, SUBCELLULAR LOCATION, AND TISSUE SPECIFICITY.
+RX   PubMed=23862974; DOI=10.1056/nejmoa1214479;
+RA   Sanna-Cherchi S., Sampogna R.V., Papeta N., Burgess K.E., Nees S.N.,
+RA   Perry B.J., Choi M., Bodria M., Liu Y., Weng P.L., Lozanovski V.J.,
+RA   Verbitsky M., Lugani F., Sterken R., Paragas N., Caridi G., Carrea A.,
+RA   Dagnino M., Materna-Kiryluk A., Santamaria G., Murtas C.,
+RA   Ristoska-Bojkovska N., Izzi C., Kacak N., Bianco B., Giberti S.,
+RA   Gigante M., Piaggio G., Gesualdo L., Kosuljandic Vukic D., Vukojevic K.,
+RA   Saraga-Babic M., Saraga M., Gucev Z., Allegri L., Latos-Bielenska A.,
+RA   Casu D., State M., Scolari F., Ravazzolo R., Kiryluk K., Al-Awqati Q.,
+RA   D'Agati V.D., Drummond I.A., Tasic V., Lifton R.P., Ghiggeri G.M.,
+RA   Gharavi A.G.;
+RT   "Mutations in DSTYK and dominant urinary tract malformations.";
+RL   N. Engl. J. Med. 369:621-629(2013).
+RN   [10]
+RP   FUNCTION, TISSUE SPECIFICITY, AND INVOLVEMENT IN SPG23.
+RX   PubMed=28157540; DOI=10.1016/j.ajhg.2017.01.014;
+RA   Lee J.Y., Hsu C.K., Michael M., Nanda A., Liu L., McMillan J.R.,
+RA   Pourreyron C., Takeichi T., Tolar J., Reid E., Hayday T., Blumen S.C.,
+RA   Abu-Mouch S., Straussberg R., Basel-Vanagaite L., Barhum Y., Zouabi Y.,
+RA   Al-Ajmi H., Huang H.Y., Lin T.C., Akiyama M., Lee J.Y., McLean W.H.,
+RA   Simpson M.A., Parsons M., McGrath J.A.;
+RT   "Large intragenic deletion in DSTYK underlies autosomal-recessive
+RT   complicated spastic paraparesis, SPG23.";
+RL   Am. J. Hum. Genet. 100:364-370(2017).
+CC   -!- FUNCTION: Acts as a positive regulator of ERK phosphorylation
+CC       downstream of fibroblast growth factor-receptor activation
+CC       (PubMed:23862974, PubMed:28157540). Involved in the regulation of both
+CC       caspase-dependent apoptosis and caspase-independent cell death
+CC       (PubMed:15178406). In the skin, it plays a predominant role in
+CC       suppressing caspase-dependent apoptosis in response to UV stress in a
+CC       range of dermal cell types (PubMed:28157540).
+CC       {ECO:0000269|PubMed:15178406, ECO:0000269|PubMed:23862974,
+CC       ECO:0000269|PubMed:28157540}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.12.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.12.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.12.1;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:17123648,
+CC       ECO:0000269|PubMed:23862974}. Cell membrane
+CC       {ECO:0000250|UniProtKB:Q6XUX1}. Apical cell membrane
+CC       {ECO:0000269|PubMed:23862974}. Basolateral cell membrane
+CC       {ECO:0000269|PubMed:23862974}. Cell junction
+CC       {ECO:0000250|UniProtKB:Q6XUX1}. Note=Detected at apical cell-cell
+CC       junctions. Colocalized with FGF receptors to the cell membrane (By
+CC       similarity). Detected in basolateral and apical membranes of all
+CC       tubular epithelia. {ECO:0000250|UniProtKB:Q6XUX1,
+CC       ECO:0000269|PubMed:23862974}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=4;
+CC       Name=1;
+CC         IsoId=Q6XUX3-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q6XUX3-2; Sequence=VSP_018034;
+CC       Name=3;
+CC         IsoId=Q6XUX3-3; Sequence=VSP_018031;
+CC       Name=4;
+CC         IsoId=Q6XUX3-4; Sequence=VSP_018030, VSP_018032, VSP_018033;
+CC   -!- TISSUE SPECIFICITY: Predominantly expressed in skeletal muscle and
+CC       testis. Expressed in basolateral and apical membranes of all tubular
+CC       epithelia. Expressed in thin ascending limb of the loop of Henle and
+CC       the distal convoluted tubule. Expressed in all layers of transitional
+CC       ureteric epithelium and in the ureteric smooth-muscle cells. Weakly
+CC       expressed in heart, brain, placenta, kidney, pancreas, spleen, thymus,
+CC       prostate, uterus, small intestine, white blood cells, stomach, spinal
+CC       cord and adrenal gland. Is widely distributed in the CNS. Also detected
+CC       in several tumor cell lines. Expressed in the skin (PubMed:28157540).
+CC       {ECO:0000269|PubMed:15178406, ECO:0000269|PubMed:17123648,
+CC       ECO:0000269|PubMed:23862974, ECO:0000269|PubMed:28157540}.
+CC   -!- DISEASE: Congenital anomalies of the kidney and urinary tract 1
+CC       (CAKUT1) [MIM:610805]: A disorder encompassing a broad spectrum of
+CC       renal and urinary tract malformations that include renal agenesis,
+CC       kidney hypodysplasia, multicystic kidney dysplasia, duplex collecting
+CC       system, posterior urethral valves and ureter abnormalities. Congenital
+CC       anomalies of kidney and urinary tract are the commonest cause of
+CC       chronic kidney disease in children. {ECO:0000269|PubMed:23862974}.
+CC       Note=Disease susceptibility is associated with variants affecting the
+CC       gene represented in this entry.
+CC   -!- DISEASE: Spastic paraplegia 23, autosomal recessive (SPG23)
+CC       [MIM:270750]: A form of spastic paraplegia, a neurodegenerative
+CC       disorder characterized by a slow, gradual, progressive weakness and
+CC       spasticity of the lower limbs. Rate of progression and the severity of
+CC       symptoms are quite variable. Initial symptoms may include difficulty
+CC       with balance, weakness and stiffness in the legs, muscle spasms, and
+CC       dragging the toes when walking. In some forms of the disorder, bladder
+CC       symptoms (such as incontinence) may appear, or the weakness and
+CC       stiffness may spread to other parts of the body. SPG23 is an autosomal
+CC       recessive form characterized by childhood-onset of gait difficulties
+CC       and pigmentary abnormalities, including premature graying of the hair
+CC       and vitiligo-like or hyperpigmented skin lesions.
+CC       {ECO:0000269|PubMed:28157540}. Note=The disease is caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Ser/Thr protein
+CC       kinase family. {ECO:0000255|PROSITE-ProRule:PRU00159}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AY208850; AAP42418.1; -; mRNA.
+DR   EMBL; AY429674; AAS55390.1; -; mRNA.
+DR   EMBL; AF068286; AAF65505.1; -; mRNA.
+DR   EMBL; AC093422; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC048204; AAH48204.1; -; mRNA.
+DR   EMBL; BC053627; AAH53627.1; -; mRNA.
+DR   EMBL; BC060870; AAH60870.2; -; mRNA.
+DR   EMBL; BC072406; AAH72406.1; -; mRNA.
+DR   EMBL; BC117411; AAI17412.1; -; mRNA.
+DR   EMBL; BC143603; AAI43604.1; -; mRNA.
+DR   EMBL; AB007941; BAA32317.1; -; mRNA.
+DR   CCDS; CCDS1451.1; -. [Q6XUX3-1]
+DR   CCDS; CCDS1452.1; -. [Q6XUX3-2]
+DR   RefSeq; NP_056190.1; NM_015375.2. [Q6XUX3-1]
+DR   RefSeq; NP_955749.1; NM_199462.2. [Q6XUX3-2]
+DR   AlphaFoldDB; Q6XUX3; -.
+DR   SMR; Q6XUX3; -.
+DR   BioGRID; 117313; 66.
+DR   IntAct; Q6XUX3; 23.
+DR   STRING; 9606.ENSP00000356130; -.
+DR   BindingDB; Q6XUX3; -.
+DR   ChEMBL; CHEMBL1908386; -.
+DR   DrugCentral; Q6XUX3; -.
+DR   GlyGen; Q6XUX3; 1 site, 1 O-linked glycan (1 site).
+DR   iPTMnet; Q6XUX3; -.
+DR   PhosphoSitePlus; Q6XUX3; -.
+DR   BioMuta; DSTYK; -.
+DR   DMDM; 296434486; -.
+DR   EPD; Q6XUX3; -.
+DR   jPOST; Q6XUX3; -.
+DR   MassIVE; Q6XUX3; -.
+DR   MaxQB; Q6XUX3; -.
+DR   PaxDb; Q6XUX3; -.
+DR   PeptideAtlas; Q6XUX3; -.
+DR   PRIDE; Q6XUX3; -.
+DR   ProteomicsDB; 67816; -. [Q6XUX3-1]
+DR   ProteomicsDB; 67817; -. [Q6XUX3-2]
+DR   ProteomicsDB; 67818; -. [Q6XUX3-3]
+DR   ProteomicsDB; 67819; -. [Q6XUX3-4]
+DR   Antibodypedia; 34564; 186 antibodies from 25 providers.
+DR   DNASU; 25778; -.
+DR   Ensembl; ENST00000367161.7; ENSP00000356129.3; ENSG00000133059.17. [Q6XUX3-2]
+DR   Ensembl; ENST00000367162.8; ENSP00000356130.3; ENSG00000133059.17. [Q6XUX3-1]
+DR   Ensembl; ENST00000615388.1; ENSP00000478016.1; ENSG00000133059.17. [Q6XUX3-4]
+DR   GeneID; 25778; -.
+DR   KEGG; hsa:25778; -.
+DR   MANE-Select; ENST00000367162.8; ENSP00000356130.3; NM_015375.3; NP_056190.1.
+DR   UCSC; uc001hbw.4; human. [Q6XUX3-1]
+DR   CTD; 25778; -.
+DR   DisGeNET; 25778; -.
+DR   GeneCards; DSTYK; -.
+DR   HGNC; HGNC:29043; DSTYK.
+DR   HPA; ENSG00000133059; Low tissue specificity.
+DR   MalaCards; DSTYK; -.
+DR   MIM; 270750; phenotype.
+DR   MIM; 610805; phenotype.
+DR   MIM; 612666; gene.
+DR   neXtProt; NX_Q6XUX3; -.
+DR   OpenTargets; ENSG00000133059; -.
+DR   Orphanet; 101003; Autosomal recessive spastic paraplegia type 23.
+DR   Orphanet; 93100; Renal agenesis, unilateral.
+DR   PharmGKB; PA164718861; -.
+DR   VEuPathDB; HostDB:ENSG00000133059; -.
+DR   eggNOG; KOG0192; Eukaryota.
+DR   GeneTree; ENSGT00840000129948; -.
+DR   HOGENOM; CLU_014116_0_0_1; -.
+DR   InParanoid; Q6XUX3; -.
+DR   OMA; KSCIHLI; -.
+DR   OrthoDB; 254886at2759; -.
+DR   PhylomeDB; Q6XUX3; -.
+DR   TreeFam; TF331821; -.
+DR   PathwayCommons; Q6XUX3; -.
+DR   SignaLink; Q6XUX3; -.
+DR   BioGRID-ORCS; 25778; 24 hits in 1115 CRISPR screens.
+DR   ChiTaRS; DSTYK; human.
+DR   GeneWiki; RIPK5; -.
+DR   GenomeRNAi; 25778; -.
+DR   Pharos; Q6XUX3; Tchem.
+DR   PRO; PR:Q6XUX3; -.
+DR   Proteomes; UP000005640; Chromosome 1.
+DR   RNAct; Q6XUX3; protein.
+DR   Bgee; ENSG00000133059; Expressed in lateral nuclear group of thalamus and 213 other tissues.
+DR   Genevisible; Q6XUX3; HS.
+DR   GO; GO:0070161; C:anchoring junction; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016324; C:apical plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0016323; C:basolateral plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0005737; C:cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0004712; F:protein serine/threonine/tyrosine kinase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0044344; P:cellular response to fibroblast growth factor stimulus; IDA:UniProtKB.
+DR   GO; GO:0043066; P:negative regulation of apoptotic process; IMP:UniProtKB.
+DR   GO; GO:0070374; P:positive regulation of ERK1 and ERK2 cascade; IMP:UniProtKB.
+DR   GO; GO:0045743; P:positive regulation of fibroblast growth factor receptor signaling pathway; IMP:UniProtKB.
+DR   GO; GO:0033674; P:positive regulation of kinase activity; IMP:UniProtKB.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; ATP-binding; Cell junction; Cell membrane;
+KW   Coiled coil; Cytoplasm; Disease variant; Hereditary spastic paraplegia;
+KW   Kinase; Membrane; Neurodegeneration; Nucleotide-binding;
+KW   Reference proteome; Serine/threonine-protein kinase; Transferase;
+KW   Tyrosine-protein kinase.
+FT   CHAIN           1..929
+FT                   /note="Dual serine/threonine and tyrosine protein kinase"
+FT                   /id="PRO_0000233118"
+FT   DOMAIN          652..906
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1..21
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COILED          189..215
+FT                   /evidence="ECO:0000255"
+FT   COILED          395..431
+FT                   /evidence="ECO:0000255"
+FT   ACT_SITE        777
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         658..666
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         681
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   VAR_SEQ         1..539
+FT                   /note="Missing (in isoform 4)"
+FT                   /evidence="ECO:0000303|Ref.2"
+FT                   /id="VSP_018030"
+FT   VAR_SEQ         451..792
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_018031"
+FT   VAR_SEQ         703..718
+FT                   /note="SLPKHERLVDLHGSVI -> WVLASFISMRKIQRRI (in isoform 4)"
+FT                   /evidence="ECO:0000303|Ref.2"
+FT                   /id="VSP_018032"
+FT   VAR_SEQ         719..929
+FT                   /note="Missing (in isoform 4)"
+FT                   /evidence="ECO:0000303|Ref.2"
+FT                   /id="VSP_018033"
+FT   VAR_SEQ         824..868
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_018034"
+FT   VARIANT         29
+FT                   /note="R -> Q (in CAKUT1; unknown pathological
+FT                   significance; dbSNP:rs200780796)"
+FT                   /evidence="ECO:0000269|PubMed:23862974"
+FT                   /id="VAR_071324"
+FT   VARIANT         200
+FT                   /note="D -> G (in CAKUT1)"
+FT                   /evidence="ECO:0000269|PubMed:23862974"
+FT                   /id="VAR_071325"
+FT   VARIANT         432
+FT                   /note="L -> V (in dbSNP:rs35845538)"
+FT                   /id="VAR_057101"
+FT   VARIANT         843
+FT                   /note="S -> L (in CAKUT1; dbSNP:rs778586547)"
+FT                   /evidence="ECO:0000269|PubMed:23862974"
+FT                   /id="VAR_071326"
+FT   MUTAGEN         681
+FT                   /note="K->Q: No change."
+FT                   /evidence="ECO:0000269|PubMed:15178406"
+FT   CONFLICT        247
+FT                   /note="V -> A (in Ref. 4; AAH72406)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        449
+FT                   /note="G -> R (in Ref. 4; AAH60870)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        641
+FT                   /note="C -> R (in Ref. 1; AAP42418/AAS55390, 2; AAF65505,
+FT                   4; AAH53627/AAH72406/AAI17412/AAI43604 and 5; BAA32317)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   929 AA;  105206 MW;  8DDAAC289DE21EE7 CRC64;
+     MEGDGVPWGS EPVSGPGPGG GGMIRELCRG FGRYRRYLGR LRQNLRETQK FFRDIKCSHN
+     HTCLSSLTGG GGAERGPAGD VAETGLQAGQ LSCISFPPKE EKYLQQIVDC LPCILILGQD
+     CNVKCQLLNL LLGVQVLPTT KLGSEESCKL RRLRFTYGTQ TRVSLALPGQ YELVHTLVAH
+     QGNWETIPEE DLEVQENNED AAHVLAELEV TMHHALLQEV DVVVAPCQGL RPTVDVLGDL
+     VNDFLPVITY ALHKDELSER DEQELQEIRK YFSFPVFFFK VPKLGSEIID SSTRRMESER
+     SPLYRQLIDL GYLSSSHWNC GAPGQDTKAQ SMLVEQSEKL RHLSTFSHQV LQTRLVDAAK
+     ALNLVHCHCL DIFINQAFDM QRDLQITPKR LEYTRKKENE LYESLMNIAN RKQEEMKDMI
+     VETLNTMKEE LLDDATNMEF KDVIVPENGE PVGTREIKCC IRQIQELIIS RLNQAVANKL
+     ISSVDYLRES FVGTLERCLQ SLEKSQDVSV HITSNYLKQI LNAAYHVEVT FHSGSSVTRM
+     LWEQIKQIIQ RITWVSPPAI TLEWKRKVAQ EAIESLSASK LAKSICSQFR TRLNSSHEAF
+     AASLRQLEAG HSGRLEKTED LWLRVRKDHA PRLARLSLES CSLQDVLLHR KPKLGQELGR
+     GQYGVVYLCD NWGGHFPCAL KSVVPPDEKH WNDLALEFHY MRSLPKHERL VDLHGSVIDY
+     NYGGGSSIAV LLIMERLHRD LYTGLKAGLT LETRLQIALD VVEGIRFLHS QGLVHRDIKL
+     KNVLLDKQNR AKITDLGFCK PEAMMSGSIV GTPIHMAPEL FTGKYDNSVD VYAFGILFWY
+     ICSGSVKLPE AFERCASKDH LWNNVRRGAR PERLPVFDEE CWQLMEACWD GDPLKRPLLG
+     IVQPMLQGIM NRLCKSNSEQ PNRGLDDST
+//

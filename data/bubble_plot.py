@@ -13,6 +13,10 @@ import matplotlib.pyplot as plt
 from scipy.stats import fisher_exact
 import plotly.express as px
 
+# PFAM_DOM = 'PK_Tyr_Ser-Thr'
+PFAM_DOM = 'Pkinase'
+HMMSEARCH_OUT = 'allKinasesHmmsearch'+PFAM_DOM+'.txt'
+
 class Gene:
     '''
     class to define gene and their accessions
@@ -31,9 +35,10 @@ class Kinase:
     '''
     class to define kinases
     '''
-    def __init__(self, acc=None, gene=None):
+    def __init__(self, acc=None, gene=None, pfam_domains=None):
         self.gene = gene
         self.acc = acc
+        self.pfam_domains = pfam_domains
         self.sequence = ''
         self.kinase_to_pfam = {}
         self.act = {}
@@ -88,13 +93,24 @@ def run_hmmsearch():
     for file in os.listdir(fasta_path):
         if file.endswith('.fasta') is False:
             continue
+        acc = file.split('.')[0]
+        # print (acc+'.txt')
+        if os.path.isfile(fasta_path+acc+'.txt') is False:
+            os.system('wget -O ' + fasta_path + acc+'.txt ' + 'https://rest.uniprot.org/uniprotkb/'+acc+'.txt')
+        pfam_domains = []
+        for line in open(fasta_path + acc+'.txt', 'r'):
+            if line[:2] != 'DR':
+                continue
+            if 'Pfam;' in line.split('DR')[1].split():
+                # print (line.split('DR')[1].split())
+                pfam_domains.append(line.split('DR')[1].split()[2].replace(';', ''))        
         with open(fasta_path+file, 'r') as fp:
             lines = fp.readlines()
             for line in lines:
                 if line[0] == '>':
                     acc = line.split('|')[1]
                     gene = line.split('GN=')[1].split()[0]
-                    kinase_dic[acc] = Kinase(acc, gene)
+                    kinase_dic[acc] = Kinase(acc, gene, pfam_domains)
                     if gene not in gene_to_accs_dic:
                         gene_to_accs_dic[gene] = [acc]
                     else:
@@ -109,12 +125,12 @@ def run_hmmsearch():
         all_kinases_fasta += kinase_dic[acc].get_fasta_formatted() + '\n'
     open('allKinases.fasta', 'w').write(all_kinases_fasta)
     # Run HMMSEARCH against saved sequences
-    os.system('hmmsearch -o allKinasesHmmsearch.txt ../pfam/Pkinase.hmm allKinases.fasta')
+    os.system('hmmsearch -o ' + HMMSEARCH_OUT + ' ../pfam/' + PFAM_DOM + '.hmm' + ' allKinases.fasta')
     return kinase_dic, gene_to_accs_dic
 
 kinase_dic, gene_to_accs_dic = run_hmmsearch()
-print (kinase_dic)
-
+# print (kinase_dic['P36888'].pfam_domains)
+# sys.exit()
 ## Dictionary that maps gene names to accessions
 # acc_to_gene = {}
 # for line in open('../../DB/uniprot/uniprot_sprot_human.fasta', 'r'):
@@ -128,7 +144,7 @@ print (kinase_dic)
 ## read the HMMSEARCH output
 pfam = {}
 flag = 0
-for line in open('allKinasesHmmsearch.txt', 'r'):
+for line in open(HMMSEARCH_OUT, 'r'):
     if len(line.split()) == 0:
         continue
     if line[:2] == '>>':
@@ -138,7 +154,7 @@ for line in open('allKinasesHmmsearch.txt', 'r'):
         if kinase not in kinase_dic:
             raise ValueError(f'{kinase} not found in the HMMSearch output')
         flag = 1
-    elif line.split()[0] == 'Pkinase':
+    elif line.split()[0] == PFAM_DOM:
         ## lines with Pkinase domain
         pfam_start, pfam_seq, pfam_end = int(line.split()[1]), line.split()[2], int(line.split()[3])
         count = int(line.split()[1])
@@ -175,7 +191,7 @@ for line in open('../KA/act_deact_mut_for_scores_fin.tsv', 'r'):
             raise ValueError(f'{gene} not found in the HMMSearch output')
         # prepare mutation
         mutation = line.split('\t')[1] + line.split('\t')[2] + line.split('\t')[3]
-        num_samples = 1
+        num_samples = len(line.split('\t')[4].split('PubMed:')) - 1
         # Ignore mutations where you see del (deletions)
         if 'del' in mutation:
             continue
@@ -234,6 +250,9 @@ for line in open('../KA/resistant_mutations_Nov22.tsv.gz', 'rt'):
 # print (kinase_dic['P25092'].kinase_to_pfam)
 data = []
 for kinase in kinase_dic:
+    if PFAM_DOM not in kinase_dic[kinase].pfam_domains:
+        print (PFAM_DOM, kinase_dic[kinase].pfam_domains)
+        continue
     # kinase_dic[kinase].display()
     for mutation in kinase_dic[kinase].act:
         mutationInstance = kinase_dic[kinase].act[mutation]
@@ -298,79 +317,117 @@ for kinase in kinase_dic:
             row.append(np.log2(num_samples))
             data.append(row)
 
-## Add ATP binding sites
-atp_sites = {}
-for line in open('ATP_binding_sites.tsv', 'r'):
+## Ligand binding sites
+ligand_sites = {}
+LIGANDS = ['ATP', 'ADP', 'MG', 'MN']
+for line in open('ATP_binding_sites3.tsv', 'r'):
     if line[0] == '#':
         continue
-    site = int(line.split('\t')[3])
-    pdbs = line.split('\t')[6].replace('\n', '').split(';')
-    if site not in atp_sites:
-        atp_sites[site] = pdbs
+    # Consider only the one with the specified domain
+    if line.split('\t')[2] != PFAM_DOM:
+        continue
+    ligand = line.split('\t')[3]
+    if ligand not in ligand_sites:
+        ligand_sites[ligand] = {}
+    if ligand not in LIGANDS:
+        continue
+    site = int(line.split('\t')[4])
+    pdbs = line.split('\t')[7].replace('\n', '').split(';')
+    if site not in ligand_sites[ligand]:
+        ligand_sites[ligand][site] = pdbs
     else:
-        atp_sites[site] += pdbs
-        atp_sites[site] = list(set(atp_sites[site]))
+        ligand_sites[ligand][site] += pdbs
+        ligand_sites[ligand][site] = list(set(ligand_sites[ligand][site]))
 
-for site in atp_sites:
+for ligand in LIGANDS:
+    for site in ligand_sites[ligand]:
+        row = []
+        row.append(ligand+'bindingSites')
+        row.append(int(site))
+        row.append(pfam[site])
+        row.append(ligand+'site')
+        row.append(ligand+'site')
+        if site in ligand_sites[ligand]:
+            row.append(np.log2(len(ligand_sites[ligand][site])))
+            row.append(np.log2(len(ligand_sites[ligand][site])))
+        else:
+            row.append(0)
+            row.append(0)
+        data.append(row)
+
+## SS of HMM
+# hmm_ss = {}
+for line in open('../pfam/'+PFAM_DOM+'.hmm', 'r'):
+    if len(line.split()) < 20:
+        continue
+    if line.split()[-2] != '-' and line.split()[-3] != '-':
+        continue
+    ss_type = line.split()[-1].replace('\n', '')
+    ss_pos = int(line.split()[0].replace('\n', ''))
+    # hmm_ss[ss_pos] = ss_type
     row = []
-    row.append('ATPbindingSites')
-    row.append(int(site))
-    row.append(pfam[site])
-    row.append('ATP site')
-    row.append('ATP site')
-    if site in atp_sites:
-        row.append(np.log2(len(atp_sites[site])))
-        row.append(np.log2(len(atp_sites[site])))
-    else:
-        row.append(0)
-        row.append(0)
+    row.append('SS_HMM')
+    row.append(ss_pos)
+    row.append(pfam[ss_pos])
+    row.append(ss_type)
+    row.append(ss_type)
+    row.append(1)
+    row.append(1)
     data.append(row)
 
 ## Add PTM sites
 phospho_sites = {}
 acetyl_sites = {}
 methyl_sites ={}
-for line in open('Kinase_psites3.tsv', 'r'):
+ubiq_sites = {}
+sumo_sites = {}
+ga_sites = {}
+gl_sites = {}
+for line in open('Kinase_psites4.tsv', 'r'):
     if line[0] == '#':
         continue
-    pfam_pos = int(line.split('\t')[3])
+    # Consider only the one with the specified domain
+    if line.split('\t')[2] != PFAM_DOM:
+        continue
+    pfam_pos = int(line.split('\t')[4])
     # num_ptmsites = int(line.split('\t')[3].replace('\n', ''))
-    type_ptm = line.split('\t')[2].split('-')[1]
+    type_ptm = line.split('\t')[3].split('-')[1]
     if type_ptm == 'p':
         dic = phospho_sites 
     elif type_ptm == 'ac':
         dic = acetyl_sites
-    else:
+    elif type_ptm in ['m1', 'm2', 'm3', 'me']:
         dic = methyl_sites
+    elif type_ptm in ['ub']:
+        dic = ubiq_sites
+    elif type_ptm in ['sm']:
+        dic = sumo_sites
+    elif type_ptm in ['ga']:
+        dic = ga_sites
+    elif type_ptm in ['gl']:
+        dic = gl_sites
+    else:
+        print ('error:', type_ptm, 'not knonw at', pfam_pos)
+        sys.exit()
     if pfam_pos not in dic:
         dic[pfam_pos] = 1
     else:
         dic[pfam_pos] += 1
 
-for count, dic in enumerate([phospho_sites, acetyl_sites, methyl_sites]):
+count = 0
+for dic, ptm_type in zip([phospho_sites, acetyl_sites, methyl_sites, ubiq_sites, sumo_sites, ga_sites, gl_sites], ['p', 'ac', 'me', 'ub', 'sm', 'ga', 'gl']):
+    count += 1
     for pfam_pos in dic:
         row = []
-        if count == 0:
-            row.append('Psites')
-        elif count == 1:
-            row.append('Ksites')
-        else:
-            row.append('Mesites')
+        row.append(ptm_type+'-sites')
         row.append(int(pfam_pos))
         row.append(pfam[pfam_pos])
-        if count == 0:
-            row.append('P-site')
-            row.append('P-site')
-            row.append(np.log2(dic[pfam_pos]))
-            row.append(np.log2(dic[pfam_pos]))
-        elif count == 1:
-            row.append('K-site')
-            row.append('K-site')
-            row.append(dic[pfam_pos])
-            row.append(dic[pfam_pos])
+        row.append(ptm_type+'-site')
+        row.append(ptm_type+'-site')
+        if count == 1:
+            row.append(np.log2(dic[pfam_pos])+1)
+            row.append(np.log2(dic[pfam_pos])+1)
         else:
-            row.append('Me-site')
-            row.append('me-site')
             row.append(dic[pfam_pos])
             row.append(dic[pfam_pos])
         data.append(row)

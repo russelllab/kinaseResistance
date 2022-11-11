@@ -1,0 +1,963 @@
+ID   KPCI_HUMAN              Reviewed;         596 AA.
+AC   P41743; D3DNQ4; Q8WW06;
+DT   01-NOV-1995, integrated into UniProtKB/Swiss-Prot.
+DT   16-JUN-2009, sequence version 2.
+DT   12-OCT-2022, entry version 232.
+DE   RecName: Full=Protein kinase C iota type;
+DE            EC=2.7.11.13;
+DE   AltName: Full=Atypical protein kinase C-lambda/iota;
+DE            Short=PRKC-lambda/iota;
+DE            Short=aPKC-lambda/iota;
+DE   AltName: Full=nPKC-iota;
+GN   Name=PRKCI; Synonyms=DXS1179E;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], FUNCTION, AND TISSUE SPECIFICITY.
+RC   TISSUE=Kidney;
+RX   PubMed=8226978; DOI=10.1016/s0021-9258(20)80525-0;
+RA   Selbie L.A., Schmitz-Peiffer C., Sheng Y., Biden T.J.;
+RT   "Molecular cloning and characterization of PKC iota, an atypical isoform of
+RT   protein kinase C derived from insulin-secreting cells.";
+RL   J. Biol. Chem. 268:24296-24302(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA], AND TISSUE SPECIFICITY.
+RC   TISSUE=Teratocarcinoma;
+RX   PubMed=7607695; DOI=10.1016/0888-7543(95)80190-w;
+RA   Mazzarella R., Ciccodicola A., Esposito T., Arcucci A., Migliaccio C.,
+RA   Jones C., Schlessinger D., D'Urso M., D'Esposito M.;
+RT   "Human protein kinase C iota gene (PRKCI) is closely linked to the BTK gene
+RT   in Xq21.3.";
+RL   Genomics 26:629-631(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Testis;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [5]
+RP   INTERACTION WITH SMG1, AND ACTIVITY REGULATION.
+RX   PubMed=8524286; DOI=10.1128/mcb.16.1.105;
+RA   Diaz-Meco M.T., Municio M.M., Sanchez P., Lozano J., Moscat J.;
+RT   "Lambda-interacting protein, a novel protein that specifically interacts
+RT   with the zinc finger domain of the atypical protein kinase C isotype
+RT   lambda/iota and stimulates its kinase activity in vitro and in vivo.";
+RL   Mol. Cell. Biol. 16:105-114(1996).
+RN   [6]
+RP   FUNCTION IN CELL SURVIVAL.
+RX   PubMed=9346882; DOI=10.1074/jbc.272.44.27521;
+RA   Murray N.R., Fields A.P.;
+RT   "Atypical protein kinase C iota protects human leukemia cells against drug-
+RT   induced apoptosis.";
+RL   J. Biol. Chem. 272:27521-27524(1997).
+RN   [7]
+RP   INTERACTION WITH SQSTM1, AND SUBCELLULAR LOCATION.
+RX   PubMed=9566925; DOI=10.1128/mcb.18.5.3069;
+RA   Sanchez P., De Carcer G., Sandoval I.V., Moscat J., Diaz-Meco M.T.;
+RT   "Localization of atypical protein kinase C isoforms into lysosome-targeted
+RT   endosomes through interaction with p62.";
+RL   Mol. Cell. Biol. 18:3069-3080(1998).
+RN   [8]
+RP   FUNCTION IN CELL SURVIVAL.
+RX   PubMed=10467349; DOI=10.1038/sj.cdd.4400548;
+RA   Wooten M.W., Seibenhener M.L., Zhou G., Vandenplas M.L., Tan T.H.;
+RT   "Overexpression of atypical PKC in PC12 cells enhances NGF-responsiveness
+RT   and survival through an NF-kappaB dependent pathway.";
+RL   Cell Death Differ. 6:753-764(1999).
+RN   [9]
+RP   INTERACTION WITH SQSTM1 AND IKBKB, AND FUNCTION.
+RX   PubMed=10356400; DOI=10.1093/emboj/18.11.3044;
+RA   Sanz L., Sanchez P., Lallena M.-J., Diaz-Meco M.T., Moscat J.;
+RT   "The interaction of p62 with RIP links the atypical PKCs to NF-kappaB
+RT   activation.";
+RL   EMBO J. 18:3044-3053(1999).
+RN   [10]
+RP   FUNCTION, BIOPHYSICOCHEMICAL PROPERTIES, AND MUTAGENESIS OF LYS-274.
+RX   PubMed=10906326; DOI=10.1074/jbc.m002742200;
+RA   Spitaler M., Villunger A., Grunicke H., Uberall F.;
+RT   "Unique structural and functional properties of the ATP-binding domain of
+RT   atypical protein kinase C-iota.";
+RL   J. Biol. Chem. 275:33289-33296(2000).
+RN   [11]
+RP   FUNCTION IN CELL SURVIVAL.
+RX   PubMed=11042363; DOI=10.1016/s0169-328x(00)00187-x;
+RA   Xie J., Guo Q., Zhu H., Wooten M.W., Mattson M.P.;
+RT   "Protein kinase C iota protects neural cells against apoptosis induced by
+RT   amyloid beta-peptide.";
+RL   Brain Res. Mol. Brain Res. 82:107-113(2000).
+RN   [12]
+RP   INTERACTION WITH PARD6A; PARD6B AND PARD6G, AND SUBUNIT OF A COMPLEX
+RP   CONTAINING PARD6B AND CDC42/RAC1.
+RX   PubMed=11260256; DOI=10.1046/j.1365-2443.2001.00404.x;
+RA   Noda Y., Takeya R., Ohno S., Naito S., Ito T., Sumimoto H.;
+RT   "Human homologues of the Caenorhabditis elegans cell polarity protein PAR6
+RT   as an adaptor that links the small GTPases Rac and Cdc42 to atypical
+RT   protein kinase C.";
+RL   Genes Cells 6:107-119(2001).
+RN   [13]
+RP   INTERACTION WITH PARD3 AND PARD6B IN THE TERNARY AKPC/PAR3/PAR6 COMPLEX.
+RX   PubMed=11257119; DOI=10.1083/jcb.152.6.1183;
+RA   Suzuki A., Yamanaka T., Hirose T., Manabe N., Mizuno K., Shimizu M.,
+RA   Akimoto K., Izumi Y., Ohnishi T., Ohno S.;
+RT   "Atypical protein kinase C is involved in the evolutionarily conserved par
+RT   protein complex and plays a critical role in establishing epithelia-
+RT   specific junctional structures.";
+RL   J. Cell Biol. 152:1183-1196(2001).
+RN   [14]
+RP   FUNCTION, AND INTERACTION WITH GAPDH.
+RX   PubMed=11724794; DOI=10.1074/jbc.m109744200;
+RA   Tisdale E.J.;
+RT   "Glyceraldehyde-3-phosphate dehydrogenase is phosphorylated by protein
+RT   kinase Ciota /lambda and plays a role in microtubule dynamics in the early
+RT   secretory pathway.";
+RL   J. Biol. Chem. 277:3334-3341(2002).
+RN   [15]
+RP   PHOSPHORYLATION AT TYR-265; TYR-280 AND TYR-334, AND MUTAGENESIS OF
+RP   TYR-265; TYR-280 AND TYR-334.
+RX   PubMed=11713277; DOI=10.1128/mcb.21.24.8414-8427.2001;
+RA   Wooten M.W., Vandenplas M.L., Seibenhener M.L., Geetha T., Diaz-Meco M.T.;
+RT   "Nerve growth factor stimulates multisite tyrosine phosphorylation and
+RT   activation of the atypical protein kinase C's via a src kinase pathway.";
+RL   Mol. Cell. Biol. 21:8414-8427(2001).
+RN   [16]
+RP   INTERACTION WITH KPNB1, SUBCELLULAR LOCATION, PHOSPHORYLATION AT TYR-265,
+RP   AND MUTAGENESIS OF TYR-265.
+RX   PubMed=11891849; DOI=10.1002/jcb.10101.abs;
+RA   White W.O., Seibenhener M.L., Wooten M.W.;
+RT   "Phosphorylation of tyrosine 256 facilitates nuclear import of atypical
+RT   protein kinase C.";
+RL   J. Cell. Biochem. 85:42-53(2002).
+RN   [17]
+RP   INTERACTION WITH ADAP1.
+RX   PubMed=12893243; DOI=10.1016/s0006-291x(03)01187-2;
+RA   Zemlickova E., Dubois T., Kerai P., Clokie S., Cronshaw A.D.,
+RA   Wakefield R.I.D., Johannes F.-J., Aitken A.;
+RT   "Centaurin-alpha(1) associates with and is phosphorylated by isoforms of
+RT   protein kinase C.";
+RL   Biochem. Biophys. Res. Commun. 307:459-465(2003).
+RN   [18]
+RP   INTERACTION WITH PARD6B/PAR-6 AND LLGL1.
+RX   PubMed=12725730; DOI=10.1016/s0960-9822(03)00244-6;
+RA   Yamanaka T., Horikoshi Y., Sugiyama Y., Ishiyama C., Suzuki A., Hirose T.,
+RA   Iwamatsu A., Shinohara A., Ohno S.;
+RT   "Mammalian Lgl forms a protein complex with PAR-6 and aPKC independently of
+RT   PAR-3 to regulate epithelial cell polarity.";
+RL   Curr. Biol. 13:734-743(2003).
+RN   [19]
+RP   FUNCTION.
+RX   PubMed=12871960; DOI=10.1074/jbc.m305381200;
+RA   Tisdale E.J., Wang J., Silver R.B., Artalejo C.R.;
+RT   "Atypical protein kinase C plays a critical role in protein transport from
+RT   pre-Golgi intermediates.";
+RL   J. Biol. Chem. 278:38015-38021(2003).
+RN   [20]
+RP   INTERACTION WITH RAB2A.
+RX   PubMed=14570876; DOI=10.1074/jbc.m309343200;
+RA   Tisdale E.J.;
+RT   "Rab2 interacts directly with atypical protein kinase C (aPKC) iota/lambda
+RT   and inhibits aPKCiota/lambda-dependent glyceraldehyde-3-phosphate
+RT   dehydrogenase phosphorylation.";
+RL   J. Biol. Chem. 278:52524-52530(2003).
+RN   [21]
+RP   FUNCTION IN PHOSPHORYLATION OF IRAK1.
+RX   PubMed=14684752; DOI=10.1074/jbc.c300431200;
+RA   Mamidipudi V., Lin C., Seibenhener M.L., Wooten M.W.;
+RT   "Regulation of interleukin receptor-associated kinase (IRAK)
+RT   phosphorylation and signaling by iota protein kinase C.";
+RL   J. Biol. Chem. 279:4161-4165(2004).
+RN   [22]
+RP   FUNCTION, AND TISSUE SPECIFICITY.
+RX   PubMed=15994303; DOI=10.1074/jbc.m505402200;
+RA   Regala R.P., Weems C., Jamieson L., Copland J.A., Thompson E.A.,
+RA   Fields A.P.;
+RT   "Atypical protein kinase Ciota plays a critical role in human lung cancer
+RT   cell growth and tumorigenicity.";
+RL   J. Biol. Chem. 280:31109-31115(2005).
+RN   [23]
+RP   INTERACTION WITH CDK7, AND SUBCELLULAR LOCATION.
+RX   PubMed=15695176; DOI=10.1016/j.tice.2004.10.004;
+RA   Bicaku E., Patel R., Acevedo-Duncan M.;
+RT   "Cyclin-dependent kinase activating kinase/Cdk7 co-localizes with PKC-iota
+RT   in human glioma cells.";
+RL   Tissue Cell 37:53-58(2005).
+RN   [24]
+RP   INTERACTION WITH WDFY2.
+RX   PubMed=16792529; DOI=10.1042/bj20060511;
+RA   Fritzius T., Burkard G., Haas E., Heinrich J., Schweneker M., Bosse M.,
+RA   Zimmermann S., Frey A.D., Caelers A., Bachmann A.S., Moelling K.;
+RT   "A WD-FYVE protein binds to the kinases Akt and PKCzeta/lambda.";
+RL   Biochem. J. 399:9-20(2006).
+RN   [25]
+RP   INTERACTION WITH RAB2A AND GADPH, PHOSPHORYLATION, AND SUBCELLULAR
+RP   LOCATION.
+RX   PubMed=16452474; DOI=10.1074/jbc.m513031200;
+RA   Tisdale E.J., Artalejo C.R.;
+RT   "Src-dependent protein kinase C iota/lambda (aPKCiota/lambda) tyrosine
+RT   phosphorylation is required for aPKCiota/lambda association with Rab2 and
+RT   glyceraldehyde-3-phosphate dehydrogenase on pre-Golgi intermediates.";
+RL   J. Biol. Chem. 281:8436-8442(2006).
+RN   [26]
+RP   INTERACTION WITH VAMP2.
+RX   PubMed=17313651; DOI=10.1111/j.1742-4658.2007.05702.x;
+RA   Fritzius T., Frey A.D., Schweneker M., Mayer D., Moelling K.;
+RT   "WD-repeat-propeller-FYVE protein, ProF, binds VAMP2 and protein kinase
+RT   Czeta.";
+RL   FEBS J. 274:1552-1566(2007).
+RN   [27]
+RP   FUNCTION IN PHOSPHORYLATION OF EZR.
+RX   PubMed=18270268; DOI=10.1242/jcs.016246;
+RA   Wald F.A., Oriolo A.S., Mashukova A., Fregien N.L., Langshaw A.H.,
+RA   Salas P.J.;
+RT   "Atypical protein kinase C (iota) activates ezrin in the apical domain of
+RT   intestinal epithelial cells.";
+RL   J. Cell Sci. 121:644-654(2008).
+RN   [28]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18220336; DOI=10.1021/pr0705441;
+RA   Cantin G.T., Yi W., Lu B., Park S.K., Xu T., Lee J.-D., Yates J.R. III;
+RT   "Combining protein-based IMAC, peptide-based IMAC, and MudPIT for efficient
+RT   phosphoproteomic analysis.";
+RL   J. Proteome Res. 7:1346-1351(2008).
+RN   [29]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [30]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [31]
+RP   FUNCTION IN APOPTOSIS.
+RX   PubMed=19327373; DOI=10.1016/j.mvr.2009.01.014;
+RA   Staiger K., Schatz U., Staiger H., Weyrich P., Haas C., Guirguis A.,
+RA   Machicao F., Haering H.U., Kellerer M.;
+RT   "Protein kinase C iota mediates lipid-induced apoptosis of human coronary
+RT   artery endothelial cells.";
+RL   Microvasc. Res. 78:40-44(2009).
+RN   [32]
+RP   INTERACTION WITH ECT2 AND PARD6A, AND MUTAGENESIS OF ASP-72.
+RX   PubMed=19617897; DOI=10.1038/onc.2009.217;
+RA   Justilien V., Fields A.P.;
+RT   "Ect2 links the PKCiota-Par6alpha complex to Rac1 activation and cellular
+RT   transformation.";
+RL   Oncogene 28:3597-3607(2009).
+RN   [33]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [34]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT PRO-2, PHOSPHORYLATION [LARGE SCALE
+RP   ANALYSIS] AT THR-3; SER-7; SER-8 AND THR-9, CLEAVAGE OF INITIATOR
+RP   METHIONINE [LARGE SCALE ANALYSIS], AND IDENTIFICATION BY MASS SPECTROMETRY
+RP   [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [35]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [36]
+RP   FUNCTION IN PHOSPHORYLATION OF BAD.
+RX   PubMed=21419810; DOI=10.1016/j.bbamcr.2011.03.007;
+RA   Desai S., Pillai P., Win-Piazza H., Acevedo-Duncan M.;
+RT   "PKC-? promotes glioblastoma cell survival by phosphorylating and
+RT   inhibiting BAD through a phosphatidylinositol 3-kinase pathway.";
+RL   Biochim. Biophys. Acta 1813:1190-1197(2011).
+RN   [37]
+RP   FUNCTION IN PHOSPHORYLATION OF ECT2.
+RX   PubMed=21189248; DOI=10.1074/jbc.m110.196113;
+RA   Justilien V., Jameison L., Der C.J., Rossman K.L., Fields A.P.;
+RT   "Oncogenic activity of Ect2 is regulated through protein kinase C iota-
+RT   mediated phosphorylation.";
+RL   J. Biol. Chem. 286:8149-8157(2011).
+RN   [38]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-564, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [39]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [40]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-564, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [41]
+RP   STRUCTURE BY NMR OF 25-108, INTERACTION WITH SQSTM1 AND MAP2K5, AND
+RP   MUTAGENESIS OF LYS-29 AND ASP-72.
+RX   PubMed=15143057; DOI=10.1074/jbc.m403092200;
+RA   Hirano Y., Yoshinaga S., Ogura K., Yokochi M., Noda Y., Sumimoto H.,
+RA   Inagaki F.;
+RT   "Solution structure of atypical protein kinase C PB1 domain and its mode of
+RT   interaction with ZIP/p62 and MEK5.";
+RL   J. Biol. Chem. 279:31883-31890(2004).
+RN   [42]
+RP   X-RAY CRYSTALLOGRAPHY (1.5 ANGSTROMS) OF 25-108 IN COMPLEX WITH PARD6A, AND
+RP   MUTAGENESIS OF ASP-72; GLU-85 AND ARG-91.
+RX   PubMed=15590654; DOI=10.1074/jbc.m409823200;
+RA   Hirano Y., Yoshinaga S., Takeya R., Suzuki N.N., Horiuchi M., Kohjima M.,
+RA   Sumimoto H., Inagaki F.;
+RT   "Structure of a cell polarity regulator, a complex between atypical PKC and
+RT   Par6 PB1 domains.";
+RL   J. Biol. Chem. 280:9653-9661(2005).
+RN   [43]
+RP   X-RAY CRYSTALLOGRAPHY (3.0 ANGSTROMS) OF 233-596, IDENTIFICATION BY MASS
+RP   SPECTROMETRY, AND PHOSPHORYLATION AT THR-412 AND THR-564.
+RX   PubMed=16125198; DOI=10.1016/j.jmb.2005.07.060;
+RA   Messerschmidt A., Macieira S., Velarde M., Baedeker M., Benda C.,
+RA   Jestel A., Brandstetter H., Neuefeind T., Blaesse M.;
+RT   "Crystal structure of the catalytic domain of human atypical protein kinase
+RT   C-iota reveals interaction mode of phosphorylation site in turn motif.";
+RL   J. Mol. Biol. 352:918-931(2005).
+RN   [44]
+RP   VARIANTS [LARGE SCALE ANALYSIS] LEU-118 AND CYS-130.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Calcium- and diacylglycerol-independent serine/ threonine-
+CC       protein kinase that plays a general protective role against apoptotic
+CC       stimuli, is involved in NF-kappa-B activation, cell survival,
+CC       differentiation and polarity, and contributes to the regulation of
+CC       microtubule dynamics in the early secretory pathway. Is necessary for
+CC       BCR-ABL oncogene-mediated resistance to apoptotic drug in leukemia
+CC       cells, protecting leukemia cells against drug-induced apoptosis. In
+CC       cultured neurons, prevents amyloid beta protein-induced apoptosis by
+CC       interrupting cell death process at a very early step. In glioblastoma
+CC       cells, may function downstream of phosphatidylinositol 3-kinase
+CC       (PI(3)K) and PDPK1 in the promotion of cell survival by phosphorylating
+CC       and inhibiting the pro-apoptotic factor BAD. Can form a protein complex
+CC       in non-small cell lung cancer (NSCLC) cells with PARD6A and ECT2 and
+CC       regulate ECT2 oncogenic activity by phosphorylation, which in turn
+CC       promotes transformed growth and invasion. In response to nerve growth
+CC       factor (NGF), acts downstream of SRC to phosphorylate and activate
+CC       IRAK1, allowing the subsequent activation of NF-kappa-B and neuronal
+CC       cell survival. Functions in the organization of the apical domain in
+CC       epithelial cells by phosphorylating EZR. This step is crucial for
+CC       activation and normal distribution of EZR at the early stages of
+CC       intestinal epithelial cell differentiation. Forms a protein complex
+CC       with LLGL1 and PARD6B independently of PARD3 to regulate epithelial
+CC       cell polarity. Plays a role in microtubule dynamics in the early
+CC       secretory pathway through interaction with RAB2A and GAPDH and
+CC       recruitment to vesicular tubular clusters (VTCs). In human coronary
+CC       artery endothelial cells (HCAEC), is activated by saturated fatty acids
+CC       and mediates lipid-induced apoptosis. Involved in early synaptic long
+CC       term potentiation phase in CA1 hippocampal cells and short term memory
+CC       formation (By similarity). {ECO:0000250|UniProtKB:F1M7Y5,
+CC       ECO:0000269|PubMed:10356400, ECO:0000269|PubMed:10467349,
+CC       ECO:0000269|PubMed:10906326, ECO:0000269|PubMed:11042363,
+CC       ECO:0000269|PubMed:11724794, ECO:0000269|PubMed:12871960,
+CC       ECO:0000269|PubMed:14684752, ECO:0000269|PubMed:15994303,
+CC       ECO:0000269|PubMed:18270268, ECO:0000269|PubMed:19327373,
+CC       ECO:0000269|PubMed:21189248, ECO:0000269|PubMed:21419810,
+CC       ECO:0000269|PubMed:8226978, ECO:0000269|PubMed:9346882}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.13;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.13;
+CC   -!- ACTIVITY REGULATION: Atypical PKCs (PRKCI and PRKCZ) exhibit an
+CC       elevated basal enzymatic activity (that may be due to the interaction
+CC       with SMG1 or SQSTM1) and are not regulated by diacylglycerol,
+CC       phosphatidylserine, phorbol esters or calcium ions. Two specific sites,
+CC       Thr-412 (activation loop of the kinase domain) and Thr-564 (turn
+CC       motif), need to be phosphorylated for its full activation (By
+CC       similarity). Might also be a target for novel lipid activators that are
+CC       elevated during nutrient-stimulated insulin secretion. {ECO:0000250,
+CC       ECO:0000269|PubMed:8524286}.
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=13.5 uM for ATP (for recombinant purified PRKCI)
+CC         {ECO:0000269|PubMed:10906326};
+CC         Vmax=7.4 pmol/min/mg enzyme {ECO:0000269|PubMed:10906326};
+CC   -!- SUBUNIT: Forms a complex with SQSTM1 and MP2K5 (By similarity).
+CC       Interacts directly with SQSTM1 (Probable). Interacts with IKBKB.
+CC       Interacts with PARD6A, PARD6B and PARD6G. Part of a quaternary complex
+CC       containing aPKC, PARD3, a PARD6 protein (PARD6A, PARD6B or PARD6G) and
+CC       a GTPase protein (CDC42 or RAC1). Part of a complex with LLGL1 and
+CC       PARD6B. Interacts with ADAP1/CENTA1. Interaction with SMG1, through the
+CC       ZN-finger domain, activates the kinase activity. Interacts with CDK7.
+CC       Forms a complex with RAB2A and GAPDH involved in recruitment onto the
+CC       membrane of vesicular tubular clusters (VTCs). Interacts with ECT2
+CC       ('Thr-359' phosphorylated form). Interacts with VAMP2
+CC       (PubMed:17313651). Interacts with WDFY2 (via WD repeats 1-3)
+CC       (PubMed:16792529). {ECO:0000250|UniProtKB:Q62074,
+CC       ECO:0000269|PubMed:10356400, ECO:0000269|PubMed:11257119,
+CC       ECO:0000269|PubMed:11260256, ECO:0000269|PubMed:11724794,
+CC       ECO:0000269|PubMed:11891849, ECO:0000269|PubMed:12725730,
+CC       ECO:0000269|PubMed:12893243, ECO:0000269|PubMed:14570876,
+CC       ECO:0000269|PubMed:15143057, ECO:0000269|PubMed:15590654,
+CC       ECO:0000269|PubMed:15695176, ECO:0000269|PubMed:16452474,
+CC       ECO:0000269|PubMed:16792529, ECO:0000269|PubMed:17313651,
+CC       ECO:0000269|PubMed:19617897, ECO:0000269|PubMed:8524286,
+CC       ECO:0000269|PubMed:9566925, ECO:0000305}.
+CC   -!- INTERACTION:
+CC       P41743; P60953: CDC42; NbExp=5; IntAct=EBI-286199, EBI-81752;
+CC       P41743; P78545: ELF3; NbExp=2; IntAct=EBI-286199, EBI-1057285;
+CC       P41743; P08151-1: GLI1; NbExp=3; IntAct=EBI-286199, EBI-16038799;
+CC       P41743; Q96L34: MARK4; NbExp=2; IntAct=EBI-286199, EBI-302319;
+CC       P41743; Q6FHY5: MEOX2; NbExp=3; IntAct=EBI-286199, EBI-16439278;
+CC       P41743; Q96RE7: NACC1; NbExp=3; IntAct=EBI-286199, EBI-7950997;
+CC       P41743; Q8TEW0: PARD3; NbExp=5; IntAct=EBI-286199, EBI-81968;
+CC       P41743; Q9NPB6: PARD6A; NbExp=17; IntAct=EBI-286199, EBI-81876;
+CC       P41743; Q9NPB6-2: PARD6A; NbExp=3; IntAct=EBI-286199, EBI-10693102;
+CC       P41743; Q9BYG5: PARD6B; NbExp=22; IntAct=EBI-286199, EBI-295391;
+CC       P41743; Q9BYG4: PARD6G; NbExp=7; IntAct=EBI-286199, EBI-295417;
+CC       P41743; Q8ND90: PNMA1; NbExp=2; IntAct=EBI-286199, EBI-302345;
+CC       P41743; Q05513: PRKCZ; NbExp=8; IntAct=EBI-286199, EBI-295351;
+CC       P41743; P63000: RAC1; NbExp=3; IntAct=EBI-286199, EBI-413628;
+CC       P41743; P48431: SOX2; NbExp=2; IntAct=EBI-286199, EBI-6124081;
+CC       P41743; Q13501: SQSTM1; NbExp=10; IntAct=EBI-286199, EBI-307104;
+CC       P41743; Q04917: YWHAH; NbExp=3; IntAct=EBI-286199, EBI-306940;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:11891849,
+CC       ECO:0000269|PubMed:15695176, ECO:0000269|PubMed:9566925}. Membrane
+CC       {ECO:0000269|PubMed:16452474}. Endosome {ECO:0000269|PubMed:9566925}.
+CC       Nucleus {ECO:0000269|PubMed:11891849, ECO:0000269|PubMed:15695176}.
+CC       Note=Transported into the endosome through interaction with SQSTM1/p62.
+CC       After phosphorylation by SRC, transported into the nucleus through
+CC       interaction with KPNB1. Colocalizes with CDK7 in the cytoplasm and
+CC       nucleus. Transported to vesicular tubular clusters (VTCs) through
+CC       interaction with RAB2A. {ECO:0000269|PubMed:15695176,
+CC       ECO:0000269|PubMed:9566925}.
+CC   -!- TISSUE SPECIFICITY: Predominantly expressed in lung and brain, but also
+CC       expressed at lower levels in many tissues including pancreatic islets.
+CC       Highly expressed in non-small cell lung cancers.
+CC       {ECO:0000269|PubMed:15994303, ECO:0000269|PubMed:7607695,
+CC       ECO:0000269|PubMed:8226978}.
+CC   -!- DOMAIN: The PB1 domain mediates interaction with SQSTM1. {ECO:0000250}.
+CC   -!- DOMAIN: The C1 zinc finger does not bind diacylglycerol (DAG).
+CC   -!- DOMAIN: The pseudosubstrate motif resembles the sequence around sites
+CC       phosphorylated on target proteins, except the presence of a non-
+CC       phosphorylatable residue in place of Ser, it modulates activity by
+CC       competing with substrates. {ECO:0000250}.
+CC   -!- PTM: Phosphorylation at Thr-412 in the activation loop is not mandatory
+CC       for activation (By similarity). Upon neuronal growth factor (NGF)
+CC       stimulation, phosphorylated by SRC at Tyr-265, Tyr-280 and Tyr-334
+CC       (PubMed:11713277, PubMed:16452474). Phosphorylation at Tyr-265
+CC       facilitates binding to KPNB1/importin-beta regulating entry of PRKCI
+CC       into the nucleus (PubMed:11891849). Phosphorylation on Tyr-334 is
+CC       important for NF-kappa-B stimulation (PubMed:11713277). Phosphorylated
+CC       at Thr-564 during the initial phase of long term potentiation (By
+CC       similarity). {ECO:0000250|UniProtKB:F1M7Y5,
+CC       ECO:0000250|UniProtKB:Q62074, ECO:0000269|PubMed:11713277,
+CC       ECO:0000269|PubMed:11891849, ECO:0000269|PubMed:16452474}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. AGC Ser/Thr
+CC       protein kinase family. PKC subfamily. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA60171.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=AAB17011.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=AAH22016.3; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+CC   -!- WEB RESOURCE: Name=Atlas of Genetics and Cytogenetics in Oncology and
+CC       Haematology;
+CC       URL="http://atlasgeneticsoncology.org/Genes/PRKCIID41857ch3q26.html";
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; L18964; AAA60171.1; ALT_INIT; mRNA.
+DR   EMBL; L33881; AAB17011.1; ALT_INIT; mRNA.
+DR   EMBL; CH471052; EAW78513.1; -; Genomic_DNA.
+DR   EMBL; CH471052; EAW78515.1; -; Genomic_DNA.
+DR   EMBL; BC022016; AAH22016.3; ALT_INIT; mRNA.
+DR   CCDS; CCDS3212.2; -.
+DR   PIR; A49509; A49509.
+DR   RefSeq; NP_002731.4; NM_002740.5.
+DR   PDB; 1VD2; NMR; -; A=25-108.
+DR   PDB; 1WMH; X-ray; 1.50 A; A=25-108.
+DR   PDB; 1ZRZ; X-ray; 3.00 A; A=233-596.
+DR   PDB; 3A8W; X-ray; 2.10 A; A/B=249-588.
+DR   PDB; 3A8X; X-ray; 2.00 A; A/B=249-588.
+DR   PDB; 3ZH8; X-ray; 2.74 A; A/B/C=248-594.
+DR   PDB; 5LI1; X-ray; 2.00 A; A=248-596.
+DR   PDB; 5LI9; X-ray; 1.79 A; A=248-596.
+DR   PDB; 5LIH; X-ray; 3.25 A; A/B=248-596.
+DR   PDB; 6ILZ; X-ray; 3.26 A; A/C/E/G=249-588.
+DR   PDBsum; 1VD2; -.
+DR   PDBsum; 1WMH; -.
+DR   PDBsum; 1ZRZ; -.
+DR   PDBsum; 3A8W; -.
+DR   PDBsum; 3A8X; -.
+DR   PDBsum; 3ZH8; -.
+DR   PDBsum; 5LI1; -.
+DR   PDBsum; 5LI9; -.
+DR   PDBsum; 5LIH; -.
+DR   PDBsum; 6ILZ; -.
+DR   AlphaFoldDB; P41743; -.
+DR   BMRB; P41743; -.
+DR   SMR; P41743; -.
+DR   BioGRID; 111570; 252.
+DR   ComplexPortal; CPX-6183; PAR cell polarity complex, PARD6A-PRKCI variant.
+DR   ComplexPortal; CPX-6193; PAR cell polarity complex, PARD6B-PRKCI variant.
+DR   ComplexPortal; CPX-6194; PAR cell polarity complex, PARD6G-PRKCI variant.
+DR   CORUM; P41743; -.
+DR   DIP; DIP-31311N; -.
+DR   ELM; P41743; -.
+DR   IntAct; P41743; 153.
+DR   MINT; P41743; -.
+DR   STRING; 9606.ENSP00000295797; -.
+DR   BindingDB; P41743; -.
+DR   ChEMBL; CHEMBL2598; -.
+DR   DrugBank; DB09096; Benzoyl peroxide.
+DR   DrugBank; DB03777; Bisindolylmaleimide I.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugBank; DB00675; Tamoxifen.
+DR   DrugCentral; P41743; -.
+DR   GuidetoPHARMACOLOGY; 1490; -.
+DR   iPTMnet; P41743; -.
+DR   PhosphoSitePlus; P41743; -.
+DR   BioMuta; PRKCI; -.
+DR   DMDM; 239938658; -.
+DR   EPD; P41743; -.
+DR   jPOST; P41743; -.
+DR   MassIVE; P41743; -.
+DR   MaxQB; P41743; -.
+DR   PaxDb; P41743; -.
+DR   PeptideAtlas; P41743; -.
+DR   PRIDE; P41743; -.
+DR   ProteomicsDB; 55477; -.
+DR   Antibodypedia; 4271; 233 antibodies from 36 providers.
+DR   DNASU; 5584; -.
+DR   Ensembl; ENST00000295797.5; ENSP00000295797.4; ENSG00000163558.13.
+DR   GeneID; 5584; -.
+DR   KEGG; hsa:5584; -.
+DR   MANE-Select; ENST00000295797.5; ENSP00000295797.4; NM_002740.6; NP_002731.4.
+DR   UCSC; uc003fgs.3; human.
+DR   CTD; 5584; -.
+DR   DisGeNET; 5584; -.
+DR   GeneCards; PRKCI; -.
+DR   HGNC; HGNC:9404; PRKCI.
+DR   HPA; ENSG00000163558; Low tissue specificity.
+DR   MIM; 600539; gene.
+DR   neXtProt; NX_P41743; -.
+DR   OpenTargets; ENSG00000163558; -.
+DR   PharmGKB; PA33768; -.
+DR   VEuPathDB; HostDB:ENSG00000163558; -.
+DR   eggNOG; KOG0695; Eukaryota.
+DR   GeneTree; ENSGT00940000153497; -.
+DR   HOGENOM; CLU_000288_63_29_1; -.
+DR   InParanoid; P41743; -.
+DR   OMA; RIQCFIC; -.
+DR   OrthoDB; 614710at2759; -.
+DR   PhylomeDB; P41743; -.
+DR   TreeFam; TF102004; -.
+DR   BRENDA; 2.7.11.13; 2681.
+DR   PathwayCommons; P41743; -.
+DR   Reactome; R-HSA-1912408; Pre-NOTCH Transcription and Translation.
+DR   Reactome; R-HSA-209543; p75NTR recruits signalling complexes.
+DR   Reactome; R-HSA-420029; Tight junction interactions.
+DR   SABIO-RK; P41743; -.
+DR   SignaLink; P41743; -.
+DR   SIGNOR; P41743; -.
+DR   BioGRID-ORCS; 5584; 32 hits in 1116 CRISPR screens.
+DR   ChiTaRS; PRKCI; human.
+DR   EvolutionaryTrace; P41743; -.
+DR   GeneWiki; PRKCI; -.
+DR   GenomeRNAi; 5584; -.
+DR   Pharos; P41743; Tchem.
+DR   PRO; PR:P41743; -.
+DR   Proteomes; UP000005640; Chromosome 3.
+DR   RNAct; P41743; protein.
+DR   Bgee; ENSG00000163558; Expressed in buccal mucosa cell and 204 other tissues.
+DR   Genevisible; P41743; HS.
+DR   GO; GO:0016324; C:apical plasma membrane; IEA:Ensembl.
+DR   GO; GO:0005923; C:bicellular tight junction; IEA:Ensembl.
+DR   GO; GO:0031252; C:cell leading edge; IEA:Ensembl.
+DR   GO; GO:0005829; C:cytosol; IDA:UniProtKB.
+DR   GO; GO:0005768; C:endosome; IEA:UniProtKB-SubCell.
+DR   GO; GO:0070062; C:extracellular exosome; HDA:UniProtKB.
+DR   GO; GO:0098978; C:glutamatergic synapse; IEA:Ensembl.
+DR   GO; GO:0000139; C:Golgi membrane; IEA:GOC.
+DR   GO; GO:0045171; C:intercellular bridge; IDA:HPA.
+DR   GO; GO:0015630; C:microtubule cytoskeleton; IDA:HPA.
+DR   GO; GO:0005654; C:nucleoplasm; TAS:Reactome.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0120157; C:PAR polarity complex; IPI:ComplexPortal.
+DR   GO; GO:0005886; C:plasma membrane; TAS:Reactome.
+DR   GO; GO:0098685; C:Schaffer collateral - CA1 synapse; IEA:Ensembl.
+DR   GO; GO:0043220; C:Schmidt-Lanterman incisure; IEA:Ensembl.
+DR   GO; GO:0070160; C:tight junction; IC:ComplexPortal.
+DR   GO; GO:0005524; F:ATP binding; TAS:UniProtKB.
+DR   GO; GO:0004698; F:calcium-dependent protein kinase C activity; IEA:UniProtKB-EC.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0005543; F:phospholipid binding; IDA:UniProtKB.
+DR   GO; GO:0004672; F:protein kinase activity; IDA:UniProtKB.
+DR   GO; GO:0004697; F:protein kinase C activity; ISS:BHF-UCL.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0007015; P:actin filament organization; IEA:Ensembl.
+DR   GO; GO:0016477; P:cell migration; IEA:Ensembl.
+DR   GO; GO:0045216; P:cell-cell junction organization; IMP:UniProtKB.
+DR   GO; GO:0032869; P:cellular response to insulin stimulus; ISS:BHF-UCL.
+DR   GO; GO:0007010; P:cytoskeleton organization; NAS:UniProtKB.
+DR   GO; GO:0035089; P:establishment of apical/basal cell polarity; IEA:Ensembl.
+DR   GO; GO:0045197; P:establishment or maintenance of epithelial cell apical/basal polarity; IDA:ComplexPortal.
+DR   GO; GO:0042462; P:eye photoreceptor cell development; IEA:Ensembl.
+DR   GO; GO:0048194; P:Golgi vesicle budding; IEA:Ensembl.
+DR   GO; GO:0035556; P:intracellular signal transduction; IBA:GO_Central.
+DR   GO; GO:0061024; P:membrane organization; NAS:UniProtKB.
+DR   GO; GO:0043066; P:negative regulation of apoptotic process; TAS:Reactome.
+DR   GO; GO:0034351; P:negative regulation of glial cell apoptotic process; IMP:UniProtKB.
+DR   GO; GO:0043524; P:negative regulation of neuron apoptotic process; IDA:UniProtKB.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IDA:WormBase.
+DR   GO; GO:2000353; P:positive regulation of endothelial cell apoptotic process; IMP:UniProtKB.
+DR   GO; GO:0060252; P:positive regulation of glial cell proliferation; IMP:UniProtKB.
+DR   GO; GO:0046326; P:positive regulation of glucose import; ISS:BHF-UCL.
+DR   GO; GO:0010976; P:positive regulation of neuron projection development; IMP:UniProtKB.
+DR   GO; GO:0051092; P:positive regulation of NF-kappaB transcription factor activity; IDA:UniProtKB.
+DR   GO; GO:0045747; P:positive regulation of Notch signaling pathway; TAS:Reactome.
+DR   GO; GO:1903078; P:positive regulation of protein localization to plasma membrane; ISS:BHF-UCL.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0006612; P:protein targeting to membrane; NAS:UniProtKB.
+DR   GO; GO:0099072; P:regulation of postsynaptic membrane neurotransmitter receptor levels; IEA:Ensembl.
+DR   GO; GO:0070555; P:response to interleukin-1; IEA:Ensembl.
+DR   GO; GO:0046903; P:secretion; NAS:UniProtKB.
+DR   GO; GO:0016192; P:vesicle-mediated transport; TAS:UniProtKB.
+DR   CDD; cd00029; C1; 1.
+DR   CDD; cd06404; PB1_aPKC; 1.
+DR   CDD; cd05618; STKc_aPKC_iota; 1.
+DR   InterPro; IPR000961; AGC-kinase_C.
+DR   InterPro; IPR034661; aPKC_iota.
+DR   InterPro; IPR046349; C1-like_sf.
+DR   InterPro; IPR020454; DAG/PE-bd.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR034877; PB1_aPKC.
+DR   InterPro; IPR000270; PB1_dom.
+DR   InterPro; IPR002219; PE/DAG-bd.
+DR   InterPro; IPR012233; PKC.
+DR   InterPro; IPR017892; Pkinase_C.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00130; C1_1; 1.
+DR   Pfam; PF00564; PB1; 1.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   Pfam; PF00433; Pkinase_C; 1.
+DR   PIRSF; PIRSF000554; PKC_zeta; 1.
+DR   PRINTS; PR00008; DAGPEDOMAIN.
+DR   SMART; SM00109; C1; 1.
+DR   SMART; SM00666; PB1; 1.
+DR   SMART; SM00133; S_TK_X; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   SUPFAM; SSF57889; SSF57889; 1.
+DR   PROSITE; PS51285; AGC_KINASE_CTER; 1.
+DR   PROSITE; PS51745; PB1; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+DR   PROSITE; PS00479; ZF_DAG_PE_1; 1.
+DR   PROSITE; PS50081; ZF_DAG_PE_2; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Acetylation; ATP-binding; Cytoplasm; Endosome; Kinase;
+KW   Membrane; Metal-binding; Nucleotide-binding; Nucleus; Phosphoprotein;
+KW   Proto-oncogene; Reference proteome; Serine/threonine-protein kinase;
+KW   Transferase; Tumor suppressor; Zinc; Zinc-finger.
+FT   INIT_MET        1
+FT                   /note="Removed"
+FT                   /evidence="ECO:0007744|PubMed:20068231"
+FT   CHAIN           2..596
+FT                   /note="Protein kinase C iota type"
+FT                   /id="PRO_0000055710"
+FT   DOMAIN          25..108
+FT                   /note="PB1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01081"
+FT   DOMAIN          254..522
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   DOMAIN          523..594
+FT                   /note="AGC-kinase C-terminal"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00618"
+FT   ZN_FING         140..190
+FT                   /note="Phorbol-ester/DAG-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00226"
+FT   REGION          1..23
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          2..253
+FT                   /note="Regulatory domain"
+FT   REGION          2..28
+FT                   /note="Required for interaction with RAB2"
+FT   REGION          72..91
+FT                   /note="Interaction with PARD6A"
+FT   REGION          220..246
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOTIF           125..134
+FT                   /note="Pseudosubstrate"
+FT                   /evidence="ECO:0000250"
+FT   COMPBIAS        1..18
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        378
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         260..268
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         283
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         2
+FT                   /note="N-acetylproline"
+FT                   /evidence="ECO:0007744|PubMed:20068231"
+FT   MOD_RES         3
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:20068231"
+FT   MOD_RES         7
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:20068231"
+FT   MOD_RES         8
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:20068231"
+FT   MOD_RES         9
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:20068231"
+FT   MOD_RES         265
+FT                   /note="Phosphotyrosine; by SRC"
+FT                   /evidence="ECO:0000269|PubMed:11713277,
+FT                   ECO:0000269|PubMed:11891849"
+FT   MOD_RES         280
+FT                   /note="Phosphotyrosine; by SRC"
+FT                   /evidence="ECO:0000269|PubMed:11713277"
+FT   MOD_RES         334
+FT                   /note="Phosphotyrosine; by SRC"
+FT                   /evidence="ECO:0000269|PubMed:11713277"
+FT   MOD_RES         412
+FT                   /note="Phosphothreonine; by PDPK1"
+FT                   /evidence="ECO:0000305|PubMed:16125198"
+FT   MOD_RES         564
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000269|PubMed:16125198,
+FT                   ECO:0007744|PubMed:21406692, ECO:0007744|PubMed:24275569"
+FT   VARIANT         118
+FT                   /note="P -> L (in a metastatic melanoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042322"
+FT   VARIANT         130
+FT                   /note="R -> C (in dbSNP:rs56154494)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042323"
+FT   MUTAGEN         29
+FT                   /note="K->A: No effect on interaction with SQSTM1."
+FT                   /evidence="ECO:0000269|PubMed:15143057"
+FT   MUTAGEN         72
+FT                   /note="D->A: Loss of interaction with ECT2, PARD6A and with
+FT                   SQSTM1."
+FT                   /evidence="ECO:0000269|PubMed:15143057,
+FT                   ECO:0000269|PubMed:15590654, ECO:0000269|PubMed:19617897"
+FT   MUTAGEN         85
+FT                   /note="E->A: Slight decrease of interaction with PARD6A.
+FT                   Loss of interaction with PARD6A; when associated with
+FT                   A-91."
+FT                   /evidence="ECO:0000269|PubMed:15590654"
+FT   MUTAGEN         91
+FT                   /note="R->A: Slight decrease of interaction with PARD6A.
+FT                   Loss of interaction with PARD6A; when associated with
+FT                   A-85."
+FT                   /evidence="ECO:0000269|PubMed:15590654"
+FT   MUTAGEN         265
+FT                   /note="Y->F: No effect on the SRC-mediated phosphorylation
+FT                   state. No effect on SRC-induced enzyme activity. Little
+FT                   effect on TRAF6-mediated activation of NF-kappa-B.
+FT                   Decreased binding to KPNB1/importin-beta."
+FT                   /evidence="ECO:0000269|PubMed:11713277,
+FT                   ECO:0000269|PubMed:11891849"
+FT   MUTAGEN         274
+FT                   /note="K->R: No effect on activity."
+FT                   /evidence="ECO:0000269|PubMed:10906326"
+FT   MUTAGEN         274
+FT                   /note="K->W: Abolishes activity."
+FT                   /evidence="ECO:0000269|PubMed:10906326"
+FT   MUTAGEN         280
+FT                   /note="Y->F: No effect on the SRC-mediated phosphorylation
+FT                   state. No effect on SRC-induced enzyme activity. No effect
+FT                   on TRAF6-mediated activation of NF-kappa-B."
+FT                   /evidence="ECO:0000269|PubMed:11713277"
+FT   MUTAGEN         334
+FT                   /note="Y->F: No effect on the SRC-mediated phosphorylation
+FT                   state. Significant reduction of SRC-induced enzyme
+FT                   activity. Greatly reduced TRAF6-mediated activation of
+FT                   NF-kappa-B. Reduces NGF-dependent cell survival."
+FT                   /evidence="ECO:0000269|PubMed:11713277"
+FT   CONFLICT        485
+FT                   /note="L -> M (in Ref. 4; AAH22016)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        508
+FT                   /note="H -> L (in Ref. 4; AAH22016)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        560
+FT                   /note="P -> R (in Ref. 4; AAH22016)"
+FT                   /evidence="ECO:0000305"
+FT   STRAND          26..32
+FT                   /evidence="ECO:0007829|PDB:1WMH"
+FT   STRAND          35..41
+FT                   /evidence="ECO:0007829|PDB:1WMH"
+FT   HELIX           47..57
+FT                   /evidence="ECO:0007829|PDB:1WMH"
+FT   STRAND          67..71
+FT                   /evidence="ECO:0007829|PDB:1WMH"
+FT   STRAND          73..75
+FT                   /evidence="ECO:0007829|PDB:1VD2"
+FT   STRAND          77..79
+FT                   /evidence="ECO:0007829|PDB:1WMH"
+FT   HELIX           83..95
+FT                   /evidence="ECO:0007829|PDB:1WMH"
+FT   STRAND          101..106
+FT                   /evidence="ECO:0007829|PDB:1WMH"
+FT   HELIX           251..253
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   STRAND          254..262
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   STRAND          264..273
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   TURN            274..277
+FT                   /evidence="ECO:0007829|PDB:3A8X"
+FT   STRAND          279..286
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           287..289
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           293..309
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   STRAND          310..315
+FT                   /evidence="ECO:0007829|PDB:6ILZ"
+FT   STRAND          318..323
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   STRAND          325..332
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   STRAND          337..339
+FT                   /evidence="ECO:0007829|PDB:6ILZ"
+FT   HELIX           340..347
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           352..371
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           381..383
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   STRAND          384..386
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   STRAND          388..390
+FT                   /evidence="ECO:0007829|PDB:3ZH8"
+FT   STRAND          392..394
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           397..399
+FT                   /evidence="ECO:0007829|PDB:3A8X"
+FT   HELIX           417..419
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           422..425
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           433..448
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   TURN            452..457
+FT                   /evidence="ECO:0007829|PDB:3A8X"
+FT   HELIX           467..476
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           487..496
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   TURN            501..503
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   TURN            505..507
+FT                   /evidence="ECO:0007829|PDB:1ZRZ"
+FT   TURN            509..511
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           512..517
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           520..522
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           527..531
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   TURN            545..547
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           549..551
+FT                   /evidence="ECO:0007829|PDB:3A8X"
+FT   HELIX           554..557
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           568..571
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+FT   HELIX           576..579
+FT                   /evidence="ECO:0007829|PDB:5LI9"
+SQ   SEQUENCE   596 AA;  68262 MW;  1E3F8C1D4BFC734F CRC64;
+     MPTQRDSSTM SHTVAGGGSG DHSHQVRVKA YYRGDIMITH FEPSISFEGL CNEVRDMCSF
+     DNEQLFTMKW IDEEGDPCTV SSQLELEEAF RLYELNKDSE LLIHVFPCVP ERPGMPCPGE
+     DKSIYRRGAR RWRKLYCANG HTFQAKRFNR RAHCAICTDR IWGLGRQGYK CINCKLLVHK
+     KCHKLVTIEC GRHSLPQEPV MPMDQSSMHS DHAQTVIPYN PSSHESLDQV GEEKEAMNTR
+     ESGKASSSLG LQDFDLLRVI GRGSYAKVLL VRLKKTDRIY AMKVVKKELV NDDEDIDWVQ
+     TEKHVFEQAS NHPFLVGLHS CFQTESRLFF VIEYVNGGDL MFHMQRQRKL PEEHARFYSA
+     EISLALNYLH ERGIIYRDLK LDNVLLDSEG HIKLTDYGMC KEGLRPGDTT STFCGTPNYI
+     APEILRGEDY GFSVDWWALG VLMFEMMAGR SPFDIVGSSD NPDQNTEDYL FQVILEKQIR
+     IPRSLSVKAA SVLKSFLNKD PKERLGCHPQ TGFADIQGHP FFRNVDWDMM EQKQVVPPFK
+     PNISGEFGLD NFDSQFTNEP VQLTPDDDDI VRKIDQSEFE GFEYINPLLM SAEECV
+//

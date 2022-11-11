@@ -1,0 +1,627 @@
+ID   LTK_HUMAN               Reviewed;         864 AA.
+AC   P29376; A6NNJ8; B4DL89; E9PFX4;
+DT   01-DEC-1992, integrated into UniProtKB/Swiss-Prot.
+DT   03-APR-2007, sequence version 3.
+DT   12-OCT-2022, entry version 202.
+DE   RecName: Full=Leukocyte tyrosine kinase receptor {ECO:0000303|PubMed:1655406};
+DE            EC=2.7.10.1 {ECO:0000255|PROSITE-ProRule:PRU10028, ECO:0000269|PubMed:10445845, ECO:0000269|PubMed:30061385};
+DE   AltName: Full=Protein tyrosine kinase 1;
+DE   Flags: Precursor;
+GN   Name=LTK {ECO:0000303|PubMed:1655406, ECO:0000312|HGNC:HGNC:6721};
+GN   Synonyms=TYK1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], AND VARIANT GLN-42.
+RC   TISSUE=Placenta;
+RX   PubMed=7685902; DOI=10.1073/pnas.90.12.5404;
+RA   Toyoshima H., Kozutsumi H., Maru Y., Hagiwara K., Furaya A., Mioh H.,
+RA   Hanai N., Takaku F., Yazaki Y., Hirai H.;
+RT   "Differently spliced cDNAs of human leukocyte tyrosine kinase receptor
+RT   tyrosine kinase predict receptor proteins with and without a tyrosine
+RT   kinase domain and a soluble receptor protein.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 90:5404-5408(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2).
+RX   PubMed=1655406; DOI=10.1002/j.1460-2075.1991.tb07841.x;
+RA   Krolewski J.J., Dalla-Favera R.;
+RT   "The ltk gene encodes a novel receptor-type protein tyrosine kinase.";
+RL   EMBO J. 10:2911-2919(1991).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 5).
+RC   TISSUE=Tongue;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16572171; DOI=10.1038/nature04601;
+RA   Zody M.C., Garber M., Sharpe T., Young S.K., Rowen L., O'Neill K.,
+RA   Whittaker C.A., Kamal M., Chang J.L., Cuomo C.A., Dewar K.,
+RA   FitzGerald M.G., Kodira C.D., Madan A., Qin S., Yang X., Abbasi N.,
+RA   Abouelleil A., Arachchi H.M., Baradarani L., Birditt B., Bloom S.,
+RA   Bloom T., Borowsky M.L., Burke J., Butler J., Cook A., DeArellano K.,
+RA   DeCaprio D., Dorris L. III, Dors M., Eichler E.E., Engels R., Fahey J.,
+RA   Fleetwood P., Friedman C., Gearin G., Hall J.L., Hensley G., Johnson E.,
+RA   Jones C., Kamat A., Kaur A., Locke D.P., Madan A., Munson G., Jaffe D.B.,
+RA   Lui A., Macdonald P., Mauceli E., Naylor J.W., Nesbitt R., Nicol R.,
+RA   O'Leary S.B., Ratcliffe A., Rounsley S., She X., Sneddon K.M.B.,
+RA   Stewart S., Sougnez C., Stone S.M., Topham K., Vincent D., Wang S.,
+RA   Zimmer A.R., Birren B.W., Hood L., Lander E.S., Nusbaum C.;
+RT   "Analysis of the DNA sequence and duplication history of human chromosome
+RT   15.";
+RL   Nature 440:671-675(2006).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 416-864.
+RX   PubMed=2320375;
+RA   Maru Y., Hirai H., Takaku F.;
+RT   "Human ltk: gene structure and preferential expression in human leukemic
+RT   cells.";
+RL   Oncogene Res. 5:199-204(1990).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 608-716, AND TISSUE SPECIFICITY.
+RX   PubMed=2156206;
+RA   Krolewski J.J., Lee R., Eddy R., Shows T.B., Dalla-Favera R.;
+RT   "Identification and chromosomal mapping of new human tyrosine kinase
+RT   genes.";
+RL   Oncogene 5:277-282(1990).
+RN   [8]
+RP   PHOSPHORYLATION, AND MUTAGENESIS OF LYS-544.
+RX   PubMed=8084603;
+RA   Kozutsumi H., Toyoshima H., Hagiwara K., Yazaki Y., Hirai H.;
+RT   "Human ltk receptor tyrosine kinase binds to PLC-gamma 1, PI3-K, GAP and
+RT   Raf-1 in vivo.";
+RL   Oncogene 9:2991-2998(1994).
+RN   [9]
+RP   POSSIBLE FUNCTION, AND MUTAGENESIS OF TYR-753 AND TYR-862.
+RX   PubMed=9223670; DOI=10.1038/sj.onc.1201153;
+RA   Ueno H., Honda H., Nakamoto T., Yamagata T., Sasaki K., Miyagawa K.,
+RA   Mitani K., Yazaki Y., Hirai H.;
+RT   "The phosphatidylinositol 3' kinase pathway is required for the survival
+RT   signal of leukocyte tyrosine kinase.";
+RL   Oncogene 14:3067-3072(1997).
+RN   [10]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RX   PubMed=10445845; DOI=10.1038/sj.onc.1202736;
+RA   Honda H., Harada K., Komuro I., Terasaki F., Ueno H., Tanaka Y.,
+RA   Kawamura K., Yazaki Y., Hirai H.;
+RT   "Heart-specific activation of LTK results in cardiac hypertrophy,
+RT   cardiomyocyte degeneration and gene reprogramming in transgenic mice.";
+RL   Oncogene 18:3821-3830(1999).
+RN   [11]
+RP   POSSIBLE INVOLVEMENT IN SUSCEPTIBILITY TO SYSTEMIC LUPUS ERYTHEMATOSUS,
+RP   VARIANT LYS-763, CHARACTERIZATION OF VARIANT LYS-763, AUTOPHOSPHORYLATION,
+RP   AND MUTAGENESIS OF GLY-750.
+RX   PubMed=14695357; DOI=10.1093/hmg/ddh020;
+RA   Li N., Nakamura K., Jiang Y., Tsurui H., Matsuoka S., Abe M., Ohtsuji M.,
+RA   Nishimura H., Kato K., Kawai T., Atsumi T., Koike T., Shirai T., Ueno H.,
+RA   Hirose S.;
+RT   "Gain-of-function polymorphism in mouse and human Ltk: implications for the
+RT   pathogenesis of systemic lupus erythematosus.";
+RL   Hum. Mol. Genet. 13:171-179(2004).
+RN   [12]
+RP   POSSIBLE FUNCTION.
+RX   PubMed=18849880; DOI=10.1097/wnr.0b013e3283186bf8;
+RA   Yamada S., Nomura T., Takano K., Fujita S., Miyake M., Miyake J.;
+RT   "Expression of a chimeric CSF1R-LTK mediates ligand-dependent neurite
+RT   outgrowth.";
+RL   NeuroReport 19:1733-1738(2008).
+RN   [13]
+RP   INTERACTION WITH GRB2 AND TNK2.
+RX   PubMed=19815557; DOI=10.1074/jbc.m109.072660;
+RA   Pao-Chun L., Chan P.M., Chan W., Manser E.;
+RT   "Cytoplasmic ACK1 interaction with multiple receptor tyrosine kinases is
+RT   mediated by Grb2: an analysis of ACK1 effects on Axl signaling.";
+RL   J. Biol. Chem. 284:34954-34963(2009).
+RN   [14]
+RP   FUNCTION IN REGULATION OF THE SECRETORY PATHWAY.
+RX   PubMed=20548102; DOI=10.1083/jcb.200912082;
+RA   Farhan H., Wendeler M.W., Mitrovic S., Fava E., Silberberg Y., Sharan R.,
+RA   Zerial M., Hauri H.P.;
+RT   "MAPK signaling to the early secretory pathway revealed by
+RT   kinase/phosphatase functional screening.";
+RL   J. Cell Biol. 189:997-1011(2010).
+RN   [15]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RX   PubMed=30061385; DOI=10.1073/pnas.1807881115;
+RA   Reshetnyak A.V., Mohanty J., Tome F., Puleo D.E., Plotnikov A.N., Ahmed M.,
+RA   Kaur N., Poliakov A., Cinnaiyan A.M., Lax I., Schlessinger J.;
+RT   "Identification of a biologically active fragment of ALK and LTK-Ligand 2
+RT   (augmentor-alpha).";
+RL   Proc. Natl. Acad. Sci. U.S.A. 115:8340-8345(2018).
+RN   [16]
+RP   X-RAY CRYSTALLOGRAPHY (1.30 ANGSTROMS) OF 63-378 IN COMPLEX WITH ALKAL1,
+RP   FUNCTION, SUBCELLULAR LOCATION, SUBUNIT, AND MUTAGENESIS OF ARG-241.
+RX   PubMed=34646012; DOI=10.1038/s41586-021-03959-5;
+RA   De Munck S., Provost M., Kurikawa M., Omori I., Mukohyama J., Felix J.,
+RA   Bloch Y., Abdel-Wahab O., Bazan J.F., Yoshimi A., Savvides S.N.;
+RT   "Structural basis of cytokine-mediated activation of ALK family
+RT   receptors.";
+RL   Nature 600:143-147(2021).
+RN   [17]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLN-42; ARG-384; ASN-535; SER-569; GLN-673;
+RP   SER-745 AND SER-838.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Receptor with a tyrosine-protein kinase activity
+CC       (PubMed:10445845, PubMed:20548102, PubMed:30061385). Following
+CC       activation by ALKAL1 or ALKAL2 ligands at the cell surface, transduces
+CC       an extracellular signal into an intracellular response
+CC       (PubMed:30061385, PubMed:34646012). Ligand-binding to the extracellular
+CC       domain induces tyrosine kinase activation, leading to activation of the
+CC       mitogen-activated protein kinase (MAPK) pathway (PubMed:20548102).
+CC       Phosphorylates almost exclusively at the first tyrosine of the Y-x-x-x-
+CC       Y-Y motif (By similarity). The exact function of this protein is not
+CC       known; studies with chimeric proteins demonstrate its ability to
+CC       promote growth and specifically neurite outgrowth, and cell survival
+CC       (PubMed:9223670, PubMed:18849880). Involved in regulation of the
+CC       secretory pathway involving endoplasmic reticulum (ER) export sites
+CC       (ERESs) and ER to Golgi transport (PubMed:20548102).
+CC       {ECO:0000250|UniProtKB:Q9UM73, ECO:0000269|PubMed:10445845,
+CC       ECO:0000269|PubMed:18849880, ECO:0000269|PubMed:20548102,
+CC       ECO:0000269|PubMed:30061385, ECO:0000269|PubMed:34646012,
+CC       ECO:0000269|PubMed:9223670}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.10.1;
+CC         Evidence={ECO:0000255|PROSITE-ProRule:PRU10028,
+CC         ECO:0000269|PubMed:10445845, ECO:0000269|PubMed:30061385};
+CC   -!- ACTIVITY REGULATION: Activated by ligand-binding, leading to
+CC       homodimerization and autophosphorylation.
+CC       {ECO:0000250|UniProtKB:Q9UM73}.
+CC   -!- SUBUNIT: Homodimer; homodimerizes following ligand-binding
+CC       (PubMed:34646012). Part of a complex including LTK, TNK2 and GRB2, in
+CC       which GRB2 promotes LTK recruitment by TNK2 (PubMed:19815557).
+CC       {ECO:0000269|PubMed:19815557, ECO:0000269|PubMed:34646012}.
+CC   -!- INTERACTION:
+CC       P29376; Q6UXT8: ALKAL1; NbExp=3; IntAct=EBI-6596163, EBI-11691642;
+CC       P29376; P29317: EPHA2; NbExp=2; IntAct=EBI-6596163, EBI-702104;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:34646012};
+CC       Single-pass type I membrane protein {ECO:0000255}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=5;
+CC         Comment=Additional isoforms seem to exist.;
+CC       Name=Lambda P2;
+CC         IsoId=P29376-1; Sequence=Displayed;
+CC       Name=Lambda P1;
+CC         IsoId=P29376-2; Sequence=VSP_002946, VSP_002947;
+CC       Name=Lambda P3;
+CC         IsoId=P29376-3; Sequence=VSP_002948, VSP_002949;
+CC       Name=2;
+CC         IsoId=P29376-4; Sequence=VSP_035109;
+CC       Name=5;
+CC         IsoId=P29376-5; Sequence=VSP_035109, VSP_044521;
+CC   -!- TISSUE SPECIFICITY: Expressed in non-hematopoietic cell lines and
+CC       T- and B-cell lines. {ECO:0000269|PubMed:2156206}.
+CC   -!- PTM: Phosphorylated at tyrosine residues by autocatalysis, which
+CC       activates kinase activity. {ECO:0000269|PubMed:14695357}.
+CC   -!- DISEASE: Note=Genetic variations in LTK that cause up-regulation of the
+CC       PI3K pathway may possibly contribute to susceptibility to abnormal
+CC       proliferation of self-reactive B-cells and, therefore, to systemic
+CC       lupus erythematosus (SLE) (PubMed:14695357). SLE is a chronic,
+CC       inflammatory and often febrile multisystemic disorder of connective
+CC       tissue, thought to represent a failure of the regulatory mechanisms of
+CC       the autoimmune system (PubMed:14695357). {ECO:0000269|PubMed:14695357}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Tyr protein
+CC       kinase family. Insulin receptor subfamily. {ECO:0000255|PROSITE-
+CC       ProRule:PRU00159}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; D16105; BAA03679.1; -; mRNA.
+DR   EMBL; X60702; CAA43113.1; -; mRNA.
+DR   EMBL; AK296892; BAG59451.1; -; mRNA.
+DR   EMBL; AC016134; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC087721; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471125; EAW92496.1; -; Genomic_DNA.
+DR   EMBL; X52213; CAA36460.1; -; mRNA.
+DR   CCDS; CCDS10077.1; -. [P29376-1]
+DR   CCDS; CCDS10078.1; -. [P29376-4]
+DR   CCDS; CCDS45237.1; -. [P29376-5]
+DR   PIR; A48266; A48266.
+DR   RefSeq; NP_001129157.1; NM_001135685.1. [P29376-5]
+DR   RefSeq; NP_002335.2; NM_002344.5. [P29376-1]
+DR   RefSeq; NP_996844.1; NM_206961.3. [P29376-4]
+DR   PDB; 7NX0; X-ray; 1.95 A; B/C=63-378.
+DR   PDB; 7NX1; X-ray; 1.30 A; A=63-378.
+DR   PDBsum; 7NX0; -.
+DR   PDBsum; 7NX1; -.
+DR   AlphaFoldDB; P29376; -.
+DR   SMR; P29376; -.
+DR   BioGRID; 110236; 16.
+DR   IntAct; P29376; 58.
+DR   MINT; P29376; -.
+DR   STRING; 9606.ENSP00000263800; -.
+DR   BindingDB; P29376; -.
+DR   ChEMBL; CHEMBL5627; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; P29376; -.
+DR   GuidetoPHARMACOLOGY; 1838; -.
+DR   GlyGen; P29376; 3 sites.
+DR   iPTMnet; P29376; -.
+DR   PhosphoSitePlus; P29376; -.
+DR   BioMuta; LTK; -.
+DR   DMDM; 143811416; -.
+DR   jPOST; P29376; -.
+DR   MassIVE; P29376; -.
+DR   PaxDb; P29376; -.
+DR   PeptideAtlas; P29376; -.
+DR   PRIDE; P29376; -.
+DR   ProteomicsDB; 20198; -.
+DR   ProteomicsDB; 54561; -. [P29376-1]
+DR   ProteomicsDB; 54563; -. [P29376-3]
+DR   ProteomicsDB; 54564; -. [P29376-4]
+DR   Antibodypedia; 23318; 308 antibodies from 31 providers.
+DR   DNASU; 4058; -.
+DR   Ensembl; ENST00000263800.11; ENSP00000263800.6; ENSG00000062524.16. [P29376-1]
+DR   Ensembl; ENST00000355166.9; ENSP00000347293.5; ENSG00000062524.16. [P29376-4]
+DR   Ensembl; ENST00000453182.2; ENSP00000392196.2; ENSG00000062524.16. [P29376-5]
+DR   GeneID; 4058; -.
+DR   KEGG; hsa:4058; -.
+DR   MANE-Select; ENST00000263800.11; ENSP00000263800.6; NM_002344.6; NP_002335.2.
+DR   UCSC; uc001zoa.4; human. [P29376-1]
+DR   CTD; 4058; -.
+DR   DisGeNET; 4058; -.
+DR   GeneCards; LTK; -.
+DR   HGNC; HGNC:6721; LTK.
+DR   HPA; ENSG00000062524; Tissue enhanced (intestine, lung, salivary gland).
+DR   MIM; 151520; gene.
+DR   neXtProt; NX_P29376; -.
+DR   OpenTargets; ENSG00000062524; -.
+DR   PharmGKB; PA30483; -.
+DR   VEuPathDB; HostDB:ENSG00000062524; -.
+DR   eggNOG; KOG1095; Eukaryota.
+DR   GeneTree; ENSGT00940000162680; -.
+DR   InParanoid; P29376; -.
+DR   OMA; IRRHPNC; -.
+DR   OrthoDB; 40108at2759; -.
+DR   PhylomeDB; P29376; -.
+DR   TreeFam; TF351636; -.
+DR   BRENDA; 2.7.10.1; 2681.
+DR   PathwayCommons; P29376; -.
+DR   SignaLink; P29376; -.
+DR   SIGNOR; P29376; -.
+DR   BioGRID-ORCS; 4058; 9 hits in 1106 CRISPR screens.
+DR   GeneWiki; Leukocyte_receptor_tyrosine_kinase; -.
+DR   GenomeRNAi; 4058; -.
+DR   Pharos; P29376; Tclin.
+DR   PRO; PR:P29376; -.
+DR   Proteomes; UP000005640; Chromosome 15.
+DR   RNAct; P29376; protein.
+DR   Bgee; ENSG00000062524; Expressed in mucosa of transverse colon and 112 other tissues.
+DR   ExpressionAtlas; P29376; baseline and differential.
+DR   Genevisible; P29376; HS.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IBA:GO_Central.
+DR   GO; GO:0016020; C:membrane; IDA:UniProtKB.
+DR   GO; GO:0005886; C:plasma membrane; TAS:ProtInc.
+DR   GO; GO:0043235; C:receptor complex; IBA:GO_Central.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004672; F:protein kinase activity; IDA:UniProtKB.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; TAS:ProtInc.
+DR   GO; GO:0030298; F:receptor signaling protein tyrosine kinase activator activity; IDA:UniProtKB.
+DR   GO; GO:0004714; F:transmembrane receptor protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:0008283; P:cell population proliferation; IDA:UniProtKB.
+DR   GO; GO:0071300; P:cellular response to retinoic acid; IMP:BHF-UCL.
+DR   GO; GO:0043066; P:negative regulation of apoptotic process; IMP:UniProtKB.
+DR   GO; GO:0038083; P:peptidyl-tyrosine autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0014065; P:phosphatidylinositol 3-kinase signaling; IMP:UniProtKB.
+DR   GO; GO:0010666; P:positive regulation of cardiac muscle cell apoptotic process; IDA:UniProtKB.
+DR   GO; GO:0033674; P:positive regulation of kinase activity; IBA:GO_Central.
+DR   GO; GO:0010976; P:positive regulation of neuron projection development; IMP:BHF-UCL.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0042127; P:regulation of cell population proliferation; IBA:GO_Central.
+DR   GO; GO:0045664; P:regulation of neuron differentiation; IBA:GO_Central.
+DR   GO; GO:0007165; P:signal transduction; TAS:ProtInc.
+DR   GO; GO:0007169; P:transmembrane receptor protein tyrosine kinase signaling pathway; IBA:GO_Central.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR026984; LTK.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR008266; Tyr_kinase_AS.
+DR   InterPro; IPR020635; Tyr_kinase_cat_dom.
+DR   InterPro; IPR002011; Tyr_kinase_rcpt_2_CS.
+DR   PANTHER; PTHR24416:SF294; PTHR24416:SF294; 2.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00219; TyrKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00109; PROTEIN_KINASE_TYR; 1.
+DR   PROSITE; PS00239; RECEPTOR_TYR_KIN_II; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Cell membrane;
+KW   Disulfide bond; Glycoprotein; Kinase; Membrane; Nucleotide-binding;
+KW   Phosphoprotein; Receptor; Reference proteome; Signal;
+KW   Systemic lupus erythematosus; Transferase; Transmembrane;
+KW   Transmembrane helix; Tyrosine-protein kinase.
+FT   SIGNAL          1..16
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           17..864
+FT                   /note="Leukocyte tyrosine kinase receptor"
+FT                   /id="PRO_0000016738"
+FT   TOPO_DOM        17..424
+FT                   /note="Extracellular"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        425..449
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        450..864
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          510..786
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          30..64
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          239..297
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          790..830
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          842..864
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        240..254
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        848..864
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        643
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10028"
+FT   BINDING         516..524
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         544
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         676
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250"
+FT   CARBOHYD        257
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        380
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        412
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   DISULFID        73..86
+FT                   /evidence="ECO:0000269|PubMed:34646012,
+FT                   ECO:0007744|PDB:7NX0"
+FT   DISULFID        168..179
+FT                   /evidence="ECO:0000269|PubMed:34646012,
+FT                   ECO:0007744|PDB:7NX0"
+FT   DISULFID        300..322
+FT                   /evidence="ECO:0000269|PubMed:34646012,
+FT                   ECO:0007744|PDB:7NX0"
+FT   VAR_SEQ         170
+FT                   /note="G -> VAAASGDGAAPAPGARAAWGPGERAFLGAGSPAQRGEAPGPRRFPPP
+FT                   LPAG (in isoform Lambda P1)"
+FT                   /evidence="ECO:0000305"
+FT                   /id="VSP_002946"
+FT   VAR_SEQ         171..864
+FT                   /note="Missing (in isoform Lambda P1)"
+FT                   /evidence="ECO:0000305"
+FT                   /id="VSP_002947"
+FT   VAR_SEQ         274..334
+FT                   /note="Missing (in isoform 2 and isoform 5)"
+FT                   /evidence="ECO:0000303|PubMed:14702039,
+FT                   ECO:0000303|PubMed:1655406"
+FT                   /id="VSP_035109"
+FT   VAR_SEQ         448
+FT                   /note="L -> GTKRLAGTVDSRLLLSSELGWVSAAGSRRQ (in isoform
+FT                   Lambda P3)"
+FT                   /evidence="ECO:0000305"
+FT                   /id="VSP_002948"
+FT   VAR_SEQ         449..864
+FT                   /note="Missing (in isoform Lambda P3)"
+FT                   /evidence="ECO:0000305"
+FT                   /id="VSP_002949"
+FT   VAR_SEQ         449..544
+FT                   /note="VKQKKWQGLQEMRLPSPELELSKLRTSAIRTAPNPYYCQVGLGPAQSWPLPP
+FT                   GVTEVSPANVTLLRALGHGAFGEVYEGLVIGLPGDSSPLQVAIK -> GGAWPGPVLAS
+FT                   ATRCHRGFPSQCYSAQ (in isoform 5)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_044521"
+FT   VARIANT         42
+FT                   /note="R -> Q (in dbSNP:rs2305030)"
+FT                   /evidence="ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:7685902"
+FT                   /id="VAR_031569"
+FT   VARIANT         384
+FT                   /note="C -> R (in dbSNP:rs55683312)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_046106"
+FT   VARIANT         535
+FT                   /note="D -> N (in dbSNP:rs35932273)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_046107"
+FT   VARIANT         569
+FT                   /note="R -> S (in dbSNP:rs148513655)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_046108"
+FT   VARIANT         673
+FT                   /note="R -> Q (in dbSNP:rs55876255)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_046109"
+FT   VARIANT         745
+FT                   /note="P -> S (in dbSNP:rs55900837)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_046110"
+FT   VARIANT         763
+FT                   /note="E -> K (may possibly contribute to susceptibility to
+FT                   systemic lupus erythematosus; increases autophosphorylation
+FT                   and interaction with PI3-kinase subunit p85;
+FT                   dbSNP:rs76282169)"
+FT                   /evidence="ECO:0000269|PubMed:14695357"
+FT                   /id="VAR_065465"
+FT   VARIANT         838
+FT                   /note="P -> S (in dbSNP:rs56367146)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_046111"
+FT   MUTAGEN         241
+FT                   /note="R->A: Abolished homodimerization following
+FT                   interaction with ALKAL1."
+FT                   /evidence="ECO:0000269|PubMed:34646012"
+FT   MUTAGEN         544
+FT                   /note="K->M: Loss of interaction with PLCG1, PI3-kinase
+FT                   subunit p85, Ras GTPase-activating protein and RAF1."
+FT                   /evidence="ECO:0000269|PubMed:8084603"
+FT   MUTAGEN         750
+FT                   /note="G->E: Increases autophosphorylation and interaction
+FT                   with PI3-kinase subunit p85 (demonstrated with chimeric
+FT                   EGFR-LTK)."
+FT                   /evidence="ECO:0000269|PubMed:14695357"
+FT   MUTAGEN         753
+FT                   /note="Y->F: Abolishes interaction with PI3-kinase subunit
+FT                   p85, impairs PI3 kinase activity and leads to apoptosis
+FT                   (demonstrated with chimeric EGFR-LTK)."
+FT                   /evidence="ECO:0000269|PubMed:9223670"
+FT   MUTAGEN         862
+FT                   /note="Y->F: Impairs phosphorylation of CBLC (demonstrated
+FT                   with chimeric EGFR-LTK)."
+FT                   /evidence="ECO:0000269|PubMed:9223670"
+FT   CONFLICT        106
+FT                   /note="R -> G (in Ref. 3; BAG59451)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        220
+FT                   /note="V -> L (in Ref. 2; CAA43113)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        449
+FT                   /note="V -> GTKRLAGTVDSRLLLSM (in Ref. 6; CAA36460)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        652..654
+FT                   /note="SCA -> MR (in Ref. 6; CAA36460)"
+FT                   /evidence="ECO:0000305"
+FT   STRAND          67..70
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          77..79
+FT                   /evidence="ECO:0007829|PDB:7NX0"
+FT   HELIX           83..90
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          98..100
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   HELIX           103..105
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          109..112
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          115..124
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          141..150
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          155..159
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          167..169
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   HELIX           173..179
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   HELIX           185..189
+FT                   /evidence="ECO:0007829|PDB:7NX0"
+FT   STRAND          215..221
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          224..231
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          269..271
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   HELIX           290..292
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   HELIX           301..307
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   TURN            315..317
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          322..324
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          330..332
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          350..353
+FT                   /evidence="ECO:0007829|PDB:7NX0"
+FT   STRAND          357..359
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          364..367
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+FT   STRAND          372..377
+FT                   /evidence="ECO:0007829|PDB:7NX1"
+SQ   SEQUENCE   864 AA;  91681 MW;  0617F378AA04298E CRC64;
+     MGCWGQLLVW FGAAGAILCS SPGSQETFLR SSPLPLASPS PRDPKVSAPP SILEPASPLN
+     SPGTEGSWLF STCGASGRHG PTQTQCDGAY AGTSVVVTVG AAGQLRGVQL WRVPGPGQYL
+     ISAYGAAGGK GAKNHLSRAH GVFVSAIFSL GLGESLYILV GQQGEDACPG GSPESQLVCL
+     GESRAVEEHA AMDGSEGVPG SRRWAGGGGG GGGATYVFRV RAGELEPLLV AAGGGGRAYL
+     RPRDRGRTQA SPEKLENRSE APGSGGRGGA AGGGGGWTSR APSPQAGRSL QEGAEGGQGC
+     SEAWATLGWA AAGGFGGGGG ACTAGGGGGG YRGGDASETD NLWADGEDGV SFIHPSSELF
+     LQPLAVTENH GEVEIRRHLN CSHCPLRDCQ WQAELQLAEC LCPEGMELAV DNVTCMDLHK
+     PPGPLVLMVA VVATSTLSLL MVCGVLILVK QKKWQGLQEM RLPSPELELS KLRTSAIRTA
+     PNPYYCQVGL GPAQSWPLPP GVTEVSPANV TLLRALGHGA FGEVYEGLVI GLPGDSSPLQ
+     VAIKTLPELC SPQDELDFLM EALIISKFRH QNIVRCVGLS LRATPRLILL ELMSGGDMKS
+     FLRHSRPHLG QPSPLVMRDL LQLAQDIAQG CHYLEENHFI HRDIAARNCL LSCAGPSRVA
+     KIGDFGMARD IYRASYYRRG DRALLPVKWM PPEAFLEGIF TSKTDSWSFG VLLWEIFSLG
+     YMPYPGRTNQ EVLDFVVGGG RMDPPRGCPG PVYRIMTQCW QHEPELRPSF ASILERLQYC
+     TQDPDVLNSL LPMELGPTPE EEGTSGLGNR SLECLRPPQP QELSPEKLKS WGGSPLGPWL
+     SSGLKPLKSR GLQPQNLWNP TYRS
+//

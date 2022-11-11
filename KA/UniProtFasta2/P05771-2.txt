@@ -1,0 +1,292 @@
+ID   KPCB_HUMAN              Reviewed;         673 AA.
+AC   P05771-2;
+DT   13-AUG-1987, integrated into UniProtKB/Swiss-Prot.
+DT   23-JAN-2007, sequence version 4.
+DT   12-OCT-2022, entry version 254.
+DE   RecName: Full=Isoform Beta-II of Protein kinase C beta type;
+DE            Short=PKC-B;
+DE            Short=PKC-beta;
+DE            EC=2.7.11.13 {ECO:0000269|PubMed:20228790, ECO:0000269|PubMed:25982116};
+GN   Name=PRKCB; Synonyms=PKCB, PRKCB1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM BETA-II).
+RX   PubMed=3755548; DOI=10.1126/science.3755548;
+RA   Coussens L., Parker P.J., Rhee L., Yang-Feng T.L., Chen E.,
+RA   Waterfield M.D., Francke U., Ullrich A.;
+RT   "Multiple, distinct forms of bovine and human protein kinase C suggest
+RT   diversity in cellular signaling pathways.";
+RL   Science 233:859-866(1986).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS BETA-I AND BETA-II).
+RX   PubMed=3666134; DOI=10.1016/0014-5793(87)80524-0;
+RA   Kubo K., Ohno S., Suzuki K.;
+RT   "Primary structures of human protein kinase C beta I and beta II differ
+RT   only in their C-terminal sequences.";
+RL   FEBS Lett. 223:138-142(1987).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RG   NIEHS SNPs program;
+RL   Submitted (APR-2009) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=10493829; DOI=10.1006/geno.1999.5927;
+RA   Loftus B.J., Kim U.-J., Sneddon V.P., Kalush F., Brandon R., Fuhrmann J.,
+RA   Mason T., Crosby M.L., Barnstead M., Cronin L., Mays A.D., Cao Y., Xu R.X.,
+RA   Kang H.-L., Mitchell S., Eichler E.E., Harris P.C., Venter J.C.,
+RA   Adams M.D.;
+RT   "Genome duplications and other features in 12 Mb of DNA sequence from human
+RT   chromosome 16p and 16q.";
+RL   Genomics 60:295-308(1999).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Hippocampus;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-69.
+RX   PubMed=7880442; DOI=10.1089/dna.1995.14.213;
+RA   Mahajna J., King P., Parker P., Haley J.;
+RT   "Autoregulation of cloned human protein kinase C beta and gamma gene
+RT   promoters in U937 cells.";
+RL   DNA Cell Biol. 14:213-222(1995).
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-58.
+RX   PubMed=1556124; DOI=10.1016/s0021-9258(18)42675-0;
+RA   Niino Y.S., Ohno S., Suzuki K.;
+RT   "Positive and negative regulation of the transcription of the human protein
+RT   kinase C beta gene.";
+RL   J. Biol. Chem. 267:6158-6163(1992).
+RN   [9]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-57.
+RX   PubMed=1400396; DOI=10.1016/s0021-9258(19)36758-4;
+RA   Obeid L.M., Blobe G.C., Karolak L.A., Hannun Y.A.;
+RT   "Cloning and characterization of the major promoter of the human protein
+RT   kinase C beta gene. Regulation by phorbol esters.";
+RL   J. Biol. Chem. 267:20804-20810(1992).
+RN   [10]
+RP   PROTEIN SEQUENCE OF 2-19, AND ACETYLATION AT ALA-2.
+RC   TISSUE=Platelet;
+RX   PubMed=12665801; DOI=10.1038/nbt810;
+RA   Gevaert K., Goethals M., Martens L., Van Damme J., Staes A., Thomas G.R.,
+RA   Vandekerckhove J.;
+RT   "Exploring proteomes and analyzing protein processing by mass spectrometric
+RT   identification of sorted N-terminal peptides.";
+RL   Nat. Biotechnol. 21:566-569(2003).
+RN   [11]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 97-176.
+RA   Greenham J.A., Adams M.D., Doggett N.A., Mole S.E.;
+RT   "The genomic structure of the human protein kinase C beta gene (PRKCB).";
+RL   Submitted (NOV-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [12]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 609-671.
+RC   TISSUE=Fetal brain;
+RX   PubMed=3677994; DOI=10.1089/dna.1987.6.389;
+RA   Coussens L., Rhee L., Parker P.J., Ullrich A.;
+RT   "Alternative splicing increases the diversity of the human protein kinase C
+RT   family.";
+RL   DNA 6:389-394(1987).
+RN   [13]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 622-671.
+RX   PubMed=3658678; DOI=10.1093/nar/15.17.7179;
+RA   Kubo K., Ohno S., Suzuki K.;
+RT   "Nucleotide sequence of the 3' portion of a human gene for protein kinase C
+RT   beta-I/beta-II.";
+RL   Nucleic Acids Res. 15:7179-7180(1987).
+RN   [14]
+RP   FUNCTION IN PHOSPHORYLATION OF BTK.
+RX   PubMed=11598012; DOI=10.1093/emboj/20.20.5692;
+RA   Kang S.W., Wahl M.I., Chu J., Kitaura J., Kawakami Y., Kato R.M.,
+RA   Tabuchi R., Tarakhovsky A., Kawakami T., Turck C.W., Witte O.N.,
+RA   Rawlings D.J.;
+RT   "PKCbeta modulates antigen receptor signaling via regulation of Btk
+RT   membrane localization.";
+RL   EMBO J. 20:5692-5702(2001).
+RN   [15]
+RP   ACTIVITY REGULATION.
+RX   PubMed=16103100; DOI=10.1158/0008-5472.can-05-0071;
+RA   Graff J.R., McNulty A.M., Hanna K.R., Konicek B.W., Lynch R.L.,
+RA   Bailey S.N., Banks C., Capen A., Goode R., Lewis J.E., Sams L., Huss K.L.,
+RA   Campbell R.M., Iversen P.W., Neubauer B.L., Brown T.J., Musib L.,
+RA   Geeganage S., Thornton D.;
+RT   "The protein kinase Cbeta-selective inhibitor, enzastaurin (LY317615.HCl),
+RT   suppresses signaling through the AKT pathway, induces apoptosis, and
+RT   suppresses growth of human colon cancer and glioblastoma xenografts.";
+RL   Cancer Res. 65:7462-7469(2005).
+RN   [16]
+RP   INTERACTION WITH PHLPP1 AND PHLPP2.
+RX   PubMed=18162466; DOI=10.1074/jbc.m707319200;
+RA   Gao T., Brognard J., Newton A.C.;
+RT   "The phosphatase PHLPP controls the cellular levels of protein kinase C.";
+RL   J. Biol. Chem. 283:6300-6311(2008).
+RN   [17]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Platelet;
+RX   PubMed=18088087; DOI=10.1021/pr0704130;
+RA   Zahedi R.P., Lewandrowski U., Wiesner J., Wortelkamp S., Moebius J.,
+RA   Schuetz C., Walter U., Gambaryan S., Sickmann A.;
+RT   "Phosphoproteome of resting human platelets.";
+RL   J. Proteome Res. 7:526-534(2008).
+RN   [18]
+RP   FUNCTION.
+RX   PubMed=19176525; DOI=10.1074/jbc.m808719200;
+RA   Yamasaki T., Takahashi A., Pan J., Yamaguchi N., Yokoyama K.K.;
+RT   "Phosphorylation of activation transcription factor-2 at serine 121 by
+RT   protein kinase c controls c-Jun-mediated activation of transcription.";
+RL   J. Biol. Chem. 284:8567-8581(2009).
+RN   [19]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-504, PHOSPHORYLATION [LARGE
+RP   SCALE ANALYSIS] AT THR-641 AND SER-660 (ISOFORM BETA-II), AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [20]
+RP   FUNCTION IN HISTONE H3 PHOSPHORYLATION, CATALYTIC ACTIVITY, SUBCELLULAR
+RP   LOCATION, AND INTERACTION WITH KDM1A; PKN1 AND AR.
+RX   PubMed=20228790; DOI=10.1038/nature08839;
+RA   Metzger E., Imhof A., Patel D., Kahl P., Hoffmeyer K., Friedrichs N.,
+RA   Muller J.M., Greschik H., Kirfel J., Ji S., Kunowska N.,
+RA   Beisenherz-Huss C., Gunther T., Buettner R., Schule R.;
+RT   "Phosphorylation of histone H3T6 by PKCbeta(I) controls demethylation at
+RT   histone H3K4.";
+RL   Nature 464:792-796(2010).
+RN   [21]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=12417015; DOI=10.1093/oxfordjournals.jbchem.a003273;
+RA   Kawakami T., Kawakami Y., Kitaura J.;
+RT   "Protein kinase C beta (PKC beta): normal functions and diseases.";
+RL   J. Biochem. 132:677-682(2002).
+RN   [22]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=20186491; DOI=10.1007/s11154-010-9134-4;
+RA   Tabit C.E., Chung W.B., Hamburg N.M., Vita J.A.;
+RT   "Endothelial dysfunction in diabetes mellitus: molecular mechanisms and
+RT   clinical implications.";
+RL   Rev. Endocr. Metab. Disord. 11:61-74(2010).
+RN   [23]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [24]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-11; THR-17; SER-206; SER-311;
+RP   THR-314 AND THR-642, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE
+RP   ANALYSIS].
+RC   TISSUE=Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [25]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-641 AND SER-660 (ISOFORM
+RP   BETA-II), AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [26]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RX   PubMed=25982116; DOI=10.1016/j.molcel.2015.04.015;
+RA   Lee E.E., Ma J., Sacharidou A., Mi W., Salato V.K., Nguyen N., Jiang Y.,
+RA   Pascual J.M., North P.E., Shaul P.W., Mettlen M., Wang R.C.;
+RT   "A protein kinase C phosphorylation motif in GLUT1 affects glucose
+RT   transport and is mutated in GLUT1 deficiency syndrome.";
+RL   Mol. Cell 58:845-853(2015).
+RN   [27]
+RP   X-RAY CRYSTALLOGRAPHY (2.6 ANGSTROMS) OF 321-660 IN COMPLEX WITH INHIBITOR,
+RP   AND PHOSPHORYLATION AT THR-500; THR-642 AND SER-661.
+RX   PubMed=17115692; DOI=10.1021/bi061128h;
+RA   Grodsky N., Li Y., Bouzida D., Love R., Jensen J., Nodes B., Nonomiya J.,
+RA   Grant S.;
+RT   "Structure of the catalytic domain of human protein kinase C beta II
+RT   complexed with a bisindolylmaleimide inhibitor.";
+RL   Biochemistry 45:13970-13981(2006).
+RN   [28]
+RP   VARIANTS [LARGE SCALE ANALYSIS] MET-144; MET-496 AND HIS-588.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- INTERACTION:
+CC       P05771-2; Q6DHV7-2: ADAL; NbExp=3; IntAct=EBI-5774511, EBI-18899653;
+CC       P05771-2; Q9UQM7: CAMK2A; NbExp=3; IntAct=EBI-5774511, EBI-1383687;
+CC       P05771-2; Q6ZQX7-4: LIAT1; NbExp=3; IntAct=EBI-5774511, EBI-25830459;
+CC       P05771-2; O60346: PHLPP1; NbExp=5; IntAct=EBI-5774511, EBI-2511516;
+CC       P05771-2; Q6ZVD8: PHLPP2; NbExp=2; IntAct=EBI-5774511, EBI-2511496;
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=Beta-I; Synonyms=PRKCB1;
+CC         IsoId=P05771-1; Sequence=Displayed;
+CC       Name=Beta-II; Synonyms=PRKCB2;
+CC         IsoId=P05771-2; Sequence=VSP_004738;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS10619.1; -.
+DR   RefSeq; NP_002729.2; NM_002738.6.
+DR   ProteomicsDB; 51856; -.
+DR   Ensembl; ENST00000643927.1; ENSP00000496129.1; ENSG00000166501.14.
+DR   MANE-Select; ENST00000643927.1; ENSP00000496129.1; NM_002738.7; NP_002729.2.
+DR   Proteomes; UP000005640; Chromosome 16.
+PE   1: Evidence at protein level;
+FT   MOD_RES         641
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:24275569"
+FT   MOD_RES         660
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:24275569"
+SQ   SEQUENCE   673 AA;  77012 MW;  03D42B0E4164B48F CRC64;
+     MADPAAGPPP SEGEESTVRF ARKGALRQKN VHEVKNHKFT ARFFKQPTFC SHCTDFIWGF
+     GKQGFQCQVC CFVVHKRCHE FVTFSCPGAD KGPASDDPRS KHKFKIHTYS SPTFCDHCGS
+     LLYGLIHQGM KCDTCMMNVH KRCVMNVPSL CGTDHTERRG RIYIQAHIDR DVLIVLVRDA
+     KNLVPMDPNG LSDPYVKLKL IPDPKSESKQ KTKTIKCSLN PEWNETFRFQ LKESDKDRRL
+     SVEIWDWDLT SRNDFMGSLS FGISELQKAS VDGWFKLLSQ EEGEYFNVPV PPEGSEANEE
+     LRQKFERAKI SQGTKVPEEK TTNTVSKFDN NGNRDRMKLT DFNFLMVLGK GSFGKVMLSE
+     RKGTDELYAV KILKKDVVIQ DDDVECTMVE KRVLALPGKP PFLTQLHSCF QTMDRLYFVM
+     EYVNGGDLMY HIQQVGRFKE PHAVFYAAEI AIGLFFLQSK GIIYRDLKLD NVMLDSEGHI
+     KIADFGMCKE NIWDGVTTKT FCGTPDYIAP EIIAYQPYGK SVDWWAFGVL LYEMLAGQAP
+     FEGEDEDELF QSIMEHNVAY PKSMSKEAVA ICKGLMTKHP GKRLGCGPEG ERDIKEHAFF
+     RYIDWEKLER KEIQPPYKPK ACGRNAENFD RFFTRHPPVL TPPDQEVIRN IDQSEFEGFS
+     FVNSEFLKPE VKS
+//

@@ -1,0 +1,516 @@
+ID   BRD4_HUMAN              Reviewed;         722 AA.
+AC   O60885-2;
+DT   11-JAN-2001, integrated into UniProtKB/Swiss-Prot.
+DT   31-JAN-2002, sequence version 2.
+DT   12-OCT-2022, entry version 204.
+DE   RecName: Full=Isoform C of Bromodomain-containing protein 4;
+DE   AltName: Full=Protein HUNK1;
+GN   Name=BRD4; Synonyms=HUNK1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM A), DISEASE, AND CHROMOSOMAL
+RP   TRANSLOCATION WITH NUT.
+RX   PubMed=11733348; DOI=10.1016/s0002-9440(10)63049-0;
+RA   French C.A., Miyoshi I., Aster J.C., Kubonishi I., Kroll T.G., Dal Cin P.,
+RA   Vargas S.O., Perez-Atayde A.R., Fletcher J.A.;
+RT   "BRD4 bromodomain gene rearrangement in aggressive carcinoma with
+RT   translocation t(15;19).";
+RL   Am. J. Pathol. 159:1987-1992(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM C).
+RC   TISSUE=Placenta;
+RA   Weber B.;
+RL   Submitted (MAR-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15057824; DOI=10.1038/nature02399;
+RA   Grimwood J., Gordon L.A., Olsen A.S., Terry A., Schmutz J., Lamerdin J.E.,
+RA   Hellsten U., Goodstein D., Couronne O., Tran-Gyamfi M., Aerts A.,
+RA   Altherr M., Ashworth L., Bajorek E., Black S., Branscomb E., Caenepeel S.,
+RA   Carrano A.V., Caoile C., Chan Y.M., Christensen M., Cleland C.A.,
+RA   Copeland A., Dalin E., Dehal P., Denys M., Detter J.C., Escobar J.,
+RA   Flowers D., Fotopulos D., Garcia C., Georgescu A.M., Glavina T., Gomez M.,
+RA   Gonzales E., Groza M., Hammon N., Hawkins T., Haydu L., Ho I., Huang W.,
+RA   Israni S., Jett J., Kadner K., Kimball H., Kobayashi A., Larionov V.,
+RA   Leem S.-H., Lopez F., Lou Y., Lowry S., Malfatti S., Martinez D.,
+RA   McCready P.M., Medina C., Morgan J., Nelson K., Nolan M., Ovcharenko I.,
+RA   Pitluck S., Pollard M., Popkie A.P., Predki P., Quan G., Ramirez L.,
+RA   Rash S., Retterer J., Rodriguez A., Rogers S., Salamov A., Salazar A.,
+RA   She X., Smith D., Slezak T., Solovyev V., Thayer N., Tice H., Tsai M.,
+RA   Ustaszewska A., Vo N., Wagner M., Wheeler J., Wu K., Xie G., Yang J.,
+RA   Dubchak I., Furey T.S., DeJong P., Dickson M., Gordon D., Eichler E.E.,
+RA   Pennacchio L.A., Richardson P., Stubbs L., Rokhsar D.S., Myers R.M.,
+RA   Rubin E.M., Lucas S.M.;
+RT   "The DNA sequence and biology of human chromosome 19.";
+RL   Nature 428:529-535(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM B).
+RC   TISSUE=Testis;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1-719, DISEASE, CHROMOSOMAL TRANSLOCATION
+RP   WITH NUT, AND TISSUE SPECIFICITY.
+RC   TISSUE=Carcinoma;
+RX   PubMed=12543779;
+RA   French C.A., Miyoshi I., Kubonishi I., Grier H.E., Perez-Atayde A.R.,
+RA   Fletcher J.A.;
+RT   "BRD4-NUT fusion oncogene: a novel mechanism in aggressive carcinoma.";
+RL   Cancer Res. 63:304-307(2003).
+RN   [7]
+RP   FUNCTION, INTERACTION WITH CDK9 AND CCNT1, IDENTIFICATION IN THE P-TEFB
+RP   COMPLEX, AND SUBCELLULAR LOCATION.
+RX   PubMed=16109376; DOI=10.1016/j.molcel.2005.06.027;
+RA   Jang M.K., Mochizuki K., Zhou M., Jeong H.S., Brady J.N., Ozato K.;
+RT   "The bromodomain protein Brd4 is a positive regulatory component of P-TEFb
+RT   and stimulates RNA polymerase II-dependent transcription.";
+RL   Mol. Cell 19:523-534(2005).
+RN   [8]
+RP   FUNCTION, INTERACTION WITH CDK9 AND CCNT1, AND IDENTIFICATION IN THE P-TEFB
+RP   COMPLEX.
+RX   PubMed=16109377; DOI=10.1016/j.molcel.2005.06.029;
+RA   Yang Z., Yik J.H., Chen R., He N., Jang M.K., Ozato K., Zhou Q.;
+RT   "Recruitment of P-TEFb for stimulation of transcriptional elongation by the
+RT   bromodomain protein Brd4.";
+RL   Mol. Cell 19:535-545(2005).
+RN   [9]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1117, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17081983; DOI=10.1016/j.cell.2006.09.026;
+RA   Olsen J.V., Blagoev B., Gnad F., Macek B., Kumar C., Mortensen P., Mann M.;
+RT   "Global, in vivo, and site-specific phosphorylation dynamics in signaling
+RT   networks.";
+RL   Cell 127:635-648(2006).
+RN   [10]
+RP   INTERACTION WITH KSHV PROTEIN LANA (MICROBIAL INFECTION).
+RX   PubMed=16940503; DOI=10.1128/jvi.00502-06;
+RA   You J., Srinivasan V., Denis G.V., Harrington W.J. Jr., Ballestas M.E.,
+RA   Kaye K.M., Howley P.M.;
+RT   "Kaposi's sarcoma-associated herpesvirus latency-associated nuclear antigen
+RT   interacts with bromodomain protein Brd4 on host mitotic chromosomes.";
+RL   J. Virol. 80:8909-8919(2006).
+RN   [11]
+RP   INTERACTION WITH BOVINE PAPILLOMAVIRUS TYPE 1 REGULATORY PROTEIN E2.
+RX   PubMed=17189189; DOI=10.1016/j.molcel.2006.11.005;
+RA   Parish J.L., Bean A.M., Park R.B., Androphy E.J.;
+RT   "ChlR1 is required for loading papillomavirus E2 onto mitotic chromosomes
+RT   and viral genome maintenance.";
+RL   Mol. Cell 24:867-876(2006).
+RN   [12]
+RP   INTERACTION WITH EPSTEIN-BARR VIRUS PROTEIN EBNA1.
+RX   PubMed=18922874; DOI=10.1128/jvi.01680-08;
+RA   Lin A., Wang S., Nguyen T., Shire K., Frappier L.;
+RT   "The EBNA1 protein of Epstein-Barr virus functionally interacts with
+RT   Brd4.";
+RL   J. Virol. 82:12009-12019(2008).
+RN   [13]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-470, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [14]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J., Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in a
+RT   refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [15]
+RP   FUNCTION.
+RX   PubMed=19596240; DOI=10.1016/j.cell.2009.05.047;
+RA   Hargreaves D.C., Horng T., Medzhitov R.;
+RT   "Control of inducible gene expression by signal-dependent transcriptional
+RT   elongation.";
+RL   Cell 138:129-145(2009).
+RN   [16]
+RP   FUNCTION, AND INTERACTION WITH RELA.
+RX   PubMed=19103749; DOI=10.1128/mcb.01365-08;
+RA   Huang B., Yang X.D., Zhou M.M., Ozato K., Chen L.F.;
+RT   "Brd4 coactivates transcriptional activation of NF-kappaB via specific
+RT   binding to acetylated RelA.";
+RL   Mol. Cell. Biol. 29:1375-1387(2009).
+RN   [17]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT LYS-1111, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19608861; DOI=10.1126/science.1175371;
+RA   Choudhary C., Kumar C., Gnad F., Nielsen M.L., Rehman M., Walther T.C.,
+RA   Olsen J.V., Mann M.;
+RT   "Lysine acetylation targets protein complexes and co-regulates major
+RT   cellular functions.";
+RL   Science 325:834-840(2009).
+RN   [18]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-601 AND SER-1117, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [19]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [20]
+RP   INTERACTION WITH NSD3; JMJD6; CHD4; BICRA AND ATAD5.
+RX   PubMed=21555454; DOI=10.1128/mcb.01341-10;
+RA   Rahman S., Sowa M.E., Ottinger M., Smith J.A., Shi Y., Harper J.W.,
+RA   Howley P.M.;
+RT   "The Brd4 extraterminal domain confers transcription activation independent
+RT   of pTEFb by recruiting multiple proteins, including NSD3.";
+RL   Mol. Cell. Biol. 31:2641-2652(2011).
+RN   [21]
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=21890894; DOI=10.1093/nar/gkr698;
+RA   Ai N., Hu X., Ding F., Yu B., Wang H., Lu X., Zhang K., Li Y., Han A.,
+RA   Lin W., Liu R., Chen R.;
+RT   "Signal-induced Brd4 release from chromatin is essential for its role
+RT   transition from chromatin targeting to transcriptional regulation.";
+RL   Nucleic Acids Res. 39:9592-9604(2011).
+RN   [22]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-601 AND SER-1117, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [23]
+RP   FUNCTION.
+RX   PubMed=22334664; DOI=10.1074/jbc.m111.323493;
+RA   Wang R., Li Q., Helfer C.M., Jiao J., You J.;
+RT   "Bromodomain protein Brd4 associated with acetylated chromatin is important
+RT   for maintenance of higher-order chromatin structure.";
+RL   J. Biol. Chem. 287:10738-10752(2012).
+RN   [24]
+RP   FUNCTION.
+RX   PubMed=23086925; DOI=10.1074/jbc.m112.413047;
+RA   Zhang W., Prakash C., Sum C., Gong Y., Li Y., Kwok J.J., Thiessen N.,
+RA   Pettersson S., Jones S.J., Knapp S., Yang H., Chin K.C.;
+RT   "Bromodomain-containing protein 4 (BRD4) regulates RNA polymerase II serine
+RT   2 phosphorylation in human CD4+ T cells.";
+RL   J. Biol. Chem. 287:43137-43155(2012).
+RN   [25]
+RP   FUNCTION.
+RX   PubMed=22509028; DOI=10.1073/pnas.1120422109;
+RA   Devaiah B.N., Lewis B.A., Cherman N., Hewitt M.C., Albrecht B.K.,
+RA   Robey P.G., Ozato K., Sims R.J. III, Singer D.S.;
+RT   "BRD4 is an atypical kinase that phosphorylates serine2 of the RNA
+RT   polymerase II carboxy-terminal domain.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:6927-6932(2012).
+RN   [26]
+RP   FUNCTION, AND INTERACTION WITH JMJD6; CDK9 AND CCNT1.
+RX   PubMed=24360279; DOI=10.1016/j.cell.2013.10.056;
+RA   Liu W., Ma Q., Wong K., Li W., Ohgi K., Zhang J., Aggarwal A.,
+RA   Rosenfeld M.G.;
+RT   "Brd4 and JMJD6-associated anti-pause enhancers in regulation of
+RT   transcriptional pause release.";
+RL   Cell 155:1581-1595(2013).
+RN   [27]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-601; SER-1126; SER-1201 AND
+RP   SER-1204, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [28]
+RP   FUNCTION, INTERACTION WITH TP53, PHOSPHORYLATION AT SER-484; SER-488;
+RP   SER-492; SER-494; SER-498; SER-499 AND SER-503, AND MUTAGENESIS OF
+RP   492-SER--SER-494; 498-SER--THR-500 AND SER-503.
+RX   PubMed=23317504; DOI=10.1016/j.molcel.2012.12.006;
+RA   Wu S.Y., Lee A.Y., Lai H.T., Zhang H., Chiang C.M.;
+RT   "Phospho switch triggers Brd4 chromatin binding and activator recruitment
+RT   for gene-specific targeting.";
+RL   Mol. Cell 49:843-857(2013).
+RN   [29]
+RP   FUNCTION.
+RX   PubMed=23589332; DOI=10.1128/mcb.01180-12;
+RA   Patel M.C., Debrosse M., Smith M., Dey A., Huynh W., Sarai N.,
+RA   Heightman T.D., Tamura T., Ozato K.;
+RT   "BRD4 coordinates recruitment of pause release factor P-TEFb and the
+RT   pausing complex NELF/DSIF to regulate transcription elongation of
+RT   interferon-stimulated genes.";
+RL   Mol. Cell. Biol. 33:2497-2507(2013).
+RN   [30]
+RP   FUNCTION (ISOFORM B), SUBCELLULAR LOCATION (ISOFORM B), INTERACTION WITH
+RP   NCAPD3 AND SMC2, AND MUTAGENESIS OF ASN-140.
+RX   PubMed=23728299; DOI=10.1038/nature12147;
+RA   Floyd S.R., Pacold M.E., Huang Q., Clarke S.M., Lam F.C., Cannell I.G.,
+RA   Bryson B.D., Rameseder J., Lee M.J., Blake E.J., Fydrych A., Ho R.,
+RA   Greenberger B.A., Chen G.C., Maffa A., Del Rosario A.M., Root D.E.,
+RA   Carpenter A.E., Hahn W.C., Sabatini D.M., Chen C.C., White F.M.,
+RA   Bradner J.E., Yaffe M.B.;
+RT   "The bromodomain protein Brd4 insulates chromatin from DNA damage
+RT   signalling.";
+RL   Nature 498:246-250(2013).
+RN   [31]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-470 AND SER-1117, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [32]
+RP   SUMOYLATION [LARGE SCALE ANALYSIS] AT LYS-694 AND LYS-1111, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=25218447; DOI=10.1038/nsmb.2890;
+RA   Hendriks I.A., D'Souza R.C., Yang B., Verlaan-de Vries M., Mann M.,
+RA   Vertegaal A.C.;
+RT   "Uncovering global SUMOylation signaling networks in a site-specific
+RT   manner.";
+RL   Nat. Struct. Mol. Biol. 21:927-936(2014).
+RN   [33]
+RP   SUMOYLATION [LARGE SCALE ANALYSIS] AT LYS-1111, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=25114211; DOI=10.1073/pnas.1413825111;
+RA   Impens F., Radoshevich L., Cossart P., Ribet D.;
+RT   "Mapping of SUMO sites and analysis of SUMOylation changes induced by
+RT   external stimuli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 111:12432-12437(2014).
+RN   [34]
+RP   SUMOYLATION [LARGE SCALE ANALYSIS] AT LYS-1111, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=25772364; DOI=10.1016/j.celrep.2015.02.033;
+RA   Hendriks I.A., Treffers L.W., Verlaan-de Vries M., Olsen J.V.,
+RA   Vertegaal A.C.;
+RT   "SUMO-2 orchestrates chromatin modifiers in response to DNA damage.";
+RL   Cell Rep. 10:1778-1791(2015).
+RN   [35]
+RP   SUMOYLATION [LARGE SCALE ANALYSIS] AT LYS-1111, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=25755297; DOI=10.1074/mcp.o114.044792;
+RA   Xiao Z., Chang J.G., Hendriks I.A., Sigurdsson J.O., Olsen J.V.,
+RA   Vertegaal A.C.;
+RT   "System-wide analysis of SUMOylation dynamics in response to replication
+RT   stress reveals novel small ubiquitin-like modified target proteins and
+RT   acceptor lysines relevant for genome stability.";
+RL   Mol. Cell. Proteomics 14:1419-1434(2015).
+RN   [36]
+RP   SUMOYLATION [LARGE SCALE ANALYSIS] AT LYS-99; LYS-585; LYS-645; LYS-694;
+RP   LYS-1050; LYS-1111 AND LYS-1197, AND IDENTIFICATION BY MASS SPECTROMETRY
+RP   [LARGE SCALE ANALYSIS].
+RX   PubMed=28112733; DOI=10.1038/nsmb.3366;
+RA   Hendriks I.A., Lyon D., Young C., Jensen L.J., Vertegaal A.C.,
+RA   Nielsen M.L.;
+RT   "Site-specific mapping of the human SUMO proteome reveals co-modification
+RT   with phosphorylation.";
+RL   Nat. Struct. Mol. Biol. 24:325-336(2017).
+RN   [37]
+RP   INTERACTION WITH BICRA.
+RX   PubMed=29374058; DOI=10.1074/jbc.ra117.001065;
+RA   Alpsoy A., Dykhuizen E.C.;
+RT   "Glioma tumor suppressor candidate region gene 1 (GLTSCR1) and its paralog
+RT   GLTSCR1-like form SWI/SNF chromatin remodeling subcomplexes.";
+RL   J. Biol. Chem. 293:3892-3903(2018).
+RN   [38]
+RP   VARIANTS [LARGE SCALE ANALYSIS] SER-37; GLY-371; ASN-563; SER-598 AND
+RP   HIS-669.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [39]
+RP   STRUCTURE BY NMR OF 352-457.
+RX   PubMed=18500820; DOI=10.1021/bi8001659;
+RA   Liu Y., Wang X., Zhang J., Huang H., Ding B., Wu J., Shi Y.;
+RT   "Structural basis and binding properties of the second bromodomain of Brd4
+RT   with acetylated histone tails.";
+RL   Biochemistry 47:6403-6417(2008).
+RN   [40]
+RP   X-RAY CRYSTALLOGRAPHY (1.6 ANGSTROMS) OF 44-168 IN COMPLEX WITH JQ1
+RP   INHIBITOR, AND SUBCELLULAR LOCATION.
+RX   PubMed=20871596; DOI=10.1038/nature09504;
+RA   Filippakopoulos P., Qi J., Picaud S., Shen Y., Smith W.B., Fedorov O.,
+RA   Morse E.M., Keates T., Hickman T.T., Felletar I., Philpott M., Munro S.,
+RA   McKeown M.R., Wang Y., Christie A.L., West N., Cameron M.J., Schwartz B.,
+RA   Heightman T.D., La Thangue N., French C.A., Wiest O., Kung A.L., Knapp S.,
+RA   Bradner J.E.;
+RT   "Selective inhibition of BET bromodomains.";
+RL   Nature 468:1067-1073(2010).
+RN   [41]
+RP   X-RAY CRYSTALLOGRAPHY (1.6 ANGSTROMS) OF 44-168 IN COMPLEX WITH I-BET
+RP   INHIBITOR.
+RX   PubMed=21068722; DOI=10.1038/nature09589;
+RA   Nicodeme E., Jeffrey K.L., Schaefer U., Beinke S., Dewell S., Chung C.W.,
+RA   Chandwani R., Marazzi I., Wilson P., Coste H., White J., Kirilovsky J.,
+RA   Rice C.M., Lora J.M., Prinjha R.K., Lee K., Tarakhovsky A.;
+RT   "Suppression of inflammation by a synthetic histone mimic.";
+RL   Nature 468:1119-1123(2010).
+RN   [42]
+RP   X-RAY CRYSTALLOGRAPHY (1.65 ANGSTROMS) OF 44-168, AND X-RAY CRYSTALLOGRAPHY
+RP   (2.3 ANGSTROMS) OF 333-460.
+RX   PubMed=21568322; DOI=10.1021/jm200108t;
+RA   Chung C.W., Coste H., White J.H., Mirguet O., Wilde J., Gosmini R.L.,
+RA   Delves C., Magny S.M., Woodward R., Hughes S.A., Boursier E.V., Flynn H.,
+RA   Bouillot A.M., Bamborough P., Brusq J.M., Gellibert F.J., Jones E.J.,
+RA   Riou A.M., Homes P., Martin S.L., Uings I.J., Toum J., Clement C.A.,
+RA   Boullay A.B., Grimley R.L., Blandel F.M., Prinjha R.K., Lee K.,
+RA   Kirilovsky J., Nicodeme E.;
+RT   "Discovery and characterization of small molecule inhibitors of the BET
+RT   family bromodomains.";
+RL   J. Med. Chem. 54:3827-3838(2011).
+RN   [43]
+RP   X-RAY CRYSTALLOGRAPHY (1.5 ANGSTROMS) OF 44-168 IN COMPLEX WITH JQ1
+RP   INHIBITOR.
+RX   PubMed=21964340; DOI=10.1038/nature10509;
+RA   Dawson M.A., Prinjha R.K., Dittmann A., Giotopoulos G., Bantscheff M.,
+RA   Chan W.I., Robson S.C., Chung C.W., Hopf C., Savitski M.M., Huthmacher C.,
+RA   Gudgin E., Lugo D., Beinke S., Chapman T.D., Roberts E.J., Soden P.E.,
+RA   Auger K.R., Mirguet O., Doehner K., Delwel R., Burnett A.K., Jeffrey P.,
+RA   Drewes G., Lee K., Huntly B.J., Kouzarides T.;
+RT   "Inhibition of BET recruitment to chromatin as an effective treatment for
+RT   MLL-fusion leukaemia.";
+RL   Nature 478:529-533(2011).
+RN   [44]
+RP   X-RAY CRYSTALLOGRAPHY (1.6 ANGSTROMS) OF 44-168 IN COMPLEX WITH
+RP   BENZODIAZEPINES AND BENZOTRIAZEPINES INHIBITORS.
+RX   PubMed=22137933; DOI=10.1016/j.bmc.2011.10.080;
+RA   Filippakopoulos P., Picaud S., Fedorov O., Keller M., Wrobel M.,
+RA   Morgenstern O., Bracher F., Knapp S.;
+RT   "Benzodiazepines and benzotriazepines as protein interaction inhibitors
+RT   targeting bromodomains of the BET family.";
+RL   Bioorg. Med. Chem. 20:1878-1886(2012).
+RN   [45]
+RP   X-RAY CRYSTALLOGRAPHY (1.4 ANGSTROMS) OF 44-168, AND STRUCTURE BY NMR OF
+RP   333-460.
+RX   PubMed=22645123; DOI=10.1074/jbc.m112.359505;
+RA   Zhang G., Liu R., Zhong Y., Plotnikov A.N., Zhang W., Zeng L., Rusinova E.,
+RA   Gerona-Nevarro G., Moshkina N., Joshua J., Chuang P.Y., Ohlmeyer M.,
+RA   He J.C., Zhou M.M.;
+RT   "Down-regulation of NF-kappaB transcriptional activity in HIV-associated
+RT   kidney disease by BRD4 inhibition.";
+RL   J. Biol. Chem. 287:28840-28851(2012).
+RN   [46]
+RP   X-RAY CRYSTALLOGRAPHY (1.6 ANGSTROMS) OF 44-168 IN COMPLEX WITH
+RP   BENZODIAZEPINES INHIBITORS.
+RX   PubMed=22136404; DOI=10.1021/jm201320w;
+RA   Chung C.W., Dean A.W., Woolven J.M., Bamborough P.;
+RT   "Fragment-based discovery of bromodomain inhibitors part 1: inhibitor
+RT   binding modes and implications for lead discovery.";
+RL   J. Med. Chem. 55:576-586(2012).
+RN   [47]
+RP   X-RAY CRYSTALLOGRAPHY (1.92 ANGSTROMS) OF 44-168.
+RX   PubMed=23095041; DOI=10.1021/jm3010515;
+RA   Fish P.V., Filippakopoulos P., Bish G., Brennan P.E., Bunnage M.E.,
+RA   Cook A.S., Federov O., Gerstenberger B.S., Jones H., Knapp S., Marsden B.,
+RA   Nocka K., Owen D.R., Philpott M., Picaud S., Primiano M.J., Ralph M.J.,
+RA   Sciammetta N., Trzupek J.D.;
+RT   "Identification of a chemical probe for bromo and extra C-terminal
+RT   bromodomain inhibition through optimization of a fragment-derived hit.";
+RL   J. Med. Chem. 55:9831-9837(2012).
+RN   [48]
+RP   X-RAY CRYSTALLOGRAPHY (1.35 ANGSTROMS) OF 44-168; 333-460 AND 1343-1362 IN
+RP   COMPLEX WITH ACETYLATED HISTONE, AND MUTAGENESIS OF ASN-140 AND ASN-433.
+RX   PubMed=22464331; DOI=10.1016/j.cell.2012.02.013;
+RA   Filippakopoulos P., Picaud S., Mangos M., Keates T., Lambert J.P.,
+RA   Barsyte-Lovejoy D., Felletar I., Volkmer R., Muller S., Pawson T.,
+RA   Gingras A.C., Arrowsmith C.H., Knapp S.;
+RT   "Histone recognition and large-scale structural analysis of the human
+RT   bromodomain family.";
+RL   Cell 149:214-231(2012).
+RN   [49]
+RP   X-RAY CRYSTALLOGRAPHY (1.72 ANGSTROMS) OF 44-168 IN COMPLEX WITH
+RP   3,5-DIMETHYLISOXAZOLE INHIBITOR.
+RX   PubMed=23517011; DOI=10.1021/jm301588r;
+RA   Hewings D.S., Fedorov O., Filippakopoulos P., Martin S., Picaud S.,
+RA   Tumber A., Wells C., Olcina M.M., Freeman K., Gill A., Ritchie A.J.,
+RA   Sheppard D.W., Russell A.J., Hammond E.M., Knapp S., Brennan P.E.,
+RA   Conway S.J.;
+RT   "Optimization of 3,5-dimethylisoxazole derivatives as potent bromodomain
+RT   ligands.";
+RL   J. Med. Chem. 56:3217-3227(2013).
+RN   [50]
+RP   X-RAY CRYSTALLOGRAPHY (1.43 ANGSTROMS) OF 44-167 IN COMPLEX WITH
+RP   2-THIAZOLIDINONE INHIBITOR.
+RX   PubMed=23530754; DOI=10.1021/jm301793a;
+RA   Zhao L., Cao D., Chen T., Wang Y., Miao Z., Xu Y., Chen W., Wang X., Li Y.,
+RA   Du Z., Xiong B., Li J., Xu C., Zhang N., He J., Shen J.;
+RT   "Fragment-based drug discovery of 2-thiazolidinones as inhibitors of the
+RT   histone reader BRD4 bromodomain.";
+RL   J. Med. Chem. 56:3833-3851(2013).
+RN   [51] {ECO:0007744|PDB:6BNH}
+RP   STRUCTURE BY NMR OF 601-683 IN COMPLEX WITH JMJD6, INTERACTION WITH JMJD6
+RP   AND NSD3, MUTAGENESIS OF 651-GLU--GLU-653, AND SUBUNIT.
+RX   PubMed=29176719; DOI=10.1038/s41598-017-16588-8;
+RA   Konuma T., Yu D., Zhao C., Ju Y., Sharma R., Ren C., Zhang Q., Zhou M.M.,
+RA   Zeng L.;
+RT   "Structural Mechanism of the Oxygenase JMJD6 Recognition by the
+RT   Extraterminal (ET) Domain of BRD4.";
+RL   Sci. Rep. 7:16272-16272(2017).
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=A; Synonyms=Brd4L, Long;
+CC         IsoId=O60885-1; Sequence=Displayed;
+CC       Name=C; Synonyms=Brd4S, Short;
+CC         IsoId=O60885-2; Sequence=VSP_010902, VSP_010903;
+CC       Name=B;
+CC         IsoId=O60885-3; Sequence=VSP_047671;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS46004.1; -.
+DR   RefSeq; NP_055114.1; NM_014299.2.
+DR   ProteomicsDB; 49652; -.
+DR   Ensembl; ENST00000371835.8; ENSP00000360901.3; ENSG00000141867.19.
+DR   Proteomes; UP000005640; Chromosome 19.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   722 AA;  80463 MW;  FF040EE016B37F87 CRC64;
+     MSAESGPGTR LRNLPVMGDG LETSQMSTTQ AQAQPQPANA ASTNPPPPET SNPNKPKRQT
+     NQLQYLLRVV LKTLWKHQFA WPFQQPVDAV KLNLPDYYKI IKTPMDMGTI KKRLENNYYW
+     NAQECIQDFN TMFTNCYIYN KPGDDIVLMA EALEKLFLQK INELPTEETE IMIVQAKGRG
+     RGRKETGTAK PGVSTVPNTT QASTPPQTQT PQPNPPPVQA TPHPFPAVTP DLIVQTPVMT
+     VVPPQPLQTP PPVPPQPQPP PAPAPQPVQS HPPIIAATPQ PVKTKKGVKR KADTTTPTTI
+     DPIHEPPSLP PEPKTTKLGQ RRESSRPVKP PKKDVPDSQQ HPAPEKSSKV SEQLKCCSGI
+     LKEMFAKKHA AYAWPFYKPV DVEALGLHDY CDIIKHPMDM STIKSKLEAR EYRDAQEFGA
+     DVRLMFSNCY KYNPPDHEVV AMARKLQDVF EMRFAKMPDE PEEPVVAVSS PAVPPPTKVV
+     APPSSSDSSS DSSSDSDSST DDSEEERAQR LAELQEQLKA VHEQLAALSQ PQQNKPKKKE
+     KDKKEKKKEK HKRKEEVEEN KKSKAKEPPP KKTKKNNSSN SNVSKKEPAP MKSKPPPTYE
+     SEEEDKCKPM SYEEKRQLSL DINKLPGEKL GRVVHIIQSR EPSLKNSNPD EIEIDFETLK
+     PSTLRELERY VTSCLRKKRK PQAEKVDVIA GSSKMKGFSS SESESSSESS SSDSEDSETG
+     PA
+//

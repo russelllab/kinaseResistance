@@ -1,0 +1,499 @@
+ID   M3K13_HUMAN             Reviewed;         966 AA.
+AC   O43283; B2R6U2; B4DLE3; B4DMV2; B4DZJ4; D3DNU1; Q05BY6; Q15450; Q2NKN3;
+DT   21-JUN-2005, integrated into UniProtKB/Swiss-Prot.
+DT   01-JUN-1998, sequence version 1.
+DT   12-OCT-2022, entry version 179.
+DE   RecName: Full=Mitogen-activated protein kinase kinase kinase 13;
+DE            EC=2.7.11.25;
+DE   AltName: Full=Leucine zipper-bearing kinase;
+DE   AltName: Full=Mixed lineage kinase;
+DE            Short=MLK;
+GN   Name=MAP3K13 {ECO:0000312|HGNC:HGNC:6852};
+GN   Synonyms=LZK {ECO:0000312|EMBL:BAA24817.1};
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1] {ECO:0000305, ECO:0000312|EMBL:BAA24817.1}
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), FUNCTION, CATALYTIC ACTIVITY,
+RP   ACTIVITY REGULATION, SUBCELLULAR LOCATION, TISSUE SPECIFICITY, AND
+RP   AUTOPHOSPHORYLATION.
+RC   TISSUE=Cerebellum {ECO:0000269|PubMed:9353328};
+RX   PubMed=9353328; DOI=10.1074/jbc.272.45.28622;
+RA   Sakuma H., Ikeda A., Oka S., Kozutsumi Y., Zanetta J., Kawasaki T.;
+RT   "Molecular cloning and functional expression of a cDNA encoding a new
+RT   member of mixed lineage protein kinase from human brain.";
+RL   J. Biol. Chem. 272:28622-28629(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1; 3 AND 4).
+RC   TISSUE=Brain, Testis, and Tongue;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16641997; DOI=10.1038/nature04728;
+RA   Muzny D.M., Scherer S.E., Kaul R., Wang J., Yu J., Sudbrak R., Buhay C.J.,
+RA   Chen R., Cree A., Ding Y., Dugan-Rocha S., Gill R., Gunaratne P.,
+RA   Harris R.A., Hawes A.C., Hernandez J., Hodgson A.V., Hume J., Jackson A.,
+RA   Khan Z.M., Kovar-Smith C., Lewis L.R., Lozado R.J., Metzker M.L.,
+RA   Milosavljevic A., Miner G.R., Morgan M.B., Nazareth L.V., Scott G.,
+RA   Sodergren E., Song X.-Z., Steffen D., Wei S., Wheeler D.A., Wright M.W.,
+RA   Worley K.C., Yuan Y., Zhang Z., Adams C.Q., Ansari-Lari M.A., Ayele M.,
+RA   Brown M.J., Chen G., Chen Z., Clendenning J., Clerc-Blankenburg K.P.,
+RA   Chen R., Chen Z., Davis C., Delgado O., Dinh H.H., Dong W., Draper H.,
+RA   Ernst S., Fu G., Gonzalez-Garay M.L., Garcia D.K., Gillett W., Gu J.,
+RA   Hao B., Haugen E., Havlak P., He X., Hennig S., Hu S., Huang W.,
+RA   Jackson L.R., Jacob L.S., Kelly S.H., Kube M., Levy R., Li Z., Liu B.,
+RA   Liu J., Liu W., Lu J., Maheshwari M., Nguyen B.-V., Okwuonu G.O.,
+RA   Palmeiri A., Pasternak S., Perez L.M., Phelps K.A., Plopper F.J., Qiang B.,
+RA   Raymond C., Rodriguez R., Saenphimmachak C., Santibanez J., Shen H.,
+RA   Shen Y., Subramanian S., Tabor P.E., Verduzco D., Waldron L., Wang J.,
+RA   Wang J., Wang Q., Williams G.A., Wong G.K.-S., Yao Z., Zhang J., Zhang X.,
+RA   Zhao G., Zhou J., Zhou Y., Nelson D., Lehrach H., Reinhardt R.,
+RA   Naylor S.L., Yang H., Olson M., Weinstock G., Gibbs R.A.;
+RT   "The DNA sequence, annotation and analysis of human chromosome 3.";
+RL   Nature 440:1194-1198(2006).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 2 AND 5).
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 230-340 (ISOFORM 1).
+RX   PubMed=8274451;
+RA   Schultz S.J., Nigg E.A.;
+RT   "Identification of 21 novel human protein kinases, including 3 members of a
+RT   family related to the cell cycle regulator nimA of Aspergillus nidulans.";
+RL   Cell Growth Differ. 4:821-830(1993).
+RN   [7] {ECO:0000305}
+RP   HOMODIMERIZATION.
+RX   PubMed=11163770; DOI=10.1016/s0014-5793(00)02432-7;
+RA   Ikeda A., Masaki M., Kozutsumi Y., Oka S., Kawasaki T.;
+RT   "Identification and characterization of functional domains in a mixed
+RT   lineage kinase LZK.";
+RL   FEBS Lett. 488:190-195(2001).
+RN   [8] {ECO:0000305}
+RP   FUNCTION, AND INTERACTION WITH MAPK8IP1.
+RX   PubMed=11726277; DOI=10.1093/oxfordjournals.jbchem.a003048;
+RA   Ikeda A., Hasegawa K., Masaki M., Moriguchi T., Nishida E., Kozutsumi Y.,
+RA   Oka S., Kawasaki T.;
+RT   "Mixed lineage kinase LZK forms a functional signaling complex with JIP-1,
+RT   a scaffold protein of the c-Jun NH(2)-terminal kinase pathway.";
+RL   J. Biochem. 130:773-781(2001).
+RN   [9] {ECO:0000305}
+RP   FUNCTION, INTERACTION WITH PRDX3, AND MUTAGENESIS OF LYS-195.
+RX   PubMed=12492477; DOI=10.1046/j.1432-1033.2003.03363.x;
+RA   Masaki M., Ikeda A., Shiraki E., Oka S., Kawasaki T.;
+RT   "Mixed lineage kinase LZK and antioxidant protein-1 activate NF-kappaB
+RT   synergistically.";
+RL   Eur. J. Biochem. 270:76-83(2003).
+RN   [10]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLY-517; LYS-712 AND LEU-746.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Activates the JUN N-terminal pathway through activation of
+CC       the MAP kinase kinase MAP2K7. Acts synergistically with PRDX3 to
+CC       regulate the activation of NF-kappa-B in the cytosol. This activation
+CC       is kinase-dependent and involves activating the IKK complex, the IKBKB-
+CC       containing complex that phosphorylates inhibitors of NF-kappa-B.
+CC       {ECO:0000269|PubMed:11726277, ECO:0000269|PubMed:12492477,
+CC       ECO:0000269|PubMed:9353328}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.25;
+CC         Evidence={ECO:0000269|PubMed:9353328};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.25; Evidence={ECO:0000269|PubMed:9353328};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000250|UniProtKB:Q60700};
+CC   -!- ACTIVITY REGULATION: Activated by autophosphorylation and
+CC       homodimerization. {ECO:0000269|PubMed:11163770,
+CC       ECO:0000269|PubMed:9353328}.
+CC   -!- SUBUNIT: Homodimer; forms dimers through the leucine-zipper motif.
+CC       Interacts with the C-terminus of MAPK8IP1 through the kinase catalytic
+CC       domain. Binds PRDX3. Associates with the IKK complex through the kinase
+CC       domain. {ECO:0000269|PubMed:11163770, ECO:0000269|PubMed:11726277,
+CC       ECO:0000269|PubMed:12492477}.
+CC   -!- INTERACTION:
+CC       O43283; O43283: MAP3K13; NbExp=2; IntAct=EBI-1168480, EBI-1168480;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:9353328}. Membrane
+CC       {ECO:0000269|PubMed:9353328}; Peripheral membrane protein
+CC       {ECO:0000269|PubMed:9353328}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=5;
+CC       Name=1;
+CC         IsoId=O43283-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=O43283-3; Sequence=VSP_036567, VSP_036568;
+CC       Name=3;
+CC         IsoId=O43283-4; Sequence=VSP_036563, VSP_036566;
+CC       Name=4;
+CC         IsoId=O43283-5; Sequence=VSP_036562, VSP_036569;
+CC       Name=5;
+CC         IsoId=O43283-6; Sequence=VSP_036564, VSP_036565;
+CC   -!- TISSUE SPECIFICITY: Expressed in the adult brain, liver, placenta and
+CC       pancreas, with expression strongest in the pancreas.
+CC       {ECO:0000269|PubMed:9353328}.
+CC   -!- PTM: Autophosphorylated on serine and threonine residues.
+CC       {ECO:0000269|PubMed:9353328}.
+CC   -!- MISCELLANEOUS: [Isoform 2]: May be produced at very low levels due to a
+CC       premature stop codon in the mRNA, leading to nonsense-mediated mRNA
+CC       decay. {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. STE Ser/Thr
+CC       protein kinase family. MAP kinase kinase kinase subfamily.
+CC       {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAI11727.1; Type=Erroneous translation; Note=Wrong choice of CDS.; Evidence={ECO:0000305};
+CC       Sequence=BAG59505.1; Type=Erroneous termination; Note=Truncated C-terminus.; Evidence={ECO:0000305};
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AB001872; BAA24817.1; -; mRNA.
+DR   EMBL; AK296961; BAG59505.1; ALT_SEQ; mRNA.
+DR   EMBL; AK297646; BAG60014.1; -; mRNA.
+DR   EMBL; AK302951; BAG64106.1; -; mRNA.
+DR   EMBL; AK312714; BAG35589.1; -; mRNA.
+DR   EMBL; AC099661; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC128680; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC132516; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471052; EAW78224.1; -; Genomic_DNA.
+DR   EMBL; CH471052; EAW78225.1; -; Genomic_DNA.
+DR   EMBL; BC031677; AAH31677.1; -; mRNA.
+DR   EMBL; BC111726; AAI11727.1; ALT_SEQ; mRNA.
+DR   EMBL; Z25428; CAA80915.1; -; mRNA.
+DR   CCDS; CCDS3270.1; -. [O43283-1]
+DR   CCDS; CCDS56298.1; -. [O43283-5]
+DR   PIR; I38218; I38218.
+DR   RefSeq; NP_001229243.1; NM_001242314.1. [O43283-1]
+DR   RefSeq; NP_001229246.1; NM_001242317.1. [O43283-5]
+DR   RefSeq; NP_004712.1; NM_004721.4. [O43283-1]
+DR   RefSeq; XP_011511612.1; XM_011513310.2. [O43283-1]
+DR   RefSeq; XP_016862945.1; XM_017007456.1. [O43283-1]
+DR   AlphaFoldDB; O43283; -.
+DR   SMR; O43283; -.
+DR   BioGRID; 114614; 21.
+DR   IntAct; O43283; 27.
+DR   STRING; 9606.ENSP00000265026; -.
+DR   BindingDB; O43283; -.
+DR   ChEMBL; CHEMBL1163124; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; O43283; -.
+DR   GuidetoPHARMACOLOGY; 2073; -.
+DR   GlyGen; O43283; 1 site, 1 O-linked glycan (1 site).
+DR   iPTMnet; O43283; -.
+DR   PhosphoSitePlus; O43283; -.
+DR   BioMuta; MAP3K13; -.
+DR   jPOST; O43283; -.
+DR   MassIVE; O43283; -.
+DR   PaxDb; O43283; -.
+DR   PeptideAtlas; O43283; -.
+DR   PRIDE; O43283; -.
+DR   ProteomicsDB; 48852; -. [O43283-1]
+DR   ProteomicsDB; 48853; -. [O43283-3]
+DR   ProteomicsDB; 48854; -. [O43283-4]
+DR   ProteomicsDB; 48855; -. [O43283-5]
+DR   ProteomicsDB; 48856; -. [O43283-6]
+DR   Antibodypedia; 33834; 305 antibodies from 26 providers.
+DR   DNASU; 9175; -.
+DR   Ensembl; ENST00000265026.8; ENSP00000265026.3; ENSG00000073803.14. [O43283-1]
+DR   Ensembl; ENST00000424227.5; ENSP00000399910.1; ENSG00000073803.14. [O43283-1]
+DR   Ensembl; ENST00000433092.5; ENSP00000389798.1; ENSG00000073803.14. [O43283-6]
+DR   Ensembl; ENST00000438053.5; ENSP00000403561.1; ENSG00000073803.14. [O43283-3]
+DR   Ensembl; ENST00000443863.5; ENSP00000409325.1; ENSG00000073803.14. [O43283-4]
+DR   Ensembl; ENST00000446828.5; ENSP00000411483.1; ENSG00000073803.14. [O43283-5]
+DR   GeneID; 9175; -.
+DR   KEGG; hsa:9175; -.
+DR   MANE-Select; ENST00000265026.8; ENSP00000265026.3; NM_004721.5; NP_004712.1.
+DR   UCSC; uc003fph.5; human. [O43283-1]
+DR   CTD; 9175; -.
+DR   DisGeNET; 9175; -.
+DR   GeneCards; MAP3K13; -.
+DR   HGNC; HGNC:6852; MAP3K13.
+DR   HPA; ENSG00000073803; Low tissue specificity.
+DR   MIM; 604915; gene.
+DR   neXtProt; NX_O43283; -.
+DR   OpenTargets; ENSG00000073803; -.
+DR   PharmGKB; PA30596; -.
+DR   VEuPathDB; HostDB:ENSG00000073803; -.
+DR   eggNOG; KOG4721; Eukaryota.
+DR   GeneTree; ENSGT00940000158216; -.
+DR   HOGENOM; CLU_1869795_0_0_1; -.
+DR   InParanoid; O43283; -.
+DR   OMA; KYPGTCK; -.
+DR   OrthoDB; 938929at2759; -.
+DR   PhylomeDB; O43283; -.
+DR   TreeFam; TF105119; -.
+DR   PathwayCommons; O43283; -.
+DR   SignaLink; O43283; -.
+DR   SIGNOR; O43283; -.
+DR   BioGRID-ORCS; 9175; 14 hits in 1106 CRISPR screens.
+DR   ChiTaRS; MAP3K13; human.
+DR   GeneWiki; MAP3K13; -.
+DR   GenomeRNAi; 9175; -.
+DR   Pharos; O43283; Tchem.
+DR   PRO; PR:O43283; -.
+DR   Proteomes; UP000005640; Chromosome 3.
+DR   RNAct; O43283; protein.
+DR   Bgee; ENSG00000073803; Expressed in corpus epididymis and 199 other tissues.
+DR   ExpressionAtlas; O43283; baseline and differential.
+DR   Genevisible; O43283; HS.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016020; C:membrane; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0019899; F:enzyme binding; IPI:UniProtKB.
+DR   GO; GO:0042802; F:identical protein binding; IPI:IntAct.
+DR   GO; GO:0106137; F:IkappaB kinase complex binding; IDA:UniProtKB.
+DR   GO; GO:0004706; F:JUN kinase kinase kinase activity; IBA:GO_Central.
+DR   GO; GO:0004709; F:MAP kinase kinase kinase activity; IDA:UniProtKB.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0042803; F:protein homodimerization activity; IDA:UniProtKB.
+DR   GO; GO:0019901; F:protein kinase binding; ISS:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0043539; F:protein serine/threonine kinase activator activity; ISS:ARUK-UCL.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0007254; P:JNK cascade; IDA:UniProtKB.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; ISS:BHF-UCL.
+DR   GO; GO:0045773; P:positive regulation of axon extension; ISS:ARUK-UCL.
+DR   GO; GO:1905492; P:positive regulation of branching morphogenesis of a nerve; ISS:ARUK-UCL.
+DR   GO; GO:0043507; P:positive regulation of JUN kinase activity; ISS:ARUK-UCL.
+DR   GO; GO:0014042; P:positive regulation of neuron maturation; ISS:ARUK-UCL.
+DR   GO; GO:0150012; P:positive regulation of neuron projection arborization; ISS:ARUK-UCL.
+DR   GO; GO:0051092; P:positive regulation of NF-kappaB transcription factor activity; IDA:UniProtKB.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0051403; P:stress-activated MAPK cascade; IDA:UniProtKB.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR017419; MAP3K12_MAP3K13.
+DR   InterPro; IPR027258; MAPKKK13.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   PIRSF; PIRSF038165; MAPKKK12_MAPKKK13; 1.
+DR   PIRSF; PIRSF500742; MAPKKK13; 1.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; ATP-binding; Cytoplasm; Kinase; Magnesium; Membrane;
+KW   Metal-binding; Nucleotide-binding; Phosphoprotein; Reference proteome;
+KW   Repeat; Serine/threonine-protein kinase; Transferase.
+FT   CHAIN           1..966
+FT                   /note="Mitogen-activated protein kinase kinase kinase 13"
+FT                   /id="PRO_0000086264"
+FT   DOMAIN          168..409
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1..22
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          30..49
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          90..114
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          433..454
+FT                   /note="Leucine-zipper 1"
+FT   REGION          486..507
+FT                   /note="Leucine-zipper 2"
+FT   REGION          534..599
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          611..655
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          744..834
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          815..828
+FT                   /note="Acidic"
+FT                   /evidence="ECO:0000305"
+FT   REGION          846..908
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        96..114
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        560..582
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        846..863
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        864..887
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        279
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000250|UniProtKB:Q12852,
+FT                   ECO:0000255|PROSITE-ProRule:PRU00159, ECO:0000255|PROSITE-
+FT                   ProRule:PRU10027"
+FT   BINDING         174..182
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000250|UniProtKB:Q12852,
+FT                   ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         195
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000250|UniProtKB:Q60700,
+FT                   ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   VAR_SEQ         1..207
+FT                   /note="Missing (in isoform 4)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_036562"
+FT   VAR_SEQ         1..144
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_036563"
+FT   VAR_SEQ         122..128
+FT                   /note="RSGSGSG -> RYLGSAI (in isoform 5)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_036564"
+FT   VAR_SEQ         129..966
+FT                   /note="Missing (in isoform 5)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_036565"
+FT   VAR_SEQ         145..159
+FT                   /note="IGKAYSTDYKLQQQD -> MSYVECKCLQLENKN (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_036566"
+FT   VAR_SEQ         159..160
+FT                   /note="DT -> VF (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_036567"
+FT   VAR_SEQ         161..966
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_036568"
+FT   VAR_SEQ         208..220
+FT                   /note="LRKLKHPNIIAFK -> MYCGIQILALWER (in isoform 4)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_036569"
+FT   VARIANT         44
+FT                   /note="E -> K (in dbSNP:rs35266179)"
+FT                   /id="VAR_051640"
+FT   VARIANT         517
+FT                   /note="R -> G (in dbSNP:rs56408536)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040708"
+FT   VARIANT         712
+FT                   /note="E -> K (in dbSNP:rs56309231)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040709"
+FT   VARIANT         746
+FT                   /note="P -> L (in a metastatic melanoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040710"
+FT   VARIANT         915
+FT                   /note="R -> H (in dbSNP:rs3732576)"
+FT                   /id="VAR_030577"
+FT   MUTAGEN         195
+FT                   /note="K->A: Kinase inactive. Fails to activate
+FT                   NF-kappa-B."
+FT                   /evidence="ECO:0000269|PubMed:12492477"
+FT   CONFLICT        106
+FT                   /note="D -> G (in Ref. 2; BAG59505)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        230..232
+FT                   /note="CII -> YLY (in Ref. 6; CAA80915)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        268
+FT                   /note="N -> D (in Ref. 2; BAG59505)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        339..340
+FT                   /note="FG -> MV (in Ref. 6; CAA80915)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        508
+FT                   /note="E -> G (in Ref. 2; BAG64106)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        821
+FT                   /note="G -> R (in Ref. 2; BAG60014)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   966 AA;  108296 MW;  9687F38C8AB20AB1 CRC64;
+     MANFQEHLSC SSSPHLPFSE SKTFNGLQDE LTAMGNHPSP KLLEDQQEKG MVRTELIESV
+     HSPVTTTVLT SVSEDSRDQF ENSVLQLREH DESETAVSQG NSNTVDGEST SGTEDIKIQF
+     SRSGSGSGGF LEGLFGCLRP VWNIIGKAYS TDYKLQQQDT WEVPFEEISE LQWLGSGAQG
+     AVFLGKFRAE EVAIKKVREQ NETDIKHLRK LKHPNIIAFK GVCTQAPCYC IIMEYCAHGQ
+     LYEVLRAGRK ITPRLLVDWS TGIASGMNYL HLHKIIHRDL KSPNVLVTHT DAVKISDFGT
+     SKELSDKSTK MSFAGTVAWM APEVIRNEPV SEKVDIWSFG VVLWELLTGE IPYKDVDSSA
+     IIWGVGSNSL HLPVPSTCPD GFKILMKQTW QSKPRNRPSF RQTLMHLDIA SADVLATPQE
+     TYFKSQAEWR EEVKKHFEKI KSEGTCIHRL DEELIRRRRE ELRHALDIRE HYERKLERAN
+     NLYMELSAIM LQLEMREKEL IKREQAVEKK YPGTYKRHPV RPIIHPNAME KLMKRKGVPH
+     KSGMQTKRPD LLRSEGIPTT EVAPTASPLS GSPKMSTSSS KSRYRSKPRH RRGNSRGSHS
+     DFAAILKNQP AQENSPHPTY LHQAQSQYPS LHHHNSLQQQ YQQPPPAMSQ SHHPRLNMHG
+     QDIATCANNL RYFGPAAALR SPLSNHAQRQ LPGSSPDLIS TAMAADCWRS SEPDKGQAGP
+     WGCCQADAYD PCLQCRPEQY GSLDIPSAEP VGRSPDLSKS PAHNPLLENA QSSEKTEENE
+     FSGCRSESSL GTSHLGTPPA LPRKTRPLQK SGDDSSEEEE GEVDSEVEFP RRQRPHRCIS
+     SCQSYSTFSS ENFSVSDGEE GNTSDHSNSP DELADKLEDR LAEKLDDLLS QTPEIPIDIS
+     SHSDGLSDKE CAVRRVKTQM SLGKLCVEER GYENPMQFEE SDCDSSDGEC SDATVRTNKH
+     YSSATW
+//

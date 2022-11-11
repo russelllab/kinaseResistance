@@ -1,0 +1,477 @@
+ID   MKNK1_HUMAN             Reviewed;         465 AA.
+AC   Q9BUB5; D3DQ20; D3DQ21; O00312; Q5TC06; Q5TC07; Q6V0N6;
+DT   30-APR-2003, integrated into UniProtKB/Swiss-Prot.
+DT   01-JUN-2001, sequence version 1.
+DT   12-OCT-2022, entry version 198.
+DE   RecName: Full=MAP kinase-interacting serine/threonine-protein kinase 1;
+DE            EC=2.7.11.1 {ECO:0000269|PubMed:11463832, ECO:0000269|PubMed:9155018};
+DE   AltName: Full=MAP kinase signal-integrating kinase 1;
+DE            Short=MAPK signal-integrating kinase 1;
+DE            Short=Mnk1;
+GN   Name=MKNK1; Synonyms=MNK1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606 {ECO:0000312|EMBL:AAH02755.1};
+RN   [1] {ECO:0000305}
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2), FUNCTION, CATALYTIC ACTIVITY,
+RP   COFACTOR, PHOSPHORYLATION BY MAPK3/ERK1, AND ACTIVITY REGULATION.
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=9155018; DOI=10.1093/emboj/16.8.1921;
+RA   Fukunaga R., Hunter T.;
+RT   "MNK1, a new MAP kinase-activated protein kinase, isolated by a novel
+RT   expression screening method for identifying protein kinase substrates.";
+RL   EMBO J. 16:1921-1933(1997).
+RN   [2] {ECO:0000305}
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), FUNCTION, CATALYTIC ACTIVITY,
+RP   COFACTOR, PHOSPHORYLATION AT THR-250; THR-255 AND THR-385, AND MUTAGENESIS
+RP   OF LYS-78; ASP-232; THR-250; THR-255 AND THR-385.
+RC   TISSUE=T-cell;
+RX   PubMed=11463832; DOI=10.1128/mcb.21.16.5500-5511.2001;
+RA   Knauf U., Tschopp C., Gram H.;
+RT   "Negative regulation of protein translation by mitogen-activated protein
+RT   kinase-interacting kinases 1 and 2.";
+RL   Mol. Cell. Biol. 21:5500-5511(2001).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 3), FUNCTION, TISSUE SPECIFICITY,
+RP   PHOSPHORYLATION, AND SUBCELLULAR LOCATION.
+RX   PubMed=15350534; DOI=10.1016/j.yexcr.2004.06.006;
+RA   O'Loghlen A., Gonzalez V.M., Pineiro D., Perez-Morgado M.I., Salinas M.,
+RA   Martin M.E.;
+RT   "Identification and molecular characterization of Mnk1b, a splice variant
+RT   of human MAP kinase-interacting kinase Mnk1.";
+RL   Exp. Cell Res. 299:343-355(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16710414; DOI=10.1038/nature04727;
+RA   Gregory S.G., Barlow K.F., McLay K.E., Kaul R., Swarbreck D., Dunham A.,
+RA   Scott C.E., Howe K.L., Woodfine K., Spencer C.C.A., Jones M.C., Gillson C.,
+RA   Searle S., Zhou Y., Kokocinski F., McDonald L., Evans R., Phillips K.,
+RA   Atkinson A., Cooper R., Jones C., Hall R.E., Andrews T.D., Lloyd C.,
+RA   Ainscough R., Almeida J.P., Ambrose K.D., Anderson F., Andrew R.W.,
+RA   Ashwell R.I.S., Aubin K., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Beasley H., Bethel G., Bird C.P., Bray-Allen S., Brown J.Y., Brown A.J.,
+RA   Buckley D., Burton J., Bye J., Carder C., Chapman J.C., Clark S.Y.,
+RA   Clarke G., Clee C., Cobley V., Collier R.E., Corby N., Coville G.J.,
+RA   Davies J., Deadman R., Dunn M., Earthrowl M., Ellington A.G., Errington H.,
+RA   Frankish A., Frankland J., French L., Garner P., Garnett J., Gay L.,
+RA   Ghori M.R.J., Gibson R., Gilby L.M., Gillett W., Glithero R.J.,
+RA   Grafham D.V., Griffiths C., Griffiths-Jones S., Grocock R., Hammond S.,
+RA   Harrison E.S.I., Hart E., Haugen E., Heath P.D., Holmes S., Holt K.,
+RA   Howden P.J., Hunt A.R., Hunt S.E., Hunter G., Isherwood J., James R.,
+RA   Johnson C., Johnson D., Joy A., Kay M., Kershaw J.K., Kibukawa M.,
+RA   Kimberley A.M., King A., Knights A.J., Lad H., Laird G., Lawlor S.,
+RA   Leongamornlert D.A., Lloyd D.M., Loveland J., Lovell J., Lush M.J.,
+RA   Lyne R., Martin S., Mashreghi-Mohammadi M., Matthews L., Matthews N.S.W.,
+RA   McLaren S., Milne S., Mistry S., Moore M.J.F., Nickerson T., O'Dell C.N.,
+RA   Oliver K., Palmeiri A., Palmer S.A., Parker A., Patel D., Pearce A.V.,
+RA   Peck A.I., Pelan S., Phelps K., Phillimore B.J., Plumb R., Rajan J.,
+RA   Raymond C., Rouse G., Saenphimmachak C., Sehra H.K., Sheridan E.,
+RA   Shownkeen R., Sims S., Skuce C.D., Smith M., Steward C., Subramanian S.,
+RA   Sycamore N., Tracey A., Tromans A., Van Helmond Z., Wall M., Wallis J.M.,
+RA   White S., Whitehead S.L., Wilkinson J.E., Willey D.L., Williams H.,
+RA   Wilming L., Wray P.W., Wu Z., Coulson A., Vaudin M., Sulston J.E.,
+RA   Durbin R.M., Hubbard T., Wooster R., Dunham I., Carter N.P., McVean G.,
+RA   Ross M.T., Harrow J., Olson M.V., Beck S., Rogers J., Bentley D.R.;
+RT   "The DNA sequence and biological annotation of human chromosome 1.";
+RL   Nature 441:315-321(2006).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6] {ECO:0000305}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Placenta;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [7] {ECO:0000305}
+RP   FUNCTION, AND INTERACTION WITH EIF4G1 AND EIF4G2.
+RX   PubMed=9878069; DOI=10.1093/emboj/18.1.270;
+RA   Pyronnet S., Imataka H., Gingras A.-C., Fukunaga R., Hunter T.,
+RA   Sonenberg N.;
+RT   "Human eukaryotic translation initiation factor 4G (eIF4G) recruits mnk1 to
+RT   phosphorylate eIF4E.";
+RL   EMBO J. 18:270-279(1999).
+RN   [8]
+RP   PHOSPHORYLATION BY PAK2.
+RX   PubMed=15234964; DOI=10.1074/jbc.m407337200;
+RA   Orton K.C., Ling J., Waskiewicz A.J., Cooper J.A., Merrick W.C.,
+RA   Korneeva N.L., Rhoads R.E., Sonenberg N., Traugh J.A.;
+RT   "Phosphorylation of Mnk1 by caspase-activated Pak2/gamma-PAK inhibits
+RT   phosphorylation and interaction of eIF4G with Mnk.";
+RL   J. Biol. Chem. 279:38649-38657(2004).
+RN   [9]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-460, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [10]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-39; SER-221; SER-226 AND
+RP   THR-385, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [11]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLN-49; VAL-158; ASN-308 AND GLN-446.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: May play a role in the response to environmental stress and
+CC       cytokines. Appears to regulate translation by phosphorylating EIF4E,
+CC       thus increasing the affinity of this protein for the 7-methylguanosine-
+CC       containing mRNA cap. {ECO:0000269|PubMed:11463832,
+CC       ECO:0000269|PubMed:15350534, ECO:0000269|PubMed:9155018,
+CC       ECO:0000269|PubMed:9878069}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC         Evidence={ECO:0000269|PubMed:11463832, ECO:0000269|PubMed:9155018};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1; Evidence={ECO:0000269|PubMed:11463832,
+CC         ECO:0000269|PubMed:9155018};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000269|PubMed:11463832, ECO:0000269|PubMed:9155018};
+CC   -!- ACTIVITY REGULATION: Phosphorylated and activated by the p38 kinases
+CC       and kinases in the Erk pathway. {ECO:0000269|PubMed:9155018}.
+CC   -!- SUBUNIT: Interacts with the C-terminal regions of EIF4G1 and EIF4G2.
+CC       Also binds to dephosphorylated ERK1 and ERK2, and to the p38 kinases.
+CC       {ECO:0000269|PubMed:9878069}.
+CC   -!- INTERACTION:
+CC       Q9BUB5; P54253: ATXN1; NbExp=6; IntAct=EBI-73837, EBI-930964;
+CC       Q9BUB5; Q03060-25: CREM; NbExp=3; IntAct=EBI-73837, EBI-12884642;
+CC       Q9BUB5; P42858: HTT; NbExp=18; IntAct=EBI-73837, EBI-466029;
+CC       Q9BUB5; P28482: MAPK1; NbExp=10; IntAct=EBI-73837, EBI-959949;
+CC       Q9BUB5; Q16539: MAPK14; NbExp=5; IntAct=EBI-73837, EBI-73946;
+CC       Q9BUB5; Q96CV9: OPTN; NbExp=3; IntAct=EBI-73837, EBI-748974;
+CC   -!- SUBCELLULAR LOCATION: [Isoform 2]: Cytoplasm.
+CC   -!- SUBCELLULAR LOCATION: [Isoform 3]: Cytoplasm. Nucleus.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1 {ECO:0000269|PubMed:11463832};
+CC         IsoId=Q9BUB5-1; Sequence=Displayed;
+CC       Name=2 {ECO:0000269|PubMed:9155018}; Synonyms=MNK1a;
+CC         IsoId=Q9BUB5-2; Sequence=VSP_007352;
+CC       Name=3; Synonyms=MNK1b;
+CC         IsoId=Q9BUB5-3; Sequence=VSP_007352, VSP_017515;
+CC   -!- TISSUE SPECIFICITY: Ubiquitous. {ECO:0000269|PubMed:15350534}.
+CC   -!- PTM: Dual phosphorylation of Thr-250 and Thr-255 activates the kinase.
+CC       Phosphorylation of Thr-385 activates the kinase. MAPK3/ERK1 is one of
+CC       the kinases which activate MKNK1/MNK1. Phosphorylation by PAK2 leads to
+CC       a reduced phosphorylation of EIF4G1. {ECO:0000269|PubMed:11463832,
+CC       ECO:0000269|PubMed:15234964, ECO:0000269|PubMed:15350534,
+CC       ECO:0000269|PubMed:9155018}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CAMK Ser/Thr
+CC       protein kinase family. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AB000409; BAA19885.1; -; mRNA.
+DR   EMBL; AY355461; AAQ84219.1; -; mRNA.
+DR   EMBL; AL136373; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471059; EAX06900.1; -; Genomic_DNA.
+DR   EMBL; CH471059; EAX06902.1; -; Genomic_DNA.
+DR   EMBL; CH471059; EAX06904.1; -; Genomic_DNA.
+DR   EMBL; CH471059; EAX06905.1; -; Genomic_DNA.
+DR   EMBL; BC002755; AAH02755.1; -; mRNA.
+DR   RefSeq; NP_001129025.1; NM_001135553.2.
+DR   RefSeq; NP_003675.2; NM_003684.5.
+DR   RefSeq; NP_945324.1; NM_198973.3.
+DR   RefSeq; XP_006711063.1; XM_006711000.1.
+DR   RefSeq; XP_016858148.1; XM_017002659.1.
+DR   PDB; 2HW6; X-ray; 2.50 A; A/B=37-382.
+DR   PDB; 2Y9Q; X-ray; 1.55 A; B=434-451.
+DR   PDB; 5WVD; X-ray; 3.00 A; A/B=37-382.
+DR   PDBsum; 2HW6; -.
+DR   PDBsum; 2Y9Q; -.
+DR   PDBsum; 5WVD; -.
+DR   AlphaFoldDB; Q9BUB5; -.
+DR   SMR; Q9BUB5; -.
+DR   BioGRID; 114138; 61.
+DR   CORUM; Q9BUB5; -.
+DR   ELM; Q9BUB5; -.
+DR   IntAct; Q9BUB5; 63.
+DR   MINT; Q9BUB5; -.
+DR   STRING; 9606.ENSP00000361014; -.
+DR   BindingDB; Q9BUB5; -.
+DR   ChEMBL; CHEMBL4718; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; Q9BUB5; -.
+DR   GuidetoPHARMACOLOGY; 2104; -.
+DR   iPTMnet; Q9BUB5; -.
+DR   MetOSite; Q9BUB5; -.
+DR   PhosphoSitePlus; Q9BUB5; -.
+DR   BioMuta; MKNK1; -.
+DR   DMDM; 30316115; -.
+DR   EPD; Q9BUB5; -.
+DR   jPOST; Q9BUB5; -.
+DR   MassIVE; Q9BUB5; -.
+DR   MaxQB; Q9BUB5; -.
+DR   PaxDb; Q9BUB5; -.
+DR   PeptideAtlas; Q9BUB5; -.
+DR   PRIDE; Q9BUB5; -.
+DR   ProteomicsDB; 79072; -. [Q9BUB5-1]
+DR   ProteomicsDB; 79073; -. [Q9BUB5-2]
+DR   ProteomicsDB; 79074; -. [Q9BUB5-3]
+DR   Antibodypedia; 32808; 569 antibodies from 32 providers.
+DR   DNASU; 8569; -.
+DR   Ensembl; ENST00000649800.1; ENSP00000498083.1; ENSG00000079277.22. [Q9BUB5-1]
+DR   Ensembl; ENST00000650026.1; ENSP00000497380.1; ENSG00000079277.22. [Q9BUB5-3]
+DR   Ensembl; ENST00000650508.1; ENSP00000498143.1; ENSG00000079277.22. [Q9BUB5-2]
+DR   GeneID; 8569; -.
+DR   KEGG; hsa:8569; -.
+DR   UCSC; uc001cqb.5; human. [Q9BUB5-1]
+DR   CTD; 8569; -.
+DR   DisGeNET; 8569; -.
+DR   GeneCards; MKNK1; -.
+DR   HGNC; HGNC:7110; MKNK1.
+DR   HPA; ENSG00000079277; Tissue enhanced (pancreas).
+DR   MIM; 606724; gene.
+DR   neXtProt; NX_Q9BUB5; -.
+DR   OpenTargets; ENSG00000079277; -.
+DR   PharmGKB; PA30829; -.
+DR   VEuPathDB; HostDB:ENSG00000079277; -.
+DR   eggNOG; KOG0607; Eukaryota.
+DR   GeneTree; ENSGT00940000162886; -.
+DR   InParanoid; Q9BUB5; -.
+DR   OrthoDB; 669799at2759; -.
+DR   PhylomeDB; Q9BUB5; -.
+DR   TreeFam; TF314050; -.
+DR   PathwayCommons; Q9BUB5; -.
+DR   Reactome; R-HSA-1295596; Spry regulation of FGF signaling.
+DR   SignaLink; Q9BUB5; -.
+DR   SIGNOR; Q9BUB5; -.
+DR   BioGRID-ORCS; 8569; 137 hits in 1116 CRISPR screens.
+DR   ChiTaRS; MKNK1; human.
+DR   EvolutionaryTrace; Q9BUB5; -.
+DR   GeneWiki; MKNK1; -.
+DR   GenomeRNAi; 8569; -.
+DR   Pharos; Q9BUB5; Tchem.
+DR   PRO; PR:Q9BUB5; -.
+DR   Proteomes; UP000005640; Chromosome 1.
+DR   RNAct; Q9BUB5; protein.
+DR   Bgee; ENSG00000079277; Expressed in body of pancreas and 205 other tissues.
+DR   ExpressionAtlas; Q9BUB5; baseline and differential.
+DR   Genevisible; Q9BUB5; HS.
+DR   GO; GO:0005737; C:cytoplasm; IBA:GO_Central.
+DR   GO; GO:0005829; C:cytosol; TAS:Reactome.
+DR   GO; GO:0005654; C:nucleoplasm; IDA:HPA.
+DR   GO; GO:0005634; C:nucleus; IBA:GO_Central.
+DR   GO; GO:0005524; F:ATP binding; IDA:UniProtKB.
+DR   GO; GO:0009931; F:calcium-dependent protein serine/threonine kinase activity; IBA:GO_Central.
+DR   GO; GO:0005516; F:calmodulin binding; IBA:GO_Central.
+DR   GO; GO:0004683; F:calmodulin-dependent protein kinase activity; IBA:GO_Central.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0035556; P:intracellular signal transduction; IDA:UniProtKB.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IDA:BHF-UCL.
+DR   GO; GO:0046777; P:protein autophosphorylation; IBA:GO_Central.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0006417; P:regulation of translation; IEA:UniProtKB-KW.
+DR   IDEAL; IID00679; -.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 2.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Cytoplasm; Kinase;
+KW   Magnesium; Metal-binding; Nucleotide-binding; Nucleus; Phosphoprotein;
+KW   Reference proteome; Serine/threonine-protein kinase; Transferase;
+KW   Translation regulation.
+FT   CHAIN           1..465
+FT                   /note="MAP kinase-interacting serine/threonine-protein
+FT                   kinase 1"
+FT                   /id="PRO_0000086334"
+FT   DOMAIN          49..374
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1..40
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          185..204
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          446..465
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        211
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         55..63
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         78
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000269|PubMed:11463832"
+FT   MOD_RES         39
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         221
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         226
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         250
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000269|PubMed:11463832"
+FT   MOD_RES         255
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000269|PubMed:11463832"
+FT   MOD_RES         385
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000269|PubMed:11463832,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         460
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18669648"
+FT   VAR_SEQ         165..205
+FT                   /note="Missing (in isoform 2 and isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:15350534,
+FT                   ECO:0000303|PubMed:9155018"
+FT                   /id="VSP_007352"
+FT   VAR_SEQ         377..465
+FT                   /note="QAPEKGLPTPQVLQRNSSTMDLTLFAAEAIALNRQLSQHEENELAEEPEALA
+FT                   DGLCSMKLSPPCKSRLARRRALAQAGRGEDRSPPTAL -> EQQHNGPDALRS (in
+FT                   isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:15350534"
+FT                   /id="VSP_017515"
+FT   VARIANT         49
+FT                   /note="K -> Q (in dbSNP:rs56351860)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040801"
+FT   VARIANT         158
+FT                   /note="L -> V (in dbSNP:rs56408722)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040802"
+FT   VARIANT         308
+FT                   /note="D -> N (in dbSNP:rs55791614)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040803"
+FT   VARIANT         446
+FT                   /note="R -> Q (in dbSNP:rs34881418)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040804"
+FT   MUTAGEN         78
+FT                   /note="K->M: Loss of kinase activity; when associated with
+FT                   D-232."
+FT                   /evidence="ECO:0000269|PubMed:11463832"
+FT   MUTAGEN         232
+FT                   /note="D->A: Loss of kinase activity; when associated with
+FT                   K-78."
+FT                   /evidence="ECO:0000269|PubMed:11463832"
+FT   MUTAGEN         250
+FT                   /note="T->A: Loss of kinase activity; when associated with
+FT                   T-255."
+FT                   /evidence="ECO:0000269|PubMed:11463832"
+FT   MUTAGEN         255
+FT                   /note="T->A: Loss of kinase activity; when associated with
+FT                   T-250."
+FT                   /evidence="ECO:0000269|PubMed:11463832"
+FT   MUTAGEN         385
+FT                   /note="T->D: Constitutively active."
+FT                   /evidence="ECO:0000269|PubMed:11463832"
+FT   HELIX           44..46
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   STRAND          48..57
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   STRAND          59..68
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   TURN            69..71
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   STRAND          74..81
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   HELIX           87..101
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   STRAND          110..115
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   STRAND          117..125
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   HELIX           132..139
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   HELIX           144..163
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   HELIX           214..216
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   STRAND          217..220
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   STRAND          227..230
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   STRAND          271..274
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   HELIX           277..296
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   HELIX           337..340
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   STRAND          341..343
+FT                   /evidence="ECO:0007829|PDB:5WVD"
+FT   HELIX           345..354
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   TURN            359..361
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   HELIX           365..370
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   TURN            372..375
+FT                   /evidence="ECO:0007829|PDB:2HW6"
+FT   HELIX           439..441
+FT                   /evidence="ECO:0007829|PDB:2Y9Q"
+FT   HELIX           443..449
+FT                   /evidence="ECO:0007829|PDB:2Y9Q"
+SQ   SEQUENCE   465 AA;  51342 MW;  CAE225C35DCB2B43 CRC64;
+     MVSSQKLEKP IEMGSSEPLP IADGDRRRKK KRRGRATDSL PGKFEDMYKL TSELLGEGAY
+     AKVQGAVSLQ NGKEYAVKII EKQAGHSRSR VFREVETLYQ CQGNKNILEL IEFFEDDTRF
+     YLVFEKLQGG SILAHIQKQK HFNEREASRV VRDVAAALDF LHTKDKVSLC HLGWSAMAPS
+     GLTAAPTSLG SSDPPTSASQ VAGTTGIAHR DLKPENILCE SPEKVSPVKI CDFDLGSGMK
+     LNNSCTPITT PELTTPCGSA EYMAPEVVEV FTDQATFYDK RCDLWSLGVV LYIMLSGYPP
+     FVGHCGADCG WDRGEVCRVC QNKLFESIQE GKYEFPDKDW AHISSEAKDL ISKLLVRDAK
+     QRLSAAQVLQ HPWVQGQAPE KGLPTPQVLQ RNSSTMDLTL FAAEAIALNR QLSQHEENEL
+     AEEPEALADG LCSMKLSPPC KSRLARRRAL AQAGRGEDRS PPTAL
+//

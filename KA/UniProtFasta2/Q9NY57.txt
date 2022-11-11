@@ -1,0 +1,244 @@
+ID   ST32B_HUMAN             Reviewed;         414 AA.
+AC   Q9NY57; Q6UXH3; Q8IY14;
+DT   18-APR-2006, integrated into UniProtKB/Swiss-Prot.
+DT   01-OCT-2000, sequence version 1.
+DT   03-AUG-2022, entry version 157.
+DE   RecName: Full=Serine/threonine-protein kinase 32B;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Yet another novel kinase 2;
+GN   Name=STK32B {ECO:0000312|EMBL:AAH38238.1}; Synonyms=YANK2;
+GN   ORFNames=UNQ3003/PRO9744;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1] {ECO:0000305, ECO:0000312|EMBL:CAB76471.1}
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RC   TISSUE=Brain {ECO:0000312|EMBL:CAB76471.1};
+RX   PubMed=10700184; DOI=10.1038/73508;
+RA   Ruiz-Perez V.L., Ide S.E., Strom T.M., Lorenz B., Wilson D., Woods K.,
+RA   King L., Francomano C., Freisinger P., Spranger S., Marino B.,
+RA   Dallapiccola B., Wright M., Meitinger T., Polymeropoulos M.H., Goodship J.;
+RT   "Mutations in a new gene in Ellis-van Creveld syndrome and Weyers
+RT   acrodental dysostosis.";
+RL   Nat. Genet. 24:283-286(2000).
+RN   [2] {ECO:0000305, ECO:0000312|EMBL:AAQ88719.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2).
+RX   PubMed=12975309; DOI=10.1101/gr.1293003;
+RA   Clark H.F., Gurney A.L., Abaya E., Baker K., Baldwin D.T., Brush J.,
+RA   Chen J., Chow B., Chui C., Crowley C., Currell B., Deuel B., Dowd P.,
+RA   Eaton D., Foster J.S., Grimaldi C., Gu Q., Hass P.E., Heldens S., Huang A.,
+RA   Kim H.S., Klimowski L., Jin Y., Johnson S., Lee J., Lewis L., Liao D.,
+RA   Mark M.R., Robbie E., Sanchez C., Schoenfeld J., Seshagiri S., Simmons L.,
+RA   Singh J., Smith V., Stinson J., Vagts A., Vandlen R.L., Watanabe C.,
+RA   Wieand D., Woods K., Xie M.-H., Yansura D.G., Yi S., Yu G., Yuan J.,
+RA   Zhang M., Zhang Z., Goddard A.D., Wood W.I., Godowski P.J., Gray A.M.;
+RT   "The secreted protein discovery initiative (SPDI), a large-scale effort to
+RT   identify novel human secreted and transmembrane proteins: a bioinformatics
+RT   assessment.";
+RL   Genome Res. 13:2265-2270(2003).
+RN   [3] {ECO:0000305, ECO:0000312|EMBL:AAH38238.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1), AND VARIANT GLY-198.
+RC   TISSUE=Brain {ECO:0000312|EMBL:AAH38238.1};
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [4] {ECO:0000305}
+RP   NOMENCLATURE.
+RX   PubMed=12471243; DOI=10.1126/science.1075762;
+RA   Manning G., Whyte D.B., Martinez R., Hunter T., Sudarsanam S.;
+RT   "The protein kinase complement of the human genome.";
+RL   Science 298:1912-1934(2002).
+RN   [5]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLU-35; GLY-198; HIS-244; VAL-310 AND
+RP   THR-342.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC         Evidence={ECO:0000250|UniProtKB:Q60592};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1; Evidence={ECO:0000250|UniProtKB:Q60592};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000250|UniProtKB:Q60592};
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1 {ECO:0000269|PubMed:10700184, ECO:0000269|PubMed:15489334};
+CC         IsoId=Q9NY57-1; Sequence=Displayed;
+CC       Name=2 {ECO:0000269|PubMed:12975309};
+CC         IsoId=Q9NY57-2; Sequence=VSP_051997;
+CC   -!- MISCELLANEOUS: [Isoform 2]: It is unsure whether Met-1 or Met-3 is the
+CC       initiator. {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Ser/Thr protein
+CC       kinase family. {ECO:0000255|PROSITE-ProRule:PRU00159}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAQ88719.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AJ250839; CAB76471.1; -; mRNA.
+DR   EMBL; AY358353; AAQ88719.1; ALT_INIT; mRNA.
+DR   EMBL; BC038238; AAH38238.1; -; mRNA.
+DR   CCDS; CCDS3380.1; -. [Q9NY57-1]
+DR   CCDS; CCDS77895.1; -. [Q9NY57-2]
+DR   RefSeq; NP_001293011.1; NM_001306082.1. [Q9NY57-2]
+DR   RefSeq; NP_060871.1; NM_018401.2. [Q9NY57-1]
+DR   AlphaFoldDB; Q9NY57; -.
+DR   SMR; Q9NY57; -.
+DR   BioGRID; 120631; 1.
+DR   IntAct; Q9NY57; 15.
+DR   MINT; Q9NY57; -.
+DR   STRING; 9606.ENSP00000282908; -.
+DR   BindingDB; Q9NY57; -.
+DR   ChEMBL; CHEMBL5912; -.
+DR   DrugCentral; Q9NY57; -.
+DR   iPTMnet; Q9NY57; -.
+DR   PhosphoSitePlus; Q9NY57; -.
+DR   BioMuta; STK32B; -.
+DR   DMDM; 74761811; -.
+DR   MassIVE; Q9NY57; -.
+DR   PaxDb; Q9NY57; -.
+DR   PeptideAtlas; Q9NY57; -.
+DR   PRIDE; Q9NY57; -.
+DR   ProteomicsDB; 83178; -. [Q9NY57-1]
+DR   ProteomicsDB; 83179; -. [Q9NY57-2]
+DR   Antibodypedia; 9281; 125 antibodies from 23 providers.
+DR   DNASU; 55351; -.
+DR   Ensembl; ENST00000282908.10; ENSP00000282908.5; ENSG00000152953.13. [Q9NY57-1]
+DR   Ensembl; ENST00000510398.1; ENSP00000420984.1; ENSG00000152953.13. [Q9NY57-2]
+DR   GeneID; 55351; -.
+DR   KEGG; hsa:55351; -.
+DR   MANE-Select; ENST00000282908.10; ENSP00000282908.5; NM_018401.3; NP_060871.1.
+DR   UCSC; uc003gih.2; human. [Q9NY57-1]
+DR   CTD; 55351; -.
+DR   DisGeNET; 55351; -.
+DR   GeneCards; STK32B; -.
+DR   HGNC; HGNC:14217; STK32B.
+DR   HPA; ENSG00000152953; Tissue enhanced (kidney, lymphoid tissue).
+DR   neXtProt; NX_Q9NY57; -.
+DR   OpenTargets; ENSG00000152953; -.
+DR   PharmGKB; PA128394683; -.
+DR   VEuPathDB; HostDB:ENSG00000152953; -.
+DR   eggNOG; KOG0598; Eukaryota.
+DR   GeneTree; ENSGT00940000160490; -.
+DR   HOGENOM; CLU_000288_63_5_1; -.
+DR   InParanoid; Q9NY57; -.
+DR   OMA; KQRIIHR; -.
+DR   PhylomeDB; Q9NY57; -.
+DR   TreeFam; TF313395; -.
+DR   PathwayCommons; Q9NY57; -.
+DR   SignaLink; Q9NY57; -.
+DR   BioGRID-ORCS; 55351; 9 hits in 1105 CRISPR screens.
+DR   ChiTaRS; STK32B; human.
+DR   GenomeRNAi; 55351; -.
+DR   Pharos; Q9NY57; Tchem.
+DR   PRO; PR:Q9NY57; -.
+DR   Proteomes; UP000005640; Chromosome 4.
+DR   RNAct; Q9NY57; protein.
+DR   Bgee; ENSG00000152953; Expressed in secondary oocyte and 109 other tissues.
+DR   ExpressionAtlas; Q9NY57; baseline and differential.
+DR   Genevisible; Q9NY57; HS.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IBA:GO_Central.
+DR   GO; GO:0035556; P:intracellular signal transduction; IBA:GO_Central.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IBA:GO_Central.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   2: Evidence at transcript level;
+KW   Alternative splicing; ATP-binding; Kinase; Magnesium; Metal-binding;
+KW   Nucleotide-binding; Reference proteome; Serine/threonine-protein kinase;
+KW   Transferase.
+FT   CHAIN           1..414
+FT                   /note="Serine/threonine-protein kinase 32B"
+FT                   /id="PRO_0000232413"
+FT   DOMAIN          23..283
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          374..396
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        146
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000250|UniProtKB:Q60592,
+FT                   ECO:0000255|PROSITE-ProRule:PRU00159, ECO:0000255|PROSITE-
+FT                   ProRule:PRU10027"
+FT   BINDING         29..37
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000250|UniProtKB:Q60592,
+FT                   ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         52
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000250|UniProtKB:Q60592,
+FT                   ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   VAR_SEQ         1..47
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:12975309"
+FT                   /id="VSP_051997"
+FT   VARIANT         35
+FT                   /note="G -> E (in a metastatic melanoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041166"
+FT   VARIANT         198
+FT                   /note="R -> G (in dbSNP:rs3733182)"
+FT                   /evidence="ECO:0000269|PubMed:15489334,
+FT                   ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_025899"
+FT   VARIANT         244
+FT                   /note="R -> H (in dbSNP:rs35207488)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041167"
+FT   VARIANT         310
+FT                   /note="D -> V (in dbSNP:rs56259884)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041168"
+FT   VARIANT         342
+FT                   /note="K -> T (in dbSNP:rs55961955)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041169"
+SQ   SEQUENCE   414 AA;  47883 MW;  8FCD58A67EF09B0E CRC64;
+     MGGNHSHKPP VFDENEEVNF DHFQILRAIG KGSFGKVCIV QKRDTKKMYA MKYMNKQKCI
+     ERDEVRNVFR ELQIMQGLEH PFLVNLWYSF QDEEDMFMVV DLLLGGDLRY HLQQNVHFTE
+     GTVKLYICEL ALALEYLQRY HIIHRDIKPD NILLDEHGHV HITDFNIATV VKGAERASSM
+     AGTKPYMAPE VFQVYMDRGP GYSYPVDWWS LGITAYELLR GWRPYEIHSV TPIDEILNMF
+     KVERVHYSST WCKGMVALLR KLLTKDPESR VSSLHDIQSV PYLADMNWDA VFKKALMPGF
+     VPNKGRLNCD PTFELEEMIL ESKPLHKKKK RLAKNRSRDG TKDSCPLNGH LQHCLETVRE
+     EFIIFNREKL RRQQGQGSQL LDTDSRGGGQ AQSKLQDGCN NNLLTHTCTR GCSS
+//

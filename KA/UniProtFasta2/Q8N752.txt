@@ -1,0 +1,270 @@
+ID   KC1AL_HUMAN             Reviewed;         337 AA.
+AC   Q8N752; Q5T2N2;
+DT   10-MAY-2004, integrated into UniProtKB/Swiss-Prot.
+DT   22-JUL-2008, sequence version 2.
+DT   12-OCT-2022, entry version 159.
+DE   RecName: Full=Casein kinase I isoform alpha-like;
+DE            Short=CKI-alpha-like;
+DE            EC=2.7.11.1;
+DE   AltName: Full=CK1;
+GN   Name=CSNK1A1L;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15057823; DOI=10.1038/nature02379;
+RA   Dunham A., Matthews L.H., Burton J., Ashurst J.L., Howe K.L.,
+RA   Ashcroft K.J., Beare D.M., Burford D.C., Hunt S.E., Griffiths-Jones S.,
+RA   Jones M.C., Keenan S.J., Oliver K., Scott C.E., Ainscough R., Almeida J.P.,
+RA   Ambrose K.D., Andrews D.T., Ashwell R.I.S., Babbage A.K., Bagguley C.L.,
+RA   Bailey J., Bannerjee R., Barlow K.F., Bates K., Beasley H., Bird C.P.,
+RA   Bray-Allen S., Brown A.J., Brown J.Y., Burrill W., Carder C., Carter N.P.,
+RA   Chapman J.C., Clamp M.E., Clark S.Y., Clarke G., Clee C.M., Clegg S.C.,
+RA   Cobley V., Collins J.E., Corby N., Coville G.J., Deloukas P., Dhami P.,
+RA   Dunham I., Dunn M., Earthrowl M.E., Ellington A.G., Faulkner L.,
+RA   Frankish A.G., Frankland J., French L., Garner P., Garnett J.,
+RA   Gilbert J.G.R., Gilson C.J., Ghori J., Grafham D.V., Gribble S.M.,
+RA   Griffiths C., Hall R.E., Hammond S., Harley J.L., Hart E.A., Heath P.D.,
+RA   Howden P.J., Huckle E.J., Hunt P.J., Hunt A.R., Johnson C., Johnson D.,
+RA   Kay M., Kimberley A.M., King A., Laird G.K., Langford C.J., Lawlor S.,
+RA   Leongamornlert D.A., Lloyd D.M., Lloyd C., Loveland J.E., Lovell J.,
+RA   Martin S., Mashreghi-Mohammadi M., McLaren S.J., McMurray A., Milne S.,
+RA   Moore M.J.F., Nickerson T., Palmer S.A., Pearce A.V., Peck A.I., Pelan S.,
+RA   Phillimore B., Porter K.M., Rice C.M., Searle S., Sehra H.K., Shownkeen R.,
+RA   Skuce C.D., Smith M., Steward C.A., Sycamore N., Tester J., Thomas D.W.,
+RA   Tracey A., Tromans A., Tubby B., Wall M., Wallis J.M., West A.P.,
+RA   Whitehead S.L., Willey D.L., Wilming L., Wray P.W., Wright M.W., Young L.,
+RA   Coulson A., Durbin R.M., Hubbard T., Sulston J.E., Beck S., Bentley D.R.,
+RA   Rogers J., Ross M.T.;
+RT   "The DNA sequence and analysis of human chromosome 13.";
+RL   Nature 428:522-528(2004).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA], AND VARIANT GLU-42.
+RC   TISSUE=Testis;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [4]
+RP   VARIANT [LARGE SCALE ANALYSIS] GLN-21.
+RX   PubMed=16959974; DOI=10.1126/science.1133427;
+RA   Sjoeblom T., Jones S., Wood L.D., Parsons D.W., Lin J., Barber T.D.,
+RA   Mandelker D., Leary R.J., Ptak J., Silliman N., Szabo S., Buckhaults P.,
+RA   Farrell C., Meeh P., Markowitz S.D., Willis J., Dawson D., Willson J.K.V.,
+RA   Gazdar A.F., Hartigan J., Wu L., Liu C., Parmigiani G., Park B.H.,
+RA   Bachman K.E., Papadopoulos N., Vogelstein B., Kinzler K.W.,
+RA   Velculescu V.E.;
+RT   "The consensus coding sequences of human breast and colorectal cancers.";
+RL   Science 314:268-274(2006).
+RN   [5]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLY-5; TRP-21; SER-170; LYS-177; LEU-220;
+RP   ASN-230 AND THR-257.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Casein kinases are operationally defined by their
+CC       preferential utilization of acidic proteins such as caseins as
+CC       substrates. It can phosphorylate a large number of proteins.
+CC       Participates in Wnt signaling (By similarity). {ECO:0000250}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CK1 Ser/Thr
+CC       protein kinase family. Casein kinase I subfamily. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AL391383; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471075; EAX08587.1; -; Genomic_DNA.
+DR   EMBL; BC028723; AAH28723.1; -; mRNA.
+DR   CCDS; CCDS9363.1; -.
+DR   RefSeq; NP_660204.2; NM_145203.5.
+DR   AlphaFoldDB; Q8N752; -.
+DR   SMR; Q8N752; -.
+DR   BioGRID; 125755; 58.
+DR   IntAct; Q8N752; 18.
+DR   MINT; Q8N752; -.
+DR   STRING; 9606.ENSP00000369126; -.
+DR   BindingDB; Q8N752; -.
+DR   ChEMBL; CHEMBL5520; -.
+DR   DrugCentral; Q8N752; -.
+DR   iPTMnet; Q8N752; -.
+DR   PhosphoSitePlus; Q8N752; -.
+DR   BioMuta; CSNK1A1L; -.
+DR   DMDM; 212286065; -.
+DR   jPOST; Q8N752; -.
+DR   MassIVE; Q8N752; -.
+DR   MaxQB; Q8N752; -.
+DR   PaxDb; Q8N752; -.
+DR   PeptideAtlas; Q8N752; -.
+DR   PRIDE; Q8N752; -.
+DR   ProteomicsDB; 72263; -.
+DR   Antibodypedia; 42131; 183 antibodies from 25 providers.
+DR   DNASU; 122011; -.
+DR   Ensembl; ENST00000379800.4; ENSP00000369126.3; ENSG00000180138.7.
+DR   GeneID; 122011; -.
+DR   KEGG; hsa:122011; -.
+DR   MANE-Select; ENST00000379800.4; ENSP00000369126.3; NM_145203.6; NP_660204.2.
+DR   UCSC; uc001uwm.2; human.
+DR   CTD; 122011; -.
+DR   DisGeNET; 122011; -.
+DR   GeneCards; CSNK1A1L; -.
+DR   HGNC; HGNC:20289; CSNK1A1L.
+DR   HPA; ENSG00000180138; Tissue enriched (testis).
+DR   neXtProt; NX_Q8N752; -.
+DR   OpenTargets; ENSG00000180138; -.
+DR   PharmGKB; PA134917108; -.
+DR   VEuPathDB; HostDB:ENSG00000180138; -.
+DR   eggNOG; KOG1163; Eukaryota.
+DR   GeneTree; ENSGT00940000164967; -.
+DR   HOGENOM; CLU_019279_2_7_1; -.
+DR   InParanoid; Q8N752; -.
+DR   OMA; WLIELVH; -.
+DR   OrthoDB; 614259at2759; -.
+DR   PhylomeDB; Q8N752; -.
+DR   TreeFam; TF354246; -.
+DR   PathwayCommons; Q8N752; -.
+DR   SignaLink; Q8N752; -.
+DR   SIGNOR; Q8N752; -.
+DR   BioGRID-ORCS; 122011; 6 hits in 1075 CRISPR screens.
+DR   GenomeRNAi; 122011; -.
+DR   Pharos; Q8N752; Tdark.
+DR   PRO; PR:Q8N752; -.
+DR   Proteomes; UP000005640; Chromosome 13.
+DR   RNAct; Q8N752; protein.
+DR   Bgee; ENSG00000180138; Expressed in blood and 11 other tissues.
+DR   GO; GO:0005737; C:cytoplasm; IBA:GO_Central.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0005634; C:nucleus; IBA:GO_Central.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IBA:GO_Central.
+DR   GO; GO:0090090; P:negative regulation of canonical Wnt signaling pathway; IBA:GO_Central.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IBA:GO_Central.
+DR   GO; GO:0007165; P:signal transduction; IBA:GO_Central.
+DR   GO; GO:0016055; P:Wnt signaling pathway; IEA:UniProtKB-KW.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   2: Evidence at transcript level;
+KW   Acetylation; ATP-binding; Cytoplasm; Kinase; Nucleotide-binding;
+KW   Reference proteome; Serine/threonine-protein kinase; Transferase;
+KW   Wnt signaling pathway.
+FT   CHAIN           1..337
+FT                   /note="Casein kinase I isoform alpha-like"
+FT                   /id="PRO_0000192830"
+FT   DOMAIN          17..285
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          309..337
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        309..328
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        136
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         23..31
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         46
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         8
+FT                   /note="N6-acetyllysine"
+FT                   /evidence="ECO:0000250|UniProtKB:P48729"
+FT   VARIANT         5
+FT                   /note="S -> G (in dbSNP:rs56224973)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042074"
+FT   VARIANT         21
+FT                   /note="R -> Q (in a colorectal cancer sample; somatic
+FT                   mutation; dbSNP:rs373362769)"
+FT                   /evidence="ECO:0000269|PubMed:16959974"
+FT                   /id="VAR_036450"
+FT   VARIANT         21
+FT                   /note="R -> W (in dbSNP:rs56158728)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042075"
+FT   VARIANT         42
+FT                   /note="D -> E (in dbSNP:rs9576175)"
+FT                   /evidence="ECO:0000269|PubMed:15489334"
+FT                   /id="VAR_042076"
+FT   VARIANT         170
+FT                   /note="R -> S (in dbSNP:rs17773251)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_034047"
+FT   VARIANT         177
+FT                   /note="E -> K (in dbSNP:rs17054882)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042077"
+FT   VARIANT         220
+FT                   /note="P -> L (in dbSNP:rs56252856)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042078"
+FT   VARIANT         230
+FT                   /note="K -> N (in dbSNP:rs56252523)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042079"
+FT   VARIANT         257
+FT                   /note="A -> T (in dbSNP:rs55895045)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042080"
+FT   CONFLICT        225
+FT                   /note="R -> K (in Ref. 3; AAH28723)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   337 AA;  39086 MW;  6110F854D739B142 CRC64;
+     MTNNSGSKAE LVVGGKYKLV RKIGSGSFGD VYLGITTTNG EDVAVKLESQ KVKHPQLLYE
+     SKLYTILQGG VGIPHMHWYG QEKDNNVLVM DLLGPSLEDL FNFCSRRFTM KTVLMLADQM
+     ISRIEYVHTK NFLHRDIKPD NFLMGTGRHC NKLFLIDFGL AKKYRDNRTR QHIPYREDKH
+     LIGTVRYASI NAHLGIEQSR RDDMESLGYV FMYFNRTSLP WQGLRAMTKK QKYEKISEKK
+     MSTPVEVLCK GFPAEFAMYL NYCRGLRFEE VPDYMYLRQL FRILFRTLNH QYDYTFDWTM
+     LKQKAAQQAA SSSGQGQQAQ TQTGKQTEKN KNNVKDN
+//

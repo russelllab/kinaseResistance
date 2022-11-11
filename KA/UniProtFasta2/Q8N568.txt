@@ -1,0 +1,380 @@
+ID   DCLK2_HUMAN             Reviewed;         766 AA.
+AC   Q8N568; C9J5Q9; Q59GC8; Q8N399;
+DT   15-FEB-2005, integrated into UniProtKB/Swiss-Prot.
+DT   18-MAY-2010, sequence version 4.
+DT   12-OCT-2022, entry version 168.
+DE   RecName: Full=Serine/threonine-protein kinase DCLK2;
+DE            EC=2.7.11.1;
+DE   AltName: Full=CaMK-like CREB regulatory kinase 2;
+DE            Short=CL2;
+DE            Short=CLICK-II;
+DE            Short=CLICK2;
+DE   AltName: Full=Doublecortin domain-containing protein 3B;
+DE   AltName: Full=Doublecortin-like and CAM kinase-like 2;
+DE   AltName: Full=Doublecortin-like kinase 2;
+GN   Name=DCLK2; Synonyms=DCAMKL2, DCDC3B, DCK2;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Brain;
+RA   Totoki Y., Toyoda A., Takeda T., Sakaki Y., Tanaka A., Yokoyama S.,
+RA   Ohara O., Nagase T., Kikuno R.F.;
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15815621; DOI=10.1038/nature03466;
+RA   Hillier L.W., Graves T.A., Fulton R.S., Fulton L.A., Pepin K.H., Minx P.,
+RA   Wagner-McPherson C., Layman D., Wylie K., Sekhon M., Becker M.C.,
+RA   Fewell G.A., Delehaunty K.D., Miner T.L., Nash W.E., Kremitzki C., Oddy L.,
+RA   Du H., Sun H., Bradshaw-Cordum H., Ali J., Carter J., Cordes M., Harris A.,
+RA   Isak A., van Brunt A., Nguyen C., Du F., Courtney L., Kalicki J.,
+RA   Ozersky P., Abbott S., Armstrong J., Belter E.A., Caruso L., Cedroni M.,
+RA   Cotton M., Davidson T., Desai A., Elliott G., Erb T., Fronick C., Gaige T.,
+RA   Haakenson W., Haglund K., Holmes A., Harkins R., Kim K., Kruchowski S.S.,
+RA   Strong C.M., Grewal N., Goyea E., Hou S., Levy A., Martinka S., Mead K.,
+RA   McLellan M.D., Meyer R., Randall-Maher J., Tomlinson C.,
+RA   Dauphin-Kohlberg S., Kozlowicz-Reilly A., Shah N., Swearengen-Shahid S.,
+RA   Snider J., Strong J.T., Thompson J., Yoakum M., Leonard S., Pearman C.,
+RA   Trani L., Radionenko M., Waligorski J.E., Wang C., Rock S.M.,
+RA   Tin-Wollam A.-M., Maupin R., Latreille P., Wendl M.C., Yang S.-P., Pohl C.,
+RA   Wallis J.W., Spieth J., Bieri T.A., Berkowicz N., Nelson J.O., Osborne J.,
+RA   Ding L., Meyer R., Sabo A., Shotland Y., Sinha P., Wohldmann P.E.,
+RA   Cook L.L., Hickenbotham M.T., Eldred J., Williams D., Jones T.A., She X.,
+RA   Ciccarelli F.D., Izaurralde E., Taylor J., Schmutz J., Myers R.M.,
+RA   Cox D.R., Huang X., McPherson J.D., Mardis E.R., Clifton S.W., Warren W.C.,
+RA   Chinwalla A.T., Eddy S.R., Marra M.A., Ovcharenko I., Furey T.S.,
+RA   Miller W., Eichler E.E., Bork P., Suyama M., Torrents D., Waterston R.H.,
+RA   Wilson R.K.;
+RT   "Generation and annotation of the DNA sequences of human chromosomes 2 and
+RT   4.";
+RL   Nature 434:724-731(2005).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 68-766 (ISOFORM 3).
+RC   TISSUE=Amygdala;
+RX   PubMed=17974005; DOI=10.1186/1471-2164-8-399;
+RA   Bechtel S., Rosenfelder H., Duda A., Schmidt C.P., Ernst U.,
+RA   Wellenreuther R., Mehrle A., Schuster C., Bahr A., Bloecker H., Heubner D.,
+RA   Hoerlein A., Michel G., Wedler H., Koehrer K., Ottenwaelder B., Poustka A.,
+RA   Wiemann S., Schupp I.;
+RT   "The full-ORF clone resource of the German cDNA consortium.";
+RL   BMC Genomics 8:399-399(2007).
+RN   [4]
+RP   GENE FAMILY.
+RX   PubMed=16869982; DOI=10.1186/1471-2164-7-188;
+RA   Reiner O., Coquelle F.M., Peter B., Levy T., Kaplan A., Sapir T., Orr I.,
+RA   Barkai N., Eichele G., Bergmann S.;
+RT   "The evolving doublecortin (DCX) superfamily.";
+RL   BMC Genomics 7:188-188(2006).
+RN   [5]
+RP   TISSUE SPECIFICITY, AND DEVELOPMENTAL STAGE.
+RX   PubMed=18075264; DOI=10.1159/000109861;
+RA   Tuy F.P.D., Saillour Y., Kappeler C., Chelly J., Francis F.;
+RT   "Alternative transcripts of Dclk1 and Dclk2 and their expression in
+RT   doublecortin knockout mice.";
+RL   Dev. Neurosci. 30:171-186(2008).
+RN   [6]
+RP   REVIEW, AND GENE FAMILY.
+RX   PubMed=20236041; DOI=10.2174/187152410790780118;
+RA   Dijkmans T.F., van Hooijdonk L.W.A., Fitzsimons C.P., Vreugdenhil E.;
+RT   "The doublecortin gene family and disorders of neuronal structure.";
+RL   Cent. Nerv. Syst. Agents Med. Chem. 10:32-46(2010).
+RN   [7]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-61 AND SER-362, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [8]
+RP   VARIANTS [LARGE SCALE ANALYSIS] CYS-119; HIS-372 AND VAL-583.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [9]
+RP   VARIANT MET-212.
+RX   PubMed=25512093; DOI=10.1002/humu.22744;
+RA   Peeters K., Bervoets S., Chamova T., Litvinenko I., De Vriendt E.,
+RA   Bichev S., Kancheva D., Mitev V., Kennerson M., Timmerman V., De Jonghe P.,
+RA   Tournev I., MacMillan J., Jordanova A.;
+RT   "Novel mutations in the DYNC1H1 tail domain refine the genetic and clinical
+RT   spectrum of dyneinopathies.";
+RL   Hum. Mutat. 36:287-291(2015).
+CC   -!- FUNCTION: Protein kinase with a significantly reduced C(a2+)/CAM
+CC       affinity and dependence compared to other members of the CaMK family.
+CC       May play a role in the down-regulation of CRE-dependent gene activation
+CC       probably by phosphorylation of the CREB coactivator CRTC2/TORC2 and the
+CC       resulting retention of TORC2 in the cytoplasm (By similarity).
+CC       {ECO:0000250}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- SUBUNIT: Binds to and stabilizes microtubules. Interacts with
+CC       MAPK8IP1/JIP-1, MAPK8IP2/JIP-2, MAPK9/JNK2, PPP1R9B/NEURABIN-2 and
+CC       actin. {ECO:0000250}.
+CC   -!- INTERACTION:
+CC       Q8N568; Q96M94: KLHL15; NbExp=3; IntAct=EBI-2930406, EBI-2510129;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm, cytoskeleton. Note=Colocalizes with
+CC       microtubules. {ECO:0000250}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1;
+CC         IsoId=Q8N568-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q8N568-2; Sequence=VSP_012794;
+CC       Name=3;
+CC         IsoId=Q8N568-3; Sequence=VSP_012793;
+CC   -!- TISSUE SPECIFICITY: Expressed in the brain, heart and eyes.
+CC       {ECO:0000269|PubMed:18075264}.
+CC   -!- DEVELOPMENTAL STAGE: Expressed in fetal brain, and, to a lower extent,
+CC       in fetal kidney. {ECO:0000269|PubMed:18075264}.
+CC   -!- DOMAIN: The doublecortin domains are involved in the colocalization
+CC       with microtubules. {ECO:0000250}.
+CC   -!- PTM: Autophosphorylated. {ECO:0000250}.
+CC   -!- MISCELLANEOUS: [Isoform 2]: By homology to mouse isoform 2.
+CC       {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CAMK Ser/Thr
+CC       protein kinase family. CaMK subfamily. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=BAD92418.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AB209181; BAD92418.1; ALT_INIT; mRNA.
+DR   EMBL; AC093748; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC105343; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC108934; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AC118064; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL834498; CAD39156.1; -; mRNA.
+DR   CCDS; CCDS34076.1; -. [Q8N568-1]
+DR   CCDS; CCDS47142.2; -. [Q8N568-3]
+DR   RefSeq; NP_001035350.2; NM_001040260.3. [Q8N568-1]
+DR   RefSeq; NP_001035351.4; NM_001040261.4. [Q8N568-3]
+DR   RefSeq; XP_005262843.1; XM_005262786.2. [Q8N568-2]
+DR   AlphaFoldDB; Q8N568; -.
+DR   SMR; Q8N568; -.
+DR   BioGRID; 127929; 10.
+DR   IntAct; Q8N568; 23.
+DR   STRING; 9606.ENSP00000303887; -.
+DR   BindingDB; Q8N568; -.
+DR   ChEMBL; CHEMBL5519; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; Q8N568; -.
+DR   GuidetoPHARMACOLOGY; 2006; -.
+DR   iPTMnet; Q8N568; -.
+DR   PhosphoSitePlus; Q8N568; -.
+DR   BioMuta; DCLK2; -.
+DR   DMDM; 296439470; -.
+DR   EPD; Q8N568; -.
+DR   jPOST; Q8N568; -.
+DR   MassIVE; Q8N568; -.
+DR   MaxQB; Q8N568; -.
+DR   PaxDb; Q8N568; -.
+DR   PeptideAtlas; Q8N568; -.
+DR   PRIDE; Q8N568; -.
+DR   ProteomicsDB; 72008; -. [Q8N568-1]
+DR   ProteomicsDB; 72009; -. [Q8N568-2]
+DR   ProteomicsDB; 72010; -. [Q8N568-3]
+DR   Antibodypedia; 16499; 181 antibodies from 33 providers.
+DR   DNASU; 166614; -.
+DR   Ensembl; ENST00000296550.12; ENSP00000296550.7; ENSG00000170390.16. [Q8N568-1]
+DR   Ensembl; ENST00000302176.8; ENSP00000303887.8; ENSG00000170390.16. [Q8N568-3]
+DR   Ensembl; ENST00000506325.5; ENSP00000427235.1; ENSG00000170390.16. [Q8N568-2]
+DR   GeneID; 166614; -.
+DR   KEGG; hsa:166614; -.
+DR   MANE-Select; ENST00000296550.12; ENSP00000296550.7; NM_001040260.4; NP_001035350.2.
+DR   UCSC; uc003ilm.5; human. [Q8N568-1]
+DR   CTD; 166614; -.
+DR   DisGeNET; 166614; -.
+DR   GeneCards; DCLK2; -.
+DR   HGNC; HGNC:19002; DCLK2.
+DR   HPA; ENSG00000170390; Tissue enhanced (brain).
+DR   MIM; 613166; gene.
+DR   neXtProt; NX_Q8N568; -.
+DR   OpenTargets; ENSG00000170390; -.
+DR   PharmGKB; PA162383366; -.
+DR   VEuPathDB; HostDB:ENSG00000170390; -.
+DR   eggNOG; KOG0032; Eukaryota.
+DR   GeneTree; ENSGT00940000154895; -.
+DR   InParanoid; Q8N568; -.
+DR   OMA; LMTECKV; -.
+DR   OrthoDB; 330091at2759; -.
+DR   PhylomeDB; Q8N568; -.
+DR   TreeFam; TF318770; -.
+DR   PathwayCommons; Q8N568; -.
+DR   SignaLink; Q8N568; -.
+DR   BioGRID-ORCS; 166614; 13 hits in 1104 CRISPR screens.
+DR   ChiTaRS; DCLK2; human.
+DR   GenomeRNAi; 166614; -.
+DR   Pharos; Q8N568; Tchem.
+DR   PRO; PR:Q8N568; -.
+DR   Proteomes; UP000005640; Chromosome 4.
+DR   RNAct; Q8N568; protein.
+DR   Bgee; ENSG00000170390; Expressed in oocyte and 120 other tissues.
+DR   ExpressionAtlas; Q8N568; baseline and differential.
+DR   Genevisible; Q8N568; HS.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-KW.
+DR   GO; GO:0005856; C:cytoskeleton; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0008017; F:microtubule binding; IEA:Ensembl.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0021766; P:hippocampus development; IEA:Ensembl.
+DR   GO; GO:0035556; P:intracellular signal transduction; IEA:InterPro.
+DR   GO; GO:0000226; P:microtubule cytoskeleton organization; IBA:GO_Central.
+DR   GO; GO:1900181; P:negative regulation of protein localization to nucleus; IEA:Ensembl.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IEA:Ensembl.
+DR   GO; GO:0034504; P:protein localization to nucleus; IEA:Ensembl.
+DR   GO; GO:0021860; P:pyramidal neuron development; IEA:Ensembl.
+DR   Gene3D; 3.10.20.230; -; 2.
+DR   InterPro; IPR003533; Doublecortin_dom.
+DR   InterPro; IPR036572; Doublecortin_dom_sf.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF03607; DCX; 2.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00537; DCX; 2.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   SUPFAM; SSF89837; SSF89837; 2.
+DR   PROSITE; PS50309; DC; 2.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; ATP-binding; Cytoplasm; Cytoskeleton; Kinase;
+KW   Nucleotide-binding; Phosphoprotein; Reference proteome; Repeat;
+KW   Serine/threonine-protein kinase; Transferase.
+FT   CHAIN           1..766
+FT                   /note="Serine/threonine-protein kinase DCLK2"
+FT                   /id="PRO_0000085922"
+FT   DOMAIN          72..158
+FT                   /note="Doublecortin 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00072"
+FT   DOMAIN          197..280
+FT                   /note="Doublecortin 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00072"
+FT   DOMAIN          394..651
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1..45
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          300..378
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          707..766
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        7..23
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        27..42
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        300..368
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        716..753
+FT                   /note="Pro residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        515
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         400..408
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         423
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         61
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         362
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         647
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q5MPA9"
+FT   MOD_RES         666
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q5MPA9"
+FT   VAR_SEQ         321
+FT                   /note="V -> VKRGGHYSSAYSTAKSPV (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:17974005"
+FT                   /id="VSP_012793"
+FT   VAR_SEQ         353
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000305"
+FT                   /id="VSP_012794"
+FT   VARIANT         119
+FT                   /note="G -> C (in dbSNP:rs56327537)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040441"
+FT   VARIANT         212
+FT                   /note="V -> M (found in a patient with hereditary motor and
+FT                   sensory neuropathy; unknown pathological significance;
+FT                   dbSNP:rs759398144)"
+FT                   /evidence="ECO:0000269|PubMed:25512093"
+FT                   /id="VAR_073158"
+FT   VARIANT         372
+FT                   /note="R -> H (in dbSNP:rs34386880)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040442"
+FT   VARIANT         583
+FT                   /note="I -> V (in dbSNP:rs35745104)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_040443"
+FT   CONFLICT        694
+FT                   /note="A -> V (in Ref. 3; CAD39156)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        748
+FT                   /note="P -> C (in Ref. 1; BAD92418 and 3; CAD39156)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   766 AA;  83606 MW;  024F3223874AE83C CRC64;
+     MASTRSIELE HFEERDKRPR PGSRRGAPSS SGGSSSSGPK GNGLIPSPAH SAHCSFYRTR
+     TLQALSSEKK AKKARFYRNG DRYFKGLVFA ISSDRFRSFD ALLIELTRSL SDNVNLPQGV
+     RTIYTIDGSR KVTSLDELLE GESYVCASNE PFRKVDYTKN INPNWSVNIK GGTSRALAAA
+     SSVKSEVKES KDFIKPKLVT VIRSGVKPRK AVRILLNKKT AHSFEQVLTD ITEAIKLDSG
+     VVKRLCTLDG KQVTCLQDFF GDDDVFIACG PEKFRYAQDD FVLDHSECRV LKSSYSRSSA
+     VKYSGSKSPG PSRRSKSPAS VNGTPSSQLS TPKSTKSSSS SPTSPGSFRG LKQISAHGRS
+     SSNVNGGPEL DRCISPEGVN GNRCSESSTL LEKYKIGKVI GDGNFAVVKE CIDRSTGKEF
+     ALKIIDKAKC CGKEHLIENE VSILRRVKHP NIIMLVEEME TATELFLVME LVKGGDLFDA
+     ITSSTKYTER DGSAMVYNLA NALRYLHGLS IVHRDIKPEN LLVCEYPDGT KSLKLGDFGL
+     ATVVEGPLYT VCGTPTYVAP EIIAETGYGL KVDIWAAGVI TYILLCGFPP FRSENNLQED
+     LFDQILAGKL EFPAPYWDNI TDSAKELISQ MLQVNVEARC TAGQILSHPW VSDDASQENN
+     MQAEVTGKLK QHFNNALPKQ NSTTTGVSVI MNTALDKEGQ IFCSKHCQDS GRPGMEPISP
+     VPPSVEEIPV PGEAVPAPTP PESPTPHPPP AAPGGERAGT WRRHRD
+//

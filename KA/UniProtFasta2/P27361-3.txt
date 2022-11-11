@@ -1,0 +1,502 @@
+ID   MK03_HUMAN              Reviewed;         357 AA.
+AC   P27361-3;
+DT   01-AUG-1992, integrated into UniProtKB/Swiss-Prot.
+DT   23-JAN-2007, sequence version 4.
+DT   12-OCT-2022, entry version 240.
+DE   RecName: Full=Isoform 3 of Mitogen-activated protein kinase 3;
+DE            Short=MAP kinase 3;
+DE            Short=MAPK 3;
+DE            EC=2.7.11.24;
+DE   AltName: Full=ERT2;
+DE   AltName: Full=Extracellular signal-regulated kinase 1;
+DE            Short=ERK-1;
+DE   AltName: Full=Insulin-stimulated MAP2 kinase;
+DE   AltName: Full=MAP kinase isoform p44;
+DE            Short=p44-MAPK;
+DE   AltName: Full=Microtubule-associated protein 2 kinase;
+DE   AltName: Full=p44-ERK1;
+GN   Name=MAPK3; Synonyms=ERK1, PRKM3;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RC   TISSUE=Hepatoma;
+RX   PubMed=7687743; DOI=10.1128/mcb.13.8.4679-4690.1993;
+RA   Charest D.L., Jirik F., Harder K., Pelech S.L., Mordret G.;
+RT   "Molecular cloning, expression, and characterization of the human mitogen-
+RT   activated protein kinase p44erk1.";
+RL   Mol. Cell. Biol. 13:4679-4690(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 3).
+RA   Aebersold D.M., Yung Y., Seger R.;
+RT   "Properties of human ERK1b.";
+RL   Submitted (APR-2001) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2).
+RA   Cheng H., Ren S., Qiu R., Wang M., Feng Y.H.;
+RT   "Identification of dominant negative Erk1/2 variants in cancer cells.";
+RL   Submitted (FEB-2006) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RG   SeattleSNPs variation discovery resource;
+RL   Submitted (DEC-2007) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15616553; DOI=10.1038/nature03187;
+RA   Martin J., Han C., Gordon L.A., Terry A., Prabhakar S., She X., Xie G.,
+RA   Hellsten U., Chan Y.M., Altherr M., Couronne O., Aerts A., Bajorek E.,
+RA   Black S., Blumer H., Branscomb E., Brown N.C., Bruno W.J., Buckingham J.M.,
+RA   Callen D.F., Campbell C.S., Campbell M.L., Campbell E.W., Caoile C.,
+RA   Challacombe J.F., Chasteen L.A., Chertkov O., Chi H.C., Christensen M.,
+RA   Clark L.M., Cohn J.D., Denys M., Detter J.C., Dickson M.,
+RA   Dimitrijevic-Bussod M., Escobar J., Fawcett J.J., Flowers D., Fotopulos D.,
+RA   Glavina T., Gomez M., Gonzales E., Goodstein D., Goodwin L.A., Grady D.L.,
+RA   Grigoriev I., Groza M., Hammon N., Hawkins T., Haydu L., Hildebrand C.E.,
+RA   Huang W., Israni S., Jett J., Jewett P.B., Kadner K., Kimball H.,
+RA   Kobayashi A., Krawczyk M.-C., Leyba T., Longmire J.L., Lopez F., Lou Y.,
+RA   Lowry S., Ludeman T., Manohar C.F., Mark G.A., McMurray K.L., Meincke L.J.,
+RA   Morgan J., Moyzis R.K., Mundt M.O., Munk A.C., Nandkeshwar R.D.,
+RA   Pitluck S., Pollard M., Predki P., Parson-Quintana B., Ramirez L., Rash S.,
+RA   Retterer J., Ricke D.O., Robinson D.L., Rodriguez A., Salamov A.,
+RA   Saunders E.H., Scott D., Shough T., Stallings R.L., Stalvey M.,
+RA   Sutherland R.D., Tapia R., Tesmer J.G., Thayer N., Thompson L.S., Tice H.,
+RA   Torney D.C., Tran-Gyamfi M., Tsai M., Ulanovsky L.E., Ustaszewska A.,
+RA   Vo N., White P.S., Williams A.L., Wills P.L., Wu J.-R., Wu K., Yang J.,
+RA   DeJong P., Bruce D., Doggett N.A., Deaven L., Schmutz J., Grimwood J.,
+RA   Richardson P., Rokhsar D.S., Eichler E.E., Gilna P., Lucas S.M.,
+RA   Myers R.M., Rubin E.M., Pennacchio L.A.;
+RT   "The sequence and analysis of duplication-rich human chromosome 16.";
+RL   Nature 432:988-994(2004).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Lymph;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [8]
+RP   PROTEIN SEQUENCE OF 2-15; 33-41; 88-94; 117-131; 212-220; 279-287; 303-318
+RP   AND 360-370, CLEAVAGE OF INITIATOR METHIONINE, ACETYLATION AT ALA-2, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY.
+RC   TISSUE=Hepatoma;
+RA   Bienvenut W.V., Dhillon A.S., Kolch W.;
+RL   Submitted (FEB-2008) to UniProtKB.
+RN   [9]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 14-379 (ISOFORM 1).
+RX   PubMed=1540184; DOI=10.1016/0006-291x(92)91891-s;
+RA   Owaki H., Makar R., Boulton T.G., Cobb M.H., Geppert T.D.;
+RT   "Extracellular signal-regulated kinases in T cells: characterization of
+RT   human ERK1 and ERK2 cDNAs.";
+RL   Biochem. Biophys. Res. Commun. 182:1416-1422(1992).
+RN   [10]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 25-379 (ISOFORM 1).
+RX   PubMed=1319925; DOI=10.1016/0014-5793(92)80612-k;
+RA   Gonzalez F.A., Raden D.L., Rigby M.R., Davis R.J.;
+RT   "Heterogeneous expression of four MAP kinase isoforms in human tissues.";
+RL   FEBS Lett. 304:170-178(1992).
+RN   [11]
+RP   FUNCTION IN PHOSPHORYLATION OF STMN1.
+RX   PubMed=8325880; DOI=10.1016/s0021-9258(18)82435-8;
+RA   Marklund U., Brattsand G., Shingler V., Gullberg M.;
+RT   "Serine 25 of oncoprotein 18 is a major cytosolic target for the mitogen-
+RT   activated protein kinase.";
+RL   J. Biol. Chem. 268:15039-15047(1993).
+RN   [12]
+RP   INTERACTION WITH HIV-1 NEF (MICROBIAL INFECTION).
+RX   PubMed=8794306; DOI=10.1128/jvi.70.10.6701-6708.1996;
+RA   Greenway A.L., Azad A., Mills J., McPhee D.A.;
+RT   "Human immunodeficiency virus type 1 Nef binds directly to LCK and mitogen-
+RT   activated protein kinase, inhibiting kinase activity.";
+RL   J. Virol. 70:6701-6708(1996).
+RN   [13]
+RP   FUNCTION IN PHOSPHORYLATION OF MKNK1/MNK1.
+RX   PubMed=9155018; DOI=10.1093/emboj/16.8.1921;
+RA   Fukunaga R., Hunter T.;
+RT   "MNK1, a new MAP kinase-activated protein kinase, isolated by a novel
+RT   expression screening method for identifying protein kinase substrates.";
+RL   EMBO J. 16:1921-1933(1997).
+RN   [14]
+RP   FUNCTION IN PHOSPHORYLATION OF MAPKAPK5.
+RX   PubMed=9480836; DOI=10.1006/bbrc.1998.8135;
+RA   Ni H., Wang X.S., Diener K., Yao Z.;
+RT   "MAPKAPK5, a novel mitogen-activated protein kinase (MAPK)-activated
+RT   protein kinase, is a substrate of the extracellular-regulated kinase (ERK)
+RT   and p38 kinase.";
+RL   Biochem. Biophys. Res. Commun. 243:492-496(1998).
+RN   [15]
+RP   FUNCTION IN PHOSPHORYLATION OF CANX, AND INTERACTION WITH CANX.
+RX   PubMed=10393181; DOI=10.1093/emboj/18.13.3655;
+RA   Chevet E., Wong H.N., Gerber D., Cochet C., Fazel A., Cameron P.H.,
+RA   Gushue J.N., Thomas D.Y., Bergeron J.J.;
+RT   "Phosphorylation by CK2 and MAPK enhances calnexin association with
+RT   ribosomes.";
+RL   EMBO J. 18:3655-3666(1999).
+RN   [16]
+RP   DEPHOSPHORYLATION BY DUSP3.
+RX   PubMed=10224087; DOI=10.1074/jbc.274.19.13271;
+RA   Todd J.L., Tanner K.G., Denu J.M.;
+RT   "Extracellular regulated kinases (ERK) 1 and ERK2 are authentic substrates
+RT   for the dual-specificity protein-tyrosine phosphatase VHR. A novel role in
+RT   down-regulating the ERK pathway.";
+RL   J. Biol. Chem. 274:13271-13280(1999).
+RN   [17]
+RP   SUBCELLULAR LOCATION, INTERACTION WITH MAP2K1/MEK1, AND DOMAIN.
+RX   PubMed=10521408; DOI=10.1074/jbc.274.43.30349;
+RA   Rubinfeld H., Hanoch T., Seger R.;
+RT   "Identification of a cytoplasmic-retention sequence in ERK2.";
+RL   J. Biol. Chem. 274:30349-30352(1999).
+RN   [18]
+RP   FUNCTION IN PHOSPHORYLATION OF DUSP1.
+RX   PubMed=10617468; DOI=10.1126/science.286.5449.2514;
+RA   Brondello J.M., Pouyssegur J., McKenzie F.R.;
+RT   "Reduced MAP kinase phosphatase-1 degradation after p42/p44MAPK-dependent
+RT   phosphorylation.";
+RL   Science 286:2514-2517(1999).
+RN   [19]
+RP   INTERACTION WITH HSF1.
+RX   PubMed=10747973; DOI=10.1074/jbc.m000958200;
+RA   Dai R., Frejtag W., He B., Zhang Y., Mivechi N.F.;
+RT   "c-Jun NH2-terminal kinase targeting and phosphorylation of heat shock
+RT   factor-1 suppress its transcriptional activity.";
+RL   J. Biol. Chem. 275:18210-18218(2000).
+RN   [20]
+RP   FUNCTION IN PHOSPHORYLATION OF IER3, INTERACTION WITH IER3, AND ACTIVITY
+RP   REGULATION.
+RX   PubMed=12356731; DOI=10.1093/emboj/cdf488;
+RA   Garcia J., Ye Y., Arranz V., Letourneux C., Pezeron G., Porteu F.;
+RT   "IEX-1: a new ERK substrate involved in both ERK survival activity and ERK
+RT   activation.";
+RL   EMBO J. 21:5151-5163(2002).
+RN   [21]
+RP   INTERACTION WITH NISCH.
+RX   PubMed=11912194; DOI=10.1074/jbc.m111838200;
+RA   Sano H., Liu S.C.H., Lane W.S., Piletz J.E., Lienhard G.E.;
+RT   "Insulin receptor substrate 4 associates with the protein IRAS.";
+RL   J. Biol. Chem. 277:19439-19447(2002).
+RN   [22]
+RP   REVIEW ON ROLE IN KIT SIGNALING.
+RX   PubMed=15526160; DOI=10.1007/s00018-004-4189-6;
+RA   Ronnstrand L.;
+RT   "Signal transduction via the stem cell factor receptor/c-Kit.";
+RL   Cell. Mol. Life Sci. 61:2535-2548(2004).
+RN   [23]
+RP   FUNCTION IN PHOSPHORYLATION OF GRB10.
+RX   PubMed=15952796; DOI=10.1021/bi050413i;
+RA   Langlais P., Wang C., Dong L.Q., Carroll C.A., Weintraub S.T., Liu F.;
+RT   "Phosphorylation of Grb10 by mitogen-activated protein kinase:
+RT   identification of Ser150 and Ser476 of human Grb10zeta as major
+RT   phosphorylation sites.";
+RL   Biochemistry 44:8890-8897(2005).
+RN   [24]
+RP   INTERACTION WITH DAPK1.
+RX   PubMed=15616583; DOI=10.1038/sj.emboj.7600510;
+RA   Chen C.H., Wang W.J., Kuo J.C., Tsai H.C., Lin J.R., Chang Z.F., Chen R.H.;
+RT   "Bidirectional signals transduced by DAPK-ERK interaction promote the
+RT   apoptotic effect of DAPK.";
+RL   EMBO J. 24:294-304(2005).
+RN   [25]
+RP   FUNCTION IN PHOSPHORYLATION OF ATF2.
+RX   PubMed=12110590; DOI=10.1093/emboj/cdf361;
+RA   Ouwens D.M., de Ruiter N.D., van der Zon G.C., Carter A.P., Schouten J.,
+RA   van der Burgt C., Kooistra K., Bos J.L., Maassen J.A., van Dam H.;
+RT   "Growth factors can activate ATF2 via a two-step mechanism: phosphorylation
+RT   of Thr71 through the Ras-MEK-ERK pathway and of Thr69 through RalGDS-Src-
+RT   p38.";
+RL   EMBO J. 21:3782-3793(2002).
+RN   [26]
+RP   FUNCTION IN PHOSPHORYLATION OF FRS2.
+RX   PubMed=12974390; DOI=10.1515/bc.2003.134;
+RA   Wu Y., Chen Z., Ullrich A.;
+RT   "EGFR and FGFR signaling through FRS2 is subject to negative feedback
+RT   control by ERK1/2.";
+RL   Biol. Chem. 384:1215-1226(2003).
+RN   [27]
+RP   FUNCTION IN PHOSPHORYLATION OF BTG2.
+RX   PubMed=15788397; DOI=10.1074/jbc.m500318200;
+RA   Hong J.W., Ryu M.S., Lim I.K.;
+RT   "Phosphorylation of serine 147 of tis21/BTG2/pc3 by p-Erk1/2 induces Pin-1
+RT   binding in cytoplasm and cell death.";
+RL   J. Biol. Chem. 280:21256-21263(2005).
+RN   [28]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=17081983; DOI=10.1016/j.cell.2006.09.026;
+RA   Olsen J.V., Blagoev B., Gnad F., Macek B., Kumar C., Mortensen P., Mann M.;
+RT   "Global, in vivo, and site-specific phosphorylation dynamics in signaling
+RT   networks.";
+RL   Cell 127:635-648(2006).
+RN   [29]
+RP   FUNCTION, AND INTERACTION WITH HSF4.
+RX   PubMed=16581800; DOI=10.1128/mcb.26.8.3282-3294.2006;
+RA   Hu Y., Mivechi N.F.;
+RT   "Association and regulation of heat shock transcription factor 4b with both
+RT   extracellular signal-regulated kinase mitogen-activated protein kinase and
+RT   dual-specificity tyrosine phosphatase DUSP26.";
+RL   Mol. Cell. Biol. 26:3282-3294(2006).
+RN   [30]
+RP   PHOSPHORYLATION.
+RX   PubMed=17274988; DOI=10.1016/j.febslet.2007.01.039;
+RA   Degoutin J., Vigny M., Gouzi J.Y.;
+RT   "ALK activation induces Shc and FRS2 recruitment: Signaling and phenotypic
+RT   outcomes in PC12 cells differentiation.";
+RL   FEBS Lett. 581:727-734(2007).
+RN   [31]
+RP   INTERACTION WITH ARRB2.
+RX   PubMed=18435604; DOI=10.1042/bj20080685;
+RA   Xu T.-R., Baillie G.S., Bhari N., Houslay T.M., Pitt A.M., Adams D.R.,
+RA   Kolch W., Houslay M.D., Milligan G.;
+RT   "Mutations of beta-arrestin 2 that limit self-association also interfere
+RT   with interactions with the beta2-adrenoceptor and the ERK1/2 MAPKs:
+RT   implications for beta2-adrenoceptor signalling via the ERK1/2 MAPKs.";
+RL   Biochem. J. 413:51-60(2008).
+RN   [32]
+RP   INTERACTION WITH ADAM15.
+RX   PubMed=18296648; DOI=10.1158/1541-7786.mcr-07-2028;
+RA   Zhong J.L., Poghosyan Z., Pennington C.J., Scott X., Handsley M.M.,
+RA   Warn A., Gavrilovic J., Honert K., Kruger A., Span P.N., Sweep F.C.,
+RA   Edwards D.R.;
+RT   "Distinct functions of natural ADAM-15 cytoplasmic domain variants in human
+RT   mammary carcinoma.";
+RL   Mol. Cancer Res. 6:383-394(2008).
+RN   [33]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [34]
+RP   INTERACTION WITH TPR.
+RX   PubMed=18794356; DOI=10.1128/mcb.00925-08;
+RA   Vomastek T., Iwanicki M.P., Burack W.R., Tiwari D., Kumar D., Parsons J.T.,
+RA   Weber M.J., Nandicoori V.K.;
+RT   "Extracellular signal-regulated kinase 2 (ERK2) phosphorylation sites and
+RT   docking domain on the nuclear pore complex protein Tpr cooperatively
+RT   regulate ERK2-Tpr interaction.";
+RL   Mol. Cell. Biol. 28:6954-6966(2008).
+RN   [35]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-202 AND TYR-204, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [36]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT ALA-2, CLEAVAGE OF INITIATOR
+RP   METHIONINE [LARGE SCALE ANALYSIS], AND IDENTIFICATION BY MASS SPECTROMETRY
+RP   [LARGE SCALE ANALYSIS].
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J., Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in a
+RT   refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [37]
+RP   FUNCTION IN KIT SIGNALING PATHWAY, AND PHOSPHORYLATION.
+RX   PubMed=19265199; DOI=10.1074/jbc.m808058200;
+RA   Sun J., Pedersen M., Ronnstrand L.;
+RT   "The D816V mutation of c-Kit circumvents a requirement for Src family
+RT   kinases in c-Kit signal transduction.";
+RL   J. Biol. Chem. 284:11039-11047(2009).
+RN   [38]
+RP   PHOSPHORYLATION AT TYR-204, AND DEPHOSPHORYLATION AT TYR-204 BY PTPRJ.
+RX   PubMed=19494114; DOI=10.1074/jbc.m109.002758;
+RA   Sacco F., Tinti M., Palma A., Ferrari E., Nardozza A.P.,
+RA   Hooft van Huijsduijnen R., Takahashi T., Castagnoli L., Cesareni G.;
+RT   "Tumor suppressor density-enhanced phosphatase-1 (DEP-1) inhibits the RAS
+RT   pathway by direct dephosphorylation of ERK1/2 kinases.";
+RL   J. Biol. Chem. 284:22048-22058(2009).
+RN   [39]
+RP   INTERACTION WITH SGK1.
+RX   PubMed=19447520; DOI=10.1016/j.jhep.2009.02.027;
+RA   Won M., Park K.A., Byun H.S., Kim Y.R., Choi B.L., Hong J.H., Park J.,
+RA   Seok J.H., Lee Y.H., Cho C.H., Song I.S., Kim Y.K., Shen H.M., Hur G.M.;
+RT   "Protein kinase SGK1 enhances MEK/ERK complex formation through the
+RT   phosphorylation of ERK2: implication for the positive regulatory role of
+RT   SGK1 on the ERK function during liver regeneration.";
+RL   J. Hepatol. 51:67-76(2009).
+RN   [40]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-198, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [41]
+RP   PHOSPHORYLATION AT THR-207, ACTIVITY REGULATION, SUBUNIT, AND SUBCELLULAR
+RP   LOCATION.
+RX   PubMed=19060905; DOI=10.1038/nm.1893;
+RA   Lorenz K., Schmitt J.P., Schmitteckert E.M., Lohse M.J.;
+RT   "A new type of ERK1/2 autophosphorylation causes cardiac hypertrophy.";
+RL   Nat. Med. 15:75-83(2009).
+RN   [42]
+RP   REVIEW ON FUNCTION.
+RX   PubMed=16393692; DOI=10.1080/02699050500284218;
+RA   Yoon S., Seger R.;
+RT   "The extracellular signal-regulated kinase: multiple substrates regulate
+RT   diverse cellular functions.";
+RL   Growth Factors 24:21-44(2006).
+RN   [43]
+RP   REVIEW ON FUNCTION, AND REVIEW ON SUBCELLULAR LOCATION.
+RX   PubMed=19565474; DOI=10.1002/biof.52;
+RA   Yao Z., Seger R.;
+RT   "The ERK signaling cascade--views from different subcellular
+RT   compartments.";
+RL   BioFactors 35:407-416(2009).
+RN   [44]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-202 AND TYR-204, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [45]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [46]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [47]
+RP   REVIEW ON ACTIVITY REGULATION, AND REVIEW ON FUNCTION.
+RX   PubMed=21779493; DOI=10.1177/1947601911407328;
+RA   Wortzel I., Seger R.;
+RT   "The ERK cascade: distinct functions within various subcellular
+RT   organelles.";
+RL   Genes Cancer 2:195-209(2011).
+RN   [48]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-202 AND TYR-204, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [49]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT ALA-2, CLEAVAGE OF INITIATOR
+RP   METHIONINE [LARGE SCALE ANALYSIS], AND IDENTIFICATION BY MASS SPECTROMETRY
+RP   [LARGE SCALE ANALYSIS].
+RX   PubMed=22223895; DOI=10.1074/mcp.m111.015131;
+RA   Bienvenut W.V., Sumpton D., Martinez A., Lilla S., Espagne C., Meinnel T.,
+RA   Giglione C.;
+RT   "Comparative large-scale characterisation of plant vs. mammal proteins
+RT   reveals similar and idiosyncratic N-alpha acetylation features.";
+RL   Mol. Cell. Proteomics 11:M111.015131-M111.015131(2012).
+RN   [50]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT ALA-2, CLEAVAGE OF INITIATOR
+RP   METHIONINE [LARGE SCALE ANALYSIS], AND IDENTIFICATION BY MASS SPECTROMETRY
+RP   [LARGE SCALE ANALYSIS].
+RX   PubMed=22814378; DOI=10.1073/pnas.1210303109;
+RA   Van Damme P., Lasa M., Polevoda B., Gazquez C., Elosegui-Artola A.,
+RA   Kim D.S., De Juan-Pardo E., Demeyer K., Hole K., Larrea E., Timmerman E.,
+RA   Prieto J., Arnesen T., Sherman F., Gevaert K., Aldabe R.;
+RT   "N-terminal acetylome analyses and functional insights of the N-terminal
+RT   acetyltransferase NatB.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:12449-12454(2012).
+RN   [51]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-202 AND TYR-204, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [52]
+RP   INTERACTION WITH CDKN2AIP.
+RX   PubMed=24825908; DOI=10.1074/jbc.m114.547208;
+RA   Cheung C.T., Singh R., Kalra R.S., Kaul S.C., Wadhwa R.;
+RT   "Collaborator of ARF (CARF) regulates proliferative fate of human cells by
+RT   dose-dependent regulation of DNA damage signaling.";
+RL   J. Biol. Chem. 289:18258-18269(2014).
+RN   [53]
+RP   INTERACTION WITH ZNF263.
+RX   PubMed=32051553; DOI=10.1038/s41388-020-1206-7;
+RA   Yu Z., Feng J., Wang W., Deng Z., Zhang Y., Xiao L., Wang Z., Liu C.,
+RA   Liu Q., Chen S., Wu M.;
+RT   "The EGFR-ZNF263 signaling axis silences SIX3 in glioblastoma
+RT   epigenetically.";
+RL   Oncogene 39:3163-3178(2020).
+RN   [54]
+RP   X-RAY CRYSTALLOGRAPHY (2.39 ANGSTROMS), AND PHOSPHORYLATION AT TYR-204.
+RX   PubMed=18983981; DOI=10.1016/j.bbrc.2008.10.127;
+RA   Kinoshita T., Yoshida I., Nakae S., Okita K., Gouda M., Matsubara M.,
+RA   Yokota K., Ishiguro H., Tada T.;
+RT   "Crystal structure of human mono-phosphorylated ERK1 at Tyr204.";
+RL   Biochem. Biophys. Res. Commun. 377:1123-1127(2008).
+RN   [55]
+RP   VARIANT [LARGE SCALE ANALYSIS] LYS-323.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1;
+CC         IsoId=P27361-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=P27361-2; Sequence=VSP_041906;
+CC       Name=3; Synonyms=ERK1b;
+CC         IsoId=P27361-3; Sequence=VSP_041907;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS42149.1; -.
+DR   RefSeq; NP_001035145.1; NM_001040056.2.
+DR   ProteomicsDB; 54385; -.
+DR   Ensembl; ENST00000395199.7; ENSP00000378625.3; ENSG00000102882.12.
+DR   Reactome; R-HSA-162658; Golgi Cisternae Pericentriolar Stack Reorganization.
+DR   Proteomes; UP000005640; Chromosome 16.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   357 AA;  40088 MW;  F2C6D29C623AC072 CRC64;
+     MAAAAAQGGG GGEPRRTEGV GPGVPGEVEM VKGQPFDVGP RYTQLQYIGE GAYGMVSSAY
+     DHVRKTRVAI KKISPFEHQT YCQRTLREIQ ILLRFRHENV IGIRDILRAS TLEAMRDVYI
+     VQDLMETDLY KLLKSQQLSN DHICYFLYQI LRGLKYIHSA NVLHRDLKPS NLLINTTCDL
+     KICDFGLARI ADPEHDHTGF LTEYVATRWY RAPEIMLNSK GYTKSIDIWS VGCILAEMLS
+     NRPIFPGKHY LDQLNHILGI LGSPSQEDLN CIINMKARNY LQSLPSKTKV AWAKLFPKSD
+     SKALDLLDRM LTFNPNKRIT VEEALAHPYL EQYYDPTDEV GQSPAAVGLG AGEQGGT
+//

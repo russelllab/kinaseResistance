@@ -1,0 +1,358 @@
+ID   TAF1L_HUMAN             Reviewed;        1826 AA.
+AC   Q8IZX4; Q0VG57;
+DT   04-JAN-2005, integrated into UniProtKB/Swiss-Prot.
+DT   01-MAR-2003, sequence version 1.
+DT   12-OCT-2022, entry version 158.
+DE   RecName: Full=Transcription initiation factor TFIID subunit 1-like;
+DE   AltName: Full=TAF(II)210;
+DE   AltName: Full=TBP-associated factor 1-like;
+DE   AltName: Full=TBP-associated factor 210 kDa;
+DE   AltName: Full=Transcription initiation factor TFIID 210 kDa subunit;
+GN   Name=TAF1L;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], FUNCTION, AND INTERACTION WITH TBP.
+RC   TISSUE=Testis;
+RX   PubMed=12217962; DOI=10.1093/hmg/11.19.2341;
+RA   Wang P.J., Page D.C.;
+RT   "Functional substitution for TAF(II)250 by a retroposed homolog that is
+RT   expressed in human spermatogenesis.";
+RL   Hum. Mol. Genet. 11:2341-2346(2002).
+RN   [2]
+RP   X-RAY CRYSTALLOGRAPHY (2.05 ANGSTROMS) OF 1523-1654, AND SUBUNIT.
+RX   PubMed=22464331; DOI=10.1016/j.cell.2012.02.013;
+RA   Filippakopoulos P., Picaud S., Mangos M., Keates T., Lambert J.P.,
+RA   Barsyte-Lovejoy D., Felletar I., Volkmer R., Muller S., Pawson T.,
+RA   Gingras A.C., Arrowsmith C.H., Knapp S.;
+RT   "Histone recognition and large-scale structural analysis of the human
+RT   bromodomain family.";
+RL   Cell 149:214-231(2012).
+RN   [3]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ALA-47; GLU-171; ALA-256; VAL-371; ASN-532;
+RP   SER-637; PHE-750; ILE-762; ASP-794; GLN-845; CYS-1016; ASN-1038; ILE-1169;
+RP   LEU-1312; CYS-1356; SER-1389; VAL-1411; THR-1540; TYR-1549; ASN-1731;
+RP   LEU-1810 AND GLN-1824.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: May act as a functional substitute for TAF1/TAFII250 during
+CC       male meiosis, when sex chromosomes are transcriptionally silenced.
+CC       {ECO:0000269|PubMed:12217962}.
+CC   -!- SUBUNIT: Can bind directly to TATA-box binding protein (TBP). Interacts
+CC       (via bromo domains) with acetylated lysine residues on the N-terminus
+CC       of histone H1.4, H2A, H2B, H3 and H4 (in vitro).
+CC       {ECO:0000269|PubMed:12217962, ECO:0000269|PubMed:22464331}.
+CC   -!- SUBCELLULAR LOCATION: Nucleus {ECO:0000250}.
+CC   -!- TISSUE SPECIFICITY: Testis specific, expressed apparently in germ
+CC       cells.
+CC   -!- SIMILARITY: Belongs to the TAF1 family. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AF390562; AAN40840.1; -; mRNA.
+DR   CCDS; CCDS35003.1; -.
+DR   RefSeq; NP_722516.1; NM_153809.2.
+DR   PDB; 3HMH; X-ray; 2.05 A; A=1523-1654.
+DR   PDB; 5IGL; X-ray; 2.10 A; A=1523-1654.
+DR   PDBsum; 3HMH; -.
+DR   PDBsum; 5IGL; -.
+DR   AlphaFoldDB; Q8IZX4; -.
+DR   SMR; Q8IZX4; -.
+DR   BioGRID; 126514; 15.
+DR   IntAct; Q8IZX4; 7.
+DR   MINT; Q8IZX4; -.
+DR   STRING; 9606.ENSP00000418379; -.
+DR   BindingDB; Q8IZX4; -.
+DR   ChEMBL; CHEMBL3108641; -.
+DR   iPTMnet; Q8IZX4; -.
+DR   PhosphoSitePlus; Q8IZX4; -.
+DR   BioMuta; TAF1L; -.
+DR   DMDM; 57013082; -.
+DR   EPD; Q8IZX4; -.
+DR   jPOST; Q8IZX4; -.
+DR   MassIVE; Q8IZX4; -.
+DR   MaxQB; Q8IZX4; -.
+DR   PaxDb; Q8IZX4; -.
+DR   PeptideAtlas; Q8IZX4; -.
+DR   PRIDE; Q8IZX4; -.
+DR   ProteomicsDB; 71440; -.
+DR   Antibodypedia; 25077; 69 antibodies from 21 providers.
+DR   DNASU; 138474; -.
+DR   Ensembl; ENST00000242310.4; ENSP00000418379.1; ENSG00000122728.6.
+DR   GeneID; 138474; -.
+DR   KEGG; hsa:138474; -.
+DR   MANE-Select; ENST00000242310.4; ENSP00000418379.1; NM_153809.2; NP_722516.1.
+DR   UCSC; uc003zrg.1; human.
+DR   CTD; 138474; -.
+DR   DisGeNET; 138474; -.
+DR   GeneCards; TAF1L; -.
+DR   HGNC; HGNC:18056; TAF1L.
+DR   HPA; ENSG00000122728; Group enriched (retina, testis).
+DR   MIM; 607798; gene.
+DR   neXtProt; NX_Q8IZX4; -.
+DR   OpenTargets; ENSG00000122728; -.
+DR   PharmGKB; PA134947802; -.
+DR   VEuPathDB; HostDB:ENSG00000122728; -.
+DR   eggNOG; KOG0008; Eukaryota.
+DR   GeneTree; ENSGT00940000155242; -.
+DR   HOGENOM; CLU_000572_3_0_1; -.
+DR   InParanoid; Q8IZX4; -.
+DR   OMA; RENVRKC; -.
+DR   OrthoDB; 103411at2759; -.
+DR   PhylomeDB; Q8IZX4; -.
+DR   TreeFam; TF313573; -.
+DR   PathwayCommons; Q8IZX4; -.
+DR   Reactome; R-HSA-167161; HIV Transcription Initiation.
+DR   Reactome; R-HSA-167162; RNA Polymerase II HIV Promoter Escape.
+DR   Reactome; R-HSA-167172; Transcription of the HIV genome.
+DR   Reactome; R-HSA-674695; RNA Polymerase II Pre-transcription Events.
+DR   Reactome; R-HSA-6804756; Regulation of TP53 Activity through Phosphorylation.
+DR   Reactome; R-HSA-73776; RNA Polymerase II Promoter Escape.
+DR   Reactome; R-HSA-73779; RNA Polymerase II Transcription Pre-Initiation And Promoter Opening.
+DR   Reactome; R-HSA-75953; RNA Polymerase II Transcription Initiation.
+DR   Reactome; R-HSA-76042; RNA Polymerase II Transcription Initiation And Promoter Clearance.
+DR   SignaLink; Q8IZX4; -.
+DR   BioGRID-ORCS; 138474; 15 hits in 1071 CRISPR screens.
+DR   EvolutionaryTrace; Q8IZX4; -.
+DR   GenomeRNAi; 138474; -.
+DR   Pharos; Q8IZX4; Tchem.
+DR   PRO; PR:Q8IZX4; -.
+DR   Proteomes; UP000005640; Chromosome 9.
+DR   RNAct; Q8IZX4; protein.
+DR   Bgee; ENSG00000122728; Expressed in sperm and 8 other tissues.
+DR   Genevisible; Q8IZX4; HS.
+DR   GO; GO:0005654; C:nucleoplasm; TAS:Reactome.
+DR   GO; GO:0005669; C:transcription factor TFIID complex; IBA:GO_Central.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004402; F:histone acetyltransferase activity; ISS:UniProtKB.
+DR   GO; GO:0070577; F:lysine-acetylated histone binding; IDA:UniProtKB.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; ISS:UniProtKB.
+DR   GO; GO:0016251; F:RNA polymerase II general transcription initiation factor activity; IBA:GO_Central.
+DR   GO; GO:0001091; F:RNA polymerase II general transcription initiation factor binding; IEA:InterPro.
+DR   GO; GO:0017025; F:TBP-class protein binding; IPI:UniProtKB.
+DR   GO; GO:0007140; P:male meiotic nuclear division; IEP:UniProtKB.
+DR   GO; GO:0045893; P:positive regulation of DNA-templated transcription; IDA:UniProtKB.
+DR   GO; GO:0006357; P:regulation of transcription by RNA polymerase II; IDA:UniProtKB.
+DR   GO; GO:0051123; P:RNA polymerase II preinitiation complex assembly; IBA:GO_Central.
+DR   Gene3D; 1.10.1100.10; -; 1.
+DR   Gene3D; 1.20.920.10; -; 2.
+DR   InterPro; IPR001487; Bromodomain.
+DR   InterPro; IPR036427; Bromodomain-like_sf.
+DR   InterPro; IPR018359; Bromodomain_CS.
+DR   InterPro; IPR040240; TAF1.
+DR   InterPro; IPR011177; TAF1_animal.
+DR   InterPro; IPR022591; TAF1_HAT_dom.
+DR   InterPro; IPR009067; TAF_II_230-bd.
+DR   InterPro; IPR036741; TAFII-230_TBP-bd_sf.
+DR   InterPro; IPR041670; Znf-CCHC_6.
+DR   PANTHER; PTHR13900; PTHR13900; 1.
+DR   Pfam; PF00439; Bromodomain; 2.
+DR   Pfam; PF12157; DUF3591; 1.
+DR   Pfam; PF09247; TBP-binding; 1.
+DR   Pfam; PF15288; zf-CCHC_6; 1.
+DR   PIRSF; PIRSF003047; TAF1_animal; 1.
+DR   PRINTS; PR00503; BROMODOMAIN.
+DR   SMART; SM00297; BROMO; 2.
+DR   SUPFAM; SSF47055; SSF47055; 1.
+DR   SUPFAM; SSF47370; SSF47370; 2.
+DR   PROSITE; PS00633; BROMODOMAIN_1; 2.
+DR   PROSITE; PS50014; BROMODOMAIN_2; 2.
+PE   1: Evidence at protein level;
+KW   3D-structure; Bromodomain; Cell cycle; DNA-binding; Nucleus;
+KW   Reference proteome; Repeat; Transcription; Transcription regulation.
+FT   CHAIN           1..1826
+FT                   /note="Transcription initiation factor TFIID subunit 1-
+FT                   like"
+FT                   /id="PRO_0000211217"
+FT   DOMAIN          1416..1486
+FT                   /note="Bromo 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00035"
+FT   DOMAIN          1539..1609
+FT                   /note="Bromo 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00035"
+FT   REGION          118..141
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          532..555
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          1252..1276
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          1648..1826
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOTIF           1370..1377
+FT                   /note="Nuclear localization signal"
+FT                   /evidence="ECO:0000255"
+FT   COMPBIAS        1664..1704
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1765..1781
+FT                   /note="Acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   VARIANT         47
+FT                   /note="G -> A (in a lung small cell carcinoma sample;
+FT                   somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041934"
+FT   VARIANT         171
+FT                   /note="Q -> E (in dbSNP:rs56352331)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041935"
+FT   VARIANT         256
+FT                   /note="G -> A (in dbSNP:rs55991718)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041936"
+FT   VARIANT         371
+FT                   /note="M -> V (in dbSNP:rs17219559)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041937"
+FT   VARIANT         532
+FT                   /note="I -> N (in dbSNP:rs56128445)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041938"
+FT   VARIANT         637
+FT                   /note="P -> S (in dbSNP:rs56157814)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041939"
+FT   VARIANT         750
+FT                   /note="L -> F (in a lung adenocarcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041940"
+FT   VARIANT         762
+FT                   /note="L -> I (in a lung adenocarcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041941"
+FT   VARIANT         794
+FT                   /note="E -> D (in a lung adenocarcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041942"
+FT   VARIANT         845
+FT                   /note="R -> Q (in dbSNP:rs34787787)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041943"
+FT   VARIANT         1016
+FT                   /note="R -> C (in dbSNP:rs35905429)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041944"
+FT   VARIANT         1038
+FT                   /note="K -> N (in dbSNP:rs55767137)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041945"
+FT   VARIANT         1169
+FT                   /note="T -> I (in dbSNP:rs55976674)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041946"
+FT   VARIANT         1312
+FT                   /note="V -> L (in dbSNP:rs55824107)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041947"
+FT   VARIANT         1356
+FT                   /note="R -> C (in dbSNP:rs56107531)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041948"
+FT   VARIANT         1389
+FT                   /note="P -> S (in dbSNP:rs56393725)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041949"
+FT   VARIANT         1411
+FT                   /note="I -> V (in dbSNP:rs34500740)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041950"
+FT   VARIANT         1540
+FT                   /note="A -> T (in dbSNP:rs55782058)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041951"
+FT   VARIANT         1549
+FT                   /note="H -> Y (in a glioblastoma multiforme sample; somatic
+FT                   mutation; dbSNP:rs1587670372)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041952"
+FT   VARIANT         1731
+FT                   /note="K -> N (in dbSNP:rs34241003)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041953"
+FT   VARIANT         1805
+FT                   /note="I -> V (in dbSNP:rs16918393)"
+FT                   /id="VAR_048435"
+FT   VARIANT         1810
+FT                   /note="P -> L (in dbSNP:rs56342342)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041954"
+FT   VARIANT         1824
+FT                   /note="H -> Q (in a lung adenocarcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041955"
+FT   HELIX           1523..1536
+FT                   /evidence="ECO:0007829|PDB:3HMH"
+FT   TURN            1537..1540
+FT                   /evidence="ECO:0007829|PDB:3HMH"
+FT   HELIX           1545..1547
+FT                   /evidence="ECO:0007829|PDB:3HMH"
+FT   TURN            1553..1555
+FT                   /evidence="ECO:0007829|PDB:3HMH"
+FT   HELIX           1557..1562
+FT                   /evidence="ECO:0007829|PDB:3HMH"
+FT   HELIX           1569..1577
+FT                   /evidence="ECO:0007829|PDB:3HMH"
+FT   HELIX           1584..1602
+FT                   /evidence="ECO:0007829|PDB:3HMH"
+FT   HELIX           1607..1625
+FT                   /evidence="ECO:0007829|PDB:3HMH"
+FT   HELIX           1627..1649
+FT                   /evidence="ECO:0007829|PDB:3HMH"
+SQ   SEQUENCE   1826 AA;  207302 MW;  35D780E749AC9B17 CRC64;
+     MRPGCDLLLR AAATVTAAIM SDSDSEEDSS GGGPFTLAGI LFGNISGAGQ LEGESVLDDE
+     CKKHLAGLGA LGLGSLITEL TANEELTGTG GALVNDEGWI RSTEDAVDYS DINEVAEDES
+     QRHQQTMGSL QPLYHSDYDE DDYDADCEDI DCKLMPPPPP PPGPMKKDKD QDAITCVSES
+     GEDIILPSII APSFLASEKV DFSSYSDSES EMGPQEATQA ESEDGKLTLP LAGIMQHDAT
+     KLLPSVTELF PEFRPGKVLR FLHLFGPGKN VPSVWRSARR KRKKHRELIQ EEQIQEVECS
+     VESEVSQKSL WNYDYAPPPP PEQCLADDEI TMMVPVESKF SQSTGDVDKV TDTKPRVAEW
+     RYGPARLWYD MLGVSEDGSG FDYGFKLRKT QHEPVIKSRM MEEFRKLEES NGTDLLADEN
+     FLMVTQLHWE DSIIWDGEDI KHKGTKPQGA SLAGWLPSIK TRNVMAYNVQ QGFAPTLDDD
+     KPWYSIFPID NEDLVYGRWE DNIIWDAQAM PRLLEPPVLA LDPNDENLIL EIPDEKEEAT
+     SNSPSKESKK ESSLKKSRIL LGKTGVIREE PQQNMSQPEV KDPWNLSNDE YYFPKQQGLR
+     GTFGGNIIQH SIPAMELWQP FFPTHMGPIK IRQFHRPPLK KYSFGALSQP GPHSVQPLLK
+     HIKKKAKMRE QERQASGGGE LFFMRTPQDL TGKDGDLILA EYSEENGPLM MQVGMATKIK
+     NYYKRKPGKD PGAPDCKYGE TVYCHTSPFL GSLHPGQLLQ ALENNLFRAP VYLHKMPETD
+     FLIIRTRQGY YIRELVDIFV VGQQCPLFEV PGPNSRRANM HIRDFLQVFI YRLFWKSKDR
+     PRRIRMEDIK KAFPSHSESS IRKRLKLCAD FKRTGMDSNW WVLKSDFRLP TEEEIRAKVS
+     PEQCCAYYSM IAAKQRLKDA GYGEKSFFAP EEENEEDFQM KIDDEVHAAP WNTTRAFIAA
+     MKGKCLLEVT GVADPTGCGE GFSYVKIPNK PTQQKDDKEP QAVKKTVTGT DADLRRLSLK
+     NAKQLLRKFG VPEEEIKKLS RWEVIDVVRT MSTEQAHSGE GPMSKFARGS RFSVAEHQER
+     YKEECQRIFD LQNKVLSSTE VLSTDTDSIS AEDSDFEEMG KNIENMLQNK KTSSQLSREW
+     EEQERKELRR MLLVAGSAAS GNNHRDDVTA SMTSLKSSAT GHCLKIYRTF RDEEGKEYVR
+     CETVRKPAVI DAYVRIRTTK DEKFIQKFAL FDEKHREEMR KERRRIQEQL RRLKRNQEKE
+     KLKGPPEKKP KKMKERPDLK LKCGACGAIG HMRTNKFCPL YYQTNVPPSK PVAMTEEQEE
+     ELEKTVIHND NEELIKVEGT KIVFGKQLIE NVHEVRRKSL VLKFPKQQLP PKKKRRVGTT
+     VHCDYLNIPH KSIHRRRTDP MVTLSSILES IINDMRDLPN THPFHTPVNA KVVKDYYKII
+     TRPMDLQTLR ENVRKCLYPS REEFREHLEL IVKNSATYNG PKHSLTQISQ SMLDLCDEKL
+     KEKEDKLARL EKAINPLLDD DDQVAFSFIL DNIVTQKMMA VPDSWPFHHP VNKKFVPDYY
+     KMIVNPVDLE TIRKNISKHK YQSRESFLDD VNLILANSVK YNGPESQYTK TAQEIVNICY
+     QTITEYDEHL TQLEKDICTA KEAALEEAEL ESLDPMTPGP YTSQPPDMYD TNTSLSTSRD
+     ASVFQDESNL SVLDISTATP EKQMCQGQGR LGEEDSDVDV EGYDDEEEDG KPKPPAPEGG
+     DGDLADEEEG TVQQPEASVL YEDLLISEGE DDEEDAGSDE EGDNPFSAIQ LSESGSDSDV
+     GYGGIRPKQP FMLQHASGEH KDGHGK
+//

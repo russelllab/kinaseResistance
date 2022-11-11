@@ -1,0 +1,182 @@
+ID   NTRK3_HUMAN             Reviewed;         612 AA.
+AC   Q16288-2;
+DT   01-NOV-1997, integrated into UniProtKB/Swiss-Prot.
+DT   06-MAR-2007, sequence version 2.
+DT   12-OCT-2022, entry version 227.
+DE   RecName: Full=Isoform 2 of NT-3 growth factor receptor;
+DE            EC=2.7.10.1;
+DE   AltName: Full=GP145-TrkC;
+DE            Short=Trk-C;
+DE   AltName: Full=Neurotrophic tyrosine kinase receptor type 3;
+DE   AltName: Full=TrkC tyrosine kinase;
+DE   Flags: Precursor;
+GN   Name=NTRK3; Synonyms=TRKC;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS 1 AND 3).
+RC   TISSUE=Fetal brain;
+RX   PubMed=7806211; DOI=10.1006/geno.1994.1383;
+RA   McGregor L.M., Baylin S.B., Griffin C.A., Hawkins A.L., Nelkin B.D.;
+RT   "Molecular cloning of the cDNA for human TrkC (NTRK3), chromosomal
+RT   assignment, and evidence for a splice variant.";
+RL   Genomics 22:267-272(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS 1; 2 AND 3), AND PARTIAL PROTEIN
+RP   SEQUENCE.
+RC   TISSUE=Brain;
+RX   PubMed=7823156; DOI=10.1523/jneurosci.15-01-00477.1995;
+RA   Shelton D.L., Sutherland J., Gripp J., Camerato T., Armanini M.P.,
+RA   Phillips H.S., Carroll K., Spencer S.D., Levinson A.D.;
+RT   "Human trks: molecular cloning, tissue distribution, and expression of
+RT   extracellular domain immunoadhesins.";
+RL   J. Neurosci. 15:477-491(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=9778053; DOI=10.1038/sj.onc.1202100;
+RA   Ichaso N., Rodriguez R.E., Martin-Zanca D., Gonzalez-Sarmiento R.;
+RT   "Genomic characterization of the human trkC gene.";
+RL   Oncogene 17:1871-1875(1998).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 5).
+RC   TISSUE=Brain;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16572171; DOI=10.1038/nature04601;
+RA   Zody M.C., Garber M., Sharpe T., Young S.K., Rowen L., O'Neill K.,
+RA   Whittaker C.A., Kamal M., Chang J.L., Cuomo C.A., Dewar K.,
+RA   FitzGerald M.G., Kodira C.D., Madan A., Qin S., Yang X., Abbasi N.,
+RA   Abouelleil A., Arachchi H.M., Baradarani L., Birditt B., Bloom S.,
+RA   Bloom T., Borowsky M.L., Burke J., Butler J., Cook A., DeArellano K.,
+RA   DeCaprio D., Dorris L. III, Dors M., Eichler E.E., Engels R., Fahey J.,
+RA   Fleetwood P., Friedman C., Gearin G., Hall J.L., Hensley G., Johnson E.,
+RA   Jones C., Kamat A., Kaur A., Locke D.P., Madan A., Munson G., Jaffe D.B.,
+RA   Lui A., Macdonald P., Mauceli E., Naylor J.W., Nesbitt R., Nicol R.,
+RA   O'Leary S.B., Ratcliffe A., Rounsley S., She X., Sneddon K.M.B.,
+RA   Stewart S., Sougnez C., Stone S.M., Topham K., Vincent D., Wang S.,
+RA   Zimmer A.R., Birren B.W., Hood L., Lander E.S., Nusbaum C.;
+RT   "Analysis of the DNA sequence and duplication history of human chromosome
+RT   15.";
+RL   Nature 440:671-675(2006).
+RN   [6]
+RP   FUNCTION, PHOSPHORYLATION AT TYR-516, INVOLVEMENT IN CHD, VARIANTS PHE-21;
+RP   VAL-71; MET-93; ILE-163; PHE-533 AND MET-817, CHARACTERIZATION OF VARIANTS
+RP   MET-93; ILE-163; PHE-533 AND MET-817, AND MUTAGENESIS OF LYS-572.
+RX   PubMed=25196463; DOI=10.1002/humu.22688;
+RA   Werner P., Paluru P., Simpson A.M., Latney B., Iyer R., Brodeur G.M.,
+RA   Goldmuntz E.;
+RT   "Mutations in NTRK3 suggest a novel signaling pathway in human congenital
+RT   heart disease.";
+RL   Hum. Mutat. 35:1459-1468(2014).
+RN   [7]
+RP   INTERACTION WITH PTPRS.
+RX   PubMed=25385546; DOI=10.1038/ncomms6209;
+RA   Coles C.H., Mitakidis N., Zhang P., Elegheert J., Lu W., Stoker A.W.,
+RA   Nakagawa T., Craig A.M., Jones E.Y., Aricescu A.R.;
+RT   "Structural basis for extracellular cis and trans RPTPsigma signal
+RT   competition in synaptogenesis.";
+RL   Nat. Commun. 5:5209-5209(2014).
+RN   [8]
+RP   X-RAY CRYSTALLOGRAPHY (1.9 ANGSTROMS) OF 297-401, AND DISULFIDE BOND.
+RX   PubMed=10388563; DOI=10.1006/jmbi.1999.2816;
+RA   Ultsch M.H., Wiesmann C., Simmons L.C., Henrich J., Yang M., Reilly D.,
+RA   Bass S.H., de Vos A.M.;
+RT   "Crystal structures of the neurotrophin-binding domain of TrkA, TrkB and
+RT   TrkC.";
+RL   J. Mol. Biol. 290:149-159(1999).
+RN   [9]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ARG-149; CYS-306; LEU-307; GLN-336;
+RP   TYR-677; GLN-678; ARG-768 AND LYS-781.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [10]
+RP   VARIANTS SER-664; TYR-677; CYS-736; PRO-745 AND PHE-766.
+RX   PubMed=18293376; DOI=10.1002/humu.20707;
+RA   Marchetti A., Felicioni L., Pelosi G., Del Grammastro M., Fumagalli C.,
+RA   Sciarrotta M., Malatesta S., Chella A., Barassi F., Mucilli F.,
+RA   Camplese P., D'Antuono T., Sacco R., Buttitta F.;
+RT   "Frequent mutations in the neurotrophic tyrosine receptor kinase gene
+RT   family in large cell neuroendocrine carcinoma of the lung.";
+RL   Hum. Mutat. 29:609-616(2008).
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=5;
+CC         Comment=Additional isoforms seem to exist.;
+CC       Name=1; Synonyms=A;
+CC         IsoId=Q16288-1; Sequence=Displayed;
+CC       Name=2; Synonyms=B;
+CC         IsoId=Q16288-2; Sequence=VSP_002925, VSP_002926;
+CC       Name=3; Synonyms=C;
+CC         IsoId=Q16288-3; Sequence=VSP_002927;
+CC       Name=4; Synonyms=D;
+CC         IsoId=Q16288-4; Sequence=VSP_002924;
+CC       Name=5; Synonyms=E;
+CC         IsoId=Q16288-5; Sequence=VSP_002924, VSP_002927;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS32323.1; -.
+DR   ProteomicsDB; 60851; -.
+DR   Ensembl; ENST00000317501.8; ENSP00000318328.3; ENSG00000140538.17.
+DR   Proteomes; UP000005640; Chromosome 15.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   612 AA;  68452 MW;  F2E84DC71B8E4DB3 CRC64;
+     MDVSLCPAKC SFWRIFLLGS VWLDYVGSVL ACPANCVCSK TEINCRRPDD GNLFPLLEGQ
+     DSGNSNGNAS INITDISRNI TSIHIENWRS LHTLNAVDME LYTGLQKLTI KNSGLRSIQP
+     RAFAKNPHLR YINLSSNRLT TLSWQLFQTL SLRELQLEQN FFNCSCDIRW MQLWQEQGEA
+     KLNSQNLYCI NADGSQLPLF RMNISQCDLP EISVSHVNLT VREGDNAVIT CNGSGSPLPD
+     VDWIVTGLQS INTHQTNLNW TNVHAINLTL VNVTSEDNGF TLTCIAENVV GMSNASVALT
+     VYYPPRVVSL EEPELRLEHC IEFVVRGNPP PTLHWLHNGQ PLRESKIIHV EYYQEGEISE
+     GCLLFNKPTH YNNGNYTLIA KNPLGTANQT INGHFLKEPF PESTDNFILF DEVSPTPPIT
+     VTHKPEEDTF GVSIAVGLAA FACVLLVVLF VMINKYGRRS KFGMKGPVAV ISGEEDSASP
+     LHHINHGITT PSSLDAGPDT VVIGMTRIPV IENPQYFRQG HNCHKPDTWV FSNIDNHGIL
+     NLKDNRDHLV PSTHYIYEEP EVQSGEVSYP RSHGFREIML NPISLPGHSK PLNHGIYVED
+     VNVYFSKGRH GF
+//

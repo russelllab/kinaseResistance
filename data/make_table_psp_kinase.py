@@ -13,6 +13,9 @@ from scipy.stats import fisher_exact
 import plotly.express as px
 
 PATH_TO_FASTA = '../KA/UniProtFasta2/'
+PFAM_DOMS = ['PK_Tyr_Ser-Thr', 'Pkinase'] # Domains to search for
+OUT_TEXT = '#Acc\tGene\tPfam_Dom\tPfam_Position\tPfam_Residue\tPTM_type\n'
+OUT_FILE = 'Kinase_psites4.tsv'
 
 class Kinases:
     '''
@@ -25,6 +28,10 @@ class Kinases:
         self.psites = []
         self.ksites = []
         self.msites = []
+        self.usites = []
+        self.sumosites = []
+        self.gasites = []
+        self.glsites = []
         self.kinase_to_pfam = {}
     def get_fasta_formatted(self, gene):
         '''
@@ -48,7 +55,13 @@ for line in open('humanKinases.fasta', 'r'):
 ## fetch all PTM sites in kinases
 kinases_dic = {}
 ## Read phospho, acetyl and methyl sites files
-for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_site_dataset.gz', 'Methylation_site_dataset.gz']):
+for count, files in enumerate(['Phosphorylation_site_dataset.gz',
+                                'Acetylation_site_dataset.gz',
+                                'Methylation_site_dataset.gz',
+                                'Ubiquitination_site_dataset.gz',
+                                'Sumoylation_site_dataset.gz',
+                                'O-GalNAc_site_dataset.gz',
+                                'O-GlcNAc_site_dataset.gz']):
     FLAG = 0
     for line in gzip.open('PSP/'+files, 'rt'):
         if len(line.split()) == 0:
@@ -69,7 +82,7 @@ for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_s
         if low_throughput == '':
             continue
         # ignore line when LT_LIT is < 2 in psites file
-        if int(low_throughput) < 2 and count == 0:
+        if int(low_throughput) < 1 and count == 0:
             continue
         # Ignore non-human PTM sites
         if species != 'human':
@@ -88,8 +101,16 @@ for count, files in enumerate(['Phosphorylation_site_dataset.gz', 'Acetylation_s
             accession_address.psites.append(ptmsite)
         elif count == 1:
             accession_address.ksites.append(ptmsite)
-        else:
+        elif count == 2:
             accession_address.msites.append(ptmsite)
+        elif count == 3:
+            accession_address.usites.append(ptmsite)
+        elif count == 4:
+            accession_address.sumosites.append(ptmsite)
+        elif count == 5:
+            accession_address.gasites.append(ptmsite)
+        elif count == 6:
+            accession_address.glsites.append(ptmsite)
 # print (len(kinases_dic.keys()))
 # print (kinases_dic.keys())
 # sys.exit()
@@ -113,96 +134,103 @@ for acc in kinases_dic:
             else:
                 accession_address.sequence += line.replace('\n', '')
         all_kinases_fasta += accession_address.get_fasta_formatted(gene) + '\n'
-
+'''
 open('allKinases.fasta', 'w').write(all_kinases_fasta)
 
 # Run HMMSEARCH against saved sequences
 os.system('hmmsearch -o allKinasesHmmsearch.txt ../pfam/Pkinase.hmm allKinases.fasta')
-
+'''
+# print(kinases_dic)
 ## read the HMMSEARCH output
-pfam = {}
-flag = 0
-for line in open('allKinasesHmmsearch.txt', 'r'):
-    if len(line.split()) == 0:
-        continue
-    if line[:2] == '>>':
-        ## lines with kinase start
-        kinase = line.split('>>')[1].lstrip().rstrip()
-        # Raise an error if the kinase instance not found
-        if kinase not in kinases_dic:
-            raise ValueError(f'{kinase} not found in the HMMSearch output')
-        flag = 1
-    elif line.split()[0] == 'Pkinase':
-        ## lines with Pkinase domain
-        pfam_start, pfam_seq, pfam_end = int(line.split()[1]), line.split()[2], int(line.split()[3])
-        count = int(line.split()[1])
-        for char in pfam_seq:
-            if char not in ['.', '-']:
-                pfam[count] = char+str(count)
-                count += 1
-    elif flag == 1:
-        if kinase == line.split()[0]:
-            ## lines with kinase
-            kin_start, kin_seq, kin_end = int(line.split()[1]), line.split()[2], int(line.split()[3])
-            for pfam_char, kin_char in zip(pfam_seq, kin_seq):
-                if pfam_char not in ['.', '-'] and kin_char not in ['.', '-']:
-                    kinases_dic[kinase].kinase_to_pfam[kin_start] = pfam_start
-                    pfam_start += 1
-                    kin_start += 1
-                elif pfam_char in ['.', '-']:
-                    kin_start += 1
-                elif kin_char in ['.', '-']:
-                    pfam_start += 1
-                else:
-                    print ('Exception found', kinase)
-                    sys.exit()
-
-## Map PTM sites to kinases domain and 
-## save in corresponding dictionaries
-pfam_phospho = {}
-pfam_acetyl = {}
-pfam_methyl = {}
-out_text2 = '#Acc\tGene\tPfam_Position\tPfam_Residue\tPTM_type\n'
-for count, dic in enumerate([pfam_phospho, pfam_acetyl, pfam_methyl]):
-    for acc in kinases_dic:
-        if count == 0:
-            ptm_sites = kinases_dic[acc].psites
-        elif count == 1:
-            ptm_sites = kinases_dic[acc].ksites
-        else:
-            ptm_sites = kinases_dic[acc].msites
-        for ptmsite in ptm_sites:
-            if kinases_dic[acc].sequence == '':
+for pfam_dom in PFAM_DOMS:
+    HMMSEARCH_OUT = 'allKinasesHmmsearch'+pfam_dom+'.txt'
+    pfam = {}
+    flag = 0
+    for line in open(HMMSEARCH_OUT, 'r'):
+        if len(line.split()) == 0:
+            continue
+        if line[:2] == '>>':
+            ## lines with kinase start
+            kinase = line.split('>>')[1].lstrip().rstrip()
+            # Raise an error if the kinase instance not found
+            if kinase not in kinases_dic:
+                # raise ValueError(f'{kinase} not in PSP')
+                # print (f'{kinase} not in PSP')
+                flag = 0
                 continue
-            # print (acc, psite)
-            ptmsite_pos = int(ptmsite[1:].split('-')[0])
-            if kinases_dic[acc].sequence[ptmsite_pos-1] not in ['S', 'T', 'Y', 'K', 'R']:
-                print (acc, 'has', kinases_dic[acc].sequence[ptmsite_pos-1], 'at', ptmsite_pos, 'and not', ptmsite)
-                # sys.exit()
-                continue
-            if ptmsite_pos in kinases_dic[acc].kinase_to_pfam:
-                # print (acc, psite, psite_pos)
-                pfam_pos = kinases_dic[acc].kinase_to_pfam[ptmsite_pos]
-                out_text2 += acc + '\t' + kinases_dic[acc].gene + '\t' + ptmsite + '\t' + str(pfam_pos) + '\t' + str(pfam[pfam_pos]) + '\n'
-                if pfam_pos not in dic:
-                    dic[pfam_pos] = 1 
-                else:
-                    dic[pfam_pos] += 1
+            if pfam_dom not in kinases_dic[kinase].kinase_to_pfam:
+                kinases_dic[kinase].kinase_to_pfam[pfam_dom] = {}
+            flag = 1
+        elif line.split()[0] == pfam_dom and flag == 1:
+            ## lines with Pkinase domain
+            pfam_start, pfam_seq, pfam_end = int(line.split()[1]), line.split()[2], int(line.split()[3])
+            count = int(line.split()[1])
+            for char in pfam_seq:
+                if char not in ['.', '-']:
+                    pfam[count] = char+str(count)
+                    count += 1
+        elif flag == 1:
+            if kinase == line.split()[0]:
+                ## lines with kinase
+                kin_start, kin_seq, kin_end = int(line.split()[1]), line.split()[2], int(line.split()[3])
+                for pfam_char, kin_char in zip(pfam_seq, kin_seq):
+                    if pfam_char not in ['.', '-'] and kin_char not in ['.', '-']:
+                        kinases_dic[kinase].kinase_to_pfam[pfam_dom][kin_start] = pfam_start
+                        pfam_start += 1
+                        kin_start += 1
+                    elif pfam_char in ['.', '-']:
+                        kin_start += 1
+                    elif kin_char in ['.', '-']:
+                        pfam_start += 1
+                    else:
+                        print ('Exception found', kinase)
+                        sys.exit()
 
-open('Kinase_psites3.tsv', 'w').write(out_text2)
-# print (pfam_phospho)
-# print (pfam_acetyl)
-sys.exit()
-## Write the output
-out_text = '#Pfam_Position\tPfam_Residue\tType_PTM\tNum_PTMsites\n'
-for i in range(1, 265):
-    for count, dic in enumerate([pfam_phospho, pfam_acetyl]):
-        if i in dic:
+    ## Map PTM sites to kinases domain and
+    ## save in corresponding dictionaries
+    pfam_phospho = {}
+    pfam_acetyl = {}
+    pfam_methyl = {}
+    pfam_ubiq = {}
+    pfam_sumo = {}
+    pfam_ga = {}
+    pfam_gl = {}
+    for count, dic in enumerate([pfam_phospho, pfam_acetyl, pfam_methyl, pfam_ubiq, pfam_sumo, pfam_ga, pfam_gl]):
+        for acc in kinases_dic:
+            if pfam_dom not in kinases_dic[acc].kinase_to_pfam:
+                    continue
             if count == 0:
-                type_ptm = 'p-site'
-            else:
-                type_ptm = 'k-site'
-            print (i, pfam[i], type_ptm, dic[i])
-            out_text += str(i) + '\t' + pfam[i] + '\t' + type_ptm + '\t' + str(dic[i]) + '\n'
+                ptm_sites = kinases_dic[acc].psites
+            elif count == 1:
+                ptm_sites = kinases_dic[acc].ksites
+            elif count == 2:
+                ptm_sites = kinases_dic[acc].msites
+            elif count == 3:
+                ptm_sites = kinases_dic[acc].usites
+            elif count == 4:
+                ptm_sites = kinases_dic[acc].sumosites
+            elif count == 5:
+                ptm_sites = kinases_dic[acc].gasites
+            elif count == 6:
+                ptm_sites = kinases_dic[acc].glsites
+            for ptmsite in ptm_sites:
+                if kinases_dic[acc].sequence == '':
+                    continue
+                # print (acc, psite)
+                ptmsite_pos = int(ptmsite[1:].split('-')[0])
+                # print (ptmsite_pos)
+                if kinases_dic[acc].sequence[ptmsite_pos-1] not in ['S', 'T', 'Y', 'K', 'R']:
+                    print (acc, 'has', kinases_dic[acc].sequence[ptmsite_pos-1], 'at', ptmsite_pos, 'and not', ptmsite)
+                    # sys.exit()
+                    continue
+                if ptmsite_pos in kinases_dic[acc].kinase_to_pfam[pfam_dom]:
+                    # print (acc, psite, psite_pos)
+                    pfam_pos = kinases_dic[acc].kinase_to_pfam[pfam_dom][ptmsite_pos]
+                    OUT_TEXT += acc + '\t' + kinases_dic[acc].gene + '\t' + pfam_dom + '\t' + ptmsite + '\t' + str(pfam_pos) + '\t' + str(pfam[pfam_pos]) + '\n'
+                    if pfam_pos not in dic:
+                        dic[pfam_pos] = 1 
+                    else:
+                        dic[pfam_pos] += 1
 
-open('Kinase_psites.tsv', 'w').write(out_text)
+open(OUT_FILE, 'w').write(OUT_TEXT)
+print ('Done')

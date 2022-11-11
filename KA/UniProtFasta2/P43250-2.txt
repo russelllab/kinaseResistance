@@ -1,0 +1,167 @@
+ID   GRK6_HUMAN              Reviewed;         589 AA.
+AC   P43250-2;
+DT   01-NOV-1995, integrated into UniProtKB/Swiss-Prot.
+DT   23-JAN-2002, sequence version 2.
+DT   12-OCT-2022, entry version 208.
+DE   RecName: Full=Isoform GRK6B of G protein-coupled receptor kinase 6;
+DE            EC=2.7.11.16;
+DE   AltName: Full=G protein-coupled receptor kinase GRK6;
+GN   Name=GRK6; Synonyms=GPRK6;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM GRK6A).
+RX   PubMed=8366096; DOI=10.1016/s0021-9258(19)36546-9;
+RA   Benovic J.L., Gomez J.;
+RT   "Molecular cloning and expression of GRK6. A new member of the G protein-
+RT   coupled receptor kinase family.";
+RL   J. Biol. Chem. 268:19521-19527(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS GRK6B AND GRK6C).
+RX   PubMed=10506199; DOI=10.1074/jbc.274.41.29381;
+RA   Premont R.T., Macrae A.D., Aparicio S.A., Kendall H.E., Welch J.E.,
+RA   Lefkowitz R.J.;
+RT   "The GRK4 subfamily of G protein-coupled receptor kinases. Alternative
+RT   splicing, gene organization, and sequence conservation.";
+RL   J. Biol. Chem. 274:29381-29389(1999).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15372022; DOI=10.1038/nature02919;
+RA   Schmutz J., Martin J., Terry A., Couronne O., Grimwood J., Lowry S.,
+RA   Gordon L.A., Scott D., Xie G., Huang W., Hellsten U., Tran-Gyamfi M.,
+RA   She X., Prabhakar S., Aerts A., Altherr M., Bajorek E., Black S.,
+RA   Branscomb E., Caoile C., Challacombe J.F., Chan Y.M., Denys M.,
+RA   Detter J.C., Escobar J., Flowers D., Fotopulos D., Glavina T., Gomez M.,
+RA   Gonzales E., Goodstein D., Grigoriev I., Groza M., Hammon N., Hawkins T.,
+RA   Haydu L., Israni S., Jett J., Kadner K., Kimball H., Kobayashi A.,
+RA   Lopez F., Lou Y., Martinez D., Medina C., Morgan J., Nandkeshwar R.,
+RA   Noonan J.P., Pitluck S., Pollard M., Predki P., Priest J., Ramirez L.,
+RA   Retterer J., Rodriguez A., Rogers S., Salamov A., Salazar A., Thayer N.,
+RA   Tice H., Tsai M., Ustaszewska A., Vo N., Wheeler J., Wu K., Yang J.,
+RA   Dickson M., Cheng J.-F., Eichler E.E., Olsen A., Pennacchio L.A.,
+RA   Rokhsar D.S., Richardson P., Lucas S.M., Myers R.M., Rubin E.M.;
+RT   "The DNA sequence and comparative analysis of human chromosome 5.";
+RL   Nature 431:268-274(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM GRK6A).
+RC   TISSUE=Uterus;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 33-576, AND TISSUE SPECIFICITY.
+RX   PubMed=8415712; DOI=10.1073/pnas.90.20.9398;
+RA   Haribabu B., Snyderman R.;
+RT   "Identification of additional members of human G-protein-coupled receptor
+RT   kinase multigene family.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 90:9398-9402(1993).
+RN   [6]
+RP   PALMITOYLATION AT CYS-561; CYS-562 AND CYS-565, AND MUTAGENESIS OF CYS-561;
+RP   CYS-562 AND CYS-565.
+RX   PubMed=7961702; DOI=10.1016/s0021-9258(18)46852-4;
+RA   Stoffel R.H., Randall R.R., Premont R.T., Lefkowitz R.J., Inglese J.;
+RT   "Palmitoylation of G protein-coupled receptor kinase, GRK6. Lipid
+RT   modification diversity in the GRK family.";
+RL   J. Biol. Chem. 269:27791-27794(1994).
+RN   [7]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-484 AND THR-485, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [8]
+RP   FUNCTION IN PHOSPHORYLATION OF LRP6.
+RX   PubMed=19801552; DOI=10.1074/jbc.m109.047456;
+RA   Chen M., Philipp M., Wang J., Premont R.T., Garrison T.R., Caron M.G.,
+RA   Lefkowitz R.J., Chen W.;
+RT   "G Protein-coupled receptor kinases phosphorylate LRP6 in the Wnt
+RT   pathway.";
+RL   J. Biol. Chem. 284:35040-35048(2009).
+RN   [9]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-484 AND THR-485, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [10]
+RP   FUNCTION IN PHOSPHORYLATION OF CXCR4.
+RX   PubMed=20048153; DOI=10.1074/jbc.m109.091173;
+RA   Busillo J.M., Armando S., Sengupta R., Meucci O., Bouvier M., Benovic J.L.;
+RT   "Site-specific phosphorylation of CXCR4 is dynamically regulated by
+RT   multiple kinases and results in differential modulation of CXCR4
+RT   signaling.";
+RL   J. Biol. Chem. 285:7805-7817(2010).
+RN   [11]
+RP   X-RAY CRYSTALLOGRAPHY (2.6 ANGSTROMS).
+RX   PubMed=16613860; DOI=10.1074/jbc.m601327200;
+RA   Lodowski D.T., Tesmer V.M., Benovic J.L., Tesmer J.J.;
+RT   "The structure of G protein-coupled receptor kinase (GRK)-6 defines a
+RT   second lineage of GRKs.";
+RL   J. Biol. Chem. 281:16785-16793(2006).
+RN   [12]
+RP   X-RAY CRYSTALLOGRAPHY (2.72 ANGSTROMS) IN COMPLEX WITH AMP AND
+RP   SANGIVAMYCIN, AND MUTAGENESIS OF ILE-6; VAL-7; ASN-9 AND LEU-12.
+RX   PubMed=20729810; DOI=10.1038/emboj.2010.206;
+RA   Boguth C.A., Singh P., Huang C.C., Tesmer J.J.;
+RT   "Molecular basis for activation of G protein-coupled receptor kinases.";
+RL   EMBO J. 29:3249-3259(2010).
+RN   [13]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLN-31; MET-73 AND MET-275.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- INTERACTION:
+CC       P43250-2; P05067: APP; NbExp=3; IntAct=EBI-6428342, EBI-77613;
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=GRK6A;
+CC         IsoId=P43250-1; Sequence=Displayed;
+CC       Name=GRK6B;
+CC         IsoId=P43250-2; Sequence=VSP_004938;
+CC       Name=GRK6C;
+CC         IsoId=P43250-3; Sequence=VSP_041813, VSP_041814;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   RefSeq; NP_002073.2; NM_002082.3.
+DR   ProteomicsDB; 55603; -.
+DR   Ensembl; ENST00000528793.5; ENSP00000433511.1; ENSG00000198055.11.
+DR   Proteomes; UP000005640; Chromosome 5.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   589 AA;  67257 MW;  BD7C24E9624DDFEC CRC64;
+     MELENIVANT VLLKAREGGG GNRKGKSKKW RQMLQFPHIS QCEELRLSLE RDYHSLCERQ
+     PIGRLLFREF CATRPELSRC VAFLDGVAEY EVTPDDKRKA CGRQLTQNFL SHTGPDLIPE
+     VPRQLVTNCT QRLEQGPCKD LFQELTRLTH EYLSVAPFAD YLDSIYFNRF LQWKWLERQP
+     VTKNTFRQYR VLGKGGFGEV CACQVRATGK MYACKKLEKK RIKKRKGEAM ALNEKQILEK
+     VNSRFVVSLA YAYETKDALC LVLTLMNGGD LKFHIYHMGQ AGFPEARAVF YAAEICCGLE
+     DLHRERIVYR DLKPENILLD DHGHIRISDL GLAVHVPEGQ TIKGRVGTVG YMAPEVVKNE
+     RYTFSPDWWA LGCLLYEMIA GQSPFQQRKK KIKREEVERL VKEVPEEYSE RFSPQARSLC
+     SQLLCKDPAE RLGCRGGSAR EVKEHPLFKK LNFKRLGAGM LEPPFKPDPQ AIYCKDVLDI
+     EQFSTVKGVE LEPTDQDFYQ KFATGSVPIP WQNEMVETEC FQELNVFGLD GSVPPDLDWK
+     GQPPAPPKKG LLQRLFSRQR IAVETAATAR KSSPPASSPQ PEAPTSSWR
+//

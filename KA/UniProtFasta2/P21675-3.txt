@@ -1,0 +1,596 @@
+ID   TAF1_HUMAN              Reviewed;        1832 AA.
+AC   P21675-3;
+DT   01-MAY-1991, integrated into UniProtKB/Swiss-Prot.
+DT   01-MAY-1992, sequence version 2.
+DT   12-OCT-2022, entry version 233.
+DE   RecName: Full=Isoform 3 of Transcription initiation factor TFIID subunit 1;
+DE            EC=2.3.1.48 {ECO:0000269|PubMed:15870300};
+DE            EC=2.7.11.1;
+DE   AltName: Full=Cell cycle gene 1 protein;
+DE   AltName: Full=TBP-associated factor 250 kDa;
+DE            Short=p250;
+DE   AltName: Full=Transcription initiation factor TFIID 250 kDa subunit;
+DE            Short=TAF(II)250;
+DE            Short=TAFII-250;
+DE            Short=TAFII250;
+GN   Name=TAF1; Synonyms=BA2R, CCG1, CCGS, TAF2A;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), FUNCTION, AND SUBCELLULAR LOCATION.
+RC   TISSUE=Laryngeal carcinoma;
+RX   PubMed=2038334; DOI=10.1128/mcb.11.6.3317-3325.1991;
+RA   Sekiguchi T., Nohiro Y., Nakamura Y., Hisamoto N., Nishimoto T.;
+RT   "The human CCG1 gene, essential for progression of the G1 phase, encodes a
+RT   210-kilodalton nuclear DNA-binding protein.";
+RL   Mol. Cell. Biol. 11:3317-3325(1991).
+RN   [2]
+RP   PRELIMINARY NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=3169001; DOI=10.1002/j.1460-2075.1988.tb02996.x;
+RA   Sekiguchi T., Miyata T., Nishimoto T.;
+RT   "Molecular cloning of the cDNA of human X chromosomal gene (CCG1) which
+RT   complements the temperature-sensitive G1 mutants, tsBN462 and ts13, of the
+RT   BHK cell line.";
+RL   EMBO J. 7:1683-1687(1988).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), AND INTERACTION WITH TBP AND TAFS.
+RX   PubMed=7680771; DOI=10.1038/362175a0;
+RA   Ruppert S., Wang E.H., Tjian R.;
+RT   "Cloning and expression of human TAFII250: a TBP-associated factor
+RT   implicated in cell-cycle regulation.";
+RL   Nature 362:175-179(1993).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM N-TAF1), AND INVOLVEMENT IN DYT3.
+RC   TISSUE=Brain;
+RX   PubMed=17273961; DOI=10.1086/512129;
+RA   Makino S., Kaji R., Ando S., Tomizawa M., Yasuno K., Goto S., Matsumoto S.,
+RA   Tabuena M.D., Maranon E., Dantes M., Lee L.V., Ogasawara K., Tooyama I.,
+RA   Akatsu H., Nishimura M., Tamiya G.;
+RT   "Reduced neuron-specific expression of the TAF1 gene is associated with X-
+RT   linked dystonia-parkinsonism.";
+RL   Am. J. Hum. Genet. 80:393-406(2007).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND VARIANT VAL-269.
+RG   NIEHS SNPs program;
+RL   Submitted (MAY-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15772651; DOI=10.1038/nature03440;
+RA   Ross M.T., Grafham D.V., Coffey A.J., Scherer S., McLay K., Muzny D.,
+RA   Platzer M., Howell G.R., Burrows C., Bird C.P., Frankish A., Lovell F.L.,
+RA   Howe K.L., Ashurst J.L., Fulton R.S., Sudbrak R., Wen G., Jones M.C.,
+RA   Hurles M.E., Andrews T.D., Scott C.E., Searle S., Ramser J., Whittaker A.,
+RA   Deadman R., Carter N.P., Hunt S.E., Chen R., Cree A., Gunaratne P.,
+RA   Havlak P., Hodgson A., Metzker M.L., Richards S., Scott G., Steffen D.,
+RA   Sodergren E., Wheeler D.A., Worley K.C., Ainscough R., Ambrose K.D.,
+RA   Ansari-Lari M.A., Aradhya S., Ashwell R.I., Babbage A.K., Bagguley C.L.,
+RA   Ballabio A., Banerjee R., Barker G.E., Barlow K.F., Barrett I.P.,
+RA   Bates K.N., Beare D.M., Beasley H., Beasley O., Beck A., Bethel G.,
+RA   Blechschmidt K., Brady N., Bray-Allen S., Bridgeman A.M., Brown A.J.,
+RA   Brown M.J., Bonnin D., Bruford E.A., Buhay C., Burch P., Burford D.,
+RA   Burgess J., Burrill W., Burton J., Bye J.M., Carder C., Carrel L.,
+RA   Chako J., Chapman J.C., Chavez D., Chen E., Chen G., Chen Y., Chen Z.,
+RA   Chinault C., Ciccodicola A., Clark S.Y., Clarke G., Clee C.M., Clegg S.,
+RA   Clerc-Blankenburg K., Clifford K., Cobley V., Cole C.G., Conquer J.S.,
+RA   Corby N., Connor R.E., David R., Davies J., Davis C., Davis J., Delgado O.,
+RA   Deshazo D., Dhami P., Ding Y., Dinh H., Dodsworth S., Draper H.,
+RA   Dugan-Rocha S., Dunham A., Dunn M., Durbin K.J., Dutta I., Eades T.,
+RA   Ellwood M., Emery-Cohen A., Errington H., Evans K.L., Faulkner L.,
+RA   Francis F., Frankland J., Fraser A.E., Galgoczy P., Gilbert J., Gill R.,
+RA   Gloeckner G., Gregory S.G., Gribble S., Griffiths C., Grocock R., Gu Y.,
+RA   Gwilliam R., Hamilton C., Hart E.A., Hawes A., Heath P.D., Heitmann K.,
+RA   Hennig S., Hernandez J., Hinzmann B., Ho S., Hoffs M., Howden P.J.,
+RA   Huckle E.J., Hume J., Hunt P.J., Hunt A.R., Isherwood J., Jacob L.,
+RA   Johnson D., Jones S., de Jong P.J., Joseph S.S., Keenan S., Kelly S.,
+RA   Kershaw J.K., Khan Z., Kioschis P., Klages S., Knights A.J., Kosiura A.,
+RA   Kovar-Smith C., Laird G.K., Langford C., Lawlor S., Leversha M., Lewis L.,
+RA   Liu W., Lloyd C., Lloyd D.M., Loulseged H., Loveland J.E., Lovell J.D.,
+RA   Lozado R., Lu J., Lyne R., Ma J., Maheshwari M., Matthews L.H.,
+RA   McDowall J., McLaren S., McMurray A., Meidl P., Meitinger T., Milne S.,
+RA   Miner G., Mistry S.L., Morgan M., Morris S., Mueller I., Mullikin J.C.,
+RA   Nguyen N., Nordsiek G., Nyakatura G., O'dell C.N., Okwuonu G., Palmer S.,
+RA   Pandian R., Parker D., Parrish J., Pasternak S., Patel D., Pearce A.V.,
+RA   Pearson D.M., Pelan S.E., Perez L., Porter K.M., Ramsey Y., Reichwald K.,
+RA   Rhodes S., Ridler K.A., Schlessinger D., Schueler M.G., Sehra H.K.,
+RA   Shaw-Smith C., Shen H., Sheridan E.M., Shownkeen R., Skuce C.D.,
+RA   Smith M.L., Sotheran E.C., Steingruber H.E., Steward C.A., Storey R.,
+RA   Swann R.M., Swarbreck D., Tabor P.E., Taudien S., Taylor T., Teague B.,
+RA   Thomas K., Thorpe A., Timms K., Tracey A., Trevanion S., Tromans A.C.,
+RA   d'Urso M., Verduzco D., Villasana D., Waldron L., Wall M., Wang Q.,
+RA   Warren J., Warry G.L., Wei X., West A., Whitehead S.L., Whiteley M.N.,
+RA   Wilkinson J.E., Willey D.L., Williams G., Williams L., Williamson A.,
+RA   Williamson H., Wilming L., Woodmansey R.L., Wray P.W., Yen J., Zhang J.,
+RA   Zhou J., Zoghbi H., Zorilla S., Buck D., Reinhardt R., Poustka A.,
+RA   Rosenthal A., Lehrach H., Meindl A., Minx P.J., Hillier L.W., Willard H.F.,
+RA   Wilson R.K., Waterston R.H., Rice C.M., Vaudin M., Coulson A., Nelson D.L.,
+RA   Weinstock G., Sulston J.E., Durbin R.M., Hubbard T., Gibbs R.A., Beck S.,
+RA   Rogers J., Bentley D.R.;
+RT   "The DNA sequence of the human X chromosome.";
+RL   Nature 434:325-337(2005).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 837-1872 (ISOFORM 4).
+RC   TISSUE=Brain;
+RA   Totoki Y., Toyoda A., Takeda T., Sakaki Y., Tanaka A., Yokoyama S.,
+RA   Ohara O., Nagase T., Kikuno R.F.;
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1347-1801 (ISOFORMS 2A; 2C AND 2D),
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1347-1592 (ISOFORM 2E), NUCLEOTIDE SEQUENCE
+RP   [MRNA] OF 1498-1801 (ISOFORM 3), AND INVOLVEMENT IN DYT3.
+RC   TISSUE=Fetal brain;
+RX   PubMed=12928496; DOI=10.1073/pnas.1831949100;
+RA   Nolte D., Niemann S., Muller U.;
+RT   "Specific sequence changes in multiple transcript system DYT3 are
+RT   associated with X-linked dystonia parkinsonism.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:10347-10352(2003).
+RN   [9]
+RP   SEQUENCE REVISION.
+RA   Nolte D.;
+RL   Submitted (MAY-2007) to the EMBL/GenBank/DDBJ databases.
+RN   [10]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1347-1801 (ISOFORMS 2E; 2G; 2H AND 2I), AND
+RP   ALTERNATIVE SPLICING.
+RX   PubMed=17952504; DOI=10.1007/s00335-007-9063-z;
+RA   Herzfeld T., Nolte D., Muller U.;
+RT   "Structural and functional analysis of the human TAF1/DYT3 multiple
+RT   transcript system.";
+RL   Mamm. Genome 18:787-795(2007).
+RN   [11]
+RP   FUNCTION.
+RX   PubMed=8450888; DOI=10.1038/362179a0;
+RA   Hisatake K., Hasegawa S., Takada R., Nakatani Y., Horikoshi M.,
+RA   Roeder R.G.;
+RT   "The p250 subunit of native TATA box-binding factor TFIID is the cell-cycle
+RT   regulatory protein CCG1.";
+RL   Nature 362:179-181(1993).
+RN   [12]
+RP   FUNCTION, ACTIVITY REGULATION, PHOSPHORYLATION AT SER-137 AND SER-307, AND
+RP   ATP-BINDING.
+RX   PubMed=8625415; DOI=10.1016/s0092-8674(00)81055-7;
+RA   Dikstein R., Ruppert S., Tjian R.;
+RT   "TAFII250 is a bipartite protein kinase that phosphorylates the base
+RT   transcription factor RAP74.";
+RL   Cell 84:781-790(1996).
+RN   [13]
+RP   INTERACTION WITH SV40 LARGE T ANTIGEN (MICROBIAL INFECTION).
+RX   PubMed=8647434; DOI=10.1101/gad.10.11.1369;
+RA   Damania B., Alwine J.C.;
+RT   "TAF-like function of SV40 large T antigen.";
+RL   Genes Dev. 10:1369-1381(1996).
+RN   [14]
+RP   INTERACTION WITH HERPES SIMPLEX VIRUS 1 ICP4 (MICROBIAL INFECTION).
+RX   PubMed=8649420; DOI=10.1128/mcb.16.6.3085;
+RA   Carrozza M.J., DeLuca N.A.;
+RT   "Interaction of the viral activator protein ICP4 with TFIID through
+RT   TAF250.";
+RL   Mol. Cell. Biol. 16:3085-3093(1996).
+RN   [15]
+RP   FUNCTION, AND MUTAGENESIS.
+RX   PubMed=9660973; DOI=10.1016/s1097-2765(00)80089-1;
+RA   O'Brien T., Tjian R.;
+RT   "Functional analysis of the human TAFII250 N-terminal kinase domain.";
+RL   Mol. Cell 1:905-911(1998).
+RN   [16]
+RP   FUNCTION, ACTIVITY REGULATION, INTERACTION WITH RB1, AND ATP-BINDING.
+RX   PubMed=9858607; DOI=10.1128/mcb.19.1.846;
+RA   Siegert J.L., Robbins P.D.;
+RT   "Rb inhibits the intrinsic kinase activity of TATA-binding protein-
+RT   associated factor TAFII250.";
+RL   Mol. Cell. Biol. 19:846-854(1999).
+RN   [17]
+RP   INTERACTION WITH ASF1A.
+RX   PubMed=10759893; DOI=10.1046/j.1365-2443.2000.00319.x;
+RA   Munakata T., Adachi N., Yokoyama N., Kuzuhara T., Horikoshi M.;
+RT   "A human homologue of yeast anti-silencing factor has histone chaperone
+RT   activity.";
+RL   Genes Cells 5:221-233(2000).
+RN   [18]
+RP   FUNCTION.
+RX   PubMed=11278496; DOI=10.1074/jbc.m009385200;
+RA   Solow S., Salunek M., Ryan R., Lieberman P.M.;
+RT   "Taf(II) 250 phosphorylates human transcription factor IIA on serine
+RT   residues important for TBP binding and transcription activity.";
+RL   J. Biol. Chem. 276:15886-15892(2001).
+RN   [19]
+RP   ACTIVITY REGULATION, AND INTERACTION WITH TAF7.
+RX   PubMed=11592977; DOI=10.1073/pnas.211444798;
+RA   Gegonne A., Weissman J.D., Singer D.S.;
+RT   "TAFII55 binding to TAFII250 inhibits its acetyltransferase activity.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:12432-12437(2001).
+RN   [20]
+RP   INTERACTION WITH ASF1A.
+RX   PubMed=12093919; DOI=10.1073/pnas.142627899;
+RA   Chimura T., Kuzuhara T., Horikoshi M.;
+RT   "Identification and characterization of CIA/ASF1 as an interactor of
+RT   bromodomains associated with TFIID.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:9334-9339(2002).
+RN   [21]
+RP   INTERACTION WITH ASF1A AND ASF1B.
+RX   PubMed=12842904; DOI=10.1074/jbc.m303549200;
+RA   Umehara T., Horikoshi M.;
+RT   "Transcription initiation factor IID-interactive histone chaperone CIA-II
+RT   implicated in mammalian spermatogenesis.";
+RL   J. Biol. Chem. 278:35660-35667(2003).
+RN   [22]
+RP   FUNCTION, AND INTERACTION WITH TP53.
+RX   PubMed=15053879; DOI=10.1016/s1097-2765(04)00123-6;
+RA   Li H.-H., Li A.G., Sheppard H.M., Liu X.;
+RT   "Phosphorylation on Thr-55 by TAF1 mediates degradation of p53: a role for
+RT   TAF1 in cell G1 progression.";
+RL   Mol. Cell 13:867-878(2004).
+RN   [23]
+RP   IDENTIFICATION IN THE MLL1/MLL COMPLEX.
+RX   PubMed=15960975; DOI=10.1016/j.cell.2005.04.031;
+RA   Dou Y., Milne T.A., Tackett A.J., Smith E.R., Fukuda A., Wysocka J.,
+RA   Allis C.D., Chait B.T., Hess J.L., Roeder R.G.;
+RT   "Physical association and coordinate function of the H3 K4
+RT   methyltransferase MLL1 and the H4 K16 acetyltransferase MOF.";
+RL   Cell 121:873-885(2005).
+RN   [24]
+RP   HISTONE ACETYLTRANSFERASE ACTIVITY, AND MUTAGENESIS OF GLU-721 AND
+RP   827-MET--ASP-829.
+RX   PubMed=15870300; DOI=10.1128/mcb.25.10.4321-4332.2005;
+RA   Hilton T.L., Li Y., Dunphy E.L., Wang E.H.;
+RT   "TAF1 histone acetyltransferase activity in Sp1 activation of the cyclin D1
+RT   promoter.";
+RL   Mol. Cell. Biol. 25:4321-4332(2005).
+RN   [25]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [26]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1826, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [27]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1700 (ISOFORMS 2A AND 4),
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1702 (ISOFORM 2G),
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1697 (ISOFORM 3), AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [28]
+RP   ACTIVITY REGULATION.
+RX   PubMed=22711989; DOI=10.1128/mcb.00416-12;
+RA   Kloet S.L., Whiting J.L., Gafken P., Ranish J., Wang E.H.;
+RT   "Phosphorylation-dependent regulation of cyclin D1 and cyclin A gene
+RT   transcription by TFIID subunits TAF1 and TAF7.";
+RL   Mol. Cell. Biol. 32:3358-3369(2012).
+RN   [29]
+RP   MISCELLANEOUS.
+RX   PubMed=23184149; DOI=10.1093/hmg/dds499;
+RA   Herzfeld T., Nolte D., Grznarova M., Hofmann A., Schultze J.L., Muller U.;
+RT   "X-linked dystonia parkinsonism syndrome (XDP, lubag): disease-specific
+RT   sequence change DSC3 in TAF1/DYT3 affects genes in vesicular transport and
+RT   dopamine metabolism.";
+RL   Hum. Mol. Genet. 22:941-951(2013).
+RN   [30]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-307, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [31]
+RP   SUMOYLATION [LARGE SCALE ANALYSIS] AT LYS-549 AND LYS-562, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=28112733; DOI=10.1038/nsmb.3366;
+RA   Hendriks I.A., Lyon D., Young C., Jensen L.J., Vertegaal A.C.,
+RA   Nielsen M.L.;
+RT   "Site-specific mapping of the human SUMO proteome reveals co-modification
+RT   with phosphorylation.";
+RL   Nat. Struct. Mol. Biol. 24:325-336(2017).
+RN   [32]
+RP   X-RAY CRYSTALLOGRAPHY (2.1 ANGSTROMS) OF 1359-1638.
+RX   PubMed=10827952; DOI=10.1126/science.288.5470.1422;
+RA   Jacobson R.H., Ladurner A.G., King D.S., Tjian R.;
+RT   "Structure and function of a human TAFII250 double bromodomain module.";
+RL   Science 288:1422-1425(2000).
+RN   [33]
+RP   X-RAY CRYSTALLOGRAPHY (1.89 ANGSTROMS) OF 1501-1635, AND SUBUNIT.
+RX   PubMed=22464331; DOI=10.1016/j.cell.2012.02.013;
+RA   Filippakopoulos P., Picaud S., Mangos M., Keates T., Lambert J.P.,
+RA   Barsyte-Lovejoy D., Felletar I., Volkmer R., Muller S., Pawson T.,
+RA   Gingras A.C., Arrowsmith C.H., Knapp S.;
+RT   "Histone recognition and large-scale structural analysis of the human
+RT   bromodomain family.";
+RL   Cell 149:214-231(2012).
+RN   [34]
+RP   X-RAY CRYSTALLOGRAPHY (2.30 ANGSTROMS) OF 579-1215 IN COMPLEX WITH TAF7,
+RP   FUNCTION, AND INTERACTION WITH TAF7.
+RX   PubMed=25412659; DOI=10.1038/cr.2014.148;
+RA   Wang H., Curran E.C., Hinds T.R., Wang E.H., Zheng N.;
+RT   "Crystal structure of a TAF1-TAF7 complex in human transcription factor IID
+RT   reveals a promoter binding module.";
+RL   Cell Res. 24:1433-1444(2014).
+RN   [35]
+RP   X-RAY CRYSTALLOGRAPHY (1.50 ANGSTROMS) OF 1497-1638 IN COMPLEX WITH
+RP   CROTONYLATED OR BUTYRYLATED HISTONE H4.
+RX   PubMed=26365797; DOI=10.1016/j.str.2015.08.004;
+RA   Flynn E.M., Huang O.W., Poy F., Oppikofer M., Bellon S.F., Tang Y.,
+RA   Cochran A.G.;
+RT   "A subset of human bromodomains recognizes butyryllysine and crotonyllysine
+RT   histone peptide modifications.";
+RL   Structure 23:1801-1814(2015).
+RN   [36]
+RP   STRUCTURE BY ELECTRON MICROSCOPY (8.50 ANGSTROMS), AND SUBCELLULAR
+RP   LOCATION.
+RX   PubMed=27007846; DOI=10.1038/nature17394;
+RA   Louder R.K., He Y., Lopez-Blanco J.R., Fang J., Chacon P., Nogales E.;
+RT   "Structure of promoter-bound TFIID and model of human pre-initiation
+RT   complex assembly.";
+RL   Nature 531:604-609(2016).
+RN   [37] {ECO:0007744|PDB:6FIC}
+RP   X-RAY CRYSTALLOGRAPHY (2.18 ANGSTROMS) OF 1359-1638.
+RA   Mathea S., Suh J.L., Salah E., Tallant C., Siejka P., Pike A.C.W.,
+RA   von Delft F., Arrowsmith C.H., Edwards A.M., Bountra C., James L.I.,
+RA   Frye S.V., Knapp S.;
+RT   "Bivalent Inhibitor UNC4512 Bound to the TAF1 Bromodomain Tandem.";
+RL   Submitted (JAN-2018) to the PDB data bank.
+RN   [38] {ECO:0007744|PDB:6P39, ECO:0007744|PDB:6P3A}
+RP   X-RAY CRYSTALLOGRAPHY (2.94 ANGSTROMS) OF 1500-1635.
+RA   Seo H.-S., Dhe-Paganon S.;
+RT   "Crystal Structure Analysis of TAF1 Bromodomain.";
+RL   Submitted (MAY-2019) to the PDB data bank.
+RN   [39] {ECO:0007744|PDB:7JJG}
+RP   X-RAY CRYSTALLOGRAPHY (1.60 ANGSTROMS) OF 1501-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the second bromodomain (BD2) of human TAF1 bound to
+RT   ATR kinase inhibitor AZ20.";
+RL   Submitted (JUL-2020) to the PDB data bank.
+RN   [40] {ECO:0007744|PDB:7JJH}
+RP   X-RAY CRYSTALLOGRAPHY (2.10 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the unliganded tandem bromodomain (BD1, BD2) of human
+RT   TAF1.";
+RL   Submitted (JUL-2020) to the PDB data bank.
+RN   [41] {ECO:0007744|PDB:7JSP}
+RP   X-RAY CRYSTALLOGRAPHY (1.70 ANGSTROMS) OF 1501-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the second bromodomain (BD2) of human TAF1 bound to
+RT   the ATR kinase inhibitor AZD6738.";
+RL   Submitted (AUG-2020) to the PDB data bank.
+RN   [42] {ECO:0007744|PDB:7JTC}
+RP   X-RAY CRYSTALLOGRAPHY (2.05 ANGSTROMS) OF 1501-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the second bromodomain (BD2) of human TAF1 bound to
+RT   ZS1-322.";
+RL   Submitted (AUG-2020) to the PDB data bank.
+RN   [43] {ECO:0007744|PDB:7K03}
+RP   X-RAY CRYSTALLOGRAPHY (1.60 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the tandem bromodomain (BD1 and BD2) of human TAF1
+RT   bound to ATR kinase inhibitor AZD6738.";
+RL   Submitted (SEP-2020) to the PDB data bank.
+RN   [44] {ECO:0007744|PDB:7K0D}
+RP   X-RAY CRYSTALLOGRAPHY (2.20 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the tandem bromodomain (BD1, BD2) of human TAF1 bound
+RT   to mTORC1/2 inhibitor AZD3147.";
+RL   Submitted (SEP-2020) to the PDB data bank.
+RN   [45] {ECO:0007744|PDB:7K0U}
+RP   X-RAY CRYSTALLOGRAPHY (2.52 ANGSTROMS) OF 1501-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the second bromodomain (BD2) of human TAF1 bound to
+RT   PLK1 kinase inhibitor BI2536.";
+RL   Submitted (SEP-2020) to the PDB data bank.
+RN   [46] {ECO:0007744|PDB:7K1P}
+RP   X-RAY CRYSTALLOGRAPHY (2.45 ANGSTROMS) OF 1501-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the second bromodomain (BD2) of human TAF1 bound to
+RT   bromosporine.";
+RL   Submitted (SEP-2020) to the PDB data bank.
+RN   [47] {ECO:0007744|PDB:7K27}
+RP   X-RAY CRYSTALLOGRAPHY (1.50 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the tandem bromodomain (BD1, BD2) of human TAF1 bound
+RT   to ATR inhibitor AZ20.";
+RL   Submitted (SEP-2020) to the PDB data bank.
+RN   [48] {ECO:0007744|PDB:7K3O}
+RP   X-RAY CRYSTALLOGRAPHY (1.70 ANGSTROMS) OF 1501-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the unliganded second bromodomain (BD2) of human
+RT   TAF1.";
+RL   Submitted (SEP-2020) to the PDB data bank.
+RN   [49] {ECO:0007744|PDB:7K42}
+RP   X-RAY CRYSTALLOGRAPHY (1.70 ANGSTROMS) OF 1501-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the second bromodomain (BD2) of human TAF1 bound to
+RT   dioxane.";
+RL   Submitted (SEP-2020) to the PDB data bank.
+RN   [50] {ECO:0007744|PDB:7K6F}
+RP   X-RAY CRYSTALLOGRAPHY (1.86 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Bikowitz M.J., Schonbrunn E.;
+RT   "Crystal structure of the tandem bromodomain (BD1, BD2) of human TAF1 in
+RT   complex with MES (2-(N-morpholino)ethanesulfonic acid).";
+RL   Submitted (SEP-2020) to the PDB data bank.
+RN   [51] {ECO:0007744|PDB:7L6X}
+RP   X-RAY CRYSTALLOGRAPHY (2.75 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the tandem bromodomain (BD1, BD2) of human TAF1 bound
+RT   to GNE-371.";
+RL   Submitted (DEC-2020) to the PDB data bank.
+RN   [52] {ECO:0007744|PDB:7LB0}
+RP   X-RAY CRYSTALLOGRAPHY (2.33 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the tandem bromodomain (BD1, BD2) of human TAF1 bound
+RT   to ZS1-295.";
+RL   Submitted (JAN-2021) to the PDB data bank.
+RN   [53] {ECO:0007744|PDB:7LB1}
+RP   X-RAY CRYSTALLOGRAPHY (1.35 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the tandem bromodomain (BD1, BD2) of human TAF1 bound
+RT   to ZS1-585.";
+RL   Submitted (JAN-2021) to the PDB data bank.
+RN   [54] {ECO:0007744|PDB:7LB2}
+RP   X-RAY CRYSTALLOGRAPHY (1.70 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the tandem bromodomain (BD1, BD2) of human TAF1 bound
+RT   to ZS1-589.";
+RL   Submitted (JAN-2021) to the PDB data bank.
+RN   [55] {ECO:0007744|PDB:7N42}
+RP   X-RAY CRYSTALLOGRAPHY (1.90 ANGSTROMS) OF 1373-1635.
+RA   Karim M.R., Schonbrunn E.;
+RT   "Crystal structure of the tandem bromodomain of human TAF1 (TAF1-T) bound
+RT   to ZS1-681.";
+RL   Submitted (JUN-2021) to the PDB data bank.
+RN   [56] {ECO:0007744|PDB:7EDX, ECO:0007744|PDB:7EG7, ECO:0007744|PDB:7EG8, ECO:0007744|PDB:7EG9, ECO:0007744|PDB:7EGA, ECO:0007744|PDB:7EGB, ECO:0007744|PDB:7EGC, ECO:0007744|PDB:7EGD, ECO:0007744|PDB:7EGE, ECO:0007744|PDB:7EGH}
+RP   STRUCTURE BY ELECTRON MICROSCOPY (3.04 ANGSTROMS), FUNCTION, IDENTIFICATION
+RP   IN THE TFIID COMPLEX, AND SUBUNIT.
+RX   PubMed=33795473; DOI=10.1126/science.aba8490;
+RA   Chen X., Qi Y., Wu Z., Wang X., Li J., Zhao D., Hou H., Li Y., Yu Z.,
+RA   Liu W., Wang M., Ren Y., Li Z., Yang H., Xu Y.;
+RT   "Structural insights into preinitiation complex assembly on core
+RT   promoters.";
+RL   Science 372:0-0(2021).
+RN   [57]
+RP   VARIANTS [LARGE SCALE ANALYSIS] VAL-269; GLY-297; ASP-453; LYS-651 AND
+RP   ILE-691.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [58]
+RP   INVOLVEMENT IN MRXS33, AND VARIANTS MRXS33 SER-575; ARG-786; HIS-955;
+RP   TRP-1225; THR-1316; HIS-1431 AND HIS-1496.
+RX   PubMed=26637982; DOI=10.1016/j.ajhg.2015.11.005;
+RA   O'Rawe J.A., Wu Y., Doerfel M.J., Rope A.F., Au P.Y., Parboosingh J.S.,
+RA   Moon S., Kousi M., Kosma K., Smith C.S., Tzetis M., Schuette J.L.,
+RA   Hufnagel R.B., Prada C.E., Martinez F., Orellana C., Crain J.,
+RA   Caro-Llopis A., Oltra S., Monfort S., Jimenez-Barron L.T., Swensen J.,
+RA   Ellingwood S., Smith R., Fang H., Ospina S., Stegmann S., Den Hollander N.,
+RA   Mittelman D., Highnam G., Robison R., Yang E., Faivre L., Roubertie A.,
+RA   Riviere J.B., Monaghan K.G., Wang K., Davis E.E., Katsanis N.,
+RA   Kalscheuer V.M., Wang E.H., Metcalfe K., Kleefstra T., Innes A.M.,
+RA   Kitsiou-Tzeli S., Rosello M., Keegan C.E., Lyon G.J.;
+RT   "TAF1 Variants Are Associated with Dysmorphic Features, Intellectual
+RT   Disability, and Neurological Manifestations.";
+RL   Am. J. Hum. Genet. 97:922-932(2015).
+RN   [59]
+RP   VARIANTS ASP-472 AND CYS-1169.
+RX   PubMed=25644381; DOI=10.1038/mp.2014.193;
+RA   Hu H., Haas S.A., Chelly J., Van Esch H., Raynaud M., de Brouwer A.P.,
+RA   Weinert S., Froyen G., Frints S.G., Laumonnier F., Zemojtel T., Love M.I.,
+RA   Richard H., Emde A.K., Bienek M., Jensen C., Hambrock M., Fischer U.,
+RA   Langnick C., Feldkamp M., Wissink-Lindhout W., Lebrun N., Castelnau L.,
+RA   Rucci J., Montjean R., Dorseuil O., Billuart P., Stuhlmann T., Shaw M.,
+RA   Corbett M.A., Gardner A., Willis-Owen S., Tan C., Friend K.L., Belet S.,
+RA   van Roozendaal K.E., Jimenez-Pocquet M., Moizard M.P., Ronce N., Sun R.,
+RA   O'Keeffe S., Chenna R., van Boemmel A., Goeke J., Hackett A., Field M.,
+RA   Christie L., Boyle J., Haan E., Nelson J., Turner G., Baynam G.,
+RA   Gillessen-Kaesbach G., Mueller U., Steinberger D., Budny B.,
+RA   Badura-Stronka M., Latos-Bielenska A., Ousager L.B., Wieacker P.,
+RA   Rodriguez Criado G., Bondeson M.L., Anneren G., Dufke A., Cohen M.,
+RA   Van Maldergem L., Vincent-Delorme C., Echenne B., Simon-Bouy B.,
+RA   Kleefstra T., Willemsen M., Fryns J.P., Devriendt K., Ullmann R.,
+RA   Vingron M., Wrogemann K., Wienker T.F., Tzschach A., van Bokhoven H.,
+RA   Gecz J., Jentsch T.J., Chen W., Ropers H.H., Kalscheuer V.M.;
+RT   "X-exome sequencing of 405 unresolved families identifies seven novel
+RT   intellectual disability genes.";
+RL   Mol. Psychiatry 21:133-148(2016).
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=12;
+CC         Comment=the TAF1/DYT3 multiple transcript system is composed of 38
+CC         evolutionary conserved exons plus 5 downstream exons referred to as
+CC         exons d1-d5 that are primate-specific. Multiple highly polymorphic
+CC         variants can be generated by splicing exons d3 and d4 to various
+CC         combinations of exons 1-37.;
+CC       Name=1;
+CC         IsoId=P21675-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=P21675-2; Sequence=VSP_012362;
+CC       Name=3;
+CC         IsoId=P21675-3; Sequence=VSP_053382, VSP_053383, VSP_053384;
+CC       Name=4;
+CC         IsoId=P21675-4; Sequence=VSP_053383;
+CC       Name=2a;
+CC         IsoId=P21675-5; Sequence=VSP_053383, VSP_053384;
+CC       Name=2c;
+CC         IsoId=P21675-6; Sequence=VSP_053384;
+CC       Name=2d;
+CC         IsoId=P21675-7; Sequence=VSP_053381, VSP_053384;
+CC       Name=2e; Synonyms=2F;
+CC         IsoId=P21675-8; Sequence=VSP_053379, VSP_053380;
+CC       Name=2g;
+CC         IsoId=P21675-9; Sequence=VSP_053381, VSP_053383, VSP_053384;
+CC       Name=2h;
+CC         IsoId=P21675-10; Sequence=VSP_053375, VSP_053377;
+CC       Name=2i;
+CC         IsoId=P21675-11; Sequence=VSP_053376, VSP_053378;
+CC       Name=N-TAF1; Synonyms=TA14-391;
+CC         IsoId=P21675-12; Sequence=VSP_012362, VSP_053381;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   ProteomicsDB; 53888; -.
+DR   Proteomes; UP000005640; Chromosome X.
+PE   1: Evidence at protein level;
+FT   MOD_RES         1697
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:20068231"
+SQ   SEQUENCE   1832 AA;  208364 MW;  6C51A0F5885FF667 CRC64;
+     MGPGCDLLLR TAATITAAAI MSDTDSDEDS AGGGPFSLAG FLFGNINGAG QLEGESVLDD
+     ECKKHLAGLG ALGLGSLITE LTANEELTGT DGALVNDEGW VRSTEDAVDY SDINEVAEDE
+     SRRYQQTMGS LQPLCHSDYD EDDYDADCED IDCKLMPPPP PPPGPMKKDK DQDSITGEKV
+     DFSSSSDSES EMGPQEATQA ESEDGKLTLP LAGIMQHDAT KLLPSVTELF PEFRPGKVLR
+     FLRLFGPGKN VPSVWRSARR KRKKKHRELI QEEQIQEVEC SVESEVSQKS LWNYDYAPPP
+     PPEQCLSDDE ITMMAPVESK FSQSTGDIDK VTDTKPRVAE WRYGPARLWY DMLGVPEDGS
+     GFDYGFKLRK TEHEPVIKSR MIEEFRKLEE NNGTDLLADE NFLMVTQLHW EDDIIWDGED
+     VKHKGTKPQR ASLAGWLPSS MTRNAMAYNV QQGFAATLDD DKPWYSIFPI DNEDLVYGRW
+     EDNIIWDAQA MPRLLEPPVL TLDPNDENLI LEIPDEKEEA TSNSPSKESK KESSLKKSRI
+     LLGKTGVIKE EPQQNMSQPE VKDPWNLSND EYYYPKQQGL RGTFGGNIIQ HSIPAVELRQ
+     PFFPTHMGPI KLRQFHRPPL KKYSFGALSQ PGPHSVQPLL KHIKKKAKMR EQERQASGGG
+     EMFFMRTPQD LTGKDGDLIL AEYSEENGPL MMQVGMATKI KNYYKRKPGK DPGAPDCKYG
+     ETVYCHTSPF LGSLHPGQLL QAFENNLFRA PIYLHKMPET DFLIIRTRQG YYIRELVDIF
+     VVGQQCPLFE VPGPNSKRAN THIRDFLQVF IYRLFWKSKD RPRRIRMEDI KKAFPSHSES
+     SIRKRLKLCA DFKRTGMDSN WWVLKSDFRL PTEEEIRAMV SPEQCCAYYS MIAAEQRLKD
+     AGYGEKSFFA PEEENEEDFQ MKIDDEVRTA PWNTTRAFIA AMKGKCLLEV TGVADPTGCG
+     EGFSYVKIPN KPTQQKDDKE PQPVKKTVTG TDADLRRLSL KNAKQLLRKF GVPEEEIKKL
+     SRWEVIDVVR TMSTEQARSG EGPMSKFARG SRFSVAEHQE RYKEECQRIF DLQNKVLSST
+     EVLSTDTDSS SAEDSDFEEM GKNIENMLQN KKTSSQLSRE REEQERKELQ RMLLAAGSAA
+     SGNNHRDDDT ASVTSLNSSA TGRCLKIYRT FRDEEGKEYV RCETVRKPAV IDAYVRIRTT
+     KDEEFIRKFA LFDEQHREEM RKERRRIQEQ LRRLKRNQEK EKLKGPPEKK PKKMKERPDL
+     KLKCGACGAI GHMRTNKFCP LYYQTNAPPS NPVAMTEEQE EELEKTVIHN DNEELIKVEG
+     TKIVLGKQLI ESADEVRRKS LVLKFPKQQL PPKKKRRVGT TVHCDYLNRP HKSIHRRRTD
+     PMVTLSSILE SIINDMRDLP NTYPFHTPVN AKVVKDYYKI ITRPMDLQTL RENVRKRLYP
+     SREEFREHLE LIVKNSATYN GPKHSLTQIS QSMLDLCDEK LKEKEDKLAR LEKAINPLLD
+     DDDQVAFSFI LDNIVTQKMM AVPDSWPFHH PVNKKFVPDY YKVIVNPMDL ETIRKNISKH
+     KYQSRESFLD DVNLILANSV KYNGPESQYT KTAQEIVNVC YQTLTEYDEH LTQLEKDICT
+     AKEAALEEAE LESLDPMTPG PYTPQPPDLY DTNTSLSMSR DASVFQDESN MSVLDIPSAT
+     PEKQMRQGRG RLGEEDSDVD IEGYDDEEED GKPKTPAPEG EDGDGDLADE EEGTVQQPQA
+     SVLYEDLLMS EGEDDEEDAG SDEEGDNPFS AIQLSESGSD SDVGSGGIRP KQPRMLQENT
+     RMDMENEESM MSYEGDGGEA SHGLEDSNIR YQ
+//

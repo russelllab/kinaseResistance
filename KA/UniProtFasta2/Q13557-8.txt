@@ -1,0 +1,318 @@
+ID   KCC2D_HUMAN             Reviewed;         478 AA.
+AC   Q13557-8;
+DT   01-NOV-1997, integrated into UniProtKB/Swiss-Prot.
+DT   17-OCT-2006, sequence version 3.
+DT   12-OCT-2022, entry version 224.
+DE   RecName: Full=Isoform Delta 6 of Calcium/calmodulin-dependent protein kinase type II subunit delta;
+DE            Short=CaM kinase II subunit delta;
+DE            Short=CaMK-II subunit delta;
+DE            EC=2.7.11.17;
+GN   Name=CAMK2D; Synonyms=CAMKD;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM DELTA 2), ALTERNATIVE SPLICING, AND
+RP   TISSUE SPECIFICITY.
+RC   TISSUE=Myocardium;
+RX   PubMed=10189359; DOI=10.1161/01.res.84.6.713;
+RA   Hoch B., Meyer R., Hetzer R., Krause E.-G., Karczewski P.;
+RT   "Identification and expression of delta-isoforms of the multifunctional
+RT   Ca2+/calmodulin-dependent protein kinase in failing and nonfailing human
+RT   myocardium.";
+RL   Circ. Res. 84:713-721(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM DELTA 12).
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM DELTA 10).
+RC   TISSUE=Brain;
+RA   Totoki Y., Toyoda A., Takeda T., Sakaki Y., Tanaka A., Yokoyama S.,
+RA   Ohara O., Nagase T., Kikuno R.F.;
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM DELTA 7).
+RA   Zhou G., Nong W., Li H., Ke R., Li M., Zheng Z., Zhong G., Shen C.,
+RA   Liang M., Lin L., Yang S.;
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15815621; DOI=10.1038/nature03466;
+RA   Hillier L.W., Graves T.A., Fulton R.S., Fulton L.A., Pepin K.H., Minx P.,
+RA   Wagner-McPherson C., Layman D., Wylie K., Sekhon M., Becker M.C.,
+RA   Fewell G.A., Delehaunty K.D., Miner T.L., Nash W.E., Kremitzki C., Oddy L.,
+RA   Du H., Sun H., Bradshaw-Cordum H., Ali J., Carter J., Cordes M., Harris A.,
+RA   Isak A., van Brunt A., Nguyen C., Du F., Courtney L., Kalicki J.,
+RA   Ozersky P., Abbott S., Armstrong J., Belter E.A., Caruso L., Cedroni M.,
+RA   Cotton M., Davidson T., Desai A., Elliott G., Erb T., Fronick C., Gaige T.,
+RA   Haakenson W., Haglund K., Holmes A., Harkins R., Kim K., Kruchowski S.S.,
+RA   Strong C.M., Grewal N., Goyea E., Hou S., Levy A., Martinka S., Mead K.,
+RA   McLellan M.D., Meyer R., Randall-Maher J., Tomlinson C.,
+RA   Dauphin-Kohlberg S., Kozlowicz-Reilly A., Shah N., Swearengen-Shahid S.,
+RA   Snider J., Strong J.T., Thompson J., Yoakum M., Leonard S., Pearman C.,
+RA   Trani L., Radionenko M., Waligorski J.E., Wang C., Rock S.M.,
+RA   Tin-Wollam A.-M., Maupin R., Latreille P., Wendl M.C., Yang S.-P., Pohl C.,
+RA   Wallis J.W., Spieth J., Bieri T.A., Berkowicz N., Nelson J.O., Osborne J.,
+RA   Ding L., Meyer R., Sabo A., Shotland Y., Sinha P., Wohldmann P.E.,
+RA   Cook L.L., Hickenbotham M.T., Eldred J., Williams D., Jones T.A., She X.,
+RA   Ciccarelli F.D., Izaurralde E., Taylor J., Schmutz J., Myers R.M.,
+RA   Cox D.R., Huang X., McPherson J.D., Mardis E.R., Clifton S.W., Warren W.C.,
+RA   Chinwalla A.T., Eddy S.R., Marra M.A., Ovcharenko I., Furey T.S.,
+RA   Miller W., Eichler E.E., Bork P., Suyama M., Torrents D., Waterston R.H.,
+RA   Wilson R.K.;
+RT   "Generation and annotation of the DNA sequences of human chromosomes 2 and
+RT   4.";
+RL   Nature 434:724-731(2005).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM DELTA 6).
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 1-243, AND ALTERNATIVE SPLICING.
+RC   TISSUE=Insulinoma;
+RX   PubMed=10819240; DOI=10.1007/s001250051330;
+RA   Rochlitz H., Voigt A., Lankat-Buttgereit B., Goeke B., Heimberg H.,
+RA   Nauck M.A., Schiemann U., Schatz H., Pfeiffer A.F.;
+RT   "Cloning and quantitative determination of the human Ca2+/calmodulin-
+RT   dependent protein kinase II (CaMK II) isoforms in human beta cells.";
+RL   Diabetologia 43:465-473(2000).
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 302-417, AND ALTERNATIVE SPLICING.
+RX   PubMed=9060999; DOI=10.1016/s0167-4889(96)00141-3;
+RA   Tombes R.M., Krystal G.W.;
+RT   "Identification of novel human tumor cell-specific CaMK-II variants.";
+RL   Biochim. Biophys. Acta 1355:281-292(1997).
+RN   [9]
+RP   ACTIVITY REGULATION, SUBUNIT, AND AUTOPHOSPHORYLATION.
+RX   PubMed=14722083; DOI=10.1074/jbc.m313597200;
+RA   Gaertner T.R., Kolodziej S.J., Wang D., Kobayashi R., Koomen J.M.,
+RA   Stoops J.K., Waxham M.N.;
+RT   "Comparative analyses of the three-dimensional structures and enzymatic
+RT   properties of alpha, beta, gamma and delta isoforms of Ca2+-calmodulin-
+RT   dependent protein kinase II.";
+RL   J. Biol. Chem. 279:12484-12494(2004).
+RN   [10]
+RP   FUNCTION IN SKELETAL MUSCLE, PHOSPHORYLATION AT THR-287, FUNCTION IN
+RP   PHOSPHORYLATION OF PLN, TISSUE SPECIFICITY, AND INDUCTION.
+RX   PubMed=16690701; DOI=10.1113/jphysiol.2006.111757;
+RA   Rose A.J., Kiens B., Richter E.A.;
+RT   "Ca2+-calmodulin-dependent protein kinase expression and signalling in
+RT   skeletal muscle during exercise.";
+RL   J. Physiol. (Lond.) 574:889-903(2006).
+RN   [11]
+RP   FUNCTION IN PHOSPHORYLATION OF HDAC4.
+RX   PubMed=17179159; DOI=10.1074/jbc.m604281200;
+RA   Little G.H., Bai Y., Williams T., Poizat C.;
+RT   "Nuclear calcium/calmodulin-dependent protein kinase IIdelta preferentially
+RT   transmits signals to histone deacetylase 4 in cardiac cells.";
+RL   J. Biol. Chem. 282:7219-7231(2007).
+RN   [12]
+RP   REVIEW ON INVOLVEMENT IN EXCITATION-CONTRACTION COUPLING IN HEART.
+RX   PubMed=17157285; DOI=10.1016/j.cardiores.2006.11.005;
+RA   Maier L.S., Bers D.M.;
+RT   "Role of Ca2+/calmodulin-dependent protein kinase (CaMK) in excitation-
+RT   contraction coupling in the heart.";
+RL   Cardiovasc. Res. 73:631-640(2007).
+RN   [13]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [14]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=18318008; DOI=10.1002/pmic.200700884;
+RA   Han G., Ye M., Zhou H., Jiang X., Feng S., Jiang X., Tian R., Wan D.,
+RA   Zou H., Gu J.;
+RT   "Large-scale phosphoproteome analysis of human liver tissue by enrichment
+RT   and fractionation of phosphopeptides with strong anion exchange
+RT   chromatography.";
+RL   Proteomics 8:1346-1361(2008).
+RN   [15]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19413330; DOI=10.1021/ac9004309;
+RA   Gauci S., Helbig A.O., Slijper M., Krijgsveld J., Heck A.J., Mohammed S.;
+RT   "Lys-N and trypsin cover complementary parts of the phosphoproteome in a
+RT   refined SCX-based approach.";
+RL   Anal. Chem. 81:4493-4501(2009).
+RN   [16]
+RP   REVIEW ON PHOSPHORYLATION OF RYR2.
+RX   PubMed=19482609; DOI=10.2741/3591;
+RA   Currie S.;
+RT   "Cardiac ryanodine receptor phosphorylation by CaM Kinase II: keeping the
+RT   balance right.";
+RL   Front. Biosci. 14:5134-5156(2009).
+RN   [17]
+RP   ACETYLATION [LARGE SCALE ANALYSIS] AT ALA-2, PHOSPHORYLATION [LARGE SCALE
+RP   ANALYSIS] AT SER-319; SER-404 AND SER-490, CLEAVAGE OF INITIATOR METHIONINE
+RP   [LARGE SCALE ANALYSIS], AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE
+RP   SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [18]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [19]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [20]
+RP   REVIEW.
+RX   PubMed=20673813; DOI=10.1016/j.hrthm.2010.07.029;
+RA   Mohler P.J., Hund T.J.;
+RT   "Role of CaMKII in cardiovascular health, disease, and arrhythmia.";
+RL   Heart Rhythm 8:142-144(2011).
+RN   [21]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [22]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-315; SER-319; SER-330;
+RP   THR-331 AND THR-337, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE
+RP   ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [23]
+RP   X-RAY CRYSTALLOGRAPHY (1.90 ANGSTROMS) OF 11-335 IN COMPLEX AND INHIBITORS.
+RX   PubMed=20668654; DOI=10.1371/journal.pbio.1000426;
+RA   Rellos P., Pike A.C., Niesen F.H., Salah E., Lee W.H., von Delft F.,
+RA   Knapp S.;
+RT   "Structure of the CaMKIIdelta/calmodulin complex reveals the molecular
+RT   mechanism of CaMKII kinase activation.";
+RL   PLoS Biol. 8:E1000426-E1000426(2010).
+RN   [24]
+RP   X-RAY CRYSTALLOGRAPHY (1.46 ANGSTROMS) OF 294-311 IN COMPLEX WITH
+RP   CALMODULIN.
+RA   Ng H.L., Alber T.A., Wand A.J.;
+RT   "Calmodulin bound to peptide from calmodulin kinase II (CaMKII).";
+RL   Submitted (MAR-2009) to the PDB data bank.
+RN   [25]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLU-167 AND ILE-493.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- INTERACTION:
+CC       Q13557-8; Q9UQM7: CAMK2A; NbExp=3; IntAct=EBI-11534483, EBI-1383687;
+CC       Q13557-8; Q13554-3: CAMK2B; NbExp=4; IntAct=EBI-11534483, EBI-11523526;
+CC       Q13557-8; Q13555-5: CAMK2G; NbExp=3; IntAct=EBI-11534483, EBI-12020154;
+CC       Q13557-8; A0A0S2Z3P2: ERCC8; NbExp=3; IntAct=EBI-11534483, EBI-16440910;
+CC       Q13557-8; P78317: RNF4; NbExp=3; IntAct=EBI-11534483, EBI-2340927;
+CC       Q13557-8; Q9Y5L0: TNPO3; NbExp=3; IntAct=EBI-11534483, EBI-1042571;
+CC       Q13557-8; Q8N0Z6: TTC5; NbExp=3; IntAct=EBI-11534483, EBI-9526213;
+CC       Q13557-8; Q7KZS0: UBE2I; NbExp=3; IntAct=EBI-11534483, EBI-10180829;
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=10;
+CC       Name=Delta 2;
+CC         IsoId=Q13557-1; Sequence=Displayed;
+CC       Name=Delta 3;
+CC         IsoId=Q13557-3; Sequence=VSP_023096;
+CC       Name=Delta 4;
+CC         IsoId=Q13557-4; Sequence=VSP_023097;
+CC       Name=Delta 6;
+CC         IsoId=Q13557-8; Sequence=VSP_023099;
+CC       Name=Delta 7;
+CC         IsoId=Q13557-9; Sequence=VSP_023096, VSP_023099;
+CC       Name=Delta 8;
+CC         IsoId=Q13557-5; Sequence=VSP_023097, VSP_023099;
+CC       Name=Delta 9;
+CC         IsoId=Q13557-6; Sequence=VSP_023098;
+CC       Name=Delta 10;
+CC         IsoId=Q13557-10; Sequence=VSP_023098, VSP_023099;
+CC       Name=Delta 11;
+CC         IsoId=Q13557-11; Sequence=VSP_023095;
+CC       Name=Delta 12;
+CC         IsoId=Q13557-12; Sequence=VSP_041820, VSP_023099;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS3704.1; -.
+DR   RefSeq; NP_742113.1; NM_172115.2.
+DR   RefSeq; NP_742125.1; NM_172127.2.
+DR   ProteomicsDB; 59556; -.
+DR   Ensembl; ENST00000296402.9; ENSP00000296402.5; ENSG00000145349.18.
+DR   Ensembl; ENST00000379773.6; ENSP00000369098.2; ENSG00000145349.18.
+DR   Proteomes; UP000005640; Chromosome 4.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   478 AA;  54128 MW;  571DA27C914E4F7E CRC64;
+     MASTTTCTRF TDEYQLFEEL GKGAFSVVRR CMKIPTGQEY AAKIINTKKL SARDHQKLER
+     EARICRLLKH PNIVRLHDSI SEEGFHYLVF DLVTGGELFE DIVAREYYSE ADASHCIQQI
+     LESVNHCHLN GIVHRDLKPE NLLLASKSKG AAVKLADFGL AIEVQGDQQA WFGFAGTPGY
+     LSPEVLRKDP YGKPVDMWAC GVILYILLVG YPPFWDEDQH RLYQQIKAGA YDFPSPEWDT
+     VTPEAKDLIN KMLTINPAKR ITASEALKHP WICQRSTVAS MMHRQETVDC LKKFNARRKL
+     KGAILTTMLA TRNFSAAKSL LKKPDGVKES TESSNTTIED EDVKARKQEI IKVTEQLIEA
+     INNGDFEAYT KICDPGLTAF EPEALGNLVE GMDFHRFYFE NALSKSNKPI HTIILNPHVH
+     LVGDDAACIA YIRLTQYMDG SGMPKTMQSE ETRVWHRRDG KWQNVHFHRS GSPTVPIK
+//

@@ -1,0 +1,626 @@
+ID   FGFR3_HUMAN             Reviewed;         694 AA.
+AC   P22607-3;
+DT   01-AUG-1991, integrated into UniProtKB/Swiss-Prot.
+DT   01-AUG-1991, sequence version 1.
+DT   12-OCT-2022, entry version 255.
+DE   RecName: Full=Isoform 3 of Fibroblast growth factor receptor 3;
+DE            Short=FGFR-3;
+DE            EC=2.7.10.1;
+DE   AltName: CD_antigen=CD333;
+DE   Flags: Precursor;
+GN   Name=FGFR3; Synonyms=JTK4;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=1847508; DOI=10.1073/pnas.88.4.1095;
+RA   Keegan K., Johnson D.E., Williams L.T., Hayman M.J.;
+RT   "Isolation of an additional member of the fibroblast growth factor receptor
+RT   family, FGFR-3.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 88:1095-1099(1991).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 3), FUNCTION, SUBUNIT, FGF1- AND
+RP   FGF2-BINDING, SUBCELLULAR LOCATION, GLYCOSYLATION, AND DIMERIZATION.
+RC   TISSUE=Squamous cell carcinoma;
+RX   PubMed=11703096; DOI=10.1006/mcbr.2001.0306;
+RA   Terada M., Shimizu A., Sato N., Miyakaze S.I., Katayama H.,
+RA   Kurokawa-Seo M.;
+RT   "Fibroblast growth factor receptor 3 lacking the Ig IIIb and transmembrane
+RT   domains secreted from human squamous cell carcinoma DJM-1 binds to FGFs.";
+RL   Mol. Cell Biol. Res. Commun. 4:365-373(2001).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 4).
+RC   TISSUE=Brain;
+RA   Totoki Y., Toyoda A., Takeda T., Sakaki Y., Tanaka A., Yokoyama S.,
+RA   Ohara O., Nagase T., Kikuno R.F.;
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND VARIANTS ARG-65; LEU-384; THR-441;
+RP   THR-717 AND PHE-726.
+RG   NIEHS SNPs program;
+RL   Submitted (SEP-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15815621; DOI=10.1038/nature03466;
+RA   Hillier L.W., Graves T.A., Fulton R.S., Fulton L.A., Pepin K.H., Minx P.,
+RA   Wagner-McPherson C., Layman D., Wylie K., Sekhon M., Becker M.C.,
+RA   Fewell G.A., Delehaunty K.D., Miner T.L., Nash W.E., Kremitzki C., Oddy L.,
+RA   Du H., Sun H., Bradshaw-Cordum H., Ali J., Carter J., Cordes M., Harris A.,
+RA   Isak A., van Brunt A., Nguyen C., Du F., Courtney L., Kalicki J.,
+RA   Ozersky P., Abbott S., Armstrong J., Belter E.A., Caruso L., Cedroni M.,
+RA   Cotton M., Davidson T., Desai A., Elliott G., Erb T., Fronick C., Gaige T.,
+RA   Haakenson W., Haglund K., Holmes A., Harkins R., Kim K., Kruchowski S.S.,
+RA   Strong C.M., Grewal N., Goyea E., Hou S., Levy A., Martinka S., Mead K.,
+RA   McLellan M.D., Meyer R., Randall-Maher J., Tomlinson C.,
+RA   Dauphin-Kohlberg S., Kozlowicz-Reilly A., Shah N., Swearengen-Shahid S.,
+RA   Snider J., Strong J.T., Thompson J., Yoakum M., Leonard S., Pearman C.,
+RA   Trani L., Radionenko M., Waligorski J.E., Wang C., Rock S.M.,
+RA   Tin-Wollam A.-M., Maupin R., Latreille P., Wendl M.C., Yang S.-P., Pohl C.,
+RA   Wallis J.W., Spieth J., Bieri T.A., Berkowicz N., Nelson J.O., Osborne J.,
+RA   Ding L., Meyer R., Sabo A., Shotland Y., Sinha P., Wohldmann P.E.,
+RA   Cook L.L., Hickenbotham M.T., Eldred J., Williams D., Jones T.A., She X.,
+RA   Ciccarelli F.D., Izaurralde E., Taylor J., Schmutz J., Myers R.M.,
+RA   Cox D.R., Huang X., McPherson J.D., Mardis E.R., Clifton S.W., Warren W.C.,
+RA   Chinwalla A.T., Eddy S.R., Marra M.A., Ovcharenko I., Furey T.S.,
+RA   Miller W., Eichler E.E., Bork P., Suyama M., Torrents D., Waterston R.H.,
+RA   Wilson R.K.;
+RT   "Generation and annotation of the DNA sequences of human chromosomes 2 and
+RT   4.";
+RL   Nature 434:724-731(2005).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 76-806 (ISOFORM 1), AND TISSUE SPECIFICITY.
+RC   TISSUE=Fetal brain;
+RX   PubMed=1664411; DOI=10.1016/0888-7543(91)90041-c;
+RA   Thompson L.M., Plummer S., Schalling M., Altherr M.R., Gusella J.F.,
+RA   Housman D.E., Wasmuth J.J.;
+RT   "A gene encoding a fibroblast growth factor receptor isolated from the
+RT   Huntington disease gene region of human chromosome 4.";
+RL   Genomics 11:1133-1142(1991).
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 614-681.
+RX   PubMed=2247464; DOI=10.1073/pnas.87.22.8913;
+RA   Partanen J., Maekelae T.P., Alitalo R., Lehvaeslaiho H., Alitalo K.;
+RT   "Putative tyrosine kinases expressed in K-562 human leukemia cells.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 87:8913-8917(1990).
+RN   [9]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 311-358 (ISOFORM 2).
+RC   TISSUE=Colon tumor;
+RX   PubMed=7923141;
+RA   Murgue B., Tsunekawa S., Rosenberg I., deBeaumont M., Podolsky D.K.;
+RT   "Identification of a novel variant form of fibroblast growth factor
+RT   receptor 3 (FGFR3 IIIb) in human colonic epithelium.";
+RL   Cancer Res. 54:5206-5211(1994).
+RN   [10]
+RP   NUCLEOTIDE SEQUENCE [MRNA] OF 311-358 (ISOFORM 2).
+RC   TISSUE=Keratinocyte;
+RX   PubMed=7495869; DOI=10.1016/0167-4781(95)00156-b;
+RA   Scotet E., Houssaint E.;
+RT   "The choice between alternative IIIb and IIIc exons of the FGFR-3 gene is
+RT   not strictly tissue-specific.";
+RL   Biochim. Biophys. Acta 1264:238-242(1995).
+RN   [11]
+RP   INTERACTION WITH FGF1; FGF2; FGF4; FGF8 AND FGF9, AND FUNCTION IN CELL
+RP   PROLIFERATION.
+RX   PubMed=8663044; DOI=10.1074/jbc.271.25.15292;
+RA   Ornitz D.M., Xu J., Colvin J.S., McEwen D.G., MacArthur C.A., Coulier F.,
+RA   Gao G., Goldfarb M.;
+RT   "Receptor specificity of the fibroblast growth factor family.";
+RL   J. Biol. Chem. 271:15292-15297(1996).
+RN   [12]
+RP   INVOLVEMENT IN SADDAN, VARIANT SADDAN MET-650, AND CHARACTERIZATION OF
+RP   VARIANT SADDAN MET-650.
+RX   PubMed=10053006; DOI=10.1086/302275;
+RA   Tavormina P.L., Bellus G.A., Webster M.K., Bamshad M.J., Fraley A.E.,
+RA   McIntosh I., Szabo J., Jiang W., Jabs E.W., Wilcox W.R., Wasmuth J.J.,
+RA   Donoghue D.J., Thompson L.M., Francomano C.A.;
+RT   "A novel skeletal dysplasia with developmental delay and acanthosis
+RT   nigricans is caused by a Lys650Met mutation in the fibroblast growth factor
+RT   receptor 3 gene.";
+RL   Am. J. Hum. Genet. 64:722-731(1999).
+RN   [13]
+RP   FUNCTION AS FGF9 RECEPTOR IN CHONDROCYTES AND IN ACTIVATION OF SIGNALING
+RP   PATHWAYS, SUBUNIT, SUBCELLULAR LOCATION, DEGRADATION, AUTOPHOSPHORYLATION,
+RP   AND CHARACTERIZATION OF VARIANT ACH ARG-380.
+RX   PubMed=10611230; DOI=10.1128/mcb.20.2.516-522.2000;
+RA   Monsonego-Ornan E., Adar R., Feferman T., Segev O., Yayon A.;
+RT   "The transmembrane mutation G380R in fibroblast growth factor receptor 3
+RT   uncouples ligand-mediated receptor activation from down-regulation.";
+RL   Mol. Cell. Biol. 20:516-522(2000).
+RN   [14]
+RP   FUNCTION IN STIMULATION OF CELL PROLIFERATION; PHOSPHORYLATION OF PIK3R1;
+RP   PTPN11/SHP2; STAT1; STAT3 AND MAP KINASES, PHOSPHORYLATION AT TYR-724,
+RP   MUTAGENESIS OF TYR-577; TYR-724; TYR-760 AND TYR-770, AND CHARACTERIZATION
+RP   OF VARIANT GLU-650.
+RX   PubMed=11294897; DOI=10.1091/mbc.12.4.931;
+RA   Hart K.C., Robertson S.C., Donoghue D.J.;
+RT   "Identification of tyrosine residues in constitutively activated fibroblast
+RT   growth factor receptor 3 involved in mitogenesis, Stat activation, and
+RT   phosphatidylinositol 3-kinase activation.";
+RL   Mol. Biol. Cell 12:931-942(2001).
+RN   [15]
+RP   UBIQUITINATION, PHOSPHORYLATION, CATALYTIC ACTIVITY, MUTAGENESIS OF
+RP   LYS-508, CHARACTERIZATION OF VARIANT ACH ARG-380, AND CHARACTERIZATION OF
+RP   VARIANT TD2 GLU-650.
+RX   PubMed=12297284; DOI=10.1016/s0014-5793(02)03255-6;
+RA   Monsonego-Ornan E., Adar R., Rom E., Yayon A.;
+RT   "FGF receptors ubiquitylation: dependence on tyrosine kinase activity and
+RT   role in downregulation.";
+RL   FEBS Lett. 528:83-89(2002).
+RN   [16]
+RP   FUNCTION AS PROTO-ONCOGENE IN ACTIVATION OF SIGNALING AND CELL
+RP   PROLIFERATION, FUNCTION IN PHOSPHORYLATION OF FRS2, CHARACTERIZATION OF
+RP   VARIANT GLU-650, AND AUTOPHOSPHORYLATION.
+RX   PubMed=14534538; DOI=10.1038/sj.onc.1206798;
+RA   Agazie Y.M., Movilla N., Ischenko I., Hayman M.J.;
+RT   "The phosphotyrosine phosphatase SHP2 is a critical mediator of
+RT   transformation induced by the oncogenic fibroblast growth factor receptor
+RT   3.";
+RL   Oncogene 22:6909-6918(2003).
+RN   [17]
+RP   INTERACTION WITH FGF1; FGF8; FGF9; FGF17; FGF18; FGF19 AND FGF20, AND
+RP   FUNCTION IN STIMULATION OF CELL PROLIFERATION.
+RX   PubMed=16597617; DOI=10.1074/jbc.m601252200;
+RA   Zhang X., Ibrahimi O.A., Olsen S.K., Umemori H., Mohammadi M., Ornitz D.M.;
+RT   "Receptor specificity of the fibroblast growth factor family. The complete
+RT   mammalian FGF family.";
+RL   J. Biol. Chem. 281:15694-15700(2006).
+RN   [18]
+RP   INTERACTION WITH SOCS1 AND SOCS3, FUNCTION IN ACTIVATION OF STAT1 AND MAP
+RP   KINASES, GLYCOSYLATION, PHOSPHORYLATION, MUTAGENESIS OF LYS-508, AND
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=16410555; DOI=10.1242/jcs.02740;
+RA   Ben-Zvi T., Yayon A., Gertler A., Monsonego-Ornan E.;
+RT   "Suppressors of cytokine signaling (SOCS) 1 and SOCS3 interact with and
+RT   modulate fibroblast growth factor receptor signaling.";
+RL   J. Cell Sci. 119:380-387(2006).
+RN   [19]
+RP   FUNCTION IN REGULATION OF CHONDROCYTE PROLIFERATION AND IN ACTIVATION OF
+RP   PLCG1 AND STAT1, INTERACTION WITH FHF1 AND HEPARIN, SUBCELLULAR LOCATION,
+RP   PHOSPHORYLATION, AND CHARACTERIZATION OF VARIANTS ARG-380; GLU-650 AND
+RP   MET-650.
+RX   PubMed=17561467; DOI=10.1016/j.bone.2006.11.030;
+RA   Harada D., Yamanaka Y., Ueda K., Nishimura R., Morishima T., Seino Y.,
+RA   Tanaka H.;
+RT   "Sustained phosphorylation of mutated FGFR3 is a crucial feature of genetic
+RT   dwarfism and induces apoptosis in the ATDC5 chondrogenic cell line via
+RT   PLCgamma-activated STAT1.";
+RL   Bone 41:273-281(2007).
+RN   [20]
+RP   FUNCTION IN PHOSPHORYLATION OF CBL, UBIQUITINATION, GLYCOSYLATION,
+RP   SUBCELLULAR LOCATION, ACTIVITY REGULATION, AND CHARACTERIZATION OF VARIANTS
+RP   CYS-248; CYS-373 AND MET-650.
+RX   PubMed=17509076; DOI=10.1111/j.1742-4658.2007.05835.x;
+RA   Bonaventure J., Horne W.C., Baron R.;
+RT   "The localization of FGFR3 mutations causing thanatophoric dysplasia type I
+RT   differentially affects phosphorylation, processing and ubiquitylation of
+RT   the receptor.";
+RL   FEBS J. 274:3078-3093(2007).
+RN   [21]
+RP   FUNCTION IN PHOSPHORYLATION OF FRS2, CHARACTERIZATION OF VARIANT GLU-650,
+RP   ACTIVITY REGULATION, AND CATALYTIC ACTIVITY.
+RX   PubMed=17145761; DOI=10.1074/jbc.m606144200;
+RA   Krejci P., Masri B., Salazar L., Farrington-Rock C., Prats H.,
+RA   Thompson L.M., Wilcox W.R.;
+RT   "Bisindolylmaleimide I suppresses fibroblast growth factor-mediated
+RT   activation of Erk MAP kinase in chondrocytes by preventing Shp2 association
+RT   with the Frs2 and Gab1 adaptor proteins.";
+RL   J. Biol. Chem. 282:2929-2936(2007).
+RN   [22]
+RP   INTERACTION WITH FGF19; FGF21 AND KLB.
+RX   PubMed=17623664; DOI=10.1074/jbc.m704165200;
+RA   Kurosu H., Choi M., Ogawa Y., Dickson A.S., Goetz R., Eliseenkova A.V.,
+RA   Mohammadi M., Rosenblatt K.P., Kliewer S.A., Kuro-o M.;
+RT   "Tissue-specific expression of betaKlotho and fibroblast growth factor
+RT   (FGF) receptor isoforms determines metabolic activity of FGF19 and FGF21.";
+RL   J. Biol. Chem. 282:26687-26695(2007).
+RN   [23]
+RP   FUNCTION IN STAT1 PHOSPHORYLATION, GLYCOSYLATION, AND PHOSPHORYLATION.
+RX   PubMed=17311277; DOI=10.1002/jcp.21014;
+RA   Citores L., Bai L., Sorensen V., Olsnes S.;
+RT   "Fibroblast growth factor receptor-induced phosphorylation of STAT1 at the
+RT   Golgi apparatus without translocation to the nucleus.";
+RL   J. Cell. Physiol. 212:148-156(2007).
+RN   [24]
+RP   FUNCTION IN ACTIVATION OF STAT1; STAT5; MAPK1/ERK2; MAPK3/ERK1 AND THE MAP
+RP   KINASE SIGNALING PATHWAY.
+RX   PubMed=19088846; DOI=10.1371/journal.pone.0003961;
+RA   Krejci P., Salazar L., Kashiwada T.A., Chlebova K., Salasova A.,
+RA   Thompson L.M., Bryja V., Kozubik A., Wilcox W.R.;
+RT   "Analysis of STAT1 activation by six FGFR3 mutants associated with skeletal
+RT   dysplasia undermines dominant role of STAT1 in FGFR3 signaling in
+RT   cartilage.";
+RL   PLoS ONE 3:E3961-E3961(2008).
+RN   [25]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [26]
+RP   FUNCTION, INTERACTION WITH PIK3R1 AND PLCG1, AND PHOSPHORYLATION AT
+RP   TYR-760.
+RX   PubMed=19286672; DOI=10.1093/hmg/ddp116;
+RA   Salazar L., Kashiwada T., Krejci P., Muchowski P., Donoghue D.,
+RA   Wilcox W.R., Thompson L.M.;
+RT   "A novel interaction between fibroblast growth factor receptor 3 and the
+RT   p85 subunit of phosphoinositide 3-kinase: activation-dependent regulation
+RT   of ERK by p85 in multiple myeloma cells.";
+RL   Hum. Mol. Genet. 18:1951-1961(2009).
+RN   [27]
+RP   REVIEW ON FUNCTION; ALTERNATIVE SPLICING; SIGNALING AND ROLE IN DISEASE.
+RX   PubMed=15863030; DOI=10.1016/j.cytogfr.2005.01.001;
+RA   Eswarakumar V.P., Lax I., Schlessinger J.;
+RT   "Cellular signaling by fibroblast growth factor receptors.";
+RL   Cytokine Growth Factor Rev. 16:139-149(2005).
+RN   [28]
+RP   REVIEW ON FUNCTION; LIGANDS; SIGNALING; ALTERNATIVE SPLICING; DOMAIN; ROLE
+RP   IN DISEASE; UBIQUITINATION AND DEGRADATION.
+RX   PubMed=15748888; DOI=10.1016/j.yexcr.2004.11.012;
+RA   L'Hote C.G., Knowles M.A.;
+RT   "Cell responses to FGFR3 signalling: growth, differentiation and
+RT   apoptosis.";
+RL   Exp. Cell Res. 304:417-431(2005).
+RN   [29]
+RP   REVIEW ON ROLE IN SKELETON DEVELOPMENT AND DISEASE.
+RX   PubMed=19066716; DOI=10.1007/s00774-008-0009-7;
+RA   Harada D., Yamanaka Y., Ueda K., Tanaka H., Seino Y.;
+RT   "FGFR3-related dwarfism and cell signaling.";
+RL   J. Bone Miner. Metab. 27:9-15(2009).
+RN   [30]
+RP   REVIEW ON FUNCTION IN FGF SIGNALING.
+RX   PubMed=20094046; DOI=10.1038/nrc2780;
+RA   Turner N., Grose R.;
+RT   "Fibroblast growth factor signalling: from development to cancer.";
+RL   Nat. Rev. Cancer 10:116-129(2010).
+RN   [31]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [32]
+RP   X-RAY CRYSTALLOGRAPHY (3.2 ANGSTROMS) OF 32-365 IN COMPLEX WITH FGF1,
+RP   ACTIVITY REGULATION, AND DOMAIN.
+RX   PubMed=14732692; DOI=10.1073/pnas.0307287101;
+RA   Olsen S.K., Ibrahimi O.A., Raucci A., Zhang F., Eliseenkova A.V., Yayon A.,
+RA   Basilico C., Linhardt R.J., Schlessinger J., Mohammadi M.;
+RT   "Insights into the molecular basis for fibroblast growth factor receptor
+RT   autoinhibition and ligand-binding promiscuity.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 101:935-940(2004).
+RN   [33]
+RP   VARIANT ACH ARG-380.
+RX   PubMed=8078586; DOI=10.1038/371252a0;
+RA   Rousseau F., Bonaventure J., Legeai-Mallet L., Pelet A., Rozet J.-M.,
+RA   Maroteaux P., le Merrer M., Munnich A.;
+RT   "Mutations in the gene encoding fibroblast growth factor receptor-3 in
+RT   achondroplasia.";
+RL   Nature 371:252-254(1994).
+RN   [34]
+RP   VARIANT ACH ARG-380.
+RX   PubMed=7847369;
+RA   Bellus G.A., Hefferon T.W., de Luna R.I., Hecht J.T., Horton W.A.,
+RA   Machado M., Kaitila I., McIntosh I., Francomano C.A.;
+RT   "Achondroplasia is defined by recurrent G380R mutations of FGFR3.";
+RL   Am. J. Hum. Genet. 56:368-373(1995).
+RN   [35]
+RP   VARIANT ACH CYS-375.
+RX   PubMed=7758520; DOI=10.1007/bf01954274;
+RA   Superti-Furga A., Eich G., Bucher H.U., Wisser J., Giedion A.,
+RA   Gitzelmann R., Steinmann B.;
+RT   "A glycine 375-to-cysteine substitution in the transmembrane domain of the
+RT   fibroblast growth factor receptor-3 in a newborn with achondroplasia.";
+RL   Eur. J. Pediatr. 154:215-219(1995).
+RN   [36]
+RP   VARIANT TD1 CYS-249.
+RX   PubMed=8589699; DOI=10.1093/hmg/4.11.2175;
+RA   Tavormina P.L., Rimoin D.L., Cohn D.H., Zhu Y.-Z., Shiang R., Wasmuth J.J.;
+RT   "Another mutation that results in the substitution of an unpaired cysteine
+RT   residue in the extracellular domain of FGFR3 in thanatophoric dysplasia
+RT   type I.";
+RL   Hum. Mol. Genet. 4:2175-2177(1995).
+RN   [37]
+RP   VARIANTS TD1 CYS-248 AND CYS-371, AND VARIANT TD2 GLU-650.
+RX   PubMed=7773297; DOI=10.1038/ng0395-321;
+RA   Tavormina P.L., Shiang R., Thompson L.M., Zhu Y.-Z., Wilkin D.J.,
+RA   Lachman R.S., Wilcox W.R., Rimoin D.L., Cohn D.H., Wasmuth J.J.;
+RT   "Thanatophoric dysplasia (types I and II) caused by distinct mutations in
+RT   fibroblast growth factor receptor 3.";
+RL   Nat. Genet. 9:321-328(1995).
+RN   [38]
+RP   VARIANT HYPOCHONDROPLASIA LYS-540.
+RX   PubMed=7670477; DOI=10.1038/ng0795-357;
+RA   Bellus G.A., McIntosh I., Smith E.A., Aylsworth A.S., Kaitila I.,
+RA   Horton W.A., Greenhaw G.A., Hecht J.T., Francomano C.A.;
+RT   "A recurrent mutation in the tyrosine kinase domain of fibroblast growth
+RT   factor receptor 3 causes hypochondroplasia.";
+RL   Nat. Genet. 10:357-359(1995).
+RN   [39]
+RP   VARIANT CAN GLU-391.
+RX   PubMed=7493034; DOI=10.1038/ng1295-462;
+RA   Meyers G.A., Orlow S.J., Munro I.R., Przylepa K.A., Jabs E.W.;
+RT   "Fibroblast growth factor receptor 3 (FGFR3) transmembrane mutation in
+RT   Crouzon syndrome with acanthosis nigricans.";
+RL   Nat. Genet. 11:462-464(1995).
+RN   [40]
+RP   CHARACTERIZATION OF VARIANT ACH ARG-380.
+RX   PubMed=8599935; DOI=10.1002/j.1460-2075.1996.tb00384.x;
+RA   Webster M.K., Donoghue D.J.;
+RT   "Constitutive activation of fibroblast growth factor receptor 3 by the
+RT   transmembrane domain point mutation found in achondroplasia.";
+RL   EMBO J. 15:520-527(1996).
+RN   [41]
+RP   VARIANTS TD1 CYS-248; CYS-249; CYS-370 AND CYS-373.
+RX   PubMed=8845844; DOI=10.1093/hmg/5.4.509;
+RA   Rousseau F., el Ghouzzi V., Delezoide A.-L., Legeai-Mallet L.,
+RA   le Merrer M., Munnich A., Bonaventure J.;
+RT   "Missense FGFR3 mutations create cysteine residues in thanatophoric
+RT   dwarfism type I (TD1).";
+RL   Hum. Mol. Genet. 5:509-512(1996).
+RN   [42]
+RP   CHARACTERIZATION OF VARIANT TD2 GLU-650, CHARACTERIZATION OF VARIANT
+RP   GLN-650, AND PHOSPHORYLATION AT TYR-647 AND TYR-648.
+RX   PubMed=8754806; DOI=10.1128/mcb.16.8.4081;
+RA   Webster M.K., D'Avis P.Y., Robertson S.C., Donoghue D.J.;
+RT   "Profound ligand-independent kinase activation of fibroblast growth factor
+RT   receptor 3 by the activation loop mutation responsible for a lethal
+RT   skeletal dysplasia, thanatophoric dysplasia type II.";
+RL   Mol. Cell. Biol. 16:4081-4087(1996).
+RN   [43]
+RP   VARIANT MNKS ARG-250.
+RX   PubMed=9042914;
+RA   Muenke M., Gripp K.W., McDonald-Mcginn D.M., Gaudenz K., Whitaker L.A.,
+RA   Bartlett S.P., Markowitz R.I., Robin N.H., Nwokoro N., Mulvihill J.J.,
+RA   Losken H.W., Mulliken J.B., Guttmacher A.E., Wilroy R.S., Clarke L.A.,
+RA   Hollway G., Ades L.C., Haan E.A., Mulley J.C., Cohen M.M. Jr., Bellus G.A.,
+RA   Francomano C.A., Moloney D.M., Wall S.A., Wilkie A.O.M., Zackai E.H.;
+RT   "A unique point mutation in the fibroblast growth factor receptor 3 gene
+RT   (FGFR3) defines a new craniosynostosis syndrome.";
+RL   Am. J. Hum. Genet. 60:555-564(1997).
+RN   [44]
+RP   INVOLVEMENT IN MULTIPLE MYELOMA, AND VARIANTS CYS-373; GLU-650 AND MET-650.
+RX   PubMed=9207791; DOI=10.1038/ng0797-260;
+RA   Chesi M., Nardini E., Brents L.A., Schroeck E., Ried T., Kuehl W.M.,
+RA   Bergsagel P.L.;
+RT   "Frequent translocation t(4;14)(p16.3;q32.3) in multiple myeloma is
+RT   associated with increased expression and activating mutations of fibroblast
+RT   growth factor receptor 3.";
+RL   Nat. Genet. 16:260-264(1997).
+RN   [45]
+RP   VARIANT TD1 CYS-370.
+RX   PubMed=9790257; DOI=10.1507/endocrj.45.suppl_s171;
+RA   Katsumata N., Kuno T., Miyazaki S., Mikami S., Nagashima-Miyokawa A.,
+RA   Nimura A., Horikawa R., Tanaka T.;
+RT   "G370C mutation in the FGFR3 gene in a Japanese patient with thanatophoric
+RT   dysplasia.";
+RL   Endocr. J. 45:S171-S174(1998).
+RN   [46]
+RP   VARIANT HYPOCHONDROPLASIA VAL-538.
+RX   PubMed=10215410;
+RA   Grigelioniene G., Hagenaes L., Ekloef O., Neumeyer L., Haereid P.E.,
+RA   Anvret M.;
+RT   "A novel missense mutation Ile538Val in the fibroblast growth factor
+RT   receptor 3 in hypochondroplasia.";
+RL   Hum. Mutat. 11:333-333(1998).
+RN   [47]
+RP   VARIANT HYPOCHONDROPLASIA THR-540.
+RX   PubMed=9452043; DOI=10.1002/humu.1380110122;
+RA   Deutz-Terlouw P.P., Losekoot M., Aalfs C.M., Hennekam R.C.M., Bakker E.;
+RT   "Asn540Thr substitution in the fibroblast growth factor receptor 3 tyrosine
+RT   kinase domain causing hypochondroplasia.";
+RL   Hum. Mutat. Suppl. 1:S62-S65(1998).
+RN   [48]
+RP   VARIANT TD1 MET-650.
+RX   PubMed=10671061;
+RA   Kitoh H., Brodie S.G., Kupke K.G., Lachman R.S., Wilcox W.R.;
+RT   "Lys650Met substitution in the tyrosine kinase domain of the fibroblast
+RT   growth factor receptor gene causes thanatophoric dysplasia type I.";
+RL   Hum. Mutat. 12:362-363(1998).
+RN   [49]
+RP   VARIANT ARG-250.
+RX   PubMed=9525367; DOI=10.1016/s0140-6736(98)24012-8;
+RA   Hollway G.E., Suthers G.K., Battese K.M., Turner A.M., David D.J.,
+RA   Mulley J.C.;
+RT   "Deafness due to Pro250Arg mutation of FGFR3.";
+RL   Lancet 351:877-878(1998).
+RN   [50]
+RP   VARIANTS TD1 CYS-248; CYS-249 AND CYS-373.
+RX   PubMed=10360402;
+RX   DOI=10.1002/(sici)1096-8628(19990611)84:5<476::aid-ajmg12>3.0.co;2-x;
+RA   Brodie S.G., Kitoh H., Lachman R.S., Nolasco L.M., Mekikian P.B.,
+RA   Wilcox W.R.;
+RT   "Platyspondylic lethal skeletal dysplasia, San Diego type, is caused by
+RT   FGFR3 mutations.";
+RL   Am. J. Med. Genet. 84:476-480(1999).
+RN   [51]
+RP   VARIANT MNKS ARG-250.
+RX   PubMed=9950359;
+RA   Lajeunie E., El Ghouzzi V., Le Merrer M., Munnich A., Bonaventure J.,
+RA   Renier D.;
+RT   "Sex related expressivity of the phenotype in coronal craniosynostosis
+RT   caused by the recurrent P250R FGFR3 mutation.";
+RL   J. Med. Genet. 36:9-13(1999).
+RN   [52]
+RP   VARIANTS BLC CYS-248; CYS-249; CYS-370 AND GLU-650, AND VARIANTS CERCA
+RP   CYS-248; CYS-249; CYS-370 AND GLU-650.
+RX   PubMed=10471491; DOI=10.1038/12615;
+RA   Cappellen D., De Oliveira C., Ricol D., Gil Diez de Medina S., Bourdin J.,
+RA   Sastre-Garau X., Chopin D., Thiery J.P., Radvanyi F.;
+RT   "Frequent activating mutations of FGFR3 in human bladder and cervix
+RT   carcinomas.";
+RL   Nat. Genet. 23:18-20(1999).
+RN   [53]
+RP   VARIANT HYPOCHONDROPLASIA GLN-650.
+RX   PubMed=11055896; DOI=10.1086/316892;
+RA   Bellus G.A., Spector E.B., Speiser P.W., Weaver C.A., Garber A.T.,
+RA   Bryke C.R., Israel J., Rosengren S.S., Webster M.K., Donoghue D.J.,
+RA   Francomano C.A.;
+RT   "Distinct missense mutations of the FGFR3 Lys650 codon modulate receptor
+RT   kinase activation and the severity of the skeletal dysplasia phenotype.";
+RL   Am. J. Hum. Genet. 67:1411-1421(2000).
+RN   [54]
+RP   VARIANT HYPOCHONDROPLASIA SER-540.
+RX   PubMed=10777366; DOI=10.1136/jmg.37.3.220;
+RA   Mortier G., Nuytinck L., Craen M., Renard J.-P., Leroy J.G., De Paepe A.;
+RT   "Clinical and radiographic features of a family with hypochondroplasia
+RT   owing to a novel asn540ser mutation in the fibroblast growth factor
+RT   receptor 3 gene.";
+RL   J. Med. Genet. 37:220-224(2000).
+RN   [55]
+RP   VARIANT MNKS ARG-250.
+RX   PubMed=11746040; DOI=10.1002/ajmg.10049;
+RA   Lowry R.B., Jabs E.W., Graham G.E., Gerritsen J., Fleming J.;
+RT   "Syndrome of coronal craniosynostosis, Klippel-Feil anomaly, and sprengel
+RT   shoulder with and without Pro250Arg mutation in the FGFR3 gene.";
+RL   Am. J. Med. Genet. 104:112-119(2001).
+RN   [56]
+RP   INVOLVEMENT IN MULTIPLE MYELOMA, AND VARIANT CYS-248.
+RX   PubMed=11529856; DOI=10.1046/j.1365-2141.2001.02957.x;
+RA   Intini D., Baldini L., Fabris S., Lombardi L., Ciceri G., Maiolo A.T.,
+RA   Neri A.;
+RT   "Analysis of FGFR3 gene mutations in multiple myeloma patients with
+RT   t(4;14).";
+RL   Br. J. Haematol. 114:362-364(2001).
+RN   [57]
+RP   VARIANT COLORECTAL CANCER LYS-322.
+RX   PubMed=11325814;
+RA   Jang J.-H., Shin K.-H., Park J.-G.;
+RT   "Mutations in fibroblast growth factor receptor 2 and fibroblast growth
+RT   factor receptor 3 genes associated with human gastric and colorectal
+RT   cancers.";
+RL   Cancer Res. 61:3541-3543(2001).
+RN   [58]
+RP   VARIANT BLC CANCER GLN-650.
+RX   PubMed=11314002; DOI=10.1038/sj.onc.1204110;
+RA   Sibley K., Cuthbert-Heavens D., Knowles M.A.;
+RT   "Loss of heterozygosity at 4p16.3 and mutation of FGFR3 in transitional
+RT   cell carcinoma.";
+RL   Oncogene 20:686-691(2001).
+RN   [59]
+RP   VARIANT HYPOCHONDROPLASIA SER-540.
+RX   PubMed=12707965; DOI=10.1002/ajmg.a.10238;
+RA   Thauvin-Robinet C., Faivre L., Lewin P., De Monleon J.-V., Francois C.,
+RA   Huet F., Couailler J.-F., Campos-Xavier A.B., Bonaventure J., Le Merrer M.;
+RT   "Hypochondroplasia and stature within normal limits: another family with an
+RT   Asn540-to-Ser mutation in the fibroblast growth factor receptor 3 gene.";
+RL   Am. J. Med. Genet. A 119:81-84(2003).
+RN   [60]
+RP   VARIANTS KERSEB CYS-248; CYS-249; CYS-370; CYS-371; CYS-373; GLU-650 AND
+RP   MET-650.
+RX   PubMed=15772091; DOI=10.1093/hmg/ddi127;
+RA   Logie A., Dunois-Larde C., Rosty C., Levrel O., Blanche M., Ribeiro A.,
+RA   Gasc J.-M., Jorcano J., Werner S., Sastre-Garau X., Thiery J.P.,
+RA   Radvanyi F.;
+RT   "Activating mutations of the tyrosine kinase receptor FGFR3 are associated
+RT   with benign skin tumors in mice and humans.";
+RL   Hum. Mol. Genet. 14:1153-1160(2005).
+RN   [61]
+RP   VARIANT CATSHLS HIS-621.
+RX   PubMed=17033969; DOI=10.1086/508433;
+RA   Toydemir R.M., Brassington A.E., Bayrak-Toydemir P., Krakowiak P.A.,
+RA   Jorde L.B., Whitby F.G., Longo N., Viskochil D.H., Carey J.C.,
+RA   Bamshad M.J.;
+RT   "A novel mutation in FGFR3 causes camptodactyly, tall stature, and hearing
+RT   loss (CATSHL) syndrome.";
+RL   Am. J. Hum. Genet. 79:935-941(2006).
+RN   [62]
+RP   VARIANTS KNEN CYS-248; CYS-370 AND ARG-380.
+RX   PubMed=16841094; DOI=10.1172/jci28163;
+RA   Hafner C., van Oers J.M.M., Vogt T., Landthaler M., Stoehr R., Blaszyk H.,
+RA   Hofstaedter F., Zwarthoff E.C., Hartmann A.;
+RT   "Mosaicism of activating FGFR3 mutations in human skin causes epidermal
+RT   nevi.";
+RL   J. Clin. Invest. 116:2201-2207(2006).
+RN   [63]
+RP   VARIANT LADDS ASN-513.
+RX   PubMed=16501574; DOI=10.1038/ng1757;
+RA   Rohmann E., Brunner H.G., Kayserili H., Uyguner O., Nuernberg G., Lew E.D.,
+RA   Dobbie A., Eswarakumar V.P., Uzumcu A., Ulubil-Emeroglu M., Leroy J.G.,
+RA   Li Y., Becker C., Lehnerdt K., Cremers C.W.R.J., Yueksel-Apak M.,
+RA   Nuernberg P., Kubisch C., Schlessinger J., van Bokhoven H., Wollnik B.;
+RT   "Mutations in different components of FGF signaling in LADD syndrome.";
+RL   Nat. Genet. 38:414-417(2006).
+RN   [64]
+RP   VARIANT CAN GLU-391.
+RX   PubMed=17935505; DOI=10.1111/j.1399-0004.2007.00884.x;
+RA   Arnaud-Lopez L., Fragoso R., Mantilla-Capacho J., Barros-Nunez P.;
+RT   "Crouzon with acanthosis nigricans. Further delineation of the syndrome.";
+RL   Clin. Genet. 72:405-410(2007).
+RN   [65]
+RP   VARIANTS [LARGE SCALE ANALYSIS] SER-79; ARG-228; MET-338; LEU-384; ASN-646
+RP   AND GLU-650.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [66]
+RP   VARIANT TGCT GLU-650.
+RX   PubMed=19855393; DOI=10.1038/ng.470;
+RA   Goriely A., Hansen R.M., Taylor I.B., Olesen I.A., Jacobsen G.K.,
+RA   McGowan S.J., Pfeifer S.P., McVean G.A., Rajpert-De Meyts E., Wilkie A.O.;
+RT   "Activating mutations in FGFR3 and HRAS reveal a shared genetic origin for
+RT   congenital disorders and testicular tumors.";
+RL   Nat. Genet. 41:1247-1252(2009).
+CC   -!- SUBCELLULAR LOCATION: Secreted.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=4;
+CC       Name=1; Synonyms=IIIc;
+CC         IsoId=P22607-1; Sequence=Displayed;
+CC       Name=2; Synonyms=IIIb;
+CC         IsoId=P22607-2; Sequence=VSP_002988;
+CC       Name=3; Synonyms=FGFR3deltaTM;
+CC         IsoId=P22607-3; Sequence=VSP_002989;
+CC       Name=4;
+CC         IsoId=P22607-4; Sequence=VSP_040945;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   CCDS; CCDS3354.1; -.
+DR   RefSeq; NP_075254.1; NM_022965.3.
+DR   ProteomicsDB; 54007; -.
+DR   Ensembl; ENST00000352904.6; ENSP00000231803.1; ENSG00000068078.20.
+DR   Proteomes; UP000005640; Chromosome 4.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   694 AA;  75696 MW;  4493C5990FD68964 CRC64;
+     MGAPACALAL CVAVAIVAGA SSESLGTEQR VVGRAAEVPG PEPGQQEQLV FGSGDAVELS
+     CPPPGGGPMG PTVWVKDGTG LVPSERVLVG PQRLQVLNAS HEDSGAYSCR QRLTQRVLCH
+     FSVRVTDAPS SGDDEDGEDE AEDTGVDTGA PYWTRPERMD KKLLAVPAAN TVRFRCPAAG
+     NPTPSISWLK NGREFRGEHR IGGIKLRHQQ WSLVMESVVP SDRGNYTCVV ENKFGSIRQT
+     YTLDVLERSP HRPILQAGLP ANQTAVLGSD VEFHCKVYSD AQPHIQWLKH VEVNGSKVGP
+     DGTPYVTVLK VSLESNASMS SNTPLVRIAR LSSGEGPTLA NVSELELPAD PKWELSRARL
+     TLGKPLGEGC FGQVVMAEAI GIDKDRAAKP VTVAVKMLKD DATDKDLSDL VSEMEMMKMI
+     GKHKNIINLL GACTQGGPLY VLVEYAAKGN LREFLRARRP PGLDYSFDTC KPPEEQLTFK
+     DLVSCAYQVA RGMEYLASQK CIHRDLAARN VLVTEDNVMK IADFGLARDV HNLDYYKKTT
+     NGRLPVKWMA PEALFDRVYT HQSDVWSFGV LLWEIFTLGG SPYPGIPVEE LFKLLKEGHR
+     MDKPANCTHD LYMIMRECWH AAPSQRPTFK QLVEDLDRVL TVTSTDEYLD LSAPFEQYSP
+     GGQDTPSSSS SGDDSVFAHD LLPPAPPSSG GSRT
+//

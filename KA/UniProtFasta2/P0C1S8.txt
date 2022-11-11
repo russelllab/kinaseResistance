@@ -1,0 +1,382 @@
+ID   WEE2_HUMAN              Reviewed;         567 AA.
+AC   P0C1S8;
+DT   05-SEP-2006, integrated into UniProtKB/Swiss-Prot.
+DT   28-JUL-2009, sequence version 2.
+DT   12-OCT-2022, entry version 132.
+DE   RecName: Full=Wee1-like protein kinase 2;
+DE            EC=2.7.10.2;
+DE   AltName: Full=Wee1-like protein kinase 1B;
+DE   AltName: Full=Wee1B kinase;
+GN   Name=WEE2; Synonyms=WEE1B;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], TISSUE SPECIFICITY, AND SUBCELLULAR LOCATION.
+RX   PubMed=11029659; DOI=10.1046/j.1365-2443.2000.00367.x;
+RA   Nakanishi M., Ando H., Watanabe N., Kitamura K., Ito K., Okayama H.,
+RA   Miyamoto T., Agui T., Sasaki M.;
+RT   "Identification and characterization of human Wee1B, a new member of the
+RT   Wee1 family of Cdk-inhibitory kinases.";
+RL   Genes Cells 5:839-847(2000).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Thymus;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=12853948; DOI=10.1038/nature01782;
+RA   Hillier L.W., Fulton R.S., Fulton L.A., Graves T.A., Pepin K.H.,
+RA   Wagner-McPherson C., Layman D., Maas J., Jaeger S., Walker R., Wylie K.,
+RA   Sekhon M., Becker M.C., O'Laughlin M.D., Schaller M.E., Fewell G.A.,
+RA   Delehaunty K.D., Miner T.L., Nash W.E., Cordes M., Du H., Sun H.,
+RA   Edwards J., Bradshaw-Cordum H., Ali J., Andrews S., Isak A., Vanbrunt A.,
+RA   Nguyen C., Du F., Lamar B., Courtney L., Kalicki J., Ozersky P.,
+RA   Bielicki L., Scott K., Holmes A., Harkins R., Harris A., Strong C.M.,
+RA   Hou S., Tomlinson C., Dauphin-Kohlberg S., Kozlowicz-Reilly A., Leonard S.,
+RA   Rohlfing T., Rock S.M., Tin-Wollam A.-M., Abbott A., Minx P., Maupin R.,
+RA   Strowmatt C., Latreille P., Miller N., Johnson D., Murray J.,
+RA   Woessner J.P., Wendl M.C., Yang S.-P., Schultz B.R., Wallis J.W.,
+RA   Spieth J., Bieri T.A., Nelson J.O., Berkowicz N., Wohldmann P.E.,
+RA   Cook L.L., Hickenbotham M.T., Eldred J., Williams D., Bedell J.A.,
+RA   Mardis E.R., Clifton S.W., Chissoe S.L., Marra M.A., Raymond C., Haugen E.,
+RA   Gillett W., Zhou Y., James R., Phelps K., Iadanoto S., Bubb K., Simms E.,
+RA   Levy R., Clendenning J., Kaul R., Kent W.J., Furey T.S., Baertsch R.A.,
+RA   Brent M.R., Keibler E., Flicek P., Bork P., Suyama M., Bailey J.A.,
+RA   Portnoy M.E., Torrents D., Chinwalla A.T., Gish W.R., Eddy S.R.,
+RA   McPherson J.D., Olson M.V., Eichler E.E., Green E.D., Waterston R.H.,
+RA   Wilson R.K.;
+RT   "The DNA sequence of human chromosome 7.";
+RL   Nature 424:157-164(2003).
+RN   [4]
+RP   VARIANTS [LARGE SCALE ANALYSIS] THR-8; LYS-332; HIS-398; GLU-470 AND
+RP   ASP-526.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [5]
+RP   INVOLVEMENT IN OOMD5, VARIANT OOMD5 HIS-234, CHARACTERIZATION OF VARIANT
+RP   OOMD5 HIS-234, FUNCTION, SUBCELLULAR LOCATION, TISSUE SPECIFICITY, AND
+RP   PHOSPHORYLATION.
+RX   PubMed=29606300; DOI=10.1016/j.ajhg.2018.02.015;
+RA   Sang Q., Li B., Kuang Y., Wang X., Zhang Z., Chen B., Wu L., Lyu Q., Fu Y.,
+RA   Yan Z., Mao X., Xu Y., Mu J., Li Q., Jin L., He L., Wang L.;
+RT   "Homozygous Mutations in WEE2 Cause Fertilization Failure and Female
+RT   Infertility.";
+RL   Am. J. Hum. Genet. 102:649-657(2018).
+CC   -!- FUNCTION: Oocyte-specific protein tyrosine kinase that phosphorylates
+CC       and inhibits CDK1/CDC2 and acts as a key regulator of meiosis during
+CC       both prophase I and metaphase II (PubMed:29606300). Required to
+CC       maintain meiotic arrest in oocytes during the germinal vesicle (GV)
+CC       stage, a long period of quiescence at dictyate prophase I, by
+CC       phosphorylating CDK1 at 'Tyr-15', leading to inhibit CDK1 activity and
+CC       prevent meiotic reentry. Also required for metaphase II exit during egg
+CC       activation by phosphorylating CDK1 at 'Tyr-15', to ensure exit from
+CC       meiosis in oocytes and promote pronuclear formation (By similarity).
+CC       {ECO:0000250|UniProtKB:Q66JT0, ECO:0000269|PubMed:29606300}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.10.2;
+CC         Evidence={ECO:0000255|PROSITE-ProRule:PRU10027};
+CC   -!- SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:11029659,
+CC       ECO:0000269|PubMed:29606300}.
+CC   -!- TISSUE SPECIFICITY: Expressed in oocytes (at protein level)
+CC       (PubMed:29606300). May also be expressed in testis (PubMed:11029659).
+CC       {ECO:0000269|PubMed:11029659, ECO:0000269|PubMed:29606300}.
+CC   -!- PTM: Phosphorylated on serine residues (PubMed:29606300).
+CC       Phosphorylation leads to increase its activity (By similarity).
+CC       {ECO:0000250|UniProtKB:Q66JT0, ECO:0000269|PubMed:29606300}.
+CC   -!- DISEASE: Oocyte maturation defect 5 (OOMD5) [MIM:617996]: An autosomal
+CC       recessive infertility disorder characterized by oocyte inability to
+CC       exit metaphase II, resulting in fertilization failure.
+CC       {ECO:0000269|PubMed:29606300}. Note=The disease is caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Ser/Thr protein
+CC       kinase family. WEE1 subfamily. {ECO:0000255|PROSITE-ProRule:PRU00159}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AK131218; -; NOT_ANNOTATED_CDS; mRNA.
+DR   EMBL; AC004918; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   CCDS; CCDS43660.1; -.
+DR   RefSeq; NP_001099028.1; NM_001105558.1.
+DR   PDB; 5VDK; X-ray; 2.70 A; A=202-492.
+DR   PDBsum; 5VDK; -.
+DR   AlphaFoldDB; P0C1S8; -.
+DR   SMR; P0C1S8; -.
+DR   BioGRID; 138978; 1.
+DR   STRING; 9606.ENSP00000380675; -.
+DR   BindingDB; P0C1S8; -.
+DR   ChEMBL; CHEMBL5095; -.
+DR   DrugCentral; P0C1S8; -.
+DR   iPTMnet; P0C1S8; -.
+DR   PhosphoSitePlus; P0C1S8; -.
+DR   BioMuta; WEE2; -.
+DR   DMDM; 254763343; -.
+DR   MassIVE; P0C1S8; -.
+DR   PaxDb; P0C1S8; -.
+DR   PeptideAtlas; P0C1S8; -.
+DR   PRIDE; P0C1S8; -.
+DR   Antibodypedia; 32491; 111 antibodies from 23 providers.
+DR   DNASU; 494551; -.
+DR   Ensembl; ENST00000397541.6; ENSP00000380675.2; ENSG00000214102.7.
+DR   Ensembl; ENST00000574659.5; ENSP00000459392.1; ENSG00000263042.5.
+DR   GeneID; 494551; -.
+DR   KEGG; hsa:494551; -.
+DR   MANE-Select; ENST00000397541.6; ENSP00000380675.2; NM_001105558.1; NP_001099028.1.
+DR   UCSC; uc003vwn.2; human.
+DR   CTD; 494551; -.
+DR   DisGeNET; 494551; -.
+DR   GeneCards; WEE2; -.
+DR   HGNC; HGNC:19684; WEE2.
+DR   HPA; ENSG00000214102; Not detected.
+DR   MalaCards; WEE2; -.
+DR   MIM; 614084; gene.
+DR   MIM; 617996; phenotype.
+DR   neXtProt; NX_P0C1S8; -.
+DR   OpenTargets; ENSG00000214102; -.
+DR   Orphanet; 488191; Female infertility due to oocyte meiotic arrest.
+DR   PharmGKB; PA134909633; -.
+DR   VEuPathDB; HostDB:ENSG00000214102; -.
+DR   eggNOG; KOG0601; Eukaryota.
+DR   GeneTree; ENSGT00940000158803; -.
+DR   HOGENOM; CLU_000288_25_1_1; -.
+DR   InParanoid; P0C1S8; -.
+DR   OMA; GAAWHHI; -.
+DR   OrthoDB; 1063695at2759; -.
+DR   PhylomeDB; P0C1S8; -.
+DR   TreeFam; TF101088; -.
+DR   PathwayCommons; P0C1S8; -.
+DR   SignaLink; P0C1S8; -.
+DR   BioGRID-ORCS; 494551; 11 hits in 1096 CRISPR screens.
+DR   GenomeRNAi; 494551; -.
+DR   Pharos; P0C1S8; Tchem.
+DR   PRO; PR:P0C1S8; -.
+DR   Proteomes; UP000005640; Chromosome 7.
+DR   RNAct; P0C1S8; protein.
+DR   Bgee; ENSG00000214102; Expressed in ganglionic eminence and 82 other tissues.
+DR   ExpressionAtlas; P0C1S8; baseline and differential.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0005654; C:nucleoplasm; IDA:HPA.
+DR   GO; GO:0005634; C:nucleus; IBA:GO_Central.
+DR   GO; GO:0005886; C:plasma membrane; IDA:HPA.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0000287; F:magnesium ion binding; IEA:InterPro.
+DR   GO; GO:0004715; F:non-membrane spanning protein tyrosine kinase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0004672; F:protein kinase activity; IBA:GO_Central.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:0007143; P:female meiotic nuclear division; ISS:UniProtKB.
+DR   GO; GO:0035038; P:female pronucleus assembly; ISS:UniProtKB.
+DR   GO; GO:0000278; P:mitotic cell cycle; IEA:InterPro.
+DR   GO; GO:0045736; P:negative regulation of cyclin-dependent protein serine/threonine kinase activity; IEA:Ensembl.
+DR   GO; GO:1900194; P:negative regulation of oocyte maturation; ISS:UniProtKB.
+DR   GO; GO:0042327; P:positive regulation of phosphorylation; IEA:Ensembl.
+DR   GO; GO:0080154; P:regulation of fertilization; IEA:Ensembl.
+DR   GO; GO:0060631; P:regulation of meiosis I; ISS:UniProtKB.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   InterPro; IPR017164; Wee1-like_protein_kinase.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   PIRSF; PIRSF037281; Wee1-like_protein_kinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; ATP-binding; Coiled coil; Disease variant; Kinase; Magnesium;
+KW   Meiosis; Metal-binding; Nucleotide-binding; Nucleus; Phosphoprotein;
+KW   Reference proteome; Transferase; Tyrosine-protein kinase.
+FT   CHAIN           1..567
+FT                   /note="Wee1-like protein kinase 2"
+FT                   /id="PRO_0000248079"
+FT   DOMAIN          212..486
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1..117
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          514..567
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COILED          494..519
+FT                   /evidence="ECO:0000255"
+FT   MOTIF           173..175
+FT                   /note="Nuclear localization signal"
+FT                   /evidence="ECO:0000250"
+FT   MOTIF           315..329
+FT                   /note="Nuclear export signal"
+FT                   /evidence="ECO:0000250"
+FT   COMPBIAS        1..49
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        66..80
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        100..117
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        339
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         218..226
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         241
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         344
+FT                   /ligand="Mg(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:18420"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         380
+FT                   /ligand="Mg(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:18420"
+FT                   /evidence="ECO:0000250"
+FT   MOD_RES         76
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:A4PES0"
+FT   VARIANT         8
+FT                   /note="K -> T (in dbSNP:rs35672788)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041304"
+FT   VARIANT         234
+FT                   /note="D -> H (in OOMD5; decreased WEE2 phosphorylation at
+FT                   serine residues; decreased CDK1/CDC2 phosphorylation at
+FT                   'Y-15'; dbSNP:rs1554415096)"
+FT                   /evidence="ECO:0000269|PubMed:29606300"
+FT                   /id="VAR_080992"
+FT   VARIANT         332
+FT                   /note="N -> K (in a gastric adenocarcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041305"
+FT   VARIANT         398
+FT                   /note="R -> H (in an ovarian mucinous carcinoma sample;
+FT                   somatic mutation; dbSNP:rs200610853)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041306"
+FT   VARIANT         470
+FT                   /note="D -> E (in dbSNP:rs55901099)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041307"
+FT   VARIANT         526
+FT                   /note="Y -> D (in dbSNP:rs35683659)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041308"
+FT   CONFLICT        351
+FT                   /note="M -> V (in Ref. 2; AK131218)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        529
+FT                   /note="H -> Y (in Ref. 2; AK131218)"
+FT                   /evidence="ECO:0000305"
+FT   HELIX           207..211
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          212..221
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          224..231
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   TURN            232..234
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          237..245
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          251..253
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   HELIX           255..265
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          275..281
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          284..290
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   HELIX           297..306
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   HELIX           313..332
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          344..348
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          375..378
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          385..389
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   HELIX           397..399
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   HELIX           402..405
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   TURN            410..412
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   HELIX           413..428
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   HELIX           437..443
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   TURN            444..446
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   HELIX           457..467
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   STRAND          469..471
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+FT   HELIX           477..481
+FT                   /evidence="ECO:0007829|PDB:5VDK"
+SQ   SEQUENCE   567 AA;  62925 MW;  BC05DDFE96D87E3F CRC64;
+     MDDKDIDKEL RQKLNFSYCE ETEIEGQKKV EESREASSQT PEKGEVQDSE AKGTPPWTPL
+     SNVHELDTSS EKDKESPDQI LRTPVSHPLK CPETPAQPDS RSKLLPSDSP STPKTMLSRL
+     VISPTGKLPS RGPKHLKLTP APLKDEMTSL ALVNINPFTP ESYKKLFLQS GGKRKIRGDL
+     EEAGPEEGKG GLPAKRCVLR ETNMASRYEK EFLEVEKIGV GEFGTVYKCI KRLDGCVYAI
+     KRSMKTFTEL SNENSALHEV YAHAVLGHHP HVVRYYSSWA EDDHMIIQNE YCNGGSLQAA
+     ISENTKSGNH FEEPKLKDIL LQISLGLNYI HNSSMVHLDI KPSNIFICHK MQSESSGVIE
+     EVENEADWFL SANVMYKIGD LGHATSINKP KVEEGDSRFL ANEILQEDYR HLPKADIFAL
+     GLTIAVAAGA ESLPTNGAAW HHIRKGNFPD VPQELSESFS SLLKNMIQPD AEQRPSAAAL
+     ARNTVLRPSL GKTEELQQQL NLEKFKTATL ERELREAQQA QSPQGYTHHG DTGVSGTHTG
+     SRSTKRLVGG KSARSSSFTS GEREPLH
+//

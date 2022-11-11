@@ -1,0 +1,366 @@
+ID   TSSK2_HUMAN             Reviewed;         358 AA.
+AC   Q96PF2; Q8IY55;
+DT   30-APR-2003, integrated into UniProtKB/Swiss-Prot.
+DT   30-APR-2003, sequence version 2.
+DT   12-OCT-2022, entry version 189.
+DE   RecName: Full=Testis-specific serine/threonine-protein kinase 2;
+DE            Short=TSK-2;
+DE            Short=TSK2;
+DE            Short=TSSK-2;
+DE            Short=Testis-specific kinase 2;
+DE            EC=2.7.11.1 {ECO:0000269|PubMed:20729278};
+DE   AltName: Full=DiGeorge syndrome protein G;
+DE            Short=DGS-G;
+DE   AltName: Full=Serine/threonine-protein kinase 22B;
+GN   Name=TSSK2; Synonyms=DGSG, SPOGA2, STK22B;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RX   PubMed=8776594; DOI=10.1093/hmg/5.6.789;
+RA   Gong W., Emanuel B.S., Collins J., Kim D.H., Wang Z., Chen F., Zhang G.,
+RA   Roe B., Budarf M.L.;
+RT   "A transcription map of the DiGeorge and velo-cardio-facial syndrome
+RT   minimal critical region on 22q11.";
+RL   Hum. Mol. Genet. 5:789-800(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA], FUNCTION, AUTOPHOSPHORYLATION, TISSUE
+RP   SPECIFICITY, AND INTERACTION WITH TSSK1B.
+RX   PubMed=15044604; DOI=10.1093/molehr/gah052;
+RA   Hao Z., Jha K.N., Kim Y.H., Vemuganti S., Westbrook V.A., Chertihin O.,
+RA   Markgraf K., Flickinger C.J., Coppola M., Herr J.C., Visconti P.E.;
+RT   "Expression analysis of the human testis-specific serine/threonine kinase
+RT   (TSSK) homologues. A TSSK member is present in the equatorial segment of
+RT   human sperm.";
+RL   Mol. Hum. Reprod. 10:433-444(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RX   PubMed=15461802; DOI=10.1186/gb-2004-5-10-r84;
+RA   Collins J.E., Wright C.L., Edwards C.A., Davis M.P., Grinham J.A.,
+RA   Cole C.G., Goward M.E., Aguado B., Mallya M., Mokrab Y., Huckle E.J.,
+RA   Beare D.M., Dunham I.;
+RT   "A genome annotation-driven approach to cloning the human ORFeome.";
+RL   Genome Biol. 5:R84.1-R84.11(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=10591208; DOI=10.1038/990031;
+RA   Dunham I., Hunt A.R., Collins J.E., Bruskiewich R., Beare D.M., Clamp M.,
+RA   Smink L.J., Ainscough R., Almeida J.P., Babbage A.K., Bagguley C.,
+RA   Bailey J., Barlow K.F., Bates K.N., Beasley O.P., Bird C.P., Blakey S.E.,
+RA   Bridgeman A.M., Buck D., Burgess J., Burrill W.D., Burton J., Carder C.,
+RA   Carter N.P., Chen Y., Clark G., Clegg S.M., Cobley V.E., Cole C.G.,
+RA   Collier R.E., Connor R., Conroy D., Corby N.R., Coville G.J., Cox A.V.,
+RA   Davis J., Dawson E., Dhami P.D., Dockree C., Dodsworth S.J., Durbin R.M.,
+RA   Ellington A.G., Evans K.L., Fey J.M., Fleming K., French L., Garner A.A.,
+RA   Gilbert J.G.R., Goward M.E., Grafham D.V., Griffiths M.N.D., Hall C.,
+RA   Hall R.E., Hall-Tamlyn G., Heathcott R.W., Ho S., Holmes S., Hunt S.E.,
+RA   Jones M.C., Kershaw J., Kimberley A.M., King A., Laird G.K., Langford C.F.,
+RA   Leversha M.A., Lloyd C., Lloyd D.M., Martyn I.D., Mashreghi-Mohammadi M.,
+RA   Matthews L.H., Mccann O.T., Mcclay J., Mclaren S., McMurray A.A.,
+RA   Milne S.A., Mortimore B.J., Odell C.N., Pavitt R., Pearce A.V., Pearson D.,
+RA   Phillimore B.J.C.T., Phillips S.H., Plumb R.W., Ramsay H., Ramsey Y.,
+RA   Rogers L., Ross M.T., Scott C.E., Sehra H.K., Skuce C.D., Smalley S.,
+RA   Smith M.L., Soderlund C., Spragon L., Steward C.A., Sulston J.E.,
+RA   Swann R.M., Vaudin M., Wall M., Wallis J.M., Whiteley M.N., Willey D.L.,
+RA   Williams L., Williams S.A., Williamson H., Wilmer T.E., Wilming L.,
+RA   Wright C.L., Hubbard T., Bentley D.R., Beck S., Rogers J., Shimizu N.,
+RA   Minoshima S., Kawasaki K., Sasaki T., Asakawa S., Kudoh J., Shintani A.,
+RA   Shibuya K., Yoshizaki Y., Aoki N., Mitsuyama S., Roe B.A., Chen F., Chu L.,
+RA   Crabtree J., Deschamps S., Do A., Do T., Dorman A., Fang F., Fu Y., Hu P.,
+RA   Hua A., Kenton S., Lai H., Lao H.I., Lewis J., Lewis S., Lin S.-P., Loh P.,
+RA   Malaj E., Nguyen T., Pan H., Phan S., Qi S., Qian Y., Ray L., Ren Q.,
+RA   Shaull S., Sloan D., Song L., Wang Q., Wang Y., Wang Z., White J.,
+RA   Willingham D., Wu H., Yao Z., Zhan M., Zhang G., Chissoe S., Murray J.,
+RA   Miller N., Minx P., Fulton R., Johnson D., Bemis G., Bentley D.,
+RA   Bradshaw H., Bourne S., Cordes M., Du Z., Fulton L., Goela D., Graves T.,
+RA   Hawkins J., Hinds K., Kemp K., Latreille P., Layman D., Ozersky P.,
+RA   Rohlfing T., Scheet P., Walker C., Wamsley A., Wohldmann P., Pepin K.,
+RA   Nelson J., Korf I., Bedell J.A., Hillier L.W., Mardis E., Waterston R.,
+RA   Wilson R., Emanuel B.S., Shaikh T., Kurahashi H., Saitta S., Budarf M.L.,
+RA   McDermid H.E., Johnson A., Wong A.C.C., Morrow B.E., Edelmann L., Kim U.J.,
+RA   Shizuya H., Simon M.I., Dumanski J.P., Peyrard M., Kedra D., Seroussi E.,
+RA   Fransson I., Tapia I., Bruder C.E., O'Brien K.P., Wilkinson P.,
+RA   Bodenteich A., Hartman K., Hu X., Khan A.S., Lane L., Tilahun Y.,
+RA   Wright H.;
+RT   "The DNA sequence of human chromosome 22.";
+RL   Nature 402:489-495(1999).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Testis;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   PUTATIVE CONTRACEPTIVE TARGET.
+RX   PubMed=17566264;
+RA   Xu B., Hao Z., Jha K.N., Digilio L., Urekar C., Kim Y.H., Pulido S.,
+RA   Flickinger C.J., Herr J.C.;
+RT   "Validation of a testis specific serine/threonine kinase [TSSK] family and
+RT   the substrate of TSSK1 & 2, TSKS, as contraceptive targets.";
+RL   Soc. Reprod. Fertil. Suppl. 63:87-101(2007).
+RN   [7]
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=18495105; DOI=10.1016/j.ydbio.2008.03.043;
+RA   Xu B., Hao Z., Jha K.N., Zhang Z., Urekar C., Digilio L., Pulido S.,
+RA   Strauss J.F. III, Flickinger C.J., Herr J.C.;
+RT   "TSKS concentrates in spermatid centrioles during flagellogenesis.";
+RL   Dev. Biol. 319:201-210(2008).
+RN   [8]
+RP   FUNCTION, TISSUE SPECIFICITY, AND INTERACTION WITH TSKS.
+RX   PubMed=18533145; DOI=10.1016/j.ydbio.2008.03.047;
+RA   Xu B., Hao Z., Jha K.N., Zhang Z., Urekar C., Digilio L., Pulido S.,
+RA   Strauss J.F. III, Flickinger C.J., Herr J.C.;
+RT   "Targeted deletion of Tssk1 and 2 causes male infertility due to
+RT   haploinsufficiency.";
+RL   Dev. Biol. 319:211-222(2008).
+RN   [9]
+RP   FUNCTION, COFACTOR, BIOPHYSICOCHEMICAL PROPERTIES, AUTOPHOSPHORYLATION,
+RP   CATALYTIC ACTIVITY, AND TISSUE SPECIFICITY.
+RX   PubMed=20729278; DOI=10.1093/molehr/gaq071;
+RA   Li Y., Sosnik J., Brassard L., Reese M., Spiridonov N.A., Bates T.C.,
+RA   Johnson G.R., Anguita J., Visconti P.E., Salicioni A.M.;
+RT   "Expression and localization of five members of the testis-specific serine
+RT   kinase (Tssk) family in mouse and human sperm and testis.";
+RL   Mol. Hum. Reprod. 17:42-56(2011).
+RN   [10]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ARG-27; VAL-61; CYS-197 AND MET-280.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [11]
+RP   CHARACTERIZATION OF VARIANT ARG-27.
+RX   PubMed=19926886; DOI=10.2164/jandrol.109.008466;
+RA   Zhang H., Su D., Yang Y., Zhang W., Liu Y., Bai G., Ma M., Ma Y., Zhang S.;
+RT   "Some single-nucleotide polymorphisms of the TSSK2 gene may be associated
+RT   with human spermatogenesis impairment.";
+RL   J. Androl. 31:388-392(2010).
+CC   -!- FUNCTION: Testis-specific serine/threonine-protein kinase required
+CC       during spermatid development. Phosphorylates TSKS at 'Ser-288' and
+CC       SPAG16. Involved in the late stages of spermatogenesis, during the
+CC       reconstruction of the cytoplasm. During spermatogenesis, required for
+CC       the transformation of a ring-shaped structure around the base of the
+CC       flagellum originating from the chromatoid body.
+CC       {ECO:0000269|PubMed:15044604, ECO:0000269|PubMed:18533145,
+CC       ECO:0000269|PubMed:20729278}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC         Evidence={ECO:0000269|PubMed:20729278};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1; Evidence={ECO:0000269|PubMed:20729278};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000269|PubMed:20729278};
+CC   -!- ACTIVITY REGULATION: Activated by phosphorylation on Thr-174,
+CC       potentially by autophosphorylation. {ECO:0000250}.
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=10 uM for ATP {ECO:0000269|PubMed:20729278};
+CC   -!- SUBUNIT: Interacts with TSSK1B. Interacts with HSP90; this interaction
+CC       stabilizes TSSK2 (By similarity). {ECO:0000250|UniProtKB:O54863,
+CC       ECO:0000269|PubMed:15044604, ECO:0000269|PubMed:18533145}.
+CC   -!- INTERACTION:
+CC       Q96PF2; Q4G0N7: FAM229B; NbExp=3; IntAct=EBI-852089, EBI-18340430;
+CC       Q96PF2; P08238: HSP90AB1; NbExp=2; IntAct=EBI-852089, EBI-352572;
+CC       Q96PF2; Q9BRK4: LZTS2; NbExp=3; IntAct=EBI-852089, EBI-741037;
+CC       Q96PF2; Q8WW01: TSEN15; NbExp=3; IntAct=EBI-852089, EBI-372432;
+CC       Q96PF2; Q9UJT2: TSKS; NbExp=9; IntAct=EBI-852089, EBI-852101;
+CC       Q96PF2; Q9UJT2-2: TSKS; NbExp=2; IntAct=EBI-852089, EBI-852113;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000250}. Cytoplasm, cytoskeleton,
+CC       microtubule organizing center, centrosome, centriole
+CC       {ECO:0000269|PubMed:18495105}. Note=Present in the cytoplasm of
+CC       elongating spermatids. In spermatozoa, localizes in the equatorial
+CC       segment, neck, the midpiece and in a specific sperm head compartment
+CC       (By similarity). In spermatids, concentrates in centrioles during
+CC       flagellogenesis. {ECO:0000250}.
+CC   -!- TISSUE SPECIFICITY: Testis-specific. Present in mature spermatozoa (at
+CC       protein level). {ECO:0000269|PubMed:15044604,
+CC       ECO:0000269|PubMed:18533145, ECO:0000269|PubMed:20729278}.
+CC   -!- PTM: Autophosphorylated. {ECO:0000269|PubMed:15044604}.
+CC   -!- PTM: Ubiquitinated; HSP90 activity negatively regulates ubiquitination
+CC       and degradation. {ECO:0000250|UniProtKB:O54863}.
+CC   -!- MISCELLANEOUS: TSSK1B might be used as a target for male contraception
+CC       or and intra-vaginal spermicides. {ECO:0000305|PubMed:17566264}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CAMK Ser/Thr
+CC       protein kinase family. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; L77564; -; NOT_ANNOTATED_CDS; mRNA.
+DR   EMBL; AF362953; AAK98531.1; -; mRNA.
+DR   EMBL; CR456587; CAG30473.1; -; mRNA.
+DR   EMBL; AC004471; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC037781; AAH37781.1; -; mRNA.
+DR   CCDS; CCDS13755.1; -.
+DR   RefSeq; NP_443732.3; NM_053006.4.
+DR   AlphaFoldDB; Q96PF2; -.
+DR   SMR; Q96PF2; -.
+DR   BioGRID; 117150; 12.
+DR   IntAct; Q96PF2; 21.
+DR   MINT; Q96PF2; -.
+DR   STRING; 9606.ENSP00000382544; -.
+DR   BindingDB; Q96PF2; -.
+DR   ChEMBL; CHEMBL6014; -.
+DR   GuidetoPHARMACOLOGY; 2258; -.
+DR   iPTMnet; Q96PF2; -.
+DR   PhosphoSitePlus; Q96PF2; -.
+DR   BioMuta; TSSK2; -.
+DR   DMDM; 30316269; -.
+DR   MassIVE; Q96PF2; -.
+DR   PaxDb; Q96PF2; -.
+DR   PeptideAtlas; Q96PF2; -.
+DR   PRIDE; Q96PF2; -.
+DR   ProteomicsDB; 77687; -.
+DR   Antibodypedia; 22857; 72 antibodies from 15 providers.
+DR   DNASU; 23617; -.
+DR   Ensembl; ENST00000399635.4; ENSP00000382544.2; ENSG00000206203.5.
+DR   GeneID; 23617; -.
+DR   KEGG; hsa:23617; -.
+DR   MANE-Select; ENST00000399635.4; ENSP00000382544.2; NM_053006.5; NP_443732.3.
+DR   UCSC; uc002zow.2; human.
+DR   CTD; 23617; -.
+DR   DisGeNET; 23617; -.
+DR   GeneCards; TSSK2; -.
+DR   HGNC; HGNC:11401; TSSK2.
+DR   HPA; ENSG00000206203; Tissue enriched (testis).
+DR   MIM; 610710; gene.
+DR   neXtProt; NX_Q96PF2; -.
+DR   OpenTargets; ENSG00000206203; -.
+DR   PharmGKB; PA36208; -.
+DR   VEuPathDB; HostDB:ENSG00000206203; -.
+DR   eggNOG; KOG0583; Eukaryota.
+DR   GeneTree; ENSGT00940000162226; -.
+DR   HOGENOM; CLU_000288_63_0_1; -.
+DR   InParanoid; Q96PF2; -.
+DR   OMA; WMQPPKP; -.
+DR   OrthoDB; 1378245at2759; -.
+DR   PhylomeDB; Q96PF2; -.
+DR   TreeFam; TF352374; -.
+DR   BRENDA; 2.7.11.1; 2681.
+DR   PathwayCommons; Q96PF2; -.
+DR   SignaLink; Q96PF2; -.
+DR   BioGRID-ORCS; 23617; 27 hits in 1043 CRISPR screens.
+DR   GeneWiki; TSSK2; -.
+DR   GenomeRNAi; 23617; -.
+DR   Pharos; Q96PF2; Tchem.
+DR   PRO; PR:Q96PF2; -.
+DR   Proteomes; UP000005640; Chromosome 22.
+DR   RNAct; Q96PF2; protein.
+DR   Bgee; ENSG00000206203; Expressed in left testis and 102 other tissues.
+DR   ExpressionAtlas; Q96PF2; baseline and differential.
+DR   Genevisible; Q96PF2; HS.
+DR   GO; GO:0001669; C:acrosomal vesicle; IEA:Ensembl.
+DR   GO; GO:0005814; C:centriole; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005737; C:cytoplasm; ISS:UniProtKB.
+DR   GO; GO:0005634; C:nucleus; HDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; ISS:UniProtKB.
+DR   GO; GO:0000287; F:magnesium ion binding; IDA:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0044877; F:protein-containing complex binding; IEA:Ensembl.
+DR   GO; GO:0035556; P:intracellular signal transduction; IBA:GO_Central.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IEA:Ensembl.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; ISS:UniProtKB.
+DR   GO; GO:0007286; P:spermatid development; ISS:UniProtKB.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   ATP-binding; Cytoplasm; Cytoskeleton; Developmental protein;
+KW   Differentiation; Kinase; Magnesium; Metal-binding; Nucleotide-binding;
+KW   Phosphoprotein; Reference proteome; Serine/threonine-protein kinase;
+KW   Spermatogenesis; Transferase; Ubl conjugation.
+FT   CHAIN           1..358
+FT                   /note="Testis-specific serine/threonine-protein kinase 2"
+FT                   /id="PRO_0000086768"
+FT   DOMAIN          12..272
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          302..358
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        302..351
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        136
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         18..26
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         41
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   VARIANT         27
+FT                   /note="K -> R (may be associated with infertility;
+FT                   dbSNP:rs3747052)"
+FT                   /evidence="ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:19926886"
+FT                   /id="VAR_041241"
+FT   VARIANT         61
+FT                   /note="M -> V (in dbSNP:rs35532431)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041242"
+FT   VARIANT         197
+FT                   /note="Y -> C (in dbSNP:rs56279111)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041243"
+FT   VARIANT         244
+FT                   /note="E -> K (in dbSNP:rs35048893)"
+FT                   /id="VAR_051677"
+FT   VARIANT         245
+FT                   /note="C -> S (in dbSNP:rs8140743)"
+FT                   /id="VAR_059770"
+FT   VARIANT         280
+FT                   /note="T -> M (in dbSNP:rs1052763)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041244"
+FT   CONFLICT        279
+FT                   /note="A -> P (in Ref. 2; AAK98531)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        304
+FT                   /note="G -> D (in Ref. 4; AAH37781)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   358 AA;  40939 MW;  F231433AA78B2FE9 CRC64;
+     MDDATVLRKK GYIVGINLGK GSYAKVKSAY SERLKFNVAV KIIDRKKTPT DFVERFLPRE
+     MDILATVNHG SIIKTYEIFE TSDGRIYIIM ELGVQGDLLE FIKCQGALHE DVARKMFRQL
+     SSAVKYCHDL DIVHRDLKCE NLLLDKDFNI KLSDFGFSKR CLRDSNGRII LSKTFCGSAA
+     YAAPEVLQSI PYQPKVYDIW SLGVILYIMV CGSMPYDDSD IRKMLRIQKE HRVDFPRSKN
+     LTCECKDLIY RMLQPDVSQR LHIDEILSHS WLQPPKPKAT SSASFKREGE GKYRAECKLD
+     TKTGLRPDHR PDHKLGAKTQ HRLLVVPENE NRMEDRLAET SRAKDHHISG AEVGKAST
+//

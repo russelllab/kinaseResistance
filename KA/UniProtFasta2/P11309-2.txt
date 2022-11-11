@@ -1,0 +1,288 @@
+ID   PIM1_HUMAN              Reviewed;         404 AA.
+AC   P11309-2;
+DT   01-JUL-1989, integrated into UniProtKB/Swiss-Prot.
+DT   10-OCT-2018, sequence version 4.
+DT   12-OCT-2022, entry version 247.
+DE   RecName: Full=Isoform 2 of Serine/threonine-protein kinase pim-1;
+DE            EC=2.7.11.1;
+GN   Name=PIM1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] (ISOFORM 1).
+RX   PubMed=2205533; DOI=10.1016/0378-1119(90)90195-w;
+RA   Reeves R., Spies G.A., Kiefer M., Barr P.J., Power M.;
+RT   "Primary structure of the putative human oncogene, pim-1.";
+RL   Gene 90:303-307(1990).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=3475233; DOI=10.1016/0378-1119(87)90352-0;
+RA   Zakut-Houri R., Hazum S., Givol D., Telerman A.;
+RT   "The cDNA sequence and gene analysis of the human pim oncogene.";
+RL   Gene 54:105-111(1987).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=3329709;
+RA   Domen J., von Lindern M., Hermans A., Breuer M., Grosveld G., Berns A.;
+RT   "Comparison of the human and mouse PIM-1 cDNAs: nucleotide sequence and
+RT   immunological identification of the in vitro synthesized PIM-1 protein.";
+RL   Oncogene Res. 1:103-112(1987).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=3429489; DOI=10.1002/jcb.240350204;
+RA   Meeker T.C., Nagarajan L., Ar-Rushdi A., Croce C.M.;
+RT   "Cloning and characterization of the human PIM-1 gene: a putative oncogene
+RT   related to the protein kinases.";
+RL   J. Cell. Biochem. 35:105-112(1987).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2), ALTERNATIVE INITIATION, TISSUE
+RP   SPECIFICITY, SUBCELLULAR LOCATION, INDUCTION, AND INTERACTION WITH BMX.
+RX   PubMed=16186805; DOI=10.1038/sj.onc.1209058;
+RA   Xie Y., Xu K., Dai B., Guo Z., Jiang T., Chen H., Qiu Y.;
+RT   "The 44 kDa Pim-1 kinase directly interacts with tyrosine kinase Etk/BMX
+RT   and protects human prostate cancer cells from apoptosis induced by
+RT   chemotherapeutic drugs.";
+RL   Oncogene 25:70-78(2006).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=14574404; DOI=10.1038/nature02055;
+RA   Mungall A.J., Palmer S.A., Sims S.K., Edwards C.A., Ashurst J.L.,
+RA   Wilming L., Jones M.C., Horton R., Hunt S.E., Scott C.E., Gilbert J.G.R.,
+RA   Clamp M.E., Bethel G., Milne S., Ainscough R., Almeida J.P., Ambrose K.D.,
+RA   Andrews T.D., Ashwell R.I.S., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Banerjee R., Barker D.J., Barlow K.F., Bates K., Beare D.M., Beasley H.,
+RA   Beasley O., Bird C.P., Blakey S.E., Bray-Allen S., Brook J., Brown A.J.,
+RA   Brown J.Y., Burford D.C., Burrill W., Burton J., Carder C., Carter N.P.,
+RA   Chapman J.C., Clark S.Y., Clark G., Clee C.M., Clegg S., Cobley V.,
+RA   Collier R.E., Collins J.E., Colman L.K., Corby N.R., Coville G.J.,
+RA   Culley K.M., Dhami P., Davies J., Dunn M., Earthrowl M.E., Ellington A.E.,
+RA   Evans K.A., Faulkner L., Francis M.D., Frankish A., Frankland J.,
+RA   French L., Garner P., Garnett J., Ghori M.J., Gilby L.M., Gillson C.J.,
+RA   Glithero R.J., Grafham D.V., Grant M., Gribble S., Griffiths C.,
+RA   Griffiths M.N.D., Hall R., Halls K.S., Hammond S., Harley J.L., Hart E.A.,
+RA   Heath P.D., Heathcott R., Holmes S.J., Howden P.J., Howe K.L., Howell G.R.,
+RA   Huckle E., Humphray S.J., Humphries M.D., Hunt A.R., Johnson C.M.,
+RA   Joy A.A., Kay M., Keenan S.J., Kimberley A.M., King A., Laird G.K.,
+RA   Langford C., Lawlor S., Leongamornlert D.A., Leversha M., Lloyd C.R.,
+RA   Lloyd D.M., Loveland J.E., Lovell J., Martin S., Mashreghi-Mohammadi M.,
+RA   Maslen G.L., Matthews L., McCann O.T., McLaren S.J., McLay K., McMurray A.,
+RA   Moore M.J.F., Mullikin J.C., Niblett D., Nickerson T., Novik K.L.,
+RA   Oliver K., Overton-Larty E.K., Parker A., Patel R., Pearce A.V., Peck A.I.,
+RA   Phillimore B.J.C.T., Phillips S., Plumb R.W., Porter K.M., Ramsey Y.,
+RA   Ranby S.A., Rice C.M., Ross M.T., Searle S.M., Sehra H.K., Sheridan E.,
+RA   Skuce C.D., Smith S., Smith M., Spraggon L., Squares S.L., Steward C.A.,
+RA   Sycamore N., Tamlyn-Hall G., Tester J., Theaker A.J., Thomas D.W.,
+RA   Thorpe A., Tracey A., Tromans A., Tubby B., Wall M., Wallis J.M.,
+RA   West A.P., White S.S., Whitehead S.L., Whittaker H., Wild A., Willey D.J.,
+RA   Wilmer T.E., Wood J.M., Wray P.W., Wyatt J.C., Young L., Younger R.M.,
+RA   Bentley D.R., Coulson A., Durbin R.M., Hubbard T., Sulston J.E., Dunham I.,
+RA   Rogers J., Beck S.;
+RT   "The DNA sequence and analysis of human chromosome 6.";
+RL   Nature 425:805-811(2003).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Kidney;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [9]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-202 (ISOFORM 1).
+RX   PubMed=11460166; DOI=10.1038/35085588;
+RA   Pasqualucci L., Neumeister P., Goossens T., Nanjangud G., Chaganti R.S.K.,
+RA   Kuppers R., Dalla-Favera R.;
+RT   "Hypermutation of multiple proto-oncogenes in B-cell diffuse large-cell
+RT   lymphomas.";
+RL   Nature 412:341-346(2001).
+RN   [10]
+RP   CHARACTERIZATION.
+RX   PubMed=2837645; DOI=10.1128/mcb.8.4.1498-1503.1988;
+RA   Telerman A., Amson R., Zakut-Houri R., Givol D.;
+RT   "Identification of the human pim-1 gene product as a 33-kilodalton
+RT   cytoplasmic protein with tyrosine kinase activity.";
+RL   Mol. Cell. Biol. 8:1498-1503(1988).
+RN   [11]
+RP   FUNCTION, AND ALTERNATIVE INITIATION.
+RX   PubMed=1825810; DOI=10.1002/j.1460-2075.1991.tb07994.x;
+RA   Saris C.J., Domen J., Berns A.;
+RT   "The pim-1 oncogene encodes two related protein-serine/threonine kinases by
+RT   alternative initiation at AUG and CUG.";
+RL   EMBO J. 10:655-664(1991).
+RN   [12]
+RP   INTERACTION WITH CBX3, AND FUNCTION IN PHOSPHORYLATION OF CBX3.
+RX   PubMed=10664448; DOI=10.1016/s0014-5793(00)01105-4;
+RA   Koike N., Maita H., Taira T., Ariga H., Iguchi-Ariga S.M.M.;
+RT   "Identification of heterochromatin protein 1 (HP1) as a phosphorylation
+RT   target by Pim-1 kinase and the effect of phosphorylation on the
+RT   transcriptional repression function of HP1.";
+RL   FEBS Lett. 467:17-21(2000).
+RN   [13]
+RP   SUBCELLULAR LOCATION, FUNCTION IN PHOSPHORYLATION OF CDKN1A, AND
+RP   INTERACTION WITH CDKN1A.
+RX   PubMed=12431783; DOI=10.1016/s0167-4889(02)00347-6;
+RA   Wang Z., Bhattacharya N., Mixter P.F., Wei W., Sedivy J., Magnuson N.S.;
+RT   "Phosphorylation of the cell cycle inhibitor p21Cip1/WAF1 by Pim-1
+RT   kinase.";
+RL   Biochim. Biophys. Acta 1593:45-55(2002).
+RN   [14]
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=12680209;
+RA   Ionov Y., Le X., Tunquist B.J., Sweetenham J., Sachs T., Ryder J.,
+RA   Johnson T., Lilly M.B., Kraft A.S.;
+RT   "Pim-1 protein kinase is nuclear in Burkitt's lymphoma: nuclear
+RT   localization is necessary for its biologic effects.";
+RL   Anticancer Res. 23:167-178(2003).
+RN   [15]
+RP   INTERACTION WITH PPP2CA, PHOSPHORYLATION, AND UBIQUITINATION.
+RX   PubMed=12473674; DOI=10.1074/jbc.m208246200;
+RA   Losman J.A., Chen X.P., Vuong B.Q., Fay S., Rothman P.B.;
+RT   "Protein phosphatase 2A regulates the stability of Pim protein kinases.";
+RL   J. Biol. Chem. 278:4800-4805(2003).
+RN   [16]
+RP   FUNCTION, AND INDUCTION.
+RX   PubMed=15528381; DOI=10.4049/jimmunol.173.10.6409;
+RA   Stout B.A., Bates M.E., Liu L.Y., Farrington N.N., Bertics P.J.;
+RT   "IL-5 and granulocyte-macrophage colony-stimulating factor activate STAT3
+RT   and STAT5 and promote Pim-1 and cyclin D3 protein expression in human
+RT   eosinophils.";
+RL   J. Immunol. 173:6409-6417(2004).
+RN   [17]
+RP   UBIQUITINATION, INTERACTION WITH HSP90AA1 AND HSP70, AND INDUCTION.
+RX   PubMed=15798097; DOI=10.1158/1541-7786.mcr-04-0192;
+RA   Shay K.P., Wang Z., Xing P.X., McKenzie I.F., Magnuson N.S.;
+RT   "Pim-1 kinase stability is regulated by heat shock proteins and the
+RT   ubiquitin-proteasome pathway.";
+RL   Mol. Cancer Res. 3:170-181(2005).
+RN   [18]
+RP   FUNCTION IN PHOSPHORYLATION OF CDC25C, AND INTERACTION WITH CDC25C.
+RX   PubMed=16356754; DOI=10.1016/j.biocel.2005.10.010;
+RA   Bachmann M., Kosan C., Xing P.X., Montenarh M., Hoffmann I., Moroy T.;
+RT   "The oncogenic serine/threonine kinase Pim-1 directly phosphorylates and
+RT   activates the G2/M specific phosphatase Cdc25C.";
+RL   Int. J. Biochem. Cell Biol. 38:430-443(2006).
+RN   [19]
+RP   FUNCTION IN CELL CYCLE PROGRESSION, INTERACTION WITH CDKN1B AND FOXO3, AND
+RP   PHOSPHORYLATION OF CDKN1B AND FOXO3.
+RX   PubMed=18593906; DOI=10.1158/0008-5472.can-08-0634;
+RA   Morishita D., Katayama R., Sekimizu K., Tsuruo T., Fujita N.;
+RT   "Pim kinases promote cell cycle progression by phosphorylating and down-
+RT   regulating p27Kip1 at the transcriptional and posttranscriptional levels.";
+RL   Cancer Res. 68:5076-5085(2008).
+RN   [20]
+RP   FUNCTION.
+RX   PubMed=18056989; DOI=10.1074/jbc.m707773200;
+RA   Xie Y., Xu K., Linn D.E., Yang X., Guo Z., Shimelis H., Nakanishi T.,
+RA   Ross D.D., Chen H., Fazli L., Gleave M.E., Qiu Y.;
+RT   "The 44-kDa Pim-1 kinase phosphorylates BCRP/ABCG2 and thereby promotes its
+RT   multimerization and drug-resistant activity in human prostate cancer
+RT   cells.";
+RL   J. Biol. Chem. 283:3349-3356(2008).
+RN   [21]
+RP   FUNCTION IN PHOSPHORYLATION OF MAP3K5, AND INTERACTION WITH MAP3K5.
+RX   PubMed=19749799; DOI=10.1038/onc.2009.276;
+RA   Gu J.J., Wang Z., Reeves R., Magnuson N.S.;
+RT   "PIM1 phosphorylates and negatively regulates ASK1-mediated apoptosis.";
+RL   Oncogene 28:4261-4271(2009).
+RN   [22]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-8, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [23]
+RP   X-RAY CRYSTALLOGRAPHY (2.15 ANGSTROMS) OF 33-305 IN COMPLEXES WITH
+RP   ADENOSINE AND INHIBITORS STAUROSPORINE AND LY294002, CATALYTIC ACTIVITY,
+RP   COFACTOR, ACTIVITY REGULATION, IDENTIFICATION BY MASS SPECTROMETRY, AND
+RP   PHOSPHORYLATION AT SER-8; THR-23; SER-98 AND SER-261.
+RX   PubMed=15657054; DOI=10.1074/jbc.m413155200;
+RA   Jacobs M.D., Black J., Futer O., Swenson L., Hare B., Fleming M.,
+RA   Saxena K.;
+RT   "Pim-1 ligand-bound structures reveal the mechanism of serine/threonine
+RT   kinase inhibition by LY294002.";
+RL   J. Biol. Chem. 280:13728-13734(2005).
+RN   [24]
+RP   X-RAY CRYSTALLOGRAPHY (2.10 ANGSTROMS) OF 14-313 OF APOPROTEIN AND IN
+RP   COMPLEX WITH AMP-PNP, CATALYTIC ACTIVITY, COFACTOR, AND ACTIVITY
+RP   REGULATION.
+RX   PubMed=15525646; DOI=10.1074/jbc.m409123200;
+RA   Qian K.C., Wang L., Hickey E.R., Studts J., Barringer K., Peng C.,
+RA   Kronkaitis A., Li J., White A., Mische S., Farmer B.;
+RT   "Structural basis of constitutive activity and a unique nucleotide binding
+RT   mode of human Pim-1 kinase.";
+RL   J. Biol. Chem. 280:6130-6137(2005).
+RN   [25]
+RP   X-RAY CRYSTALLOGRAPHY (2.00 ANGSTROMS) OF 29-313 OF APOPROTEIN AND IN
+RP   COMPLEXES WITH AMP-PNP AND INHIBITORS, PARTIAL PROTEIN SEQUENCE, CATALYTIC
+RP   ACTIVITY, ACTIVITY REGULATION, COFACTOR, AND MUTAGENESIS OF HIS-68; PRO-81;
+RP   ASN-82 AND LEU-193.
+RX   PubMed=15808862; DOI=10.1016/j.jmb.2005.02.039;
+RA   Kumar A., Mandiyan V., Suzuki Y., Zhang C., Rice J., Tsai J., Artis D.R.,
+RA   Ibrahim P., Bremer R.;
+RT   "Crystal structures of proto-oncogene kinase Pim1: a target of aberrant
+RT   somatic hypermutations in diffuse large cell lymphoma.";
+RL   J. Mol. Biol. 348:183-193(2005).
+RN   [26]
+RP   VARIANTS [LARGE SCALE ANALYSIS] HIS-53; GLN-124; LYS-135 AND ASP-142.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- INTERACTION:
+CC       P11309-2; Q9UNQ0: ABCG2; NbExp=5; IntAct=EBI-1018633, EBI-1569435;
+CC       P11309-2; P51813: BMX; NbExp=6; IntAct=EBI-1018633, EBI-696657;
+CC       P11309-2; P17252: PRKCA; NbExp=2; IntAct=EBI-1018633, EBI-1383528;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative initiation; Named isoforms=2;
+CC       Name=1; Synonyms=Pim-1 {ECO:0000303|PubMed:18056989};
+CC         IsoId=P11309-1; Sequence=Displayed;
+CC       Name=2; Synonyms=Pim-1L {ECO:0000303|PubMed:18056989};
+CC         IsoId=P11309-2; Sequence=VSP_059829;
+CC   -!- MISCELLANEOUS: Initiates from CTG codon. {ECO:0000269|PubMed:16186805,
+CC       ECO:0000269|PubMed:1825810}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   RefSeq; NP_001230115.1; NM_001243186.1.
+DR   ProteomicsDB; 52742; -.
+DR   Proteomes; UP000005640; Chromosome 6.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   404 AA;  45412 MW;  18C421B7CFF87818 CRC64;
+     MPHEPHEPLT PPFSALPDPA GAPSRRQSRQ RPQLSSDSPS AFRASRSHSR NATRSHSHSH
+     SPRHSLRHSP GSGSCGSSSG HRPCADILEV GMLLSKINSL AHLRAAPCND LHATKLAPGK
+     EKEPLESQYQ VGPLLGSGGF GSVYSGIRVS DNLPVAIKHV EKDRISDWGE LPNGTRVPME
+     VVLLKKVSSG FSGVIRLLDW FERPDSFVLI LERPEPVQDL FDFITERGAL QEELARSFFW
+     QVLEAVRHCH NCGVLHRDIK DENILIDLNR GELKLIDFGS GALLKDTVYT DFDGTRVYSP
+     PEWIRYHRYH GRSAAVWSLG ILLYDMVCGD IPFEHDEEII RGQVFFRQRV SSECQHLIRW
+     CLALRPSDRP TFEEIQNHPW MQDVLLPQET AEIHLHSLSP GPSK
+//

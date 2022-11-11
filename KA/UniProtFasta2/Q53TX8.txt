@@ -1,0 +1,134 @@
+ID   Q53TX8_HUMAN            Unreviewed;      1260 AA.
+AC   Q53TX8;
+DT   24-MAY-2005, integrated into UniProtKB/TrEMBL.
+DT   24-MAY-2005, sequence version 1.
+DT   03-AUG-2022, entry version 82.
+DE   SubName: Full=Uncharacterized protein MAP4K4 {ECO:0000313|EMBL:AAY14969.1};
+DE   Flags: Fragment;
+GN   Name=MAP4K4 {ECO:0000313|EMBL:AAY14969.1};
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606 {ECO:0000313|EMBL:AAY14969.1};
+RN   [1] {ECO:0000313|EMBL:AAY14969.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Abu-Threideh J., Graves T., Mead K.;
+RT   "The sequence of Homo sapiens BAC clone RP11-353P23.";
+RL   Submitted (JUN-1998) to the EMBL/GenBank/DDBJ databases.
+RN   [2] {ECO:0000313|EMBL:AAY14969.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Waterston R.H.;
+RL   Submitted (JUN-1998) to the EMBL/GenBank/DDBJ databases.
+RN   [3] {ECO:0000313|EMBL:AAY14969.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Waterston R.;
+RL   Submitted (MAR-2002) to the EMBL/GenBank/DDBJ databases.
+RN   [4] {ECO:0000313|EMBL:AAY14969.1}
+RP   NUCLEOTIDE SEQUENCE.
+RA   Wilson R.K.;
+RL   Submitted (APR-2005) to the EMBL/GenBank/DDBJ databases.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AC005035; AAY14969.1; -; Genomic_DNA.
+DR   iPTMnet; Q53TX8; -.
+DR   PeptideAtlas; Q53TX8; -.
+DR   PRIDE; Q53TX8; -.
+DR   ChiTaRS; MAP4K4; human.
+DR   GO; GO:0005524; F:ATP binding; IEA:InterPro.
+DR   GO; GO:0004672; F:protein kinase activity; IEA:InterPro.
+DR   GO; GO:0006468; P:protein phosphorylation; IEA:InterPro.
+DR   InterPro; IPR001180; CNH_dom.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00780; CNH; 1.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00036; CNH; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS50219; CNH; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   4: Predicted;
+FT   DOMAIN          1..229
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000259|PROSITE:PS50011"
+FT   DOMAIN          947..1234
+FT                   /note="CNH"
+FT                   /evidence="ECO:0000259|PROSITE:PS50219"
+FT   REGION          246..289
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          361..402
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          458..832
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        246..260
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        261..277
+FT                   /note="Acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        490..519
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        538..552
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        566..586
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        587..601
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        604..627
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        645..679
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        694..737
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        740..756
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        767..781
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        791..810
+FT                   /note="Acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        814..832
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   NON_TER         1
+FT                   /evidence="ECO:0000313|EMBL:AAY14969.1"
+SQ   SEQUENCE   1260 AA;  144613 MW;  BBCD49375181B693 CRC64;
+     DEEEEIKLEI NMLKKYSHHR NIATYYGAFI KKSPPGHDDQ LWLVMEFCGA GSITDLVKNT
+     KGNTLKEDWI AYISREILRG LAHLHIHHVI HRDIKGQNVL LTENAEVKLV DFGVSAQLDR
+     TVGRRNTFIG TPYWMAPEVI ACDENPDATY DYRSDLWSCG ITAIEMAEGA PPLCDMHPMR
+     ALFLIPRNPP PRLKSKKWSK KFFSFIEGCL VKNYMQRPST EQLLKHPFIR DQPNERQVRI
+     QLKDHIDRTR KKRGEKDETE YEYSGSEEEE EEVPEQEGEP SSIVNVPGES TLRRDFLRLQ
+     QENKERSEAL RRQQLLQEQQ LREQEEYKRQ LLAERQKRIE QQKEQRRRLE EQQRREREAR
+     RQQEREQRRR EQEEKRRLEE LERRRKEEEE RRRAEEEKRR VEREQEYIRR QLEEEQRHLE
+     VLQQQLLQEQ AMLLECRWRE MEEHRQAERL QRQLQQEQAY LLSLQHDHRR PHPQHSQQPP
+     PPQQERSKPS FHAPEPKAHY EPADRAREVE DRFRKTNHSS PEAQSKQTGR VLEPPVPSRS
+     ESFSNGNSES VHPALQRPAE PQVQWSHLAS LKNNVSPVSR SHSFSDPSPK FAHHHLRSQD
+     PCPPSRSEVL SQSSDSKSEA PDPTQKAWSR SDSDEVPPRV PVRTTSRSPV LSRRDSPLQG
+     SGQQNSQAGQ RNSTSSIEPR LLWERVEKLV PRPGSGSSSG SSNSGSQPGS HPGSQSGSGE
+     RFRVRSSSKS EGSPSQRLEN AVKKPEDKKE VFRPLKPAGE VDLTALAKEL RAVEDVRPPH
+     KVTDYSSSSE ESGTTDEEDD DVEQEGADES TSGPEDTRAA SSLNLSNGET ESVKTMIVHD
+     DVESEPAMTP SKEGTLIVRQ TQSASSTLQK HKSSSSFTPF IDPRLLQISP SSGTTVTSVV
+     GFSCDGMRPE AIRQDPTRKG SVVNVNPTNT RPQSDTPEIR KYKKRFNSEI LCAALWGVNL
+     LVGTESGLML LDRSGQGKVY PLINRRRFQQ MDVLEGLNVL VTISGKKDKL RVYYLSWLRN
+     KILHNDPEVE KKQGWTTVGD LEGCVHYKVV KYERIKFLVI ALKSSVEVYA WAPKPYHKFM
+     AFKSFGELVH KPLLVDLTVE EGQRLKVIYG SCAGFHAVDV DSGSVYDIYL PTHIQCSIKP
+     HAIIILPNTD GMELLVCYED EGVYVNTYGR ITKDVVLQWG EMPTSVAYIR SNQTMGWGEK
+     AIEIRSVETG HLDGVFMHKR AQRLKFLCER NDKVFFASVR SGGSSQVYFM TLGRTSLLSW
+//

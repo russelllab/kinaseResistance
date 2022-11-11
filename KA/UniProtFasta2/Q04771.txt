@@ -1,0 +1,753 @@
+ID   ACVR1_HUMAN             Reviewed;         509 AA.
+AC   Q04771;
+DT   01-FEB-1994, integrated into UniProtKB/Swiss-Prot.
+DT   01-FEB-1994, sequence version 1.
+DT   12-OCT-2022, entry version 215.
+DE   RecName: Full=Activin receptor type-1;
+DE            EC=2.7.11.30 {ECO:0000269|PubMed:9748228};
+DE   AltName: Full=Activin receptor type I;
+DE            Short=ACTR-I;
+DE   AltName: Full=Activin receptor-like kinase 2;
+DE            Short=ALK-2;
+DE   AltName: Full=Serine/threonine-protein kinase receptor R1;
+DE            Short=SKR1;
+DE   AltName: Full=TGF-B superfamily receptor type I;
+DE            Short=TSR-I;
+DE   Flags: Precursor;
+GN   Name=ACVR1; Synonyms=ACVRLK2;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA], AND TISSUE SPECIFICITY.
+RX   PubMed=8389764; DOI=10.1016/s0021-9258(18)31447-9;
+RA   Matsuzaki K., McKeehan W.L.;
+RT   "A widely expressed transmembrane serine/threonine kinase that does not
+RT   bind activin, inhibin, transforming growth factor beta, or bone morphogenic
+RT   factor.";
+RL   J. Biol. Chem. 268:12719-12723(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Placenta;
+RX   PubMed=8397373;
+RA   ten Dijke P., Ichijo H., Franzen P., Schulz P., Saras J., Toyoshima H.,
+RA   Heldin C.-H., Miyazono K.;
+RT   "Activin receptor-like kinases: a novel subclass of cell-surface receptors
+RT   with predicted serine/threonine kinase activity.";
+RL   Oncogene 8:2879-2887(1993).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Lung;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [4]
+RP   INTERACTION WITH CLU.
+RX   PubMed=8555189; DOI=10.1021/bi951880a;
+RA   Reddy K.B., Karode M.C., Harmony A.K., Howe P.H.;
+RT   "Interaction of transforming growth factor beta receptors with
+RT   apolipoprotein J/clusterin.";
+RL   Biochemistry 35:309-314(1996).
+RN   [5]
+RP   FUNCTION, CATALYTIC ACTIVITY, INTERACTION WITH BMP7, AND MUTAGENESIS OF
+RP   GLN-207.
+RX   PubMed=9748228; DOI=10.1074/jbc.273.40.25628;
+RA   Macias-Silva M., Hoodless P.A., Tang S.J., Buchwald M., Wrana J.L.;
+RT   "Specific activation of Smad1 signaling pathways by the BMP7 type I
+RT   receptor, ALK2.";
+RL   J. Biol. Chem. 273:25628-25636(1998).
+RN   [6]
+RP   FUNCTION, AND INTERACTION WITH ACVR2A AND AMHR2.
+RX   PubMed=17911401; DOI=10.1677/joe-07-0281;
+RA   Renlund N., O'Neill F.H., Zhang L., Sidis Y., Teixeira J.;
+RT   "Activin receptor-like kinase-2 inhibits activin signaling by blocking the
+RT   binding of activin to its type II receptor.";
+RL   J. Endocrinol. 195:95-103(2007).
+RN   [7]
+RP   INTERACTION WITH BMP6.
+RX   PubMed=18070108; DOI=10.1111/j.1742-4658.2007.06187.x;
+RA   Saremba S., Nickel J., Seher A., Kotzsch A., Sebald W., Mueller T.D.;
+RT   "Type I receptor binding of bone morphogenetic protein 6 is dependent on N-
+RT   glycosylation of the ligand.";
+RL   FEBS J. 275:172-183(2008).
+RN   [8]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-501, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [9]
+RP   FUNCTION, AND INTERACTION WITH GDF2/BMP9.
+RX   PubMed=20628059; DOI=10.1074/jbc.m110.130518;
+RA   Luo J., Tang M., Huang J., He B.C., Gao J.L., Chen L., Zuo G.W., Zhang W.,
+RA   Luo Q., Shi Q., Zhang B.Q., Bi Y., Luo X., Jiang W., Su Y., Shen J.,
+RA   Kim S.H., Huang E., Gao Y., Zhou J.Z., Yang K., Luu H.H., Pan X.,
+RA   Haydon R.C., Deng Z.L., He T.C.;
+RT   "TGFbeta/BMP type I receptors ALK1 and ALK2 are essential for BMP9-induced
+RT   osteogenic signaling in mesenchymal stem cells.";
+RL   J. Biol. Chem. 285:29588-29598(2010).
+RN   [10]
+RP   INTERACTION WITH FCHO1.
+RX   PubMed=22484487; DOI=10.1038/ncb2473;
+RA   Umasankar P.K., Sanker S., Thieman J.R., Chakraborty S., Wendland B.,
+RA   Tsang M., Traub L.M.;
+RT   "Distinct and separable activities of the endocytic clathrin-coat
+RT   components Fcho1/2 and AP-2 in developmental patterning.";
+RL   Nat. Cell Biol. 14:488-501(2012).
+RN   [11]
+RP   FUNCTION, AND MUTAGENESIS OF THR-203 AND GLY-325.
+RX   PubMed=25354296; DOI=10.1210/me.2014-1301;
+RA   Fujimoto M., Ohte S., Osawa K., Miyamoto A., Tsukamoto S., Mizuta T.,
+RA   Kokabu S., Suda N., Katagiri T.;
+RT   "Mutant activin-like kinase 2 in fibrodysplasia ossificans progressiva are
+RT   activated via T203 by BMP type II receptors.";
+RL   Mol. Endocrinol. 29:140-152(2015).
+RN   [12]
+RP   X-RAY CRYSTALLOGRAPHY (2.35 ANGSTROMS) OF 172-499 IN COMPLEX WITH FKBP1A.
+RG   Structural genomics consortium (SGC);
+RT   "Crystal structure of the kinase domain of type I activin receptor (ACVR1)
+RT   in complex with FKBP12 and dorsomorphin.";
+RL   Submitted (JUN-2009) to the PDB data bank.
+RN   [13] {ECO:0007744|PDB:3H9R}
+RP   X-RAY CRYSTALLOGRAPHY (2.35 ANGSTROMS) OF 172-499, AND FUNCTION.
+RX   PubMed=22977237; DOI=10.1074/jbc.m112.365932;
+RA   Chaikuad A., Alfano I., Kerr G., Sanvitale C.E., Boergermann J.H.,
+RA   Triffitt J.T., von Delft F., Knapp S., Knaus P., Bullock A.N.;
+RT   "Structure of the bone morphogenetic protein receptor ALK2 and implications
+RT   for fibrodysplasia ossificans progressiva.";
+RL   J. Biol. Chem. 287:36990-36998(2012).
+RN   [14]
+RP   VARIANT FOP HIS-206.
+RX   PubMed=16642017; DOI=10.1038/ng1783;
+RA   Shore E.M., Xu M., Feldman G.J., Fenstermacher D.A., Brown M.A.,
+RA   Kaplan F.S.;
+RT   "A recurrent mutation in the BMP type I receptor ACVR1 causes inherited and
+RT   sporadic fibrodysplasia ossificans progressiva.";
+RL   Nat. Genet. 38:525-527(2006).
+RN   [15]
+RP   VARIANTS [LARGE SCALE ANALYSIS] GLY-15; PHE-41; GLN-47 AND SER-115.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [16]
+RP   VARIANTS FOP 197-PRO-PHE-198 DELINS LEU; HIS-206; GLU-207; ARG-328;
+RP   TRP-328; GLU-328; ASP-356 AND PRO-375.
+RX   PubMed=19085907; DOI=10.1002/humu.20868;
+RA   Kaplan F.S., Xu M., Seemann P., Connor J.M., Glaser D.L., Carroll L.,
+RA   Delai P., Fastnacht-Urban E., Forman S.J., Gillessen-Kaesbach G.,
+RA   Hoover-Fong J., Koester B., Pauli R.M., Reardon W., Zaidi S.A., Zasloff M.,
+RA   Morhart R., Mundlos S., Groppe J., Shore E.M.;
+RT   "Classic and atypical fibrodysplasia ossificans progressiva (FOP)
+RT   phenotypes are caused by mutations in the bone morphogenetic protein (BMP)
+RT   type I receptor ACVR1.";
+RL   Hum. Mutat. 30:379-390(2009).
+RN   [17]
+RP   VARIANTS FOP ILE-202 AND GLU-328.
+RX   PubMed=19330033; DOI=10.1371/journal.pone.0005005;
+RA   Petrie K.A., Lee W.H., Bullock A.N., Pointon J.J., Smith R., Russell R.G.,
+RA   Brown M.A., Wordsworth B.P., Triffitt J.T.;
+RT   "Novel mutations in ACVR1 result in atypical features in two fibrodysplasia
+RT   ossificans progressiva patients.";
+RL   PLoS ONE 4:E5005-E5005(2009).
+CC   -!- FUNCTION: Bone morphogenetic protein (BMP) type I receptor that is
+CC       involved in a wide variety of biological processes, including bone,
+CC       heart, cartilage, nervous, and reproductive system development and
+CC       regulation (PubMed:20628059, PubMed:22977237). As a type I receptor,
+CC       forms heterotetrameric receptor complexes with the type II receptors
+CC       AMHR2, ACVR2A or ACVR2B (PubMed:17911401). Upon binding of ligands such
+CC       as BMP7 or GDF2/BMP9 to the heteromeric complexes, type II receptors
+CC       transphosphorylate ACVR1 intracellular domain (PubMed:25354296). In
+CC       turn, ACVR1 kinase domain is activated and subsequently phosphorylates
+CC       SMAD1/5/8 proteins that transduce the signal (PubMed:9748228). In
+CC       addition to its role in mediating BMP pathway-specific signaling,
+CC       suppresses TGFbeta/activin pathway signaling by interfering with the
+CC       binding of activin to its type II receptor (PubMed:17911401). Besides
+CC       canonical SMAD signaling, can activate non-canonical pathways such as
+CC       p38 mitogen-activated protein kinases/MAPKs (By similarity).
+CC       {ECO:0000250|UniProtKB:P15261, ECO:0000269|PubMed:17911401,
+CC       ECO:0000269|PubMed:20628059, ECO:0000269|PubMed:22977237,
+CC       ECO:0000269|PubMed:25354296, ECO:0000269|PubMed:9748228}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[receptor-protein] = ADP + H(+) + O-phospho-
+CC         L-threonyl-[receptor-protein]; Xref=Rhea:RHEA:44880, Rhea:RHEA-
+CC         COMP:11024, Rhea:RHEA-COMP:11025, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:30013, ChEBI:CHEBI:30616, ChEBI:CHEBI:61977,
+CC         ChEBI:CHEBI:456216; EC=2.7.11.30;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[receptor-protein] = ADP + H(+) + O-phospho-L-
+CC         seryl-[receptor-protein]; Xref=Rhea:RHEA:18673, Rhea:RHEA-COMP:11022,
+CC         Rhea:RHEA-COMP:11023, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:83421, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.30; Evidence={ECO:0000269|PubMed:9748228};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420; Evidence={ECO:0000250};
+CC       Name=Mn(2+); Xref=ChEBI:CHEBI:29035; Evidence={ECO:0000250};
+CC   -!- SUBUNIT: Interacts with FKBP1A (PubMed:22484487, Ref.12). Interacts
+CC       with FCHO1 (PubMed:22484487). Interacts with CLU (PubMed:8555189).
+CC       Interacts with type II receptors AMHR2 and ACVR2A (PubMed:17911401).
+CC       Interacts with BMP7 (PubMed:9748228). Interacts with GDF2/BMP9
+CC       (PubMed:20628059). Interacts with BMP6 (PubMed:18070108).
+CC       {ECO:0000269|PubMed:17911401, ECO:0000269|PubMed:18070108,
+CC       ECO:0000269|PubMed:20628059, ECO:0000269|PubMed:22484487,
+CC       ECO:0000269|PubMed:8555189, ECO:0000269|PubMed:9748228,
+CC       ECO:0000269|Ref.12}.
+CC   -!- INTERACTION:
+CC       Q04771; Q9UF33: EPHA6; NbExp=2; IntAct=EBI-1383616, EBI-3950019;
+CC   -!- SUBCELLULAR LOCATION: Membrane; Single-pass type I membrane protein.
+CC   -!- TISSUE SPECIFICITY: Expressed in normal parenchymal cells, endothelial
+CC       cells, fibroblasts and tumor-derived epithelial cells.
+CC       {ECO:0000269|PubMed:8389764}.
+CC   -!- DISEASE: Fibrodysplasia ossificans progressiva (FOP) [MIM:135100]: A
+CC       rare autosomal dominant connective tissue disorder resulting in
+CC       skeletal malformations and progressive extraskeletal ossification.
+CC       Heterotopic ossification begins in childhood and can be induced by
+CC       trauma or may occur without warning. Bone formation is episodic and
+CC       progressive, leading to a debilitating ankylosis of all major joints of
+CC       the axial and appendicular skeleton, rendering movement impossible.
+CC       {ECO:0000269|PubMed:16642017, ECO:0000269|PubMed:19085907,
+CC       ECO:0000269|PubMed:19330033}. Note=The disease is caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. TKL Ser/Thr
+CC       protein kinase family. TGFB receptor subfamily. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; L02911; AAA36614.1; -; mRNA.
+DR   EMBL; Z22534; CAA80256.1; -; mRNA.
+DR   EMBL; BC033867; AAH33867.1; -; mRNA.
+DR   CCDS; CCDS2206.1; -.
+DR   PIR; A45992; A45992.
+DR   RefSeq; NP_001096.1; NM_001105.4.
+DR   RefSeq; NP_001104537.1; NM_001111067.2.
+DR   RefSeq; NP_001334592.1; NM_001347663.1.
+DR   RefSeq; NP_001334593.1; NM_001347664.1.
+DR   RefSeq; NP_001334594.1; NM_001347665.1.
+DR   RefSeq; NP_001334595.1; NM_001347666.1.
+DR   RefSeq; NP_001334596.1; NM_001347667.1.
+DR   RefSeq; XP_006712888.1; XM_006712825.3.
+DR   RefSeq; XP_011510410.1; XM_011512108.2.
+DR   PDB; 3H9R; X-ray; 2.35 A; A=172-499.
+DR   PDB; 3MTF; X-ray; 2.15 A; A/B=201-499.
+DR   PDB; 3OOM; X-ray; 2.00 A; A=201-499.
+DR   PDB; 3Q4U; X-ray; 1.82 A; A/B/C/D=201-499.
+DR   PDB; 4BGG; X-ray; 2.56 A; A/B/C/D=201-499.
+DR   PDB; 4C02; X-ray; 2.17 A; A=172-499.
+DR   PDB; 4DYM; X-ray; 2.42 A; A=201-499.
+DR   PDB; 5OXG; X-ray; 2.13 A; A/B/C/D=201-499.
+DR   PDB; 5OY6; X-ray; 2.56 A; A/B/C/D=201-499.
+DR   PDB; 5S75; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S76; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S77; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S78; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S79; X-ray; 1.50 A; A/B=201-499.
+DR   PDB; 5S7A; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S7B; X-ray; 1.32 A; A/B=201-499.
+DR   PDB; 5S7C; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S7D; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S7E; X-ray; 1.32 A; A/B=201-499.
+DR   PDB; 5S7F; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S7G; X-ray; 1.78 A; A/B=201-499.
+DR   PDB; 5S7H; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S7I; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S7J; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S7K; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S7L; X-ray; 1.36 A; A/B=201-499.
+DR   PDB; 5S7M; X-ray; 1.32 A; A/B=201-499.
+DR   PDB; 5S7N; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S7O; X-ray; 1.43 A; A/B=201-499.
+DR   PDB; 5S7P; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S7Q; X-ray; 1.53 A; A/B=201-499.
+DR   PDB; 5S7R; X-ray; 1.46 A; A/B=201-499.
+DR   PDB; 5S7S; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S7T; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S7U; X-ray; 1.59 A; A/B=201-499.
+DR   PDB; 5S7V; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S7W; X-ray; 1.33 A; A/B=201-499.
+DR   PDB; 5S7X; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S7Y; X-ray; 1.37 A; A/B=201-499.
+DR   PDB; 5S7Z; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S80; X-ray; 1.67 A; A/B=201-499.
+DR   PDB; 5S81; X-ray; 1.43 A; A/B=201-499.
+DR   PDB; 5S82; X-ray; 1.71 A; A/B=201-499.
+DR   PDB; 5S83; X-ray; 1.33 A; A/B=201-499.
+DR   PDB; 5S84; X-ray; 1.35 A; A/B=201-499.
+DR   PDB; 5S85; X-ray; 1.33 A; A/B=201-499.
+DR   PDB; 5S86; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S87; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S88; X-ray; 1.31 A; A/B=201-499.
+DR   PDB; 5S89; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S8A; X-ray; 1.30 A; A/B=201-499.
+DR   PDB; 5S8B; X-ray; 1.64 A; A/B=201-499.
+DR   PDB; 5S9K; X-ray; 1.35 A; A/B=201-499.
+DR   PDB; 6ACR; X-ray; 2.01 A; A/B=201-499.
+DR   PDB; 6EIX; X-ray; 2.30 A; A=172-509.
+DR   PDB; 6GI6; X-ray; 1.98 A; A=201-499.
+DR   PDB; 6GIN; X-ray; 2.20 A; A/B=201-499.
+DR   PDB; 6GIP; X-ray; 2.17 A; A=201-499.
+DR   PDB; 6I1S; X-ray; 1.52 A; A=172-499.
+DR   PDB; 6JUX; X-ray; 1.75 A; A=201-499.
+DR   PDB; 6SRH; X-ray; 1.25 A; A/B=201-499.
+DR   PDB; 6SZM; X-ray; 1.42 A; A/B=201-499.
+DR   PDB; 6T6D; X-ray; 2.56 A; A/B/C/D=201-499.
+DR   PDB; 6T8N; X-ray; 1.77 A; A/B=201-499.
+DR   PDB; 6TN8; X-ray; 1.63 A; A=201-499.
+DR   PDB; 6UNQ; X-ray; 2.40 A; A=201-499.
+DR   PDB; 6UNR; X-ray; 2.20 A; A=201-499.
+DR   PDB; 6UNS; X-ray; 2.30 A; A/B=201-499.
+DR   PDB; 6Z36; X-ray; 1.37 A; A/B=201-499.
+DR   PDB; 6ZGC; X-ray; 2.67 A; A/B/C/D=201-499.
+DR   PDB; 7A21; X-ray; 2.14 A; A/B=201-499.
+DR   PDB; 7C3G; X-ray; 1.80 A; A/B=201-499.
+DR   PDB; 7NNS; X-ray; 2.14 A; B=201-499.
+DR   PDBsum; 3H9R; -.
+DR   PDBsum; 3MTF; -.
+DR   PDBsum; 3OOM; -.
+DR   PDBsum; 3Q4U; -.
+DR   PDBsum; 4BGG; -.
+DR   PDBsum; 4C02; -.
+DR   PDBsum; 4DYM; -.
+DR   PDBsum; 5OXG; -.
+DR   PDBsum; 5OY6; -.
+DR   PDBsum; 5S75; -.
+DR   PDBsum; 5S76; -.
+DR   PDBsum; 5S77; -.
+DR   PDBsum; 5S78; -.
+DR   PDBsum; 5S79; -.
+DR   PDBsum; 5S7A; -.
+DR   PDBsum; 5S7B; -.
+DR   PDBsum; 5S7C; -.
+DR   PDBsum; 5S7D; -.
+DR   PDBsum; 5S7E; -.
+DR   PDBsum; 5S7F; -.
+DR   PDBsum; 5S7G; -.
+DR   PDBsum; 5S7H; -.
+DR   PDBsum; 5S7I; -.
+DR   PDBsum; 5S7J; -.
+DR   PDBsum; 5S7K; -.
+DR   PDBsum; 5S7L; -.
+DR   PDBsum; 5S7M; -.
+DR   PDBsum; 5S7N; -.
+DR   PDBsum; 5S7O; -.
+DR   PDBsum; 5S7P; -.
+DR   PDBsum; 5S7Q; -.
+DR   PDBsum; 5S7R; -.
+DR   PDBsum; 5S7S; -.
+DR   PDBsum; 5S7T; -.
+DR   PDBsum; 5S7U; -.
+DR   PDBsum; 5S7V; -.
+DR   PDBsum; 5S7W; -.
+DR   PDBsum; 5S7X; -.
+DR   PDBsum; 5S7Y; -.
+DR   PDBsum; 5S7Z; -.
+DR   PDBsum; 5S80; -.
+DR   PDBsum; 5S81; -.
+DR   PDBsum; 5S82; -.
+DR   PDBsum; 5S83; -.
+DR   PDBsum; 5S84; -.
+DR   PDBsum; 5S85; -.
+DR   PDBsum; 5S86; -.
+DR   PDBsum; 5S87; -.
+DR   PDBsum; 5S88; -.
+DR   PDBsum; 5S89; -.
+DR   PDBsum; 5S8A; -.
+DR   PDBsum; 5S8B; -.
+DR   PDBsum; 5S9K; -.
+DR   PDBsum; 6ACR; -.
+DR   PDBsum; 6EIX; -.
+DR   PDBsum; 6GI6; -.
+DR   PDBsum; 6GIN; -.
+DR   PDBsum; 6GIP; -.
+DR   PDBsum; 6I1S; -.
+DR   PDBsum; 6JUX; -.
+DR   PDBsum; 6SRH; -.
+DR   PDBsum; 6SZM; -.
+DR   PDBsum; 6T6D; -.
+DR   PDBsum; 6T8N; -.
+DR   PDBsum; 6TN8; -.
+DR   PDBsum; 6UNQ; -.
+DR   PDBsum; 6UNR; -.
+DR   PDBsum; 6UNS; -.
+DR   PDBsum; 6Z36; -.
+DR   PDBsum; 6ZGC; -.
+DR   PDBsum; 7A21; -.
+DR   PDBsum; 7C3G; -.
+DR   PDBsum; 7NNS; -.
+DR   AlphaFoldDB; Q04771; -.
+DR   SMR; Q04771; -.
+DR   BioGRID; 106605; 106.
+DR   DIP; DIP-212N; -.
+DR   IntAct; Q04771; 21.
+DR   MINT; Q04771; -.
+DR   STRING; 9606.ENSP00000263640; -.
+DR   BindingDB; Q04771; -.
+DR   ChEMBL; CHEMBL5903; -.
+DR   DrugBank; DB00171; ATP.
+DR   DrugBank; DB08597; Dorsomorphin.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; Q04771; -.
+DR   GuidetoPHARMACOLOGY; 1785; -.
+DR   GlyGen; Q04771; 1 site.
+DR   iPTMnet; Q04771; -.
+DR   PhosphoSitePlus; Q04771; -.
+DR   BioMuta; ACVR1; -.
+DR   DMDM; 462447; -.
+DR   EPD; Q04771; -.
+DR   jPOST; Q04771; -.
+DR   MassIVE; Q04771; -.
+DR   MaxQB; Q04771; -.
+DR   PaxDb; Q04771; -.
+DR   PeptideAtlas; Q04771; -.
+DR   PRIDE; Q04771; -.
+DR   ProteomicsDB; 58283; -.
+DR   Antibodypedia; 2371; 643 antibodies from 40 providers.
+DR   DNASU; 90; -.
+DR   Ensembl; ENST00000263640.7; ENSP00000263640.3; ENSG00000115170.16.
+DR   Ensembl; ENST00000409283.6; ENSP00000387273.2; ENSG00000115170.16.
+DR   Ensembl; ENST00000410057.6; ENSP00000387127.2; ENSG00000115170.16.
+DR   Ensembl; ENST00000424669.6; ENSP00000400767.2; ENSG00000115170.16.
+DR   Ensembl; ENST00000434821.7; ENSP00000405004.1; ENSG00000115170.16.
+DR   Ensembl; ENST00000539637.6; ENSP00000440091.2; ENSG00000115170.16.
+DR   Ensembl; ENST00000672582.1; ENSP00000500605.1; ENSG00000115170.16.
+DR   Ensembl; ENST00000673324.1; ENSP00000500109.1; ENSG00000115170.16.
+DR   Ensembl; ENST00000682025.1; ENSP00000507086.1; ENSG00000115170.16.
+DR   Ensembl; ENST00000682300.1; ENSP00000507102.1; ENSG00000115170.16.
+DR   Ensembl; ENST00000683441.1; ENSP00000508189.1; ENSG00000115170.16.
+DR   Ensembl; ENST00000683487.1; ENSP00000507113.1; ENSG00000115170.16.
+DR   Ensembl; ENST00000683820.1; ENSP00000507727.1; ENSG00000115170.16.
+DR   Ensembl; ENST00000684348.1; ENSP00000508136.1; ENSG00000115170.16.
+DR   Ensembl; ENST00000684595.1; ENSP00000507730.1; ENSG00000115170.16.
+DR   GeneID; 90; -.
+DR   KEGG; hsa:90; -.
+DR   MANE-Select; ENST00000434821.7; ENSP00000405004.1; NM_001111067.4; NP_001104537.1.
+DR   UCSC; uc002tzm.4; human.
+DR   CTD; 90; -.
+DR   DisGeNET; 90; -.
+DR   GeneCards; ACVR1; -.
+DR   GeneReviews; ACVR1; -.
+DR   HGNC; HGNC:171; ACVR1.
+DR   HPA; ENSG00000115170; Low tissue specificity.
+DR   MalaCards; ACVR1; -.
+DR   MIM; 102576; gene.
+DR   MIM; 135100; phenotype.
+DR   neXtProt; NX_Q04771; -.
+DR   OpenTargets; ENSG00000115170; -.
+DR   Orphanet; 337; Fibrodysplasia ossificans progressiva.
+DR   PharmGKB; PA24492; -.
+DR   VEuPathDB; HostDB:ENSG00000115170; -.
+DR   eggNOG; KOG2052; Eukaryota.
+DR   GeneTree; ENSGT00940000160160; -.
+DR   HOGENOM; CLU_000288_8_5_1; -.
+DR   InParanoid; Q04771; -.
+DR   OMA; NQAVECC; -.
+DR   OrthoDB; 1299087at2759; -.
+DR   PhylomeDB; Q04771; -.
+DR   TreeFam; TF314724; -.
+DR   BRENDA; 2.7.10.2; 2681.
+DR   PathwayCommons; Q04771; -.
+DR   SignaLink; Q04771; -.
+DR   SIGNOR; Q04771; -.
+DR   BioGRID-ORCS; 90; 16 hits in 1117 CRISPR screens.
+DR   ChiTaRS; ACVR1; human.
+DR   EvolutionaryTrace; Q04771; -.
+DR   GeneWiki; ACVR1; -.
+DR   GenomeRNAi; 90; -.
+DR   Pharos; Q04771; Tchem.
+DR   PRO; PR:Q04771; -.
+DR   Proteomes; UP000005640; Chromosome 2.
+DR   RNAct; Q04771; protein.
+DR   Bgee; ENSG00000115170; Expressed in cartilage tissue and 207 other tissues.
+DR   ExpressionAtlas; Q04771; baseline and differential.
+DR   Genevisible; Q04771; HS.
+DR   GO; GO:0048179; C:activin receptor complex; IDA:UniProtKB.
+DR   GO; GO:0045177; C:apical part of cell; IEA:Ensembl.
+DR   GO; GO:0070724; C:BMP receptor complex; IBA:GO_Central.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0005886; C:plasma membrane; IBA:GO_Central.
+DR   GO; GO:0043235; C:receptor complex; IBA:GO_Central.
+DR   GO; GO:0048185; F:activin binding; IDA:UniProtKB.
+DR   GO; GO:0016361; F:activin receptor activity, type I; IEA:Ensembl.
+DR   GO; GO:0005524; F:ATP binding; IDA:HGNC-UCL.
+DR   GO; GO:0045296; F:cadherin binding; IPI:ARUK-UCL.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0017046; F:peptide hormone binding; NAS:UniProtKB.
+DR   GO; GO:0042803; F:protein homodimerization activity; IDA:BHF-UCL.
+DR   GO; GO:0004672; F:protein kinase activity; IDA:BHF-UCL.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:HGNC-UCL.
+DR   GO; GO:1990782; F:protein tyrosine kinase binding; IPI:ARUK-UCL.
+DR   GO; GO:0046332; F:SMAD binding; IDA:HGNC-UCL.
+DR   GO; GO:0050431; F:transforming growth factor beta binding; IDA:UniProtKB.
+DR   GO; GO:0005025; F:transforming growth factor beta receptor activity, type I; IBA:GO_Central.
+DR   GO; GO:0004675; F:transmembrane receptor protein serine/threonine kinase activity; NAS:UniProtKB.
+DR   GO; GO:0032924; P:activin receptor signaling pathway; IDA:BHF-UCL.
+DR   GO; GO:0002526; P:acute inflammatory response; IEA:Ensembl.
+DR   GO; GO:0003289; P:atrial septum primum morphogenesis; IMP:BHF-UCL.
+DR   GO; GO:0003181; P:atrioventricular valve morphogenesis; ISS:BHF-UCL.
+DR   GO; GO:0030509; P:BMP signaling pathway; IDA:BHF-UCL.
+DR   GO; GO:0061312; P:BMP signaling pathway involved in heart development; ISS:BHF-UCL.
+DR   GO; GO:0001569; P:branching involved in blood vessel morphogenesis; IEA:Ensembl.
+DR   GO; GO:0060923; P:cardiac muscle cell fate commitment; IMP:BHF-UCL.
+DR   GO; GO:0071773; P:cellular response to BMP stimulus; IMP:BHF-UCL.
+DR   GO; GO:0071385; P:cellular response to glucocorticoid stimulus; IEA:Ensembl.
+DR   GO; GO:0071363; P:cellular response to growth factor stimulus; IBA:GO_Central.
+DR   GO; GO:0007368; P:determination of left/right symmetry; IEA:Ensembl.
+DR   GO; GO:0009953; P:dorsal/ventral pattern formation; IBA:GO_Central.
+DR   GO; GO:0003143; P:embryonic heart tube morphogenesis; IMP:BHF-UCL.
+DR   GO; GO:0061445; P:endocardial cushion cell fate commitment; IMP:BHF-UCL.
+DR   GO; GO:0003274; P:endocardial cushion fusion; ISS:BHF-UCL.
+DR   GO; GO:0003203; P:endocardial cushion morphogenesis; ISS:BHF-UCL.
+DR   GO; GO:0001702; P:gastrulation with mouth forming second; IEA:Ensembl.
+DR   GO; GO:0007281; P:germ cell development; IEA:Ensembl.
+DR   GO; GO:0007507; P:heart development; IBA:GO_Central.
+DR   GO; GO:0001701; P:in utero embryonic development; IEA:Ensembl.
+DR   GO; GO:0001707; P:mesoderm formation; IEA:Ensembl.
+DR   GO; GO:0003183; P:mitral valve morphogenesis; IMP:BHF-UCL.
+DR   GO; GO:0032926; P:negative regulation of activin receptor signaling pathway; IMP:HGNC-UCL.
+DR   GO; GO:2001237; P:negative regulation of extrinsic apoptotic signaling pathway; IMP:BHF-UCL.
+DR   GO; GO:2000134; P:negative regulation of G1/S transition of mitotic cell cycle; IMP:HGNC-UCL.
+DR   GO; GO:0009968; P:negative regulation of signal transduction; IMP:HGNC-UCL.
+DR   GO; GO:0001755; P:neural crest cell migration; IEA:Ensembl.
+DR   GO; GO:0060389; P:pathway-restricted SMAD protein phosphorylation; IDA:BHF-UCL.
+DR   GO; GO:0018107; P:peptidyl-threonine phosphorylation; IDA:BHF-UCL.
+DR   GO; GO:0060037; P:pharyngeal system development; IEA:Ensembl.
+DR   GO; GO:0030501; P:positive regulation of bone mineralization; IMP:BHF-UCL.
+DR   GO; GO:0030335; P:positive regulation of cell migration; IGI:BHF-UCL.
+DR   GO; GO:2000017; P:positive regulation of determination of dorsal identity; IDA:BHF-UCL.
+DR   GO; GO:0045893; P:positive regulation of DNA-templated transcription; IDA:UniProtKB.
+DR   GO; GO:1905007; P:positive regulation of epithelial to mesenchymal transition involved in endocardial cushion formation; ISS:BHF-UCL.
+DR   GO; GO:0045669; P:positive regulation of osteoblast differentiation; IMP:BHF-UCL.
+DR   GO; GO:0010862; P:positive regulation of pathway-restricted SMAD protein phosphorylation; IDA:BHF-UCL.
+DR   GO; GO:0050731; P:positive regulation of peptidyl-tyrosine phosphorylation; IMP:ARUK-UCL.
+DR   GO; GO:0045944; P:positive regulation of transcription by RNA polymerase II; IDA:BHF-UCL.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:HGNC-UCL.
+DR   GO; GO:0030278; P:regulation of ossification; IMP:UniProtKB.
+DR   GO; GO:0048641; P:regulation of skeletal muscle tissue development; IEA:Ensembl.
+DR   GO; GO:0051145; P:smooth muscle cell differentiation; IEA:Ensembl.
+DR   GO; GO:0007179; P:transforming growth factor beta receptor signaling pathway; IDA:UniProtKB.
+DR   GO; GO:0001655; P:urogenital system development; IEA:Ensembl.
+DR   GO; GO:0060412; P:ventricular septum morphogenesis; ISS:BHF-UCL.
+DR   Gene3D; 2.10.60.10; -; 1.
+DR   InterPro; IPR000472; Activin_recp.
+DR   InterPro; IPR003605; GS_dom.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   InterPro; IPR045860; Snake_toxin-like_sf.
+DR   InterPro; IPR000333; TGFB_receptor.
+DR   PANTHER; PTHR23255; PTHR23255; 1.
+DR   Pfam; PF01064; Activin_recp; 1.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   Pfam; PF08515; TGF_beta_GS; 1.
+DR   PRINTS; PR00653; ACTIVIN2R.
+DR   SMART; SM00467; GS; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   SUPFAM; SSF57302; SSF57302; 1.
+DR   PROSITE; PS51256; GS; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; ATP-binding; Disease variant; Glycoprotein; Kinase;
+KW   Magnesium; Manganese; Membrane; Metal-binding; Nucleotide-binding;
+KW   Phosphoprotein; Receptor; Reference proteome;
+KW   Serine/threonine-protein kinase; Signal; Transferase; Transmembrane;
+KW   Transmembrane helix.
+FT   SIGNAL          1..20
+FT                   /evidence="ECO:0000250"
+FT   CHAIN           21..509
+FT                   /note="Activin receptor type-1"
+FT                   /id="PRO_0000024394"
+FT   TOPO_DOM        21..123
+FT                   /note="Extracellular"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        124..146
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        147..509
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          178..207
+FT                   /note="GS"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00585"
+FT   DOMAIN          208..502
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   ACT_SITE        336
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         214..222
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         235
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         501
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:19369195"
+FT   CARBOHYD        102
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   VARIANT         15
+FT                   /note="A -> G (in dbSNP:rs13406336)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041392"
+FT   VARIANT         41
+FT                   /note="S -> F (in dbSNP:rs55957214)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041393"
+FT   VARIANT         47
+FT                   /note="H -> Q (in dbSNP:rs34056189)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041394"
+FT   VARIANT         115
+FT                   /note="P -> S (in a melanoma sample; somatic mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041395"
+FT   VARIANT         197..198
+FT                   /note="PF -> L (in FOP; variant phenotype)"
+FT                   /evidence="ECO:0000269|PubMed:19085907"
+FT                   /id="VAR_058418"
+FT   VARIANT         202
+FT                   /note="R -> I (in FOP; with some atypical features;
+FT                   dbSNP:rs387906591)"
+FT                   /evidence="ECO:0000269|PubMed:19330033"
+FT                   /id="VAR_058419"
+FT   VARIANT         206
+FT                   /note="R -> H (in FOP; dbSNP:rs121912678)"
+FT                   /evidence="ECO:0000269|PubMed:16642017,
+FT                   ECO:0000269|PubMed:19085907"
+FT                   /id="VAR_028444"
+FT   VARIANT         207
+FT                   /note="Q -> E (in FOP; with some atypical features)"
+FT                   /evidence="ECO:0000269|PubMed:19085907"
+FT                   /id="VAR_058420"
+FT   VARIANT         328
+FT                   /note="G -> E (in FOP; variant phenotype;
+FT                   dbSNP:rs387906589)"
+FT                   /evidence="ECO:0000269|PubMed:19085907,
+FT                   ECO:0000269|PubMed:19330033"
+FT                   /id="VAR_058421"
+FT   VARIANT         328
+FT                   /note="G -> R (in FOP; variant phenotype;
+FT                   dbSNP:rs387906588)"
+FT                   /evidence="ECO:0000269|PubMed:19085907"
+FT                   /id="VAR_058422"
+FT   VARIANT         328
+FT                   /note="G -> W (in FOP; variant phenotype;
+FT                   dbSNP:rs387906588)"
+FT                   /evidence="ECO:0000269|PubMed:19085907"
+FT                   /id="VAR_058423"
+FT   VARIANT         356
+FT                   /note="G -> D (in FOP; variant phenotype;
+FT                   dbSNP:rs121912679)"
+FT                   /evidence="ECO:0000269|PubMed:19085907"
+FT                   /id="VAR_058424"
+FT   VARIANT         375
+FT                   /note="R -> P (in FOP; variant phenotype;
+FT                   dbSNP:rs387906590)"
+FT                   /evidence="ECO:0000269|PubMed:19085907"
+FT                   /id="VAR_058425"
+FT   MUTAGEN         203
+FT                   /note="T->V: Almost complete loss of alcaline phosphatase
+FT                   induction; in association with A-325."
+FT                   /evidence="ECO:0000269|PubMed:25354296"
+FT   MUTAGEN         207
+FT                   /note="Q->D: Strong induction of SMAD1 phosphorylation."
+FT                   /evidence="ECO:0000269|PubMed:9748228"
+FT   MUTAGEN         325
+FT                   /note="G->A: Almost complete loss of alcaline phosphatase
+FT                   induction; in association with V-203."
+FT                   /evidence="ECO:0000269|PubMed:25354296"
+FT   HELIX           180..184
+FT                   /evidence="ECO:0007829|PDB:6I1S"
+FT   STRAND          194..196
+FT                   /evidence="ECO:0007829|PDB:6I1S"
+FT   HELIX           198..205
+FT                   /evidence="ECO:0007829|PDB:6I1S"
+FT   STRAND          209..217
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   STRAND          220..227
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   STRAND          230..237
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           239..241
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           242..254
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   STRAND          265..272
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   STRAND          274..283
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           291..297
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           302..320
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   STRAND          325..327
+FT                   /evidence="ECO:0007829|PDB:3MTF"
+FT   STRAND          331..333
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           339..341
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   STRAND          342..344
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   STRAND          350..352
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   STRAND          359..361
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   TURN            363..366
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   STRAND          367..369
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           379..381
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           384..387
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           396..415
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   TURN            430..434
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           441..448
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           459..463
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           465..477
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           482..484
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+FT   HELIX           488..496
+FT                   /evidence="ECO:0007829|PDB:6SRH"
+SQ   SEQUENCE   509 AA;  57153 MW;  E2B0F051D19DD052 CRC64;
+     MVDGVMILPV LIMIALPSPS MEDEKPKVNP KLYMCVCEGL SCGNEDHCEG QQCFSSLSIN
+     DGFHVYQKGC FQVYEQGKMT CKTPPSPGQA VECCQGDWCN RNITAQLPTK GKSFPGTQNF
+     HLEVGLIILS VVFAVCLLAC LLGVALRKFK RRNQERLNPR DVEYGTIEGL ITTNVGDSTL
+     ADLLDHSCTS GSGSGLPFLV QRTVARQITL LECVGKGRYG EVWRGSWQGE NVAVKIFSSR
+     DEKSWFRETE LYNTVMLRHE NILGFIASDM TSRHSSTQLW LITHYHEMGS LYDYLQLTTL
+     DTVSCLRIVL SIASGLAHLH IEIFGTQGKP AIAHRDLKSK NILVKKNGQC CIADLGLAVM
+     HSQSTNQLDV GNNPRVGTKR YMAPEVLDET IQVDCFDSYK RVDIWAFGLV LWEVARRMVS
+     NGIVEDYKPP FYDVVPNDPS FEDMRKVVCV DQQRPNIPNR WFSDPTLTSL AKLMKECWYQ
+     NPSARLTALR IKKTLTKIDN SLDKLKTDC
+//

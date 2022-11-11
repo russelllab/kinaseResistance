@@ -1,0 +1,305 @@
+ID   TSSK3_HUMAN             Reviewed;         268 AA.
+AC   Q96PN8; Q5TEE5;
+DT   30-APR-2003, integrated into UniProtKB/Swiss-Prot.
+DT   01-DEC-2001, sequence version 1.
+DT   12-OCT-2022, entry version 171.
+DE   RecName: Full=Testis-specific serine/threonine-protein kinase 3;
+DE            Short=TSK-3;
+DE            Short=TSSK-3;
+DE            Short=Testis-specific kinase 3;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Serine/threonine-protein kinase 22C;
+GN   Name=TSSK3; Synonyms=SPOGA3, STK22C;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Testis;
+RX   PubMed=11597141; DOI=10.1006/geno.2001.6628;
+RA   Visconti P.E., Hao Z., Purdon M.A., Stein P., Balsara B.R., Testa J.R.,
+RA   Herr J.C., Moss S.B., Kopf G.S.;
+RT   "Cloning and chromosomal localization of a gene encoding a novel
+RT   serine/threonine kinase belonging to the subfamily of testis-specific
+RT   kinases.";
+RL   Genomics 77:163-170(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Fetal brain;
+RA   Mao Y., Xie Y., Jiang M.;
+RT   "Cloning and characterization of a novel human TSSK3 gene.";
+RL   Submitted (JUL-2001) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16710414; DOI=10.1038/nature04727;
+RA   Gregory S.G., Barlow K.F., McLay K.E., Kaul R., Swarbreck D., Dunham A.,
+RA   Scott C.E., Howe K.L., Woodfine K., Spencer C.C.A., Jones M.C., Gillson C.,
+RA   Searle S., Zhou Y., Kokocinski F., McDonald L., Evans R., Phillips K.,
+RA   Atkinson A., Cooper R., Jones C., Hall R.E., Andrews T.D., Lloyd C.,
+RA   Ainscough R., Almeida J.P., Ambrose K.D., Anderson F., Andrew R.W.,
+RA   Ashwell R.I.S., Aubin K., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Beasley H., Bethel G., Bird C.P., Bray-Allen S., Brown J.Y., Brown A.J.,
+RA   Buckley D., Burton J., Bye J., Carder C., Chapman J.C., Clark S.Y.,
+RA   Clarke G., Clee C., Cobley V., Collier R.E., Corby N., Coville G.J.,
+RA   Davies J., Deadman R., Dunn M., Earthrowl M., Ellington A.G., Errington H.,
+RA   Frankish A., Frankland J., French L., Garner P., Garnett J., Gay L.,
+RA   Ghori M.R.J., Gibson R., Gilby L.M., Gillett W., Glithero R.J.,
+RA   Grafham D.V., Griffiths C., Griffiths-Jones S., Grocock R., Hammond S.,
+RA   Harrison E.S.I., Hart E., Haugen E., Heath P.D., Holmes S., Holt K.,
+RA   Howden P.J., Hunt A.R., Hunt S.E., Hunter G., Isherwood J., James R.,
+RA   Johnson C., Johnson D., Joy A., Kay M., Kershaw J.K., Kibukawa M.,
+RA   Kimberley A.M., King A., Knights A.J., Lad H., Laird G., Lawlor S.,
+RA   Leongamornlert D.A., Lloyd D.M., Loveland J., Lovell J., Lush M.J.,
+RA   Lyne R., Martin S., Mashreghi-Mohammadi M., Matthews L., Matthews N.S.W.,
+RA   McLaren S., Milne S., Mistry S., Moore M.J.F., Nickerson T., O'Dell C.N.,
+RA   Oliver K., Palmeiri A., Palmer S.A., Parker A., Patel D., Pearce A.V.,
+RA   Peck A.I., Pelan S., Phelps K., Phillimore B.J., Plumb R., Rajan J.,
+RA   Raymond C., Rouse G., Saenphimmachak C., Sehra H.K., Sheridan E.,
+RA   Shownkeen R., Sims S., Skuce C.D., Smith M., Steward C., Subramanian S.,
+RA   Sycamore N., Tracey A., Tromans A., Van Helmond Z., Wall M., Wallis J.M.,
+RA   White S., Whitehead S.L., Wilkinson J.E., Willey D.L., Williams H.,
+RA   Wilming L., Wray P.W., Wu Z., Coulson A., Vaudin M., Sulston J.E.,
+RA   Durbin R.M., Hubbard T., Wooster R., Dunham I., Carter N.P., McVean G.,
+RA   Ross M.T., Harrow J., Olson M.V., Beck S., Rogers J., Bentley D.R.;
+RT   "The DNA sequence and biological annotation of human chromosome 1.";
+RL   Nature 441:315-321(2006).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   VARIANTS [LARGE SCALE ANALYSIS] THR-140 AND LEU-235.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: May be involved in a signaling pathway during male germ cell
+CC       development or mature sperm function.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420; Evidence={ECO:0000250};
+CC   -!- ACTIVITY REGULATION: Activated by phosphorylation on Thr-168,
+CC       potentially by autophosphorylation. {ECO:0000250}.
+CC   -!- INTERACTION:
+CC       Q96PN8; Q6UY14-3: ADAMTSL4; NbExp=3; IntAct=EBI-3918381, EBI-10173507;
+CC       Q96PN8; Q03989: ARID5A; NbExp=3; IntAct=EBI-3918381, EBI-948603;
+CC       Q96PN8; Q9Y6H3: ATP23; NbExp=3; IntAct=EBI-3918381, EBI-12811889;
+CC       Q96PN8; Q53TS8: C2CD6; NbExp=3; IntAct=EBI-3918381, EBI-739879;
+CC       Q96PN8; Q96H22-3: CENPN; NbExp=3; IntAct=EBI-3918381, EBI-19948078;
+CC       Q96PN8; Q96D03: DDIT4L; NbExp=4; IntAct=EBI-3918381, EBI-742054;
+CC       Q96PN8; P55039: DRG2; NbExp=3; IntAct=EBI-3918381, EBI-750565;
+CC       Q96PN8; Q9BQ95: ECSIT; NbExp=3; IntAct=EBI-3918381, EBI-712452;
+CC       Q96PN8; Q5JST6: EFHC2; NbExp=6; IntAct=EBI-3918381, EBI-2349927;
+CC       Q96PN8; O00167-2: EYA2; NbExp=3; IntAct=EBI-3918381, EBI-12807776;
+CC       Q96PN8; Q08379: GOLGA2; NbExp=6; IntAct=EBI-3918381, EBI-618309;
+CC       Q96PN8; Q9UKT9: IKZF3; NbExp=8; IntAct=EBI-3918381, EBI-747204;
+CC       Q96PN8; Q0VD86: INCA1; NbExp=3; IntAct=EBI-3918381, EBI-6509505;
+CC       Q96PN8; O95678: KRT75; NbExp=3; IntAct=EBI-3918381, EBI-2949715;
+CC       Q96PN8; Q52LG2: KRTAP13-2; NbExp=3; IntAct=EBI-3918381, EBI-11953846;
+CC       Q96PN8; Q3SY46: KRTAP13-3; NbExp=3; IntAct=EBI-3918381, EBI-10241252;
+CC       Q96PN8; P52954: LBX1; NbExp=3; IntAct=EBI-3918381, EBI-20141748;
+CC       Q96PN8; Q9UBR4-2: LHX3; NbExp=3; IntAct=EBI-3918381, EBI-12039345;
+CC       Q96PN8; P25791-3: LMO2; NbExp=3; IntAct=EBI-3918381, EBI-11959475;
+CC       Q96PN8; Q8TBB1: LNX1; NbExp=7; IntAct=EBI-3918381, EBI-739832;
+CC       Q96PN8; Q9BRK4: LZTS2; NbExp=3; IntAct=EBI-3918381, EBI-741037;
+CC       Q96PN8; Q8WWY6: MBD3L1; NbExp=3; IntAct=EBI-3918381, EBI-12516603;
+CC       Q96PN8; A8MW99: MEI4; NbExp=3; IntAct=EBI-3918381, EBI-19944212;
+CC       Q96PN8; Q13084: MRPL28; NbExp=3; IntAct=EBI-3918381, EBI-723426;
+CC       Q96PN8; P35548: MSX2; NbExp=3; IntAct=EBI-3918381, EBI-6447480;
+CC       Q96PN8; P15173: MYOG; NbExp=3; IntAct=EBI-3918381, EBI-3906629;
+CC       Q96PN8; Q8TDC0: MYOZ3; NbExp=3; IntAct=EBI-3918381, EBI-5662487;
+CC       Q96PN8; Q8NI38: NFKBID; NbExp=3; IntAct=EBI-3918381, EBI-10271199;
+CC       Q96PN8; O00746: NME4; NbExp=3; IntAct=EBI-3918381, EBI-744871;
+CC       Q96PN8; Q9BYU1: PBX4; NbExp=3; IntAct=EBI-3918381, EBI-10302990;
+CC       Q96PN8; Q58EX7: PLEKHG4; NbExp=3; IntAct=EBI-3918381, EBI-949255;
+CC       Q96PN8; Q96I34: PPP1R16A; NbExp=3; IntAct=EBI-3918381, EBI-710402;
+CC       Q96PN8; Q9NQX0: PRDM6; NbExp=3; IntAct=EBI-3918381, EBI-11320284;
+CC       Q96PN8; Q9BYM8: RBCK1; NbExp=6; IntAct=EBI-3918381, EBI-2340624;
+CC       Q96PN8; Q04864: REL; NbExp=3; IntAct=EBI-3918381, EBI-307352;
+CC       Q96PN8; Q04864-2: REL; NbExp=3; IntAct=EBI-3918381, EBI-10829018;
+CC       Q96PN8; Q9BVN2: RUSC1; NbExp=5; IntAct=EBI-3918381, EBI-6257312;
+CC       Q96PN8; Q6ZSJ9: SHISA6; NbExp=3; IntAct=EBI-3918381, EBI-12037847;
+CC       Q96PN8; Q8ND83: SLAIN1; NbExp=3; IntAct=EBI-3918381, EBI-10269374;
+CC       Q96PN8; Q8NCR6: SMRP1; NbExp=3; IntAct=EBI-3918381, EBI-10269322;
+CC       Q96PN8; P51692: STAT5B; NbExp=3; IntAct=EBI-3918381, EBI-1186119;
+CC       Q96PN8; Q96PV0: SYNGAP1; NbExp=3; IntAct=EBI-3918381, EBI-2682386;
+CC       Q96PN8; P15884: TCF4; NbExp=3; IntAct=EBI-3918381, EBI-533224;
+CC       Q96PN8; Q8TDR4: TCP10L; NbExp=3; IntAct=EBI-3918381, EBI-3923210;
+CC       Q96PN8; Q96N21: TEPSIN; NbExp=3; IntAct=EBI-3918381, EBI-11139477;
+CC       Q96PN8; Q96PF1: TGM7; NbExp=3; IntAct=EBI-3918381, EBI-12029034;
+CC       Q96PN8; Q08117: TLE5; NbExp=3; IntAct=EBI-3918381, EBI-717810;
+CC       Q96PN8; Q9UPQ4-2: TRIM35; NbExp=3; IntAct=EBI-3918381, EBI-17716262;
+CC       Q96PN8; Q86XT4: TRIM50; NbExp=6; IntAct=EBI-3918381, EBI-9867283;
+CC       Q96PN8; Q9BYV2: TRIM54; NbExp=3; IntAct=EBI-3918381, EBI-2130429;
+CC       Q96PN8; Q9C026: TRIM9; NbExp=3; IntAct=EBI-3918381, EBI-720828;
+CC       Q96PN8; Q15654: TRIP6; NbExp=3; IntAct=EBI-3918381, EBI-742327;
+CC       Q96PN8; P06132: UROD; NbExp=3; IntAct=EBI-3918381, EBI-2871776;
+CC       Q96PN8; Q70EL1-9: USP54; NbExp=3; IntAct=EBI-3918381, EBI-11975223;
+CC       Q96PN8; Q99990: VGLL1; NbExp=3; IntAct=EBI-3918381, EBI-11983165;
+CC       Q96PN8; Q8N1B4: VPS52; NbExp=6; IntAct=EBI-3918381, EBI-2799833;
+CC       Q96PN8; P13994: YJU2B; NbExp=3; IntAct=EBI-3918381, EBI-716093;
+CC       Q96PN8; P24278: ZBTB25; NbExp=3; IntAct=EBI-3918381, EBI-739899;
+CC       Q96PN8; Q9H0C1: ZMYND12; NbExp=3; IntAct=EBI-3918381, EBI-12030590;
+CC   -!- PTM: Autophosphorylated. {ECO:0000250}.
+CC   -!- MISCELLANEOUS: The mouse homolog is Stk22d.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CAMK Ser/Thr
+CC       protein kinase family. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AF296450; AAK97141.1; -; mRNA.
+DR   EMBL; AY048701; AAL02128.1; -; Transcribed_RNA.
+DR   EMBL; AL109945; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471059; EAX07532.1; -; Genomic_DNA.
+DR   EMBL; BC035354; AAH35354.1; -; mRNA.
+DR   CCDS; CCDS362.1; -.
+DR   RefSeq; NP_443073.1; NM_052841.3.
+DR   AlphaFoldDB; Q96PN8; -.
+DR   SMR; Q96PN8; -.
+DR   BioGRID; 123564; 67.
+DR   IntAct; Q96PN8; 76.
+DR   STRING; 9606.ENSP00000362634; -.
+DR   BindingDB; Q96PN8; -.
+DR   ChEMBL; CHEMBL3414416; -.
+DR   iPTMnet; Q96PN8; -.
+DR   PhosphoSitePlus; Q96PN8; -.
+DR   BioMuta; TSSK3; -.
+DR   DMDM; 30316270; -.
+DR   MassIVE; Q96PN8; -.
+DR   MaxQB; Q96PN8; -.
+DR   PaxDb; Q96PN8; -.
+DR   PeptideAtlas; Q96PN8; -.
+DR   PRIDE; Q96PN8; -.
+DR   Antibodypedia; 31305; 94 antibodies from 21 providers.
+DR   DNASU; 81629; -.
+DR   Ensembl; ENST00000373534.4; ENSP00000362634.3; ENSG00000162526.7.
+DR   GeneID; 81629; -.
+DR   KEGG; hsa:81629; -.
+DR   MANE-Select; ENST00000373534.4; ENSP00000362634.3; NM_052841.4; NP_443073.1.
+DR   UCSC; uc001bvf.4; human.
+DR   CTD; 81629; -.
+DR   DisGeNET; 81629; -.
+DR   GeneCards; TSSK3; -.
+DR   HGNC; HGNC:15473; TSSK3.
+DR   HPA; ENSG00000162526; Group enriched (bone marrow, testis).
+DR   MIM; 607660; gene.
+DR   neXtProt; NX_Q96PN8; -.
+DR   OpenTargets; ENSG00000162526; -.
+DR   PharmGKB; PA37964; -.
+DR   VEuPathDB; HostDB:ENSG00000162526; -.
+DR   eggNOG; KOG0583; Eukaryota.
+DR   GeneTree; ENSGT00940000161490; -.
+DR   HOGENOM; CLU_000288_63_0_1; -.
+DR   InParanoid; Q96PN8; -.
+DR   OMA; IRYCHGF; -.
+DR   OrthoDB; 947464at2759; -.
+DR   PhylomeDB; Q96PN8; -.
+DR   TreeFam; TF352374; -.
+DR   PathwayCommons; Q96PN8; -.
+DR   SignaLink; Q96PN8; -.
+DR   SIGNOR; Q96PN8; -.
+DR   BioGRID-ORCS; 81629; 40 hits in 1112 CRISPR screens.
+DR   ChiTaRS; TSSK3; human.
+DR   GenomeRNAi; 81629; -.
+DR   Pharos; Q96PN8; Tchem.
+DR   PRO; PR:Q96PN8; -.
+DR   Proteomes; UP000005640; Chromosome 1.
+DR   RNAct; Q96PN8; protein.
+DR   Bgee; ENSG00000162526; Expressed in sperm and 102 other tissues.
+DR   ExpressionAtlas; Q96PN8; baseline and differential.
+DR   Genevisible; Q96PN8; HS.
+DR   GO; GO:0005524; F:ATP binding; ISS:UniProtKB.
+DR   GO; GO:0000287; F:magnesium ion binding; ISS:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; ISS:UniProtKB.
+DR   GO; GO:0030154; P:cell differentiation; IEA:UniProtKB-KW.
+DR   GO; GO:0035556; P:intracellular signal transduction; IBA:GO_Central.
+DR   GO; GO:0006468; P:protein phosphorylation; ISS:UniProtKB.
+DR   GO; GO:0007283; P:spermatogenesis; ISS:UniProtKB.
+DR   CDD; cd14163; STKc_TSSK3-like; 1.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR042709; TSSK3_STKc.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+PE   1: Evidence at protein level;
+KW   ATP-binding; Developmental protein; Differentiation; Kinase; Magnesium;
+KW   Metal-binding; Nucleotide-binding; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Spermatogenesis; Transferase.
+FT   CHAIN           1..268
+FT                   /note="Testis-specific serine/threonine-protein kinase 3"
+FT                   /id="PRO_0000086770"
+FT   DOMAIN          10..265
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   ACT_SITE        134
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         16..24
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         39
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   VARIANT         71
+FT                   /note="I -> V (in dbSNP:rs35508255)"
+FT                   /id="VAR_051678"
+FT   VARIANT         140
+FT                   /note="A -> T (in dbSNP:rs55786268)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041245"
+FT   VARIANT         235
+FT                   /note="S -> L (in dbSNP:rs35457991)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041246"
+SQ   SEQUENCE   268 AA;  30102 MW;  EF91F91DD216F671 CRC64;
+     MEDFLLSNGY QLGKTIGEGT YSKVKEAFSK KHQRKVAIKV IDKMGGPEEF IQRFLPRELQ
+     IVRTLDHKNI IQVYEMLESA DGKICLVMEL AEGGDVFDCV LNGGPLPESR AKALFRQMVE
+     AIRYCHGCGV AHRDLKCENA LLQGFNLKLT DFGFAKVLPK SHRELSQTFC GSTAYAAPEV
+     LQGIPHDSKK GDVWSMGVVL YVMLCASLPF DDTDIPKMLW QQQKGVSFPT HLSISADCQD
+     LLKRLLEPDM ILRPSIEEVS WHPWLAST
+//

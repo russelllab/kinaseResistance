@@ -1,0 +1,1038 @@
+ID   NTRK2_HUMAN             Reviewed;         822 AA.
+AC   Q16620; B1ANZ4; B4DFV9; Q16675; Q59GJ1; Q8WXJ5; Q8WXJ6; Q8WXJ7;
+DT   01-NOV-1997, integrated into UniProtKB/Swiss-Prot.
+DT   01-NOV-1996, sequence version 1.
+DT   12-OCT-2022, entry version 233.
+DE   RecName: Full=BDNF/NT-3 growth factors receptor;
+DE            EC=2.7.10.1 {ECO:0000269|PubMed:15494731};
+DE   AltName: Full=GP145-TrkB;
+DE            Short=Trk-B;
+DE   AltName: Full=Neurotrophic tyrosine kinase receptor type 2;
+DE   AltName: Full=TrkB tyrosine kinase;
+DE   AltName: Full=Tropomyosin-related kinase B;
+DE   Flags: Precursor;
+GN   Name=NTRK2; Synonyms=TRKB;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM TRKB).
+RC   TISSUE=Hippocampus;
+RX   PubMed=7789988; DOI=10.1016/0888-7543(95)80055-q;
+RA   Nakagawara A., Liu X.-G., Ikegaki N., White P.S., Yamashiro D.J.,
+RA   Nycum L.M., Biegel J.A., Brodeur G.M.;
+RT   "Cloning and chromosomal localization of the human TRK-B tyrosine kinase
+RT   receptor gene (NTRK2).";
+RL   Genomics 25:538-546(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS TRKB AND TRKB-T1).
+RC   TISSUE=Brain;
+RX   PubMed=7823156; DOI=10.1523/jneurosci.15-01-00477.1995;
+RA   Shelton D.L., Sutherland J., Gripp J., Camerato T., Armanini M.P.,
+RA   Phillips H.S., Carroll K., Spencer S.D., Levinson A.D.;
+RT   "Human trks: molecular cloning, tissue distribution, and expression of
+RT   extracellular domain immunoadhesins.";
+RL   J. Neurosci. 15:477-491(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM TRKB-T1), TISSUE SPECIFICITY, AND
+RP   DEVELOPMENTAL STAGE.
+RC   TISSUE=Hippocampus;
+RX   PubMed=7936202; DOI=10.1016/0306-4522(94)90507-x;
+RA   Allen S.J., Dawbarn D., Eckford S.D., Wilcock G.K., Ashcroft M.,
+RA   Colebrook S.M., Feeney R., Macgowan S.H.;
+RT   "Cloning of a non-catalytic form of human trkB and distribution of
+RT   messenger RNA for trkB in human brain.";
+RL   Neuroscience 60:825-834(1994).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS TRKB; TRKB-T1; TRKB-T-SHC; 4 AND 5),
+RP   ALTERNATIVE SPLICING, TISSUE SPECIFICITY, AND SUBCELLULAR LOCATION.
+RX   PubMed=11798182; DOI=10.1006/bbrc.2001.6301;
+RA   Stoilov P., Castren E., Stamm S.;
+RT   "Analysis of the human TrkB gene genomic organization reveals novel TrkB
+RT   isoforms, unusual gene length, and splicing mechanism.";
+RL   Biochem. Biophys. Res. Commun. 290:1054-1065(2002).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM TRKB-T1), AND VARIANT ARG-309.
+RA   Steinbeck J.A., Thomsen S., Wessig J., Leypoldt F., Lewerenz J.,
+RA   Methner A.;
+RT   "Full length truncated TrkB sequence identified in a screen for genes
+RT   regulated by ischemic preconditioning.";
+RL   Submitted (MAY-2002) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM TRKB-N-T1).
+RC   TISSUE=Amygdala;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM TRKB-T-TK).
+RC   TISSUE=Brain;
+RA   Totoki Y., Toyoda A., Takeda T., Sakaki Y., Tanaka A., Yokoyama S.,
+RA   Ohara O., Nagase T., Kikuno R.F.;
+RT   "Homo sapiens protein coding cDNA.";
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15164053; DOI=10.1038/nature02465;
+RA   Humphray S.J., Oliver K., Hunt A.R., Plumb R.W., Loveland J.E., Howe K.L.,
+RA   Andrews T.D., Searle S., Hunt S.E., Scott C.E., Jones M.C., Ainscough R.,
+RA   Almeida J.P., Ambrose K.D., Ashwell R.I.S., Babbage A.K., Babbage S.,
+RA   Bagguley C.L., Bailey J., Banerjee R., Barker D.J., Barlow K.F., Bates K.,
+RA   Beasley H., Beasley O., Bird C.P., Bray-Allen S., Brown A.J., Brown J.Y.,
+RA   Burford D., Burrill W., Burton J., Carder C., Carter N.P., Chapman J.C.,
+RA   Chen Y., Clarke G., Clark S.Y., Clee C.M., Clegg S., Collier R.E.,
+RA   Corby N., Crosier M., Cummings A.T., Davies J., Dhami P., Dunn M.,
+RA   Dutta I., Dyer L.W., Earthrowl M.E., Faulkner L., Fleming C.J.,
+RA   Frankish A., Frankland J.A., French L., Fricker D.G., Garner P.,
+RA   Garnett J., Ghori J., Gilbert J.G.R., Glison C., Grafham D.V., Gribble S.,
+RA   Griffiths C., Griffiths-Jones S., Grocock R., Guy J., Hall R.E.,
+RA   Hammond S., Harley J.L., Harrison E.S.I., Hart E.A., Heath P.D.,
+RA   Henderson C.D., Hopkins B.L., Howard P.J., Howden P.J., Huckle E.,
+RA   Johnson C., Johnson D., Joy A.A., Kay M., Keenan S., Kershaw J.K.,
+RA   Kimberley A.M., King A., Knights A., Laird G.K., Langford C., Lawlor S.,
+RA   Leongamornlert D.A., Leversha M., Lloyd C., Lloyd D.M., Lovell J.,
+RA   Martin S., Mashreghi-Mohammadi M., Matthews L., McLaren S., McLay K.E.,
+RA   McMurray A., Milne S., Nickerson T., Nisbett J., Nordsiek G., Pearce A.V.,
+RA   Peck A.I., Porter K.M., Pandian R., Pelan S., Phillimore B., Povey S.,
+RA   Ramsey Y., Rand V., Scharfe M., Sehra H.K., Shownkeen R., Sims S.K.,
+RA   Skuce C.D., Smith M., Steward C.A., Swarbreck D., Sycamore N., Tester J.,
+RA   Thorpe A., Tracey A., Tromans A., Thomas D.W., Wall M., Wallis J.M.,
+RA   West A.P., Whitehead S.L., Willey D.L., Williams S.A., Wilming L.,
+RA   Wray P.W., Young L., Ashurst J.L., Coulson A., Blocker H., Durbin R.M.,
+RA   Sulston J.E., Hubbard T., Jackson M.J., Bentley D.R., Beck S., Rogers J.,
+RA   Dunham I.;
+RT   "DNA sequence and analysis of human chromosome 9.";
+RL   Nature 429:369-374(2004).
+RN   [9]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [10]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM TRKB-T1).
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [11]
+RP   FUNCTION, DISULFIDE BONDS, AND GLYCOSYLATION AT ASN-67; ASN-95; ASN-121;
+RP   ASN-178; ASN-205; ASN-241; ASN-254; ASN-280; ASN-338 AND ASN-412.
+RX   PubMed=7574684; DOI=10.1006/abbi.1995.1460;
+RA   Haniu M., Talvenheimo J., Le J., Katta V., Welcher A., Rohde M.F.;
+RT   "Extracellular domain of neurotrophin receptor trkB: disulfide structure,
+RT   N-glycosylation sites, and ligand binding.";
+RL   Arch. Biochem. Biophys. 322:256-264(1995).
+RN   [12]
+RP   INTERACTION WITH FRS2.
+RX   PubMed=10092678; DOI=10.1074/jbc.274.14.9861;
+RA   Meakin S.O., MacDonald J.I.S., Gryz E.A., Kubu C.J., Verdi J.M.;
+RT   "The signaling adapter FRS-2 competes with Shc for binding to the nerve
+RT   growth factor receptor TrkA. A model for discriminating proliferation and
+RT   differentiation.";
+RL   J. Biol. Chem. 274:9861-9870(1999).
+RN   [13]
+RP   GLYCOSYLATION [LARGE SCALE ANALYSIS] AT ASN-67; ASN-121 AND ASN-254.
+RC   TISSUE=Plasma;
+RX   PubMed=16335952; DOI=10.1021/pr0502065;
+RA   Liu T., Qian W.-J., Gritsenko M.A., Camp D.G. II, Monroe M.E., Moore R.J.,
+RA   Smith R.D.;
+RT   "Human plasma N-glycoproteome analysis by immunoaffinity subtraction,
+RT   hydrazide chemistry, and mass spectrometry.";
+RL   J. Proteome Res. 4:2070-2080(2005).
+RN   [14]
+RP   ALTERNATIVE SPLICING (ISOFORMS TRKB-T-TK AND TRKB-N-T1).
+RX   PubMed=20193039; DOI=10.1111/j.1471-4159.2010.06662.x;
+RA   Luberg K., Wong J., Weickert C.S., Timmusk T.;
+RT   "Human TrkB gene: novel alternative transcripts, protein isoforms and
+RT   expression pattern in the prefrontal cerebral cortex during postnatal
+RT   development.";
+RL   J. Neurochem. 113:952-964(2010).
+RN   [15] {ECO:0007744|PDB:1WWB}
+RP   X-RAY CRYSTALLOGRAPHY (2.10 ANGSTROMS) OF 283-385, AND DISULFIDE BONDS.
+RX   PubMed=10388563; DOI=10.1006/jmbi.1999.2816;
+RA   Ultsch M.H., Wiesmann C., Simmons L.C., Henrich J., Yang M., Reilly D.,
+RA   Bass S.H., de Vos A.M.;
+RT   "Crystal structures of the neurotrophin-binding domain of TrkA, TrkB and
+RT   TrkC.";
+RL   J. Mol. Biol. 290:149-159(1999).
+RN   [16] {ECO:0007744|PDB:1HCF}
+RP   X-RAY CRYSTALLOGRAPHY (2.70 ANGSTROMS) OF 284-383 IN COMPLEX WITH NTF4, AND
+RP   DISULFIDE BONDS.
+RX   PubMed=11738045; DOI=10.1016/s0969-2126(01)00681-5;
+RA   Banfield M.J., Naylor R.L., Robertson A.G., Allen S.J., Dawbarn D.,
+RA   Brady R.L.;
+RT   "Specificity in Trk receptor:neurotrophin interactions: the crystal
+RT   structure of TrkB-d5 in complex with neurotrophin-4/5.";
+RL   Structure 9:1191-1199(2001).
+RN   [17]
+RP   VARIANT OBHD CYS-706, CHARACTERIZATION OF VARIANT OBHD CYS-706, FUNCTION AS
+RP   A BDNF-ACTIVATED RECEPTOR, CATALYTIC ACTIVITY, PHOSPHORYLATION, AND
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=15494731; DOI=10.1038/nn1336;
+RA   Yeo G.S., Connie Hung C.C., Rochford J., Keogh J., Gray J.,
+RA   Sivaramakrishnan S., O'Rahilly S., Farooqi I.S.;
+RT   "A de novo mutation affecting human TrkB associated with severe obesity and
+RT   developmental delay.";
+RL   Nat. Neurosci. 7:1187-1189(2004).
+RN   [18]
+RP   VARIANT [LARGE SCALE ANALYSIS] PHE-138.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [19]
+RP   VARIANTS ILE-697; GLY-699 AND CYS-718.
+RX   PubMed=18293376; DOI=10.1002/humu.20707;
+RA   Marchetti A., Felicioni L., Pelosi G., Del Grammastro M., Fumagalli C.,
+RA   Sciarrotta M., Malatesta S., Chella A., Barassi F., Mucilli F.,
+RA   Camplese P., D'Antuono T., Sacco R., Buttitta F.;
+RT   "Frequent mutations in the neurotrophic tyrosine receptor kinase gene
+RT   family in large cell neuroendocrine carcinoma of the lung.";
+RL   Hum. Mutat. 29:609-616(2008).
+RN   [20]
+RP   VARIANT OBHD 444-GLY--GLY-822 DEL.
+RX   PubMed=27884935; DOI=10.1136/jmedgenet-2016-104215;
+RA   Miller K.A., Twigg S.R., McGowan S.J., Phipps J.M., Fenwick A.L.,
+RA   Johnson D., Wall S.A., Noons P., Rees K.E., Tidey E.A., Craft J.,
+RA   Taylor J., Taylor J.C., Goos J.A., Swagemakers S.M., Mathijssen I.M.,
+RA   van der Spek P.J., Lord H., Lester T., Abid N., Cilliers D., Hurst J.A.,
+RA   Morton J.E., Sweeney E., Weber A., Wilson L.C., Wilkie A.O.;
+RT   "Diagnostic value of exome and whole genome sequencing in
+RT   craniosynostosis.";
+RL   J. Med. Genet. 54:260-268(2017).
+RN   [21]
+RP   INVOLVEMENT IN DEE58, VARIANT DEE58 CYS-434, AND VARIANT OBHD ILE-704.
+RX   PubMed=29100083; DOI=10.1016/j.ajhg.2017.09.008;
+RG   Deciphering Developmental Disorders Study;
+RA   Hamdan F.F., Myers C.T., Cossette P., Lemay P., Spiegelman D.,
+RA   Laporte A.D., Nassif C., Diallo O., Monlong J., Cadieux-Dion M.,
+RA   Dobrzeniecka S., Meloche C., Retterer K., Cho M.T., Rosenfeld J.A., Bi W.,
+RA   Massicotte C., Miguet M., Brunga L., Regan B.M., Mo K., Tam C.,
+RA   Schneider A., Hollingsworth G., FitzPatrick D.R., Donaldson A., Canham N.,
+RA   Blair E., Kerr B., Fry A.E., Thomas R.H., Shelagh J., Hurst J.A.,
+RA   Brittain H., Blyth M., Lebel R.R., Gerkes E.H., Davis-Keppen L., Stein Q.,
+RA   Chung W.K., Dorison S.J., Benke P.J., Fassi E., Corsten-Janssen N.,
+RA   Kamsteeg E.J., Mau-Them F.T., Bruel A.L., Verloes A., Ounap K.,
+RA   Wojcik M.H., Albert D.V.F., Venkateswaran S., Ware T., Jones D., Liu Y.C.,
+RA   Mohammad S.S., Bizargity P., Bacino C.A., Leuzzi V., Martinelli S.,
+RA   Dallapiccola B., Tartaglia M., Blumkin L., Wierenga K.J., Purcarin G.,
+RA   O'Byrne J.J., Stockler S., Lehman A., Keren B., Nougues M.C., Mignot C.,
+RA   Auvin S., Nava C., Hiatt S.M., Bebin M., Shao Y., Scaglia F., Lalani S.R.,
+RA   Frye R.E., Jarjour I.T., Jacques S., Boucher R.M., Riou E., Srour M.,
+RA   Carmant L., Lortie A., Major P., Diadori P., Dubeau F., D'Anjou G.,
+RA   Bourque G., Berkovic S.F., Sadleir L.G., Campeau P.M., Kibar Z.,
+RA   Lafreniere R.G., Girard S.L., Mercimek-Mahmutoglu S., Boelman C.,
+RA   Rouleau G.A., Scheffer I.E., Mefford H.C., Andrade D.M., Rossignol E.,
+RA   Minassian B.A., Michaud J.L.;
+RT   "High rate of recurrent de novo mutations in developmental and epileptic
+RT   encephalopathies.";
+RL   Am. J. Hum. Genet. 101:664-685(2017).
+CC   -!- FUNCTION: Receptor tyrosine kinase involved in the development and the
+CC       maturation of the central and the peripheral nervous systems through
+CC       regulation of neuron survival, proliferation, migration,
+CC       differentiation, and synapse formation and plasticity (By similarity).
+CC       Receptor for BDNF/brain-derived neurotrophic factor and
+CC       NTF4/neurotrophin-4. Alternatively can also bind NTF3/neurotrophin-3
+CC       which is less efficient in activating the receptor but regulates neuron
+CC       survival through NTRK2 (PubMed:7574684, PubMed:15494731). Upon ligand-
+CC       binding, undergoes homodimerization, autophosphorylation and activation
+CC       (PubMed:15494731). Recruits, phosphorylates and/or activates several
+CC       downstream effectors including SHC1, FRS2, SH2B1, SH2B2 and PLCG1 that
+CC       regulate distinct overlapping signaling cascades. Through SHC1, FRS2,
+CC       SH2B1, SH2B2 activates the GRB2-Ras-MAPK cascade that regulates for
+CC       instance neuronal differentiation including neurite outgrowth. Through
+CC       the same effectors controls the Ras-PI3 kinase-AKT1 signaling cascade
+CC       that mainly regulates growth and survival. Through PLCG1 and the
+CC       downstream protein kinase C-regulated pathways controls synaptic
+CC       plasticity. Thereby, plays a role in learning and memory by regulating
+CC       both short term synaptic function and long-term potentiation. PLCG1
+CC       also leads to NF-Kappa-B activation and the transcription of genes
+CC       involved in cell survival. Hence, it is able to suppress anoikis, the
+CC       apoptosis resulting from loss of cell-matrix interactions. May also
+CC       play a role in neutrophin-dependent calcium signaling in glial cells
+CC       and mediate communication between neurons and glia.
+CC       {ECO:0000250|UniProtKB:P15209, ECO:0000269|PubMed:15494731,
+CC       ECO:0000269|PubMed:7574684}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.10.1;
+CC         Evidence={ECO:0000255|PROSITE-ProRule:PRU10028,
+CC         ECO:0000269|PubMed:15494731};
+CC   -!- ACTIVITY REGULATION: The neuronal activity and the influx of calcium
+CC       positively regulate the kinase activity and the internalization of the
+CC       receptor which are both important for active signaling. Regulated by
+CC       NGFR that may control the internalization of the receptor. NGFR may
+CC       also stimulate the activation by BDNF compared to NTF3 and NTF4. SH2D1A
+CC       inhibits the autophosphorylation of the receptor, and alters the
+CC       recruitment and activation of downstream effectors and signaling
+CC       cascades. The formation of active receptors dimers able to fully
+CC       transduce the ligand-mediated signal, may be negatively regulated by
+CC       the formation of inactive heterodimers with the non-catalytic isoforms
+CC       (By similarity). {ECO:0000250|UniProtKB:P15209,
+CC       ECO:0000250|UniProtKB:Q63604}.
+CC   -!- SUBUNIT: Exists in a dynamic equilibrium between monomeric (low
+CC       affinity) and dimeric (high affinity) structures. Interacts
+CC       (phosphorylated upon activation by BDNF) with SHC1; mediates SHC1
+CC       phosphorylation and activation. Interacts (phosphorylated upon
+CC       activation by BDNF) with PLCG1 and/or PLCG2; mediates PLCG1
+CC       phosphorylation and activation. Interacts with SH2B1 and SH2B2.
+CC       Interacts with NGFR; may regulate the ligand specificity of the
+CC       receptor (By similarity). Interacts with SORCS2; this interaction is
+CC       important for normal targeting to post-synaptic densities in response
+CC       to high-frequency stimulation (By similarity). Interacts
+CC       (phosphorylated upon ligand-binding) with SH2D1A; regulates NTRK2.
+CC       Interacts with SQSTM1 and KIDINS220 (By similarity). Interacts
+CC       (phosphorylated upon ligand-binding) with FRS2; activates the MAPK
+CC       signaling pathway (PubMed:10092678). Interacts with APPL1 (By
+CC       similarity). Interacts with MAPK8IP3/JIP3 and KLC1; interaction with
+CC       KLC1 is mediated by MAPK8IP3/JIP3 (By similarity). Interacts with
+CC       SORL1; this interaction facilitates NTRK2 trafficking between synaptic
+CC       plasma membranes, postsynaptic densities and cell soma, hence
+CC       positively regulates BDNF signaling (By similarity).
+CC       {ECO:0000250|UniProtKB:P04629, ECO:0000250|UniProtKB:P15209,
+CC       ECO:0000250|UniProtKB:Q63604, ECO:0000269|PubMed:10092678,
+CC       ECO:0000269|PubMed:11738045}.
+CC   -!- INTERACTION:
+CC       Q16620; Q16288: NTRK3; NbExp=3; IntAct=EBI-3904881, EBI-3936704;
+CC       Q16620; Q03114: Cdk5; Xeno; NbExp=3; IntAct=EBI-3904881, EBI-2008531;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:15494731};
+CC       Single-pass type I membrane protein {ECO:0000305}. Endosome membrane
+CC       {ECO:0000250|UniProtKB:P15209}; Single-pass type I membrane protein
+CC       {ECO:0000250|UniProtKB:P15209}. Early endosome membrane
+CC       {ECO:0000250|UniProtKB:P15209}. Cell projection, axon
+CC       {ECO:0000250|UniProtKB:Q63604}. Cell projection, dendrite
+CC       {ECO:0000250|UniProtKB:Q63604}. Cytoplasm, perinuclear region
+CC       {ECO:0000250|UniProtKB:Q63604}. Postsynaptic density
+CC       {ECO:0000250|UniProtKB:P15209}. Note=Internalized to endosomes upon
+CC       ligand-binding. {ECO:0000250|UniProtKB:P15209}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=7;
+CC         Comment=Additional isoforms seem to exist.;
+CC       Name=TrkB; Synonyms=gp145-TrkB;
+CC         IsoId=Q16620-1; Sequence=Displayed;
+CC       Name=TrkB-T1;
+CC         IsoId=Q16620-2; Sequence=VSP_002901, VSP_002902;
+CC       Name=TrkB-T-Shc;
+CC         IsoId=Q16620-3; Sequence=VSP_002903, VSP_002904;
+CC       Name=4;
+CC         IsoId=Q16620-4; Sequence=VSP_041942;
+CC       Name=5;
+CC         IsoId=Q16620-5; Sequence=VSP_041942, VSP_002903, VSP_002904;
+CC       Name=TrkB-T-TK;
+CC         IsoId=Q16620-6; Sequence=VSP_042178, VSP_042179;
+CC       Name=TrkB-N-T1;
+CC         IsoId=Q16620-7; Sequence=VSP_042177, VSP_002901, VSP_002902;
+CC   -!- TISSUE SPECIFICITY: Isoform TrkB is expressed in the central and
+CC       peripheral nervous system. In the central nervous system (CNS),
+CC       expression is observed in the cerebral cortex, hippocampus, thalamus,
+CC       choroid plexus, granular layer of the cerebellum, brain stem, and
+CC       spinal cord. In the peripheral nervous system, it is expressed in many
+CC       cranial ganglia, the ophthalmic nerve, the vestibular system, multiple
+CC       facial structures, the submaxillary glands, and dorsal root ganglia.
+CC       Isoform TrkB-T1 is mainly expressed in the brain but also detected in
+CC       other tissues including pancreas, kidney and heart. Isoform TrkB-T-Shc
+CC       is predominantly expressed in the brain. {ECO:0000269|PubMed:11798182,
+CC       ECO:0000269|PubMed:7936202}.
+CC   -!- DEVELOPMENTAL STAGE: Widely expressed in fetal brain.
+CC       {ECO:0000269|PubMed:7936202}.
+CC   -!- PTM: Phosphorylated. Undergoes ligand-mediated autophosphorylation that
+CC       is required for interaction with SHC1 and PLCG1 and other downstream
+CC       effectors. Isoform TrkB-T-Shc is not phosphorylated.
+CC       {ECO:0000269|PubMed:15494731}.
+CC   -!- PTM: Ubiquitinated. Undergoes polyubiquitination upon activation;
+CC       regulated by NGFR. Ubiquitination regulates the internalization of the
+CC       receptor (By similarity). {ECO:0000250}.
+CC   -!- DISEASE: Developmental and epileptic encephalopathy 58 (DEE58)
+CC       [MIM:617830]: A form of epileptic encephalopathy, a heterogeneous group
+CC       of severe early-onset epilepsies characterized by refractory seizures,
+CC       neurodevelopmental impairment, and poor prognosis. Development is
+CC       normal prior to seizure onset, after which cognitive and motor delays
+CC       become apparent. DEE58 is an autosomal dominant condition characterized
+CC       by onset of refractory seizures in the first days or months of life.
+CC       {ECO:0000269|PubMed:29100083}. Note=The disease may be caused by
+CC       variants affecting the gene represented in this entry.
+CC   -!- DISEASE: Obesity, hyperphagia, and developmental delay (OBHD)
+CC       [MIM:613886]: A disorder characterized by early-onset obesity,
+CC       hyperphagia, and severe developmental delay in motor function, speech,
+CC       and language. {ECO:0000269|PubMed:15494731,
+CC       ECO:0000269|PubMed:27884935, ECO:0000269|PubMed:29100083}. Note=The
+CC       disease is caused by variants affecting the gene represented in this
+CC       entry.
+CC   -!- MISCELLANEOUS: Trk also stands for tropomyosin-related kinase since the
+CC       first Trk was isolated as an oncogenic protein which was the result of
+CC       a fusion between the tropomyosin gene TPM3 and NTRK1.
+CC   -!- MISCELLANEOUS: [Isoform TrkB-T1]: Non-catalytic isoform. {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Tyr protein
+CC       kinase family. Insulin receptor subfamily. {ECO:0000255|PROSITE-
+CC       ProRule:PRU00159}.
+CC   -!- WEB RESOURCE: Name=Atlas of Genetics and Cytogenetics in Oncology and
+CC       Haematology;
+CC       URL="http://atlasgeneticsoncology.org/Genes/NTRK2ID41589ch9q21.html";
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; U12140; AAC51371.1; -; mRNA.
+DR   EMBL; S76473; AAB33109.1; -; mRNA.
+DR   EMBL; S76474; AAB33110.1; -; mRNA.
+DR   EMBL; X75958; CAA53571.1; -; mRNA.
+DR   EMBL; AF410899; AAL67965.1; -; mRNA.
+DR   EMBL; AF410900; AAL67966.1; -; mRNA.
+DR   EMBL; AF410901; AAL67967.1; -; mRNA.
+DR   EMBL; AF508964; AAM77876.1; -; mRNA.
+DR   EMBL; AB209118; BAD92355.1; -; mRNA.
+DR   EMBL; AK294285; BAG57570.1; -; mRNA.
+DR   EMBL; AL390777; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL445532; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL596132; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471089; EAW62688.1; -; Genomic_DNA.
+DR   EMBL; BC031835; AAH31835.1; -; mRNA.
+DR   CCDS; CCDS35050.1; -. [Q16620-1]
+DR   CCDS; CCDS35051.1; -. [Q16620-5]
+DR   CCDS; CCDS35052.1; -. [Q16620-3]
+DR   CCDS; CCDS35053.1; -. [Q16620-2]
+DR   CCDS; CCDS6671.1; -. [Q16620-4]
+DR   PIR; A56853; A56853.
+DR   PIR; I73631; I73631.
+DR   RefSeq; NP_001007098.1; NM_001007097.2. [Q16620-2]
+DR   RefSeq; NP_001018074.1; NM_001018064.2. [Q16620-1]
+DR   RefSeq; NP_001018075.1; NM_001018065.2. [Q16620-5]
+DR   RefSeq; NP_001018076.1; NM_001018066.2. [Q16620-3]
+DR   RefSeq; NP_006171.2; NM_006180.4. [Q16620-4]
+DR   RefSeq; XP_005252058.1; XM_005252001.2. [Q16620-4]
+DR   RefSeq; XP_005252060.1; XM_005252003.2. [Q16620-4]
+DR   RefSeq; XP_005252061.1; XM_005252004.2. [Q16620-4]
+DR   RefSeq; XP_005252063.1; XM_005252006.3. [Q16620-5]
+DR   RefSeq; XP_005252064.1; XM_005252007.3.
+DR   RefSeq; XP_011517020.1; XM_011518718.2. [Q16620-1]
+DR   RefSeq; XP_011517022.1; XM_011518720.2. [Q16620-3]
+DR   RefSeq; XP_016870240.1; XM_017014751.1. [Q16620-4]
+DR   RefSeq; XP_016870241.1; XM_017014752.1. [Q16620-1]
+DR   RefSeq; XP_016870242.1; XM_017014753.1. [Q16620-1]
+DR   RefSeq; XP_016870243.1; XM_017014754.1.
+DR   RefSeq; XP_016870244.1; XM_017014755.1. [Q16620-5]
+DR   RefSeq; XP_016870245.1; XM_017014756.1.
+DR   RefSeq; XP_016870246.1; XM_017014757.1.
+DR   RefSeq; XP_016870247.1; XM_017014758.1.
+DR   RefSeq; XP_016870248.1; XM_017014759.1.
+DR   RefSeq; XP_016870249.1; XM_017014760.1. [Q16620-2]
+DR   RefSeq; XP_016870250.1; XM_017014761.1.
+DR   PDB; 1HCF; X-ray; 2.70 A; X/Y=286-383.
+DR   PDB; 1WWB; X-ray; 2.10 A; X=283-385.
+DR   PDB; 2MFQ; NMR; -; B=497-519.
+DR   PDB; 4ASZ; X-ray; 1.70 A; A=527-822.
+DR   PDB; 4AT3; X-ray; 1.77 A; A=527-822.
+DR   PDB; 4AT4; X-ray; 2.36 A; A=527-822.
+DR   PDB; 4AT5; X-ray; 1.71 A; A=527-822.
+DR   PDB; 5MO9; X-ray; 2.59 A; X=278-426.
+DR   PDBsum; 1HCF; -.
+DR   PDBsum; 1WWB; -.
+DR   PDBsum; 2MFQ; -.
+DR   PDBsum; 4ASZ; -.
+DR   PDBsum; 4AT3; -.
+DR   PDBsum; 4AT4; -.
+DR   PDBsum; 4AT5; -.
+DR   PDBsum; 5MO9; -.
+DR   AlphaFoldDB; Q16620; -.
+DR   SMR; Q16620; -.
+DR   BioGRID; 110970; 37.
+DR   DIP; DIP-5720N; -.
+DR   IntAct; Q16620; 105.
+DR   STRING; 9606.ENSP00000277120; -.
+DR   BindingDB; Q16620; -.
+DR   ChEMBL; CHEMBL4898; -.
+DR   DrugBank; DB00321; Amitriptyline.
+DR   DrugBank; DB11986; Entrectinib.
+DR   DrugBank; DB11823; Esketamine.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugBank; DB14723; Larotrectinib.
+DR   DrugCentral; Q16620; -.
+DR   GuidetoPHARMACOLOGY; 1818; -.
+DR   TCDB; 8.A.23.1.38; the basigin (basigin) family.
+DR   GlyConnect; 1029; 12 N-Linked glycans (7 sites).
+DR   GlyGen; Q16620; 13 sites, 1 Asn glycan (1 site), 12 N-linked glycans (7 sites), 1 O-linked glycan (1 site).
+DR   iPTMnet; Q16620; -.
+DR   PhosphoSitePlus; Q16620; -.
+DR   BioMuta; NTRK2; -.
+DR   DMDM; 2497560; -.
+DR   EPD; Q16620; -.
+DR   jPOST; Q16620; -.
+DR   MassIVE; Q16620; -.
+DR   PaxDb; Q16620; -.
+DR   PeptideAtlas; Q16620; -.
+DR   PRIDE; Q16620; -.
+DR   ProteomicsDB; 60955; -. [Q16620-1]
+DR   ProteomicsDB; 60956; -. [Q16620-2]
+DR   ProteomicsDB; 60957; -. [Q16620-3]
+DR   ProteomicsDB; 60958; -. [Q16620-4]
+DR   ProteomicsDB; 60959; -. [Q16620-5]
+DR   ProteomicsDB; 60960; -. [Q16620-6]
+DR   ProteomicsDB; 60961; -. [Q16620-7]
+DR   ABCD; Q16620; 146 sequenced antibodies.
+DR   Antibodypedia; 2081; 1457 antibodies from 47 providers.
+DR   DNASU; 4915; -.
+DR   Ensembl; ENST00000277120.8; ENSP00000277120.3; ENSG00000148053.18. [Q16620-4]
+DR   Ensembl; ENST00000304053.11; ENSP00000306167.7; ENSG00000148053.18. [Q16620-3]
+DR   Ensembl; ENST00000359847.4; ENSP00000352906.3; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000376208.6; ENSP00000365381.1; ENSG00000148053.18. [Q16620-3]
+DR   Ensembl; ENST00000376213.6; ENSP00000365386.1; ENSG00000148053.18. [Q16620-1]
+DR   Ensembl; ENST00000395882.6; ENSP00000379221.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000685720.1; ENSP00000509031.1; ENSG00000148053.18. [Q16620-5]
+DR   Ensembl; ENST00000686259.1; ENSP00000509743.1; ENSG00000148053.18. [Q16620-1]
+DR   Ensembl; ENST00000686322.1; ENSP00000510032.1; ENSG00000148053.18. [Q16620-7]
+DR   Ensembl; ENST00000686324.1; ENSP00000510134.1; ENSG00000148053.18. [Q16620-4]
+DR   Ensembl; ENST00000686443.1; ENSP00000509093.1; ENSG00000148053.18. [Q16620-3]
+DR   Ensembl; ENST00000686496.1; ENSP00000510060.1; ENSG00000148053.18. [Q16620-1]
+DR   Ensembl; ENST00000687148.1; ENSP00000510717.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000687596.1; ENSP00000509999.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000687636.1; ENSP00000508829.1; ENSG00000148053.18. [Q16620-5]
+DR   Ensembl; ENST00000688013.1; ENSP00000508443.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000689685.1; ENSP00000509169.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000689815.1; ENSP00000510451.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000690281.1; ENSP00000510757.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000691415.1; ENSP00000509058.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000691788.1; ENSP00000509401.1; ENSG00000148053.18. [Q16620-1]
+DR   Ensembl; ENST00000692181.1; ENSP00000510619.1; ENSG00000148053.18. [Q16620-1]
+DR   Ensembl; ENST00000692389.1; ENSP00000508497.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000692506.1; ENSP00000508622.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000692762.1; ENSP00000510071.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000693109.1; ENSP00000509456.1; ENSG00000148053.18. [Q16620-2]
+DR   Ensembl; ENST00000693539.1; ENSP00000510640.1; ENSG00000148053.18. [Q16620-5]
+DR   GeneID; 4915; -.
+DR   KEGG; hsa:4915; -.
+DR   MANE-Select; ENST00000277120.8; ENSP00000277120.3; NM_006180.6; NP_006171.2. [Q16620-4]
+DR   UCSC; uc004anz.1; human. [Q16620-1]
+DR   CTD; 4915; -.
+DR   DisGeNET; 4915; -.
+DR   GeneCards; NTRK2; -.
+DR   HGNC; HGNC:8032; NTRK2.
+DR   HPA; ENSG00000148053; Tissue enhanced (brain, thyroid gland).
+DR   MalaCards; NTRK2; -.
+DR   MIM; 600456; gene.
+DR   MIM; 613886; phenotype.
+DR   MIM; 617830; phenotype.
+DR   neXtProt; NX_Q16620; -.
+DR   OpenTargets; ENSG00000148053; -.
+DR   Orphanet; 3451; Infantile spasms syndrome.
+DR   Orphanet; 442835; Non-specific early-onset epileptic encephalopathy.
+DR   Orphanet; 251615; Pilomyxoid astrocytoma.
+DR   PharmGKB; PA31818; -.
+DR   VEuPathDB; HostDB:ENSG00000148053; -.
+DR   eggNOG; KOG1026; Eukaryota.
+DR   GeneTree; ENSGT00940000155181; -.
+DR   HOGENOM; CLU_000288_74_1_1; -.
+DR   InParanoid; Q16620; -.
+DR   OMA; TCSCEIM; -.
+DR   PhylomeDB; Q16620; -.
+DR   TreeFam; TF106465; -.
+DR   BRENDA; 2.7.10.1; 2681.
+DR   PathwayCommons; Q16620; -.
+DR   Reactome; R-HSA-187024; NGF-independant TRKA activation.
+DR   Reactome; R-HSA-9024909; BDNF activates NTRK2 (TRKB) signaling.
+DR   Reactome; R-HSA-9025046; NTF3 activates NTRK2 (TRKB) signaling.
+DR   Reactome; R-HSA-9026357; NTF4 activates NTRK2 (TRKB) signaling.
+DR   Reactome; R-HSA-9026519; Activated NTRK2 signals through RAS.
+DR   Reactome; R-HSA-9026527; Activated NTRK2 signals through PLCG1.
+DR   Reactome; R-HSA-9028335; Activated NTRK2 signals through PI3K.
+DR   Reactome; R-HSA-9028731; Activated NTRK2 signals through FRS2 and FRS3.
+DR   Reactome; R-HSA-9032500; Activated NTRK2 signals through FYN.
+DR   Reactome; R-HSA-9032759; NTRK2 activates RAC1.
+DR   Reactome; R-HSA-9032845; Activated NTRK2 signals through CDK5.
+DR   SignaLink; Q16620; -.
+DR   SIGNOR; Q16620; -.
+DR   BioGRID-ORCS; 4915; 10 hits in 1102 CRISPR screens.
+DR   ChiTaRS; NTRK2; human.
+DR   EvolutionaryTrace; Q16620; -.
+DR   GeneWiki; TrkB_receptor; -.
+DR   GenomeRNAi; 4915; -.
+DR   Pharos; Q16620; Tclin.
+DR   PRO; PR:Q16620; -.
+DR   Proteomes; UP000005640; Chromosome 9.
+DR   RNAct; Q16620; protein.
+DR   Bgee; ENSG00000148053; Expressed in cranial nerve II and 194 other tissues.
+DR   ExpressionAtlas; Q16620; baseline and differential.
+DR   Genevisible; Q16620; HS.
+DR   GO; GO:0070161; C:anchoring junction; IEA:UniProtKB-KW.
+DR   GO; GO:0030424; C:axon; ISS:UniProtKB.
+DR   GO; GO:0043679; C:axon terminus; IBA:GO_Central.
+DR   GO; GO:0005829; C:cytosol; IEA:Ensembl.
+DR   GO; GO:0030425; C:dendrite; ISS:UniProtKB.
+DR   GO; GO:0043197; C:dendritic spine; IBA:GO_Central.
+DR   GO; GO:0005769; C:early endosome; ISS:UniProtKB.
+DR   GO; GO:0031901; C:early endosome membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0048471; C:perinuclear region of cytoplasm; ISS:UniProtKB.
+DR   GO; GO:0005886; C:plasma membrane; IDA:HPA.
+DR   GO; GO:0014069; C:postsynaptic density; ISS:ARUK-UCL.
+DR   GO; GO:0043235; C:receptor complex; IDA:MGI.
+DR   GO; GO:0043195; C:terminal bouton; IEA:Ensembl.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0048403; F:brain-derived neurotrophic factor binding; ISS:UniProtKB.
+DR   GO; GO:0060175; F:brain-derived neurotrophic factor receptor activity; IMP:UniProtKB.
+DR   GO; GO:0043121; F:neurotrophin binding; IDA:UniProtKB.
+DR   GO; GO:0005030; F:neurotrophin receptor activity; IBA:GO_Central.
+DR   GO; GO:0002020; F:protease binding; IPI:ARUK-UCL.
+DR   GO; GO:0042803; F:protein homodimerization activity; ISS:UniProtKB.
+DR   GO; GO:0004714; F:transmembrane receptor protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:0031547; P:brain-derived neurotrophic factor receptor signaling pathway; IMP:UniProtKB.
+DR   GO; GO:0071230; P:cellular response to amino acid stimulus; IEA:Ensembl.
+DR   GO; GO:1990416; P:cellular response to brain-derived neurotrophic factor stimulus; IBA:GO_Central.
+DR   GO; GO:1990090; P:cellular response to nerve growth factor stimulus; IBA:GO_Central.
+DR   GO; GO:0021954; P:central nervous system neuron development; ISS:UniProtKB.
+DR   GO; GO:0021987; P:cerebral cortex development; ISS:UniProtKB.
+DR   GO; GO:0007623; P:circadian rhythm; IEA:Ensembl.
+DR   GO; GO:0007631; P:feeding behavior; IEA:Ensembl.
+DR   GO; GO:0014047; P:glutamate secretion; IEA:Ensembl.
+DR   GO; GO:0007612; P:learning; ISS:UniProtKB.
+DR   GO; GO:0060291; P:long-term synaptic potentiation; IEA:Ensembl.
+DR   GO; GO:0042490; P:mechanoreceptor differentiation; IEA:Ensembl.
+DR   GO; GO:0022011; P:myelination in peripheral nervous system; IEA:Ensembl.
+DR   GO; GO:1902430; P:negative regulation of amyloid-beta formation; IGI:ARUK-UCL.
+DR   GO; GO:2000811; P:negative regulation of anoikis; IEA:Ensembl.
+DR   GO; GO:0043524; P:negative regulation of neuron apoptotic process; ISS:UniProtKB.
+DR   GO; GO:0030182; P:neuron differentiation; ISS:UniProtKB.
+DR   GO; GO:0001764; P:neuron migration; ISS:UniProtKB.
+DR   GO; GO:0019227; P:neuronal action potential propagation; IEA:Ensembl.
+DR   GO; GO:0048709; P:oligodendrocyte differentiation; IEA:Ensembl.
+DR   GO; GO:0018105; P:peptidyl-serine phosphorylation; IEA:Ensembl.
+DR   GO; GO:0048935; P:peripheral nervous system neuron development; IEA:Ensembl.
+DR   GO; GO:0050772; P:positive regulation of axonogenesis; ISS:UniProtKB.
+DR   GO; GO:0008284; P:positive regulation of cell population proliferation; ISS:UniProtKB.
+DR   GO; GO:0010628; P:positive regulation of gene expression; ISS:UniProtKB.
+DR   GO; GO:0033674; P:positive regulation of kinase activity; IBA:GO_Central.
+DR   GO; GO:0043410; P:positive regulation of MAPK cascade; ISS:UniProtKB.
+DR   GO; GO:0010976; P:positive regulation of neuron projection development; ISS:UniProtKB.
+DR   GO; GO:0033138; P:positive regulation of peptidyl-serine phosphorylation; IEA:Ensembl.
+DR   GO; GO:0014068; P:positive regulation of phosphatidylinositol 3-kinase signaling; ISS:UniProtKB.
+DR   GO; GO:0001934; P:positive regulation of protein phosphorylation; TAS:BHF-UCL.
+DR   GO; GO:0051965; P:positive regulation of synapse assembly; IEA:Ensembl.
+DR   GO; GO:0046777; P:protein autophosphorylation; ISS:UniProtKB.
+DR   GO; GO:0043087; P:regulation of GTPase activity; ISS:UniProtKB.
+DR   GO; GO:0051896; P:regulation of protein kinase B signaling; IBA:GO_Central.
+DR   GO; GO:0046548; P:retinal rod cell development; IEA:Ensembl.
+DR   GO; GO:0099183; P:trans-synaptic signaling by BDNF, modulating synaptic transmission; IEA:Ensembl.
+DR   GO; GO:0099551; P:trans-synaptic signaling by neuropeptide, modulating synaptic transmission; IBA:GO_Central.
+DR   GO; GO:0007169; P:transmembrane receptor protein tyrosine kinase signaling pathway; IBA:GO_Central.
+DR   GO; GO:0001570; P:vasculogenesis; IEA:Ensembl.
+DR   Gene3D; 2.60.40.10; -; 2.
+DR   Gene3D; 3.80.10.10; -; 1.
+DR   IDEAL; IID00672; -.
+DR   InterPro; IPR000483; Cys-rich_flank_reg_C.
+DR   InterPro; IPR007110; Ig-like_dom.
+DR   InterPro; IPR036179; Ig-like_dom_sf.
+DR   InterPro; IPR013783; Ig-like_fold.
+DR   InterPro; IPR013098; Ig_I-set.
+DR   InterPro; IPR003599; Ig_sub.
+DR   InterPro; IPR003598; Ig_sub2.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR001611; Leu-rich_rpt.
+DR   InterPro; IPR032675; LRR_dom_sf.
+DR   InterPro; IPR000372; LRRNT.
+DR   InterPro; IPR020777; NTRK.
+DR   InterPro; IPR020455; NTRK2.
+DR   InterPro; IPR031635; NTRK_LRRCT.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR008266; Tyr_kinase_AS.
+DR   InterPro; IPR020635; Tyr_kinase_cat_dom.
+DR   InterPro; IPR002011; Tyr_kinase_rcpt_2_CS.
+DR   Pfam; PF07679; I-set; 2.
+DR   Pfam; PF13855; LRR_8; 1.
+DR   Pfam; PF16920; LRRCT_2; 1.
+DR   Pfam; PF01462; LRRNT; 1.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   PRINTS; PR01939; NTKRECEPTOR.
+DR   PRINTS; PR01941; NTKRECEPTOR2.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00409; IG; 1.
+DR   SMART; SM00408; IGc2; 1.
+DR   SMART; SM00082; LRRCT; 1.
+DR   SMART; SM00013; LRRNT; 1.
+DR   SMART; SM00219; TyrKc; 1.
+DR   SUPFAM; SSF48726; SSF48726; 2.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS50835; IG_LIKE; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00109; PROTEIN_KINASE_TYR; 1.
+DR   PROSITE; PS00239; RECEPTOR_TYR_KIN_II; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Cell membrane;
+KW   Cell projection; Cytoplasm; Developmental protein; Differentiation;
+KW   Disease variant; Disulfide bond; Endosome; Epilepsy; Glycoprotein;
+KW   Immunoglobulin domain; Kinase; Leucine-rich repeat; Membrane; Neurogenesis;
+KW   Nucleotide-binding; Obesity; Phosphoprotein; Receptor; Reference proteome;
+KW   Repeat; Signal; Synapse; Transferase; Transmembrane; Transmembrane helix;
+KW   Tyrosine-protein kinase; Ubl conjugation.
+FT   SIGNAL          1..31
+FT   CHAIN           32..822
+FT                   /note="BDNF/NT-3 growth factors receptor"
+FT                   /id="PRO_0000016727"
+FT   TOPO_DOM        32..430
+FT                   /note="Extracellular"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        431..454
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        455..822
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          32..61
+FT                   /note="LRRNT"
+FT   REPEAT          92..113
+FT                   /note="LRR 1"
+FT   REPEAT          116..137
+FT                   /note="LRR 2"
+FT   DOMAIN          148..196
+FT                   /note="LRRCT"
+FT   DOMAIN          197..282
+FT                   /note="Ig-like C2-type 1"
+FT   DOMAIN          295..365
+FT                   /note="Ig-like C2-type 2"
+FT   DOMAIN          538..807
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          455..466
+FT                   /note="Interaction with MAPK8IP3/JIP3"
+FT                   /evidence="ECO:0000250|UniProtKB:Q63604"
+FT   REGION          475..498
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        475..496
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        676
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10028"
+FT   BINDING         544..552
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         572
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   SITE            516
+FT                   /note="Interaction with SHC1"
+FT                   /evidence="ECO:0000250"
+FT   SITE            706
+FT                   /note="Interaction with SH2D1A"
+FT                   /evidence="ECO:0000250"
+FT   SITE            817
+FT                   /note="Interaction with PLCG1"
+FT                   /evidence="ECO:0000250"
+FT   MOD_RES         516
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250|UniProtKB:P15209"
+FT   MOD_RES         702
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250|UniProtKB:Q63604"
+FT   MOD_RES         706
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250|UniProtKB:Q63604"
+FT   MOD_RES         707
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250|UniProtKB:Q63604"
+FT   MOD_RES         817
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250|UniProtKB:Q63604"
+FT   CARBOHYD        67
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:16335952,
+FT                   ECO:0000269|PubMed:7574684"
+FT   CARBOHYD        95
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:7574684"
+FT   CARBOHYD        121
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:16335952,
+FT                   ECO:0000269|PubMed:7574684"
+FT   CARBOHYD        178
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:7574684"
+FT   CARBOHYD        205
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:7574684"
+FT   CARBOHYD        241
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:7574684"
+FT   CARBOHYD        254
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:16335952,
+FT                   ECO:0000269|PubMed:7574684"
+FT   CARBOHYD        280
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:7574684"
+FT   CARBOHYD        325
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        338
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:7574684"
+FT   CARBOHYD        412
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:7574684"
+FT   DISULFID        32..38
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114,
+FT                   ECO:0000269|PubMed:7574684"
+FT   DISULFID        36..45
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114,
+FT                   ECO:0000269|PubMed:7574684"
+FT   DISULFID        152..176
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114,
+FT                   ECO:0000269|PubMed:7574684"
+FT   DISULFID        154..194
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114,
+FT                   ECO:0000269|PubMed:7574684"
+FT   DISULFID        218..266
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114,
+FT                   ECO:0000269|PubMed:7574684"
+FT   DISULFID        302..345
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00114,
+FT                   ECO:0000269|PubMed:10388563, ECO:0000269|PubMed:11738045,
+FT                   ECO:0000269|PubMed:7574684, ECO:0007744|PDB:1HCF,
+FT                   ECO:0007744|PDB:1WWB, ECO:0007744|PDB:5MO9"
+FT   VAR_SEQ         1..156
+FT                   /note="Missing (in isoform TrkB-N-T1)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_042177"
+FT   VAR_SEQ         465
+FT                   /note="K -> KDFSWFGFGKVKSRQGV (in isoform 4 and isoform 5)"
+FT                   /evidence="ECO:0000303|PubMed:11798182"
+FT                   /id="VSP_041942"
+FT   VAR_SEQ         467..477
+FT                   /note="PASVISNDDDS -> FVLFHKIPLDG (in isoform TrkB-T1 and
+FT                   isoform TrkB-N-T1)"
+FT                   /evidence="ECO:0000303|PubMed:11798182,
+FT                   ECO:0000303|PubMed:14702039, ECO:0000303|PubMed:15489334,
+FT                   ECO:0000303|PubMed:7823156, ECO:0000303|PubMed:7936202,
+FT                   ECO:0000303|Ref.5"
+FT                   /id="VSP_002901"
+FT   VAR_SEQ         478..822
+FT                   /note="Missing (in isoform TrkB-T1 and isoform TrkB-N-T1)"
+FT                   /evidence="ECO:0000303|PubMed:11798182,
+FT                   ECO:0000303|PubMed:14702039, ECO:0000303|PubMed:15489334,
+FT                   ECO:0000303|PubMed:7823156, ECO:0000303|PubMed:7936202,
+FT                   ECO:0000303|Ref.5"
+FT                   /id="VSP_002902"
+FT   VAR_SEQ         529..537
+FT                   /note="FVQHIKRHN -> WPRGSPKTA (in isoform TrkB-T-Shc and
+FT                   isoform 5)"
+FT                   /evidence="ECO:0000303|PubMed:11798182"
+FT                   /id="VSP_002903"
+FT   VAR_SEQ         538..822
+FT                   /note="Missing (in isoform TrkB-T-Shc and isoform 5)"
+FT                   /evidence="ECO:0000303|PubMed:11798182"
+FT                   /id="VSP_002904"
+FT   VAR_SEQ         710..735
+FT                   /note="GGHTMLPIRWMPPESIMYRKFTTESD -> SSCADQRPQGPLSLRDPCCICL
+FT                   LRLS (in isoform TrkB-T-TK)"
+FT                   /evidence="ECO:0000303|Ref.7"
+FT                   /id="VSP_042178"
+FT   VAR_SEQ         736..822
+FT                   /note="Missing (in isoform TrkB-T-TK)"
+FT                   /evidence="ECO:0000303|Ref.7"
+FT                   /id="VSP_042179"
+FT   VARIANT         138
+FT                   /note="L -> F (in a lung adenocarcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041470"
+FT   VARIANT         309
+FT                   /note="G -> R"
+FT                   /evidence="ECO:0000269|Ref.5"
+FT                   /id="VAR_016320"
+FT   VARIANT         338
+FT                   /note="N -> Y (in dbSNP:rs1047856)"
+FT                   /id="VAR_011973"
+FT   VARIANT         434
+FT                   /note="Y -> C (in DEE58; unknown pathological significance;
+FT                   dbSNP:rs886041091)"
+FT                   /evidence="ECO:0000269|PubMed:29100083"
+FT                   /id="VAR_080659"
+FT   VARIANT         444..822
+FT                   /note="Missing (in OBHD)"
+FT                   /evidence="ECO:0000269|PubMed:27884935"
+FT                   /id="VAR_080660"
+FT   VARIANT         545
+FT                   /note="G -> V (in dbSNP:rs1075108)"
+FT                   /id="VAR_049715"
+FT   VARIANT         697
+FT                   /note="M -> I (in a lung carcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:18293376"
+FT                   /id="VAR_046518"
+FT   VARIANT         699
+FT                   /note="R -> G (in a lung carcinoma sample; somatic
+FT                   mutation)"
+FT                   /evidence="ECO:0000269|PubMed:18293376"
+FT                   /id="VAR_046519"
+FT   VARIANT         704
+FT                   /note="T -> I (in OBHD; unknown pathological significance;
+FT                   dbSNP:rs1554774973)"
+FT                   /evidence="ECO:0000269|PubMed:29100083"
+FT                   /id="VAR_080661"
+FT   VARIANT         706
+FT                   /note="Y -> C (in OBHD; expressed normally on the cell
+FT                   surface; results in markedly impaired ligand-induced
+FT                   phosphorylation as well as impaired downstream MAPK1
+FT                   phosphorylation; dbSNP:rs121434633)"
+FT                   /evidence="ECO:0000269|PubMed:15494731"
+FT                   /id="VAR_065890"
+FT   VARIANT         718
+FT                   /note="R -> C (in a lung carcinoma sample; somatic
+FT                   mutation; dbSNP:rs1324578301)"
+FT                   /evidence="ECO:0000269|PubMed:18293376"
+FT                   /id="VAR_046520"
+FT   STRAND          285..292
+FT                   /evidence="ECO:0007829|PDB:5MO9"
+FT   STRAND          300..308
+FT                   /evidence="ECO:0007829|PDB:1WWB"
+FT   STRAND          314..319
+FT                   /evidence="ECO:0007829|PDB:1WWB"
+FT   STRAND          322..324
+FT                   /evidence="ECO:0007829|PDB:1WWB"
+FT   STRAND          328..337
+FT                   /evidence="ECO:0007829|PDB:1WWB"
+FT   STRAND          339..350
+FT                   /evidence="ECO:0007829|PDB:1WWB"
+FT   HELIX           353..355
+FT                   /evidence="ECO:0007829|PDB:1WWB"
+FT   STRAND          357..364
+FT                   /evidence="ECO:0007829|PDB:1WWB"
+FT   STRAND          369..376
+FT                   /evidence="ECO:0007829|PDB:1WWB"
+FT   STRAND          380..382
+FT                   /evidence="ECO:0007829|PDB:5MO9"
+FT   STRAND          500..503
+FT                   /evidence="ECO:0007829|PDB:2MFQ"
+FT   STRAND          506..512
+FT                   /evidence="ECO:0007829|PDB:2MFQ"
+FT   TURN            515..517
+FT                   /evidence="ECO:0007829|PDB:2MFQ"
+FT   HELIX           535..537
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          538..545
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          552..557
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          567..574
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           579..592
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          603..607
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          609..618
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           625..631
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           634..638
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          641..643
+FT                   /evidence="ECO:0007829|PDB:4AT5"
+FT   HELIX           650..669
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           679..681
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          682..684
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           686..688
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          690..692
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           698..701
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           703..705
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          707..709
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   TURN            710..712
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   STRAND          713..715
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           717..719
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           722..727
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           732..747
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   TURN            748..750
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   TURN            753..756
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           759..768
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           780..789
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           794..796
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+FT   HELIX           800..813
+FT                   /evidence="ECO:0007829|PDB:4ASZ"
+SQ   SEQUENCE   822 AA;  91999 MW;  2FEB9159948F0D13 CRC64;
+     MSSWIRWHGP AMARLWGFCW LVVGFWRAAF ACPTSCKCSA SRIWCSDPSP GIVAFPRLEP
+     NSVDPENITE IFIANQKRLE IINEDDVEAY VGLRNLTIVD SGLKFVAHKA FLKNSNLQHI
+     NFTRNKLTSL SRKHFRHLDL SELILVGNPF TCSCDIMWIK TLQEAKSSPD TQDLYCLNES
+     SKNIPLANLQ IPNCGLPSAN LAAPNLTVEE GKSITLSCSV AGDPVPNMYW DVGNLVSKHM
+     NETSHTQGSL RITNISSDDS GKQISCVAEN LVGEDQDSVN LTVHFAPTIT FLESPTSDHH
+     WCIPFTVKGN PKPALQWFYN GAILNESKYI CTKIHVTNHT EYHGCLQLDN PTHMNNGDYT
+     LIAKNEYGKD EKQISAHFMG WPGIDDGANP NYPDVIYEDY GTAANDIGDT TNRSNEIPST
+     DVTDKTGREH LSVYAVVVIA SVVGFCLLVM LFLLKLARHS KFGMKGPASV ISNDDDSASP
+     LHHISNGSNT PSSSEGGPDA VIIGMTKIPV IENPQYFGIT NSQLKPDTFV QHIKRHNIVL
+     KRELGEGAFG KVFLAECYNL CPEQDKILVA VKTLKDASDN ARKDFHREAE LLTNLQHEHI
+     VKFYGVCVEG DPLIMVFEYM KHGDLNKFLR AHGPDAVLMA EGNPPTELTQ SQMLHIAQQI
+     AAGMVYLASQ HFVHRDLATR NCLVGENLLV KIGDFGMSRD VYSTDYYRVG GHTMLPIRWM
+     PPESIMYRKF TTESDVWSLG VVLWEIFTYG KQPWYQLSNN EVIECITQGR VLQRPRTCPQ
+     EVYELMLGCW QREPHMRKNI KGIHTLLQNL AKASPVYLDI LG
+//

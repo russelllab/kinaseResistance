@@ -1,0 +1,464 @@
+ID   BLK_HUMAN               Reviewed;         505 AA.
+AC   P51451; Q16291; Q96IN1;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   21-AUG-2007, sequence version 3.
+DT   12-OCT-2022, entry version 199.
+DE   RecName: Full=Tyrosine-protein kinase Blk;
+DE            EC=2.7.10.2 {ECO:0000269|PubMed:30356214};
+DE   AltName: Full=B lymphocyte kinase;
+DE   AltName: Full=p55-Blk;
+GN   Name=BLK;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RX   PubMed=7822795;
+RA   Islam K.B., Rabbani H., Larsson C., Sanders R., Smith C.I.;
+RT   "Molecular cloning, characterization, and chromosomal localization of a
+RT   human lymphoid tyrosine kinase related to murine Blk.";
+RL   J. Immunol. 154:1265-1272(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RX   PubMed=7845672;
+RA   Drebin J.A., Hartzell S.W., Griffin C., Campbell M.J., Niederhuber J.E.;
+RT   "Molecular cloning and chromosomal localization of the human homologue of a
+RT   B-lymphocyte specific protein tyrosine kinase (blk).";
+RL   Oncogene 10:477-486(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Spleen;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Blood, and Lymph;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   INTERACTION WITH CBL.
+RX   PubMed=8083187; DOI=10.1016/s0021-9258(17)31595-8;
+RA   Donovan J.A., Wange R.L., Langdon W.Y., Samelson L.E.;
+RT   "The protein product of the c-cbl protooncogene is the 120-kDa tyrosine-
+RT   phosphorylated protein in Jurkat cells activated via the T cell antigen
+RT   receptor.";
+RL   J. Biol. Chem. 269:22921-22924(1994).
+RN   [7]
+RP   FUNCTION IN PHOSPHORYLATION OF FCGR2A; FCGR2B AND FCGR2C.
+RX   PubMed=8756631; DOI=10.1128/mcb.16.9.4735;
+RA   Bewarder N., Weinrich V., Budde P., Hartmann D., Flaswinkel H., Reth M.,
+RA   Frey J.;
+RT   "In vivo and in vitro specificity of protein tyrosine kinases for
+RT   immunoglobulin G receptor (FcgammaRII) phosphorylation.";
+RL   Mol. Cell. Biol. 16:4735-4743(1996).
+RN   [8]
+RP   INDUCTION.
+RX   PubMed=10553071;
+RA   Akerblad P., Sigvardsson M.;
+RT   "Early B cell factor is an activator of the B lymphoid kinase promoter in
+RT   early B cell development.";
+RL   J. Immunol. 163:5453-5461(1999).
+RN   [9]
+RP   PHOSPHORYLATION, AND SUBCELLULAR LOCATION.
+RX   PubMed=12023895; DOI=10.1042/bj20011696;
+RA   Lang M.L., Chen Y.W., Shen L., Gao H., Lang G.A., Wade T.K., Wade W.F.;
+RT   "IgA Fc receptor (FcalphaR) cross-linking recruits tyrosine kinases,
+RT   phosphoinositide kinases and serine/threonine kinases to glycolipid
+RT   rafts.";
+RL   Biochem. J. 364:517-525(2002).
+RN   [10]
+RP   FUNCTION AS REGULATOR OF INSULIN SECRETION, TISSUE SPECIFICITY, INVOLVEMENT
+RP   IN MODY11, VARIANT THR-71, AND CHARACTERIZATION OF VARIANT THR-71.
+RX   PubMed=19667185; DOI=10.1073/pnas.0906474106;
+RA   Borowiec M., Liew C.W., Thompson R., Boonyasrisawat W., Hu J.,
+RA   Mlynarski W.M., El Khattabi I., Kim S.H., Marselli L., Rich S.S.,
+RA   Krolewski A.S., Bonner-Weir S., Sharma A., Sale M., Mychaleckyj J.C.,
+RA   Kulkarni R.N., Doria A.;
+RT   "Mutations at the BLK locus linked to maturity onset diabetes of the young
+RT   and beta-cell dysfunction.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 106:14460-14465(2009).
+RN   [11]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [12]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RX   PubMed=30356214; DOI=10.1038/s41586-018-0629-6;
+RA   Liu H., Zhang H., Wu X., Ma D., Wu J., Wang L., Jiang Y., Fei Y., Zhu C.,
+RA   Tan R., Jungblut P., Pei G., Dorhoi A., Yan Q., Zhang F., Zheng R., Liu S.,
+RA   Liang H., Liu Z., Yang H., Chen J., Wang P., Tang T., Peng W., Hu Z.,
+RA   Xu Z., Huang X., Wang J., Li H., Zhou Y., Liu F., Yan D., Kaufmann S.H.E.,
+RA   Chen C., Mao Z., Ge B.;
+RT   "Nuclear cGAS suppresses DNA repair and promotes tumorigenesis.";
+RL   Nature 563:131-136(2018).
+RN   [13]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ILE-48; THR-71 AND THR-71.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Non-receptor tyrosine kinase involved in B-lymphocyte
+CC       development, differentiation and signaling (By similarity). B-cell
+CC       receptor (BCR) signaling requires a tight regulation of several protein
+CC       tyrosine kinases and phosphatases, and associated coreceptors (By
+CC       similarity). Binding of antigen to the B-cell antigen receptor (BCR)
+CC       triggers signaling that ultimately leads to B-cell activation (By
+CC       similarity). Signaling through BLK plays an important role in
+CC       transmitting signals through surface immunoglobulins and supports the
+CC       pro-B to pre-B transition, as well as the signaling for growth arrest
+CC       and apoptosis downstream of B-cell receptor (By similarity).
+CC       Specifically binds and phosphorylates CD79A at 'Tyr-188'and 'Tyr-199',
+CC       as well as CD79B at 'Tyr-196' and 'Tyr-207' (By similarity).
+CC       Phosphorylates also the immunoglobulin G receptors FCGR2A, FCGR2B and
+CC       FCGR2C (PubMed:8756631). With FYN and LYN, plays an essential role in
+CC       pre-B-cell receptor (pre-BCR)-mediated NF-kappa-B activation (By
+CC       similarity). Contributes also to BTK activation by indirectly
+CC       stimulating BTK intramolecular autophosphorylation (By similarity). In
+CC       pancreatic islets, acts as a modulator of beta-cells function through
+CC       the up-regulation of PDX1 and NKX6-1 and consequent stimulation of
+CC       insulin secretion in response to glucose (PubMed:19667185).
+CC       Phosphorylates CGAS, promoting retention of CGAS in the cytosol
+CC       (PubMed:30356214). {ECO:0000250|UniProtKB:P16277,
+CC       ECO:0000269|PubMed:19667185, ECO:0000269|PubMed:30356214,
+CC       ECO:0000269|PubMed:8756631}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-tyrosyl-[protein] = ADP + H(+) + O-phospho-L-tyrosyl-
+CC         [protein]; Xref=Rhea:RHEA:10596, Rhea:RHEA-COMP:10136, Rhea:RHEA-
+CC         COMP:10137, ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:46858,
+CC         ChEBI:CHEBI:82620, ChEBI:CHEBI:456216; EC=2.7.10.2;
+CC         Evidence={ECO:0000269|PubMed:30356214};
+CC       PhysiologicalDirection=left-to-right; Xref=Rhea:RHEA:10597;
+CC         Evidence={ECO:0000269|PubMed:30356214};
+CC   -!- ACTIVITY REGULATION: Antibody-mediated surface engagement of the B-cell
+CC       antigen receptor (BCR) which results in the phosphorylation of BLK on
+CC       tyrosine residues, stimulates the enzymatic activity. {ECO:0000250}.
+CC   -!- SUBUNIT: Interacts with CBL (via SH2 domain). Interacts with CD79A and
+CC       CD79B (via SH2 domain) (By similarity). {ECO:0000250}.
+CC   -!- INTERACTION:
+CC       P51451; P10275: AR; NbExp=3; IntAct=EBI-2105445, EBI-608057;
+CC       P51451; Q8NDB2: BANK1; NbExp=6; IntAct=EBI-2105445, EBI-2837677;
+CC       P51451; Q13490: BIRC2; NbExp=3; IntAct=EBI-2105445, EBI-514538;
+CC       P51451; P46109: CRKL; NbExp=3; IntAct=EBI-2105445, EBI-910;
+CC       P51451; O43281: EFS; NbExp=5; IntAct=EBI-2105445, EBI-718488;
+CC       P51451; O43281-2: EFS; NbExp=3; IntAct=EBI-2105445, EBI-11525448;
+CC       P51451; P00533: EGFR; NbExp=3; IntAct=EBI-2105445, EBI-297353;
+CC       P51451; Q96Q35-2: FLACC1; NbExp=5; IntAct=EBI-2105445, EBI-11533409;
+CC       P51451; P51114-2: FXR1; NbExp=3; IntAct=EBI-2105445, EBI-11022345;
+CC       P51451; P51116: FXR2; NbExp=3; IntAct=EBI-2105445, EBI-740459;
+CC       P51451; Q13480: GAB1; NbExp=3; IntAct=EBI-2105445, EBI-517684;
+CC       P51451; Q13322-4: GRB10; NbExp=3; IntAct=EBI-2105445, EBI-12353035;
+CC       P51451; O75031: HSF2BP; NbExp=3; IntAct=EBI-2105445, EBI-7116203;
+CC       P51451; P08238: HSP90AB1; NbExp=3; IntAct=EBI-2105445, EBI-352572;
+CC       P51451; Q9UKT9: IKZF3; NbExp=3; IntAct=EBI-2105445, EBI-747204;
+CC       P51451; Q96N16: JAKMIP1; NbExp=3; IntAct=EBI-2105445, EBI-2680803;
+CC       P51451; P10721: KIT; NbExp=5; IntAct=EBI-2105445, EBI-1379503;
+CC       P51451; Q9UJV3-2: MID2; NbExp=3; IntAct=EBI-2105445, EBI-10172526;
+CC       P51451; Q9NRD5: PICK1; NbExp=3; IntAct=EBI-2105445, EBI-79165;
+CC       P51451; P27986-2: PIK3R1; NbExp=3; IntAct=EBI-2105445, EBI-9090282;
+CC       P51451; Q92569: PIK3R3; NbExp=3; IntAct=EBI-2105445, EBI-79893;
+CC       P51451; P49023-2: PXN; NbExp=3; IntAct=EBI-2105445, EBI-11954250;
+CC       P51451; O14796: SH2D1B; NbExp=3; IntAct=EBI-2105445, EBI-3923013;
+CC       P51451; Q13239-3: SLA; NbExp=3; IntAct=EBI-2105445, EBI-17630587;
+CC       P51451; O14543: SOCS3; NbExp=3; IntAct=EBI-2105445, EBI-714146;
+CC       P51451; Q9BWW4: SSBP3; NbExp=3; IntAct=EBI-2105445, EBI-2902395;
+CC       P51451; Q9UGK3: STAP2; NbExp=3; IntAct=EBI-2105445, EBI-1553984;
+CC       P51451; P40763: STAT3; NbExp=9; IntAct=EBI-2105445, EBI-518675;
+CC       P51451; O95551: TDP2; NbExp=3; IntAct=EBI-2105445, EBI-2819865;
+CC       P51451; P08670: VIM; NbExp=3; IntAct=EBI-2105445, EBI-353844;
+CC       P51451; A0A0C4DGF1: ZBTB32; NbExp=3; IntAct=EBI-2105445, EBI-10188476;
+CC       P51451; B2RXF5: ZBTB42; NbExp=3; IntAct=EBI-2105445, EBI-12287587;
+CC       P51451; Q96BR9: ZBTB8A; NbExp=3; IntAct=EBI-2105445, EBI-742740;
+CC       P51451; Q6NX45: ZNF774; NbExp=3; IntAct=EBI-2105445, EBI-10251462;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000250}; Lipid-anchor
+CC       {ECO:0000250}. Note=Present and active in lipid rafts. Membrane
+CC       location is required for the phosphorylation of CD79A and CD79B (By
+CC       similarity). {ECO:0000250}.
+CC   -!- TISSUE SPECIFICITY: Expressed in lymphatic organs, pancreatic islets,
+CC       Leydig cells, striate ducts of salivary glands and hair follicles.
+CC       {ECO:0000269|PubMed:19667185}.
+CC   -!- INDUCTION: Expression is under the control of NF-kappa-B as well as the
+CC       B-cell specific transcription factors PAX5 and EBF1.
+CC       {ECO:0000269|PubMed:10553071}.
+CC   -!- PTM: Phosphorylated on tyrosine residues after antibody-mediated
+CC       surface engagement of the B-cell antigen receptor (BCR). {ECO:0000250}.
+CC   -!- PTM: Ubiquitination of activated BLK by the UBE3A ubiquitin protein
+CC       ligase leads to its degradation by the ubiquitin-proteasome pathway.
+CC       {ECO:0000250}.
+CC   -!- DISEASE: Maturity-onset diabetes of the young 11 (MODY11) [MIM:613375]:
+CC       A form of diabetes that is characterized by an autosomal dominant mode
+CC       of inheritance, onset in childhood or early adulthood (usually before
+CC       25 years of age), a primary defect in insulin secretion and frequent
+CC       insulin-independence at the beginning of the disease.
+CC       {ECO:0000269|PubMed:19667185}. Note=The disease is caused by variants
+CC       affecting the gene represented in this entry.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. Tyr protein
+CC       kinase family. SRC subfamily. {ECO:0000255|PROSITE-ProRule:PRU00159}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; Z33998; CAA83965.1; -; mRNA.
+DR   EMBL; S76617; AAB33265.1; -; mRNA.
+DR   EMBL; AK313751; BAG36491.1; -; mRNA.
+DR   EMBL; CH471157; EAW65617.1; -; Genomic_DNA.
+DR   EMBL; BC007371; AAH07371.1; -; mRNA.
+DR   EMBL; BC032413; AAH32413.1; -; mRNA.
+DR   CCDS; CCDS5982.1; -.
+DR   PIR; I37206; I37206.
+DR   RefSeq; NP_001706.2; NM_001715.2.
+DR   AlphaFoldDB; P51451; -.
+DR   SMR; P51451; -.
+DR   BioGRID; 107109; 168.
+DR   ELM; P51451; -.
+DR   IntAct; P51451; 108.
+DR   MINT; P51451; -.
+DR   STRING; 9606.ENSP00000259089; -.
+DR   BindingDB; P51451; -.
+DR   ChEMBL; CHEMBL2250; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugBank; DB15035; Zanubrutinib.
+DR   DrugCentral; P51451; -.
+DR   GuidetoPHARMACOLOGY; 1940; -.
+DR   CarbonylDB; P51451; -.
+DR   iPTMnet; P51451; -.
+DR   PhosphoSitePlus; P51451; -.
+DR   BioMuta; BLK; -.
+DR   DMDM; 158936749; -.
+DR   CPTAC; CPTAC-1777; -.
+DR   jPOST; P51451; -.
+DR   MassIVE; P51451; -.
+DR   PaxDb; P51451; -.
+DR   PeptideAtlas; P51451; -.
+DR   PRIDE; P51451; -.
+DR   ProteomicsDB; 56307; -.
+DR   Antibodypedia; 3914; 608 antibodies from 38 providers.
+DR   DNASU; 640; -.
+DR   Ensembl; ENST00000259089.9; ENSP00000259089.4; ENSG00000136573.15.
+DR   GeneID; 640; -.
+DR   KEGG; hsa:640; -.
+DR   MANE-Select; ENST00000259089.9; ENSP00000259089.4; NM_001715.3; NP_001706.2.
+DR   UCSC; uc003wty.4; human.
+DR   CTD; 640; -.
+DR   DisGeNET; 640; -.
+DR   GeneCards; BLK; -.
+DR   GeneReviews; BLK; -.
+DR   HGNC; HGNC:1057; BLK.
+DR   HPA; ENSG00000136573; Group enriched (intestine, lymphoid tissue).
+DR   MalaCards; BLK; -.
+DR   MIM; 191305; gene.
+DR   MIM; 613375; phenotype.
+DR   neXtProt; NX_P51451; -.
+DR   OpenTargets; ENSG00000136573; -.
+DR   Orphanet; 552; MODY.
+DR   Orphanet; 536; Systemic lupus erythematosus.
+DR   PharmGKB; PA25368; -.
+DR   VEuPathDB; HostDB:ENSG00000136573; -.
+DR   eggNOG; KOG0197; Eukaryota.
+DR   GeneTree; ENSGT00940000159864; -.
+DR   InParanoid; P51451; -.
+DR   OMA; FYTATEQ; -.
+DR   OrthoDB; 539311at2759; -.
+DR   PhylomeDB; P51451; -.
+DR   TreeFam; TF351634; -.
+DR   BRENDA; 2.7.10.2; 2681.
+DR   PathwayCommons; P51451; -.
+DR   Reactome; R-HSA-8939245; RUNX1 regulates transcription of genes involved in BCR signaling.
+DR   Reactome; R-HSA-983695; Antigen activates B Cell Receptor (BCR) leading to generation of second messengers.
+DR   SignaLink; P51451; -.
+DR   SIGNOR; P51451; -.
+DR   BioGRID-ORCS; 640; 9 hits in 1097 CRISPR screens.
+DR   ChiTaRS; BLK; human.
+DR   GeneWiki; Tyrosine-protein_kinase_BLK; -.
+DR   GenomeRNAi; 640; -.
+DR   Pharos; P51451; Tchem.
+DR   PRO; PR:P51451; -.
+DR   Proteomes; UP000005640; Chromosome 8.
+DR   RNAct; P51451; protein.
+DR   Bgee; ENSG00000136573; Expressed in spleen and 93 other tissues.
+DR   ExpressionAtlas; P51451; baseline and differential.
+DR   Genevisible; P51451; HS.
+DR   GO; GO:0005829; C:cytosol; TAS:Reactome.
+DR   GO; GO:0031234; C:extrinsic component of cytoplasmic side of plasma membrane; IBA:GO_Central.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004715; F:non-membrane spanning protein tyrosine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0005102; F:signaling receptor binding; IBA:GO_Central.
+DR   GO; GO:0050853; P:B cell receptor signaling pathway; IDA:UniProtKB.
+DR   GO; GO:0030154; P:cell differentiation; IBA:GO_Central.
+DR   GO; GO:0006974; P:cellular response to DNA damage stimulus; IBA:GO_Central.
+DR   GO; GO:0097028; P:dendritic cell differentiation; IBA:GO_Central.
+DR   GO; GO:0002431; P:Fc receptor mediated stimulatory signaling pathway; IBA:GO_Central.
+DR   GO; GO:0045087; P:innate immune response; IBA:GO_Central.
+DR   GO; GO:0035556; P:intracellular signal transduction; TAS:ProtInc.
+DR   GO; GO:0030889; P:negative regulation of B cell proliferation; IBA:GO_Central.
+DR   GO; GO:0070667; P:negative regulation of mast cell proliferation; IBA:GO_Central.
+DR   GO; GO:0031175; P:neuron projection development; IBA:GO_Central.
+DR   GO; GO:0018108; P:peptidyl-tyrosine phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0002576; P:platelet degranulation; IBA:GO_Central.
+DR   GO; GO:2000670; P:positive regulation of dendritic cell apoptotic process; IBA:GO_Central.
+DR   GO; GO:0032024; P:positive regulation of insulin secretion; IMP:UniProtKB.
+DR   GO; GO:0032092; P:positive regulation of protein binding; IMP:ARUK-UCL.
+DR   GO; GO:0002902; P:regulation of B cell apoptotic process; IBA:GO_Central.
+DR   GO; GO:0050855; P:regulation of B cell receptor signaling pathway; IBA:GO_Central.
+DR   GO; GO:0043304; P:regulation of mast cell degranulation; IBA:GO_Central.
+DR   GO; GO:0090330; P:regulation of platelet aggregation; IBA:GO_Central.
+DR   GO; GO:0002513; P:tolerance induction to self antigen; IBA:GO_Central.
+DR   GO; GO:0007169; P:transmembrane receptor protein tyrosine kinase signaling pathway; IBA:GO_Central.
+DR   CDD; cd10371; SH2_Src_Blk; 1.
+DR   Gene3D; 3.30.505.10; -; 1.
+DR   InterPro; IPR035853; Blk_SH2.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   InterPro; IPR000980; SH2.
+DR   InterPro; IPR036860; SH2_dom_sf.
+DR   InterPro; IPR036028; SH3-like_dom_sf.
+DR   InterPro; IPR001452; SH3_domain.
+DR   InterPro; IPR020635; Tyr_kinase_cat_dom.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   Pfam; PF00017; SH2; 1.
+DR   Pfam; PF00018; SH3_1; 1.
+DR   PRINTS; PR00401; SH2DOMAIN.
+DR   PRINTS; PR00452; SH3DOMAIN.
+DR   PRINTS; PR00109; TYRKINASE.
+DR   SMART; SM00252; SH2; 1.
+DR   SMART; SM00326; SH3; 1.
+DR   SMART; SM00219; TyrKc; 1.
+DR   SUPFAM; SSF50044; SSF50044; 1.
+DR   SUPFAM; SSF55550; SSF55550; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS50001; SH2; 1.
+DR   PROSITE; PS50002; SH3; 1.
+PE   1: Evidence at protein level;
+KW   ATP-binding; Cell membrane; Diabetes mellitus; Kinase; Lipoprotein;
+KW   Membrane; Myristate; Nucleotide-binding; Phosphoprotein;
+KW   Reference proteome; SH2 domain; SH3 domain; Transferase;
+KW   Tyrosine-protein kinase; Ubl conjugation.
+FT   INIT_MET        1
+FT                   /note="Removed"
+FT   CHAIN           2..505
+FT                   /note="Tyrosine-protein kinase Blk"
+FT                   /id="PRO_0000088061"
+FT   DOMAIN          58..118
+FT                   /note="SH3"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00192"
+FT   DOMAIN          124..220
+FT                   /note="SH2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00191"
+FT   DOMAIN          241..494
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          1..37
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..23
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        360
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         247..255
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         269
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         389
+FT                   /note="Phosphotyrosine; by autocatalysis"
+FT                   /evidence="ECO:0000250"
+FT   LIPID           2
+FT                   /note="N-myristoyl glycine"
+FT                   /evidence="ECO:0000250"
+FT   VARIANT         48
+FT                   /note="T -> I (in dbSNP:rs35339715)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041672"
+FT   VARIANT         71
+FT                   /note="A -> T (associated with MODY11; reduces the
+FT                   enhancing effect of BLK on insulin secretion; reduces the
+FT                   inducing effect of BLK on the expression of PDX1 and
+FT                   NKX6-1; found as somatic mutation in a colorectal
+FT                   adenocarcinoma sample; dbSNP:rs55758736)"
+FT                   /evidence="ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:19667185"
+FT                   /id="VAR_041673"
+FT   CONFLICT        287
+FT                   /note="V -> M (in Ref. 1; CAA83965)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        407
+FT                   /note="I -> Y (in Ref. 2; AAB33265)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   505 AA;  57706 MW;  B5F739BEF8389176 CRC64;
+     MGLVSSKKPD KEKPIKEKDK GQWSPLKVSA QDKDAPPLPP LVVFNHLTPP PPDEHLDEDK
+     HFVVALYDYT AMNDRDLQML KGEKLQVLKG TGDWWLARSL VTGREGYVPS NFVARVESLE
+     MERWFFRSQG RKEAERQLLA PINKAGSFLI RESETNKGAF SLSVKDVTTQ GELIKHYKIR
+     CLDEGGYYIS PRITFPSLQA LVQHYSKKGD GLCQRLTLPC VRPAPQNPWA QDEWEIPRQS
+     LRLVRKLGSG QFGEVWMGYY KNNMKVAIKT LKEGTMSPEA FLGEANVMKA LQHERLVRLY
+     AVVTKEPIYI VTEYMARGCL LDFLKTDEGS RLSLPRLIDM SAQIAEGMAY IERMNSIHRD
+     LRAANILVSE ALCCKIADFG LARIIDSEYT AQEGAKFPIK WTAPEAIHFG VFTIKADVWS
+     FGVLLMEVVT YGRVPYPGMS NPEVIRNLER GYRMPRPDTC PPELYRGVIA ECWRSRPEER
+     PTFEFLQSVL EDFYTATERQ YELQP
+//

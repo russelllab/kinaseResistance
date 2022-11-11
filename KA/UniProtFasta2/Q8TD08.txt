@@ -1,0 +1,572 @@
+ID   MK15_HUMAN              Reviewed;         544 AA.
+AC   Q8TD08; Q2TCF9; Q8N362;
+DT   18-APR-2006, integrated into UniProtKB/Swiss-Prot.
+DT   01-JUN-2002, sequence version 1.
+DT   12-OCT-2022, entry version 162.
+DE   RecName: Full=Mitogen-activated protein kinase 15 {ECO:0000305};
+DE            Short=MAP kinase 15;
+DE            Short=MAPK 15;
+DE            EC=2.7.11.24;
+DE   AltName: Full=Extracellular signal-regulated kinase 7;
+DE            Short=ERK-7;
+DE   AltName: Full=Extracellular signal-regulated kinase 8;
+DE            Short=ERK-8;
+GN   Name=MAPK15 {ECO:0000312|HGNC:HGNC:24667};
+GN   Synonyms=ERK7 {ECO:0000250|UniProtKB:Q9Z2A6}, ERK8
+GN   {ECO:0000303|PubMed:11875070, ECO:0000303|PubMed:16484222};
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), TISSUE SPECIFICITY, INTERACTION
+RP   WITH CSK, MUTAGENESIS OF LYS-42; THR-175 AND TYR-177, PHOSPHORYLATION AT
+RP   THR-175 AND TYR-177, CHARACTERIZATION, FUNCTION, AND ACTIVITY REGULATION.
+RC   TISSUE=Testis;
+RX   PubMed=11875070; DOI=10.1074/jbc.m112483200;
+RA   Abe M.K., Saelzler M.P., Espinosa R. III, Kahle K.T., Hershenson M.B.,
+RA   Le Beau M.M., Rosner M.R.;
+RT   "ERK8, a new member of the mitogen-activated protein kinase family.";
+RL   J. Biol. Chem. 277:16733-16743(2002).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2), TISSUE SPECIFICITY, FUNCTION, AND
+RP   INTERACTION WITH ABL1 AND RET.
+RC   TISSUE=Medulla oblongata;
+RX   PubMed=16484222; DOI=10.1074/jbc.m513397200;
+RA   Iavarone C., Acunzo M., Carlomagno F., Catania A., Melillo R.M.,
+RA   Carlomagno S.M., Santoro M., Chiariello M.;
+RT   "Activation of the Erk8 mitogen-activated protein (MAP) kinase by RET/PTC3,
+RT   a constitutively active form of the RET proto-oncogene.";
+RL   J. Biol. Chem. 281:10567-10576(2006).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 3).
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [4]
+RP   INTERACTION WITH TGFB1I1.
+RX   PubMed=16624805; DOI=10.1074/jbc.m512418200;
+RA   Saelzler M.P., Spackman C.C., Liu Y., Martinez L.C., Harris J.P., Abe M.K.;
+RT   "ERK8 down-regulates transactivation of the glucocorticoid receptor through
+RT   Hic-5.";
+RL   J. Biol. Chem. 281:16821-16832(2006).
+RN   [5]
+RP   FUNCTION, PHOSPHORYLATION AT THR-175 AND TYR-177, MUTAGENESIS OF LYS-42;
+RP   ASP-155; THR-175 AND TYR-177, AND ACTIVITY REGULATION.
+RX   PubMed=16336213; DOI=10.1042/bj20051288;
+RA   Klevernic I.V., Stafford M.J., Morrice N., Peggie M., Morton S., Cohen P.;
+RT   "Characterization of the reversible phosphorylation and activation of
+RT   ERK8.";
+RL   Biochem. J. 394:365-373(2006).
+RN   [6]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [7]
+RP   PHOSPHORYLATION AT THR-175 AND TYR-177, FUNCTION, MUTAGENESIS OF ASP-155,
+RP   UBIQUITINATION, AND ACTIVITY REGULATION.
+RX   PubMed=19166846; DOI=10.1016/j.febslet.2009.01.011;
+RA   Klevernic I.V., Martin N.M., Cohen P.;
+RT   "Regulation of the activity and expression of ERK8 by DNA damage.";
+RL   FEBS Lett. 583:680-684(2009).
+RN   [8]
+RP   FUNCTION, AND SUBCELLULAR LOCATION.
+RX   PubMed=20638370; DOI=10.1016/j.bbrc.2010.07.029;
+RA   Erster O., Seger R., Liscovitch M.;
+RT   "Ligand interaction scan (LIScan) in the study of ERK8.";
+RL   Biochem. Biophys. Res. Commun. 399:37-41(2010).
+RN   [9]
+RP   INTERACTION WITH PCNA, FUNCTION, AND MUTAGENESIS OF GLN-300; PRO-390 AND
+RP   PRO-398.
+RX   PubMed=20733054; DOI=10.1083/jcb.201002124;
+RA   Groehler A.L., Lannigan D.A.;
+RT   "A chromatin-bound kinase, ERK8, protects genomic integrity by inhibiting
+RT   HDM2-mediated degradation of the DNA clamp PCNA.";
+RL   J. Cell Biol. 190:575-586(2010).
+RN   [10]
+RP   FUNCTION.
+RX   PubMed=21847093; DOI=10.1038/emboj.2011.253;
+RA   Zacharogianni M., Kondylis V., Tang Y., Farhan H., Xanthakis D., Fuchs F.,
+RA   Boutros M., Rabouille C.;
+RT   "ERK7 is a negative regulator of protein secretion in response to amino-
+RT   acid starvation by modulating Sec16 membrane association.";
+RL   EMBO J. 30:3684-3700(2011).
+RN   [11]
+RP   INTERACTION WITH ESRRA, SUBCELLULAR LOCATION, MUTAGENESIS OF
+RP   265-LEU--LEU-269 AND 281-LEU--LEU-285, REGION, AND FUNCTION.
+RX   PubMed=21190936; DOI=10.1074/jbc.m110.179523;
+RA   Rossi M., Colecchia D., Iavarone C., Strambi A., Piccioni F.,
+RA   Verrotti di Pianella A., Chiariello M.;
+RT   "Extracellular signal-regulated kinase 8 (ERK8) controls estrogen-related
+RT   receptor alpha (ERRalpha) cellular localization and inhibits its
+RT   transcriptional activity.";
+RL   J. Biol. Chem. 286:8507-8522(2011).
+RN   [12]
+RP   INTERACTION WITH GABARAP; MAP1LC3B AND GABARAPL1, SUBCELLULAR LOCATION,
+RP   REGION, MUTAGENESIS OF ASP-155 AND 340-TYR--ILE-343, AND FUNCTION.
+RX   PubMed=22948227; DOI=10.4161/auto.21857;
+RA   Colecchia D., Strambi A., Sanzone S., Iavarone C., Rossi M., Dall'Armi C.,
+RA   Piccioni F., Verrotti di Pianella A., Chiariello M.;
+RT   "MAPK15/ERK8 stimulates autophagy by interacting with LC3 and GABARAP
+RT   proteins.";
+RL   Autophagy 8:1724-1740(2012).
+RN   [13]
+RP   FUNCTION, SUBCELLULAR LOCATION, AND MUTAGENESIS OF THR-175 AND TYR-177.
+RX   PubMed=24618899; DOI=10.7554/elife.01828;
+RA   Chia J., Tham K.M., Gill D.J., Bard-Chapeau E.A., Bard F.A.;
+RT   "ERK8 is a negative regulator of O-GalNAc glycosylation and cell
+RT   migration.";
+RL   Elife 3:E01828-E01828(2014).
+RN   [14]
+RP   METHYLATION [LARGE SCALE ANALYSIS] AT ARG-449, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Colon carcinoma;
+RX   PubMed=24129315; DOI=10.1074/mcp.o113.027870;
+RA   Guo A., Gu H., Zhou J., Mulhern D., Wang Y., Lee K.A., Yang V., Aguiar M.,
+RA   Kornhauser J., Jia X., Ren J., Beausoleil S.A., Silva J.C., Vemulapalli V.,
+RA   Bedford M.T., Comb M.J.;
+RT   "Immunoaffinity enrichment and mass spectrometry analysis of protein
+RT   methylation.";
+RL   Mol. Cell. Proteomics 13:372-387(2014).
+RN   [15]
+RP   FUNCTION.
+RX   PubMed=26595526; DOI=10.18632/oncotarget.6363;
+RA   Liwak-Muir U., Dobson C.C., Naing T., Wylie Q., Chehade L., Baird S.D.,
+RA   Chakraborty P.K., Holcik M.;
+RT   "ERK8 is a novel HuR kinase that regulates tumour suppressor PDCD4 through
+RT   a miR-21 dependent mechanism.";
+RL   Oncotarget 7:1439-1450(2016).
+RN   [16]
+RP   SUBCELLULAR LOCATION, FUNCTION, AND MUTAGENESIS OF LYS-42.
+RX   PubMed=29021280; DOI=10.1534/genetics.117.300383;
+RA   Kazatskaya A., Kuhns S., Lambacher N.J., Kennedy J.E., Brear A.G.,
+RA   McManus G.J., Sengupta P., Blacque O.E.;
+RT   "Primary Cilium Formation and Ciliary Protein Trafficking Is Regulated by
+RT   the Atypical MAP Kinase MAPK15 in Caenorhabditis elegans and Human Cells.";
+RL   Genetics 207:1423-1440(2017).
+RN   [17]
+RP   FUNCTION, AND MUTAGENESIS OF LYS-42 AND ARG-59.
+RX   PubMed=28842414; DOI=10.1523/jneurosci.1582-17.2017;
+RA   Bermingham D.P., Hardaway J.A., Refai O., Marks C.R., Snider S.L.,
+RA   Sturgeon S.M., Spencer W.C., Colbran R.J., Miller D.M. III, Blakely R.D.;
+RT   "The Atypical MAP Kinase SWIP-13/ERK8 Regulates Dopamine Transporters
+RT   through a Rho-Dependent Mechanism.";
+RL   J. Neurosci. 37:9288-9304(2017).
+CC   -!- FUNCTION: Atypical MAPK protein that regulates several process such as
+CC       autophagy, ciliogenesis, protein trafficking/secretion and genome
+CC       integrity, in a kinase activity-dependent manner (PubMed:22948227,
+CC       PubMed:24618899, PubMed:29021280, PubMed:21847093, PubMed:20733054).
+CC       Controls both, basal and starvation-induced autophagy throught its
+CC       interaction with GABARAP, MAP1LC3B and GABARAPL1 leading to
+CC       autophagosome formation, SQSTM1 degradation and reduced MAP1LC3B
+CC       inhibitory phosphorylation (PubMed:22948227). Regulates primary cilium
+CC       formation and the localization of ciliary proteins involved in cilium
+CC       structure, transport, and signaling (PubMed:29021280). Prevents the
+CC       relocation of the sugar-adding enzymes from the Golgi to the
+CC       endoplasmic reticulum, thereby restricting the production of sugar-
+CC       coated proteins (PubMed:24618899). Upon amino-acid starvation, mediates
+CC       transitional endoplasmic reticulum site disassembly and inhibition of
+CC       secretion (PubMed:21847093). Binds to chromatin leading to MAPK15
+CC       activation and interaction with PCNA, that which protects genomic
+CC       integrity by inhibiting MDM2-mediated degradation of PCNA
+CC       (PubMed:20733054). Regulates DA transporter (DAT) activity and protein
+CC       expression via activation of RhoA (PubMed:28842414). In response to
+CC       H(2)O(2) treatment phosphorylates ELAVL1, thus preventing it from
+CC       binding to the PDCD4 3'UTR and rendering the PDCD4 mRNA accessible to
+CC       miR-21 and leading to its degradation and loss of protein expression
+CC       (PubMed:26595526). Also functions in a kinase activity-independent
+CC       manner as a negative regulator of growth (By similarity).
+CC       Phosphorylates in vitro FOS and MBP (PubMed:11875070, PubMed:16484222,
+CC       PubMed:20638370, PubMed:19166846). During oocyte maturation, plays a
+CC       key role in the microtubule organization and meiotic cell cycle
+CC       progression in oocytes, fertilized eggs, and early embryos (By
+CC       similarity). Interacts with ESRRA promoting its re-localization from
+CC       the nucleus to the cytoplasm and then prevents its transcriptional
+CC       activity (PubMed:21190936). {ECO:0000250|UniProtKB:Q80Y86,
+CC       ECO:0000250|UniProtKB:Q9Z2A6, ECO:0000269|PubMed:11875070,
+CC       ECO:0000269|PubMed:16484222, ECO:0000269|PubMed:19166846,
+CC       ECO:0000269|PubMed:20638370, ECO:0000269|PubMed:20733054,
+CC       ECO:0000269|PubMed:21190936, ECO:0000269|PubMed:21847093,
+CC       ECO:0000269|PubMed:22948227, ECO:0000269|PubMed:24618899,
+CC       ECO:0000269|PubMed:26595526, ECO:0000269|PubMed:28842414,
+CC       ECO:0000269|PubMed:29021280}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.24;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.24;
+CC   -!- ACTIVITY REGULATION: Activated by threonine and tyrosine
+CC       phosphorylation (PubMed:11875070, PubMed:16336213, PubMed:19166846).
+CC       Inhibited by dual specificity phosphatases, such as DUSP1 (By
+CC       similarity). Phosphorylation and activation in response to DNA damaging
+CC       agents, serum stimulation (PubMed:11875070, PubMed:16336213,
+CC       PubMed:19166846). Constitutively activated when phosphorylated on Tyr-
+CC       177. Activity depends on the relative rates of MAPK15
+CC       autophosphorylation and dephosphorylation by PTPN1 (PubMed:16336213).
+CC       {ECO:0000250|UniProtKB:Q9Z2A6, ECO:0000269|PubMed:11875070,
+CC       ECO:0000269|PubMed:16336213, ECO:0000269|PubMed:19166846}.
+CC   -!- SUBUNIT: Interacts with CSK/c-Src, ABL1, RET and TGFB1I1
+CC       (PubMed:11875070, PubMed:16484222, PubMed:16624805). Interacts with
+CC       GABARAP, MAP1LC3B and GABARAPL1; controls, in a kinase-dependent
+CC       fashion, both basal and starvation-induced autophagy (PubMed:22948227).
+CC       Interacts with ESRRA; promotes re-localization of ESRRA to the
+CC       cytoplasm through a XPO1-dependent mechanism then inhibits ESRRA
+CC       transcriptional activity (PubMed:21190936). Interacts with PCNA; the
+CC       interaction is chromatin binding- and kinase activity-dependent and
+CC       prevents MDM2-mediated PCNA destruction by inhibiting the association
+CC       of PCNA with MDM2 (PubMed:20733054). Interacts with DVL2 (By
+CC       similarity). Interacts with CLIC3; MAPK15 does not phosphorylates CLIC3
+CC       (By similarity). {ECO:0000250|UniProtKB:Q80Y86,
+CC       ECO:0000250|UniProtKB:Q9Z2A6, ECO:0000269|PubMed:11875070,
+CC       ECO:0000269|PubMed:16484222, ECO:0000269|PubMed:16624805,
+CC       ECO:0000269|PubMed:20733054, ECO:0000269|PubMed:21190936,
+CC       ECO:0000269|PubMed:22948227}.
+CC   -!- INTERACTION:
+CC       Q8TD08; P24941: CDK2; NbExp=4; IntAct=EBI-1383794, EBI-375096;
+CC       Q8TD08; P08238: HSP90AB1; NbExp=2; IntAct=EBI-1383794, EBI-352572;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm, cytoskeleton, cilium basal body
+CC       {ECO:0000269|PubMed:29021280}. Cell junction, tight junction
+CC       {ECO:0000269|PubMed:29021280}. Cytoplasm, cytoskeleton, microtubule
+CC       organizing center, centrosome, centriole {ECO:0000269|PubMed:29021280}.
+CC       Cytoplasmic vesicle, autophagosome {ECO:0000269|PubMed:22948227}. Golgi
+CC       apparatus {ECO:0000269|PubMed:24618899}. Nucleus
+CC       {ECO:0000269|PubMed:20638370, ECO:0000269|PubMed:21190936}. Cytoplasm
+CC       {ECO:0000269|PubMed:20638370, ECO:0000269|PubMed:21190936}. Cytoplasm,
+CC       cytoskeleton, spindle {ECO:0000250|UniProtKB:Q80Y86}. Note=Co-localizes
+CC       to the cytoplasm only in presence of ESRRA (PubMed:21190936).
+CC       Translocates to the nucleus upon activation (PubMed:20638370). At
+CC       prometaphase I, metaphase I (MI), anaphase I, telophase I, and
+CC       metaphase II (MII) stages, is stably detected at the spindle (By
+CC       similarity). {ECO:0000250|UniProtKB:Q80Y86,
+CC       ECO:0000269|PubMed:20638370, ECO:0000269|PubMed:21190936}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1;
+CC         IsoId=Q8TD08-1; Sequence=Displayed;
+CC       Name=2; Synonyms=Erk8 delta;
+CC         IsoId=Q8TD08-2; Sequence=VSP_017919, VSP_017920;
+CC       Name=3;
+CC         IsoId=Q8TD08-3; Sequence=VSP_017918, VSP_017921;
+CC   -!- TISSUE SPECIFICITY: Widely expressed with a maximal expression in lung
+CC       and kidney. {ECO:0000269|PubMed:11875070, ECO:0000269|PubMed:16484222}.
+CC   -!- DOMAIN: The N-terminal region (1-20) is the minimal region necessary
+CC       for ubiquitination and further proteasomal degradation. {ECO:0000250}.
+CC   -!- DOMAIN: The TXY motif contains the threonine and tyrosine residues
+CC       whose phosphorylation activates the MAP kinases.
+CC   -!- PTM: Autophosphorylated on Thr-175 and Tyr-177; activates the enzyme.
+CC       {ECO:0000269|PubMed:11875070, ECO:0000269|PubMed:16336213,
+CC       ECO:0000269|PubMed:19166846}.
+CC   -!- PTM: Ubiquitinated (PubMed:19166846). Ubiquitination may allow its
+CC       tight kinase activity regulation and rapid turnover. May be
+CC       ubiquitinated by a SCF E3 ligase (By similarity).
+CC       {ECO:0000250|UniProtKB:Q9Z2A6, ECO:0000269|PubMed:19166846}.
+CC   -!- MISCELLANEOUS: [Isoform 2]: Appears not to be a CSK- and RET-dependent
+CC       activated kinase. {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CMGC Ser/Thr
+CC       protein kinase family. MAP kinase subfamily. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AY065978; AAL40897.1; -; mRNA.
+DR   EMBL; AY994058; AAY44299.1; -; mRNA.
+DR   EMBL; BC028034; AAH28034.1; -; mRNA.
+DR   CCDS; CCDS6409.2; -. [Q8TD08-1]
+DR   RefSeq; NP_620590.2; NM_139021.2. [Q8TD08-1]
+DR   AlphaFoldDB; Q8TD08; -.
+DR   SMR; Q8TD08; -.
+DR   BioGRID; 128827; 30.
+DR   IntAct; Q8TD08; 39.
+DR   STRING; 9606.ENSP00000337691; -.
+DR   BindingDB; Q8TD08; -.
+DR   ChEMBL; CHEMBL5198; -.
+DR   DrugBank; DB00945; Acetylsalicylic acid.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugBank; DB01017; Minocycline.
+DR   DrugCentral; Q8TD08; -.
+DR   GuidetoPHARMACOLOGY; 2090; -.
+DR   iPTMnet; Q8TD08; -.
+DR   PhosphoSitePlus; Q8TD08; -.
+DR   BioMuta; MAPK15; -.
+DR   DMDM; 74760462; -.
+DR   EPD; Q8TD08; -.
+DR   jPOST; Q8TD08; -.
+DR   MassIVE; Q8TD08; -.
+DR   MaxQB; Q8TD08; -.
+DR   PaxDb; Q8TD08; -.
+DR   PeptideAtlas; Q8TD08; -.
+DR   PRIDE; Q8TD08; -.
+DR   ProteomicsDB; 74209; -. [Q8TD08-1]
+DR   ProteomicsDB; 74210; -. [Q8TD08-2]
+DR   ProteomicsDB; 74211; -. [Q8TD08-3]
+DR   Antibodypedia; 957; 353 antibodies from 30 providers.
+DR   DNASU; 225689; -.
+DR   Ensembl; ENST00000338033.9; ENSP00000337691.4; ENSG00000181085.15. [Q8TD08-1]
+DR   Ensembl; ENST00000395107.8; ENSP00000378539.4; ENSG00000181085.15. [Q8TD08-3]
+DR   Ensembl; ENST00000395108.2; ENSP00000378540.2; ENSG00000181085.15. [Q8TD08-2]
+DR   Ensembl; ENST00000615253.4; ENSP00000483093.1; ENSG00000274205.4. [Q8TD08-1]
+DR   GeneID; 225689; -.
+DR   KEGG; hsa:225689; -.
+DR   MANE-Select; ENST00000338033.9; ENSP00000337691.4; NM_139021.3; NP_620590.2.
+DR   UCSC; uc003yzj.4; human. [Q8TD08-1]
+DR   CTD; 225689; -.
+DR   DisGeNET; 225689; -.
+DR   GeneCards; MAPK15; -.
+DR   HGNC; HGNC:24667; MAPK15.
+DR   HPA; ENSG00000181085; Tissue enhanced (choroid plexus, fallopian tube).
+DR   MIM; 618616; gene.
+DR   neXtProt; NX_Q8TD08; -.
+DR   OpenTargets; ENSG00000181085; -.
+DR   PharmGKB; PA142671478; -.
+DR   VEuPathDB; HostDB:ENSG00000181085; -.
+DR   eggNOG; KOG0660; Eukaryota.
+DR   GeneTree; ENSGT00940000159758; -.
+DR   HOGENOM; CLU_000288_181_14_1; -.
+DR   InParanoid; Q8TD08; -.
+DR   OMA; PDQEWTR; -.
+DR   OrthoDB; 741207at2759; -.
+DR   PhylomeDB; Q8TD08; -.
+DR   TreeFam; TF105101; -.
+DR   PathwayCommons; Q8TD08; -.
+DR   SignaLink; Q8TD08; -.
+DR   SIGNOR; Q8TD08; -.
+DR   BioGRID-ORCS; 225689; 30 hits in 1112 CRISPR screens.
+DR   GeneWiki; MAPK15; -.
+DR   GenomeRNAi; 225689; -.
+DR   Pharos; Q8TD08; Tchem.
+DR   PRO; PR:Q8TD08; -.
+DR   Proteomes; UP000005640; Chromosome 8.
+DR   RNAct; Q8TD08; protein.
+DR   Bgee; ENSG00000181085; Expressed in right uterine tube and 88 other tissues.
+DR   Genevisible; Q8TD08; HS.
+DR   GO; GO:0005776; C:autophagosome; IDA:UniProtKB.
+DR   GO; GO:0005923; C:bicellular tight junction; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005911; C:cell-cell junction; IDA:UniProtKB.
+DR   GO; GO:0005814; C:centriole; IDA:UniProtKB.
+DR   GO; GO:0036064; C:ciliary basal body; IDA:UniProtKB.
+DR   GO; GO:0005737; C:cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0031410; C:cytoplasmic vesicle; IEA:UniProtKB-KW.
+DR   GO; GO:0005576; C:extracellular region; NAS:UniProtKB.
+DR   GO; GO:0005794; C:Golgi apparatus; IDA:UniProtKB.
+DR   GO; GO:0072687; C:meiotic spindle; IEA:Ensembl.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0003682; F:chromatin binding; IDA:UniProtKB.
+DR   GO; GO:0016301; F:kinase activity; IDA:UniProtKB.
+DR   GO; GO:0004707; F:MAP kinase activity; IDA:UniProtKB.
+DR   GO; GO:0004672; F:protein kinase activity; IDA:UniProtKB.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IBA:GO_Central.
+DR   GO; GO:0017124; F:SH3 domain binding; NAS:UniProtKB.
+DR   GO; GO:0006974; P:cellular response to DNA damage stimulus; IDA:UniProtKB.
+DR   GO; GO:0090494; P:dopamine uptake; IDA:UniProtKB.
+DR   GO; GO:0007029; P:endoplasmic reticulum organization; IMP:UniProtKB.
+DR   GO; GO:0035556; P:intracellular signal transduction; IBA:GO_Central.
+DR   GO; GO:0030336; P:negative regulation of cell migration; IMP:UniProtKB.
+DR   GO; GO:0008284; P:positive regulation of cell population proliferation; IDA:UniProtKB.
+DR   GO; GO:1905188; P:positive regulation of metaphase/anaphase transition of meiosis I; IEA:Ensembl.
+DR   GO; GO:1905832; P:positive regulation of spindle assembly; IEA:Ensembl.
+DR   GO; GO:0051973; P:positive regulation of telomerase activity; IDA:BHF-UCL.
+DR   GO; GO:1904355; P:positive regulation of telomere capping; IDA:BHF-UCL.
+DR   GO; GO:0032212; P:positive regulation of telomere maintenance via telomerase; IDA:BHF-UCL.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:1904491; P:protein localization to ciliary transition zone; IMP:UniProtKB.
+DR   GO; GO:0010506; P:regulation of autophagy; IDA:UniProtKB.
+DR   GO; GO:1902017; P:regulation of cilium assembly; IMP:UniProtKB.
+DR   GO; GO:0003400; P:regulation of COPII vesicle coating; IMP:UniProtKB.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR003527; MAP_kinase_CS.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS01351; MAPK; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; ATP-binding; Cell junction; Cell projection;
+KW   Cytoplasm; Cytoplasmic vesicle; Cytoskeleton; Golgi apparatus; Kinase;
+KW   Methylation; Nucleotide-binding; Nucleus; Phosphoprotein;
+KW   Reference proteome; Repeat; Serine/threonine-protein kinase;
+KW   Tight junction; Transferase; Ubl conjugation.
+FT   CHAIN           1..544
+FT                   /note="Mitogen-activated protein kinase 15"
+FT                   /id="PRO_0000232637"
+FT   DOMAIN          13..304
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REPEAT          371..375
+FT                   /note="PXXXP motif"
+FT                   /evidence="ECO:0000305|PubMed:20733054"
+FT   REPEAT          378..382
+FT                   /note="PXXXP motif"
+FT                   /evidence="ECO:0000305|PubMed:20733054"
+FT   REPEAT          386..390
+FT                   /note="PXXXP motif; regulates binding with chromatin and
+FT                   interaction with PCNA"
+FT                   /evidence="ECO:0000305|PubMed:20733054"
+FT   REPEAT          394..398
+FT                   /note="PXXXP motif; regulates binding with chromatin and
+FT                   interaction with PCNA"
+FT                   /evidence="ECO:0000305|PubMed:20733054"
+FT   REGION          265..285
+FT                   /note="Necessary to interact with ESRRA, to regulate its
+FT                   subcellular localization and to inhibit its transcriptional
+FT                   activity"
+FT                   /evidence="ECO:0000269|PubMed:21190936"
+FT   REGION          300..373
+FT                   /note="Requires for interaction with GABARAP, MAP1LC3B AND
+FT                   GABARAPL1"
+FT                   /evidence="ECO:0000269|PubMed:22948227"
+FT   REGION          347..413
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOTIF           175..177
+FT                   /note="TXY"
+FT   ACT_SITE        137
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         19..27
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         42
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         175
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000269|PubMed:11875070,
+FT                   ECO:0000269|PubMed:16336213, ECO:0000269|PubMed:19166846"
+FT   MOD_RES         177
+FT                   /note="Phosphotyrosine"
+FT                   /evidence="ECO:0000269|PubMed:11875070,
+FT                   ECO:0000269|PubMed:16336213, ECO:0000269|PubMed:19166846"
+FT   MOD_RES         449
+FT                   /note="Omega-N-methylarginine"
+FT                   /evidence="ECO:0007744|PubMed:24129315"
+FT   VAR_SEQ         95
+FT                   /note="M -> MGCPPSPPPPTAVRTLSA (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_017918"
+FT   VAR_SEQ         241..254
+FT                   /note="DLLALGSGCRASVL -> GAQTACRSGTGAST (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:16484222"
+FT                   /id="VSP_017919"
+FT   VAR_SEQ         255..544
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:16484222"
+FT                   /id="VSP_017920"
+FT   VAR_SEQ         261..544
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:15489334"
+FT                   /id="VSP_017921"
+FT   VARIANT         221
+FT                   /note="T -> K (in dbSNP:rs60732298)"
+FT                   /id="VAR_061535"
+FT   VARIANT         505
+FT                   /note="S -> P (in dbSNP:rs56038219)"
+FT                   /id="VAR_061536"
+FT   MUTAGEN         42
+FT                   /note="K->A: Not phosphorylated at Thr-175 and Tyr-177."
+FT                   /evidence="ECO:0000269|PubMed:16336213"
+FT   MUTAGEN         42
+FT                   /note="K->R: Loss of autophosphorylation and activity. Does
+FT                   not increase dopamine transporter activity. Impairs kinase
+FT                   activity. Does not rescue cilium assembly in
+FT                   MAPK15-depleted cells."
+FT                   /evidence="ECO:0000269|PubMed:11875070,
+FT                   ECO:0000269|PubMed:28842414, ECO:0000269|PubMed:29021280"
+FT   MUTAGEN         59
+FT                   /note="R->Q: Does not increase dopamine transporter
+FT                   activity. Impairs kinase activity."
+FT                   /evidence="ECO:0000269|PubMed:28842414"
+FT   MUTAGEN         155
+FT                   /note="D->A: Unable to induce the formation of
+FT                   autophagosomal structures. Is able to bind to MAP1LC3B and
+FT                   to colocalize with this protein to autophagosomal
+FT                   structures. Does not induce phosphorylation by methyl
+FT                   methanesulfonate. Loas of phosphorylation. Dominant
+FT                   negative mutant. Not phosphorylated at Thr-175 and
+FT                   Tyr-177."
+FT                   /evidence="ECO:0000269|PubMed:16336213,
+FT                   ECO:0000269|PubMed:19166846, ECO:0000269|PubMed:22948227"
+FT   MUTAGEN         175
+FT                   /note="T->A: Loss of autophosphorylation and activity.
+FT                   Still heavily phosphorylated at Tyr-177. Does not rescues
+FT                   inhibition of O-glycosylation in MAPK15-depleted cells;
+FT                   when associated with F-177."
+FT                   /evidence="ECO:0000269|PubMed:11875070,
+FT                   ECO:0000269|PubMed:16336213, ECO:0000269|PubMed:24618899"
+FT   MUTAGEN         177
+FT                   /note="Y->A: Loss of autophosphorylation and activity.
+FT                   Heavily phosphorylated at Thr-175."
+FT                   /evidence="ECO:0000269|PubMed:11875070,
+FT                   ECO:0000269|PubMed:16336213"
+FT   MUTAGEN         177
+FT                   /note="Y->F: Does not rescues inhibition of O-glycosylation
+FT                   in MAPK15-depleted cells; when associated with A-175."
+FT                   /evidence="ECO:0000269|PubMed:24618899"
+FT   MUTAGEN         265..269
+FT                   /note="LDALL->ADAAA: Markedly decreases interaction with
+FT                   ESRRA. Impairs interaction with ESRRA; when associated with
+FT                   A-281 and 284-A--A-285. Loses the ability to re-localize
+FT                   ESRRA to the cytoplasm. Does not affect subcellular
+FT                   location in cytoplasm in presence of ESRRA. Loses the
+FT                   ability to repress ESRRA transcriptional activity."
+FT                   /evidence="ECO:0000269|PubMed:21190936"
+FT   MUTAGEN         281..285
+FT                   /note="LRRLL->ARRAA: Markedly decreases interaction with
+FT                   ESRRA. Impairs interaction with ESRRA; when associated with
+FT                   A-265 and 268-A--A-269. Loses the ability to re-localize
+FT                   ESRRA to the cytoplasm. Does not affect subcellular
+FT                   location in cytoplasm in presence of ESRRA.Loses the
+FT                   ability to repress ESRRA transcriptional activity."
+FT                   /evidence="ECO:0000269|PubMed:21190936"
+FT   MUTAGEN         300
+FT                   /note="Q->A: Impairs interaction with PCNA. Associates with
+FT                   chromatin."
+FT                   /evidence="ECO:0000269|PubMed:20733054"
+FT   MUTAGEN         340..343
+FT                   /note="YQMI->AQMA: Impairs interaction with GABARAP and
+FT                   MAP1LC3B. Affects subcellular localization in
+FT                   autophagosome. Does not induce autophagy."
+FT                   /evidence="ECO:0000269|PubMed:22948227"
+FT   MUTAGEN         390
+FT                   /note="P->A: Impairs chromatin binding; when associated
+FT                   with A-398. Increases kinase activity; when associated with
+FT                   A-398."
+FT                   /evidence="ECO:0000269|PubMed:20733054"
+FT   MUTAGEN         398
+FT                   /note="P->A: Impairs chromatin binding; when associated
+FT                   with A-390. Increases kinase activity; when associated with
+FT                   A-390."
+FT                   /evidence="ECO:0000269|PubMed:20733054"
+FT   CONFLICT        113
+FT                   /note="H -> R (in Ref. 2; AAY44299)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   544 AA;  59832 MW;  758E0E3B9654AAC5 CRC64;
+     MCTVVDPRIV RRYLLRRQLG QGAYGIVWKA VDRRTGEVVA IKKIFDAFRD KTDAQRTFRE
+     ITLLQEFGDH PNIISLLDVI RAENDRDIYL VFEFMDTDLN AVIRKGGLLQ DVHVRSIFYQ
+     LLRATRFLHS GHVVHRDQKP SNVLLDANCT VKLCDFGLAR SLGDLPEGPE DQAVTEYVAT
+     RWYRAPEVLL SSHRYTLGVD MWSLGCILGE MLRGRPLFPG TSTLHQLELI LETIPPPSEE
+     DLLALGSGCR ASVLHQLGSR PRQTLDALLP PDTSPEALDL LRRLLVFAPD KRLSATQALQ
+     HPYVQRFHCP SDEWAREADV RPRAHEGVQL SVPEYRSRVY QMILECGGSS GTSREKGPEG
+     VSPSQAHLHK PRADPQLPSR TPVQGPRPRP QSSPGHDPAE HESPRAAKNV PRQNSAPLLQ
+     TALLGNGERP PGAKEAPPLT LSLVKPSGRG AAPSLTSQAA AQVANQALIR GDWNRGGGVR
+     VASVQQVPPR LPPEARPGRR MFSTSALQGA QGGARALLGG YSQAYGTVCH SALGHLPLLE
+     GHHV
+//

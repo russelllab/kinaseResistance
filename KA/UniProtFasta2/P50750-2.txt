@@ -1,0 +1,680 @@
+ID   CDK9_HUMAN              Reviewed;         489 AA.
+AC   P50750-2;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   21-JUN-2005, sequence version 3.
+DT   12-OCT-2022, entry version 236.
+DE   RecName: Full=Isoform 2 of Cyclin-dependent kinase 9;
+DE            EC=2.7.11.22 {ECO:0000269|PubMed:12037670, ECO:0000269|PubMed:20980437};
+DE            EC=2.7.11.23 {ECO:0000269|PubMed:21127351, ECO:0000269|PubMed:28426094};
+DE   AltName: Full=C-2K;
+DE   AltName: Full=Cell division cycle 2-like protein kinase 4;
+DE   AltName: Full=Cell division protein kinase 9 {ECO:0000303|PubMed:10903437};
+DE   AltName: Full=Serine/threonine-protein kinase PITALRE {ECO:0000303|PubMed:8170997};
+DE   AltName: Full=Tat-associated kinase complex catalytic subunit;
+GN   Name=CDK9 {ECO:0000303|PubMed:10903437, ECO:0000312|HGNC:HGNC:1780};
+GN   Synonyms=CDC2L4, TAK;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=8170997; DOI=10.1073/pnas.91.9.3834;
+RA   Grana X., de Luca A., Sang N., Fu Y., Claudio P.P., Rosenblatt J.,
+RA   Morgan D.O., Giordano A.;
+RT   "PITALRE, a nuclear CDC2-related protein kinase that phosphorylates the
+RT   retinoblastoma protein in vitro.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 91:3834-3838(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), AND VARIANT ALA-231.
+RX   PubMed=7695608; DOI=10.1006/bbrc.1995.1375;
+RA   Best J.L., Presky D.H., Swerlick R.A., Burns D.K., Chu W.;
+RT   "Cloning of a full-length cDNA sequence encoding a cdc2-related protein
+RT   kinase from human endothelial cells.";
+RL   Biochem. Biophys. Res. Commun. 208:562-568(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND VARIANT ALA-231.
+RX   PubMed=10903437; DOI=10.1016/s0378-1119(00)00215-8;
+RA   Liu H., Rice A.P.;
+RT   "Genomic organization and characterization of promoter function of the
+RT   human CDK9 gene.";
+RL   Gene 252:51-59(2000).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RA   Kalnine N., Chen X., Rolfs A., Halleck A., Hines L., Eisenstein S.,
+RA   Koundinya M., Raphael J., Moreira D., Kelley T., LaBaer J., Lin Y.,
+RA   Phelan M., Farmer A.;
+RT   "Cloning of human full-length CDSs in BD Creator(TM) system donor vector.";
+RL   Submitted (OCT-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RG   NIEHS SNPs program;
+RL   Submitted (JUN-2002) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15164053; DOI=10.1038/nature02465;
+RA   Humphray S.J., Oliver K., Hunt A.R., Plumb R.W., Loveland J.E., Howe K.L.,
+RA   Andrews T.D., Searle S., Hunt S.E., Scott C.E., Jones M.C., Ainscough R.,
+RA   Almeida J.P., Ambrose K.D., Ashwell R.I.S., Babbage A.K., Babbage S.,
+RA   Bagguley C.L., Bailey J., Banerjee R., Barker D.J., Barlow K.F., Bates K.,
+RA   Beasley H., Beasley O., Bird C.P., Bray-Allen S., Brown A.J., Brown J.Y.,
+RA   Burford D., Burrill W., Burton J., Carder C., Carter N.P., Chapman J.C.,
+RA   Chen Y., Clarke G., Clark S.Y., Clee C.M., Clegg S., Collier R.E.,
+RA   Corby N., Crosier M., Cummings A.T., Davies J., Dhami P., Dunn M.,
+RA   Dutta I., Dyer L.W., Earthrowl M.E., Faulkner L., Fleming C.J.,
+RA   Frankish A., Frankland J.A., French L., Fricker D.G., Garner P.,
+RA   Garnett J., Ghori J., Gilbert J.G.R., Glison C., Grafham D.V., Gribble S.,
+RA   Griffiths C., Griffiths-Jones S., Grocock R., Guy J., Hall R.E.,
+RA   Hammond S., Harley J.L., Harrison E.S.I., Hart E.A., Heath P.D.,
+RA   Henderson C.D., Hopkins B.L., Howard P.J., Howden P.J., Huckle E.,
+RA   Johnson C., Johnson D., Joy A.A., Kay M., Keenan S., Kershaw J.K.,
+RA   Kimberley A.M., King A., Knights A., Laird G.K., Langford C., Lawlor S.,
+RA   Leongamornlert D.A., Leversha M., Lloyd C., Lloyd D.M., Lovell J.,
+RA   Martin S., Mashreghi-Mohammadi M., Matthews L., McLaren S., McLay K.E.,
+RA   McMurray A., Milne S., Nickerson T., Nisbett J., Nordsiek G., Pearce A.V.,
+RA   Peck A.I., Porter K.M., Pandian R., Pelan S., Phillimore B., Povey S.,
+RA   Ramsey Y., Rand V., Scharfe M., Sehra H.K., Shownkeen R., Sims S.K.,
+RA   Skuce C.D., Smith M., Steward C.A., Swarbreck D., Sycamore N., Tester J.,
+RA   Thorpe A., Tracey A., Tromans A., Thomas D.W., Wall M., Wallis J.M.,
+RA   West A.P., Whitehead S.L., Willey D.L., Williams S.A., Wilming L.,
+RA   Wray P.W., Young L., Ashurst J.L., Coulson A., Blocker H., Durbin R.M.,
+RA   Sulston J.E., Hubbard T., Jackson M.J., Bentley D.R., Beck S., Rogers J.,
+RA   Dunham I.;
+RT   "DNA sequence and analysis of human chromosome 9.";
+RL   Nature 429:369-374(2004).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Cervix;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [8]
+RP   INTERACTION WITH HIV TAT.
+RX   PubMed=9491887; DOI=10.1016/s0092-8674(00)80939-3;
+RA   Wei P., Garber M.E., Fang S.-M., Fischer W.H., Jones K.A.;
+RT   "A novel CDK9-associated C-type cyclin interacts directly with HIV-1 Tat
+RT   and mediates its high-affinity, loop-specific binding to TAR RNA.";
+RL   Cell 92:451-462(1998).
+RN   [9]
+RP   FUNCTION.
+RX   PubMed=9857195; DOI=10.1093/emboj/17.24.7395;
+RA   Wada T., Takagi T., Yamaguchi Y., Watanabe D., Handa H.;
+RT   "Evidence that P-TEFb alleviates the negative effect of DSIF on RNA
+RT   polymerase II-dependent transcription in vitro.";
+RL   EMBO J. 17:7395-7403(1998).
+RN   [10]
+RP   IDENTIFICATION IN A COMPLEX WITH CCNT1 AND CCNT2.
+RX   PubMed=9499409; DOI=10.1101/gad.12.5.755;
+RA   Peng J.-M., Zhu Y., Milton J.T., Price D.H.;
+RT   "Identification of multiple cyclin subunits of human P-TEFb.";
+RL   Genes Dev. 12:755-762(1998).
+RN   [11]
+RP   FUNCTION, AND IDENTIFICATION IN A COMPLEX WITH HTATSF1; CCNT1; RNA POL II;
+RP   SUPT5H AND NCL.
+RX   PubMed=10393184; DOI=10.1093/emboj/18.13.3688;
+RA   Parada C.A., Roeder R.G.;
+RT   "A novel RNA polymerase II-containing complex potentiates Tat-enhanced HIV-
+RT   1 transcription.";
+RL   EMBO J. 18:3688-3701(1999).
+RN   [12]
+RP   FUNCTION, AND INTERACTION WITH CCNK.
+RX   PubMed=10574912; DOI=10.1074/jbc.274.49.34527;
+RA   Fu T.J., Peng J., Lee G., Price D.H., Flores O.;
+RT   "Cyclin K functions as a CDK9 regulatory subunit and participates in RNA
+RT   polymerase II transcription.";
+RL   J. Biol. Chem. 274:34527-34530(1999).
+RN   [13]
+RP   FUNCTION.
+RX   PubMed=10912001; DOI=10.1016/s1097-2765(00)80272-5;
+RA   Wada T., Orphanides G., Hasegawa J., Kim D.-K., Shima D., Yamaguchi Y.,
+RA   Fukuda A., Hisatake K., Oh S., Reinberg D., Handa H.;
+RT   "FACT relieves DSIF/NELF-mediated inhibition of transcriptional elongation
+RT   and reveals functional differences between P-TEFb and TFIIH.";
+RL   Mol. Cell 5:1067-1072(2000).
+RN   [14]
+RP   FUNCTION.
+RX   PubMed=10757782; DOI=10.1128/mcb.20.9.2970-2983.2000;
+RA   Ivanov D., Kwak Y.T., Guo J., Gaynor R.B.;
+RT   "Domains in the SPT5 protein that modulate its transcriptional regulatory
+RT   properties.";
+RL   Mol. Cell. Biol. 20:2970-2983(2000).
+RN   [15]
+RP   PHOSPHORYLATION BY PKA, AUTOPHOSPHORYLATION, PHOSPHORYLATION AT SER-347;
+RP   THR-350; SER-353; THR-354 AND SER-357, INTERACTION WITH HIV TAT, AND
+RP   MUTAGENESIS OF 347-SER--SER-357 AND ASP-167.
+RX   PubMed=10958691; DOI=10.1128/mcb.20.18.6958-6969.2000;
+RA   Garber M.E., Mayall T.P., Suess E.M., Meisenhelder J., Thompson N.E.,
+RA   Jones K.A.;
+RT   "CDK9 autophosphorylation regulates high-affinity binding of the human
+RT   immunodeficiency virus type 1 tat-P-TEFb complex to TAR RNA.";
+RL   Mol. Cell. Biol. 20:6958-6969(2000).
+RN   [16]
+RP   FUNCTION, AND MUTAGENESIS OF ASP-167 AND THR-186.
+RX   PubMed=11145967; DOI=10.1074/jbc.m010908200;
+RA   Kim J.B., Sharp P.A.;
+RT   "Positive transcription elongation factor B phosphorylates hSPT5 and RNA
+RT   polymerase II carboxyl-terminal domain independently of cyclin-dependent
+RT   kinase-activating kinase.";
+RL   J. Biol. Chem. 276:12317-12323(2001).
+RN   [17]
+RP   FUNCTION.
+RX   PubMed=11112772; DOI=10.1074/jbc.m006130200;
+RA   Ping Y.-H., Rana T.M.;
+RT   "DSIF and NELF interact with RNA polymerase II elongation complex and HIV-1
+RT   Tat stimulates P-TEFb-mediated phosphorylation of RNA polymerase II and
+RT   DSIF during transcription elongation.";
+RL   J. Biol. Chem. 276:12951-12958(2001).
+RN   [18]
+RP   FUNCTION.
+RX   PubMed=11575923; DOI=10.1006/jmbi.2001.4991;
+RA   Lavoie S.B., Albert A.L., Handa H., Vincent M., Bensaude O.;
+RT   "The peptidyl-prolyl isomerase Pin1 interacts with hSpt5 phosphorylated by
+RT   Cdk9.";
+RL   J. Mol. Biol. 312:675-685(2001).
+RN   [19]
+RP   FUNCTION, AND INTERACTION WITH CCNK/CYCLIN K.
+RX   PubMed=11884399; DOI=10.1074/jbc.m200117200;
+RA   Lin X., Taube R., Fujinaga K., Peterlin B.M.;
+RT   "P-TEFb containing cyclin K and Cdk9 can activate transcription via RNA.";
+RL   J. Biol. Chem. 277:16873-16878(2002).
+RN   [20]
+RP   INTERACTION WITH AFF4.
+RX   PubMed=12065898; DOI=10.1007/bf02256070;
+RA   Estable M.C., Naghavi M.H., Kato H., Xiao H., Qin J., Vahlne A.,
+RA   Roeder R.G.;
+RT   "MCEF, the newest member of the AF4 family of transcription factors
+RT   involved in leukemia, is a positive transcription elongation factor-b-
+RT   associated protein.";
+RL   J. Biomed. Sci. 9:234-245(2002).
+RN   [21]
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=12115727; DOI=10.1002/jcp.10130;
+RA   Napolitano G., Licciardo P., Carbone R., Majello B., Lania L.;
+RT   "CDK9 has the intrinsic property to shuttle between nucleus and cytoplasm,
+RT   and enhanced expression of cyclin T1 promotes its nuclear localization.";
+RL   J. Cell. Physiol. 192:209-215(2002).
+RN   [22]
+RP   FUNCTION.
+RX   PubMed=11809800; DOI=10.1128/mcb.22.4.1079-1093.2002;
+RA   Bourgeois C.F., Kim Y.K., Churcher M.J., West M.J., Karn J.;
+RT   "Spt5 cooperates with human immunodeficiency virus type 1 Tat by preventing
+RT   premature RNA release at terminator sequences.";
+RL   Mol. Cell. Biol. 22:1079-1093(2002).
+RN   [23]
+RP   FUNCTION AS MYOD1 KINASE, CATALYTIC ACTIVITY, AND INTERACTION WITH MYOD1
+RP   AND CCNT2.
+RX   PubMed=12037670; DOI=10.1038/sj.onc.1205493;
+RA   Simone C., Stiegler P., Bagella L., Pucci B., Bellan C., De Falco G.,
+RA   De Luca A., Guanti G., Puri P.L., Giordano A.;
+RT   "Activation of MyoD-dependent transcription by cdk9/cyclin T2.";
+RL   Oncogene 21:4137-4148(2002).
+RN   [24]
+RP   INTERACTION WITH SUPT5H.
+RX   PubMed=12718890; DOI=10.1016/s1097-2765(03)00101-1;
+RA   Kwak Y.T., Guo J., Prajapati S., Park K.-J., Surabhi R.M., Miller B.,
+RA   Gehrig P., Gaynor R.B.;
+RT   "Methylation of SPT5 regulates its interaction with RNA polymerase II and
+RT   transcriptional elongation properties.";
+RL   Mol. Cell 11:1055-1066(2003).
+RN   [25]
+RP   FUNCTION.
+RX   PubMed=15564463; DOI=10.1128/jvi.78.24.13522-13533.2004;
+RA   Zhou M., Deng L., Lacoste V., Park H.U., Pumfery A., Kashanchi F.,
+RA   Brady J.N., Kumar A.;
+RT   "Coordination of transcription factor phosphorylation and histone
+RT   methylation by the P-TEFb kinase during human immunodeficiency virus type 1
+RT   transcription.";
+RL   J. Virol. 78:13522-13533(2004).
+RN   [26]
+RP   FUNCTION.
+RX   PubMed=14701750; DOI=10.1128/mcb.24.2.787-795.2004;
+RA   Fujinaga K., Irwin D., Huang Y., Taube R., Kurosu T., Peterlin B.M.;
+RT   "Dynamics of human immunodeficiency virus transcription: P-TEFb
+RT   phosphorylates RD and dissociates negative effectors from the
+RT   transactivation response element.";
+RL   Mol. Cell. Biol. 24:787-795(2004).
+RN   [27]
+RP   IDENTIFICATION IN INACTIVE 7SK SNRNP COMPLEX, AND PHOSPHORYLATION AT
+RP   THR-186.
+RX   PubMed=15965233; DOI=10.1074/jbc.m502712200;
+RA   Li Q., Price J.P., Byers S.A., Cheng D., Peng J., Price D.H.;
+RT   "Analysis of the large inactive P-TEFb complex indicates that it contains
+RT   one 7SK molecule, a dimer of HEXIM1 or HEXIM2, and two P-TEFb molecules
+RT   containing Cdk9 phosphorylated at threonine 186.";
+RL   J. Biol. Chem. 280:28819-28826(2005).
+RN   [28]
+RP   FUNCTION, AND INTERACTION WITH BRD4.
+RX   PubMed=16109376; DOI=10.1016/j.molcel.2005.06.027;
+RA   Jang M.K., Mochizuki K., Zhou M., Jeong H.S., Brady J.N., Ozato K.;
+RT   "The bromodomain protein Brd4 is a positive regulatory component of P-TEFb
+RT   and stimulates RNA polymerase II-dependent transcription.";
+RL   Mol. Cell 19:523-534(2005).
+RN   [29]
+RP   FUNCTION, AND INTERACTION WITH BRD4.
+RX   PubMed=16109377; DOI=10.1016/j.molcel.2005.06.029;
+RA   Yang Z., Yik J.H., Chen R., He N., Jang M.K., Ozato K., Zhou Q.;
+RT   "Recruitment of P-TEFb for stimulation of transcriptional elongation by the
+RT   bromodomain protein Brd4.";
+RL   Mol. Cell 19:535-545(2005).
+RN   [30]
+RP   FUNCTION IN CYTOKINE SIGNALING, AND INTERACTION WITH STAT3.
+RX   PubMed=17956865; DOI=10.1074/jbc.m706458200;
+RA   Hou T., Ray S., Brasier A.R.;
+RT   "The functional role of an interleukin 6-inducible CDK9.STAT3 complex in
+RT   human gamma-fibrinogen gene expression.";
+RL   J. Biol. Chem. 282:37091-37102(2007).
+RN   [31]
+RP   IDENTIFICATION IN THE 7SK SNRNP COMPLEX.
+RX   PubMed=17643375; DOI=10.1016/j.molcel.2007.06.027;
+RA   Jeronimo C., Forget D., Bouchard A., Li Q., Chua G., Poitras C.,
+RA   Therien C., Bergeron D., Bourassa S., Greenblatt J., Chabot B.,
+RA   Poirier G.G., Hughes T.R., Blanchette M., Price D.H., Coulombe B.;
+RT   "Systematic analysis of the protein interaction network for the human
+RT   transcription machinery reveals the identity of the 7SK capping enzyme.";
+RL   Mol. Cell 27:262-274(2007).
+RN   [32]
+RP   ACETYLATION AT LYS-44, IDENTIFICATION IN COMPLEX WITH NCOR1; HEXIM1 AND
+RP   HDAC3, AND MUTAGENESIS OF LYS-44.
+RX   PubMed=17452463; DOI=10.1128/mcb.00857-06;
+RA   Fu J., Yoon H.-G., Qin J., Wong J.;
+RT   "Regulation of P-TEFb elongation complex activity by CDK9 acetylation.";
+RL   Mol. Cell. Biol. 27:4641-4651(2007).
+RN   [33]
+RP   PHOSPHORYLATION AT THR-186, DEPHOSPHORYLATION BY PPP1CA, P-TEFB/7SK SNRNP
+RP   COMPLEX, SUBUNIT, INTERACTION WITH BRD4, AND ACTIVITY REGULATION.
+RX   PubMed=18483222; DOI=10.1101/gad.1636008;
+RA   Chen R., Liu M., Li H., Xue Y., Ramey W.N., He N., Ai N., Luo H., Zhu Y.,
+RA   Zhou N., Zhou Q.;
+RT   "PP2B and PP1alpha cooperatively disrupt 7SK snRNP to release P-TEFb for
+RT   transcription in response to Ca2+ signaling.";
+RL   Genes Dev. 22:1356-1368(2008).
+RN   [34]
+RP   PHOSPHORYLATION AT THR-186, AND DEPHOSPHORYLATION BY PPM1A AND PPM1B.
+RX   PubMed=18829461; DOI=10.1074/jbc.m807495200;
+RA   Wang Y., Dow E.C., Liang Y.Y., Ramakrishnan R., Liu H., Sung T.L., Lin X.,
+RA   Rice A.P.;
+RT   "Phosphatase PPM1A regulates phosphorylation of Thr-186 in the Cdk9 T-
+RT   loop.";
+RL   J. Biol. Chem. 283:33578-33584(2008).
+RN   [35]
+RP   IDENTIFICATION IN COMPLEX WITH LARP7 IN 7SK SNRNP COMPLEX.
+RX   PubMed=18249148; DOI=10.1016/j.molcel.2008.01.003;
+RA   He N., Jahchan N.S., Hong E., Li Q., Bayfield M.A., Maraia R.J., Luo K.,
+RA   Zhou Q.;
+RT   "A La-related protein modulates 7SK snRNP integrity to suppress P-TEFb-
+RT   dependent transcriptional elongation and tumorigenesis.";
+RL   Mol. Cell 29:588-599(2008).
+RN   [36]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-347, PHOSPHORYLATION [LARGE
+RP   SCALE ANALYSIS] AT SER-35 (ISOFORM 2), AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18691976; DOI=10.1016/j.molcel.2008.07.007;
+RA   Daub H., Olsen J.V., Bairlein M., Gnad F., Oppermann F.S., Korner R.,
+RA   Greff Z., Keri G., Stemmann O., Mann M.;
+RT   "Kinase-selective enrichment enables quantitative phosphoproteomics of the
+RT   kinome across the cell cycle.";
+RL   Mol. Cell 31:438-448(2008).
+RN   [37]
+RP   ACETYLATION AT LYS-44 AND LYS-48 BY PCAF/KAT2B AND GCN5/KAT2A, ACTIVITY
+RP   REGULATION BY ACETYLATION, AND SUBCELLULAR LOCATION.
+RX   PubMed=18250157; DOI=10.1128/mcb.01557-07;
+RA   Sabo A., Lusic M., Cereseto A., Giacca M.;
+RT   "Acetylation of conserved lysines in the catalytic core of cyclin-dependent
+RT   kinase 9 inhibits kinase activity and regulates transcription.";
+RL   Mol. Cell. Biol. 28:2201-2212(2008).
+RN   [38]
+RP   FUNCTION IN CYTOKINE SIGNALING, AND INTERACTION WITH RELA/P65.
+RX   PubMed=18362169; DOI=10.1128/mcb.01152-07;
+RA   Nowak D.E., Tian B., Jamaluddin M., Boldogh I., Vergara L.A., Choudhary S.,
+RA   Brasier A.R.;
+RT   "RelA Ser276 phosphorylation is required for activation of a subset of NF-
+RT   kappaB-dependent genes by recruiting cyclin-dependent kinase 9/cyclin T1
+RT   complexes.";
+RL   Mol. Cell. Biol. 28:3623-3638(2008).
+RN   [39]
+RP   FUNCTION IN HISTONE REGULATION.
+RX   PubMed=19844166; DOI=10.4161/cc.8.22.9890;
+RA   Pirngruber J., Shchebet A., Johnsen S.A.;
+RT   "Insights into the function of the human P-TEFb component CDK9 in the
+RT   regulation of chromatin modifications and co-transcriptional mRNA
+RT   processing.";
+RL   Cell Cycle 8:3636-3642(2009).
+RN   [40]
+RP   FUNCTION IN HISTONE H2B UBIQUITINATION.
+RX   PubMed=19575011; DOI=10.1038/embor.2009.108;
+RA   Pirngruber J., Shchebet A., Schreiber L., Shema E., Minsky N.,
+RA   Chapman R.D., Eick D., Aylon Y., Oren M., Johnsen S.A.;
+RT   "CDK9 directs H2B monoubiquitination and controls replication-dependent
+RT   histone mRNA 3'-end processing.";
+RL   EMBO Rep. 10:894-900(2009).
+RN   [41]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-347 AND THR-350,
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-35 (ISOFORM 2), AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [42]
+RP   FUNCTION IN DNA REPAIR, AND INTERACTION WITH KU70/XRCC6.
+RX   PubMed=20493174; DOI=10.1016/j.bbrc.2010.05.092;
+RA   Liu H., Herrmann C.H., Chiang K., Sung T.L., Moon S.H., Donehower L.A.,
+RA   Rice A.P.;
+RT   "55K isoform of CDK9 associates with Ku70 and is involved in DNA repair.";
+RL   Biochem. Biophys. Res. Commun. 397:245-250(2010).
+RN   [43]
+RP   FUNCTION IN CDK9/CYCLIN K COMPLEX DURING REPLICATION STRESS.
+RX   PubMed=20930849; DOI=10.1038/embor.2010.153;
+RA   Yu D.S., Zhao R., Hsu E.L., Cayer J., Ye F., Guo Y., Shyr Y., Cortez D.;
+RT   "Cyclin-dependent kinase 9-cyclin K functions in the replication stress
+RT   response.";
+RL   EMBO Rep. 11:876-882(2010).
+RN   [44]
+RP   FUNCTION IN CARDIAC HYPERTROPHY, AND IDENTIFICATION IN COMPLEX WITH
+RP   CCNT1/CYCLIN-T1; EP300 AND GATA4.
+RX   PubMed=20081228; DOI=10.1074/jbc.m109.070458;
+RA   Sunagawa Y., Morimoto T., Takaya T., Kaichi S., Wada H., Kawamura T.,
+RA   Fujita M., Shimatsu A., Kita T., Hasegawa K.;
+RT   "Cyclin-dependent kinase-9 is a component of the p300/GATA4 complex
+RT   required for phenylephrine-induced hypertrophy in cardiomyocytes.";
+RL   J. Biol. Chem. 285:9556-9568(2010).
+RN   [45]
+RP   IDENTIFICATION IN THE SEC COMPLEX.
+RX   PubMed=20471948; DOI=10.1016/j.molcel.2010.04.013;
+RA   He N., Liu M., Hsu J., Xue Y., Chou S., Burlingame A., Krogan N.J.,
+RA   Alber T., Zhou Q.;
+RT   "HIV-1 Tat and host AFF4 recruit two transcription elongation factors into
+RT   a bifunctional complex for coordinated activation of HIV-1 transcription.";
+RL   Mol. Cell 38:428-438(2010).
+RN   [46]
+RP   IDENTIFICATION IN THE SEC COMPLEX.
+RX   PubMed=20159561; DOI=10.1016/j.molcel.2010.01.026;
+RA   Lin C., Smith E.R., Takahashi H., Lai K.C., Martin-Brown S., Florens L.,
+RA   Washburn M.P., Conaway J.W., Conaway R.C., Shilatifard A.;
+RT   "AFF4, a component of the ELL/P-TEFb elongation complex and a shared
+RT   subunit of MLL chimeras, can link transcription elongation to leukemia.";
+RL   Mol. Cell 37:429-437(2010).
+RN   [47]
+RP   FUNCTION IN AR KINASE, CATALYTIC ACTIVITY, AND INTERACTION WITH AR.
+RX   PubMed=20980437; DOI=10.1210/me.2010-0238;
+RA   Gordon V., Bhadel S., Wunderlich W., Zhang J., Ficarro S.B., Mollah S.A.,
+RA   Shabanowitz J., Hunt D.F., Xenarios I., Hahn W.C., Conaway M., Carey M.F.,
+RA   Gioeli D.;
+RT   "CDK9 regulates AR promoter selectivity and cell growth through serine 81
+RT   phosphorylation.";
+RL   Mol. Endocrinol. 24:2267-2280(2010).
+RN   [48]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+RN   [49]
+RP   IDENTIFICATION IN THE SEC COMPLEX.
+RX   PubMed=22195968; DOI=10.1016/j.molcel.2011.12.008;
+RA   Smith E.R., Lin C., Garrett A.S., Thornton J., Mohaghegh N., Hu D.,
+RA   Jackson J., Saraf A., Swanson S.K., Seidel C., Florens L., Washburn M.P.,
+RA   Eissenberg J.C., Shilatifard A.;
+RT   "The little elongation complex regulates small nuclear RNA transcription.";
+RL   Mol. Cell 44:954-965(2011).
+RN   [50]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-186, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21406692; DOI=10.1126/scisignal.2001570;
+RA   Rigbolt K.T., Prokhorova T.A., Akimov V., Henningsen J., Johansen P.T.,
+RA   Kratchmarova I., Kassem M., Mann M., Olsen J.V., Blagoev B.;
+RT   "System-wide temporal characterization of the proteome and phosphoproteome
+RT   of human embryonic stem cell differentiation.";
+RL   Sci. Signal. 4:RS3-RS3(2011).
+RN   [51]
+RP   ACTIVITY REGULATION BY CDKI-71.
+RX   PubMed=21484792; DOI=10.1002/ijc.26127;
+RA   Liu X., Shi S., Lam F., Pepper C., Fischer P.M., Wang S.;
+RT   "CDKI-71, a novel CDK9 inhibitor, is preferentially cytotoxic to cancer
+RT   cells compared to flavopiridol.";
+RL   Int. J. Cancer 130:1216-1226(2012).
+RN   [52]
+RP   FUNCTION AS RPB1/POLR2A CTD KINASE, CATALYTIC ACTIVITY, POLYUBIQUITINATION
+RP   BY UBR5, AND INTERACTION WITH UBR5 AND TFIIS/TCEA1.
+RX   PubMed=21127351; DOI=10.1074/jbc.m110.176628;
+RA   Cojocaru M., Bouchard A., Cloutier P., Cooper J.J., Varzavand K.,
+RA   Price D.H., Coulombe B.;
+RT   "Transcription factor IIS cooperates with the E3 ligase UBR5 to
+RT   ubiquitinate the CDK9 subunit of the positive transcription elongation
+RT   factor B.";
+RL   J. Biol. Chem. 286:5012-5022(2011).
+RN   [53]
+RP   PHOSPHORYLATION AT THR-186, ACTIVITY REGULATION, DEGRADATION BY THE
+RP   PROTEASOME, AND MUTAGENESIS OF THR-186.
+RX   PubMed=21448926; DOI=10.1002/jcp.22760;
+RA   Ramakrishnan R., Rice A.P.;
+RT   "Cdk9 T-loop phosphorylation is regulated by the calcium signaling
+RT   pathway.";
+RL   J. Cell. Physiol. 227:609-617(2012).
+RN   [54]
+RP   PHOSPHORYLATION AT SER-175, DEPHOSPHORYLATION AT SER-175 BY PP1, AND
+RP   MUTAGENESIS OF SER-175.
+RX   PubMed=21533037; DOI=10.1371/journal.pone.0018985;
+RA   Ammosova T., Obukhov Y., Kotelkin A., Breuer D., Beullens M., Gordeuk V.R.,
+RA   Bollen M., Nekhai S.;
+RT   "Protein phosphatase-1 activates CDK9 by dephosphorylating Ser175.";
+RL   PLoS ONE 6:E18985-E18985(2011).
+RN   [55]
+RP   REVIEW ON NELF AND DSIF KINASE ACTIVITY.
+RX   PubMed=16885020; DOI=10.1016/j.molcel.2006.06.014;
+RA   Peterlin B.M., Price D.H.;
+RT   "Controlling the elongation phase of transcription with P-TEFb.";
+RL   Mol. Cell 23:297-305(2006).
+RN   [56]
+RP   REVIEW ON CYTOKINE SIGNALING.
+RX   PubMed=18728388; DOI=10.4161/cc.7.17.6594;
+RA   Brasier A.R.;
+RT   "Expanding role of cyclin dependent kinases in cytokine inducible gene
+RT   expression.";
+RL   Cell Cycle 7:2661-2666(2008).
+RN   [57]
+RP   REVIEW ON TRANSCRIPTION REGULATION, AND INHIBITORS.
+RX   PubMed=19029809; DOI=10.4161/cc.7.23.7122;
+RA   Romano G., Giordano A.;
+RT   "Role of the cyclin-dependent kinase 9-related pathway in mammalian gene
+RT   expression and human diseases.";
+RL   Cell Cycle 7:3664-3668(2008).
+RN   [58]
+RP   REVIEW ON TRANSCRIPTION REGULATION, AND INHIBITORS.
+RX   PubMed=18423896; DOI=10.1016/j.tips.2008.03.003;
+RA   Wang S., Fischer P.M.;
+RT   "Cyclin-dependent kinase 9: a key transcriptional regulator and potential
+RT   drug target in oncology, virology and cardiology.";
+RL   Trends Pharmacol. Sci. 29:302-313(2008).
+RN   [59]
+RP   ACTIVITY REGULATION, AND GENE FAMILY.
+RX   PubMed=19238148; DOI=10.1038/nrc2602;
+RA   Malumbres M., Barbacid M.;
+RT   "Cell cycle, CDKs and cancer: a changing paradigm.";
+RL   Nat. Rev. Cancer 9:153-166(2009).
+RN   [60]
+RP   REVIEW ON CARDIAC HYPERTROPHY, AND INHIBITORS.
+RX   PubMed=19757441; DOI=10.1002/med.20172;
+RA   Krystof V., Chamrad I., Jorda R., Kohoutek J.;
+RT   "Pharmacological targeting of CDK9 in cardiac hypertrophy.";
+RL   Med. Res. Rev. 30:646-666(2010).
+RN   [61]
+RP   REVIEW ON GENOME INTEGRITY MAINTENANCE.
+RX   PubMed=21200140; DOI=10.4161/cc.10.1.14364;
+RA   Yu D.S., Cortez D.;
+RT   "A role for cdk9-cyclin k in maintaining genome integrity.";
+RL   Cell Cycle 10:28-32(2011).
+RN   [62]
+RP   INTERACTION WITH HHV-1 TRANSCRIPTIONAL REGULATOR ICP22 (MICROBIAL
+RP   INFECTION).
+RX   PubMed=23029222; DOI=10.1371/journal.pone.0045749;
+RA   Guo L., Wu W.J., Liu L.D., Wang L.C., Zhang Y., Wu L.Q., Guan Y., Li Q.H.;
+RT   "Herpes simplex virus 1 ICP22 inhibits the transcription of viral gene
+RT   promoters by binding to and blocking the recruitment of P-TEFb.";
+RL   PLoS ONE 7:E45749-E45749(2012).
+RN   [63]
+RP   INTERACTION WITH BRD4 AND JMJD6.
+RX   PubMed=24360279; DOI=10.1016/j.cell.2013.10.056;
+RA   Liu W., Ma Q., Wong K., Li W., Ohgi K., Zhang J., Aggarwal A.,
+RA   Rosenfeld M.G.;
+RT   "Brd4 and JMJD6-associated anti-pause enhancers in regulation of
+RT   transcriptional pause release.";
+RL   Cell 155:1581-1595(2013).
+RN   [64]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-347, PHOSPHORYLATION [LARGE
+RP   SCALE ANALYSIS] AT THR-54 (ISOFORM 2), AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Liver;
+RX   PubMed=24275569; DOI=10.1016/j.jprot.2013.11.014;
+RA   Bian Y., Song C., Cheng K., Dong M., Wang F., Huang J., Sun D., Wang L.,
+RA   Ye M., Zou H.;
+RT   "An enzyme assisted RP-RPLC approach for in-depth analysis of human liver
+RT   phosphoproteome.";
+RL   J. Proteomics 96:253-262(2014).
+RN   [65]
+RP   INTERACTION WITH HHV-1 TRANSCRIPTIONAL REGULATOR ICP22 (MICROBIAL
+RP   INFECTION).
+RX   PubMed=25233083; DOI=10.1371/journal.pone.0107654;
+RA   Zaborowska J., Baumli S., Laitem C., O'Reilly D., Thomas P.H., O'Hare P.,
+RA   Murphy S.;
+RT   "Herpes Simplex Virus 1 (HSV-1) ICP22 protein directly interacts with
+RT   cyclin-dependent kinase (CDK)9 to inhibit RNA polymerase II transcription
+RT   elongation.";
+RL   PLoS ONE 9:e107654-e107654(2014).
+RN   [66]
+RP   INTERACTION WITH HSF1.
+RX   PubMed=27189267; DOI=10.1038/srep26294;
+RA   Pan X.Y., Zhao W., Zeng X.Y., Lin J., Li M.M., Shen X.T., Liu S.W.;
+RT   "Heat shock factor 1 mediates latent HIV reactivation.";
+RL   Sci. Rep. 6:26294-26294(2016).
+RN   [67]
+RP   FUNCTION, CATALYTIC ACTIVITY, ACETYLATION AT LYS-48, DEACETYLATION BY
+RP   SIRT7, AND MUTAGENESIS OF LYS-48.
+RX   PubMed=28426094; DOI=10.1093/nar/gkx053;
+RA   Blank M.F., Chen S., Poetz F., Schnoelzer M., Voit R., Grummt I.;
+RT   "SIRT7-dependent deacetylation of CDK9 activates RNA polymerase II
+RT   transcription.";
+RL   Nucleic Acids Res. 45:2675-2686(2017).
+RN   [68]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RX   PubMed=29335245; DOI=10.15252/embr.201744311;
+RA   Brauns-Schubert P., Schubert F., Wissler M., Weiss M., Schlicher L.,
+RA   Bessler S., Safavi M., Miething C., Borner C., Brummer T., Maurer U.;
+RT   "CDK9-mediated phosphorylation controls the interaction of TIP60 with the
+RT   transcriptional machinery.";
+RL   EMBO Rep. 19:244-256(2018).
+RN   [69]
+RP   INTERACTION WITH HHV-1 TRANSCRIPTIONAL REGULATOR ICP22 (MICROBIAL
+RP   INFECTION).
+RX   PubMed=34696162; DOI=10.3390/vaccines9101054;
+RA   Isa N.F., Bensaude O., Aziz N.C., Murphy S.;
+RT   "HSV-1 ICP22 Is a Selective Viral Repressor of Cellular RNA Polymerase II-
+RT   Mediated Transcription Elongation.";
+RL   Vaccines (Basel) 9:0-0(2021).
+RN   [70]
+RP   X-RAY CRYSTALLOGRAPHY (2.10 ANGSTROMS) OF 1-345 IN COMPLEX WITH HIV-1 TAT
+RP   AND CCNT1, AND PHOSPHORYLATION AT THR-186.
+RX   PubMed=20535204; DOI=10.1038/nature09131;
+RA   Tahirov T.H., Babayeva N.D., Varzavand K., Cooper J.J., Sedore S.C.,
+RA   Price D.H.;
+RT   "Crystal structure of HIV-1 Tat complexed with human P-TEFb.";
+RL   Nature 465:747-751(2010).
+RN   [71]
+RP   X-RAY CRYSTALLOGRAPHY (2.48 ANGSTROMS) OF 2-330 IN COMPLEX WITH INHIBITOR
+RP   FLAVOPIRIDOL; ATP AND CCNT1, PHOSPHORYLATION AT THR-186 SER-347; THR-362
+RP   AND THR-363, AUTOPHOSPHORYLATION, AND MUTAGENESIS OF THR-186.
+RX   PubMed=18566585; DOI=10.1038/emboj.2008.121;
+RA   Baumli S., Lolli G., Lowe E.D., Troiani S., Rusconi L., Bullock A.N.,
+RA   Debreczeni J.E., Knapp S., Johnson L.N.;
+RT   "The structure of P-TEFb (CDK9/cyclin T1), its complex with flavopiridol
+RT   and regulation by phosphorylation.";
+RL   EMBO J. 27:1907-1918(2008).
+RN   [72]
+RP   X-RAY CRYSTALLOGRAPHY (2.80 ANGSTROMS) OF 2-330 IN COMPLEX WITH INHIBITOR
+RP   DRB, AND PHOSPHORYLATION AT THR-186.
+RX   PubMed=20851342; DOI=10.1016/j.chembiol.2010.07.012;
+RA   Baumli S., Endicott J.A., Johnson L.N.;
+RT   "Halogen bonds form the basis for selective P-TEFb inhibition by DRB.";
+RL   Chem. Biol. 17:931-936(2010).
+RN   [73]
+RP   X-RAY CRYSTALLOGRAPHY (3.00 ANGSTROMS) OF 2-330 IN COMPLEX WITH CCNT1;
+RP   INHIBITORS ROSCOVITINE AND CR8, PHOSPHORYLATION AT THR-186, AND ACTIVITY
+RP   REGULATION.
+RX   PubMed=21779453; DOI=10.1177/1947601910369817;
+RA   Bettayeb K., Baunbaek D., Delehouze C., Loaec N., Hole A.J., Baumli S.,
+RA   Endicott J.A., Douc-Rasy S., Benard J., Oumata N., Galons H., Meijer L.;
+RT   "CDK inhibitors roscovitine and CR8 trigger Mcl-1 down-regulation and
+RT   apoptotic cell death in neuroblastoma cells.";
+RL   Genes Cancer 1:369-380(2010).
+RN   [74]
+RP   VARIANT [LARGE SCALE ANALYSIS] LEU-59.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [75]
+RP   VARIANT CYS-225.
+RX   PubMed=30237576; DOI=10.1038/s41436-018-0138-x;
+RA   Maddirevula S., Alzahrani F., Al-Owain M., Al Muhaizea M.A., Kayyali H.R.,
+RA   AlHashem A., Rahbeeni Z., Al-Otaibi M., Alzaidan H.I., Balobaid A.,
+RA   El Khashab H.Y., Bubshait D.K., Faden M., Yamani S.A., Dabbagh O.,
+RA   Al-Mureikhi M., Jasser A.A., Alsaif H.S., Alluhaydan I., Seidahmed M.Z.,
+RA   Alabbasi B.H., Almogarri I., Kurdi W., Akleh H., Qari A., Al Tala S.M.,
+RA   Alhomaidi S., Kentab A.Y., Salih M.A., Chedrawi A., Alameer S., Tabarki B.,
+RA   Shamseldin H.E., Patel N., Ibrahim N., Abdulwahab F., Samira M., Goljan E.,
+RA   Abouelhoda M., Meyer B.F., Hashem M., Shaheen R., AlShahwan S.,
+RA   Alfadhel M., Ben-Omran T., Al-Qattan M.M., Monies D., Alkuraya F.S.;
+RT   "Autozygome and high throughput confirmation of disease genes candidacy.";
+RL   Genet. Med. 21:736-742(2019).
+CC   -!- INTERACTION:
+CC       P50750-2; P28799: GRN; NbExp=3; IntAct=EBI-12029902, EBI-747754;
+CC       P50750-2; P28799-2: GRN; NbExp=3; IntAct=EBI-12029902, EBI-25860013;
+CC       P50750-2; Q6XYB7-2: LBX2; NbExp=3; IntAct=EBI-12029902, EBI-12029900;
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=P50750-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=P50750-2; Sequence=VSP_016288;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   ProteomicsDB; 56264; -.
+DR   Proteomes; UP000005640; Chromosome 9.
+PE   1: Evidence at protein level;
+FT   MOD_RES         35
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:18691976,
+FT                   ECO:0007744|PubMed:19369195"
+FT   MOD_RES         54
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0007744|PubMed:24275569"
+SQ   SEQUENCE   489 AA;  53365 MW;  A0437DC909235A20 CRC64;
+     MQRDAPPRAP APAPRLPAPP IGAAASSGGG GGGGSGGGGG GASAAPAPPG LSGTTSPRGP
+     GGGRRAEEAG SAPRGRKWPW RRKWRGRGGA WSAAAAGPGA GAAAAATGGG GGALEAAMAK
+     QYDSVECPFC DEVSKYEKLA KIGQGTFGEV FKARHRKTGQ KVALKKVLME NEKEGFPITA
+     LREIKILQLL KHENVVNLIE ICRTKASPYN RCKGSIYLVF DFCEHDLAGL LSNVLVKFTL
+     SEIKRVMQML LNGLYYIHRN KILHRDMKAA NVLITRDGVL KLADFGLARA FSLAKNSQPN
+     RYTNRVVTLW YRPPELLLGE RDYGPPIDLW GAGCIMAEMW TRSPIMQGNT EQHQLALISQ
+     LCGSITPEVW PNVDNYELYE KLELVKGQKR KVKDRLKAYV RDPYALDLID KLLVLDPAQR
+     IDSDDALNHD FFWSDPMPSD LKGMLSTHLT SMFEYLAPPR RKGSQITQQS TNQSRNPATT
+     NQTEFERVF
+//

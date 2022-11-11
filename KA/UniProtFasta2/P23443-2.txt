@@ -1,0 +1,408 @@
+ID   KS6B1_HUMAN             Reviewed;         502 AA.
+AC   P23443-2;
+DT   01-NOV-1991, integrated into UniProtKB/Swiss-Prot.
+DT   11-OCT-2004, sequence version 2.
+DT   12-OCT-2022, entry version 221.
+DE   RecName: Full=Isoform Alpha II of Ribosomal protein S6 kinase beta-1;
+DE            Short=S6K-beta-1;
+DE            Short=S6K1;
+DE            EC=2.7.11.1 {ECO:0000269|PubMed:17936702, ECO:0000269|PubMed:18952604, ECO:0000269|PubMed:19085255, ECO:0000269|PubMed:28178239};
+DE   AltName: Full=70 kDa ribosomal protein S6 kinase 1;
+DE            Short=P70S6K1;
+DE            Short=p70-S6K 1;
+DE   AltName: Full=Ribosomal protein S6 kinase I;
+DE   AltName: Full=Serine/threonine-protein kinase 14A;
+DE   AltName: Full=p70 ribosomal S6 kinase alpha;
+DE            Short=p70 S6 kinase alpha;
+DE            Short=p70 S6K-alpha;
+DE            Short=p70 S6KA;
+GN   Name=RPS6KB1; Synonyms=STK14A;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS ALPHA I AND ALPHA II), AND ALTERNATIVE
+RP   INITIATION.
+RX   PubMed=1922062; DOI=10.1128/mcb.11.11.5541-5550.1991;
+RA   Grove J., Bonerjee P., Balasubramanyam A., Coffer P., Price D.J.,
+RA   Avruch J., Woodgett J.R.;
+RT   "Cloning and expression of two human p70 S6 kinase polypeptides differing
+RT   only at their amino termini.";
+RL   Mol. Cell. Biol. 11:5541-5550(1991).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS ALPHA I; 2 AND 4).
+RC   TISSUE=Placenta, and Trachea;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16625196; DOI=10.1038/nature04689;
+RA   Zody M.C., Garber M., Adams D.J., Sharpe T., Harrow J., Lupski J.R.,
+RA   Nicholson C., Searle S.M., Wilming L., Young S.K., Abouelleil A.,
+RA   Allen N.R., Bi W., Bloom T., Borowsky M.L., Bugalter B.E., Butler J.,
+RA   Chang J.L., Chen C.-K., Cook A., Corum B., Cuomo C.A., de Jong P.J.,
+RA   DeCaprio D., Dewar K., FitzGerald M., Gilbert J., Gibson R., Gnerre S.,
+RA   Goldstein S., Grafham D.V., Grocock R., Hafez N., Hagopian D.S., Hart E.,
+RA   Norman C.H., Humphray S., Jaffe D.B., Jones M., Kamal M., Khodiyar V.K.,
+RA   LaButti K., Laird G., Lehoczky J., Liu X., Lokyitsang T., Loveland J.,
+RA   Lui A., Macdonald P., Major J.E., Matthews L., Mauceli E., McCarroll S.A.,
+RA   Mihalev A.H., Mudge J., Nguyen C., Nicol R., O'Leary S.B., Osoegawa K.,
+RA   Schwartz D.C., Shaw-Smith C., Stankiewicz P., Steward C., Swarbreck D.,
+RA   Venkataraman V., Whittaker C.A., Yang X., Zimmer A.R., Bradley A.,
+RA   Hubbard T., Birren B.W., Rogers J., Lander E.S., Nusbaum C.;
+RT   "DNA sequence of human chromosome 17 and analysis of rearrangement in the
+RT   human lineage.";
+RL   Nature 440:1045-1049(2006).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 3).
+RC   TISSUE=Eye;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   TISSUE SPECIFICITY.
+RX   PubMed=9804755; DOI=10.1074/jbc.273.46.30061;
+RA   Gout I., Minami T., Hara K., Tsujishita Y., Filonenko V., Waterfield M.D.,
+RA   Yonezawa K.;
+RT   "Molecular cloning and characterization of a novel p70 S6 kinase, p70 S6
+RT   kinase beta containing a proline-rich region.";
+RL   J. Biol. Chem. 273:30061-30064(1998).
+RN   [7]
+RP   ACTIVITY REGULATION, PHOSPHORYLATION AT THR-252, AND MUTAGENESIS OF
+RP   THR-412; SER-434; SER-441; THR-444 AND SER-447.
+RX   PubMed=9445476; DOI=10.1126/science.279.5351.707;
+RA   Pullen N., Dennis P.B., Andjelkovic M., Dufner A., Kozma S.C.,
+RA   Hemmings B.A., Thomas G.;
+RT   "Phosphorylation and activation of p70s6k by PDK1.";
+RL   Science 279:707-710(1998).
+RN   [8]
+RP   FUNCTION IN PHOSPHORYLATION OF EEF2K, AND FUNCTION IN TRANSLATION
+RP   REGULATION.
+RX   PubMed=11500364; DOI=10.1093/emboj/20.16.4370;
+RA   Wang X., Li W., Williams M., Terada N., Alessi D.R., Proud C.G.;
+RT   "Regulation of elongation factor 2 kinase by p90(RSK1) and p70 S6 kinase.";
+RL   EMBO J. 20:4370-4379(2001).
+RN   [9]
+RP   INTERACTION WITH RPTOR.
+RX   PubMed=12150926; DOI=10.1016/s0092-8674(02)00833-4;
+RA   Hara K., Maruki Y., Long X., Yoshino K., Oshiro N., Hidayat S.,
+RA   Tokunaga C., Avruch J., Yonezawa K.;
+RT   "Raptor, a binding partner of target of rapamycin (TOR), mediates TOR
+RT   action.";
+RL   Cell 110:177-189(2002).
+RN   [10]
+RP   FUNCTION, AND INTERACTION WITH TRAF4.
+RX   PubMed=12801526; DOI=10.1016/s0145-2126(02)00325-9;
+RA   Fleckenstein D.S., Dirks W.G., Drexler H.G., Quentmeier H.;
+RT   "Tumor necrosis factor receptor-associated factor (TRAF) 4 is a new binding
+RT   partner for the p70S6 serine/threonine kinase.";
+RL   Leuk. Res. 27:687-694(2003).
+RN   [11]
+RP   FUNCTION, AND INTERACTION WITH POLDIP3.
+RX   PubMed=15341740; DOI=10.1016/j.cub.2004.08.061;
+RA   Richardson C.J., Broenstrup M., Fingar D.C., Julich K., Ballif B.A.,
+RA   Gygi S., Blenis J.;
+RT   "SKAR is a specific target of S6 kinase 1 in cell growth control.";
+RL   Curr. Biol. 14:1540-1549(2004).
+RN   [12]
+RP   FUNCTION IN PHOSPHORYLATION OF EIF4B.
+RX   PubMed=15071500; DOI=10.1038/sj.emboj.7600193;
+RA   Raught B., Peiretti F., Gingras A.C., Livingstone M., Shahbazian D.,
+RA   Mayeur G.L., Polakiewicz R.D., Sonenberg N., Hershey J.W.;
+RT   "Phosphorylation of eucaryotic translation initiation factor 4B Ser422 is
+RT   modulated by S6 kinases.";
+RL   EMBO J. 23:1761-1769(2004).
+RN   [13]
+RP   FUNCTION IN CELL CYCLE PROGRESSION.
+RX   PubMed=14673156; DOI=10.1128/mcb.24.1.200-216.2004;
+RA   Fingar D.C., Richardson C.J., Tee A.R., Cheatham L., Tsou C., Blenis J.;
+RT   "mTOR controls cell cycle progression through its cell growth effectors
+RT   S6K1 and 4E-BP1/eukaryotic translation initiation factor 4E.";
+RL   Mol. Cell. Biol. 24:200-216(2004).
+RN   [14]
+RP   FUNCTION IN TRANSLATION INITIATION, INTERACTION WITH EIF3B AND EIF3C, AND
+RP   MUTAGENESIS OF THR-412.
+RX   PubMed=16286006; DOI=10.1016/j.cell.2005.10.024;
+RA   Holz M.K., Ballif B.A., Gygi S.P., Blenis J.;
+RT   "mTOR and S6K1 mediate assembly of the translation preinitiation complex
+RT   through dynamic protein interchange and ordered phosphorylation events.";
+RL   Cell 123:569-580(2005).
+RN   [15]
+RP   FUNCTION IN PHOSPHORYLATION OF GSK3B.
+RX   PubMed=17052453; DOI=10.1016/j.molcel.2006.09.019;
+RA   Zhang H.H., Lipovsky A.I., Dibble C.C., Sahin M., Manning B.D.;
+RT   "S6K1 regulates GSK3 under conditions of mTOR-dependent feedback inhibition
+RT   of Akt.";
+RL   Mol. Cell 24:185-197(2006).
+RN   [16]
+RP   FUNCTION.
+RX   PubMed=17053147; DOI=10.1126/science.1130276;
+RA   Dorrello N.V., Peschiaroli A., Guardavaccaro D., Colburn N.H.,
+RA   Sherman N.E., Pagano M.;
+RT   "S6K1- and betaTRCP-mediated degradation of PDCD4 promotes protein
+RT   translation and cell growth.";
+RL   Science 314:467-471(2006).
+RN   [17]
+RP   ACTIVITY REGULATION, AND MUTAGENESIS OF LYS-167 AND SER-394.
+RX   PubMed=17446865; DOI=10.1038/sj.emboj.7601682;
+RA   Hauge C., Antal T.L., Hirschberg D., Doehn U., Thorup K., Idrissova L.,
+RA   Hansen K., Jensen O.N., Jorgensen T.J., Biondi R.M., Frodin M.;
+RT   "Mechanism for activation of the growth factor-activated AGC kinases by
+RT   turn motif phosphorylation.";
+RL   EMBO J. 26:2251-2261(2007).
+RN   [18]
+RP   FUNCTION IN PHOSPHORYLATION OF URI1, CATALYTIC ACTIVITY, DEPHOSPHORYLATION
+RP   AT THR-412 BY PPP1CC, AND SUBCELLULAR LOCATION.
+RX   PubMed=17936702; DOI=10.1016/j.molcel.2007.08.010;
+RA   Djouder N., Metzler S.C., Schmidt A., Wirbelauer C., Gstaiger M.,
+RA   Aebersold R., Hess D., Krek W.;
+RT   "S6K1-mediated disassembly of mitochondrial URI/PP1gamma complexes
+RT   activates a negative feedback program that counters S6K1 survival
+RT   signaling.";
+RL   Mol. Cell 28:28-40(2007).
+RN   [19]
+RP   PHOSPHORYLATION AT THR-412.
+RX   PubMed=18925875; DOI=10.1042/bj20081668;
+RA   Garcia-Martinez J.M., Alessi D.R.;
+RT   "mTOR complex 2 (mTORC2) controls hydrophobic motif phosphorylation and
+RT   activation of serum- and glucocorticoid-induced protein kinase 1 (SGK1).";
+RL   Biochem. J. 416:375-385(2008).
+RN   [20]
+RP   FUNCTION IN PHOSPHORYLATION OF IRS1, CATALYTIC ACTIVITY, FUNCTION IN
+RP   GLUCOSE HOMEOSTASIS, AND INTERACTION WITH IRS1.
+RX   PubMed=18952604; DOI=10.1074/jbc.m806480200;
+RA   Zhang J., Gao Z., Yin J., Quon M.J., Ye J.;
+RT   "S6K directly phosphorylates IRS-1 on Ser-270 to promote insulin resistance
+RT   in response to TNF-(alpha) signaling through IKK2.";
+RL   J. Biol. Chem. 283:35375-35382(2008).
+RN   [21]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [22]
+RP   FUNCTION, CATALYTIC ACTIVITY, ALTERNATIVE SPLICING, PHOSPHORYLATION AT
+RP   SER-394; THR-412; THR-444 AND SER-447, AND SUBCELLULAR LOCATION.
+RX   PubMed=19085255; DOI=10.1080/08977190802556986;
+RA   Kim D., Akcakanat A., Singh G., Sharma C., Meric-Bernstam F.;
+RT   "Regulation and localization of ribosomal protein S6 kinase 1 isoforms.";
+RL   Growth Factors 27:12-21(2009).
+RN   [23]
+RP   ACTIVITY REGULATION, AND MUTAGENESIS OF THR-412.
+RX   PubMed=19570988; DOI=10.1074/jbc.m109.032177;
+RA   Keshwani M.M., Gao X., Harris T.K.;
+RT   "Mechanism of PDK1-catalyzed Thr-229 phosphorylation of the S6K1 protein
+RT   kinase.";
+RL   J. Biol. Chem. 284:22611-22624(2009).
+RN   [24]
+RP   FUNCTION IN PHOSPHORYLATION OF RICTOR.
+RX   PubMed=19720745; DOI=10.1128/mcb.00735-09;
+RA   Dibble C.C., Asara J.M., Manning B.D.;
+RT   "Characterization of Rictor phosphorylation sites reveals direct regulation
+RT   of mTOR complex 2 by S6K1.";
+RL   Mol. Cell. Biol. 29:5657-5670(2009).
+RN   [25]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-447, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [26]
+RP   FUNCTION IN PHOSPHORYLATION OF RICTOR.
+RX   PubMed=19995915; DOI=10.1128/mcb.00601-09;
+RA   Julien L.A., Carriere A., Moreau J., Roux P.P.;
+RT   "mTORC1-activated S6K1 phosphorylates Rictor on threonine 1135 and
+RT   regulates mTORC2 signaling.";
+RL   Mol. Cell. Biol. 30:908-921(2010).
+RN   [27]
+RP   FUNCTION IN PHOSPHORYLATION OF RICTOR.
+RX   PubMed=19935711; DOI=10.1038/onc.2009.401;
+RA   Treins C., Warne P.H., Magnuson M.A., Pende M., Downward J.;
+RT   "Rictor is a novel target of p70 S6 kinase-1.";
+RL   Oncogene 29:1003-1016(2010).
+RN   [28]
+RP   REVIEW ON FUNCTION, AND REVIEW ON ACTIVITY REGULATION.
+RX   PubMed=18092230; DOI=10.1080/08977190701779101;
+RA   Jastrzebski K., Hannan K.M., Tchoubrieva E.B., Hannan R.D., Pearson R.B.;
+RT   "Coordinate regulation of ribosome biogenesis and function by the ribosomal
+RT   protein S6 kinase, a key mediator of mTOR function.";
+RL   Growth Factors 25:209-226(2007).
+RN   [29]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-441; THR-444; SER-447 AND
+RP   SER-452, AND IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=20068231; DOI=10.1126/scisignal.2000475;
+RA   Olsen J.V., Vermeulen M., Santamaria A., Kumar C., Miller M.L.,
+RA   Jensen L.J., Gnad F., Cox J., Jensen T.S., Nigg E.A., Brunak S., Mann M.;
+RT   "Quantitative phosphoproteomics reveals widespread full phosphorylation
+RT   site occupancy during mitosis.";
+RL   Sci. Signal. 3:RA3-RA3(2010).
+RN   [30]
+RP   REVIEW ON FUNCTION, AND REVIEW ON ACTIVITY REGULATION.
+RX   PubMed=20932932; DOI=10.1016/j.biocel.2010.09.018;
+RA   Fenton T.R., Gout I.T.;
+RT   "Functions and regulation of the 70kDa ribosomal S6 kinases.";
+RL   Int. J. Biochem. Cell Biol. 43:47-59(2011).
+RN   [31]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT THR-444 AND SER-447, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [32]
+RP   FUNCTION, PHOSPHORYLATION OF CAD, AND PHOSPHORYLATION BY MTOR.
+RX   PubMed=23429703; DOI=10.1126/science.1228792;
+RA   Ben-Sahra I., Howell J.J., Asara J.M., Manning B.D.;
+RT   "Stimulation of de novo pyrimidine synthesis by growth signaling through
+RT   mTOR and S6K1.";
+RL   Science 339:1323-1328(2013).
+RN   [33]
+RP   INTERACTION WITH IER5.
+RX   PubMed=26496226; DOI=10.1016/j.febslet.2015.10.013;
+RA   Kawabata S., Ishita Y., Ishikawa Y., Sakurai H.;
+RT   "Immediate-early response 5 (IER5) interacts with protein phosphatase 2A
+RT   and regulates the phosphorylation of ribosomal protein S6 kinase and heat
+RT   shock factor 1.";
+RL   FEBS Lett. 589:3679-3685(2015).
+RN   [34]
+RP   FUNCTION IN PHOSPHORYLATION OF EPRS, CATALYTIC ACTIVITY, AND ACTIVITY
+RP   REGULATION.
+RX   PubMed=28178239; DOI=10.1038/nature21380;
+RA   Arif A., Terenzi F., Potdar A.A., Jia J., Sacks J., China A., Halawani D.,
+RA   Vasu K., Li X., Brown J.M., Chen J., Kozma S.C., Thomas G., Fox P.L.;
+RT   "EPRS is a critical mTORC1-S6K1 effector that influences adiposity in
+RT   mice.";
+RL   Nature 542:357-361(2017).
+RN   [35]
+RP   PHOSPHORYLATION AT THR-412.
+RX   PubMed=29750193; DOI=10.1126/sciadv.aao5838;
+RA   Nguyen J.T., Ray C., Fox A.L., Mendonca D.B., Kim J.K., Krebsbach P.H.;
+RT   "Mammalian EAK-7 activates alternative mTOR signaling to regulate cell
+RT   proliferation and migration.";
+RL   Sci. Adv. 4:EAAO5838-EAAO5838(2018).
+RN   [36]
+RP   X-RAY CRYSTALLOGRAPHY (2.35 ANGSTROMS) OF 75-399, AND PHOSPHORYLATION AT
+RP   THR-252.
+RX   PubMed=19864428; DOI=10.1074/jbc.m109.040667;
+RA   Sunami T., Byrne N., Diehl R.E., Funabashi K., Hall D.L., Ikuta M.,
+RA   Patel S.B., Shipman J.M., Smith R.F., Takahashi I., Zugay-Murphy J.,
+RA   Iwasawa Y., Lumb K.J., Munshi S.K., Sharma S.;
+RT   "Structural basis of human p70 ribosomal S6 kinase-1 regulation by
+RT   activation loop phosphorylation.";
+RL   J. Biol. Chem. 285:4587-4594(2010).
+RN   [37]
+RP   VARIANT [LARGE SCALE ANALYSIS] GLU-289.
+RX   PubMed=16959974; DOI=10.1126/science.1133427;
+RA   Sjoeblom T., Jones S., Wood L.D., Parsons D.W., Lin J., Barber T.D.,
+RA   Mandelker D., Leary R.J., Ptak J., Silliman N., Szabo S., Buckhaults P.,
+RA   Farrell C., Meeh P., Markowitz S.D., Willis J., Dawson D., Willson J.K.V.,
+RA   Gazdar A.F., Hartigan J., Wu L., Liu C., Parmigiani G., Park B.H.,
+RA   Bachman K.E., Papadopoulos N., Vogelstein B., Kinzler K.W.,
+RA   Velculescu V.E.;
+RT   "The consensus coding sequences of human breast and colorectal cancers.";
+RL   Science 314:268-274(2006).
+RN   [38]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ILE-225; CYS-272; CYS-276 AND ALA-398.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- INTERACTION:
+CC       P23443-2; P08151: GLI1; NbExp=2; IntAct=EBI-6093204, EBI-308084;
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing, Alternative initiation; Named isoforms=5;
+CC         Comment=Additional isoforms seem to exist.;
+CC       Name=Alpha I; Synonyms=p80-S6K 1;
+CC         IsoId=P23443-1; Sequence=Displayed;
+CC       Name=Alpha II;
+CC         IsoId=P23443-2; Sequence=VSP_018839;
+CC       Name=2;
+CC         IsoId=P23443-3; Sequence=VSP_054613;
+CC       Name=4;
+CC         IsoId=P23443-5; Sequence=VSP_055026;
+CC       Name=3;
+CC         IsoId=P23443-4; Sequence=VSP_054614;
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   RefSeq; NP_001258989.1; NM_001272060.1.
+DR   ProteomicsDB; 54096; -.
+DR   Proteomes; UP000005640; Chromosome 17.
+PE   1: Evidence at protein level;
+SQ   SEQUENCE   502 AA;  56189 MW;  2DE6CF3FCABB9FD2 CRC64;
+     MAGVFDIDLD QPEDAGSEDE LEEGGQLNES MDHGGVGPYE LGMEHCEKFE ISETSVNRGP
+     EKIRPECFEL LRVLGKGGYG KVFQVRKVTG ANTGKIFAMK VLKKAMIVRN AKDTAHTKAE
+     RNILEEVKHP FIVDLIYAFQ TGGKLYLILE YLSGGELFMQ LEREGIFMED TACFYLAEIS
+     MALGHLHQKG IIYRDLKPEN IMLNHQGHVK LTDFGLCKES IHDGTVTHTF CGTIEYMAPE
+     ILMRSGHNRA VDWWSLGALM YDMLTGAPPF TGENRKKTID KILKCKLNLP PYLTQEARDL
+     LKKLLKRNAA SRLGAGPGDA GEVQAHPFFR HINWEELLAR KVEPPFKPLL QSEEDVSQFD
+     SKFTRQTPVD SPDDSTLSES ANQVFLGFTY VAPSVLESVK EKFSFEPKIR SPRRFIGSPR
+     TPVSPVKFSP GDFWGRGASA STANPQTPVE YPMETSGIEQ MDVTMSGEAS APLPIRQPNS
+     GPYKKQAFPM ISKRPEHLRM NL
+//

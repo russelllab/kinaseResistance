@@ -1,0 +1,473 @@
+ID   STK25_HUMAN             Reviewed;         426 AA.
+AC   O00506; A8K6Z3; A8K7D2; B7Z9K1; Q15522; Q5BJF1;
+DT   01-DEC-2000, integrated into UniProtKB/Swiss-Prot.
+DT   01-JUL-1997, sequence version 1.
+DT   12-OCT-2022, entry version 212.
+DE   RecName: Full=Serine/threonine-protein kinase 25;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Ste20-like kinase;
+DE   AltName: Full=Sterile 20/oxidant stress-response kinase 1;
+DE            Short=SOK-1;
+DE            Short=Ste20/oxidant stress response kinase 1;
+GN   Name=STK25; Synonyms=SOK1, YSK1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=8887545; DOI=10.1002/j.1460-2075.1996.tb00831.x;
+RA   Pombo C.M., Bonventre J.V., Molnar A., Kyriakis J., Force T.;
+RT   "Activation of a human Ste20-like kinase by oxidant stress defines a novel
+RT   stress response pathway.";
+RL   EMBO J. 15:4537-4546(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RX   PubMed=9160885; DOI=10.1038/sj.onc.1201043;
+RA   Osada S., Izawa M., Saito R., Mizuno K., Suzuki A., Hirai S., Ohno S.;
+RT   "YSK1, a novel mammalian protein kinase structurally related to Ste20 and
+RT   SPS1, but is not involved in the known MAPK pathways.";
+RL   Oncogene 14:2047-2057(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RA   Kalnine N., Chen X., Rolfs A., Halleck A., Hines L., Eisenstein S.,
+RA   Koundinya M., Raphael J., Moreira D., Kelley T., LaBaer J., Lin Y.,
+RA   Phelan M., Farmer A.;
+RT   "Cloning of human full-length CDSs in BD Creator(TM) system donor vector.";
+RL   Submitted (OCT-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1; 2 AND 3).
+RC   TISSUE=Amygdala;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RG   NIEHS SNPs program;
+RL   Submitted (JUN-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15815621; DOI=10.1038/nature03466;
+RA   Hillier L.W., Graves T.A., Fulton R.S., Fulton L.A., Pepin K.H., Minx P.,
+RA   Wagner-McPherson C., Layman D., Wylie K., Sekhon M., Becker M.C.,
+RA   Fewell G.A., Delehaunty K.D., Miner T.L., Nash W.E., Kremitzki C., Oddy L.,
+RA   Du H., Sun H., Bradshaw-Cordum H., Ali J., Carter J., Cordes M., Harris A.,
+RA   Isak A., van Brunt A., Nguyen C., Du F., Courtney L., Kalicki J.,
+RA   Ozersky P., Abbott S., Armstrong J., Belter E.A., Caruso L., Cedroni M.,
+RA   Cotton M., Davidson T., Desai A., Elliott G., Erb T., Fronick C., Gaige T.,
+RA   Haakenson W., Haglund K., Holmes A., Harkins R., Kim K., Kruchowski S.S.,
+RA   Strong C.M., Grewal N., Goyea E., Hou S., Levy A., Martinka S., Mead K.,
+RA   McLellan M.D., Meyer R., Randall-Maher J., Tomlinson C.,
+RA   Dauphin-Kohlberg S., Kozlowicz-Reilly A., Shah N., Swearengen-Shahid S.,
+RA   Snider J., Strong J.T., Thompson J., Yoakum M., Leonard S., Pearman C.,
+RA   Trani L., Radionenko M., Waligorski J.E., Wang C., Rock S.M.,
+RA   Tin-Wollam A.-M., Maupin R., Latreille P., Wendl M.C., Yang S.-P., Pohl C.,
+RA   Wallis J.W., Spieth J., Bieri T.A., Berkowicz N., Nelson J.O., Osborne J.,
+RA   Ding L., Meyer R., Sabo A., Shotland Y., Sinha P., Wohldmann P.E.,
+RA   Cook L.L., Hickenbotham M.T., Eldred J., Williams D., Jones T.A., She X.,
+RA   Ciccarelli F.D., Izaurralde E., Taylor J., Schmutz J., Myers R.M.,
+RA   Cox D.R., Huang X., McPherson J.D., Mardis E.R., Clifton S.W., Warren W.C.,
+RA   Chinwalla A.T., Eddy S.R., Marra M.A., Ovcharenko I., Furey T.S.,
+RA   Miller W., Eichler E.E., Bork P., Suyama M., Torrents D., Waterston R.H.,
+RA   Wilson R.K.;
+RT   "Generation and annotation of the DNA sequences of human chromosomes 2 and
+RT   4.";
+RL   Nature 434:724-731(2005).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Testis, and Uterus;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [9]
+RP   FUNCTION, ACTIVITY REGULATION, PHOSPHORYLATION AT THR-174, SUBCELLULAR
+RP   LOCATION, INTERACTION WITH GOLGA2, AND MUTAGENESIS OF LYS-49 AND ASP-158.
+RX   PubMed=15037601; DOI=10.1083/jcb.200310061;
+RA   Preisinger C., Short B., De Corte V., Bruyneel E., Haas A., Kopajtich R.,
+RA   Gettemans J., Barr F.A.;
+RT   "YSK1 is activated by the Golgi matrix protein GM130 and plays a role in
+RT   cell migration through its substrate 14-3-3zeta.";
+RL   J. Cell Biol. 164:1009-1020(2004).
+RN   [10]
+RP   INTERACTION WITH CTTNBP2NL.
+RX   PubMed=18782753; DOI=10.1074/mcp.m800266-mcp200;
+RA   Goudreault M., D'Ambrosio L.M., Kean M.J., Mullin M.J., Larsen B.G.,
+RA   Sanchez A., Chaudhry S., Chen G.I., Sicheri F., Nesvizhskii A.I.,
+RA   Aebersold R., Raught B., Gingras A.C.;
+RT   "A PP2A phosphatase high density interaction network identifies a novel
+RT   striatin-interacting phosphatase and kinase complex linked to the cerebral
+RT   cavernous malformation 3 (CCM3) protein.";
+RL   Mol. Cell. Proteomics 8:157-171(2009).
+RN   [11]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=21269460; DOI=10.1186/1752-0509-5-17;
+RA   Burkard T.R., Planyavsky M., Kaupe I., Breitwieser F.P., Buerckstuemmer T.,
+RA   Bennett K.L., Superti-Furga G., Colinge J.;
+RT   "Initial characterization of the human central proteome.";
+RL   BMC Syst. Biol. 5:17-17(2011).
+CC   -!- FUNCTION: Oxidant stress-activated serine/threonine kinase that may
+CC       play a role in the response to environmental stress. Targets to the
+CC       Golgi apparatus where it appears to regulate protein transport events,
+CC       cell adhesion, and polarity complexes important for cell migration.
+CC       {ECO:0000269|PubMed:15037601}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC   -!- ACTIVITY REGULATION: Interaction with Golgi matrix protein GOLGA2 leads
+CC       to autophosphorylation on Thr-174, possibly as a consequence of
+CC       stabilization of dimer formation. The C-terminal non-catalytic region
+CC       inhibits the kinase activity. {ECO:0000269|PubMed:15037601}.
+CC   -!- SUBUNIT: Homodimer. Interacts with CTTNBP2NL.
+CC       {ECO:0000269|PubMed:15037601, ECO:0000269|PubMed:18782753}.
+CC   -!- INTERACTION:
+CC       O00506; Q9Y376: CAB39; NbExp=4; IntAct=EBI-618295, EBI-306905;
+CC       O00506; O95273: CCNDBP1; NbExp=3; IntAct=EBI-618295, EBI-748961;
+CC       O00506; Q8NHQ1: CEP70; NbExp=3; IntAct=EBI-618295, EBI-739624;
+CC       O00506; Q08379: GOLGA2; NbExp=16; IntAct=EBI-618295, EBI-618309;
+CC       O00506; A6NEM1: GOLGA6L9; NbExp=3; IntAct=EBI-618295, EBI-5916454;
+CC       O00506; Q8IYA8: IHO1; NbExp=3; IntAct=EBI-618295, EBI-8638439;
+CC       O00506; Q9BUL8: PDCD10; NbExp=30; IntAct=EBI-618295, EBI-740195;
+CC       O00506; O43815: STRN; NbExp=5; IntAct=EBI-618295, EBI-1046642;
+CC       O00506; P14373: TRIM27; NbExp=6; IntAct=EBI-618295, EBI-719493;
+CC       O00506; P63104: YWHAZ; NbExp=2; IntAct=EBI-618295, EBI-347088;
+CC       O00506; Q62839: Golga2; Xeno; NbExp=2; IntAct=EBI-618295, EBI-618335;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:15037601}. Golgi
+CC       apparatus {ECO:0000269|PubMed:15037601}. Note=Localizes to the Golgi
+CC       apparatus.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=1;
+CC         IsoId=O00506-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=O00506-2; Sequence=VSP_054397;
+CC       Name=3;
+CC         IsoId=O00506-3; Sequence=VSP_054683;
+CC   -!- TISSUE SPECIFICITY: Ubiquitously expressed. Highest levels are found in
+CC       testis, large intestine, brain and stomach followed by heart and lung.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. STE Ser/Thr
+CC       protein kinase family. STE20 subfamily. {ECO:0000305}.
+CC   -!- WEB RESOURCE: Name=NIEHS-SNPs;
+CC       URL="http://egp.gs.washington.edu/data/stk25/";
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; X99325; CAA67700.1; -; mRNA.
+DR   EMBL; D63780; BAA20420.1; -; mRNA.
+DR   EMBL; AK291808; BAF84497.1; -; mRNA.
+DR   EMBL; AK291947; BAF84636.1; -; mRNA.
+DR   EMBL; AK315966; BAH14337.1; -; mRNA.
+DR   EMBL; BT019961; AAV38764.1; -; mRNA.
+DR   EMBL; AC110299; AAY14683.1; -; Genomic_DNA.
+DR   EMBL; DQ093965; AAY88740.1; -; Genomic_DNA.
+DR   EMBL; CH471063; EAW71265.1; -; Genomic_DNA.
+DR   EMBL; BC007852; AAH07852.1; -; mRNA.
+DR   EMBL; BC091505; AAH91505.1; -; mRNA.
+DR   CCDS; CCDS2549.1; -. [O00506-1]
+DR   CCDS; CCDS63199.1; -. [O00506-3]
+DR   CCDS; CCDS63200.1; -. [O00506-2]
+DR   PIR; S71886; S71886.
+DR   RefSeq; NP_001258906.1; NM_001271977.1. [O00506-1]
+DR   RefSeq; NP_001258907.1; NM_001271978.1. [O00506-1]
+DR   RefSeq; NP_001258908.1; NM_001271979.1. [O00506-2]
+DR   RefSeq; NP_001258909.1; NM_001271980.1. [O00506-2]
+DR   RefSeq; NP_001269234.1; NM_001282305.1. [O00506-3]
+DR   RefSeq; NP_001269236.1; NM_001282307.1. [O00506-3]
+DR   RefSeq; NP_001269237.1; NM_001282308.1. [O00506-3]
+DR   RefSeq; NP_006365.2; NM_006374.4. [O00506-1]
+DR   PDB; 2XIK; X-ray; 1.97 A; A=1-293.
+DR   PDB; 3W8H; X-ray; 2.43 A; B=355-426.
+DR   PDB; 4NZW; X-ray; 3.58 A; B=1-293.
+DR   PDB; 7Z4V; X-ray; 1.64 A; A=1-294.
+DR   PDBsum; 2XIK; -.
+DR   PDBsum; 3W8H; -.
+DR   PDBsum; 4NZW; -.
+DR   PDBsum; 7Z4V; -.
+DR   AlphaFoldDB; O00506; -.
+DR   SMR; O00506; -.
+DR   BioGRID; 115757; 84.
+DR   DIP; DIP-34269N; -.
+DR   IntAct; O00506; 64.
+DR   MINT; O00506; -.
+DR   STRING; 9606.ENSP00000325748; -.
+DR   BindingDB; O00506; -.
+DR   ChEMBL; CHEMBL5552; -.
+DR   DrugCentral; O00506; -.
+DR   GlyGen; O00506; 1 site, 1 O-linked glycan (1 site).
+DR   iPTMnet; O00506; -.
+DR   PhosphoSitePlus; O00506; -.
+DR   SwissPalm; O00506; -.
+DR   BioMuta; STK25; -.
+DR   EPD; O00506; -.
+DR   jPOST; O00506; -.
+DR   MassIVE; O00506; -.
+DR   MaxQB; O00506; -.
+DR   PaxDb; O00506; -.
+DR   PeptideAtlas; O00506; -.
+DR   PRIDE; O00506; -.
+DR   ProteomicsDB; 1868; -.
+DR   ProteomicsDB; 47947; -. [O00506-1]
+DR   ProteomicsDB; 7036; -.
+DR   Antibodypedia; 34565; 263 antibodies from 31 providers.
+DR   DNASU; 10494; -.
+DR   Ensembl; ENST00000316586.9; ENSP00000325748.4; ENSG00000115694.15. [O00506-1]
+DR   Ensembl; ENST00000401869.5; ENSP00000385687.1; ENSG00000115694.15. [O00506-1]
+DR   Ensembl; ENST00000403346.7; ENSP00000384162.3; ENSG00000115694.15. [O00506-1]
+DR   Ensembl; ENST00000405585.5; ENSP00000385541.1; ENSG00000115694.15. [O00506-2]
+DR   Ensembl; ENST00000405883.7; ENSP00000384444.3; ENSG00000115694.15. [O00506-2]
+DR   Ensembl; ENST00000535007.5; ENSP00000446008.1; ENSG00000115694.15. [O00506-3]
+DR   Ensembl; ENST00000543554.5; ENSP00000444886.1; ENSG00000115694.15. [O00506-3]
+DR   GeneID; 10494; -.
+DR   KEGG; hsa:10494; -.
+DR   MANE-Select; ENST00000316586.9; ENSP00000325748.4; NM_001271977.2; NP_001258906.1.
+DR   UCSC; uc002wbm.5; human. [O00506-1]
+DR   CTD; 10494; -.
+DR   DisGeNET; 10494; -.
+DR   GeneCards; STK25; -.
+DR   HGNC; HGNC:11404; STK25.
+DR   HPA; ENSG00000115694; Group enriched (skeletal muscle, tongue).
+DR   MIM; 602255; gene.
+DR   neXtProt; NX_O00506; -.
+DR   OpenTargets; ENSG00000115694; -.
+DR   PharmGKB; PA36211; -.
+DR   VEuPathDB; HostDB:ENSG00000115694; -.
+DR   eggNOG; KOG0201; Eukaryota.
+DR   GeneTree; ENSGT00940000153476; -.
+DR   InParanoid; O00506; -.
+DR   OMA; REFANQH; -.
+DR   OrthoDB; 1115738at2759; -.
+DR   PhylomeDB; O00506; -.
+DR   TreeFam; TF354217; -.
+DR   PathwayCommons; O00506; -.
+DR   SignaLink; O00506; -.
+DR   SIGNOR; O00506; -.
+DR   BioGRID-ORCS; 10494; 11 hits in 1114 CRISPR screens.
+DR   ChiTaRS; STK25; human.
+DR   GeneWiki; STK25; -.
+DR   GenomeRNAi; 10494; -.
+DR   Pharos; O00506; Tchem.
+DR   PRO; PR:O00506; -.
+DR   Proteomes; UP000005640; Chromosome 2.
+DR   RNAct; O00506; protein.
+DR   Bgee; ENSG00000115694; Expressed in hindlimb stylopod muscle and 181 other tissues.
+DR   ExpressionAtlas; O00506; baseline and differential.
+DR   Genevisible; O00506; HS.
+DR   GO; GO:0005737; C:cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0070062; C:extracellular exosome; HDA:UniProtKB.
+DR   GO; GO:0005794; C:Golgi apparatus; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0042803; F:protein homodimerization activity; IDA:UniProtKB.
+DR   GO; GO:0004672; F:protein kinase activity; TAS:ProtInc.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IBA:GO_Central.
+DR   GO; GO:0007409; P:axonogenesis; IEA:Ensembl.
+DR   GO; GO:0051683; P:establishment of Golgi localization; IMP:UniProtKB.
+DR   GO; GO:0007163; P:establishment or maintenance of cell polarity; IEA:Ensembl.
+DR   GO; GO:0051645; P:Golgi localization; IDA:UniProtKB.
+DR   GO; GO:0090168; P:Golgi reassembly; IMP:UniProtKB.
+DR   GO; GO:0036481; P:intrinsic apoptotic signaling pathway in response to hydrogen peroxide; IGI:UniProtKB.
+DR   GO; GO:0050772; P:positive regulation of axonogenesis; IEA:Ensembl.
+DR   GO; GO:0032874; P:positive regulation of stress-activated MAPK cascade; IDA:UniProtKB.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   GO; GO:0042542; P:response to hydrogen peroxide; IDA:UniProtKB.
+DR   GO; GO:0006979; P:response to oxidative stress; TAS:ProtInc.
+DR   GO; GO:0007165; P:signal transduction; TAS:ProtInc.
+DR   CDD; cd06642; STKc_STK25; 1.
+DR   Gene3D; 1.10.12.70; -; 1.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR046409; PDC10_dimerisation_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR035060; STK_STK25.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; ATP-binding; Cytoplasm;
+KW   Golgi apparatus; Kinase; Magnesium; Metal-binding; Nucleotide-binding;
+KW   Phosphoprotein; Reference proteome; Serine/threonine-protein kinase;
+KW   Transferase.
+FT   CHAIN           1..426
+FT                   /note="Serine/threonine-protein kinase 25"
+FT                   /id="PRO_0000086713"
+FT   DOMAIN          20..270
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          291..355
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        140
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         26..34
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         49
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         174
+FT                   /note="Phosphothreonine; by autocatalysis"
+FT                   /evidence="ECO:0000269|PubMed:15037601"
+FT   MOD_RES         278
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q9Z2W1"
+FT   VAR_SEQ         1..94
+FT                   /note="Missing (in isoform 3)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_054683"
+FT   VAR_SEQ         11..87
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|PubMed:14702039"
+FT                   /id="VSP_054397"
+FT   VARIANT         64
+FT                   /note="Q -> H (in dbSNP:rs34341643)"
+FT                   /id="VAR_051674"
+FT   MUTAGEN         49
+FT                   /note="K->R: Loss of kinase activity and
+FT                   autophosphorylation."
+FT                   /evidence="ECO:0000269|PubMed:15037601"
+FT   MUTAGEN         158
+FT                   /note="D->A: Loss of kinase activity."
+FT                   /evidence="ECO:0000269|PubMed:15037601"
+FT   CONFLICT        347..348
+FT                   /note="EP -> DA (in Ref. 1; CAA67700)"
+FT                   /evidence="ECO:0000305"
+FT   TURN            5..7
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           8..10
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           16..18
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   STRAND          20..27
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   STRAND          32..39
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   TURN            40..42
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   STRAND          45..52
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   TURN            53..56
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           57..59
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           60..71
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   STRAND          81..87
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   STRAND          90..96
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           103..106
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   TURN            107..109
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           114..133
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           143..145
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   STRAND          146..148
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   STRAND          154..156
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   STRAND          170..172
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           179..181
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           184..187
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           195..210
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   TURN            214..217
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           220..226
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   TURN            227..229
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           241..250
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           255..257
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           261..264
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           268..273
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           277..280
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           281..292
+FT                   /evidence="ECO:0007829|PDB:7Z4V"
+FT   HELIX           357..360
+FT                   /evidence="ECO:0007829|PDB:3W8H"
+FT   HELIX           362..374
+FT                   /evidence="ECO:0007829|PDB:3W8H"
+FT   TURN            375..377
+FT                   /evidence="ECO:0007829|PDB:3W8H"
+FT   HELIX           381..396
+FT                   /evidence="ECO:0007829|PDB:3W8H"
+FT   HELIX           400..414
+FT                   /evidence="ECO:0007829|PDB:3W8H"
+SQ   SEQUENCE   426 AA;  48112 MW;  183CE5700FCEA716 CRC64;
+     MAHLRGFANQ HSRVDPEELF TKLDRIGKGS FGEVYKGIDN HTKEVVAIKI IDLEEAEDEI
+     EDIQQEITVL SQCDSPYITR YFGSYLKSTK LWIIMEYLGG GSALDLLKPG PLEETYIATI
+     LREILKGLDY LHSERKIHRD IKAANVLLSE QGDVKLADFG VAGQLTDTQI KRNTFVGTPF
+     WMAPEVIKQS AYDFKADIWS LGITAIELAK GEPPNSDLHP MRVLFLIPKN SPPTLEGQHS
+     KPFKEFVEAC LNKDPRFRPT AKELLKHKFI TRYTKKTSFL TELIDRYKRW KSEGHGEESS
+     SEDSDIDGEA EDGEQGPIWT FPPTIRPSPH SKLHKGTALH SSQKPAEPVK RQPRSQCLST
+     LVRPVFGELK EKHKQSGGSV GALEELENAF SLAEESCPGI SDKLMVHLVE RVQRFSHNRN
+     HLTSTR
+//

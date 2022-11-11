@@ -1,0 +1,516 @@
+ID   MK06_HUMAN              Reviewed;         721 AA.
+AC   Q16659; B2R945; B5BU65; Q68DH4; Q8IYN8;
+DT   01-NOV-1997, integrated into UniProtKB/Swiss-Prot.
+DT   01-NOV-1996, sequence version 1.
+DT   12-OCT-2022, entry version 197.
+DE   RecName: Full=Mitogen-activated protein kinase 6;
+DE            Short=MAP kinase 6;
+DE            Short=MAPK 6;
+DE            EC=2.7.11.24;
+DE   AltName: Full=Extracellular signal-regulated kinase 3;
+DE            Short=ERK-3;
+DE   AltName: Full=MAP kinase isoform p97;
+DE            Short=p97-MAPK;
+GN   Name=MAPK6; Synonyms=ERK3, PRKM6;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Fetal skeletal muscle;
+RX   PubMed=7969157; DOI=10.1128/mcb.14.12.8202-8211.1994;
+RA   Zhu A.X., Zhao Y., Moller D.E., Flier J.S.;
+RT   "Cloning and characterization of p97MAPK, a novel human homolog of rat ERK-
+RT   3.";
+RL   Mol. Cell. Biol. 14:8202-8211(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Smooth muscle;
+RX   PubMed=8875998;
+RA   Meloche S., Beatty B.G., Pellerin J.;
+RT   "Primary structure, expression and chromosomal locus of a human homolog of
+RT   rat ERK3.";
+RL   Oncogene 13:1575-1579(1996).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Oral cancer;
+RA   Saranath D., Mahale A., Rai R., Dedhia P.;
+RT   "ERK-3 cDNA clone isolated from human oral cancer.";
+RL   Submitted (SEP-2001) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Trachea;
+RX   PubMed=14702039; DOI=10.1038/ng1285;
+RA   Ota T., Suzuki Y., Nishikawa T., Otsuki T., Sugiyama T., Irie R.,
+RA   Wakamatsu A., Hayashi K., Sato H., Nagai K., Kimura K., Makita H.,
+RA   Sekine M., Obayashi M., Nishi T., Shibahara T., Tanaka T., Ishii S.,
+RA   Yamamoto J., Saito K., Kawai Y., Isono Y., Nakamura Y., Nagahari K.,
+RA   Murakami K., Yasuda T., Iwayanagi T., Wagatsuma M., Shiratori A., Sudo H.,
+RA   Hosoiri T., Kaku Y., Kodaira H., Kondo H., Sugawara M., Takahashi M.,
+RA   Kanda K., Yokoi T., Furuya T., Kikkawa E., Omura Y., Abe K., Kamihara K.,
+RA   Katsuta N., Sato K., Tanikawa M., Yamazaki M., Ninomiya K., Ishibashi T.,
+RA   Yamashita H., Murakawa K., Fujimori K., Tanai H., Kimata M., Watanabe M.,
+RA   Hiraoka S., Chiba Y., Ishida S., Ono Y., Takiguchi S., Watanabe S.,
+RA   Yosida M., Hotuta T., Kusano J., Kanehori K., Takahashi-Fujii A., Hara H.,
+RA   Tanase T.-O., Nomura Y., Togiya S., Komai F., Hara R., Takeuchi K.,
+RA   Arita M., Imose N., Musashino K., Yuuki H., Oshima A., Sasaki N.,
+RA   Aotsuka S., Yoshikawa Y., Matsunawa H., Ichihara T., Shiohata N., Sano S.,
+RA   Moriya S., Momiyama H., Satoh N., Takami S., Terashima Y., Suzuki O.,
+RA   Nakagawa S., Senoh A., Mizoguchi H., Goto Y., Shimizu F., Wakebe H.,
+RA   Hishigaki H., Watanabe T., Sugiyama A., Takemoto M., Kawakami B.,
+RA   Yamazaki M., Watanabe K., Kumagai A., Itakura S., Fukuzumi Y., Fujimori Y.,
+RA   Komiyama M., Tashiro H., Tanigami A., Fujiwara T., Ono T., Yamada K.,
+RA   Fujii Y., Ozaki K., Hirao M., Ohmori Y., Kawabata A., Hikiji T.,
+RA   Kobatake N., Inagaki H., Ikema Y., Okamoto S., Okitani R., Kawakami T.,
+RA   Noguchi S., Itoh T., Shigeta K., Senba T., Matsumura K., Nakajima Y.,
+RA   Mizuno T., Morinaga M., Sasaki M., Togashi T., Oyama M., Hata H.,
+RA   Watanabe M., Komatsu T., Mizushima-Sugano J., Satoh T., Shirai Y.,
+RA   Takahashi Y., Nakagawa K., Okumura K., Nagase T., Nomura N., Kikuchi H.,
+RA   Masuho Y., Yamashita R., Nakai K., Yada T., Nakamura Y., Ohara O.,
+RA   Isogai T., Sugano S.;
+RT   "Complete sequencing and characterization of 21,243 full-length human
+RT   cDNAs.";
+RL   Nat. Genet. 36:40-45(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Esophageal carcinoma;
+RX   PubMed=17974005; DOI=10.1186/1471-2164-8-399;
+RA   Bechtel S., Rosenfelder H., Duda A., Schmidt C.P., Ernst U.,
+RA   Wellenreuther R., Mehrle A., Schuster C., Bahr A., Bloecker H., Heubner D.,
+RA   Hoerlein A., Michel G., Wedler H., Koehrer K., Ottenwaelder B., Poustka A.,
+RA   Wiemann S., Schupp I.;
+RT   "The full-ORF clone resource of the German cDNA consortium.";
+RL   BMC Genomics 8:399-399(2007).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RX   PubMed=19054851; DOI=10.1038/nmeth.1273;
+RA   Goshima N., Kawamura Y., Fukumoto A., Miura A., Honma R., Satoh R.,
+RA   Wakamatsu A., Yamamoto J., Kimura K., Nishikawa T., Andoh T., Iida Y.,
+RA   Ishikawa K., Ito E., Kagawa N., Kaminaga C., Kanehori K., Kawakami B.,
+RA   Kenmochi K., Kimura R., Kobayashi M., Kuroita T., Kuwayama H., Maruyama Y.,
+RA   Matsuo K., Minami K., Mitsubori M., Mori M., Morishita R., Murase A.,
+RA   Nishikawa A., Nishikawa S., Okamoto T., Sakagami N., Sakamoto Y.,
+RA   Sasaki Y., Seki T., Sono S., Sugiyama A., Sumiya T., Takayama T.,
+RA   Takayama Y., Takeda H., Togashi T., Yahata K., Yamada H., Yanagisawa Y.,
+RA   Endo Y., Imamoto F., Kisu Y., Tanaka S., Isogai T., Imai J., Watanabe S.,
+RA   Nomura N.;
+RT   "Human protein factory for converting the transcriptome into an in vitro-
+RT   expressed proteome.";
+RL   Nat. Methods 5:1011-1017(2008).
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA], AND VARIANT VAL-290.
+RC   TISSUE=Placenta;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [8]
+RP   UBIQUITINATION AT MET-1.
+RX   PubMed=15226418; DOI=10.1128/mcb.24.14.6140-6150.2004;
+RA   Coulombe P., Rodier G., Bonneil E., Thibault P., Meloche S.;
+RT   "N-Terminal ubiquitination of extracellular signal-regulated kinase 3 and
+RT   p21 directs their degradation by the proteasome.";
+RL   Mol. Cell. Biol. 24:6140-6150(2004).
+RN   [9]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-189, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma;
+RX   PubMed=18669648; DOI=10.1073/pnas.0805139105;
+RA   Dephoure N., Zhou C., Villen J., Beausoleil S.A., Bakalarski C.E.,
+RA   Elledge S.J., Gygi S.P.;
+RT   "A quantitative atlas of mitotic phosphorylation.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:10762-10767(2008).
+RN   [10]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-189, AND IDENTIFICATION BY
+RP   MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RX   PubMed=19369195; DOI=10.1074/mcp.m800588-mcp200;
+RA   Oppermann F.S., Gnad F., Olsen J.V., Hornberger R., Greff Z., Keri G.,
+RA   Mann M., Daub H.;
+RT   "Large-scale proteomics analysis of the human kinome.";
+RL   Mol. Cell. Proteomics 8:1751-1764(2009).
+RN   [11]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Leukemic T-cell;
+RX   PubMed=19690332; DOI=10.1126/scisignal.2000007;
+RA   Mayya V., Lundgren D.H., Hwang S.-I., Rezaul K., Wu L., Eng J.K.,
+RA   Rodionov V., Han D.K.;
+RT   "Quantitative phosphoproteomic analysis of T cell receptor signaling
+RT   reveals system-wide modulation of protein-protein interactions.";
+RL   Sci. Signal. 2:RA46-RA46(2009).
+RN   [12]
+RP   PHOSPHORYLATION AT SER-189.
+RX   PubMed=21177870; DOI=10.1074/jbc.m110.181529;
+RA   Deleris P., Trost M., Topisirovic I., Tanguay P.L., Borden K.L.,
+RA   Thibault P., Meloche S.;
+RT   "Activation loop phosphorylation of ERK3/ERK4 by group I p21-activated
+RT   kinases (PAKs) defines a novel PAK-ERK3/4-MAPK-activated protein kinase 5
+RT   signaling pathway.";
+RL   J. Biol. Chem. 286:6470-6478(2011).
+RN   [13]
+RP   INTERACTION WITH UBE3A AND NEURL4.
+RX   PubMed=22645313; DOI=10.1128/mcb.00201-12;
+RA   Martinez-Noel G., Galligan J.T., Sowa M.E., Arndt V., Overton T.M.,
+RA   Harper J.W., Howley P.M.;
+RT   "Identification and proteomic analysis of distinct UBE3A/E6AP protein
+RT   complexes.";
+RL   Mol. Cell. Biol. 32:3095-3106(2012).
+RN   [14]
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-189; SER-386; SER-452;
+RP   SER-556; SER-558; SER-665 AND SER-684, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   TISSUE=Cervix carcinoma, and Erythroleukemia;
+RX   PubMed=23186163; DOI=10.1021/pr300630k;
+RA   Zhou H., Di Palma S., Preisinger C., Peng M., Polat A.N., Heck A.J.,
+RA   Mohammed S.;
+RT   "Toward a comprehensive characterization of a human cancer cell
+RT   phosphoproteome.";
+RL   J. Proteome Res. 12:260-271(2013).
+RN   [15]
+RP   VARIANT [LARGE SCALE ANALYSIS] VAL-290.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+CC   -!- FUNCTION: Atypical MAPK protein. Phosphorylates microtubule-associated
+CC       protein 2 (MAP2) and MAPKAPK5. The precise role of the complex formed
+CC       with MAPKAPK5 is still unclear, but the complex follows a complex set
+CC       of phosphorylation events: upon interaction with atypical MAPKAPK5,
+CC       ERK3/MAPK6 is phosphorylated at Ser-189 and then mediates
+CC       phosphorylation and activation of MAPKAPK5, which in turn
+CC       phosphorylates ERK3/MAPK6. May promote entry in the cell cycle (By
+CC       similarity). {ECO:0000250}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.24;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.24;
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420; Evidence={ECO:0000250};
+CC   -!- ACTIVITY REGULATION: Activated by phosphorylation at Ser-189.
+CC   -!- SUBUNIT: Heterodimer with ERK4/MAPK4. Interacts with (via FRIEDE motif)
+CC       MAPKAPK5 (By similarity). Interacts with UBE3A; this interaction may be
+CC       indirect and mediated by HERC2, possibly via HERC2 interaction with
+CC       NEURL4. {ECO:0000250, ECO:0000269|PubMed:22645313}.
+CC   -!- INTERACTION:
+CC       Q16659; Q9GZV1: ANKRD2; NbExp=7; IntAct=EBI-1384105, EBI-12111292;
+CC       Q16659; Q9H6Z9: EGLN3; NbExp=6; IntAct=EBI-1384105, EBI-1175354;
+CC       Q16659; Q8IW41: MAPKAPK5; NbExp=9; IntAct=EBI-1384105, EBI-1201460;
+CC       Q16659; Q8IW41-2: MAPKAPK5; NbExp=6; IntAct=EBI-1384105, EBI-11958803;
+CC       Q16659; P12504: vif; Xeno; NbExp=2; IntAct=EBI-1384105, EBI-779991;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000250}. Nucleus {ECO:0000250}.
+CC       Note=Translocates to the cytoplasm following interaction with MAPKAPK5.
+CC       {ECO:0000250}.
+CC   -!- TISSUE SPECIFICITY: Highest expression in the skeletal muscle, followed
+CC       by the brain. Also found in heart, placenta, lung, liver, pancreas,
+CC       kidney and skin fibroblasts.
+CC   -!- DOMAIN: In contrast to classical MAPKs, the TXY motif within the
+CC       activation loop is replaced by the SEG motif, whose phosphorylation
+CC       activates the MAP kinases. {ECO:0000250}.
+CC   -!- PTM: Phosphorylated at Ser-189 by PAK1, PAK2 and PAK3 resulting in
+CC       catalytic activation. Phosphorylated by MAPKAPK5 at other sites.
+CC       {ECO:0000269|PubMed:21177870}.
+CC   -!- PTM: Ubiquitination at Met-1 leads to degradation by the proteasome
+CC       pathway. {ECO:0000269|PubMed:15226418}.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. CMGC Ser/Thr
+CC       protein kinase family. MAP kinase subfamily. {ECO:0000305}.
+CC   -!- WEB RESOURCE: Name=Atlas of Genetics and Cytogenetics in Oncology and
+CC       Haematology;
+CC       URL="http://atlasgeneticsoncology.org/Genes/MAPK6ID43349ch15q21.html";
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; X80692; CAA56709.1; -; mRNA.
+DR   EMBL; L77964; AAA98769.1; -; mRNA.
+DR   EMBL; AF420474; AAL17605.1; -; mRNA.
+DR   EMBL; AK313633; BAG36392.1; -; mRNA.
+DR   EMBL; CR749401; CAH18246.1; -; mRNA.
+DR   EMBL; AB451301; BAG70115.1; -; mRNA.
+DR   EMBL; BC035492; AAH35492.1; -; mRNA.
+DR   CCDS; CCDS10147.1; -.
+DR   PIR; A56352; A56352.
+DR   RefSeq; NP_002739.1; NM_002748.3.
+DR   RefSeq; XP_005254594.1; XM_005254537.2.
+DR   RefSeq; XP_005254595.1; XM_005254538.2.
+DR   RefSeq; XP_005254596.1; XM_005254539.3.
+DR   RefSeq; XP_011520084.1; XM_011521782.1.
+DR   PDB; 6YKY; X-ray; 2.52 A; A/B/C/D=9-327.
+DR   PDB; 6YLC; X-ray; 2.43 A; A/B/C/D=9-327.
+DR   PDB; 6YLL; X-ray; 2.89 A; A/B=9-327.
+DR   PDB; 7AQB; X-ray; 2.25 A; A/B=9-327.
+DR   PDBsum; 6YKY; -.
+DR   PDBsum; 6YLC; -.
+DR   PDBsum; 6YLL; -.
+DR   PDBsum; 7AQB; -.
+DR   AlphaFoldDB; Q16659; -.
+DR   SMR; Q16659; -.
+DR   BioGRID; 111583; 454.
+DR   CORUM; Q16659; -.
+DR   IntAct; Q16659; 403.
+DR   MINT; Q16659; -.
+DR   STRING; 9606.ENSP00000261845; -.
+DR   BindingDB; Q16659; -.
+DR   ChEMBL; CHEMBL5121; -.
+DR   DrugBank; DB00945; Acetylsalicylic acid.
+DR   DrugBank; DB01017; Minocycline.
+DR   DrugCentral; Q16659; -.
+DR   MoonDB; Q16659; Predicted.
+DR   iPTMnet; Q16659; -.
+DR   PhosphoSitePlus; Q16659; -.
+DR   BioMuta; MAPK6; -.
+DR   DMDM; 2499596; -.
+DR   CPTAC; CPTAC-885; -.
+DR   CPTAC; CPTAC-886; -.
+DR   EPD; Q16659; -.
+DR   jPOST; Q16659; -.
+DR   MassIVE; Q16659; -.
+DR   MaxQB; Q16659; -.
+DR   PaxDb; Q16659; -.
+DR   PeptideAtlas; Q16659; -.
+DR   PRIDE; Q16659; -.
+DR   ProteomicsDB; 61018; -.
+DR   Antibodypedia; 3920; 567 antibodies from 38 providers.
+DR   DNASU; 5597; -.
+DR   Ensembl; ENST00000261845.7; ENSP00000261845.5; ENSG00000069956.14.
+DR   Ensembl; ENST00000680066.1; ENSP00000505862.1; ENSG00000069956.14.
+DR   Ensembl; ENST00000680652.1; ENSP00000506184.1; ENSG00000069956.14.
+DR   Ensembl; ENST00000680777.1; ENSP00000505601.1; ENSG00000069956.14.
+DR   Ensembl; ENST00000681888.1; ENSP00000506036.1; ENSG00000069956.14.
+DR   Ensembl; ENST00000691380.1; ENSP00000509662.1; ENSG00000069956.14.
+DR   GeneID; 5597; -.
+DR   KEGG; hsa:5597; -.
+DR   MANE-Select; ENST00000261845.7; ENSP00000261845.5; NM_002748.4; NP_002739.1.
+DR   UCSC; uc002abp.4; human.
+DR   CTD; 5597; -.
+DR   DisGeNET; 5597; -.
+DR   GeneCards; MAPK6; -.
+DR   HGNC; HGNC:6879; MAPK6.
+DR   HPA; ENSG00000069956; Low tissue specificity.
+DR   MIM; 602904; gene.
+DR   neXtProt; NX_Q16659; -.
+DR   OpenTargets; ENSG00000069956; -.
+DR   PharmGKB; PA30624; -.
+DR   VEuPathDB; HostDB:ENSG00000069956; -.
+DR   eggNOG; KOG0660; Eukaryota.
+DR   GeneTree; ENSGT00940000154351; -.
+DR   HOGENOM; CLU_000288_181_15_1; -.
+DR   InParanoid; Q16659; -.
+DR   OMA; EADWQLH; -.
+DR   OrthoDB; 741207at2759; -.
+DR   PhylomeDB; Q16659; -.
+DR   TreeFam; TF105098; -.
+DR   BRENDA; 2.7.11.24; 2681.
+DR   PathwayCommons; Q16659; -.
+DR   Reactome; R-HSA-5687128; MAPK6/MAPK4 signaling.
+DR   SignaLink; Q16659; -.
+DR   SIGNOR; Q16659; -.
+DR   BioGRID-ORCS; 5597; 27 hits in 1074 CRISPR screens.
+DR   ChiTaRS; MAPK6; human.
+DR   EvolutionaryTrace; Q16659; -.
+DR   GeneWiki; MAPK6; -.
+DR   GenomeRNAi; 5597; -.
+DR   Pharos; Q16659; Tbio.
+DR   PRO; PR:Q16659; -.
+DR   Proteomes; UP000005640; Chromosome 15.
+DR   RNAct; Q16659; protein.
+DR   Bgee; ENSG00000069956; Expressed in cartilage tissue and 213 other tissues.
+DR   Genevisible; Q16659; HS.
+DR   GO; GO:0005737; C:cytoplasm; ISS:UniProtKB.
+DR   GO; GO:0005829; C:cytosol; IDA:HPA.
+DR   GO; GO:0005654; C:nucleoplasm; TAS:Reactome.
+DR   GO; GO:0005634; C:nucleus; ISS:UniProtKB.
+DR   GO; GO:0032991; C:protein-containing complex; IEA:Ensembl.
+DR   GO; GO:0032156; C:septin cytoskeleton; IEA:Ensembl.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004707; F:MAP kinase activity; ISS:UniProtKB.
+DR   GO; GO:0046982; F:protein heterodimerization activity; IEA:Ensembl.
+DR   GO; GO:0019901; F:protein kinase binding; IEA:Ensembl.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IBA:GO_Central.
+DR   GO; GO:0007049; P:cell cycle; IEA:UniProtKB-KW.
+DR   GO; GO:0035556; P:intracellular signal transduction; IBA:GO_Central.
+DR   GO; GO:0060999; P:positive regulation of dendritic spine development; IEA:Ensembl.
+DR   GO; GO:0006468; P:protein phosphorylation; ISS:UniProtKB.
+DR   GO; GO:0007165; P:signal transduction; TAS:ProtInc.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR008350; MAPK_ERK3/4.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   PRINTS; PR01771; ERK3ERK4MAPK.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; ATP-binding; Cell cycle; Cytoplasm; Kinase;
+KW   Nucleotide-binding; Nucleus; Phosphoprotein; Reference proteome;
+KW   Serine/threonine-protein kinase; Transferase; Ubl conjugation.
+FT   CHAIN           1..721
+FT                   /note="Mitogen-activated protein kinase 6"
+FT                   /id="PRO_0000186257"
+FT   DOMAIN          20..316
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REGION          701..721
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOTIF           189..191
+FT                   /note="SEG motif"
+FT   MOTIF           332..337
+FT                   /note="FRIEDE motif"
+FT   ACT_SITE        152
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         26..34
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         49
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   MOD_RES         189
+FT                   /note="Phosphoserine; by PAK1, PAK2 and PAK3"
+FT                   /evidence="ECO:0000269|PubMed:21177870,
+FT                   ECO:0007744|PubMed:18669648, ECO:0007744|PubMed:19369195,
+FT                   ECO:0007744|PubMed:23186163"
+FT   MOD_RES         386
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         452
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         556
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         558
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         665
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   MOD_RES         684
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0007744|PubMed:23186163"
+FT   CROSSLNK        1
+FT                   /note="Peptide (Met-Gly) (interchain with G-Cter in
+FT                   ubiquitin)"
+FT                   /evidence="ECO:0000269|PubMed:15226418"
+FT   VARIANT         290
+FT                   /note="L -> V (in dbSNP:rs35697691)"
+FT                   /evidence="ECO:0000269|PubMed:15489334,
+FT                   ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042256"
+FT   CONFLICT        229
+FT                   /note="K -> R (in Ref. 4; BAG36392)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        527
+FT                   /note="F -> L (in Ref. 4; BAG70115)"
+FT                   /evidence="ECO:0000305"
+FT   STRAND          14..16
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   TURN            17..19
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          20..25
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          34..39
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   TURN            40..42
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          45..52
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           56..70
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          80..84
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          86..88
+FT                   /evidence="ECO:0007829|PDB:6YLC"
+FT   STRAND          102..109
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          112..114
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           115..120
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           126..145
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          148..150
+FT                   /evidence="ECO:0007829|PDB:6YLC"
+FT   HELIX           155..157
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          158..161
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   TURN            162..165
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          166..169
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          174..176
+FT                   /evidence="ECO:0007829|PDB:6YLC"
+FT   HELIX           180..182
+FT                   /evidence="ECO:0007829|PDB:6YLC"
+FT   TURN            183..186
+FT                   /evidence="ECO:0007829|PDB:6YKY"
+FT   HELIX           190..192
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           200..204
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           211..227
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           237..247
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           253..260
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           265..270
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          271..273
+FT                   /evidence="ECO:0007829|PDB:6YLL"
+FT   HELIX           278..281
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   STRAND          282..285
+FT                   /evidence="ECO:0007829|PDB:6YLC"
+FT   HELIX           287..294
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           301..303
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           307..312
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+FT   HELIX           314..317
+FT                   /evidence="ECO:0007829|PDB:7AQB"
+SQ   SEQUENCE   721 AA;  82681 MW;  DAA3AAA9B98BB31F CRC64;
+     MAEKFESLMN IHGFDLGSRY MDLKPLGCGG NGLVFSAVDN DCDKRVAIKK IVLTDPQSVK
+     HALREIKIIR RLDHDNIVKV FEILGPSGSQ LTDDVGSLTE LNSVYIVQEY METDLANVLE
+     QGPLLEEHAR LFMYQLLRGL KYIHSANVLH RDLKPANLFI NTEDLVLKIG DFGLARIMDP
+     HYSHKGHLSE GLVTKWYRSP RLLLSPNNYT KAIDMWAAGC IFAEMLTGKT LFAGAHELEQ
+     MQLILESIPV VHEEDRQELL SVIPVYIRND MTEPHKPLTQ LLPGISREAL DFLEQILTFS
+     PMDRLTAEEA LSHPYMSIYS FPMDEPISSH PFHIEDEVDD ILLMDETHSH IYNWERYHDC
+     QFSEHDWPVH NNFDIDEVQL DPRALSDVTD EEEVQVDPRK YLDGDREKYL EDPAFDTNYS
+     TEPCWQYSDH HENKYCDLEC SHTCNYKTRS SSYLDNLVWR ESEVNHYYEP KLIIDLSNWK
+     EQSKEKSDKK GKSKCERNGL VKAQIALEEA SQQLAGKERE KNQGFDFDSF IAGTIQLSSQ
+     HEPTDVVDKL NDLNSSVSQL ELKSLISKSV SQEKQEKGMA NLAQLEALYQ SSWDSQFVSG
+     GEDCFFINQF CEVRKDEQVE KENTYTSYLD KFFSRKEDTE MLETEPVEDG KLGERGHEEG
+     FLNNSGEFLF NKQLESIGIP QFHSPVGSPL KSIQATLTPS AMKSSPQIPH QTYSSILKHL
+     N
+//

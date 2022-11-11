@@ -1,0 +1,419 @@
+ID   RIPK4_HUMAN             Reviewed;         832 AA.
+AC   P57078; Q96KH0;
+DT   01-DEC-2000, integrated into UniProtKB/Swiss-Prot.
+DT   01-DEC-2000, sequence version 1.
+DT   12-OCT-2022, entry version 188.
+DE   RecName: Full=Receptor-interacting serine/threonine-protein kinase 4;
+DE            EC=2.7.11.1;
+DE   AltName: Full=Ankyrin repeat domain-containing protein 3;
+DE   AltName: Full=PKC-delta-interacting protein kinase;
+GN   Name=RIPK4; Synonyms=ANKRD3, DIK;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2).
+RC   TISSUE=Fetal kidney, and Fetal lung;
+RA   Shimizu N., Kudoh J., Shibuya K.;
+RL   Submitted (AUG-2000) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=10830953; DOI=10.1038/35012518;
+RA   Hattori M., Fujiyama A., Taylor T.D., Watanabe H., Yada T., Park H.-S.,
+RA   Toyoda A., Ishii K., Totoki Y., Choi D.-K., Groner Y., Soeda E., Ohki M.,
+RA   Takagi T., Sakaki Y., Taudien S., Blechschmidt K., Polley A., Menzel U.,
+RA   Delabar J., Kumpf K., Lehmann R., Patterson D., Reichwald K., Rump A.,
+RA   Schillhabel M., Schudy A., Zimmermann W., Rosenthal A., Kudoh J.,
+RA   Shibuya K., Kawasaki K., Asakawa S., Shintani A., Sasaki T., Nagamine K.,
+RA   Mitsuyama S., Antonarakis S.E., Minoshima S., Shimizu N., Nordsiek G.,
+RA   Hornischer K., Brandt P., Scharfe M., Schoen O., Desario A., Reichelt J.,
+RA   Kauer G., Bloecker H., Ramser J., Beck A., Klages S., Hennig S.,
+RA   Riesselmann L., Dagand E., Wehrmeyer S., Borzym K., Gardiner K.,
+RA   Nizetic D., Francis F., Lehrach H., Reinhardt R., Yaspo M.-L.;
+RT   "The DNA sequence of human chromosome 21.";
+RL   Nature 405:311-319(2000).
+RN   [3]
+RP   PROTEOLYTIC CLEAVAGE AT ASP-388 AND ASP-426, INTERACTION WITH TRAF1; TRAF2;
+RP   TRAF3 AND TRAF5, AND FUNCTION.
+RX   PubMed=12446564; DOI=10.1093/embo-reports/kvf236;
+RA   Meylan E., Martinon F., Thome M., Gschwendt M., Tschopp J.;
+RT   "RIP4 (DIK/PKK), a novel member of the RIP kinase family, activates NF-
+RT   kappa B and is processed during apoptosis.";
+RL   EMBO Rep. 3:1201-1208(2002).
+RN   [4]
+RP   UBIQUITINATION AT LYS-51 AND LYS-145, UBIQUITINATION BY BIRC2/C-IAP1 AND
+RP   BIRC3/C-IAP2, AND INTERACTION WITH BIRC2/C-IAP1; BIRC3/C-IAP2 AND
+RP   XIAP/BIRC4.
+RX   PubMed=21931591; DOI=10.1371/journal.pone.0022356;
+RA   Bertrand M.J., Lippens S., Staes A., Gilbert B., Roelandt R., De Medts J.,
+RA   Gevaert K., Declercq W., Vandenabeele P.;
+RT   "cIAP1/2 are direct E3 ligases conjugating diverse types of ubiquitin
+RT   chains to receptor interacting proteins kinases 1 to 4 (RIP1-4).";
+RL   PLoS ONE 6:E22356-E22356(2011).
+RN   [5]
+RP   FUNCTION, AND VARIANT BPS ASN-81.
+RX   PubMed=22197488; DOI=10.1016/j.ajhg.2011.11.013;
+RA   Mitchell K., O'Sullivan J., Missero C., Blair E., Richardson R.,
+RA   Anderson B., Antonini D., Murray J.C., Shanske A.L., Schutte B.C.,
+RA   Romano R.A., Sinha S., Bhaskar S.S., Black G.C., Dixon J., Dixon M.J.;
+RT   "Exome sequence identifies RIPK4 as the Bartsocas-Papas syndrome locus.";
+RL   Am. J. Hum. Genet. 90:69-75(2012).
+RN   [6]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ASN-462; MET-463; TYR-562; HIS-669 AND
+RP   SER-749.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [7]
+RP   VARIANTS BPS ASN-121 AND ILE-184, AND CHARACTERIZATION OF VARIANTS BPS
+RP   ASN-121 AND ILE-184.
+RX   PubMed=22197489; DOI=10.1016/j.ajhg.2011.11.014;
+RA   Kalay E., Sezgin O., Chellappa V., Mutlu M., Morsy H., Kayserili H.,
+RA   Kreiger E., Cansu A., Toraman B., Abdalla E.M., Aslan Y., Pillai S.,
+RA   Akarsu N.A.;
+RT   "Mutations in RIPK4 cause the autosomal-recessive form of popliteal
+RT   pterygium syndrome.";
+RL   Am. J. Hum. Genet. 90:76-85(2012).
+RN   [8]
+RP   INVOLVEMENT IN CHANDS, AND VARIANT CHANDS ASP-163.
+RX   PubMed=23610050; DOI=10.1002/ajmg.a.35913;
+RA   Gripp K.W., Ennis S., Napoli J.;
+RT   "Exome analysis in clinical practice: expanding the phenotype of Bartsocas-
+RT   Papas syndrome.";
+RL   Am. J. Med. Genet. A 161A:1058-1063(2013).
+RN   [9]
+RP   INVOLVEMENT IN CHANDS, VARIANT CHANDS LYS-284, AND TISSUE SPECIFICITY.
+RX   PubMed=26129644; DOI=10.1002/ajmg.a.37233;
+RA   Gollasch B., Basmanav F.B., Nanda A., Fritz G., Mahmoudi H., Thiele H.,
+RA   Wehner M., Wolf S., Altmueller J., Nuernberg P., Frank J., Betz R.C.;
+RT   "Identification of a novel mutation in RIPK4 in a kindred with phenotypic
+RT   features of Bartsocas-Papas and CHAND syndromes.";
+RL   Am. J. Med. Genet. A 167A:2555-2562(2015).
+RN   [10]
+RP   VARIANTS BPS LEU-189; PRO-496 AND HIS-666.
+RX   PubMed=25691407; DOI=10.1002/ajmg.a.36896;
+RA   Leslie E.J., O'Sullivan J., Cunningham M.L., Singh A., Goudy S.L.,
+RA   Ababneh F., Alsubaie L., Ch'ng G.S., van der Laar I.M., Hoogeboom A.J.,
+RA   Dunnwald M., Kapoor S., Jiramongkolchai P., Standley J., Manak J.R.,
+RA   Murray J.C., Dixon M.J.;
+RT   "Expanding the genetic and phenotypic spectrum of popliteal pterygium
+RT   disorders.";
+RL   Am. J. Med. Genet. A 167A:545-552(2015).
+CC   -!- FUNCTION: Involved in stratified epithelial development. It is a direct
+CC       transcriptional target of TP63. Plays a role in NF-kappa-B activation.
+CC       {ECO:0000269|PubMed:12446564, ECO:0000269|PubMed:22197488}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1;
+CC   -!- SUBUNIT: Interacts with PRKCB (By similarity). Interacts with TRAF1,
+CC       TRAF2, TRAF3 and TRAF5. Interacts with BIRC2/c-IAP1, BIRC3/c-IAP2 and
+CC       XIAP/BIRC4. {ECO:0000250, ECO:0000269|PubMed:12446564,
+CC       ECO:0000269|PubMed:21931591}.
+CC   -!- INTERACTION:
+CC       P57078; Q13490: BIRC2; NbExp=3; IntAct=EBI-4422308, EBI-514538;
+CC       P57078; Q13489: BIRC3; NbExp=3; IntAct=EBI-4422308, EBI-517709;
+CC       P57078; O14641: DVL2; NbExp=4; IntAct=EBI-4422308, EBI-740850;
+CC       P57078; Q9NWT6: HIF1AN; NbExp=4; IntAct=EBI-4422308, EBI-745632;
+CC       P57078; P98170: XIAP; NbExp=2; IntAct=EBI-4422308, EBI-517127;
+CC       P57078-2; Q9Y4H4: GPSM3; NbExp=3; IntAct=EBI-12854608, EBI-347538;
+CC       P57078-2; Q99932-2: SPAG8; NbExp=3; IntAct=EBI-12854608, EBI-11959123;
+CC       P57078-2; B2RUY7: VWC2L; NbExp=3; IntAct=EBI-12854608, EBI-11747707;
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm. Membrane {ECO:0000250}; Peripheral
+CC       membrane protein {ECO:0000250}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=P57078-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=P57078-2; Sequence=VSP_004862;
+CC   -!- TISSUE SPECIFICITY: Expressed in hair follicles and skin.
+CC       {ECO:0000269|PubMed:26129644}.
+CC   -!- PTM: May be phosphorylated by MAP3K2 and MAP3K3. {ECO:0000250}.
+CC   -!- PTM: Proteolytically cleaved by during Fas-induced apoptosis. Cleavage
+CC       at Asp-388 and Asp-426. {ECO:0000269|PubMed:12446564}.
+CC   -!- PTM: Polyubiquitinated with 'Lys-48' and 'Lys-63'-linked chains by
+CC       BIRC2/c-IAP1 and BIRC3/c-IAP2, leading to activation of NF-kappa-B.
+CC       {ECO:0000269|PubMed:21931591}.
+CC   -!- DISEASE: Bartsocas-Papas syndrome (BPS) [MIM:263650]: An autosomal
+CC       recessive disorder characterized by multiple popliteal pterygia leading
+CC       to severe arthrogryposis, ankyloblepharon filiforme adnatum, filiform
+CC       bands between the jaws, synostosis of the carpal/tarsal and phalangeal
+CC       bones in the hands and feet, digital hypoplasia/aplasia, complete soft-
+CC       tissue syndactyly, lack of nails, lack of scalp hair, eyebrows and
+CC       eyelashes, blepharophimosis, cleft lip and/or palate, and hypoplastic
+CC       external genitalia. Early lethality is common, although survival into
+CC       childhood and beyond has been reported. {ECO:0000269|PubMed:22197488,
+CC       ECO:0000269|PubMed:22197489, ECO:0000269|PubMed:25691407}. Note=The
+CC       disease is caused by variants affecting the gene represented in this
+CC       entry.
+CC   -!- DISEASE: CHAND syndrome (CHANDS) [MIM:214350]: An autosomal recessive
+CC       syndrome characterized by ankyloblepharon, sparse, curly and woolly
+CC       hair, nail dysplasia, and oral frenula. {ECO:0000269|PubMed:23610050,
+CC       ECO:0000269|PubMed:26129644}. Note=The disease may be caused by
+CC       variants affecting the gene represented in this entry.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. TKL Ser/Thr
+CC       protein kinase family. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AB047783; BAB56136.1; -; mRNA.
+DR   EMBL; AP001743; BAA95526.1; -; Genomic_DNA.
+DR   CCDS; CCDS13675.1; -. [P57078-2]
+DR   AlphaFoldDB; P57078; -.
+DR   SMR; P57078; -.
+DR   DIP; DIP-40722N; -.
+DR   IntAct; P57078; 379.
+DR   STRING; 9606.ENSP00000332454; -.
+DR   BindingDB; P57078; -.
+DR   ChEMBL; CHEMBL6083; -.
+DR   DrugBank; DB12010; Fostamatinib.
+DR   DrugCentral; P57078; -.
+DR   iPTMnet; P57078; -.
+DR   PhosphoSitePlus; P57078; -.
+DR   BioMuta; RIPK4; -.
+DR   DMDM; 10719883; -.
+DR   EPD; P57078; -.
+DR   jPOST; P57078; -.
+DR   MassIVE; P57078; -.
+DR   MaxQB; P57078; -.
+DR   PeptideAtlas; P57078; -.
+DR   PRIDE; P57078; -.
+DR   ProteomicsDB; 56989; -. [P57078-1]
+DR   ProteomicsDB; 56990; -. [P57078-2]
+DR   Antibodypedia; 9243; 306 antibodies from 26 providers.
+DR   Ensembl; ENST00000332512.8; ENSP00000332454.3; ENSG00000183421.12. [P57078-2]
+DR   Ensembl; ENST00000352483.3; ENSP00000330161.2; ENSG00000183421.12. [P57078-1]
+DR   MANE-Select; ENST00000332512.8; ENSP00000332454.3; NM_020639.3; NP_065690.2. [P57078-2]
+DR   UCSC; uc002yzn.2; human. [P57078-1]
+DR   GeneCards; RIPK4; -.
+DR   HGNC; HGNC:496; RIPK4.
+DR   HPA; ENSG00000183421; Tissue enhanced (esophagus).
+DR   MalaCards; RIPK4; -.
+DR   MIM; 214350; phenotype.
+DR   MIM; 263650; phenotype.
+DR   MIM; 605706; gene.
+DR   neXtProt; NX_P57078; -.
+DR   OpenTargets; ENSG00000183421; -.
+DR   Orphanet; 1234; Bartsocas-Papas syndrome.
+DR   Orphanet; 1401; CHAND syndrome.
+DR   VEuPathDB; HostDB:ENSG00000183421; -.
+DR   eggNOG; KOG0192; Eukaryota.
+DR   eggNOG; KOG0504; Eukaryota.
+DR   GeneTree; ENSGT00940000159908; -.
+DR   HOGENOM; CLU_015188_0_0_1; -.
+DR   InParanoid; P57078; -.
+DR   OMA; HSKENTC; -.
+DR   PhylomeDB; P57078; -.
+DR   TreeFam; TF106506; -.
+DR   PathwayCommons; P57078; -.
+DR   SignaLink; P57078; -.
+DR   ChiTaRS; RIPK4; human.
+DR   Pharos; P57078; Tchem.
+DR   PRO; PR:P57078; -.
+DR   Proteomes; UP000005640; Chromosome 21.
+DR   RNAct; P57078; protein.
+DR   Bgee; ENSG00000183421; Expressed in esophagus squamous epithelium and 128 other tissues.
+DR   Genevisible; P57078; HS.
+DR   GO; GO:0005737; C:cytoplasm; ISS:UniProtKB.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0002009; P:morphogenesis of an epithelium; IMP:UniProtKB.
+DR   GO; GO:0051092; P:positive regulation of NF-kappaB transcription factor activity; IMP:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IEA:InterPro.
+DR   Gene3D; 1.25.40.20; -; 3.
+DR   InterPro; IPR002110; Ankyrin_rpt.
+DR   InterPro; IPR036770; Ankyrin_rpt-contain_sf.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR017441; Protein_kinase_ATP_BS.
+DR   InterPro; IPR008271; Ser/Thr_kinase_AS.
+DR   Pfam; PF12796; Ank_2; 4.
+DR   Pfam; PF13637; Ank_4; 1.
+DR   Pfam; PF00069; Pkinase; 1.
+DR   PRINTS; PR01415; ANKYRIN.
+DR   SMART; SM00248; ANK; 10.
+DR   SMART; SM00220; S_TKc; 1.
+DR   SUPFAM; SSF48403; SSF48403; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS50297; ANK_REP_REGION; 1.
+DR   PROSITE; PS50088; ANK_REPEAT; 9.
+DR   PROSITE; PS00107; PROTEIN_KINASE_ATP; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; ANK repeat; ATP-binding; Cytoplasm; Disease variant;
+KW   Ectodermal dysplasia; Isopeptide bond; Kinase; Membrane;
+KW   Nucleotide-binding; Phosphoprotein; Receptor; Reference proteome; Repeat;
+KW   Serine/threonine-protein kinase; Transferase; Ubl conjugation.
+FT   CHAIN           1..832
+FT                   /note="Receptor-interacting serine/threonine-protein kinase
+FT                   4"
+FT                   /id="PRO_0000086613"
+FT   DOMAIN          22..286
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   REPEAT          485..514
+FT                   /note="ANK 1"
+FT   REPEAT          518..547
+FT                   /note="ANK 2"
+FT   REPEAT          551..580
+FT                   /note="ANK 3"
+FT   REPEAT          584..613
+FT                   /note="ANK 4"
+FT   REPEAT          617..647
+FT                   /note="ANK 5"
+FT   REPEAT          651..680
+FT                   /note="ANK 6"
+FT   REPEAT          684..713
+FT                   /note="ANK 7"
+FT   REPEAT          717..746
+FT                   /note="ANK 8"
+FT   REPEAT          750..780
+FT                   /note="ANK 9"
+FT   REPEAT          782..811
+FT                   /note="ANK 10"
+FT   REGION          325..368
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          389..424
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        330..355
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        143
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159,
+FT                   ECO:0000255|PROSITE-ProRule:PRU10027"
+FT   BINDING         28..36
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   BINDING         51
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   SITE            388..389
+FT                   /note="Cleavage"
+FT                   /evidence="ECO:0000269|PubMed:12446564"
+FT   SITE            426..427
+FT                   /note="Cleavage"
+FT                   /evidence="ECO:0000269|PubMed:12446564"
+FT   CROSSLNK        51
+FT                   /note="Glycyl lysine isopeptide (Lys-Gly) (interchain with
+FT                   G-Cter in ubiquitin)"
+FT                   /evidence="ECO:0000269|PubMed:21931591"
+FT   CROSSLNK        145
+FT                   /note="Glycyl lysine isopeptide (Lys-Gly) (interchain with
+FT                   G-Cter in ubiquitin)"
+FT                   /evidence="ECO:0000269|PubMed:21931591"
+FT   VAR_SEQ         278..325
+FT                   /note="Missing (in isoform 2)"
+FT                   /evidence="ECO:0000303|Ref.1"
+FT                   /id="VSP_004862"
+FT   VARIANT         12
+FT                   /note="A -> G (in dbSNP:rs6586239)"
+FT                   /id="VAR_030160"
+FT   VARIANT         81
+FT                   /note="I -> N (in BPS; dbSNP:rs387906922)"
+FT                   /evidence="ECO:0000269|PubMed:22197488"
+FT                   /id="VAR_067331"
+FT   VARIANT         121
+FT                   /note="I -> N (in BPS; loss of function;
+FT                   dbSNP:rs387906923)"
+FT                   /evidence="ECO:0000269|PubMed:22197489"
+FT                   /id="VAR_067332"
+FT   VARIANT         163
+FT                   /note="G -> D (in CHANDS; unknown pathological
+FT                   significance; dbSNP:rs764278537)"
+FT                   /evidence="ECO:0000269|PubMed:23610050"
+FT                   /id="VAR_081473"
+FT   VARIANT         177
+FT                   /note="S -> N (in dbSNP:rs12482626)"
+FT                   /id="VAR_030161"
+FT   VARIANT         184
+FT                   /note="T -> I (in BPS; loss of function)"
+FT                   /evidence="ECO:0000269|PubMed:22197489"
+FT                   /id="VAR_067333"
+FT   VARIANT         189
+FT                   /note="P -> L (in BPS; unknown pathological significance)"
+FT                   /evidence="ECO:0000269|PubMed:25691407"
+FT                   /id="VAR_085697"
+FT   VARIANT         284
+FT                   /note="E -> K (in CHANDS; unknown pathological
+FT                   significance)"
+FT                   /evidence="ECO:0000269|PubMed:26129644"
+FT                   /id="VAR_081474"
+FT   VARIANT         462
+FT                   /note="I -> N (in dbSNP:rs55809511)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041050"
+FT   VARIANT         463
+FT                   /note="V -> M (in dbSNP:rs55645753)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041051"
+FT   VARIANT         496
+FT                   /note="A -> P (in BPS; unknown pathological significance)"
+FT                   /evidence="ECO:0000269|PubMed:25691407"
+FT                   /id="VAR_085698"
+FT   VARIANT         562
+FT                   /note="N -> Y (in dbSNP:rs55829311)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041052"
+FT   VARIANT         666
+FT                   /note="R -> H (in BPS; unknown pathological significance;
+FT                   dbSNP:rs763794698)"
+FT                   /evidence="ECO:0000269|PubMed:25691407"
+FT                   /id="VAR_085699"
+FT   VARIANT         669
+FT                   /note="R -> H (in dbSNP:rs56056485)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041053"
+FT   VARIANT         749
+FT                   /note="P -> S (in dbSNP:rs35537517)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_041054"
+FT   CONFLICT        714
+FT                   /note="M -> V (in Ref. 1; BAB56136)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   832 AA;  91611 MW;  5D8FFFD5F04F7ECB CRC64;
+     MEGDGGTPWA LALLRTFDAG EFTGWEKVGS GGFGQVYKVR HVHWKTWLAI KCSPSLHVDD
+     RERMELLEEA KKMEMAKFRY ILPVYGICRE PVGLVMEYME TGSLEKLLAS EPLPWDLRFR
+     IIHETAVGMN FLHCMAPPLL HLDLKPANIL LDAHYHVKIS DFGLAKCNGL SHSHDLSMDG
+     LFGTIAYLPP ERIREKSRLF DTKHDVYSFA IVIWGVLTQK KPFADEKNIL HIMVKVVKGH
+     RPELPPVCRA RPRACSHLIR LMQRCWQGDP RVRPTFQGNG LNGELIRQVL AALLPVTGRW
+     RSPGEGFRLE SEVIIRVTCP LSSPQEITSE TEDLCEKPDD EVKETAHDLD VKSPPEPRSE
+     VVPARLKRAS APTFDNDYSL SELLSQLDSG VSQAVEGPEE LSRSSSESKL PSSGSGKRLS
+     GVSSVDSAFS SRGSLSLSFE REPSTSDLGT TDVQKKKLVD AIVSGDTSKL MKILQPQDVD
+     LALDSGASLL HLAVEAGQEE CAKWLLLNNA NPNLSNRRGS TPLHMAVERR VRGVVELLLA
+     RKISVNAKDE DQWTALHFAA QNGDESSTRL LLEKNASVNE VDFEGRTPMH VACQHGQENI
+     VRILLRRGVD VSLQGKDAWL PLHYAAWQGH LPIVKLLAKQ PGVSVNAQTL DGRTPLHLAA
+     QRGHYRVARI LIDLCSDVNV CSLLAQTPLH VAAETGHTST ARLLLHRGAG KEAMTSDGYT
+     ALHLAARNGH LATVKLLVEE KADVLARGPL NQTALHLAAA HGHSEVVEEL VSADVIDLFD
+     EQGLSALHLA AQGRHAQTVE TLLRHGAHIN LQSLKFQGGH GPAATLLRRS KT
+//

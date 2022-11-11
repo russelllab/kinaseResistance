@@ -1,0 +1,672 @@
+ID   ANPRB_HUMAN             Reviewed;        1047 AA.
+AC   P20594; B0ZBF2; B0ZBF3; D3DRP3; D3DRP4; O60871; Q4VAK7; Q5TCV2; Q8TA93;
+AC   Q9UQ50;
+DT   01-FEB-1991, integrated into UniProtKB/Swiss-Prot.
+DT   01-FEB-1991, sequence version 1.
+DT   12-OCT-2022, entry version 226.
+DE   RecName: Full=Atrial natriuretic peptide receptor 2;
+DE            EC=4.6.1.2 {ECO:0000269|PubMed:26980729};
+DE   AltName: Full=Atrial natriuretic peptide receptor type B;
+DE            Short=ANP-B;
+DE            Short=ANPR-B;
+DE            Short=NPR-B;
+DE   AltName: Full=Guanylate cyclase B;
+DE            Short=GC-B;
+DE   Flags: Precursor;
+GN   Name=NPR2; Synonyms=ANPRB;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE (ISOFORM LONG).
+RC   TISSUE=Brain;
+RX   PubMed=2570358; DOI=10.1038/341068a0;
+RA   Chang M.S., Lowe D.G., Lewis M., Hellmiss R., Chen E., Goeddel D.V.;
+RT   "Differential activation by atrial and brain natriuretic peptides of two
+RT   different receptor guanylate cyclases.";
+RL   Nature 341:68-72(1989).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   TISSUE=Blood;
+RX   PubMed=10082481; DOI=10.1161/01.res.84.5.605;
+RA   Rehemudula D., Nakayama T., Soma M., Takahashi Y., Uwabo J., Sato M.,
+RA   Izumi Y., Kanmatsuse K., Ozawa Y.;
+RT   "Structure of the type B human natriuretic peptide receptor gene and
+RT   association of a novel microsatellite polymorphism with essential
+RT   hypertension.";
+RL   Circ. Res. 84:605-610(1999).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM SHORT).
+RC   TISSUE=Kidney;
+RX   PubMed=10073597; DOI=10.1681/asn.v103472;
+RA   Hirsch J.R., Meyer M., Maegert H.-J., Forssmann W.-G., Mollerup S.,
+RA   Herter P., Weber G., Cermak R., Ankorina-Stark I., Schlatter E.,
+RA   Kruhoffer M.;
+RT   "cGMP-dependent and -independent inhibition of a K+ conductance by
+RT   natriuretic peptides: molecular and functional studies in human proximal
+RT   tubule cells.";
+RL   J. Am. Soc. Nephrol. 10:472-480(1999).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15164053; DOI=10.1038/nature02465;
+RA   Humphray S.J., Oliver K., Hunt A.R., Plumb R.W., Loveland J.E., Howe K.L.,
+RA   Andrews T.D., Searle S., Hunt S.E., Scott C.E., Jones M.C., Ainscough R.,
+RA   Almeida J.P., Ambrose K.D., Ashwell R.I.S., Babbage A.K., Babbage S.,
+RA   Bagguley C.L., Bailey J., Banerjee R., Barker D.J., Barlow K.F., Bates K.,
+RA   Beasley H., Beasley O., Bird C.P., Bray-Allen S., Brown A.J., Brown J.Y.,
+RA   Burford D., Burrill W., Burton J., Carder C., Carter N.P., Chapman J.C.,
+RA   Chen Y., Clarke G., Clark S.Y., Clee C.M., Clegg S., Collier R.E.,
+RA   Corby N., Crosier M., Cummings A.T., Davies J., Dhami P., Dunn M.,
+RA   Dutta I., Dyer L.W., Earthrowl M.E., Faulkner L., Fleming C.J.,
+RA   Frankish A., Frankland J.A., French L., Fricker D.G., Garner P.,
+RA   Garnett J., Ghori J., Gilbert J.G.R., Glison C., Grafham D.V., Gribble S.,
+RA   Griffiths C., Griffiths-Jones S., Grocock R., Guy J., Hall R.E.,
+RA   Hammond S., Harley J.L., Harrison E.S.I., Hart E.A., Heath P.D.,
+RA   Henderson C.D., Hopkins B.L., Howard P.J., Howden P.J., Huckle E.,
+RA   Johnson C., Johnson D., Joy A.A., Kay M., Keenan S., Kershaw J.K.,
+RA   Kimberley A.M., King A., Knights A., Laird G.K., Langford C., Lawlor S.,
+RA   Leongamornlert D.A., Leversha M., Lloyd C., Lloyd D.M., Lovell J.,
+RA   Martin S., Mashreghi-Mohammadi M., Matthews L., McLaren S., McLay K.E.,
+RA   McMurray A., Milne S., Nickerson T., Nisbett J., Nordsiek G., Pearce A.V.,
+RA   Peck A.I., Porter K.M., Pandian R., Pelan S., Phillimore B., Povey S.,
+RA   Ramsey Y., Rand V., Scharfe M., Sehra H.K., Shownkeen R., Sims S.K.,
+RA   Skuce C.D., Smith M., Steward C.A., Swarbreck D., Sycamore N., Tester J.,
+RA   Thorpe A., Tracey A., Tromans A., Thomas D.W., Wall M., Wallis J.M.,
+RA   West A.P., Whitehead S.L., Willey D.L., Williams S.A., Wilming L.,
+RA   Wray P.W., Young L., Ashurst J.L., Coulson A., Blocker H., Durbin R.M.,
+RA   Sulston J.E., Hubbard T., Jackson M.J., Bentley D.R., Beck S., Rogers J.,
+RA   Dunham I.;
+RT   "DNA sequence and analysis of human chromosome 9.";
+RL   Nature 429:369-374(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (SEP-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RG   NHLBI resequencing and genotyping service (RS&G);
+RL   Submitted (DEC-2007) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM LONG).
+RC   TISSUE=Brain;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [8]
+RP   LIGAND-BINDING.
+RX   PubMed=1660465; DOI=10.1016/s0021-9258(18)54463-x;
+RA   Bennett B.D., Bennett G.L., Vitangcol R.V., Jewett J.R., Burnier J.,
+RA   Henzel W., Lowe D.G.;
+RT   "Extracellular domain-IgG fusion proteins for three human natriuretic
+RT   peptide receptors. Hormone pharmacology and application to solid phase
+RT   screening of synthetic peptide antisera.";
+RL   J. Biol. Chem. 266:23060-23067(1991).
+RN   [9]
+RP   FUNCTION.
+RX   PubMed=1672777; DOI=10.1126/science.1672777;
+RA   Koller K.J., Lowe D.G., Bennett G.L., Minamino N., Kangawa K., Matsuo H.,
+RA   Goeddel D.V.;
+RT   "Selective activation of the B natriuretic peptide receptor by C-type
+RT   natriuretic peptide (CNP).";
+RL   Science 252:120-123(1991).
+RN   [10]
+RP   SPLICE ISOFORM(S) THAT ARE POTENTIAL NMD TARGET(S).
+RX   PubMed=14759258; DOI=10.1186/gb-2004-5-2-r8;
+RA   Hillman R.T., Green R.E., Brenner S.E.;
+RT   "An unappreciated role for RNA surveillance.";
+RL   Genome Biol. 5:R8.1-R8.16(2004).
+RN   [11]
+RP   FUNCTION, VARIANTS AMD1 THR-32; GLY-115; GLU-176; MET-297; CYS-338;
+RP   THR-409; GLU-413; CYS-708; TRP-776; CYS-957 AND ALA-959, AND
+RP   CHARACTERIZATION OF VARIANTS AMD1 GLY-115; MET-297 AND GLU-413.
+RX   PubMed=15146390; DOI=10.1086/422013;
+RA   Bartels C.F., Buekuelmez H., Padayatti P., Rhee D.K.,
+RA   van Ravenswaaij-Arts C., Pauli R.M., Mundlos S., Chitayat D., Shih L.-Y.,
+RA   Al-Gazali L.I., Kant S., Cole T., Morton J., Cormier-Daire V., Faivre L.,
+RA   Lees M., Kirk J., Mortier G.R., Leroy J., Zabel B., Kim C.A., Crow Y.,
+RA   Braverman N.E., van den Akker F., Warman M.L.;
+RT   "Mutations in the transmembrane natriuretic peptide receptor NPR-B impair
+RT   skeletal growth and cause acromesomelic dysplasia, type Maroteaux.";
+RL   Am. J. Hum. Genet. 75:27-34(2004).
+RN   [12]
+RP   PHOSPHORYLATION AT SER-513; THR-516; SER-518; SER-523; SER-526 AND THR-529.
+RX   PubMed=20977274; DOI=10.1021/bi101700e;
+RA   Yoder A.R., Stone M.D., Griffin T.J., Potter L.R.;
+RT   "Mass spectrometric identification of phosphorylation sites in guanylyl
+RT   cyclase A and B.";
+RL   Biochemistry 49:10137-10145(2010).
+RN   [13]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ILE-232 AND ILE-882.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [14]
+RP   INVOLVEMENT IN ECDM, VARIANT ECDM MET-882, AND CHARACTERIZATION OF VARIANT
+RP   ECDM MET-882.
+RX   PubMed=22870295; DOI=10.1371/journal.pone.0042180;
+RA   Miura K., Namba N., Fujiwara M., Ohata Y., Ishida H., Kitaoka T.,
+RA   Kubota T., Hirai H., Higuchi C., Tsumaki N., Yoshikawa H., Sakai N.,
+RA   Michigami T., Ozono K.;
+RT   "An overgrowth disorder associated with excessive production of cGMP due to
+RT   a gain-of-function mutation of the natriuretic peptide receptor 2 gene.";
+RL   PLoS ONE 7:E42180-E42180(2012).
+RN   [15]
+RP   FUNCTION, SUBCELLULAR LOCATION, INVOLVEMENT IN SNSK, VARIANTS SNSK PRO-76;
+RP   PRO-263 AND CYS-819, AND CHARACTERIZATION OF VARIANTS SNSK PRO-76; PRO-263
+RP   AND CYS-819.
+RX   PubMed=24001744; DOI=10.1210/jc.2013-2142;
+RA   Vasques G.A., Amano N., Docko A.J., Funari M.F., Quedas E.P., Nishi M.Y.,
+RA   Arnhold I.J., Hasegawa T., Jorge A.A.;
+RT   "Heterozygous mutations in natriuretic peptide receptor-B (NPR2) gene as a
+RT   cause of short stature in patients initially classified as idiopathic short
+RT   stature.";
+RL   J. Clin. Endocrinol. Metab. 98:E1636-E1644(2013).
+RN   [16]
+RP   FUNCTION, SUBCELLULAR LOCATION, INVOLVEMENT IN SNSK, VARIANTS SNSK CYS-110
+RP   AND GLU-417, VARIANT ILE-187, CHARACTERIZATION OF VARIANTS SNSK CYS-110 AND
+RP   GLU-417, AND CHARACTERIZATION OF VARIANT ILE-187.
+RX   PubMed=24471569; DOI=10.1210/jc.2013-3525;
+RA   Amano N., Mukai T., Ito Y., Narumi S., Tanaka T., Yokoya S., Ogata T.,
+RA   Hasegawa T.;
+RT   "Identification and functional characterization of two novel NPR2 mutations
+RT   in Japanese patients with short stature.";
+RL   J. Clin. Endocrinol. Metab. 99:E713-E718(2014).
+RN   [17]
+RP   CHARACTERIZATION OF VARIANT ECDM MET-882.
+RX   PubMed=23827346; DOI=10.1016/j.bone.2013.06.024;
+RA   Robinson J.W., Dickey D.M., Miura K., Michigami T., Ozono K., Potter L.R.;
+RT   "A human skeletal overgrowth mutation increases maximal velocity and blocks
+RT   desensitization of guanylyl cyclase-B.";
+RL   Bone 56:375-382(2013).
+RN   [18]
+RP   CHARACTERIZATION OF VARIANTS AMD1 PHE-658; CYS-708; TRP-776 AND ALA-959,
+RP   FUNCTION, CATALYTIC ACTIVITY, SUBCELLULAR LOCATION, TOPOLOGY,
+RP   GLYCOSYLATION, PHOSPHORYLATION, AND MUTAGENESIS OF ASN-24.
+RX   PubMed=26980729; DOI=10.1074/jbc.m115.704015;
+RA   Dickey D.M., Edmund A.B., Otto N.M., Chaffee T.S., Robinson J.W.,
+RA   Potter L.R.;
+RT   "Catalytically active guanylyl cyclase b requires endoplasmic reticulum-
+RT   mediated glycosylation, and mutations that inhibit this process cause
+RT   dwarfism.";
+RL   J. Biol. Chem. 291:11385-11393(2016).
+RN   [19]
+RP   VARIANT AMD1 PHE-658, AND CHARACTERIZATION OF VARIANT AMD1 PHE-658.
+RX   PubMed=17652215; DOI=10.1210/jc.2007-1101;
+RA   Hachiya R., Ohashi Y., Kamei Y., Suganami T., Mochizuki H., Mitsui N.,
+RA   Saitoh M., Sakuragi M., Nishimura G., Ohashi H., Hasegawa T., Ogawa Y.;
+RT   "Intact kinase homology domain of natriuretic peptide receptor-B is
+RT   essential for skeletal development.";
+RL   J. Clin. Endocrinol. Metab. 92:4009-4014(2007).
+RN   [20]
+RP   VARIANT ECDM CYS-655, AND CHARACTERIZATION OF VARIANT ECDM CYS-655.
+RX   PubMed=24057292; DOI=10.1210/jc.2013-2358;
+RA   Hannema S.E., van Duyvenvoorde H.A., Premsler T., Yang R.B., Mueller T.D.,
+RA   Gassner B., Oberwinkler H., Roelfsema F., Santen G.W., Prickett T.,
+RA   Kant S.G., Verkerk A.J., Uitterlinden A.G., Espiner E., Ruivenkamp C.A.,
+RA   Oostdijk W., Pereira A.M., Losekoot M., Kuhn M., Wit J.M.;
+RT   "An activating mutation in the kinase homology domain of the natriuretic
+RT   peptide receptor-2 causes extremely tall stature without skeletal
+RT   deformities.";
+RL   J. Clin. Endocrinol. Metab. 98:E1988-E1998(2013).
+RN   [21]
+RP   VARIANT ECDM PRO-488, AND CHARACTERIZATION OF VARIANT ECDM PRO-488.
+RX   PubMed=24259409; DOI=10.1002/ajmg.a.36218;
+RA   Miura K., Kim O.H., Lee H.R., Namba N., Michigami T., Yoo W.J., Choi I.H.,
+RA   Ozono K., Cho T.J.;
+RT   "Overgrowth syndrome associated with a gain-of-function mutation of the
+RT   natriuretic peptide receptor 2 (NPR2) gene.";
+RL   Am. J. Med. Genet. A 164A:156-163(2014).
+CC   -!- FUNCTION: Receptor for the C-type natriuretic peptide NPPC/CNP hormone.
+CC       Has guanylate cyclase activity upon binding of its ligand. May play a
+CC       role in the regulation of skeletal growth.
+CC       {ECO:0000269|PubMed:15146390, ECO:0000269|PubMed:1672777,
+CC       ECO:0000269|PubMed:24001744, ECO:0000269|PubMed:24471569,
+CC       ECO:0000269|PubMed:26980729}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=GTP = 3',5'-cyclic GMP + diphosphate; Xref=Rhea:RHEA:13665,
+CC         ChEBI:CHEBI:33019, ChEBI:CHEBI:37565, ChEBI:CHEBI:57746; EC=4.6.1.2;
+CC         Evidence={ECO:0000269|PubMed:26980729};
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:24001744,
+CC       ECO:0000269|PubMed:26980729}; Single-pass type I membrane protein
+CC       {ECO:0000305|PubMed:26980729}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=Long;
+CC         IsoId=P20594-1; Sequence=Displayed;
+CC       Name=Short; Synonyms=NPR-BI;
+CC         IsoId=P20594-2; Sequence=VSP_001810;
+CC   -!- PTM: Phosphorylated (PubMed:26980729). Phosphorylation of the protein
+CC       kinase-like domain is required for full activation by CNP (By
+CC       similarity). {ECO:0000250|UniProtKB:P16067,
+CC       ECO:0000269|PubMed:26980729}.
+CC   -!- PTM: Glycosylated. {ECO:0000269|PubMed:26980729}.
+CC   -!- DISEASE: Acromesomelic dysplasia 1 (AMD1) [MIM:602875]: A form of
+CC       acromesomelic dysplasia, a skeletal disorder characterized by short
+CC       stature, very short limbs and hand/foot malformations. The severity of
+CC       limb abnormalities increases from proximal to distal with profoundly
+CC       affected hands and feet showing brachydactyly and/or rudimentary
+CC       fingers (knob-like fingers). AMD1 is an autosomal recessive form
+CC       characterized by axial skeletal involvement with wedging of vertebral
+CC       bodies. All skeletal elements are present but show abnormal rates of
+CC       linear growth. {ECO:0000269|PubMed:15146390,
+CC       ECO:0000269|PubMed:17652215, ECO:0000269|PubMed:26980729}. Note=The
+CC       disease is caused by variants affecting the gene represented in this
+CC       entry.
+CC   -!- DISEASE: Epiphyseal chondrodysplasia, Miura type (ECDM) [MIM:615923]:
+CC       An overgrowth syndrome characterized by tall stature, long hands and
+CC       feet with arachnodactyly, macrodactyly of the great toes, scoliosis,
+CC       coxa valga and slipped capital femoral epiphysis.
+CC       {ECO:0000269|PubMed:22870295, ECO:0000269|PubMed:23827346,
+CC       ECO:0000269|PubMed:24057292, ECO:0000269|PubMed:24259409}. Note=The
+CC       disease is caused by variants affecting the gene represented in this
+CC       entry.
+CC   -!- DISEASE: Short stature with non-specific skeletal abnormalities (SNSK)
+CC       [MIM:616255]: A condition characterized by short stature, defined as a
+CC       height less than 2 SD below normal, and no endocrine abnormalities.
+CC       {ECO:0000269|PubMed:24001744, ECO:0000269|PubMed:24471569}. Note=The
+CC       disease is caused by variants affecting the gene represented in this
+CC       entry.
+CC   -!- MISCELLANEOUS: [Isoform Short]: May be produced at very low levels due
+CC       to a premature stop codon in the mRNA, leading to nonsense-mediated
+CC       mRNA decay. {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the adenylyl cyclase class-4/guanylyl cyclase
+CC       family. {ECO:0000255|PROSITE-ProRule:PRU00099}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; AB005647; BAA81737.1; -; Genomic_DNA.
+DR   EMBL; AJ005282; CAA06466.1; -; mRNA.
+DR   EMBL; AL133410; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; EU326311; ACA05920.1; -; Genomic_DNA.
+DR   EMBL; EU326311; ACA05921.1; -; Genomic_DNA.
+DR   EMBL; CH471071; EAW58338.1; -; Genomic_DNA.
+DR   EMBL; CH471071; EAW58337.1; -; Genomic_DNA.
+DR   EMBL; CH471071; EAW58339.1; -; Genomic_DNA.
+DR   EMBL; CH471071; EAW58340.1; -; Genomic_DNA.
+DR   EMBL; BC023017; AAH23017.1; -; mRNA.
+DR   CCDS; CCDS6590.1; -. [P20594-1]
+DR   PIR; S05514; OYHUBR.
+DR   RefSeq; NP_003986.2; NM_003995.3. [P20594-1]
+DR   AlphaFoldDB; P20594; -.
+DR   SMR; P20594; -.
+DR   BioGRID; 110942; 12.
+DR   IntAct; P20594; 3.
+DR   STRING; 9606.ENSP00000341083; -.
+DR   BindingDB; P20594; -.
+DR   ChEMBL; CHEMBL1795; -.
+DR   DrugBank; DB01613; Erythrityl tetranitrate.
+DR   DrugBank; DB04899; Nesiritide.
+DR   DrugBank; DB11928; Vosoritide.
+DR   GuidetoPHARMACOLOGY; 1748; -.
+DR   TCDB; 8.A.85.1.2; the guanylate cyclase (gc) family.
+DR   GlyGen; P20594; 7 sites.
+DR   iPTMnet; P20594; -.
+DR   PhosphoSitePlus; P20594; -.
+DR   BioMuta; NPR2; -.
+DR   DMDM; 113916; -.
+DR   EPD; P20594; -.
+DR   jPOST; P20594; -.
+DR   MassIVE; P20594; -.
+DR   MaxQB; P20594; -.
+DR   PaxDb; P20594; -.
+DR   PeptideAtlas; P20594; -.
+DR   PRIDE; P20594; -.
+DR   ProteomicsDB; 53766; -. [P20594-1]
+DR   ProteomicsDB; 53767; -. [P20594-2]
+DR   Antibodypedia; 1647; 245 antibodies from 31 providers.
+DR   DNASU; 4882; -.
+DR   Ensembl; ENST00000342694.7; ENSP00000341083.2; ENSG00000159899.16. [P20594-1]
+DR   GeneID; 4882; -.
+DR   KEGG; hsa:4882; -.
+DR   MANE-Select; ENST00000342694.7; ENSP00000341083.2; NM_003995.4; NP_003986.2.
+DR   UCSC; uc003zyd.4; human. [P20594-1]
+DR   CTD; 4882; -.
+DR   DisGeNET; 4882; -.
+DR   GeneCards; NPR2; -.
+DR   HGNC; HGNC:7944; NPR2.
+DR   HPA; ENSG00000159899; Low tissue specificity.
+DR   MalaCards; NPR2; -.
+DR   MIM; 108961; gene.
+DR   MIM; 602875; phenotype.
+DR   MIM; 615923; phenotype.
+DR   MIM; 616255; phenotype.
+DR   neXtProt; NX_P20594; -.
+DR   OpenTargets; ENSG00000159899; -.
+DR   Orphanet; 40; Acromesomelic dysplasia, Maroteaux type.
+DR   Orphanet; 329191; Tall stature-long halluces-multiple extra-epiphyses syndrome.
+DR   PharmGKB; PA257; -.
+DR   VEuPathDB; HostDB:ENSG00000159899; -.
+DR   eggNOG; KOG1023; Eukaryota.
+DR   GeneTree; ENSGT00940000156985; -.
+DR   HOGENOM; CLU_001072_1_3_1; -.
+DR   InParanoid; P20594; -.
+DR   OMA; AAKSEHY; -.
+DR   OrthoDB; 229634at2759; -.
+DR   PhylomeDB; P20594; -.
+DR   TreeFam; TF106338; -.
+DR   BRENDA; 4.6.1.2; 2681.
+DR   PathwayCommons; P20594; -.
+DR   Reactome; R-HSA-5578768; Physiological factors.
+DR   SignaLink; P20594; -.
+DR   BioGRID-ORCS; 4882; 9 hits in 1104 CRISPR screens.
+DR   ChiTaRS; NPR2; human.
+DR   GeneWiki; NPR2; -.
+DR   GenomeRNAi; 4882; -.
+DR   Pharos; P20594; Tbio.
+DR   PRO; PR:P20594; -.
+DR   Proteomes; UP000005640; Chromosome 9.
+DR   RNAct; P20594; protein.
+DR   Bgee; ENSG00000159899; Expressed in right uterine tube and 184 other tissues.
+DR   ExpressionAtlas; P20594; baseline and differential.
+DR   Genevisible; P20594; HS.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0005886; C:plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IEA:InterPro.
+DR   GO; GO:0005525; F:GTP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004383; F:guanylate cyclase activity; IDA:UniProtKB.
+DR   GO; GO:0042562; F:hormone binding; IPI:UniProtKB.
+DR   GO; GO:0042802; F:identical protein binding; IEA:Ensembl.
+DR   GO; GO:0016941; F:natriuretic peptide receptor activity; IDA:UniProtKB.
+DR   GO; GO:0017046; F:peptide hormone binding; IPI:UniProtKB.
+DR   GO; GO:0001653; F:peptide receptor activity; IBA:GO_Central.
+DR   GO; GO:0004672; F:protein kinase activity; IEA:InterPro.
+DR   GO; GO:0060348; P:bone development; IEA:Ensembl.
+DR   GO; GO:0097011; P:cellular response to granulocyte macrophage colony-stimulating factor stimulus; IEP:UniProtKB.
+DR   GO; GO:0006182; P:cGMP biosynthetic process; IDA:GO_Central.
+DR   GO; GO:0019934; P:cGMP-mediated signaling; IEA:Ensembl.
+DR   GO; GO:0051321; P:meiotic cell cycle; IEA:Ensembl.
+DR   GO; GO:0051447; P:negative regulation of meiotic cell cycle; IEA:Ensembl.
+DR   GO; GO:1900194; P:negative regulation of oocyte maturation; IEA:Ensembl.
+DR   GO; GO:0001503; P:ossification; IEA:UniProtKB-KW.
+DR   GO; GO:0010753; P:positive regulation of cGMP-mediated signaling; IEA:Ensembl.
+DR   GO; GO:0006468; P:protein phosphorylation; IEA:InterPro.
+DR   GO; GO:0007168; P:receptor guanylyl cyclase signaling pathway; IDA:UniProtKB.
+DR   GO; GO:0008217; P:regulation of blood pressure; TAS:ProtInc.
+DR   GO; GO:0007165; P:signal transduction; IBA:GO_Central.
+DR   CDD; cd07302; CHD; 1.
+DR   Gene3D; 3.30.70.1230; -; 1.
+DR   InterPro; IPR001054; A/G_cyclase.
+DR   InterPro; IPR018297; A/G_cyclase_CS.
+DR   InterPro; IPR001828; ANF_lig-bd_rcpt.
+DR   InterPro; IPR001170; ANPR/GUC.
+DR   InterPro; IPR011009; Kinase-like_dom_sf.
+DR   InterPro; IPR029787; Nucleotide_cyclase.
+DR   InterPro; IPR028082; Peripla_BP_I.
+DR   InterPro; IPR000719; Prot_kinase_dom.
+DR   InterPro; IPR001245; Ser-Thr/Tyr_kinase_cat_dom.
+DR   Pfam; PF01094; ANF_receptor; 1.
+DR   Pfam; PF00211; Guanylate_cyc; 1.
+DR   Pfam; PF07714; PK_Tyr_Ser-Thr; 1.
+DR   PRINTS; PR00255; NATPEPTIDER.
+DR   SMART; SM00044; CYCc; 1.
+DR   SUPFAM; SSF53822; SSF53822; 1.
+DR   SUPFAM; SSF55073; SSF55073; 1.
+DR   SUPFAM; SSF56112; SSF56112; 1.
+DR   PROSITE; PS00458; ANF_RECEPTORS; 1.
+DR   PROSITE; PS00452; GUANYLATE_CYCLASE_1; 1.
+DR   PROSITE; PS50125; GUANYLATE_CYCLASE_2; 1.
+DR   PROSITE; PS50011; PROTEIN_KINASE_DOM; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; Cell membrane; cGMP biosynthesis; Disease variant;
+KW   Disulfide bond; Dwarfism; Glycoprotein; GTP-binding; Lyase; Membrane;
+KW   Nucleotide-binding; Osteogenesis; Phosphoprotein; Receptor;
+KW   Reference proteome; Signal; Transmembrane; Transmembrane helix.
+FT   SIGNAL          1..22
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           23..1047
+FT                   /note="Atrial natriuretic peptide receptor 2"
+FT                   /id="PRO_0000012364"
+FT   TOPO_DOM        23..458
+FT                   /note="Extracellular"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        459..478
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        479..1047
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          513..786
+FT                   /note="Protein kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00159"
+FT   DOMAIN          861..991
+FT                   /note="Guanylate cyclase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00099"
+FT   MOD_RES         513
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         516
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         518
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         522
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:P16066"
+FT   MOD_RES         523
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         526
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   MOD_RES         529
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000269|PubMed:20977274"
+FT   CARBOHYD        24
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        35
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        161
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        195
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        244
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        277
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   CARBOHYD        349
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000255"
+FT   DISULFID        75..101
+FT                   /evidence="ECO:0000250"
+FT   DISULFID        439
+FT                   /note="Interchain"
+FT                   /evidence="ECO:0000305"
+FT   DISULFID        448
+FT                   /note="Interchain"
+FT                   /evidence="ECO:0000305"
+FT   VAR_SEQ         964..1047
+FT                   /note="PVCAGVVGLKMPRYCLFGDTVNTASRMESNGQALKIHVSSTTKDALDELGCF
+FT                   QLELRGDVEMKGKGKMRTYWLLGERKGPPGLL -> KADSHSSPSLHLSQTLPTCFFSK
+FT                   GQSVLGLLA (in isoform Short)"
+FT                   /evidence="ECO:0000303|PubMed:10073597"
+FT                   /id="VSP_001810"
+FT   VARIANT         32
+FT                   /note="P -> T (in AMD1; dbSNP:rs28931581)"
+FT                   /evidence="ECO:0000269|PubMed:15146390"
+FT                   /id="VAR_022583"
+FT   VARIANT         76
+FT                   /note="S -> P (in SNSK; loss of C-type natriuretic
+FT                   peptide-induced signaling; dominant negative effect; loss
+FT                   of localization to the plasma membrane; dbSNP:rs796065355)"
+FT                   /evidence="ECO:0000269|PubMed:24001744"
+FT                   /id="VAR_074678"
+FT   VARIANT         110
+FT                   /note="R -> C (in SNSK; loss of C-type natriuretic
+FT                   peptide-induced signaling; dominant negative effect;
+FT                   retained in the endoplasmic reticulum; dbSNP:rs758478717)"
+FT                   /evidence="ECO:0000269|PubMed:24471569"
+FT                   /id="VAR_074679"
+FT   VARIANT         115
+FT                   /note="W -> G (in AMD1; markedly deficient activity;
+FT                   dbSNP:rs28931582)"
+FT                   /evidence="ECO:0000269|PubMed:15146390"
+FT                   /id="VAR_022584"
+FT   VARIANT         176
+FT                   /note="D -> E (in AMD1; dbSNP:rs28929479)"
+FT                   /evidence="ECO:0000269|PubMed:15146390"
+FT                   /id="VAR_022585"
+FT   VARIANT         187
+FT                   /note="V -> I (does not affect C-type natriuretic
+FT                   peptide-induced signaling; dbSNP:rs768423636)"
+FT                   /evidence="ECO:0000269|PubMed:24471569"
+FT                   /id="VAR_074680"
+FT   VARIANT         232
+FT                   /note="M -> I (in dbSNP:rs55747238)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042219"
+FT   VARIANT         263
+FT                   /note="R -> P (in SNSK; loss of C-type natriuretic
+FT                   peptide-induced signaling; dominant negative effect; loss
+FT                   of localization to the plasma membrane; dbSNP:rs139036657)"
+FT                   /evidence="ECO:0000269|PubMed:24001744"
+FT                   /id="VAR_074681"
+FT   VARIANT         297
+FT                   /note="T -> M (in AMD1; markedly deficient activity;
+FT                   dbSNP:rs1313765432)"
+FT                   /evidence="ECO:0000269|PubMed:15146390"
+FT                   /id="VAR_022586"
+FT   VARIANT         338
+FT                   /note="Y -> C (in AMD1)"
+FT                   /evidence="ECO:0000269|PubMed:15146390"
+FT                   /id="VAR_022587"
+FT   VARIANT         409
+FT                   /note="A -> T (in AMD1)"
+FT                   /evidence="ECO:0000269|PubMed:15146390"
+FT                   /id="VAR_022588"
+FT   VARIANT         413
+FT                   /note="G -> E (in AMD1; markedly deficient activity)"
+FT                   /evidence="ECO:0000269|PubMed:15146390"
+FT                   /id="VAR_022589"
+FT   VARIANT         417
+FT                   /note="Q -> E (in SNSK; loss of C-type natriuretic
+FT                   peptide-induced signaling; dominant negative effect; no
+FT                   effect on cell surface expression; dbSNP:rs796065356)"
+FT                   /evidence="ECO:0000269|PubMed:24471569"
+FT                   /id="VAR_074682"
+FT   VARIANT         488
+FT                   /note="A -> P (in ECDM; mutant and wild-type alleles have
+FT                   similar expression levels; the mutation results in
+FT                   increased guanylate cyclase activity; dbSNP:rs587777597)"
+FT                   /evidence="ECO:0000269|PubMed:24259409"
+FT                   /id="VAR_071875"
+FT   VARIANT         655
+FT                   /note="R -> C (in ECDM; the mutation results in increased
+FT                   guanylate cyclase activity; dbSNP:rs587777596)"
+FT                   /evidence="ECO:0000269|PubMed:24057292"
+FT                   /id="VAR_071876"
+FT   VARIANT         658
+FT                   /note="L -> F (in AMD1; no effect on subcellular location;
+FT                   changed glycosylation; no effect on C-type natriuretic
+FT                   peptide binding; decreased guanylate cyclase activity; loss
+FT                   of natriuretic peptide receptor activity; dominant negative
+FT                   effect; dbSNP:rs1314542724)"
+FT                   /evidence="ECO:0000269|PubMed:17652215,
+FT                   ECO:0000269|PubMed:26980729"
+FT                   /id="VAR_076481"
+FT   VARIANT         708
+FT                   /note="Y -> C (in AMD1; no effect on subcellular location;
+FT                   changed glycosylation; no effect on C-type natriuretic
+FT                   peptide binding; decreased guanylate cyclase activity;
+FT                   dbSNP:rs1305337032)"
+FT                   /evidence="ECO:0000269|PubMed:15146390,
+FT                   ECO:0000269|PubMed:26980729"
+FT                   /id="VAR_022590"
+FT   VARIANT         771
+FT                   /note="Q -> E (in dbSNP:rs5816)"
+FT                   /id="VAR_011968"
+FT   VARIANT         776
+FT                   /note="R -> W (in AMD1; no effect on subcellular location;
+FT                   changed glycosylation; no effect on C-type natriuretic
+FT                   peptide binding; decreased guanylate cyclase activity;
+FT                   dbSNP:rs1303913631)"
+FT                   /evidence="ECO:0000269|PubMed:15146390,
+FT                   ECO:0000269|PubMed:26980729"
+FT                   /id="VAR_022591"
+FT   VARIANT         819
+FT                   /note="R -> C (in SNSK; loss of C-type natriuretic
+FT                   peptide-induced signaling; dominant negative effect; no
+FT                   effect on cell surface expression; dbSNP:rs766256429)"
+FT                   /evidence="ECO:0000269|PubMed:24001744"
+FT                   /id="VAR_074683"
+FT   VARIANT         882
+FT                   /note="V -> I (in dbSNP:rs55700371)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042220"
+FT   VARIANT         882
+FT                   /note="V -> M (in ECDM; the mutation results in higher
+FT                   guanylate cyclase activity; causes a 15-fold increase in
+FT                   basal Vmax; has higher affinity for GTP than wild-type in
+FT                   the presence of NPPC; might lead to a structural change
+FT                   that locks the enzyme in a conformation mimicking the
+FT                   ATP-bound state)"
+FT                   /evidence="ECO:0000269|PubMed:22870295,
+FT                   ECO:0000269|PubMed:23827346"
+FT                   /id="VAR_071877"
+FT   VARIANT         957
+FT                   /note="R -> C (in AMD1; dbSNP:rs370158184)"
+FT                   /evidence="ECO:0000269|PubMed:15146390"
+FT                   /id="VAR_022592"
+FT   VARIANT         959
+FT                   /note="G -> A (in AMD1; no effect on subcellular location;
+FT                   changed glycosylation; no effect on C-type natriuretic
+FT                   peptide binding; decreased guanylate cyclase activity)"
+FT                   /evidence="ECO:0000269|PubMed:15146390,
+FT                   ECO:0000269|PubMed:26980729"
+FT                   /id="VAR_022593"
+FT   MUTAGEN         24
+FT                   /note="N->D,Q: Decreased glycosylation. Decreased guanylate
+FT                   cyclase activity."
+FT                   /evidence="ECO:0000269|PubMed:26980729"
+FT   CONFLICT        755
+FT                   /note="T -> S (in Ref. 2; BAA81737)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   1047 AA;  117022 MW;  817FB74D6B31F7EF CRC64;
+     MALPSLLLLV AALAGGVRPP GARNLTLAVV LPEHNLSYAW AWPRVGPAVA LAVEALGRAL
+     PVDLRFVSSE LEGACSEYLA PLSAVDLKLY HDPDLLLGPG CVYPAASVAR FASHWRLPLL
+     TAGAVASGFS AKNDHYRTLV RTGPSAPKLG EFVVTLHGHF NWTARAALLY LDARTDDRPH
+     YFTIEGVFEA LQGSNLSVQH QVYAREPGGP EQATHFIRAN GRIVYICGPL EMLHEILLQA
+     QRENLTNGDY VFFYLDVFGE SLRAGPTRAT GRPWQDNRTR EQAQALREAF QTVLVITYRE
+     PPNPEYQEFQ NRLLIRARED FGVELGPSLM NLIAGCFYDG ILLYAEVLNE TIQEGGTRED
+     GLRIVEKMQG RRYHGVTGLV VMDKNNDRET DFVLWAMGDL DSGDFQPAAH YSGAEKQIWW
+     TGRPIPWVKG APPSDNPPCA FDLDDPSCDK TPLSTLAIVA LGTGITFIMF GVSSFLIFRK
+     LMLEKELASM LWRIRWEELQ FGNSERYHKG AGSRLTLSLR GSSYGSLMTA HGKYQIFANT
+     GHFKGNVVAI KHVNKKRIEL TRQVLFELKH MRDVQFNHLT RFIGACIDPP NICIVTEYCP
+     RGSLQDILEN DSINLDWMFR YSLINDLVKG MAFLHNSIIS SHGSLKSSNC VVDSRFVLKI
+     TDYGLASFRS TAEPDDSHAL YAKKLWTAPE LLSGNPLPTT GMQKADVYSF GIILQEIALR
+     SGPFYLEGLD LSPKEIVQKV RNGQRPYFRP SIDRTQLNEE LVLLMERCWA QDPAERPDFG
+     QIKGFIRRFN KEGGTSILDN LLLRMEQYAN NLEKLVEERT QAYLEEKRKA EALLYQILPH
+     SVAEQLKRGE TVQAEAFDSV TIYFSDIVGF TALSAESTPM QVVTLLNDLY TCFDAIIDNF
+     DVYKVETIGD AYMVVSGLPG RNGQRHAPEI ARMALALLDA VSSFRIRHRP HDQLRLRIGV
+     HTGPVCAGVV GLKMPRYCLF GDTVNTASRM ESNGQALKIH VSSTTKDALD ELGCFQLELR
+     GDVEMKGKGK MRTYWLLGER KGPPGLL
+//

@@ -1,0 +1,381 @@
+ID   STK19_HUMAN             Reviewed;         368 AA.
+AC   P49842; A6NF95; A6NFW8; B0QZR5; Q13159; Q31617; Q5JP77; Q5ST72; Q5ST75;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   18-OCT-2001, sequence version 2.
+DT   12-OCT-2022, entry version 179.
+DE   RecName: Full=Serine/threonine-protein kinase 19 {ECO:0000305};
+DE            EC=2.7.11.1 {ECO:0000305|PubMed:9812991};
+DE   AltName: Full=Protein G11 {ECO:0000303|PubMed:8012361};
+DE   AltName: Full=Protein RP1 {ECO:0000303|PubMed:8132574};
+GN   Name=STK19 {ECO:0000303|PubMed:30712867, ECO:0000312|HGNC:HGNC:11398};
+GN   Synonyms=G11 {ECO:0000303|PubMed:8012361}, RP1
+GN   {ECO:0000303|PubMed:8132574};
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA / MRNA] (ISOFORMS 3 AND 4), AND TISSUE
+RP   SPECIFICITY.
+RX   PubMed=8012361; DOI=10.1093/hmg/3.3.481;
+RA   Sargent C.A., Anderson M.J., Hsieh S.-L., Kendall E., Gomez-Escobar N.,
+RA   Campbell R.D.;
+RT   "Characterisation of the novel gene G11 lying adjacent to the complement
+RT   C4A gene in the human major histocompatibility complex.";
+RL   Hum. Mol. Genet. 3:481-488(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA / MRNA] (ISOFORM 2).
+RX   PubMed=8132574; DOI=10.1016/s0021-9258(17)37217-4;
+RA   Liming S., Wu L., Sanlioglu S., Chen R., Mendoza A.R., Dangel A.W.,
+RA   Carroll M.C., Zipf W.B., Yu C.;
+RT   "Structure and genetics of the partially duplicated gene RP located
+RT   immediately upstream of the complement C4A and the C4B genes in the HLA
+RT   class III region. Molecular cloning, exon-intron structure, composite
+RT   retroposon, and breakpoint of gene duplication.";
+RL   J. Biol. Chem. 269:8466-8476(1994).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=14656967; DOI=10.1101/gr.1736803;
+RA   Xie T., Rowen L., Aguado B., Ahearn M.E., Madan A., Qin S., Campbell R.D.,
+RA   Hood L.;
+RT   "Analysis of the gene-dense major histocompatibility complex class III
+RT   region and its comparison to mouse.";
+RL   Genome Res. 13:2621-2636(2003).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA], AND VARIANT GLY-311.
+RX   PubMed=14574404; DOI=10.1038/nature02055;
+RA   Mungall A.J., Palmer S.A., Sims S.K., Edwards C.A., Ashurst J.L.,
+RA   Wilming L., Jones M.C., Horton R., Hunt S.E., Scott C.E., Gilbert J.G.R.,
+RA   Clamp M.E., Bethel G., Milne S., Ainscough R., Almeida J.P., Ambrose K.D.,
+RA   Andrews T.D., Ashwell R.I.S., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Banerjee R., Barker D.J., Barlow K.F., Bates K., Beare D.M., Beasley H.,
+RA   Beasley O., Bird C.P., Blakey S.E., Bray-Allen S., Brook J., Brown A.J.,
+RA   Brown J.Y., Burford D.C., Burrill W., Burton J., Carder C., Carter N.P.,
+RA   Chapman J.C., Clark S.Y., Clark G., Clee C.M., Clegg S., Cobley V.,
+RA   Collier R.E., Collins J.E., Colman L.K., Corby N.R., Coville G.J.,
+RA   Culley K.M., Dhami P., Davies J., Dunn M., Earthrowl M.E., Ellington A.E.,
+RA   Evans K.A., Faulkner L., Francis M.D., Frankish A., Frankland J.,
+RA   French L., Garner P., Garnett J., Ghori M.J., Gilby L.M., Gillson C.J.,
+RA   Glithero R.J., Grafham D.V., Grant M., Gribble S., Griffiths C.,
+RA   Griffiths M.N.D., Hall R., Halls K.S., Hammond S., Harley J.L., Hart E.A.,
+RA   Heath P.D., Heathcott R., Holmes S.J., Howden P.J., Howe K.L., Howell G.R.,
+RA   Huckle E., Humphray S.J., Humphries M.D., Hunt A.R., Johnson C.M.,
+RA   Joy A.A., Kay M., Keenan S.J., Kimberley A.M., King A., Laird G.K.,
+RA   Langford C., Lawlor S., Leongamornlert D.A., Leversha M., Lloyd C.R.,
+RA   Lloyd D.M., Loveland J.E., Lovell J., Martin S., Mashreghi-Mohammadi M.,
+RA   Maslen G.L., Matthews L., McCann O.T., McLaren S.J., McLay K., McMurray A.,
+RA   Moore M.J.F., Mullikin J.C., Niblett D., Nickerson T., Novik K.L.,
+RA   Oliver K., Overton-Larty E.K., Parker A., Patel R., Pearce A.V., Peck A.I.,
+RA   Phillimore B.J.C.T., Phillips S., Plumb R.W., Porter K.M., Ramsey Y.,
+RA   Ranby S.A., Rice C.M., Ross M.T., Searle S.M., Sehra H.K., Sheridan E.,
+RA   Skuce C.D., Smith S., Smith M., Spraggon L., Squares S.L., Steward C.A.,
+RA   Sycamore N., Tamlyn-Hall G., Tester J., Theaker A.J., Thomas D.W.,
+RA   Thorpe A., Tracey A., Tromans A., Tubby B., Wall M., Wallis J.M.,
+RA   West A.P., White S.S., Whitehead S.L., Whittaker H., Wild A., Willey D.J.,
+RA   Wilmer T.E., Wood J.M., Wray P.W., Wyatt J.C., Young L., Younger R.M.,
+RA   Bentley D.R., Coulson A., Durbin R.M., Hubbard T., Sulston J.E., Dunham I.,
+RA   Rogers J., Beck S.;
+RT   "The DNA sequence and analysis of human chromosome 6.";
+RL   Nature 425:805-811(2003).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   PARTIAL NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND ALTERNATIVE SPLICING
+RP   (ISOFORM 4).
+RC   TISSUE=Blood;
+RX   PubMed=8575831; DOI=10.1007/bf00587313;
+RA   Ulgiati D., Townend D.C., Christiansen F.T., Dawkins R.L., Abraham L.J.;
+RT   "Complete sequence of the complement C4 gene from the HLA-A1, B8, C4AQ0,
+RT   C4B1, DR3 haplotype.";
+RL   Immunogenetics 43:250-252(1996).
+RN   [7]
+RP   COFACTOR, SUBCELLULAR LOCATION, AND MUTAGENESIS OF LYS-300; LYS-315 AND
+RP   LYS-317.
+RX   PubMed=9812991; DOI=10.1074/jbc.273.47.30954;
+RA   Gomez-Escobar N., Chou C.-F., Lin W.-W., Hsieh S.-L., Campbell R.D.;
+RT   "The G11 gene located in the major histocompatibility complex encodes a
+RT   novel nuclear serine/threonine protein kinase.";
+RL   J. Biol. Chem. 273:30954-30960(1998).
+RN   [8]
+RP   INTERACTION WITH BAG1.
+RC   TISSUE=T-cell;
+RX   PubMed=15986447; DOI=10.1002/ijc.21259;
+RA   Wadle A., Mischo A., Henrich P.P., Stenner-Lieven F., Scherer C., Imig J.,
+RA   Petersen G., Pfreundschuh M., Renner C.;
+RT   "Characterization of Hap/BAG-1 variants as RP1 binding proteins with
+RT   antiapoptotic activity.";
+RL   Int. J. Cancer 117:896-904(2005).
+RN   [9]
+RP   VARIANTS [LARGE SCALE ANALYSIS] ASN-89; GLY-311 AND VAL-331.
+RX   PubMed=17344846; DOI=10.1038/nature05610;
+RA   Greenman C., Stephens P., Smith R., Dalgliesh G.L., Hunter C., Bignell G.,
+RA   Davies H., Teague J., Butler A., Stevens C., Edkins S., O'Meara S.,
+RA   Vastrik I., Schmidt E.E., Avis T., Barthorpe S., Bhamra G., Buck G.,
+RA   Choudhury B., Clements J., Cole J., Dicks E., Forbes S., Gray K.,
+RA   Halliday K., Harrison R., Hills K., Hinton J., Jenkinson A., Jones D.,
+RA   Menzies A., Mironenko T., Perry J., Raine K., Richardson D., Shepherd R.,
+RA   Small A., Tofts C., Varian J., Webb T., West S., Widaa S., Yates A.,
+RA   Cahill D.P., Louis D.N., Goldstraw P., Nicholson A.G., Brasseur F.,
+RA   Looijenga L., Weber B.L., Chiew Y.-E., DeFazio A., Greaves M.F.,
+RA   Green A.R., Campbell P., Birney E., Easton D.F., Chenevix-Trench G.,
+RA   Tan M.-H., Khoo S.K., Teh B.T., Yuen S.T., Leung S.Y., Wooster R.,
+RA   Futreal P.A., Stratton M.R.;
+RT   "Patterns of somatic mutation in human cancer genomes.";
+RL   Nature 446:153-158(2007).
+RN   [10]
+RP   VARIANT ASN-89, CHARACTERIZATION OF VARIANT ASN-89, FUNCTION, CATALYTIC
+RP   ACTIVITY, ACTIVITY REGULATION, AND MUTAGENESIS OF VAL-134 AND LEU-139.
+RX   PubMed=30712867; DOI=10.1016/j.cell.2019.01.002;
+RA   Yin C., Zhu B., Zhang T., Liu T., Chen S., Liu Y., Li X., Miao X., Li S.,
+RA   Mi X., Zhang J., Li L., Wei G., Xu Z.X., Gao X., Huang C., Wei Z.,
+RA   Goding C.R., Wang P., Deng X., Cui R.;
+RT   "Pharmacological targeting of STK19 inhibits oncogenic NRAS-driven
+RT   melanomagenesis.";
+RL   Cell 176:1113-1127(2019).
+CC   -!- FUNCTION: Serine/threonine-protein kinase that acts as a key regulator
+CC       of NRAS signaling by mediating phosphorylation of NRAS at 'Ser-89',
+CC       thereby enhancing NRAS-binding to its downstream effectors.
+CC       {ECO:0000269|PubMed:30712867}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-
+CC         [protein]; Xref=Rhea:RHEA:17989, Rhea:RHEA-COMP:9863, Rhea:RHEA-
+CC         COMP:11604, ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:83421, ChEBI:CHEBI:456216; EC=2.7.11.1;
+CC         Evidence={ECO:0000269|PubMed:30712867, ECO:0000305|PubMed:9812991};
+CC       PhysiologicalDirection=left-to-right; Xref=Rhea:RHEA:17990;
+CC         Evidence={ECO:0000269|PubMed:30712867, ECO:0000305|PubMed:9812991};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-
+CC         threonyl-[protein]; Xref=Rhea:RHEA:46608, Rhea:RHEA-COMP:11060,
+CC         Rhea:RHEA-COMP:11605, ChEBI:CHEBI:15378, ChEBI:CHEBI:30013,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:61977, ChEBI:CHEBI:456216;
+CC         EC=2.7.11.1; Evidence={ECO:0000305|PubMed:9812991};
+CC       PhysiologicalDirection=left-to-right; Xref=Rhea:RHEA:46609;
+CC         Evidence={ECO:0000305|PubMed:9812991};
+CC   -!- COFACTOR:
+CC       Name=Mn(2+); Xref=ChEBI:CHEBI:29035;
+CC         Evidence={ECO:0000269|PubMed:9812991};
+CC       Note=Divalent metal cations. Has a preference for Mn(2+).
+CC       {ECO:0000269|PubMed:9812991};
+CC   -!- ACTIVITY REGULATION: Specifically inhibited by ZT-12-037-01 (1a) (N2-
+CC       cyclopropyl-N4-(1-isopropylpiperidin-4-yl)- 6,7-
+CC       dimethoxyquinazoline-2,4-diamine) (PubMed:30712867). Inhibition by ZT-
+CC       12-037-01 (1a) blocks oncogenic NRAS-driven melanocyte malignant
+CC       transformation and melanoma growth (PubMed:30712867).
+CC       {ECO:0000269|PubMed:30712867}.
+CC   -!- SUBUNIT: Interacts (via N-terminus) with BAG1.
+CC       {ECO:0000269|PubMed:15986447}.
+CC   -!- SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:9812991}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=4;
+CC       Name=1; Synonyms=G11-Z;
+CC         IsoId=P49842-1; Sequence=Displayed;
+CC       Name=2; Synonyms=G11-Z-short;
+CC         IsoId=P49842-2; Sequence=VSP_004433;
+CC       Name=3; Synonyms=G11-Y {ECO:0000303|PubMed:8012361};
+CC         IsoId=P49842-3; Sequence=VSP_004432;
+CC       Name=4; Synonyms=G11-Y-short {ECO:0000303|PubMed:8012361};
+CC         IsoId=P49842-4; Sequence=VSP_004432, VSP_004433;
+CC   -!- TISSUE SPECIFICITY: Monocytes, hepatocytes, epithelial cells, T- and B-
+CC       lymphocytes. {ECO:0000269|PubMed:8012361}.
+CC   -!- DISEASE: Note=Gain-of-function variants in STK19 are involved in NRAS-
+CC       driven melanomagenesis (PubMed:30712867). Melanoma are malignant
+CC       neoplasm of melanocytes, arising de novo or from a pre-existing benign
+CC       nevus, which occurs most often in the skin but may also involve other
+CC       sites (PubMed:30712867). Conditional knockin mice overexpressing Asn-89
+CC       variant exhibit hyperpigmentation of the skin, ears, and tail, and the
+CC       melanin content in skin was significantly increased after tamoxifen
+CC       induction (PubMed:30712867). Moreover, knockin mice overexpressing Asn-
+CC       89 variant promote NRAS 'Arg-61'-driven melanomagenesis
+CC       (PubMed:30712867). {ECO:0000269|PubMed:30712867}.
+CC   -!- SIMILARITY: Belongs to the STK19 family. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; X77474; CAA54622.1; -; Genomic_DNA.
+DR   EMBL; X77489; CAA54622.1; JOINED; Genomic_DNA.
+DR   EMBL; X77490; CAA54622.1; JOINED; Genomic_DNA.
+DR   EMBL; X77491; CAA54622.1; JOINED; Genomic_DNA.
+DR   EMBL; X77474; CAA54623.1; -; Genomic_DNA.
+DR   EMBL; X77489; CAA54623.1; JOINED; Genomic_DNA.
+DR   EMBL; X77490; CAA54623.1; JOINED; Genomic_DNA.
+DR   EMBL; X77491; CAA54623.1; JOINED; Genomic_DNA.
+DR   EMBL; X77386; CAA54565.1; -; mRNA.
+DR   EMBL; L26261; AAA20120.1; -; Genomic_DNA.
+DR   EMBL; L26260; AAA20122.1; -; mRNA.
+DR   EMBL; AF019413; AAB67976.1; -; Genomic_DNA.
+DR   EMBL; AL049547; CAB89303.1; -; Genomic_DNA.
+DR   EMBL; AL049547; CAB89304.1; -; Genomic_DNA.
+DR   EMBL; AL645922; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL662849; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL844853; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BX679671; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CR753822; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CR753845; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CR759782; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471081; EAX03566.1; -; Genomic_DNA.
+DR   EMBL; CH471081; EAX03567.1; -; Genomic_DNA.
+DR   EMBL; U24578; AAA99716.1; -; Genomic_DNA.
+DR   CCDS; CCDS34417.1; -. [P49842-4]
+DR   CCDS; CCDS4733.1; -. [P49842-1]
+DR   PIR; B53439; A53439.
+DR   RefSeq; NP_004188.1; NM_004197.1. [P49842-4]
+DR   RefSeq; NP_115830.1; NM_032454.1. [P49842-1]
+DR   AlphaFoldDB; P49842; -.
+DR   BioGRID; 114383; 19.
+DR   IntAct; P49842; 12.
+DR   STRING; 9606.ENSP00000364482; -.
+DR   iPTMnet; P49842; -.
+DR   PhosphoSitePlus; P49842; -.
+DR   BioMuta; STK19; -.
+DR   DMDM; 19860281; -.
+DR   EPD; P49842; -.
+DR   jPOST; P49842; -.
+DR   MassIVE; P49842; -.
+DR   MaxQB; P49842; -.
+DR   PaxDb; P49842; -.
+DR   PeptideAtlas; P49842; -.
+DR   PRIDE; P49842; -.
+DR   ProteomicsDB; 56153; -. [P49842-1]
+DR   ProteomicsDB; 56154; -. [P49842-2]
+DR   ProteomicsDB; 56155; -. [P49842-3]
+DR   ProteomicsDB; 56156; -. [P49842-4]
+DR   Antibodypedia; 28162; 194 antibodies from 23 providers.
+DR   DNASU; 8859; -.
+DR   Ensembl; ENST00000375331.7; ENSP00000364480.3; ENSG00000204344.16. [P49842-4]
+DR   Ensembl; ENST00000375333.3; ENSP00000364482.3; ENSG00000204344.16. [P49842-3]
+DR   Ensembl; ENST00000383327.8; ENSP00000372817.4; ENSG00000206342.12.
+DR   Ensembl; ENST00000424104.5; ENSP00000393272.1; ENSG00000236250.8. [P49842-2]
+DR   Ensembl; ENST00000425138.5; ENSP00000395028.1; ENSG00000234947.8. [P49842-2]
+DR   Ensembl; ENST00000426802.5; ENSP00000389352.1; ENSG00000226257.9. [P49842-2]
+DR   Ensembl; ENST00000431383.6; ENSP00000403479.2; ENSG00000226033.11. [P49842-1]
+DR   Ensembl; ENST00000433397.6; ENSP00000395864.2; ENSG00000234947.8. [P49842-1]
+DR   Ensembl; ENST00000438256.6; ENSP00000391798.2; ENSG00000236250.8. [P49842-1]
+DR   Ensembl; ENST00000444147.5; ENSP00000399915.1; ENSG00000226033.11. [P49842-2]
+DR   Ensembl; ENST00000452688.6; ENSP00000413766.2; ENSG00000226257.9. [P49842-1]
+DR   Ensembl; ENST00000685781.1; ENSP00000509445.1; ENSG00000204344.16. [P49842-4]
+DR   GeneID; 8859; -.
+DR   KEGG; hsa:8859; -.
+DR   MANE-Select; ENST00000685781.1; ENSP00000509445.1; NM_004197.2; NP_004188.2. [P49842-4]
+DR   UCSC; uc003nyv.4; human. [P49842-1]
+DR   CTD; 8859; -.
+DR   DisGeNET; 8859; -.
+DR   GeneCards; STK19; -.
+DR   HGNC; HGNC:11398; STK19.
+DR   HPA; ENSG00000204344; Low tissue specificity.
+DR   MIM; 604977; gene.
+DR   neXtProt; NX_P49842; -.
+DR   OpenTargets; ENSG00000204344; -.
+DR   PharmGKB; PA36206; -.
+DR   VEuPathDB; HostDB:ENSG00000204344; -.
+DR   eggNOG; ENOG502RDW5; Eukaryota.
+DR   GeneTree; ENSGT00390000018295; -.
+DR   HOGENOM; CLU_064399_0_0_1; -.
+DR   InParanoid; P49842; -.
+DR   OMA; FERYVIH; -.
+DR   OrthoDB; 1329271at2759; -.
+DR   PhylomeDB; P49842; -.
+DR   TreeFam; TF105332; -.
+DR   PathwayCommons; P49842; -.
+DR   SignaLink; P49842; -.
+DR   SIGNOR; P49842; -.
+DR   BioGRID-ORCS; 8859; 13 hits in 1110 CRISPR screens.
+DR   ChiTaRS; STK19; human.
+DR   GeneWiki; STK19; -.
+DR   GenomeRNAi; 8859; -.
+DR   Pharos; P49842; Tbio.
+DR   PRO; PR:P49842; -.
+DR   Proteomes; UP000005640; Chromosome 6.
+DR   RNAct; P49842; protein.
+DR   Bgee; ENSG00000204344; Expressed in left adrenal gland and 95 other tissues.
+DR   ExpressionAtlas; P49842; baseline and differential.
+DR   Genevisible; P49842; HS.
+DR   GO; GO:0016607; C:nuclear speck; IDA:HPA.
+DR   GO; GO:0005634; C:nucleus; TAS:ProtInc.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0106310; F:protein serine kinase activity; IEA:RHEA.
+DR   GO; GO:0004674; F:protein serine/threonine kinase activity; IDA:UniProtKB.
+DR   GO; GO:0031267; F:small GTPase binding; IPI:UniProtKB.
+DR   GO; GO:0046579; P:positive regulation of Ras protein signal transduction; IDA:UniProtKB.
+DR   GO; GO:0006468; P:protein phosphorylation; IDA:UniProtKB.
+DR   InterPro; IPR018865; Ser/Thr_kinase_19.
+DR   PANTHER; PTHR15243; PTHR15243; 1.
+DR   Pfam; PF10494; Stk19; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; ATP-binding; Kinase; Manganese; Nucleotide-binding;
+KW   Nucleus; Reference proteome; Serine/threonine-protein kinase; Transferase.
+FT   CHAIN           1..368
+FT                   /note="Serine/threonine-protein kinase 19"
+FT                   /id="PRO_0000072275"
+FT   REGION          40..78
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   VAR_SEQ         1..110
+FT                   /note="Missing (in isoform 3 and isoform 4)"
+FT                   /evidence="ECO:0000303|PubMed:8012361"
+FT                   /id="VSP_004432"
+FT   VAR_SEQ         222..225
+FT                   /note="Missing (in isoform 2 and isoform 4)"
+FT                   /evidence="ECO:0000303|PubMed:8012361,
+FT                   ECO:0000303|PubMed:8132574"
+FT                   /id="VSP_004433"
+FT   VARIANT         39
+FT                   /note="A -> D (in dbSNP:rs34843142)"
+FT                   /id="VAR_051387"
+FT   VARIANT         89
+FT                   /note="D -> N (recurrent gain-of-function variant found in
+FT                   metastatic melanoma; promotes NRAS signaling; somatic
+FT                   mutation; dbSNP:rs267600971)"
+FT                   /evidence="ECO:0000269|PubMed:17344846,
+FT                   ECO:0000269|PubMed:30712867"
+FT                   /id="VAR_042361"
+FT   VARIANT         311
+FT                   /note="S -> G (in dbSNP:rs616634)"
+FT                   /evidence="ECO:0000269|PubMed:14574404,
+FT                   ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042362"
+FT   VARIANT         331
+FT                   /note="A -> V (in dbSNP:rs7743647)"
+FT                   /evidence="ECO:0000269|PubMed:17344846"
+FT                   /id="VAR_042363"
+FT   MUTAGEN         134
+FT                   /note="V->Y: Prevents inhibition by ZT-12-037-01 (1a)
+FT                   without affecting much the serine/threonine-protein kinase
+FT                   activity."
+FT                   /evidence="ECO:0000269|PubMed:30712867"
+FT   MUTAGEN         139
+FT                   /note="L->V: Prevents inhibition by ZT-12-037-01 (1a)
+FT                   without affecting much the serine/threonine-protein kinase
+FT                   activity."
+FT                   /evidence="ECO:0000269|PubMed:30712867"
+FT   MUTAGEN         300
+FT                   /note="K->P: Partial loss of activity."
+FT                   /evidence="ECO:0000269|PubMed:9812991"
+FT   MUTAGEN         315
+FT                   /note="K->P: Partial loss of activity."
+FT                   /evidence="ECO:0000269|PubMed:9812991"
+FT   MUTAGEN         317
+FT                   /note="K->P: Complete loss of activity."
+FT                   /evidence="ECO:0000269|PubMed:9812991"
+FT   CONFLICT        195..197
+FT                   /note="QGE -> GQR (in Ref. 6; AAA99716)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   368 AA;  40916 MW;  A05AC847081DE8F8 CRC64;
+     MQKWFSAFDD AIIQRQWRAN PSRGGGGVSF TKEVDTNVAT GAPPRRQRVP GRACPWREPI
+     RGRRGARPGG GDAGGTPGET VRHCSAPEDP IFRFSSLHSY PFPGTIKSRD MSWKRHHLIP
+     ETFGVKRRRK RGPVESDPLR GEPGSARAAV SELMQLFPRG LFEDALPPIV LRSQVYSLVP
+     DRTVADRQLK ELQEQGEIRI VQLGFDLDAH GIIFTEDYRT RVCDCVLKAC DGRPYAGAVQ
+     KFLASVLPAC GDLSFQQDQM TQTFGFRDSE ITHLVNAGVL TVRDAGSWWL AVPGAGRFIK
+     YFVKGRQAVL SMVRKAKYRE LLLSELLGRR APVVVRLGLT YHVHDLIGAQ LVDCISTTSG
+     TLLRLPET
+//
