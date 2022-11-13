@@ -11,7 +11,7 @@ import Bio.PDB
 import gzip, os, sys, threading
 
 ## Input
-PFAM_DOMAIN = 'PF00069'
+PFAM_DOMAIN = 'PF07714' # 'PF00069'
 # pdb_chain_to_pfam_domain = 'PF07714_pdb_chain_pfam.tsv'
 pdb_chain_to_pfam_domain = PFAM_DOMAIN+'_pdb_chain_pfam.tsv'
 pathToPDB = '/net/home.isilon/ds-russell/pdb-cif/' ## Path with CIF formatted files
