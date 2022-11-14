@@ -78,11 +78,18 @@ for count, files in enumerate(['Phosphorylation_site_dataset.gz',
         ptmsite = line.split('\t')[4]
         species = line.split('\t')[6]
         low_throughput = line.split('\t')[10]
+        high_throughput = line.split('\t')[11]
         # ignore line when LT_LIT is zero regardless of ptm type
-        if low_throughput == '':
+        if low_throughput == '' and high_throughput == '':
             continue
-        # ignore line when LT_LIT is < 2 in psites file
-        if int(low_throughput) < 1 and count == 0:
+        # ignore line when LT_LIT is < 1 in psites file
+        condition_LTLIT = False
+        if low_throughput != '':
+            condition_LTLIT = False if int(low_throughput) < 1 else True
+        condition_MSLIT = False
+        if high_throughput != '':
+            condition_MSLIT = False if int(high_throughput) < 2 else True
+        if condition_LTLIT is not True and condition_MSLIT is not True:
             continue
         # Ignore non-human PTM sites
         if species != 'human':

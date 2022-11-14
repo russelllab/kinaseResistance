@@ -98,12 +98,23 @@ def run_hmmsearch():
         if os.path.isfile(fasta_path+acc+'.txt') is False:
             os.system('wget -O ' + fasta_path + acc+'.txt ' + 'https://rest.uniprot.org/uniprotkb/'+acc+'.txt')
         pfam_domains = []
-        for line in open(fasta_path + acc+'.txt', 'r'):
+        canonical_acc = acc if '-' not in acc else acc.split('-')[0]
+        # print (canonical_acc, acc.split(), file, fasta_path+acc+'.txt')
+        for line in open(fasta_path + canonical_acc + '.txt', 'r'):
             if line[:2] != 'DR':
                 continue
             if 'Pfam;' in line.split('DR')[1].split():
                 # print (line.split('DR')[1].split())
-                pfam_domains.append(line.split('DR')[1].split()[2].replace(';', ''))        
+                pfam_domains.append(line.split('DR')[1].split()[2].replace(';', ''))
+        if len(pfam_domains) == 0:
+            for line in open('allKinasesHmmsearch'+PFAM_DOM+'.txt', 'r'):
+                if line[:2] == '>>':
+                    protein = line.split('>>')[1].lstrip().rstrip().replace('\n', '')
+                    if protein in [acc, canonical_acc]:
+                        pfam_domains = [PFAM_DOM]
+                        break
+            print (acc, canonical_acc, 'found no PFAM accession')
+            continue
         with open(fasta_path+file, 'r') as fp:
             lines = fp.readlines()
             for line in lines:
@@ -246,12 +257,12 @@ for line in open('../KA/resistant_mutations_Nov22.tsv.gz', 'rt'):
                 break
 
 ## read the instances
-# print (kinase_dic['P25092'].act)
+# print (kinase_dic['Q9UM73'].resistance['C1156Y'].samples)
 # print (kinase_dic['P25092'].kinase_to_pfam)
 data = []
 for kinase in kinase_dic:
     if PFAM_DOM not in kinase_dic[kinase].pfam_domains:
-        print (PFAM_DOM, kinase_dic[kinase].pfam_domains)
+        # print (PFAM_DOM, kinase_dic[kinase].pfam_domains)
         continue
     # kinase_dic[kinase].display()
     for mutation in kinase_dic[kinase].act:
@@ -317,9 +328,69 @@ for kinase in kinase_dic:
             row.append(np.log2(num_samples))
             data.append(row)
 
+## ATP binding sites
+ligand_sites = {}
+LIGANDS = ['ATP', 'ADP', 'MG', 'MN',
+            '0WM','1LT','07J','DB8',
+            '6GY','4MK','6T2','VGH',
+            'P06','1N1','AQ4','E53',
+            'IRE','STI','NIL','YY3',
+            'LQQ','P30','BAX','B49',
+            '032']
+for line in open('ATP_binding_sites3.tsv', 'r'):
+    if line[0] == '#':
+        continue
+    # Consider only the one with the specified domain
+    if line.split('\t')[2] != PFAM_DOM:
+        continue
+    ligand = line.split('\t')[3]
+    # Mark ADP as ATP and MN as MG
+    if ligand == 'ADP':
+        ligand = 'ATP'
+    elif ligand == 'MN':
+        ligand = 'MG'
+    elif ligand not in ['ATP', 'ADP', 'MG', 'MN']:
+        ligand = 'Inhibitor'
+    if ligand not in ligand_sites:
+        ligand_sites[ligand] = {}
+    site = int(line.split('\t')[4])
+    pdbs = line.split('\t')[7].replace('\n', '').split(';')
+    if site not in ligand_sites[ligand]:
+        ligand_sites[ligand][site] = pdbs
+    else:
+        ligand_sites[ligand][site] += pdbs
+        ligand_sites[ligand][site] = list(set(ligand_sites[ligand][site]))
+
+for ligand in ligand_sites:
+    if ligand not in ligand_sites:
+        print (ligand, 'does not exist in the file')
+        continue
+    for site in ligand_sites[ligand]:
+        row = []
+        row.append(ligand+' binding sites')
+        row.append(int(site))
+        row.append(pfam[site])
+        row.append('ligand')
+        row.append(ligand+'Site')
+        if len(ligand_sites[ligand][site]) > 2:
+            row.append(np.log2(len(ligand_sites[ligand][site])))
+            row.append(np.log2(len(ligand_sites[ligand][site])))
+        else:
+            row.append(len(ligand_sites[ligand][site]))
+            row.append(len(ligand_sites[ligand][site]))
+        print (row)
+        data.append(row)
+# sys.exit()
+'''
 ## Ligand binding sites
 ligand_sites = {}
-LIGANDS = ['ATP', 'ADP', 'MG', 'MN']
+LIGANDS = ['ATP', 'ADP', 'MG', 'MN',
+            '0WM','1LT','07J','DB8',
+            '6GY','4MK','6T2','VGH',
+            'P06','1N1','AQ4','E53',
+            'IRE','STI','NIL','YY3',
+            'LQQ','P30','BAX','B49',
+            '032']
 for line in open('ATP_binding_sites3.tsv', 'r'):
     if line[0] == '#':
         continue
@@ -340,6 +411,9 @@ for line in open('ATP_binding_sites3.tsv', 'r'):
         ligand_sites[ligand][site] = list(set(ligand_sites[ligand][site]))
 
 for ligand in LIGANDS:
+    if ligand not in ligand_sites:
+        print (ligand, 'does not exist in the file')
+        continue
     for site in ligand_sites[ligand]:
         row = []
         row.append(ligand+'bindingSites')
@@ -347,13 +421,47 @@ for ligand in LIGANDS:
         row.append(pfam[site])
         row.append(ligand+'site')
         row.append(ligand+'site')
-        if site in ligand_sites[ligand]:
+        if len(ligand_sites[ligand][site]) > 2:
             row.append(np.log2(len(ligand_sites[ligand][site])))
             row.append(np.log2(len(ligand_sites[ligand][site])))
         else:
-            row.append(0)
-            row.append(0)
+            row.append(len(ligand_sites[ligand][site]))
+            row.append(len(ligand_sites[ligand][site]))
         data.append(row)
+'''
+
+## Interface binding sites
+interface_sites = {}
+for line in open('interface_sites.tsv', 'r'):
+    if line[0] == '#':
+        continue
+    # Consider only the one with the specified domain
+    if line.split('\t')[2] != PFAM_DOM:
+        continue
+    interface = line.split('\t')[3]
+    site = int(line.split('\t')[4])
+    pdbs = line.split('\t')[7].replace('\n', '').split(';')
+    if site not in interface_sites:
+        interface_sites[site] = pdbs
+    else:
+        interface_sites[site] += pdbs
+        interface_sites[site] = list(set(interface_sites[site]))
+
+
+for site in interface_sites:
+    row = []
+    row.append('Interface')
+    row.append(int(site))
+    row.append(pfam[site])
+    row.append('Interface')
+    row.append('Interface')
+    if len(interface_sites[site]) > 2:
+        row.append(np.log2(len(interface_sites[site])))
+        row.append(np.log2(len(interface_sites[site])))
+    else:
+        row.append(len(interface_sites[site]))
+        row.append(len(interface_sites[site]))
+    data.append(row)
 
 ## SS of HMM
 # hmm_ss = {}
@@ -371,8 +479,8 @@ for line in open('../pfam/'+PFAM_DOM+'.hmm', 'r'):
     row.append(pfam[ss_pos])
     row.append(ss_type)
     row.append(ss_type)
-    row.append(1)
-    row.append(1)
+    row.append(2)
+    row.append(2)
     data.append(row)
 
 ## Add PTM sites
@@ -422,9 +530,9 @@ for dic, ptm_type in zip([phospho_sites, acetyl_sites, methyl_sites, ubiq_sites,
         row.append(ptm_type+'-sites')
         row.append(int(pfam_pos))
         row.append(pfam[pfam_pos])
+        row.append('PTM')
         row.append(ptm_type+'-site')
-        row.append(ptm_type+'-site')
-        if count == 1:
+        if count in [1, 4]:
             row.append(np.log2(dic[pfam_pos])+1)
             row.append(np.log2(dic[pfam_pos])+1)
         else:
@@ -433,8 +541,7 @@ for dic, ptm_type in zip([phospho_sites, acetyl_sites, methyl_sites, ubiq_sites,
         data.append(row)
 
 df = pd.DataFrame(data=data, columns=['Kinase', 'Pfam_Position', 'Pfam_Residue', 'Category', 'Mutation', 'Num_Samples', 'Num_Samples_Size'])
-df = df.sort_values(by=['Kinase'])
-print (list(set(df[df['Category']=='activating'].Pfam_Position)))
+# df = df.sort_values(by=['Kinase'])
 allRes = list(set(df[df['Category']=='resistance'].Pfam_Position))
 allAct = list(set(df[df['Category']=='activating'].Pfam_Position))
 allDeact = list(set(df[df['Category']=='deactivating'].Pfam_Position))
@@ -468,7 +575,9 @@ fig = px.scatter(df, x="Pfam_Position", y="Kinase", color="Category", size="Num_
                 color_discrete_map={
                 "activating": "green",
                 "deactivating": "red",
-                "resistance": "blue"})
+                "resistance": "blue",
+                "ligand": "purple",
+                "PTM": "grey"})
 fig.update_yaxes(ticklabelstep=1)
 fig.update_layout(
     # hovermode = 'x',
@@ -493,6 +602,5 @@ fig.update_layout(
 )
 fig.update_xaxes(showspikes=True, spikecolor="green", spikethickness=1, spikesnap="cursor", spikemode="across")
 fig.update_yaxes(showspikes=True, spikecolor="orange", spikethickness=1)
-
 fig.show()
 print (len(pfam))
