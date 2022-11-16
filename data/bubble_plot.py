@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 from scipy.stats import fisher_exact
 import plotly.express as px
 
-PFAM_DOM = 'PK_Tyr_Ser-Thr'
-# PFAM_DOM = 'Pkinase'
+# PFAM_DOM = 'PK_Tyr_Ser-Thr'
+PFAM_DOM = 'Pkinase'
 HMMSEARCH_OUT = 'allKinasesHmmsearch'+PFAM_DOM+'.txt'
 
 class Gene:
@@ -577,7 +577,8 @@ fig = px.scatter(df, x="Pfam_Position", y="Kinase", color="Category", size="Num_
                 "deactivating": "red",
                 "resistance": "blue",
                 "ligand": "purple",
-                "PTM": "grey"})
+                "PTM": "grey"},
+                title=PFAM_DOM)
 fig.update_yaxes(ticklabelstep=1)
 fig.update_layout(
     # hovermode = 'x',
@@ -587,7 +588,7 @@ fig.update_layout(
         dtick = 2,
         tickfont = dict(
             family = 'Old Standard TT, serif',
-            size = 7,
+            size = 8,
             color = 'black'
             )
     ),
@@ -596,7 +597,7 @@ fig.update_layout(
         tick0 = 1,
         dtick = 1,
         tickfont = dict(
-            size = 8.5,
+            size = 10,
             )
     )
 )
