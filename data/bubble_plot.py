@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 from scipy.stats import fisher_exact
 import plotly.express as px
 
-# PFAM_DOM = 'PK_Tyr_Ser-Thr'
-PFAM_DOM = 'Pkinase'
+PFAM_DOM = 'PK_Tyr_Ser-Thr'
+# PFAM_DOM = 'Pkinase'
 HMMSEARCH_OUT = 'allKinasesHmmsearch'+PFAM_DOM+'.txt'
 
 class Gene:
