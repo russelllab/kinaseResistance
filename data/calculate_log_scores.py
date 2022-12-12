@@ -46,16 +46,19 @@ class Protein:
 
 def make_alignment(input_aln):
     '''
-    A function that takes alignment file as input
-    and creates a dic that stores Protein class info.
-    It also convert the alignent into a matrix format
-    and returns the name of human id in the alignment
+    A function that takes CLUSTAL-formatted alignment
+    file as input and creates a dic that stores Protein
+    class info. It also convert the alignent into a
+    matrix format and returns the name of human id in
+    the alignment
     '''
     dic_proteins = {}
     alignment = []
     human_name = ''
     for line in gzip.open(input_aln, 'rt'):
         if line.split() == []:
+            continue
+        if line[0] == '#':
             continue
         # print (line.split())
         if line.split()[0] == 'CLUSTAL':
