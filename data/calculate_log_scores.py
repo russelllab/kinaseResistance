@@ -32,7 +32,7 @@ def calculate_log_odds(input_hmm):
             scores = line.replace('\n', '').split()[1:21]
             if aln_position not in dic_log_odds: dic_log_odds[aln_position] = {}
             for score, aa in zip(scores, AA):
-                dic_log_odds[aln_position][aa] = round(float(score) - dic_background[aa], 5)
+                dic_log_odds[aln_position][aa] = round((dic_background[aa] - float(score) )/np.log(2), 5)
             # print (aln_position)
     return dic_log_odds, dic_prevalent_aa
 
