@@ -61,12 +61,12 @@ def make_alignment(input_aln):
         if line[0] == '#':
             continue
         # print (line.split())
-        if line.split()[0] == 'CLUSTAL':
+        if line.split()[0] in ['CLUSTAL', '//']:
             continue
         uniprot_acc = line.split()[0]
-        if 'HUMAN_' in uniprot_acc:
+        if 'HUMAN_' in uniprot_acc and human_name == '': # HUMAN_* can occur more than once, esp in paralogs - take the first one
             human_name = uniprot_acc
-        seq_aln = line.replace('\n', '').split()[1]
+        seq_aln = line.replace('\n', '').split()[1].upper()
         # print (seq_aln)
         if uniprot_acc not in dic_proteins: dic_proteins[uniprot_acc] = Protein(uniprot_acc)    
         dic_proteins[uniprot_acc].seq += seq_aln
@@ -93,9 +93,14 @@ def main(input_aln, input_hmm):
 
     count = 0; text = ''
     for aln_position, wt_aa in enumerate(dic_proteins[human_name].seq):
-        if wt_aa == '-':
+        if wt_aa in ['-', '.']:
+            continue
+        if aln_position+1 not in dic_log_odds:
+            print ('aln_position', aln_position, 'does not exist in profile HMM')
             continue
         count += 1
+        # print (aln_position+1, wt_aa, count)
+        # print (dic_log_odds.keys())
         wt_score = dic_log_odds[aln_position+1][wt_aa]
         for mut_aa in 'ACDEFGHIKLMNPQRSTVWY':
             mut_score = dic_log_odds[aln_position+1][mut_aa]
@@ -112,12 +117,11 @@ if __name__ == '__main__':
     Execute this when file runs as script
     and not when run as module
     '''
-    parser = argparse.ArgumentParser(description='',
-                                        epilog='Contact:\n'
-                                        'gurdeep.singh[at]bioquant.uni-heidelberg.de',
+    parser = argparse.ArgumentParser(description='Generate log-odds score from *.aln.gz and corresponding *.hmm.gz files',
+                                        epilog='gurdeep.singh[at]bioquant[.]uni[-]heidelberg[.]de',
                                         formatter_class=argparse.RawTextHelpFormatter)
-    parser.add_argument('aln', help='Alignment file in CLUSTAL W format')
-    parser.add_argument('hmm', help='HMM file')
+    parser.add_argument('aln', help='Alignment file in CLUSTAL W/STOCKHOLM formats')
+    parser.add_argument('hmm', help='profile HMM file')
     args = parser.parse_args()
     input_aln = args.aln
     input_hmm = args.hmm
