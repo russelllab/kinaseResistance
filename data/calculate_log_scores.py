@@ -93,13 +93,15 @@ def main(input_aln, input_hmm):
 
     count = 0; text = ''
     for aln_position, wt_aa in enumerate(dic_proteins[human_name].seq):
+        # print (dic_proteins[human_name].seq[aln_position])
         if wt_aa in ['-', '.']:
             continue
+        count += 1
         if aln_position+1 not in dic_log_odds:
             # print ('aln_position', aln_position, 'does not exist in profile HMM')
             continue
-        count += 1
-        # print (aln_position+1, wt_aa, count)
+        # count += 1
+        # print (aln_position+1, wt_aa, count, dic_proteins[human_name].seq.replace('-', '').replace('.', '')[count-1])
         # print (dic_log_odds.keys())
         wt_score = dic_log_odds[aln_position+1][wt_aa]
         for mut_aa in 'ACDEFGHIKLMNPQRSTVWY':
