@@ -96,7 +96,7 @@ def main(input_aln, input_hmm):
         if wt_aa in ['-', '.']:
             continue
         if aln_position+1 not in dic_log_odds:
-            print ('aln_position', aln_position, 'does not exist in profile HMM')
+            # print ('aln_position', aln_position, 'does not exist in profile HMM')
             continue
         count += 1
         # print (aln_position+1, wt_aa, count)
