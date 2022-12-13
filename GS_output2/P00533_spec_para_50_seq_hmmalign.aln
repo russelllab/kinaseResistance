@@ -1,0 +1,51 @@
+# STOCKHOLM 1.0
+
+HUMAN_P00533         ........mrpsgtagaallallaalcpasraleekkvcqgtsnkltqlgtfedhflslqrmfnncevvlgnleityvqrnydlsflktiqevagyvlialntveriplenlqiirgnmyyensyalavlsnydanktglkelpmrnlqeilhgavrfsnnpalcnvesiqwrdivssdflsnmsmdfqnhlgscqkcdp
+#=GR HUMAN_P00533 PP ........************************************************************************************************************************************************************************************************
+HUMAN_Q15303         mkpatglwvwvsllvaagtvqpsdsqsvcagtenklsslsdleqqyralrkyyencevvmgnleitsiehnrdlsflrsvrevtgyvlvalnqfrylplenlriirgtklyedryalaiflnyrkdgnfglqelglknlteilnggvyvdqnkflcyadtihwqdivrnpwpsnltlvstngssgcgrchksctgrcwgp
+#=GR HUMAN_Q15303 PP ********************************************************************************************************************************************************************************************************
+#=GC PP_cons         ........................................................................................................................................................................................................
+#=GC RF              ........................................................................................................................................................................................................
+
+HUMAN_P00533         scpngscwgageencqkltkiicaqqcsgrcrgkspsdcchnqcaagctgpresdclvcrkfrdeatckdtcpplmlynpttyqmdvnpegkysfgatcvkkcprnyvvtdhgscvracgadsyemeedgvrkckkcegpcrkvcngigigefkdslsinatnikhfknctsisgdlhilpvafrgdsfthtppldpqel
+#=GR HUMAN_P00533 PP ********************************************************************************************************************************************************************************************************
+HUMAN_Q15303         tenhcqtltrtvcaeqcdgrcygpyvsdcchrecaggcsgpkdtdcfacmnfndsgacvtqcpqtfvynpttfqlehnfnakytygafcvkkcphnfvvdssscvracpsskmeveengikmckpctdicpkacdgigtgslmsaqtvdssnidkfinctkingnliflvtgihgdpynaieaidpeklnvfrtvreitg
+#=GR HUMAN_Q15303 PP ********************************************************************************************************************************************************************************************************
+#=GC PP_cons         ........................................................................................................................................................................................................
+#=GC RF              ........................................................................................................................................................................................................
+
+HUMAN_P00533         dilktvkeitgflliqawpenrtdlhafenleiirgrtkqhgqfslavvslnitslglrslkeisdgdviisgnknlcyantinwkklfgtsgqktkiisnrgensckatgqvchalcspegcwgpeprdcvscrnvsrgrecvdkcnllegeprefvenseciqchpeclpqamnitctgrgpdnciqcahyidgphcv
+#=GR HUMAN_P00533 PP ********************************************************************************************************************************************************************************************************
+HUMAN_Q15303         flniqswppnmtdfsvfsnlvtiggrvlysglsllilkqqgitslqfqslkeisagniyitdnsnlcyyhtinwttlfstinqrivirdnrkaenctaegmvcnhlcssdgcwgpgpdqclscrrfsrgriciescnlydgefrefengsicvecdpqcekmedglltchgpgpdnctkcshfkdgpncvekcpdglqga
+#=GR HUMAN_Q15303 PP ********************************************************************************************************************************************************************************************************
+#=GC PP_cons         ........................................................................................................................................................................................................
+#=GC RF              ........................................................................................................................................................................................................
+
+HUMAN_P00533         ktcpagvmgenntlvwkyadaghvchlchpnctygctgpglegcptngpkipsiatgmvgalllllvvalgiglfmrrrhivrkrtlrrllqerelvepltpsgeapnqallrilketeFKKIKVLGSGAFGTVYKGLWIPEGEKvkipVAIKELREATSPKAN-KEILDEAYVMASVDNPHVCRLLGICL-TSTVQLIT
+#=GR HUMAN_P00533 PP ***********************************************************************************************************************67899*************988887763333699999988777765.69***********************9.567889**
+HUMAN_Q15303         nsfifkyadpdrechpchpnctqgcngptshdciyypwtghstlpqhartpliaagvigglfilvivgltfavyvrrksikkkralrrfletelvepltpsgtapnqaqlrilketelk--RVKVLGSGAFGTVYKGIWVPEGETvkipVAIKILNETTGPKAN-VEFMDEALIMASMDHPHLVRLLGVCLS-PTIQLVT
+#=GR HUMAN_Q15303 PP *********************************************************************************************************************75..6789*************887776522347*****998777766.69***********************95.67999**
+#=GC PP_cons         .......................................................................................................................677899************98877776....799999998777766.69***********************95567899**
+#=GC RF              .......................................................................................................................xxxxxxxxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+HUMAN_P00533         QLMPFGCLLDYVREHKDnIGSQYLLNWCVQIAKGMNYLEDRRLVHRDLAARNVLVKTPQHVKITDFGLAKLLGAEEKeyhAEGGKVPIKWMALESILHRIYTHQSDVWSYGVTVWELMTfGSKPYDGIPASE-----------ISSILEK-GERLPQPPICTIDVYMIMVKCWMIDADSRPKFREL------iiefskma
+#=GR HUMAN_P00533 PP ************965555*******************************************************9999766666777889***************************8754899999444433...........3334533.67888899999999999999999999999988876......5889****
+HUMAN_Q15303         QLMPHGCLLEYVHEHKDnIGSQLLLNWCVQIAKGMMYLEERRLVHRDLAARNVLVKSPNHVKITDFGLARLLEGDEKeynADGGKMPIKWMALECIHYRKFTHQSDVWSYGVTIWELMTfGGKPYDGIPT-----------REIPDLLEK-GERLPQPPICTIDVYMVMVKCWMIDADSRPKFKELA-----aefsrmar
+#=GR HUMAN_Q15303 PP *******99999955555********************************************************999866666777889***************************87548889983333...........235556644.678888889999999999999999999999888875.....679*****
+#=GC PP_cons         *******9999996555.********************************************************999...666777889***************************875.889999433333.........234445543.678888999999999999999999999999888765.............
+#=GC RF              xxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx........
+
+HUMAN_P00533         rdpqrylviqgdermhlpsptdsnfyralmdeedmddvvdadeylipqqgffsspstsrtpllsslsatsnnstvacidrnglqscpikedsflqryssdptgaltedsiddtflpvpeyinqsvpkrpagsvqnpvyhnqplnpapsrdphyqdphstavgnpeylntvqptcvnstfdspahwaqkgshqisldnpdy
+#=GR HUMAN_P00533 PP ********************************************************************************************************************************************************************************************************
+HUMAN_Q15303         dpqrylviqgddrmklpspndskffqnlldeedledmmdaeeylvpqafnipppiytsraridsnrseighspppaytpmsgnqfvyrdggfaaeqgvsvpyraptstipeapvaqgataeifddsccngtlrkpvaphvqedsstqrysadptvfapersprgeldeegymtpmrdkpkqeylnpveenpfvsrrkngd
+#=GR HUMAN_Q15303 PP ********************************************************************************************************************************************************************************************************
+#=GC PP_cons         ........................................................................................................................................................................................................
+#=GC RF              ........................................................................................................................................................................................................
+
+HUMAN_P00533         qqdffpkeakpngifkgstaenaeylrvapqssefiga...........................................................................................
+#=GR HUMAN_P00533 PP **************************************...........................................................................................
+HUMAN_Q15303         lqaldnpeyhnasngppkaedeyvneplylntfantlgkaeylknnilsmpekakkafdnpdywnhslpprstlqhpdylqeystkyfykqngrirpivaenpeylsefslkpgtvlppppyrhrntvv
+#=GR HUMAN_Q15303 PP *********************************************************************************************************************************
+#=GC PP_cons         .................................................................................................................................
+#=GC RF              .................................................................................................................................
+//
