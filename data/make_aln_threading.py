@@ -105,9 +105,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate log-odds score from *.aln.gz and corresponding *.hmm.gz files',
                                         epilog='gurdeep.singh[at]bioquant[.]uni[-]heidelberg[.]de',
                                         formatter_class=argparse.RawTextHelpFormatter)
-    # parser.add_argument('acc', help='UniProt accession')
+    parser.add_argument('threads', help='# threads')
     args = parser.parse_args()
-    # acc = args.acc
+    num_threads = int(args.threads)
     dic_threads = {}
     # kinase_dic = extract_fasta(acc)
     for files in os.listdir('../kin_seq/'):
@@ -119,7 +119,7 @@ if __name__ == '__main__':
             dic_threads[acc+aln_type] = myThread(0, acc, aln_type)
             dic_threads[acc+aln_type].start()
             print (threading.active_count())
-            while threading.active_count() >= 10:
+            while threading.active_count() >= num_threads:
                 continue
 
             # dic_threads = myThread(2, "Thread-2", 2)
