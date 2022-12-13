@@ -2,13 +2,17 @@
 
 ## bash script to run calculate_log_scores.py
 
-for file in ../AK_hmm_models/*
+for file in ../kin_seq/*
 do
-	IFS='/'
-	read -a fileName <<< "$file"
-	IFS='.'
-	read -a name <<< "${fileName[2]}"
-	# echo "${name[0]}"
-	python3 calculate_log_scores.py "$file" ../hmm_build/"$name".hmm.gz > ../log_odds_scores/"$name".scores.txt
-	# exit 1
+	if [ "${file: -6}" == ".fa.gz" ]
+	then
+		# echo "$file"
+		IFS='/'
+		read -a fileName <<< "$file"
+		IFS='.'
+		read -a name <<< "${fileName[2]}"
+		# echo "${name[0]}"
+		python3 make_aln.py "${name[0]}" > ../logs/"${name[0]}".log
+		# exit 1
+	fi
 done

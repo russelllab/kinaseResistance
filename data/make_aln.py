@@ -7,7 +7,7 @@ import argparse
 
 # acc = 'P15056'
 # aln_type = '_orth.aln.gz'
-path_to_files = '../alignments/P150/'
+path_to_files = '../kin_seq/'
 path_to_output = '../GS_output/'
 pfam_dom = 'Pkinase'
 pfam_path = '../pfam/'
@@ -17,25 +17,29 @@ class Kinase:
         self.name = name
         self.seq = ''
 
-def extract_fasta(acc):
+def extract_fasta(acc, aln_type):
     '''
-    Extract FASTA from *.fa.gz
+    Extract FASTA from *aln_type
     '''
     kinase_dic = {}
-    for line in gzip.open(path_to_files+acc+'.fa.gz', 'rt'):
-        if line[0] == '>':
-            name = line.split('>')[1].replace('\n', '')
-            kinase_dic[name] = Kinase(name)
-        else:
-            kinase_dic[name].seq += line.replace('\n', '').replace('-', '')
+    for line in gzip.open(path_to_files+acc+aln_type, 'rt'):
+        if len(line.split()) == 0:
+                continue
+        if line.split()[0] in ['CLUSTAL', '//']:
+                continue
+        name = line.split(' ')[0].replace('\n', '')
+        if name not in kinase_dic: kinase_dic[name] = Kinase(name)
+        kinase_dic[name].seq += line.split()[1].replace('\n', '').replace('-', '')
     return kinase_dic
 
-def main(acc, kinase_dic):
+def main(acc):
     '''
     Extract order from the given alignment
     and realign using hmmalign against Pkinase
     '''
-    for aln_type in ['_orth.aln.gz']:
+    # for aln_type in ['_bpsh.aln.gz']:
+    for aln_type in ['_all_homs.aln.gz', '_bpsh.aln.gz', '_bpso.aln.gz', '_excl_para.aln.gz', '_orth.aln.gz' , '_spec_para.aln.gz']:
+        kinase_dic = extract_fasta(acc, aln_type)
         order = []
         for line in gzip.open(path_to_files+acc+aln_type, 'rt'):
             if line.split() == []:
@@ -56,6 +60,9 @@ def main(acc, kinase_dic):
 
         for num in dic_arr:
             fasta_file_name = acc+aln_type.split('.')[0]+'_'+str(num)+'_seq.fa'
+            if dic_arr[num] == '':
+                print (fasta_file_name, 'cannot be created coz it will be empty')
+                continue
             open(path_to_output+fasta_file_name, 'w').write(dic_arr[num])
             ## hmmalign
             aln_file_name = acc+aln_type.split('.')[0]+'_'+str(num)+'_seq_hmmalign.aln'
@@ -88,5 +95,5 @@ if __name__ == '__main__':
     parser.add_argument('acc', help='UniProt accession')
     args = parser.parse_args()
     acc = args.acc
-    kinase_dic = extract_fasta(acc)
-    main(acc, kinase_dic)
+    # kinase_dic = extract_fasta(acc)
+    main(acc)
