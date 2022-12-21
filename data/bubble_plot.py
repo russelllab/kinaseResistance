@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 from scipy.stats import fisher_exact
 import plotly.express as px
 
-PFAM_DOM = 'PK_Tyr_Ser-Thr'
-# PFAM_DOM = 'Pkinase'
+# PFAM_DOM = 'PK_Tyr_Ser-Thr'
+PFAM_DOM = 'Pkinase'
 HMMSEARCH_OUT = 'allKinasesHmmsearch'+PFAM_DOM+'.txt'
 
 class Gene:
@@ -261,9 +261,11 @@ for line in open('../KA/resistant_mutations_Nov22.tsv.gz', 'rt'):
 # print (kinase_dic['P25092'].kinase_to_pfam)
 data = []
 for kinase in kinase_dic:
+    '''
     if PFAM_DOM not in kinase_dic[kinase].pfam_domains:
         # print (PFAM_DOM, kinase_dic[kinase].pfam_domains)
         continue
+    '''
     # kinase_dic[kinase].display()
     for mutation in kinase_dic[kinase].act:
         mutationInstance = kinase_dic[kinase].act[mutation]
