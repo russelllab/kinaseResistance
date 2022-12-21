@@ -120,6 +120,7 @@ def get_act_deact_res_sites(dic_kinases):
     '''
     Fetch act/deact/res sites
     '''
+    dic_all_kinases = {}
     dic_act_deact_res_sites = {}
     for line in open('../KA/act_deact_mut_for_scores_fin.tsv', 'r'):
         if line.split('\t')[0] == 'uniprot_id':
@@ -137,7 +138,14 @@ def get_act_deact_res_sites(dic_kinases):
             # print (acc, line, dic_kinases[acc].ptmsites)
             if mut_type not in dic_kinases[acc].act_deact_res: dic_kinases[acc].act_deact_res[mut_type] = {}
             if position not in dic_kinases[acc].act_deact_res[mut_type]: dic_kinases[acc].act_deact_res[mut_type][position] = []
-            dic_kinases[acc].act_deact_res[mut_type][position].append(wt_aa)
+            dic_kinases[acc].act_deact_res[mut_type][position].append(mut_aa)
+        else:
+            mutation = wt_aa+str(position)+mut_aa
+            if acc not in dic_all_kinases: dic_all_kinases[acc] = Kinase(acc)
+            dic_all_kinases[acc].mutations[mutation] = Mutation(mutation)
+            if mut_type not in dic_all_kinases[acc].act_deact_res: dic_all_kinases[acc].act_deact_res[mut_type] = {}
+            if position not in dic_all_kinases[acc].act_deact_res[mut_type]: dic_all_kinases[acc].act_deact_res[mut_type][position] = []
+            dic_all_kinases[acc].act_deact_res[mut_type][position].append(mut_aa)
     
     for line in open('../KA/resistant_mutations_Nov22.tsv.gz', 'r'):
         if line[0] == '#':
@@ -147,7 +155,7 @@ def get_act_deact_res_sites(dic_kinases):
         acc = line.split('\t')[1]
         position = int((line.split('\t')[2])[1:-1])
         wt_aa = (line.split('\t')[2])[0]
-        mut_aa = (line.split('\t')[2])[0]
+        mut_aa = (line.split('\t')[2])[-1]
         mut_type = 'R'
         if acc not in dic_act_deact_res_sites: dic_act_deact_res_sites[acc] = {'R':[], 'A':[], 'D':[]}
         dic_act_deact_res_sites[acc][mut_type].append(position)
@@ -155,10 +163,19 @@ def get_act_deact_res_sites(dic_kinases):
             # print (acc, line, dic_kinases[acc].ptmsites)
             if mut_type not in dic_kinases[acc].act_deact_res: dic_kinases[acc].act_deact_res[mut_type] = {}
             if position not in dic_kinases[acc].act_deact_res[mut_type]: dic_kinases[acc].act_deact_res[mut_type][position] = []
-            dic_kinases[acc].act_deact_res[mut_type][position].append(wt_aa)
+            dic_kinases[acc].act_deact_res[mut_type][position].append(mut_aa)
+        else:
+            mutation = wt_aa+str(position)+mut_aa
+            if acc not in dic_all_kinases: dic_all_kinases[acc] = Kinase(acc)
+            dic_all_kinases[acc].mutations[mutation] = Mutation(mutation)
+            if mut_type not in dic_all_kinases[acc].act_deact_res: dic_all_kinases[acc].act_deact_res[mut_type] = {}
+            if position not in dic_all_kinases[acc].act_deact_res[mut_type]: dic_all_kinases[acc].act_deact_res[mut_type][position] = []
+            dic_all_kinases[acc].act_deact_res[mut_type][position].append(mut_aa)
     
     # print (dic_ptm_sites[156]['p'])
-    return dic_act_deact_res_sites
+    # print ([dic_all_kinases[name].gene for name in dic_all_kinases])
+    # sys.exit()
+    return dic_all_kinases, dic_act_deact_res_sites
 
 def get_log_odds(dic_kinases, alignment_types):
     '''
@@ -206,11 +223,43 @@ def do_BLAST(name, fasta_pos, pfam_pos, ptm_type, dic_ptm_sites):
     # return best_hit.split('|')[2]
     return best_hit_gene, best_hit_identity
 
+def get_known_act_deact_res_pfam(given_pfam_pos, dic_kinases, dic_all_kinases, mut_types):
+    dic_known_act_deact_res_pfam = {}
+    # for mut_type in mut_types:
+    #     dic_known_act_deact_res_pfam[mut_type] = []
+    # print (dic_all_kinases)
+    # sys.exit()
+    for num, dics in enumerate([dic_kinases, dic_all_kinases]):
+        for name in dics:
+            # if given_pfam_pos == 30:
+            #     print (dics[name].gene)
+            # print (name, num)
+            # print (dics[name].seq)
+            for fasta_pos, fasta_aa in enumerate(dics[name].seq, start=1):
+                if fasta_pos not in dics[name].fasta2pfam:
+                    continue
+                pfam_pos = dics[name].fasta2pfam[fasta_pos]['position']
+                # if given_pfam_pos == 30 and dics[name].gene == 'PLK3':
+                #     print (dics[name].gene, pfam_pos, fasta_pos, fasta_aa)
+                if pfam_pos != given_pfam_pos:
+                    continue
+                for mut_type in dics[name].act_deact_res:
+                    if fasta_pos not in dics[name].act_deact_res[mut_type]:
+                        continue
+                    vals = [dics[name].gene+'/'+dics[name].fetch_aa(fasta_pos)+str(fasta_pos)+mut_aa for mut_aa in dics[name].act_deact_res[mut_type][fasta_pos]]
+                    vals = list(set(vals))
+                    if mut_type not in dic_known_act_deact_res_pfam: dic_known_act_deact_res_pfam[mut_type] = []
+                    dic_known_act_deact_res_pfam[mut_type] += vals
+    # if given_pfam_pos == 30:
+    #     print (given_pfam_pos, dic_known_act_deact_res_pfam)
+    #     sys.exit()
+    return dic_known_act_deact_res_pfam
+
 def main(dic_kinases):
     '''
     '''
     dic_ptm_sites = get_ptm_sites(dic_kinases)
-    dic_act_deact_res_sites = get_act_deact_res_sites(dic_kinases)
+    dic_all_kinases, dic_act_deact_res_sites = get_act_deact_res_sites(dic_kinases)
     alignment_types = ['all_homs','bpsh','bpso','excl_para','orth','spec_para']
     get_log_odds(dic_kinases, alignment_types)
     # print (dic_kinases['Q02750'].ptmsites)
@@ -226,6 +275,7 @@ def main(dic_kinases):
     heading += 'PTM' + '\t'
     heading += 'Pfam_PTM' + '\t'
     heading += '\t'.join(mut_types) + '\t'
+    heading += '\t'.join(mut_types) + '\t'
     heading += '\t'.join(alignment_types) + '\t'
     heading += 'MechismoX URL'
     print (heading)
@@ -240,6 +290,7 @@ def main(dic_kinases):
             ## Ignore if the given position CANNOT be mapped to Pkinase
             if fasta_pos not in dic_kinases[name].fasta2pfam:
                 continue
+            
             ## Check if +1/-1 residues are PTM-sites
             # for ptm_type in dic_kinases[name].ptmsites:
             ptm_values = []
@@ -308,6 +359,13 @@ def main(dic_kinases):
                     continue
                 row.append(mut_type)
                 # print (name, dic_kinases[name].gene, mutation, pfam_pos, fasta_pos, 'is a/an', mut_type+'-site')
+            ## Get known_act_deact_res information
+            dic_known_act_deact_res_pfam = get_known_act_deact_res_pfam(pfam_pos, dic_kinases, dic_all_kinases, mut_types)
+            for mut_type in mut_types:
+                if mut_type not in dic_known_act_deact_res_pfam:
+                    row.append('-')
+                    continue
+                row.append(';'.join(dic_known_act_deact_res_pfam[mut_type]))
             ## Check if there are scores
             for aln_type in alignment_types:
                 if aln_type in dic_kinases[name].mutations[mutation].scores:
