@@ -4,18 +4,18 @@
 Script to perform a test input mutations
 '''
 import os, sys, argparse, gzip, math
-from turtle import position
+# from turtle import position
 import seaborn as sns
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import fisher_exact
-import plotly.express as px
+# import plotly.express as px
 
 class Mutation():
     def __init__(self, mutation):
         self.mutation = mutation
-        self.ortho_scores = {}
+        self.scores = {}
 
 class Kinase():
     def __init__(self, name):
@@ -151,19 +151,22 @@ def get_act_deact_res_sites(dic_kinases):
     # print (dic_ptm_sites[156]['p'])
     return dic_act_deact_res_sites
 
-def get_log_odds(dic_kinases):
+def get_log_odds(dic_kinases, alignment_types):
     '''
     '''
+    # alignment_types = ['all_homs','bpsh','bpso','excl_para','orth','spec_para']
+    path_to_alignments = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
     for name in dic_kinases:
-        if os.path.isfile('../log_odds_scores/'+name+'_orth_100_seq.scores.txt.gz') is False:
-            continue
-        for line in gzip.open('../log_odds_scores/'+name+'_orth_100_seq.scores.txt.gz', 'rt'):
-            if line[0] == '\n':
+        for aln_type in alignment_types:
+            if os.path.isfile(path_to_alignments+name[:4]+'/'+name+'_'+aln_type+'.scores.txt.gz') is False:
                 continue
-            mutation = line.split()[0].split('/')[1]
-            if mutation in dic_kinases[name].mutations:
-                object_mutation = dic_kinases[name].mutations[mutation]
-                object_mutation.ortho_scores['100'] = float(line.split()[4])
+            for line in gzip.open(path_to_alignments+name[:4]+'/'+name+'_'+aln_type+'.scores.txt.gz', 'rt'):
+                if line[0] == '\n':
+                    continue
+                mutation = line.split()[0].split('/')[1]
+                if mutation in dic_kinases[name].mutations:
+                    object_mutation = dic_kinases[name].mutations[mutation]
+                    object_mutation.scores[aln_type] = float(line.split()[4])
             # print (mutation)
 
 def do_BLAST(name, pfam_pos, ptm_type, dic_ptm_sites):
@@ -194,7 +197,8 @@ def main(dic_kinases):
     '''
     dic_ptm_sites = get_ptm_sites(dic_kinases)
     dic_act_deact_res_sites = get_act_deact_res_sites(dic_kinases)
-    get_log_odds(dic_kinases)
+    alignment_types = ['all_homs','bpsh','bpso','excl_para','orth','spec_para']
+    get_log_odds(dic_kinases, alignment_types)
     # print (dic_kinases['Q02750'].ptmsites)
     # print (dic_ptm_sites)
     # prepare_fasta_sequence(dic_kinases)
@@ -205,7 +209,8 @@ def main(dic_kinases):
     heading += '\t'.join(ptm_types) + '\t'
     heading += 'Pfam_PTM' + '\t'
     heading += '\t'.join(mut_types) + '\t'
-    heading += 'Ortho_100'
+    heading += '\t'.join(alignment_types) + '\t'
+    heading += 'MechismoX URL'
     print (heading)
     for name in dic_kinases:
         for mutation in dic_kinases[name].mutations:
@@ -275,11 +280,13 @@ def main(dic_kinases):
                     continue
                 row.append(mut_type)
                 # print (name, dic_kinases[name].gene, mutation, pfam_pos, fasta_pos, 'is a/an', mut_type+'-site')
-            ## Check if there are Ortho scores
-            if len(dic_kinases[name].mutations[mutation].ortho_scores) > 0:
-                row.append(str(dic_kinases[name].mutations[mutation].ortho_scores['100']))
-            else:
-                row.append('-')
+            ## Check if there are scores
+            for aln_type in alignment_types:
+                if aln_type in dic_kinases[name].mutations[mutation].scores:
+                    row.append(str(dic_kinases[name].mutations[mutation].scores[aln_type]))
+                else:
+                    row.append('-')
+            row.append('http://mechismox.russelllab.org/result?protein='+name+'&mutation='+mutation)
             
             print (dic_kinases[name].gene + '\t' + name + '\t' + mutation + '\t' + str(pfam_pos) + '\t' + '\t'.join(row))
             # if len(row) == 22: sys.exit()

@@ -1,45 +1,45 @@
-#Gene	Name	Mutation	Pfam_Pos	ac	gl	m1	m2	m3	me	p	sm	ub	ac	gl	m1	m2	m3	me	p	sm	ub	Pfam_PTM	A	D	R	Ortho_100
-MAP2K3	P46734	L215W	148	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPK14|p|25;WNK4|ub|25	-	-	-	-2.64098
-MAP2K3	P46734	T222M	155	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	Y	-	-	MAP2K6|ac|80;PLK1|m1|26;PAK4|me|28;MAP2K3|p|100;OXSR1|ub|28	-	-	-	-1.97221
-MAP2K3	P46734	A84T	21	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	PBK|p|25;STK10|ub|33	-	-	-	-0.06303
-MAP2K3	P46734	R94L	31	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPK3|ac|27;EPHA2|p|24;NEK7|ub|28	-	-	-	-1.61372
-MAP2K3	P46734	R96W	33	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPKAPK3|p|24;LCK|ub|25	-	-	-	-2.76252
-PIM1	P11309	L193F	148	-	-	-	-	-	-	-	-	Y	-	-	-	-	-	-	-	-	-	MAPK14|p|24;WNK1|ub|20	-	-	-	0.49537
-PIM1	P11309	S97N	56	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|34;MYO3A|p|27	-	-	-	-1.26861
-PIM1	P11309	S97R	56	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|34;MYO3A|p|27	-	-	-	-0.0391
-PIM1	P11309	S97T	56	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|34;MYO3A|p|27	-	-	-	-1.45623
-PIM1	P11309	V96M	55	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	RPS6KA3|p|28	-	-	-	-1.51639
-PIM1	P11309	L93F	52	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-3.03059
-PIM1	P11309	E79D	42	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	ILK|p|25;PDPK1|ub|25	-	-	-	-1.94692
-PIM1	P11309	S75F	38	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|34;CDK11B|ub|29	-	-	-	-2.60245
-PIM1	P11309	L164F	120	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-0.85378
-PIM1	P11309	E135K	91	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	KDR|p|29;PRKAA1|sm|28;AURKB|ub|30	-	-	-	-1.17835
-PIM1	P11309	E181D	136	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	RPS6KA2|p|29;CDC7|ub|23	-	-	-	-0.47538
-PIM1	P11309	L182V	137	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	TBK1|p|28	-	-	-	1.428
-MAP2K1	Q02750	V211D	144	-	-	-	-	-	-	Y	-	-	-	-	-	-	-	-	-	-	-	MAP3K5|p|29	-	-	R	-5.46717
-BRSK2	Q8IWQ3	T174E	156	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	Y	-	-	MAP2K2|ac|28;AKT1|gl|31;BRSK2|p|100;CHEK1|ub|34	A	-	-	-5.96779
-BRSK2	Q8IWQ3	T175E	157	-	-	-	-	-	-	Y	-	-	-	-	-	-	-	-	-	-	-	PRKAA1|p|42;FER|ub|29	-	-	-	-
-CHEK2	O96017	K373E	146	-	-	-	-	-	-	Y	-	-	-	-	-	-	-	-	-	-	-	GSK3B|ac|27;WNK4|p|25;CAMK4|ub|43	-	-	-	-1.7585
-CHEK2	O96017	M381V	154	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK1|p|28;JAK2|sm|28;TTK|ub|30	-	-	-	-3.62946
-MAPK7	Q13164	R205P	146	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	GSK3B|ac|34;PRPF4B|p|27;CDK7|ub|35	-	-	-	-9.51285
-MAP2K6	P52564	T112A	60	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-1.4357
-ABL1	P00519	E255K	14	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	ERBB4|p|40;HUNK|ub|29	-	-	-	-4.51827
-ABL1	P00519	T315I	77	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	DDR1|p|37	-	-	-	-4.39264
-ABL1	P00519	Y253H	12	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	Y	-	-	CAMK4|gl|26;ABL1|p|100	-	-	-	-6.40595
-ABL1	P00519	F317L	79	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	EPHA3|p|39	-	-	-	-7.08854
-CDK5	Q00535	F82I	79	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	JAK3|p|27	-	-	-	-5.05335
-DYRK4	Q9NR20	R176C	70	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-7.76056
-MAP3K4	Q9Y6R4	G1366R	24	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	TTK|ub|28	-	-	-	-8.99971
-RIPK4	P57078	A136P	118	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	IGF1R|sm|27;CHUK|ub|28	-	-	-	0.45174
-ERBB4	Q15303	E872K	152	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|25;PTK2|p|38;RIPK1|ub|26	-	-	-	-
-ACVR1B	P36896	K234R	30	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|30;EGFR|m1|23;STK4|m2|29;CDK2|sm|25;SRC|ub|31	-	-	-	-3.40373
-TYRO3	Q06418	V669L	137	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	TBK1|p|23	-	-	-	-3.65254
-MAP2K4	P45985	R134W	33	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPKAPK3|p|24;ARAF|ub|27	-	-	-	-2.63129
-STK38	Q15208	V106F	18	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-4.30816
-FES	P07332	T650R	91	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	KDR|p|47;PRKAA1|sm|27;PTK7|ub|36	-	-	-	-0.1385
-STK11	Q15831	P281L	236	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPK3|m3|25;STK39|p|26;NEK6|ub|30	-	-	-	-0.86958
-TGFBR1	P36897	S241L	39	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAP3K5|p|25;MAP3K7|ub|30	-	-	-	-6.12921
-SGK1	O00141	A115V	18	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-1.46028
-CSNK2A1	P68400	R80C	47	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	STK11|ac|24;MAPK14|me|30;MELK|p|24;NEK7|ub|27	-	-	-	-4.69945
-PSKH2	Q96QS6	A176S	116	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPK14|p|26;OXSR1|ub|28	-	-	-	0.62884
-MARK3	P27448	E120K	65	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	NRBP1|ac|29;PIK3R4|ub|24	-	-	-	-2.9748
+#Gene	Name	Mutation	Pfam_Pos	ac	gl	m1	m2	m3	me	p	sm	ub	ac	gl	m1	m2	m3	me	p	sm	ub	Pfam_PTM	A	D	R	all_homs	bpsh	bpso	excl_para	orth	spec_para	MechismoX URL
+MAP2K3	P46734	L215W	148	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPK14|p|25;WNK4|ub|25	-	-	-	-7.2194	-4.88892	-5.15766	-7.11093	-4.32226	-4.235	http://mechismox.russelllab.org/result?protein=P46734&mutation=L215W
+MAP2K3	P46734	T222M	155	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	Y	-	-	MAP2K6|ac|80;PLK1|m1|26;PAK4|me|28;MAP2K3|p|100;OXSR1|ub|28	-	-	-	-5.01989	-5.33924	-5.87918	-4.84784	-5.00735	-3.76043	http://mechismox.russelllab.org/result?protein=P46734&mutation=T222M
+MAP2K3	P46734	A84T	21	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	PBK|p|25;STK10|ub|33	-	-	-	0.09336	0.19416	-0.61338	0.21629	-0.90557	0.45034	http://mechismox.russelllab.org/result?protein=P46734&mutation=A84T
+MAP2K3	P46734	R94L	31	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPK3|ac|27;EPHA2|p|24;NEK7|ub|28	-	-	-	-2.30533	-2.63276	-3.82138	-2.00861	-3.44061	-2.12131	http://mechismox.russelllab.org/result?protein=P46734&mutation=R94L
+MAP2K3	P46734	R96W	33	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPKAPK3|p|24;LCK|ub|25	-	-	-	-5.65483	-4.15584	-3.96468	-5.43978	-4.26475	-2.80754	http://mechismox.russelllab.org/result?protein=P46734&mutation=R96W
+PIM1	P11309	L193F	148	-	-	-	-	-	-	-	-	Y	-	-	-	-	-	-	-	-	-	MAPK14|p|24;WNK1|ub|20	-	-	-	-2.69569	-0.27254	-2.55705	-1.71249	-2.69569	-0.2597	http://mechismox.russelllab.org/result?protein=P11309&mutation=L193F
+PIM1	P11309	S97N	56	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|34;MYO3A|p|27	-	-	-	-1.28476	-0.33714	-1.08372	-2.00201	-1.28476	-0.35221	http://mechismox.russelllab.org/result?protein=P11309&mutation=S97N
+PIM1	P11309	S97R	56	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|34;MYO3A|p|27	-	-	-	-0.99734	-0.08832	-0.75984	-2.62615	-0.99734	-0.90124	http://mechismox.russelllab.org/result?protein=P11309&mutation=S97R
+PIM1	P11309	S97T	56	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|34;MYO3A|p|27	-	-	-	-1.1777	-1.99841	-0.95581	-1.67488	-1.1777	-1.34342	http://mechismox.russelllab.org/result?protein=P11309&mutation=S97T
+PIM1	P11309	V96M	55	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	RPS6KA3|p|28	-	-	-	-2.63501	-1.95419	-2.44335	-1.65792	-2.63501	-2.03658	http://mechismox.russelllab.org/result?protein=P11309&mutation=V96M
+PIM1	P11309	L93F	52	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-3.23113	-2.26571	-3.08867	-1.71249	-3.23113	-3.10781	http://mechismox.russelllab.org/result?protein=P11309&mutation=L93F
+PIM1	P11309	E79D	42	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	ILK|p|25;PDPK1|ub|25	-	-	-	-1.82143	0.30513	-1.6398	-1.60784	-1.82143	0.5951	http://mechismox.russelllab.org/result?protein=P11309&mutation=E79D
+PIM1	P11309	S75F	38	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|34;CDK11B|ub|29	-	-	-	-0.39123	-1.92409	-2.59659	-3.10454	-0.39123	1.18258	http://mechismox.russelllab.org/result?protein=P11309&mutation=S75F
+PIM1	P11309	L164F	120	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-1.39527	-2.13214	-1.43525	-1.71249	-1.39527	-3.49747	http://mechismox.russelllab.org/result?protein=P11309&mutation=L164F
+PIM1	P11309	E135K	91	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	KDR|p|29;PRKAA1|sm|28;AURKB|ub|30	-	-	-	-1.36033	-0.03963	-1.42078	-1.99512	-1.36033	0.84018	http://mechismox.russelllab.org/result?protein=P11309&mutation=E135K
+PIM1	P11309	E181D	136	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	RPS6KA2|p|29;CDC7|ub|23	-	-	-	-0.44825	-0.39593	-0.42438	-1.60784	-0.44825	-0.3748	http://mechismox.russelllab.org/result?protein=P11309&mutation=E181D
+PIM1	P11309	L182V	137	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	TBK1|p|28	-	-	-	0.42734	1.0679	0.57027	-1.51425	0.42734	0.75969	http://mechismox.russelllab.org/result?protein=P11309&mutation=L182V
+MAP2K1	Q02750	V211D	144	-	-	-	-	-	-	Y	-	-	-	-	-	-	-	-	-	-	-	MAP3K5|p|29	-	-	R	-8.131	-7.16581	-6.90715	-8.15394	-5.26256	-5.69116	http://mechismox.russelllab.org/result?protein=Q02750&mutation=V211D
+BRSK2	Q8IWQ3	T174E	156	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	Y	-	-	MAP2K2|ac|28;AKT1|gl|31;BRSK2|p|100;CHEK1|ub|34	A	-	-	-4.42775	-4.55594	-4.28322	-2.80512	-4.42775	-3.47659	http://mechismox.russelllab.org/result?protein=Q8IWQ3&mutation=T174E
+BRSK2	Q8IWQ3	T175E	157	-	-	-	-	-	-	Y	-	-	-	-	-	-	-	-	-	-	-	PRKAA1|p|42;FER|ub|29	-	-	-	-	-	-	-	-	-	http://mechismox.russelllab.org/result?protein=Q8IWQ3&mutation=T175E
+CHEK2	O96017	K373E	146	-	-	-	-	-	-	Y	-	-	-	-	-	-	-	-	-	-	-	GSK3B|ac|27;WNK4|p|25;CAMK4|ub|43	-	-	-	-2.55682	-2.78579	-2.75269	-2.29987	-2.55682	-2.6168	http://mechismox.russelllab.org/result?protein=O96017&mutation=K373E
+CHEK2	O96017	M381V	154	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK1|p|28;JAK2|sm|28;TTK|ub|30	-	-	-	-4.00564	-3.1391	-3.9689	-2.78571	-4.00564	-3.26157	http://mechismox.russelllab.org/result?protein=O96017&mutation=M381V
+MAPK7	Q13164	R205P	146	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	GSK3B|ac|34;PRPF4B|p|27;CDK7|ub|35	-	-	-	-6.44572	-7.75922	-7.94554	-6.38013	-9.08759	-6.96595	http://mechismox.russelllab.org/result?protein=Q13164&mutation=R205P
+MAP2K6	P52564	T112A	60	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-3.61733	-2.94633	-2.64501	-3.21738	-3.02167	-2.34188	http://mechismox.russelllab.org/result?protein=P52564&mutation=T112A
+ABL1	P00519	E255K	14	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	ERBB4|p|40;HUNK|ub|29	-	-	-	-1.50828	-2.21307	-2.9056	-1.44697	-3.22328	-0.6236	http://mechismox.russelllab.org/result?protein=P00519&mutation=E255K
+ABL1	P00519	T315I	77	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	DDR1|p|37	-	-	-	-3.61477	-4.45177	-4.42919	-3.521	-4.78174	-3.22676	http://mechismox.russelllab.org/result?protein=P00519&mutation=T315I
+ABL1	P00519	Y253H	12	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	Y	-	-	CAMK4|gl|26;ABL1|p|100	-	-	-	-2.69813	-4.40588	-6.02885	-2.23296	-6.21587	-3.75106	http://mechismox.russelllab.org/result?protein=P00519&mutation=Y253H
+ABL1	P00519	F317L	79	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	EPHA3|p|39	-	-	-	-1.63141	-1.73041	-6.90206	-1.48025	-7.01718	-1.92258	http://mechismox.russelllab.org/result?protein=P00519&mutation=F317L
+CDK5	Q00535	F82I	79	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	JAK3|p|27	-	-	-	-4.11672	-6.29325	-6.67779	-4.04324	-6.68129	-1.61811	http://mechismox.russelllab.org/result?protein=Q00535&mutation=F82I
+DYRK4	Q9NR20	R176C	70	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-4.16229	-6.08162	-8.93025	-3.8756	-7.8799	-4.27514	http://mechismox.russelllab.org/result?protein=Q9NR20&mutation=R176C
+MAP3K4	Q9Y6R4	G1366R	24	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	TTK|ub|28	-	-	-	-4.90498	-3.40431	-3.50794	-4.92024	-3.72393	-3.37394	http://mechismox.russelllab.org/result?protein=Q9Y6R4&mutation=G1366R
+RIPK4	P57078	A136P	118	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	IGF1R|sm|27;CHUK|ub|28	-	-	-	0.23942	-0.40479	-1.39874	-2.5682	0.23942	-1.52377	http://mechismox.russelllab.org/result?protein=P57078&mutation=A136P
+ERBB4	Q15303	E872K	152	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|25;PTK2|p|38;RIPK1|ub|26	-	-	-	-2.45336	-1.75673	-1.80553	-2.51248	-1.9187	-2.07009	http://mechismox.russelllab.org/result?protein=Q15303&mutation=E872K
+ACVR1B	P36896	K234R	30	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	CDK9|ac|30;EGFR|m1|23;STK4|m2|29;CDK2|sm|25;SRC|ub|31	-	-	-	-4.31198	-2.04613	-1.88546	-4.67459	-2.50436	-3.07597	http://mechismox.russelllab.org/result?protein=P36896&mutation=K234R
+TYRO3	Q06418	V669L	137	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	TBK1|p|23	-	-	-	-2.95597	-3.69702	-2.46629	-2.75737	-2.51981	-2.35441	http://mechismox.russelllab.org/result?protein=Q06418&mutation=V669L
+MAP2K4	P45985	R134W	33	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPKAPK3|p|24;ARAF|ub|27	-	-	-	-5.65483	-4.22398	-4.18761	-5.4537	-4.27681	-2.80754	http://mechismox.russelllab.org/result?protein=P45985&mutation=R134W
+STK38	Q15208	V106F	18	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-6.02436	-2.0506	-5.72319	-2.61898	-6.02436	-3.326	http://mechismox.russelllab.org/result?protein=Q15208&mutation=V106F
+FES	P07332	T650R	91	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	KDR|p|47;PRKAA1|sm|27;PTK7|ub|36	-	-	-	1.01973	-0.02404	-0.7794	1.28911	-0.95809	-0.35249	http://mechismox.russelllab.org/result?protein=P07332&mutation=T650R
+STK11	Q15831	P281L	236	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPK3|m3|25;STK39|p|26;NEK6|ub|30	-	-	-	-0.99249	-0.79445	-1.08683	-4.20117	-0.99249	-0.13727	http://mechismox.russelllab.org/result?protein=Q15831&mutation=P281L
+TGFBR1	P36897	S241L	39	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAP3K5|p|25;MAP3K7|ub|30	-	-	-	-4.7706	-6.64893	-6.89579	-4.25125	-7.59961	-3.37781	http://mechismox.russelllab.org/result?protein=P36897&mutation=S241L
+SGK1	O00141	A115V	18	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-1.20276	-0.71913	-1.76954	-2.16699	-1.20276	0.47645	http://mechismox.russelllab.org/result?protein=O00141&mutation=A115V
+CSNK2A1	P68400	R80C	47	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	STK11|ac|24;MAPK14|me|30;MELK|p|24;NEK7|ub|27	-	-	-	-8.63881	-6.92874	-6.192	-8.60839	-6.47109	-8.10999	http://mechismox.russelllab.org/result?protein=P68400&mutation=R80C
+PSKH2	Q96QS6	A176S	116	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	MAPK14|p|26;OXSR1|ub|28	-	-	-	0.41565	0.58732	0.41241	-1.70349	0.41565	2.87506	http://mechismox.russelllab.org/result?protein=Q96QS6&mutation=A176S
+MARK3	P27448	E120K	65	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	NRBP1|ac|29;PIK3R4|ub|24	-	-	-	-4.02053	-3.11518	-2.9214	-2.30486	-4.02053	-2.2326	http://mechismox.russelllab.org/result?protein=P27448&mutation=E120K
