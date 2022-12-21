@@ -45,6 +45,12 @@ class Kinase():
             else:
                 self.gene = line.split('GN=')[1].split()[0]
     
+    def fetch_aa(self, position) -> str:
+        return self.seq[position-1]
+    
+    def fetch_peptide(self, position) -> str:
+        return self.seq[position-3:position+2]
+    
     def fetch_hmmsearch(self):
         '''
         Fetch HMMsearch of the kinase
@@ -62,22 +68,25 @@ class Kinase():
                 continue
             
             # print (self.name.split(), line.split()[0])
-            if 'Pkinase' in line:
+            if 'CS' == line.split()[-1]:
+                ss_seq = line.split()[0]
+                # print (ss_seq)
+            elif 'Pkinase' in line:
                 pfam_start, pfam_seq, pfam_end = int(line.split()[1]), line.split()[2], int(line.split()[3])
             elif self.name in line:
                 fasta_start, fasta_seq, fasta_end = int(line.split()[1]), line.split()[2], int(line.split()[3])
-                dic_pfam2fasta = {}
-                dic_fasta2pfam = {}
-                for pfam_aa, fasta_aa in zip(pfam_seq, fasta_seq):
+                for pfam_aa, fasta_aa, ss_ele in zip(pfam_seq, fasta_seq, ss_seq):
                     if pfam_aa not in ['.', '-'] and fasta_aa not in ['.', '-']:
-                        self.fasta2pfam[fasta_start] = pfam_start
+                        # self.fasta2pfam[fasta_start] = pfam_start
+                        self.fasta2pfam[fasta_start] = {}
+                        self.fasta2pfam[fasta_start]['position'] = pfam_start
+                        self.fasta2pfam[fasta_start]['ss'] = ss_ele
                         pfam_start += 1
                         fasta_start += 1
                     elif pfam_aa not in ['.', '-']:
                         pfam_start += 1
                     elif fasta_aa not in ['.', '-']:
                         fasta_start += 1
-        # print (self.fasta2pfam[315])
         # sys.exit()
 
 def get_ptm_sites(dic_kinases):
@@ -169,11 +178,10 @@ def get_log_odds(dic_kinases, alignment_types):
                     object_mutation.scores[aln_type] = float(line.split()[4])
             # print (mutation)
 
-def do_BLAST(name, pfam_pos, ptm_type, dic_ptm_sites):
+def do_BLAST(name, fasta_pos, pfam_pos, ptm_type, dic_ptm_sites):
     # print (pfam_pos, ptm_type, dic_ptm_sites)
     seq = ''
     for acc in dic_ptm_sites[pfam_pos][ptm_type]:
-        # print (acc)
         for line in gzip.open('../KA/UniProtFasta2/'+acc+'.fasta.gz', 'rt'):
             if line[0] == '>':
                 seq += '>' + line.split('GN=')[1].split()[0] + '\n'
@@ -185,7 +193,13 @@ def do_BLAST(name, pfam_pos, ptm_type, dic_ptm_sites):
     os.system('gunzip ../KA/UniProtFasta2/'+name+'.fasta.gz')
     os.system('blastp -query ../KA/UniProtFasta2/'+name+'.fasta -db blastdb/inputDB -outfmt=6 -out outputDB.txt')
     os.system('gzip ../KA/UniProtFasta2/'+name+'.fasta')
+    best_hit_gene = ''
+    best_hit_identity = ''
     for line in open('outputDB.txt', 'r'):
+        best_hit_start = int(line.split('\t')[6])
+        best_hit_end = int(line.split('\t')[7])
+        if fasta_pos < best_hit_start or fasta_pos > best_hit_end:
+            continue
         best_hit_gene = line.split('\t')[1]
         best_hit_identity = str(math.floor(float(line.split('\t')[2])))
         break
@@ -204,9 +218,12 @@ def main(dic_kinases):
     # prepare_fasta_sequence(dic_kinases)
     ptm_types = ['ac','gl','m1','m2','m3','me','p','sm','ub']
     mut_types = ['A', 'D', 'R']
-    heading = '#Gene\tName\tMutation\tPfam_Pos\t'
-    heading += '\t'.join(ptm_types) + '\t'
-    heading += '\t'.join(ptm_types) + '\t'
+    heading = '#Gene\tName\tMutation\tPfam_Pos\tPfam_SS\t'
+    heading += 'Peptide' + '\t'
+    # heading += '\t'.join(ptm_types) + '\t'
+    heading += 'PTM_neighbour' + '\t'
+    # heading += '\t'.join(ptm_types) + '\t'
+    heading += 'PTM' + '\t'
     heading += 'Pfam_PTM' + '\t'
     heading += '\t'.join(mut_types) + '\t'
     heading += '\t'.join(alignment_types) + '\t'
@@ -225,46 +242,57 @@ def main(dic_kinases):
                 continue
             ## Check if +1/-1 residues are PTM-sites
             # for ptm_type in dic_kinases[name].ptmsites:
+            ptm_values = []
             for ptm_type in ptm_types:
                 if ptm_type not in dic_kinases[name].ptmsites:
-                    row.append('-')
+                    # row.append('-')
                     continue
                 if fasta_pos+1 in dic_kinases[name].ptmsites[ptm_type]:
-                    # print (name, dic_kinases[name].gene, mutation, '-', fasta_pos+1, 'is a', ptm_type+'-site')
-                    row.append('Y')
-                    continue
+                    aa = dic_kinases[name].fetch_aa(fasta_pos+1)
+                    ptm_values.append(aa + str(fasta_pos+1) + '-' + ptm_type)
                 if fasta_pos-1 in dic_kinases[name].ptmsites[ptm_type]:
-                    # print (name, dic_kinases[name].gene, mutation, '-', fasta_pos-1, 'is a', ptm_type+'-site')
-                    row.append('Y')
-                    continue
+                    aa = dic_kinases[name].fetch_aa(fasta_pos-1)
+                    ptm_values.append(aa + str(fasta_pos-1) + '-' + ptm_type)
+            if len(ptm_values) == 0:
                 row.append('-')
+            else:
+                row.append(';'.join(ptm_values))
             ## Check if it is a PTM site in the given protein
-            pfam_pos = dic_kinases[name].fasta2pfam[fasta_pos]
+            pfam_pos = dic_kinases[name].fasta2pfam[fasta_pos]['position']
+            pfam_ss = dic_kinases[name].fasta2pfam[fasta_pos]['ss']
             # for ptm_type in dic_ptm_sites[pfam_pos]:
-            for ptm_type in ptm_types:    
-                if pfam_pos in dic_ptm_sites:
+            if pfam_pos in dic_ptm_sites:
+                ptm_values = []
+                for ptm_type in ptm_types:    
                     if ptm_type not in dic_ptm_sites[pfam_pos]:
-                        row.append('-')
+                        # row.append('-')
                         continue
                     if name not in dic_ptm_sites[pfam_pos][ptm_type]:
-                        row.append('-')
+                        # row.append('-')
                         continue
                     # print (pfam_pos, acc, name, dic_ptm_sites[pfam_pos][ptm_type][acc])
                     if fasta_pos not in dic_ptm_sites[pfam_pos][ptm_type][name]:
-                        row.append('-')
+                        # row.append('-')
                         continue
-                    row.append('Y')
+                    aa = dic_kinases[name].fetch_aa(fasta_pos)
+                    ptm_values.append(aa + str(fasta_pos) + '-' + ptm_type)
+                    # ptm_values.append(ptm_type)
                     # print (name, dic_kinases[name].gene, mutation, pfam_pos, fasta_pos, 'is a', ptm_type+'-site')
-                else:
+                if len(ptm_values) == 0:
                     row.append('-')
+                else:
+                    row.append(';'.join(ptm_values))
+            else:
+                row.append('-')
             ## Check if it is a PTM site at the given PFAM position
             ptms = []
             if pfam_pos in dic_ptm_sites:
                 for ptm_type in ptm_types:
-                    if ptm_type in dic_ptm_sites[pfam_pos]:
-                        best_hit_gene, best_hit_identity = do_BLAST(name, pfam_pos, ptm_type, dic_ptm_sites)
-                        ptms.append(best_hit_gene+'|'+ptm_type+'|'+best_hit_identity)
-                        # print (name)
+                    if ptm_type not in dic_ptm_sites[pfam_pos]:
+                        continue
+                    best_hit_gene, best_hit_identity = do_BLAST(name, fasta_pos, pfam_pos, ptm_type, dic_ptm_sites)
+                    if best_hit_gene != '': ptms.append(best_hit_gene+'|'+ptm_type+'|'+best_hit_identity)
+                    # print (name)
             if (len(ptms) > 0):
                 row.append(';'.join(ptms))
             else:
@@ -288,7 +316,14 @@ def main(dic_kinases):
                     row.append('-')
             row.append('http://mechismox.russelllab.org/result?protein='+name+'&mutation='+mutation)
             
-            print (dic_kinases[name].gene + '\t' + name + '\t' + mutation + '\t' + str(pfam_pos) + '\t' + '\t'.join(row))
+            print (dic_kinases[name].gene + '\t' +
+                    name + '\t' +
+                    mutation + '\t' +
+                    str(pfam_pos) + '\t' +
+                    str(pfam_ss) + '\t' +
+                    str(dic_kinases[name].fetch_peptide(fasta_pos)) + '\t' +
+                    '\t'.join(row)
+                    )
             # if len(row) == 22: sys.exit()
 
 if __name__ == '__main__':
@@ -296,7 +331,7 @@ if __name__ == '__main__':
     Execute this when file runs as script
     and not when run as module
     '''
-    parser = argparse.ArgumentParser(description='Test Kinase mutations',
+    parser = argparse.ArgumentParser(description='Test kinase mutations',
                                         epilog='gurdeep.singh[at]bioquant[.]uni[-]heidelberg[.]de',
                                         formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('input', help='File with input in Mechismo format')

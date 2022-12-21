@@ -4,7 +4,7 @@
 Script to do an hmmsearch of kinases against Pkinase.hmm
 and draw a bubble plot for each domain position
 '''
-import os, sys
+import os, sys, gzip
 from turtle import position
 import seaborn as sns
 import numpy as np
@@ -91,16 +91,17 @@ def run_hmmsearch():
     # Fetch all FASTA seqeuences
     fasta_path = '../KA/UniProtFasta2/'
     for file in os.listdir(fasta_path):
-        if file.endswith('.fasta') is False:
+        if file.endswith('.fasta.gz') is False:
             continue
         acc = file.split('.')[0]
         # print (acc+'.txt')
-        if os.path.isfile(fasta_path+acc+'.txt') is False:
+        if os.path.isfile(fasta_path+acc+'.txt.gz') is False:
             os.system('wget -O ' + fasta_path + acc+'.txt ' + 'https://rest.uniprot.org/uniprotkb/'+acc+'.txt')
+            os.system('gzip ' + fasta_path + acc+'.txt ')
         pfam_domains = []
         canonical_acc = acc if '-' not in acc else acc.split('-')[0]
         # print (canonical_acc, acc.split(), file, fasta_path+acc+'.txt')
-        for line in open(fasta_path + canonical_acc + '.txt', 'r'):
+        for line in gzip.open(fasta_path + canonical_acc + '.txt.gz', 'rt'):
             if line[:2] != 'DR':
                 continue
             if 'Pfam;' in line.split('DR')[1].split():
@@ -115,7 +116,7 @@ def run_hmmsearch():
                         break
             print (acc, canonical_acc, 'found no PFAM accession')
             continue
-        with open(fasta_path+file, 'r') as fp:
+        with gzip.open(fasta_path+file, 'rt') as fp:
             lines = fp.readlines()
             for line in lines:
                 if line[0] == '>':
