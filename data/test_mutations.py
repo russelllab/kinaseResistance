@@ -275,7 +275,8 @@ def main(dic_kinases):
     heading += 'PTM' + '\t'
     heading += 'Pfam_PTM' + '\t'
     heading += '\t'.join(mut_types) + '\t'
-    heading += '\t'.join(mut_types) + '\t'
+    # heading += '\t'.join(mut_types) + '\t'
+    heading += '\t'.join([mut_type+'_Pfam' for mut_type in mut_types]) + '\t'
     heading += '\t'.join(alignment_types) + '\t'
     heading += 'MechismoX URL'
     print (heading)
