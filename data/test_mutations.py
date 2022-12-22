@@ -56,7 +56,7 @@ class Kinase():
         Fetch HMMsearch of the kinase
         '''
         flag = 0
-        for line in open('humanKinasesHmmsearch.txt', 'r'):
+        for line in open('humanKinasesHmmsearch2.txt', 'r'):
             if line[:2] == '>>':
                 if flag == 0: flag = 1
                 if flag == 2: break
@@ -116,6 +116,26 @@ def get_ptm_sites(dic_kinases):
     # print (dic_ptm_sites[156]['p'])
     return dic_ptm_sites
 
+def check_resistance_mutations(acc, position, wt_aa, mut_aa):
+    mutation = wt_aa + str(position) + mut_aa
+    seq = ''
+    fasta_path = '../KA/UniProtFasta2/'
+    if os.path.isfile(fasta_path+acc+'.txt.gz') is False:
+        os.system('wget -O ' + fasta_path + acc+'.txt ' + 'https://rest.uniprot.org/uniprotkb/'+acc+'.txt')
+        os.system('gzip ' + fasta_path + acc+'.txt')
+    if os.path.isfile(fasta_path+acc+'.fasta.gz') is False:
+        os.system('wget -O ' + fasta_path + acc+'.fasta ' + 'https://rest.uniprot.org/uniprotkb/'+acc+'.fasta')
+        os.system('gzip ' + fasta_path + acc+'.fasta')
+    for line in gzip.open(fasta_path+acc+'.fasta.gz', 'rt'):
+        if line[0] == '>':
+            continue
+        seq += line.replace('\n', '')
+    if seq[position-1] != wt_aa:
+        return False
+        # print (acc, seq[position-1], position, wt_aa, mut_aa)
+        # sys.exit()
+    return True
+
 def get_act_deact_res_sites(dic_kinases):
     '''
     Fetch act/deact/res sites
@@ -147,7 +167,8 @@ def get_act_deact_res_sites(dic_kinases):
             if position not in dic_all_kinases[acc].act_deact_res[mut_type]: dic_all_kinases[acc].act_deact_res[mut_type][position] = []
             dic_all_kinases[acc].act_deact_res[mut_type][position].append(mut_aa)
     
-    for line in open('../KA/resistant_mutations_Nov22.tsv.gz', 'r'):
+    for line in gzip.open('../KA/resistant_mutations_Nov22new.tsv.gz', 'rt'):
+        # print (line)
         if line[0] == '#':
             continue
         if 'del' in line.split('\t')[2] or 'du' in line.split('\t')[2] or '_' in line.split('\t')[2]:
@@ -156,6 +177,7 @@ def get_act_deact_res_sites(dic_kinases):
         position = int((line.split('\t')[2])[1:-1])
         wt_aa = (line.split('\t')[2])[0]
         mut_aa = (line.split('\t')[2])[-1]
+        if check_resistance_mutations(acc, position, wt_aa, mut_aa) is False: continue
         mut_type = 'R'
         if acc not in dic_act_deact_res_sites: dic_act_deact_res_sites[acc] = {'R':[], 'A':[], 'D':[]}
         dic_act_deact_res_sites[acc][mut_type].append(position)
@@ -173,7 +195,7 @@ def get_act_deact_res_sites(dic_kinases):
             dic_all_kinases[acc].act_deact_res[mut_type][position].append(mut_aa)
     
     # print (dic_ptm_sites[156]['p'])
-    # print ([dic_all_kinases[name].gene for name in dic_all_kinases])
+    # print ([name for name in dic_all_kinases])
     # sys.exit()
     return dic_all_kinases, dic_act_deact_res_sites
 
@@ -227,7 +249,7 @@ def get_known_act_deact_res_pfam(given_pfam_pos, dic_kinases, dic_all_kinases, m
     dic_known_act_deact_res_pfam = {}
     # for mut_type in mut_types:
     #     dic_known_act_deact_res_pfam[mut_type] = []
-    # print (dic_all_kinases)
+    # print ([dic_all_kinases[name].acc for name in dic_all_kinases])
     # sys.exit()
     for num, dics in enumerate([dic_kinases, dic_all_kinases]):
         for name in dics:
@@ -246,7 +268,7 @@ def get_known_act_deact_res_pfam(given_pfam_pos, dic_kinases, dic_all_kinases, m
                 for mut_type in dics[name].act_deact_res:
                     if fasta_pos not in dics[name].act_deact_res[mut_type]:
                         continue
-                    vals = [dics[name].gene+'/'+dics[name].fetch_aa(fasta_pos)+str(fasta_pos)+mut_aa for mut_aa in dics[name].act_deact_res[mut_type][fasta_pos]]
+                    vals = [dics[name].gene+'/'+name+'/'+dics[name].fetch_aa(fasta_pos)+str(fasta_pos)+mut_aa for mut_aa in dics[name].act_deact_res[mut_type][fasta_pos]]
                     vals = list(set(vals))
                     if mut_type not in dic_known_act_deact_res_pfam: dic_known_act_deact_res_pfam[mut_type] = []
                     dic_known_act_deact_res_pfam[mut_type] += vals

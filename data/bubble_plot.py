@@ -237,7 +237,7 @@ for line in open('../KA/resistance_mutations_w_scores_aligned_fin.tsv', 'r'):
                 kinase_dic[acc].resistance[mutation] = Mutation(mutation, 'resistance')
                 break
 '''
-for line in open('../KA/resistant_mutations_Nov22.tsv.gz', 'rt'):
+for line in gzip.open('../KA/resistant_mutations_Nov22new.tsv.gz', 'rt'):
     if line[0] != '#':
         gene = line.split('\t')[0]
         accs = gene_to_accs_dic[gene]
