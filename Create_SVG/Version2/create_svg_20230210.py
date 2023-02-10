@@ -2487,7 +2487,7 @@ colors = {"VARIANT":"lightgreen",
 	"MUTAGEN":"salmon",
 	"BINDING":"yellow",
 	"MOD_RES":"purple",
-	"ACT_SITE":"gold"}
+	"ACT_SITE":"lightblue"}
 
 create_svg(sequences, positions, colors, 34, 20, "P61586", TheForbiddenPositions)	### def create_svg(sequences_dict, positions, colors, startposition, windowsize, poi):
 
