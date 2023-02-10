@@ -22,7 +22,7 @@ from Bio import AlignIO
 
 - Sorted Sequences: Sequences with fewer annotations are sorted to the bottom of the alignment.
 
-- GAPs removed: Gaps a printed with white color (i.e. invisible on a white background). Additionally, columns with more than 90 % GAPs are removed from the alignment. Sequences affected by this (i.e. the up to 10 % of sequences that did not have a gap at that position) **are kept and are not removed**.
+- GAPs removed: Gaps a printed with white color (i.e. invisible on a white background). Additionally, columns with more than 90 % GAPs are removed from the alignment. Sequences affected by this (i.e. the up to 10 % of sequences that did not have a gap at that position) **are kept and not removed**.
 
 
 
