@@ -6,7 +6,9 @@ You will also have to use the second file, which contains an alignment, as input
 ## Required libraries/software
 
 Python 2.7. (sorry folks)
+
 import svgwrite
+
 from Bio import AlignIO
 
 
