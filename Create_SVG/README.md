@@ -26,5 +26,8 @@ from Bio import AlignIO
 
 
 
+<img src="https://github.com/russelllab/mechismoX/blob/main/kinaseResistance/Create_SVG/Version2/sequence.svg?sanitize=true">
+
+
 
 
