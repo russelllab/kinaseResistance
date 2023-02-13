@@ -12,17 +12,17 @@ import svgwrite
 from Bio import AlignIO
 
 
-## Features
+## Features (latest Version)
 
-- Conservation: Gives a black rectangle as an indicator of sequence identity.
+- Conservation: Gives a black rectangle as an indicator of sequence identity (top).
 
-- Residue Numbering: Gives the residue number, based on sequence of interest, and highlights the input residue in red.
+- Residue Numbering: Gives the residue number (every 10 residues), based on sequence of interest, and highlights the input residue in red.
 
 - Feature Annotation: Gives a colored background based on type of annotation (taken from uniprot) to the respective residue.
 
-- Sorted Sequences: Sequences with fewer annotations are sorted to the bottom of the alignment.
+- Sorted Sequences: Sequences with fewer uniprot annotations are sorted to the bottom of the alignment.
 
-- GAPs removed: Gaps a printed with white color (i.e. invisible on a white background). Additionally, columns with more than 90 % GAPs are removed from the alignment. Sequences affected by this (i.e. the up to 10 % of sequences that did not have a gap at that position) **are kept and not removed**.
+- GAPs removed: Gaps are printed with white color (i.e. invisible on a white background). Additionally, columns with more than 90 % GAPs are removed from the alignment. Sequences affected by this (i.e. the up to 10 % of sequences that did not have a gap at that position) **are kept and not removed**. 
 
 
 
