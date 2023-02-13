@@ -1,7 +1,15 @@
 # Introduction (small one)
 
+## This script
 The file **create_svg_20230208.py** comes with 3 python functions and a dictionary with annotations.
 You will also have to use the second file, which contains an alignment, as input for the script.
+
+## General use case
+In general, this script needs two things: An alignment in clustal format + a python dictionary formatted as {Protein:{Feature:\[Residues]}} to work. The dictionary can be created elsewhere and could contain different features than the one I included here, so it is versatile.
+
+## Example
+The same functions are part of my CONNECTOR workflow, presented in the lab meeting on Thursday 09. Feb. 2023, where the features are read through the Uniprot API and the alignment is read in from a file & parsed via Biopython. Both are then handed over to the functions included in this script.
+
 
 ## Required libraries/software
 
