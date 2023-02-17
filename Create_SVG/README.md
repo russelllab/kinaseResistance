@@ -1,5 +1,5 @@
-# Introduction (small one)
-
+___
+# Introduction
 ## This script
 The file **create_svg_20230210.py** comes with 3 python functions and a dictionary with annotations (Line 229 ff. taken from CONNECTORα).
 You will also have to use the second file, which contains an alignment, as input for the script.
@@ -7,7 +7,7 @@ You will also have to use the second file, which contains an alignment, as input
 `# change the following line (223) to the location of the downloaded alignmentfile.`
 
 `alignmentfile = "/INSERT_PATH_HERE/clustalo-I20230119-084041-0905-58774427-p1m.clustal_num"`	
-
+___
 ## General use case
 In general, this script needs two things: 
 * An alignment in clustal format 
@@ -15,10 +15,13 @@ In general, this script needs two things:
 
 to work. The dictionary can be created elsewhere and could contain different features than the one I included here, so it is **versatile**.
 
+___
 ## Example
-The same functions are part of my CONNECTOR workflow, presented in the lab meeting on Thursday 09. Feb. 2023, where the features are read through the Uniprot API and the alignment is read in from a file & parsed via Biopython. Both are then handed over to the functions included in this script.
+The same functions are part of my CONNECTOR workflow, presented in the lab meeting on Thursday 09. Feb. 2023.
+I read the features for the protein of interest and homologs (from the alignment) directly through from uniprot (for example: https://rest.uniprot.org/uniprotkb/P04637.txt).
+The alignment is read in from a file & parsed via Biopython. Both are then handed over to the functions included in this script.
 
-
+___
 ## Required libraries/software
 
 Python 2.7. (sorry folks)
@@ -27,7 +30,9 @@ import svgwrite
 
 from Bio import AlignIO
 
+**Note**: Libraries are also available for >= Python 3.6, print statements and dictionary handling could be converted 
 
+___
 ## Features (latest Version)
 
 - Conservation: Gives a black rectangle as an indicator of sequence identity (top).
