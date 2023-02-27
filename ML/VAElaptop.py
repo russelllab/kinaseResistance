@@ -179,7 +179,7 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 #             #break
 #         #break
 #     print (list(set(remove)))
-dsspScores(kinases, Kinase)
+fetchData.dsspScores(kinases, Kinase)
 print (kinases['Q9NYV4'].burr[3])
 
 
@@ -200,7 +200,7 @@ print (kinases['Q9NYV4'].burr[3])
 #             iupred = float(line.split()[9])
 #             createDicForDSSP(kinases[acc].iupred, position, mutation, iupred)
 
-iupredScores(kinases, Kinase)
+fetchData.iupredScores(kinases, Kinase)
 
 # In[59]:
 
@@ -221,7 +221,7 @@ iupredScores(kinases, Kinase)
 #                 mechismo = float(line.split()[6])
 #                 createDicForDSSP(kinases[acc].mechismo, position, mutation, mechismo)
 
-mechismoScores(kinases, Kinase)
+# fetchData.mechismoScores(kinases, Kinase)
 
 
 # In[24]:
@@ -246,7 +246,7 @@ mechismoScores(kinases, Kinase)
 #                 score = float(line.split()[4])
 #                 createDicForDSSP(dic, position, residue, score)
 
-homologyScores(kinases, Kinase)
+fetchData.homologyScores(kinases, Kinase)
 sys.exit()
 
 # In[60]:

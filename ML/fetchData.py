@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import os
+import os, gzip
 
 '''
 List of functions that fetch data from
@@ -89,9 +89,11 @@ def createDicForDSSP(dic, position, mutation, value):
 
 def dsspScores(kinases, Kinase):
     remove = []
-    dir = '/net/home.isilon/ds-russell/mechismoX/analysis/features/data/'
+    dir = '/net/home.isilon/ds-russell/mechismoX/analysis/features/data/VLatest/'
     for num, acc in enumerate(kinases):
         for line in gzip.open(dir + acc[:4] + '/AF-' + acc + '-F1-model_v1.dssp-scores.gz', 'rt'):
+            if line.split()[0] == 'length':
+                continue
             #print (acc, line.split())
             position = int(line.split()[0])
             mutation = line.split()[2] + line.split()[0] + line.split()[10]
@@ -114,7 +116,7 @@ def dsspScores(kinases, Kinase):
 
 def iupredScores(kinases, Kinase):
     remove = []
-    dir = '/net/home.isilon/ds-russell/mechismoX/analysis/features/data/'
+    dir = '/net/home.isilon/ds-russell/mechismoX/analysis/features/data/VLatest/'
     for num, acc in enumerate(kinases):
         if ((num+1)%50 == 0):
             print (num+1)
@@ -129,7 +131,7 @@ def iupredScores(kinases, Kinase):
 
 def mechismoScores(kinases, Kinase):
     remove = []
-    dir = '/net/home.isilon/ds-russell/mechismoX/analysis/features/data/'
+    dir = '/net/home.isilon/ds-russell/mechismoX/analysis/features/data/VLatest/'
     for num, acc in enumerate(kinases):
         if ((num+1)%50 == 0):
             print (num+1)
@@ -151,6 +153,9 @@ def homologyScores(kinases, Kinase):
             print (num+1)
         for dic, fileEnd in zip([kinases[acc].allHomologs, kinases[acc].orthologs, kinases[acc].exclParalogs, kinases[acc].specParalogs, kinases[acc].bpso, kinases[acc].bpsh],
                         ['_all_homs.scores.txt.gz', '_orth.scores.txt.gz', '_excl_para.scores.txt.gz', '_spec_para.scores.txt.gz', '_bpso.scores.txt.gz', '_bpsh.scores.txt.gz']):
+            if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
+                print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
+                continue
             for line in gzip.open(path + acc[:4] + '/' + acc + fileEnd, 'rt'):
                 #print (acc, line.split())
                 #sys.exit()
