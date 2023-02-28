@@ -30,7 +30,7 @@ def fetchGroup(kinases, Kinase):
             kinases[acc].group = line.split('\t')[4]
 
 def fetchPkinaseHMM():
-    hmm = {}
+    hmm = {} # hmmPosition > AA > bit-score
     for line in open('../pfam/Pkinase.hmm'):
         if len(line.split()) > 2:
             if line.split()[-2] == '-' and line.split()[-3] == '-':
@@ -58,7 +58,7 @@ def fetchHmmsearch(kinases, Kinase):
             #print (acc)
         if flag == 1 and line.split()!= [] and acc in kinases:
             if '== domain' in line:
-                domainNum = line.split('domain')[1].split()[0]
+                domainNum = int(line.split('domain')[1].split()[0])
                 kinases[acc].domains[domainNum] = {}
             elif line.split()[0] == 'Pkinase':
                 hmmStart = int(line.split()[1])
@@ -80,7 +80,7 @@ def fetchHmmsearch(kinases, Kinase):
                         hmmStart += 1
         #print (kinases[acc].domains)
         #sys.exit()
-    print (kinases['Q96NX5'].domains['1'][174])
+    print (kinases['Q96NX5'].domains[1][174])
 
 def createDicForDSSP(dic, position, mutation, value):
     if position not in dic:

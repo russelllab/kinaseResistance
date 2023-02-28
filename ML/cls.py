@@ -8,7 +8,9 @@ class Kinase:
         self.gene = gene
         self.fasta = ''
         self.group = ''
+        self.mutations = {}
         self.hmm = {}
+        self.ptm = {}
         self.oneHotEncoding = {}
         self.domains = {}
         self.hmmsearch = []
@@ -24,3 +26,20 @@ class Kinase:
         self.orthologs = {}
         self.bpso = {}
         self.bpsh = {}
+    
+    def returnhmmPos(self, seqPos):
+        domainNum = 1
+        while domainNum > 0:
+            if domainNum in self.domains is False:
+                break
+            for hmmPos in self.domains[domainNum]:
+                if seqPos == self.domains[domainNum][hmmPos]:
+                    return hmmPos
+            domainNum += 1
+
+class Mutation:
+    def __init__(self, mutation, mut_type):
+        self.position = int(mutation[1:-1])
+        self.wtAA = mutation[0]
+        self.mutAA = mutation[-1]
+        self.mut_type = mut_type

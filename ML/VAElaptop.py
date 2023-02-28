@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[9]:
-
-
 ## Develop VAE for kinase resistance predtictions
-
 import numpy as np
 import scipy as sp
 import os, sys, gzip
@@ -15,37 +11,11 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 import matplotlib.pyplot as plt
+from sklearn import decomposition
+from sklearn.preprocessing import MinMaxScaler
 tf.random.set_seed(69)
-from cls import Kinase
+from cls import Kinase, Mutation
 import fetchData
-
-'''
-# a class to hold kinase information
-class kinase:
-    def __init__(self, acc, gene):
-        self.acc = acc
-        self.gene = gene
-        self.fasta = ''
-        self.group = ''
-        self.hmm = {}
-        self.oneHotEncoding = {}
-        self.domains = {}
-        self.hmmsearch = []
-        self.access = {}
-        self.dihedral = {}
-        self.sec = {}
-        self.burr = {}
-        self.iupred = {}
-        self.mechismo = {}
-        self.allHomologs = {}
-        self.exclParalogs = {}
-        self.specParalogs = {}
-        self.orthologs = {}
-        self.bpso = {}
-        self.bpsh = {}
-
-# In[10]:
-
 
 exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
              'Q99683', 'Q8IVW4', 'Q9H792', 'Q9P286', 'Q86Z02',
@@ -54,266 +24,33 @@ exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
              'Q13557', 'Q6ZMQ8', 'Q6P0Q8', 'Q8IZE3', 'P51957',
              'O60229', 'Q96RG2', 'Q5VST9', 'Q8WZ42', 'O75962',
              'O95835', 'Q13535']
-'''
+
 
 kinases = {}
+
 fetchData.fetchFasta(kinases, Kinase)
-# print (kinases)
-
-# def loadFasta():
-#     for line in open('humanKinases.fasta', 'r'):
-#         #print (line)
-#         if line[0] == '>':
-#             acc = line.split('|')[1].replace('\n', '')
-#             gene = line.split('GN=')[1].split()[0]
-#             flag = 0
-#             if acc not in exceptions:
-#                 kinases[acc] = kinase(acc, gene)
-#                 flag = 1
-#         else:
-#             if flag == 1:
-#                 kinases[acc].fasta += line.replace('\n', '')
-
-# loadFasta()
-
 fetchData.fetchGroup(kinases, Kinase)
-# for line in open('kinases.tsv', 'r'):
-#     acc = line.split('\t')[7].split('>')[1].split('<')[0]
-#     if acc in kinases:
-#         kinases[acc].group = line.split('\t')[4]
-
-print (kinases['P00533'].group)
-
-# In[11]:
-
-
-# def read_hmmPkinase():
-#     hmm = {}
-#     for line in open('../pfam/Pkinase.hmm'):
-#         if len(line.split()) > 2:
-#             if line.split()[-2] == '-' and line.split()[-3] == '-':
-#                 #print (line.split())
-#                 position = int(line.split()[0])
-#                 hmm[position] = {}
-#                 for value, aa in zip(line.split()[1:-5], AA):
-#                     hmm[position][aa] = float(value)
-#             elif line.split()[0] == 'HMM':
-#                 AA = line.replace('\n', '').split()[1:]
-#     return hmm
-
-hmmPkinase = fetchData.fetchPkinaseHMM()
-print (hmmPkinase[30]['K'])
-
-# In[12]:
-
-
-# def hmmsearch():
-#     '''
-#     Function to do an hmmsearch of all kinases against Pkinase.hmm
-#     and store the mappings. Note that some kinases may have more than
-#     one Pkinase domain.
-#     '''
-#     #os.system('hmmsearch -o out.txt ../pfam/Pkinase.hmm humanKinases.fasta')
-#     flag = 0
-#     for line in open('out.txt', 'r'):
-#         if line[:2] == '>>':
-#             acc = line.split('|')[1]
-#             flag = 1
-#             #print (acc)
-#         if flag == 1 and line.split()!= [] and acc in kinases:
-#             if '== domain' in line:
-#                 domainNum = line.split('domain')[1].split()[0]
-#                 kinases[acc].domains[domainNum] = {}
-#             elif line.split()[0] == 'Pkinase':
-#                 hmmStart = int(line.split()[1])
-#                 hmmSeq = line.split()[2]
-#                 hmmEnd = int(line.split()[3])
-#             elif acc in line.split()[0]:
-#                 kinaseStart = int(line.split()[1])
-#                 kinaseSeq = line.split()[2]
-#                 kinaseEnd = int(line.split()[3])
-#                 for hmmChar, kinaseChar in zip(hmmSeq, kinaseSeq):
-#                     if hmmChar not in ['.', '-'] and kinaseChar not in ['.', '-']:
-#                         #kinases[acc].domains[domainNum][kinaseStart] = hmmStart
-#                         kinases[acc].domains[domainNum][hmmStart] = kinaseStart
-#                         hmmStart += 1
-#                         kinaseStart += 1
-#                     elif hmmChar in ['.', '-']:
-#                         kinaseStart += 1
-#                     elif kinaseChar in ['.', '-']:
-#                         hmmStart += 1
-#         #print (kinases[acc].domains)
-#         #sys.exit()
-#     print (kinases['Q96NX5'].domains['1'][174])
+# print (kinases['P00533'].group)
+hmmPkinase = fetchData.fetchPkinaseHMM() # hmmPosition > AA > bit-score
+# print (hmmPkinase[30]['K'])
 fetchData.fetchHmmsearch(kinases, Kinase)
+# fetchData.dsspScores(kinases, Kinase)
+# # print (kinases['Q9NYV4'].burr[3])
+# # print (kinases['Q92772'].dihedral)
+# fetchData.iupredScores(kinases, Kinase)
+# fetchData.homologyScores(kinases, Kinase)
 
-# In[13]:
+# #print (kinases['Q9NYV4'].mechismo)
+# data = []
+# for acc in kinases:
+#     #print (kinases[acc].domains)
+#     for domainNum in kinases[acc].domains:
+#         #print (domainNum)
+#         data.append(len(kinases[acc].domains[domainNum]))
 
-
-# def createDicForDSSP(dic, position, mutation, value):
-#     if position not in dic:
-#         dic[position] = {}
-#     dic[position][mutation] = float(value)
-
-# def dsspScores():
-#     remove = []
-#     dir = '/net/home.isilon/ds-russell/mechismoX/analysis/features/data/'
-#     for num, acc in enumerate(kinases):
-#         for line in gzip.open(dir + acc[:4] + '/AF-' + acc + '-F1-model_v1.dssp-scores.gz', 'rt'):
-#             #print (acc, line.split())
-#             position = int(line.split()[0])
-#             mutation = line.split()[2] + line.split()[0] + line.split()[10]
-#             ## Dihedral angles
-#             torsional = line.split()[18]
-#             #print (kinases[acc].dihedral)
-#             createDicForDSSP(kinases[acc].dihedral, position, mutation, torsional)
-#             ## Secondary structures
-#             secondary = line.split()[22]
-#             createDicForDSSP(kinases[acc].sec, position, mutation, secondary)
-#             ## Accessibility
-#             accessibility = line.split()[26]
-#             createDicForDSSP(kinases[acc].access, position, mutation, accessibility)
-#             ## Buried
-#             buried = line.split()[30]
-#             createDicForDSSP(kinases[acc].burr, position, mutation, buried)
-#             #break
-#         #break
-#     print (list(set(remove)))
-fetchData.dsspScores(kinases, Kinase)
-print (kinases['Q9NYV4'].burr[3])
-
-
-# In[58]:
-
-
-# def iupredScores():
-#     remove = []
-#     dir = '/net/home.isilon/ds-russell/mechismoX/analysis/features/data/'
-#     for num, acc in enumerate(kinases):
-#         if ((num+1)%50 == 0):
-#             print (num+1)
-#         for line in gzip.open(dir + acc[:4] + '/AF-' + acc + '-F1-model_v1.iupred.gz', 'rt'):
-#             #print (acc, line.split())
-#             position = int(line.split()[0])
-#             mutation = line.split()[2] + line.split()[0] + line.split()[3]
-#             ## IUPred
-#             iupred = float(line.split()[9])
-#             createDicForDSSP(kinases[acc].iupred, position, mutation, iupred)
-
-fetchData.iupredScores(kinases, Kinase)
-
-# In[59]:
-
-
-# def mechismoScores():
-#     remove = []
-#     dir = '/net/home.isilon/ds-russell/mechismoX/analysis/features/data/'
-#     for num, acc in enumerate(kinases):
-#         if ((num+1)%50 == 0):
-#             print (num+1)
-#         for line in gzip.open(dir + acc[:4] + '/AF-' + acc + '-F1-model_v1.mech_intra.gz', 'rt'):
-#             if line.split()[0] == 'MECH':
-#                 #print (acc, line.split())
-#                 #sys.exit()
-#                 position = int(line.split()[1])
-#                 mutation = line.split()[2] + line.split()[1] + line.split()[3]
-#                 ## Mechismo score
-#                 mechismo = float(line.split()[6])
-#                 createDicForDSSP(kinases[acc].mechismo, position, mutation, mechismo)
-
-# fetchData.mechismoScores(kinases, Kinase)
-
-
-# In[24]:
-
-
-# def homologyScores():
-#     remove = []
-#     path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
-#     for num, acc in enumerate(kinases):
-#         if ((num+1)%50 == 0):
-#             print (num+1)
-#         for dic, fileEnd in zip([kinases[acc].allHomologs, kinases[acc].orthologs, kinases[acc].exclParalogs, kinases[acc].specParalogs, kinases[acc].bpso, kinases[acc].bpsh],
-#                         ['_all_homs.scores.txt.gz', '_orth.scores.txt.gz', '_excl_para.scores.txt.gz', '_spec_para.scores.txt.gz', '_bpso.scores.txt.gz', '_bpsh.scores.txt.gz']):
-#             for line in gzip.open(path + acc[:4] + '/' + acc + fileEnd, 'rt'):
-#                 #print (acc, line.split())
-#                 #sys.exit()
-#                 value = line.split()[0].split('/')[1]
-#                 position = value[1:-1]
-#                 residue = value[-1]
-#                 #print (mutation, position)
-#                 ## Mechismo score
-#                 score = float(line.split()[4])
-#                 createDicForDSSP(dic, position, residue, score)
-
-fetchData.homologyScores(kinases, Kinase)
-sys.exit()
-
-# In[60]:
-
-
-#print (kinases['Q9NYV4'].mechismo)
-data = []
-for acc in kinases:
-    #print (kinases[acc].domains)
-    for domainNum in kinases[acc].domains:
-        #print (domainNum)
-        data.append(len(kinases[acc].domains[domainNum]))
-
-#print (data)
-df = pd.DataFrame(data = data, columns=['Length'])
-sns.histplot(data=df, x="Length")
-
-print (kinases['Q92772'].dihedral)
-
-
-# In[70]:
-
-
-for number, acc in enumerate(kinases):
-    mutations = {}
-    for dic, name in zip([kinases[acc].dihedral,
-                          kinases[acc].sec,
-                          kinases[acc].burr,
-                          kinases[acc].access,
-                          kinases[acc].iupred,
-                          kinases[acc].mechismo,
-                          kinases[acc].orthologs,
-                          kinases[acc].exclParalogs,
-                          kinases[acc].specParalogs,
-                          kinases[acc].allHomologs,
-                          kinases[acc].bpso,
-                          kinases[acc].bpsh],
-                        ['dihedral',
-                         'access',
-                         'burr',
-                         'sec',
-                         'iupred',
-                         'mechismo',
-                         'orthologs',
-                         'exclParalogs',
-                         'specParalogs',
-                         'allHomologs',
-                         'bpso',
-                         'bpsh']):
-        mutations[name] = {}
-        for position in dic:
-            if position not in mutations[name]:
-                mutations[name][position] = {}
-            mutations[name][position] = dic[position]
-    l = '#Position\tMutation\tCategory\tScore\n'
-    for name in mutations:
-        for position in mutations[name]:
-            for mutation in mutations[name][position]:
-                l += str(position) + '\t' + mutation + '\t' + name + '\t' + str(mutations[name][position][mutation]) + '\n'
-    #print (l)
-    gzip.open('/net/home.isilon/ds-russell/kinaseResistance/KA/robScores/'+acc+'.tsv.gz', 'wt').write(l)
-    print (number+1, 'of', len(kinases), 'done')
-
-
-sys.exit()
-# In[40]:
-
+# #print (data)
+# df = pd.DataFrame(data = data, columns=['Length'])
+# sns.histplot(data=df, x="Length")
 
 def fetchPkinase(acc, domainNum):
     '''
@@ -337,8 +74,21 @@ def fetchPkinase(acc, domainNum):
 def fetchStrucFeat(acc, domainNum):
     data = []
     df = pd.DataFrame()
-    for dic, name in zip([kinases[acc].dihedral, kinases[acc].sec, kinases[acc].burr, kinases[acc].access, kinases[acc].iupred, kinases[acc].mechismo],
-                        ['dihedral', 'access', 'burr', 'sec', 'iupred', 'mechismo']):
+    for dic, name in zip([
+                        kinases[acc].dihedral,
+                        kinases[acc].sec,
+                        kinases[acc].burr,
+                        kinases[acc].access,
+                        kinases[acc].iupred,
+                        kinases[acc].mechismo
+                        ],[
+                        'dihedral',
+                        'access',
+                        'burr',
+                        'sec',
+                        'iupred',
+                        'mechismo'
+                        ]):
         row = []
         print (kinases[acc].dihedral)
         sys.exit()
@@ -364,8 +114,21 @@ def fetchStrucFeat(acc, domainNum):
 def fetchSeqFeat(acc, domainNum):
     data = []
     df = pd.DataFrame()
-    for dic, name in zip([kinases[acc].orthologs, kinases[acc].exclParalogs, kinases[acc].specParalogs, kinases[acc].allHomologs, kinases[acc].bpso, kinases[acc].bpsh],
-                        ['orthologs', 'exclParalogs', 'specParalogs', 'allHomologs', 'bpso', 'bpsh']):
+    for dic, name in zip([
+                        kinases[acc].orthologs,
+                        kinases[acc].exclParalogs,
+                        kinases[acc].specParalogs,
+                        kinases[acc].allHomologs,
+                        kinases[acc].bpso,
+                        kinases[acc].bpsh
+                        ],[
+                        'orthologs',
+                        'exclParalogs',
+                        'specParalogs',
+                        'allHomologs',
+                        'bpso',
+                        'bpsh'
+                        ]):
         row = []
         for hmmPosition in range(1,265):
             if hmmPosition in kinases[acc].domains[domainNum]:
@@ -430,6 +193,169 @@ def oneHotEncoding(acc, domainNum):
     #print (np.stack(trainData, axis=0).shape)
     return (data, AA)
 
+'''Fetch mutation data'''
+for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
+    if line.split()[0] == 'uniprot_name':
+        continue
+    gene = line.split('\t')[0]
+    acc = line.split('\t')[1]
+    wtAA = line.split('\t')[2]
+    mutAA = line.split('\t')[4]
+    if len(wtAA) > 1 or len(mutAA) > 1:
+        continue
+    position = str(line.split('\t')[3])
+    mut_type = line.split('\t')[5]
+    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
+    kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
+
+'''Fetch PTM data'''
+hmmPTM = {}
+for line in open('../data/Kinase_psites4.tsv', 'r'):
+    if line[0] == '#':
+        continue
+    if line.split()[2] != 'Pkinase':
+        continue
+    acc = line.split('\t')[0]
+    if acc not in kinases:
+        continue
+    position = int((line.split('\t')[3].split('-')[0])[1:])
+    ptm_type = line.split('\t')[3].split('-')[1]
+    hmm_position = int(line.split('\t')[4])
+    if ptm_type not in kinases[acc].ptm:
+        kinases[acc].ptm[ptm_type] = []
+    kinases[acc].ptm[ptm_type].append(position)
+    if hmm_position not in hmmPTM:
+        hmmPTM[hmm_position] = []
+    hmmPTM[hmm_position].append(ptm_type)
+    print (acc, kinases[acc].gene, position, ptm_type)
+# print (hmmPTM[141])
+# sys.exit()
+
+def getHmmPkinaseScore(wtAA, position, mutAA):
+    domainNum = 1
+    flag = 0
+    while domainNum>0:
+        for hmmPos in kinases[acc].domains[domainNum]:
+            seqPos = kinases[acc].domains[domainNum][hmmPos]
+            if seqPos == position:
+                flag = 1
+                break
+        if flag == 1:
+            break
+        domainNum += 1
+        if domainNum not in kinases[acc].domains:
+            break
+    # print (acc, mutation)
+    if flag == 1:
+        '''
+        print (acc + "\t" + mutation + "\t" +
+                str(seqPos) + "\t" + str(hmmPos) + "\t" +
+                #hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA],
+                str(round(hmmPkinase[hmmPos][mutAA] - hmmPkinase[hmmPos][wtAA], 2)) + "\t" +
+                mut_type)
+        '''
+        return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA]
+    else:
+        print (acc, mutation, 'not found')
+        sys.exit()
+
+def getPTMscore(acc, position):
+    PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
+    # PTM_TYPES = ['ac', 'p', 'ub']
+    ## prepare vector for known information
+    row = []
+    for ptm_type in PTM_TYPES:
+        if ptm_type not in kinases[acc].ptm:
+            row.append('0')
+        elif position in kinases[acc].ptm[ptm_type]:
+            row.append('1')
+        else:
+            row.append('0')
+    ## prepare vector for inference
+    
+    hmm_position = kinases[acc].returnhmmPos(position)
+    if hmm_position not in hmmPTM:
+        for ptm_type in PTM_TYPES:
+            row.append('0')
+    else:
+        # print (hmmPTM[hmm_position])
+        for ptm_type in PTM_TYPES:
+            count_ptm_type = hmmPTM[hmm_position].count(ptm_type)
+            # row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
+            row.append( '0' if count_ptm_type==0 else '1' )
+    
+    # print (row)
+    # sys.exit()
+    return row
+
+def getAAvector(wtAA, mutAA):
+    row = []
+    for AA in [wtAA, mutAA]:
+        for aa in 'ACDEFGHIKLMNPQRSTVWY':
+        # for aa in 'DEKQRSTY':
+            if aa == AA:
+                row.append('1')
+            else:
+                row.append('0')
+    return row
+
+'''Make training matrix'''
+data = []
+mut_type_colors = []
+for acc in kinases:
+    if len(kinases[acc].mutations) == 0:
+        continue
+    for mutation in kinases[acc].mutations:
+        row = []
+        mutation_obj = kinases[acc].mutations[mutation]
+        position = mutation_obj.position
+        mutAA = mutation_obj.mutAA
+        wtAA = mutation_obj.wtAA
+        mut_type = mutation_obj.mut_type
+        hmmPos, hmmScoreWT, hmmScoreMUT = getHmmPkinaseScore(wtAA, position, mutAA)
+        ptm_row = getPTMscore(acc, position)
+        aa_row = getAAvector(wtAA, mutAA)
+        print (
+            acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
+            str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
+            ','.join(aa_row) + '\t' + mut_type
+            )
+        row.append(float(hmmScoreWT))
+        row.append(float(hmmScoreMUT))
+        row += [int(item) for item in ptm_row]
+        row += [int(item) for item in aa_row]
+        # row.append(mut_type)
+        if mut_type == 'A':
+            mut_type_colors.append('green')
+        else:
+            mut_type_colors.append('red')
+        data.append(row)
+
+data = np.array(data)
+# scaler = MinMaxScaler()
+# scaler.fit(data)
+# data = scaler.transform(data)
+print (list(data))
+
+pca = decomposition.PCA(n_components=2)
+pca.fit(data)
+X = pca.transform(data)
+
+fig = plt.figure(1, figsize=(4, 3))
+plt.clf()
+
+ax = fig.add_subplot(111)
+# ax = fig.add_subplot(111, projection="3d", elev=48, azim=134)
+ax.set_position([0.1, 0.1, 0.8, 0.8])
+
+
+plt.cla()
+
+# ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=mut_type_colors, cmap=plt.cm.nipy_spectral, edgecolor="k")
+ax.scatter(X[:, 0], X[:, 1], c=mut_type_colors, cmap=plt.cm.nipy_spectral, edgecolor="k")
+plt.show()
+sys.exit()
+
 df = pd.DataFrame()
 trainData = []
 alignmentCutoff = 200
@@ -451,6 +377,7 @@ for acc in kinases:
 
 print (df)
 trainData = np.array(trainData)
+sys.exit()
 '''
 np.stack(trainData, axis=0)
 print (trainData.shape)
