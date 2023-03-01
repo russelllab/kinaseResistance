@@ -173,9 +173,11 @@ def homologyScores(kinases, Kinase):
                 #print (acc, line.split())
                 #sys.exit()
                 value = line.split()[0].split('/')[1]
-                position = value[1:-1]
+                position = int(value[1:-1])
                 residue = value[-1]
                 #print (mutation, position)
                 ## Mechismo score
                 score = float(line.split()[4])
                 createDicForDSSP(dic, position, residue, score)
+                #if acc == 'Q9NYV4' and position == 877:
+                #    print (dic[position])

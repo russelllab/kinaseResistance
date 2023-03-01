@@ -38,7 +38,7 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # # print (kinases['Q9NYV4'].burr[3])
 # # print (kinases['Q92772'].dihedral)
 # fetchData.iupredScores(kinases, Kinase)
-# fetchData.homologyScores(kinases, Kinase)
+fetchData.homologyScores(kinases, Kinase)
 
 # #print (kinases['Q9NYV4'].mechismo)
 # data = []
@@ -231,16 +231,21 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
 # print (hmmPTM[141])
 # sys.exit()
 
-def getHomologyScores(wtAA, position, mutAA):
-    mutation = wtAA+position+mutAA
+def getHomologyScores(acc, wtAA, position, mutAA):
+    mutation = wtAA+str(position)+mutAA
     row = []
-    for dic in zip([kinases[acc].allHomologs,
-                            kinases[acc].orthologs,
-                            kinases[acc].exclParalogs,
-                            kinases[acc].specParalogs,
-                            kinases[acc].bpso,
-                            kinases[acc].bpsh]):
-        row.append(dic[position][mutation])
+    for dic in [
+                #kinases[acc].allHomologs,
+                kinases[acc].orthologs,
+                #kinases[acc].exclParalogs,
+                #kinases[acc].specParalogs,
+                #kinases[acc].bpso,
+                #kinases[acc].bpsh
+                ]:
+        # print (acc, mutation, position)
+        #print (dic)
+        #print (dic[position])
+        row.append(dic[position][mutAA])
     return row
 
 def getHmmPkinaseScore(wtAA, position, mutAA):
@@ -327,7 +332,7 @@ for acc in kinases:
         hmmPos, hmmScoreWT, hmmScoreMUT = getHmmPkinaseScore(wtAA, position, mutAA)
         ptm_row = getPTMscore(acc, position)
         aa_row = getAAvector(wtAA, mutAA)
-        homology_row = getHomologyScores(wtAA, position, mutAA)
+        homology_row = getHomologyScores(acc, wtAA, position, mutAA)
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
@@ -350,7 +355,8 @@ data = np.array(data)
 # scaler.fit(data)
 # data = scaler.transform(data)
 print (list(data))
-sys.exit()
+# sys.exit()
+
 pca = decomposition.PCA(n_components=2)
 pca.fit(data)
 X = pca.transform(data)
