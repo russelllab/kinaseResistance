@@ -45,9 +45,8 @@ ___
 - Sorted Sequences: Sequences with fewer uniprot annotations are sorted to the bottom of the alignment.
 
 - GAPs removed: Gaps are printed with white color (i.e. invisible on a white background). Additionally, columns with more than 90 % GAPs are removed from the alignment. Sequences affected by this (i.e. the up to 10 % of sequences that did not have a gap at that position) **are kept and not removed**. 
-- **NEW** Highlighting protein features, *here* for example p-loop, Switch I and the Effector region of RHOA.
 
-
+- **NEW** Highlighting protein features, *here* for example p-loop, Switch I and the Effector region of RHOA. We currently support the displaying of up to 9 features (dependent on the given colors in *featurecolors* on line 2518 of this example script).
 
 
 <img src="https://github.com/russelllab/kinaseResistance/blob/68b6218879d1c1e53a2bc3c0b8605b125be59fb2/Create_SVG/Version3/sequence_20230228.svg?sanitize=true">
