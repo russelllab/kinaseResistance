@@ -231,6 +231,18 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
 # print (hmmPTM[141])
 # sys.exit()
 
+def getHomologyScores(wtAA, position, mutAA):
+    mutation = wtAA+position+mutAA
+    row = []
+    for dic in zip([kinases[acc].allHomologs,
+                            kinases[acc].orthologs,
+                            kinases[acc].exclParalogs,
+                            kinases[acc].specParalogs,
+                            kinases[acc].bpso,
+                            kinases[acc].bpsh]):
+        row.append(dic[position][mutation])
+    return row
+
 def getHmmPkinaseScore(wtAA, position, mutAA):
     domainNum = 1
     flag = 0
@@ -315,6 +327,7 @@ for acc in kinases:
         hmmPos, hmmScoreWT, hmmScoreMUT = getHmmPkinaseScore(wtAA, position, mutAA)
         ptm_row = getPTMscore(acc, position)
         aa_row = getAAvector(wtAA, mutAA)
+        homology_row = getHomologyScores(wtAA, position, mutAA)
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
@@ -324,6 +337,7 @@ for acc in kinases:
         row.append(float(hmmScoreMUT))
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
+        row += homology_row
         # row.append(mut_type)
         if mut_type == 'A':
             mut_type_colors.append('green')
@@ -336,7 +350,7 @@ data = np.array(data)
 # scaler.fit(data)
 # data = scaler.transform(data)
 print (list(data))
-
+sys.exit()
 pca = decomposition.PCA(n_components=2)
 pca.fit(data)
 X = pca.transform(data)

@@ -151,8 +151,21 @@ def homologyScores(kinases, Kinase):
     for num, acc in enumerate(kinases):
         if ((num+1)%50 == 0):
             print (num+1)
-        for dic, fileEnd in zip([kinases[acc].allHomologs, kinases[acc].orthologs, kinases[acc].exclParalogs, kinases[acc].specParalogs, kinases[acc].bpso, kinases[acc].bpsh],
-                        ['_all_homs.scores.txt.gz', '_orth.scores.txt.gz', '_excl_para.scores.txt.gz', '_spec_para.scores.txt.gz', '_bpso.scores.txt.gz', '_bpsh.scores.txt.gz']):
+        for dic, fileEnd in zip([
+                            kinases[acc].allHomologs,
+                            kinases[acc].orthologs,
+                            kinases[acc].exclParalogs,
+                            kinases[acc].specParalogs,
+                            kinases[acc].bpso,
+                            kinases[acc].bpsh],
+                            [
+                            '_all_homs.scores.txt.gz',
+                             '_orth.scores.txt.gz',
+                             '_excl_para.scores.txt.gz',
+                             '_spec_para.scores.txt.gz',
+                             '_bpso.scores.txt.gz',
+                             '_bpsh.scores.txt.gz'
+                             ]):
             if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
                 print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
                 continue
