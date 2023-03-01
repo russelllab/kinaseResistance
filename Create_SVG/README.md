@@ -49,5 +49,6 @@ ___
 
 
 
-<img src="https://github.com/russelllab/kinaseResistance/blob/bb35c9fb85daf276d0cffc44edae6f7622b676ca/Create_SVG/Version3/sequence_20230228.svg?sanitize=true">
+
+<img src="https://github.com/russelllab/kinaseResistance/blob/68b6218879d1c1e53a2bc3c0b8605b125be59fb2/Create_SVG/Version3/sequence_20230228.svg?sanitize=true">
 
