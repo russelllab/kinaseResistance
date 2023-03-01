@@ -33,7 +33,7 @@ from Bio import AlignIO
 **Note**: Libraries are also available for >= Python 3.6, print statements and dictionary handling could be converted 
 
 ___
-## Features (latest Version)
+## Features (Version 2)
 
 - Conservation: Gives a black rectangle as an indicator of sequence identity (top).
 
