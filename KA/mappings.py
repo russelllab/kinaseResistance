@@ -1,10 +1,10 @@
 # coding: utf-8
 #!/usr/bin/env python3
 
-import os, sys
+import os, sys, gzip
 dic = {}
 
-for line in open('hmmAlignment3.aln', 'r'):
+for line in gzip.open('../data/allKinasesHmmAlign.aln.gz', 'rt'):
     if line.split()!=[]:
         if line[0] != '#' and line.split()[0] != '//':
             name = line.split()[0]
@@ -27,7 +27,7 @@ for name in dic:
             fasta += 1
         aln += 1
 
-open('hmmAlignmentMappings3.tsv', 'w').write(l)
+gzip.open('../data/allKinasesHmmAlignMappings.tsv.gz', 'wt').write(l)
 '''
 for line in open('muscleAlignment2.clustal', 'r'):
 	if line.split()!=[] and line.split()[0] != 'CLUSTAL':
