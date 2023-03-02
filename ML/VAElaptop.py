@@ -373,7 +373,8 @@ plt.cla()
 
 # ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=mut_type_colors, cmap=plt.cm.nipy_spectral, edgecolor="k")
 ax.scatter(X[:, 0], X[:, 1], c=mut_type_colors, cmap=plt.cm.nipy_spectral, edgecolor="k")
-plt.show()
+#plt.show()
+plt.savefig('pca_plot.png')
 sys.exit()
 
 df = pd.DataFrame()
