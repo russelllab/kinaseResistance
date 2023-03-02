@@ -8,7 +8,7 @@ import os, sys, gzip
 
 flag = 0
 dic_kinase = {}
-for line in open('allKinasesHmmsearchPkinase.txt', 'r'):
+for line in gzip.open('humanKinasesHmmsearch2.txt.gz', 'rt'):
 	if len(line.split()) == 0:
 		continue
 	if 'Domain annotation for each sequence (and alignments):' in line:
@@ -18,8 +18,10 @@ for line in open('allKinasesHmmsearchPkinase.txt', 'r'):
 		continue
 	if line[:2] == '>>':
 		acc = line.split('>>')[1].lstrip().rstrip().rstrip('\n')
+		acc = acc.split()[0]
 		if acc not in dic_kinase: dic_kinase[acc] = ''
 		# if len(dic_kinase) == 2: break
+		# print (acc)
 		continue
 	if line.split()[0] == 'Pkinase':
 		start_pfam = int(line.split()[1])
@@ -27,6 +29,7 @@ for line in open('allKinasesHmmsearchPkinase.txt', 'r'):
 		end_pfam = int(line.split()[3].rstrip('\n'))
 		continue
 	if line.split()[0] == acc:
+		# print (line)
 		start_acc = int(line.split()[1])
 		seq_acc = line.split()[2]
 		end_acc = int(line.split()[3].rstrip('\n'))
@@ -49,4 +52,4 @@ for acc in dic_kinase:
 	# print (dic_kinase[acc])
 	text += dic_kinase[acc]
 
-gzip.open('allKinasesPkinaseMappings.tsv.gz', 'wt').write(text)
+gzip.open('humanKinasesHmmsearchMappings2.tsv.gz', 'wt').write(text)

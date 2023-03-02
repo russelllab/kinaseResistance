@@ -38,7 +38,7 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # # print (kinases['Q9NYV4'].burr[3])
 # # print (kinases['Q92772'].dihedral)
 # fetchData.iupredScores(kinases, Kinase)
-fetchData.homologyScores(kinases, Kinase)
+# fetchData.homologyScores(kinases, Kinase)
 
 # #print (kinases['Q9NYV4'].mechismo)
 # data = []
@@ -193,7 +193,22 @@ def oneHotEncoding(acc, domainNum):
     #print (np.stack(trainData, axis=0).shape)
     return (data, AA)
 
-'''Fetch mutation data'''
+'''Fetch act/deact mutation data'''
+for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
+    if line.split()[0] == 'uniprot_name':
+        continue
+    gene = line.split('\t')[0]
+    acc = line.split('\t')[1]
+    wtAA = line.split('\t')[2]
+    mutAA = line.split('\t')[4]
+    if len(wtAA) > 1 or len(mutAA) > 1:
+        continue
+    position = str(line.split('\t')[3])
+    mut_type = line.split('\t')[5]
+    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
+    kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
+
+'''Fetch neutral mutation data'''
 for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     if line.split()[0] == 'uniprot_name':
         continue
@@ -332,7 +347,7 @@ for acc in kinases:
         hmmPos, hmmScoreWT, hmmScoreMUT = getHmmPkinaseScore(wtAA, position, mutAA)
         ptm_row = getPTMscore(acc, position)
         aa_row = getAAvector(wtAA, mutAA)
-        homology_row = getHomologyScores(acc, wtAA, position, mutAA)
+        # homology_row = getHomologyScores(acc, wtAA, position, mutAA)
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
@@ -342,7 +357,7 @@ for acc in kinases:
         row.append(float(hmmScoreMUT))
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        row += homology_row
+        # row += homology_row
         # row.append(mut_type)
         if mut_type == 'A':
             mut_type_colors.append('green')
