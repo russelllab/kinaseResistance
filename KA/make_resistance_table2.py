@@ -16,7 +16,7 @@ class Genes:
         self.mappings = {}
     
     def store_mappings(self, seq_pos, pfam_pos):
-        self.mappings[seq_pos] = pfam_pos
+        self.mappings[int(seq_pos)] = int(pfam_pos)
 
 class Mutations:
     def __init__(self, mutation, zygosity, census_gene, transcript, canonical_acc) -> None:
@@ -97,7 +97,7 @@ for line in gzip.open('../data/cosmic_kinases_Mappings.tsv.gz', 'rt'):
     pfam_pos = line.replace('\n', '').split('\t')[4]
     genes[gene].store_mappings(seq_pos, pfam_pos)
 
-print (genes['EGFR_ENST00000454757'].mappings)
+# print (genes['EGFR_ENST00000454757'].mappings)
 
 '''
 Get mapping information of UniProt accs
@@ -107,30 +107,29 @@ for line in gzip.open('../data/humanKinasesHmmsearchMappings2.tsv.gz', 'rt'):
     if line[0] == '#':
         continue
     acc = line.split('\t')[0].split('|')[1]
-    seq_pos = line.split('\t')[2]
-    pfam_pos = line.replace('\n', '').split('\t')[4]
+    seq_pos = int(line.split('\t')[2])
+    pfam_pos = int(line.replace('\n', '').split('\t')[4])
     if acc not in uniprot_mappings:
         uniprot_mappings[acc] = {}
     else:
-        uniprot_mappings[acc][seq_pos] = pfam_pos
+        uniprot_mappings[acc][pfam_pos] = seq_pos
+
 ## complete here 
-sys.exit()
-# print (genes['ABL1_ENST00000318560'].mutations['T315I'].cannonical_acc)
-# sys.exit()
-out_text = '#gene\tuniprot_acc\tmutation\tzygosity\tnum_samples\tcensus_gene\tresistant_to_inhib\n'
+out_text = '#cosmic_gene\tcosmic_gene_mutation\tcannonical_uniprot_acc\tpfam_pos\tseq_pos_cosmic\tseq_pos_uniprot\n'
 for gene in genes:
     # print (gene)
     for mutation in genes[gene].mutations:
         mutation_address = genes[gene].mutations[mutation]
-        out_text += gene + '\t'
-        # out_text += human_kinases[gene] + '\t'
-        out_text += get_acc(gene, mutation_address) + '\n'
-        # out_text += mutation.split('.')[1] + '\t'
-        # out_text += ';'.join(list(set(mutation_address.zygosity))) + '\t'
-        # out_text += str(len(list(set(mutation_address.sample_id)))) + '\t'
-        # out_text += ';'.join(list(set(mutation_address.census_gene))) + '\t'
-        # out_text += ';'.join(list(set(mutation_address.resistant_to_inhib))) + '\n'
+        seq_pos_cosmic = int(mutation[1:-1])
+        wtAA = mutation[0]
+        # print (gene, mutation, seq_pos_cosmic)
+        pfam_pos = genes[gene].mappings[seq_pos_cosmic]
+        cannonical_acc = mutation_address.cannonical_acc
+        seq_pos_uniprot = uniprot_mappings[cannonical_acc][pfam_pos]
+        # print (gene, mutation, cannonical_acc, pfam_pos, seq_pos_cosmic, seq_pos_uniprot)
+        out_text += gene + '\t' + mutation + '\t' +cannonical_acc +'\t' + str(pfam_pos) + '\t'
+        out_text += str(seq_pos_cosmic) + '\t' +str(seq_pos_uniprot) + '\n'
 
-# print (out_text)
-sys.exit()
-gzip.open('resistant_mutations_Nov22new.tsv.gz', 'wt').write(out_text)
+print (out_text)
+# sys.exit()
+gzip.open('resistant_mutations_Mar_2023.tsv.gz', 'wt').write(out_text)
