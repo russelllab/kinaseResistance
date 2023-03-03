@@ -19,7 +19,7 @@ import fetchData
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 # PTM_TYPES = ['ac', 'p', 'ub']
-AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y', '-']
+AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
 exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
              'Q99683', 'Q8IVW4', 'Q9H792', 'Q9P286', 'Q86Z02',
@@ -42,7 +42,7 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # # print (kinases['Q9NYV4'].burr[3])
 # # print (kinases['Q92772'].dihedral)
 # fetchData.iupredScores(kinases, Kinase)
-# fetchData.homologyScores(kinases, Kinase)
+fetchData.homologyScores(kinases, Kinase)
 
 # #print (kinases['Q9NYV4'].mechismo)
 # data = []
@@ -323,24 +323,28 @@ def getPTMscore(acc, position):
 
 def getAAvector(wtAA, mutAA):
     row = []
-    for AA in [wtAA, mutAA]:
+    for amino_acid in [wtAA, mutAA]:
         for aa in 'ACDEFGHIKLMNPQRSTVWY':
         # for aa in 'DEKQRSTY':
-            if aa == AA:
+            if aa == amino_acid:
                 row.append('1')
             else:
                 row.append('0')
     return row
 
 '''Make training matrix'''
-trainMat = '#Acc\tMutation\t'
+trainMat = 'Acc\tMutation\t'
 trainMat += 'hmmScoreWT\thmmScoreMUT\t'
 trainMat += '\t'.join(PTM_TYPES) + '\t'
-trainMat += '_WT\t'.join(AA) + '\t'
-trainMat += '_MUT\t'.join(AA) + '\t'
+trainMat += '_pfam\t'.join(PTM_TYPES) + '_pfam\t'
+trainMat += '_WT\t'.join(AA) + '_WT\t'
+trainMat += '_MUT\t'.join(AA) + '_MUT\t'
 trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
 trainMat += 'MUT_TYPE\n'
-
+# print (trainMat)
+# print ('_WT\t'.join(AA) + '\t')
+# print (AA)
+# sys.exit()
 data = []
 mut_types_colors = []
 for acc in kinases:
@@ -356,7 +360,7 @@ for acc in kinases:
         hmmPos, hmmScoreWT, hmmScoreMUT = getHmmPkinaseScore(wtAA, position, mutAA)
         ptm_row = getPTMscore(acc, position)
         aa_row = getAAvector(wtAA, mutAA)
-        # homology_row = getHomologyScores(acc, wtAA, position, mutAA)
+        homology_row = getHomologyScores(acc, wtAA, position, mutAA)
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
@@ -366,7 +370,7 @@ for acc in kinases:
         row.append(float(hmmScoreMUT))
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        # row += homology_row
+        row += homology_row
         # row.append(mut_types)
         for mut_type in mut_types:
             if mut_type == 'A':
@@ -383,6 +387,7 @@ for acc in kinases:
             trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
             trainMat += mut_type + '\n'
 
+gzip.open('trainData.tsv.gz', 'wt').write(trainMat)
 data = np.array(data)
 # scaler = MinMaxScaler()
 # scaler.fit(data)
