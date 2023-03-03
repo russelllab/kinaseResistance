@@ -195,44 +195,43 @@ def oneHotEncoding(acc, domainNum):
 
 '''Fetch act/deact mutation data'''
 for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
-    if line.split()[0] == 'uniprot_name':
-        continue
+    if line.split()[0] == 'uniprot_name': continue
     gene = line.split('\t')[0]
     acc = line.split('\t')[1]
     wtAA = line.split('\t')[2]
     mutAA = line.split('\t')[4]
-    if len(wtAA) > 1 or len(mutAA) > 1:
-        continue
+    if len(wtAA) > 1 or len(mutAA) > 1: continue
     position = str(line.split('\t')[3])
     mut_type = line.split('\t')[5]
     # print (acc, kinases[acc].gene, wtAA, position, mutAA)
     kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
 
-'''Fetch neutral mutation data'''
-for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
-    if line.split()[0] == 'uniprot_name':
-        continue
+'''Fetch resistant mutation data'''
+for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
+    if line[0] == '#': continue
     gene = line.split('\t')[0]
-    acc = line.split('\t')[1]
-    wtAA = line.split('\t')[2]
-    mutAA = line.split('\t')[4]
-    if len(wtAA) > 1 or len(mutAA) > 1:
-        continue
-    position = str(line.split('\t')[3])
-    mut_type = line.split('\t')[5]
+    if '_' in gene: gene = gene.split('_')[0]
+    acc = line.split('\t')[2]
+    cosmic_mutation = line.split('\t')[1]
+    wtAA = cosmic_mutation[0]
+    mutAA = cosmic_mutation[-1]
+    if mutAA == 'X': continue
+    if len(wtAA) > 1 or len(mutAA) > 1: continue
+    uniprot_position = line.split('\t')[5].replace('\n', '')
+    mutation = wtAA + uniprot_position + mutAA
+    mut_type = 'R'
     # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-    kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
+    if mutation not in kinases[acc].mutations: kinases[acc].mutations[mutation] = Mutation(mutation, mut_type)
+    else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
+    # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
 
 '''Fetch PTM data'''
 hmmPTM = {}
 for line in open('../data/Kinase_psites4.tsv', 'r'):
-    if line[0] == '#':
-        continue
-    if line.split()[2] != 'Pkinase':
-        continue
+    if line[0] == '#': continue
+    if line.split()[2] != 'Pkinase': continue
     acc = line.split('\t')[0]
-    if acc not in kinases:
-        continue
+    if acc not in kinases: continue
     position = int((line.split('\t')[3].split('-')[0])[1:])
     ptm_type = line.split('\t')[3].split('-')[1]
     hmm_position = int(line.split('\t')[4])
@@ -242,7 +241,7 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
     if hmm_position not in hmmPTM:
         hmmPTM[hmm_position] = []
     hmmPTM[hmm_position].append(ptm_type)
-    print (acc, kinases[acc].gene, position, ptm_type)
+    # print (acc, kinases[acc].gene, position, ptm_type)
 # print (hmmPTM[141])
 # sys.exit()
 
@@ -286,6 +285,7 @@ def getHmmPkinaseScore(wtAA, position, mutAA):
                 str(round(hmmPkinase[hmmPos][mutAA] - hmmPkinase[hmmPos][wtAA], 2)) + "\t" +
                 mut_type)
         '''
+        print (acc, wtAA, position, mutAA)
         return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA]
     else:
         print (acc, mutation, 'not found')
@@ -333,7 +333,7 @@ def getAAvector(wtAA, mutAA):
 
 '''Make training matrix'''
 data = []
-mut_type_colors = []
+mut_types_colors = []
 for acc in kinases:
     if len(kinases[acc].mutations) == 0:
         continue
@@ -343,7 +343,7 @@ for acc in kinases:
         position = mutation_obj.position
         mutAA = mutation_obj.mutAA
         wtAA = mutation_obj.wtAA
-        mut_type = mutation_obj.mut_type
+        mut_types = list(set(mutation_obj.mut_types))
         hmmPos, hmmScoreWT, hmmScoreMUT = getHmmPkinaseScore(wtAA, position, mutAA)
         ptm_row = getPTMscore(acc, position)
         aa_row = getAAvector(wtAA, mutAA)
@@ -351,19 +351,22 @@ for acc in kinases:
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
-            ','.join(aa_row) + '\t' + mut_type
+            ','.join(aa_row) + '\t' + '\t'.join(mut_types)
             )
         row.append(float(hmmScoreWT))
         row.append(float(hmmScoreMUT))
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
         # row += homology_row
-        # row.append(mut_type)
-        if mut_type == 'A':
-            mut_type_colors.append('green')
-        else:
-            mut_type_colors.append('red')
-        data.append(row)
+        # row.append(mut_types)
+        for mut_type in mut_types:
+            if mut_type == 'A':
+                mut_types_colors.append('green')
+            elif mut_type == 'D':
+                mut_types_colors.append('red')
+            else:
+                mut_types_colors.append('violet')
+            data.append(row)
 
 data = np.array(data)
 # scaler = MinMaxScaler()
@@ -387,9 +390,9 @@ ax.set_position([0.1, 0.1, 0.8, 0.8])
 plt.cla()
 
 # ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=mut_type_colors, cmap=plt.cm.nipy_spectral, edgecolor="k")
-ax.scatter(X[:, 0], X[:, 1], c=mut_type_colors, cmap=plt.cm.nipy_spectral, edgecolor="k")
-#plt.show()
-plt.savefig('pca_plot.png')
+ax.scatter(X[:, 0], X[:, 1], c=mut_types_colors, cmap=plt.cm.nipy_spectral, edgecolor="k")
+plt.show()
+# plt.savefig('pca_plot.png')
 sys.exit()
 
 df = pd.DataFrame()

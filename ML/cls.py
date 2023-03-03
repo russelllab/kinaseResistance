@@ -42,4 +42,4 @@ class Mutation:
         self.position = int(mutation[1:-1])
         self.wtAA = mutation[0]
         self.mutAA = mutation[-1]
-        self.mut_type = mut_type
+        self.mut_types = [mut_type]
