@@ -17,6 +17,10 @@ tf.random.set_seed(69)
 from cls import Kinase, Mutation
 import fetchData
 
+PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
+# PTM_TYPES = ['ac', 'p', 'ub']
+AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y', '-']
+
 exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
              'Q99683', 'Q8IVW4', 'Q9H792', 'Q9P286', 'Q86Z02',
              'Q8TF76', 'Q96L34', 'Q13308', 'Q9UK32', 'Q15772',
@@ -158,7 +162,6 @@ def oneHotEncoding(acc, domainNum):
     A function to take acc and alignment cutoff values to return
     the feature matrix (one hot encoded)
     '''
-    AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y', '-']
     #print (len(AA))
     data = []
     numZeros = 0
@@ -292,8 +295,6 @@ def getHmmPkinaseScore(wtAA, position, mutAA):
         sys.exit()
 
 def getPTMscore(acc, position):
-    PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
-    # PTM_TYPES = ['ac', 'p', 'ub']
     ## prepare vector for known information
     row = []
     for ptm_type in PTM_TYPES:
@@ -332,6 +333,14 @@ def getAAvector(wtAA, mutAA):
     return row
 
 '''Make training matrix'''
+trainMat = '#Acc\tMutation\t'
+trainMat += 'hmmScoreWT\thmmScoreMUT\t'
+trainMat += '\t'.join(PTM_TYPES) + '\t'
+trainMat += '_WT\t'.join(AA) + '\t'
+trainMat += '_MUT\t'.join(AA) + '\t'
+trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+trainMat += 'MUT_TYPE\n'
+
 data = []
 mut_types_colors = []
 for acc in kinases:
@@ -367,6 +376,12 @@ for acc in kinases:
             else:
                 mut_types_colors.append('violet')
             data.append(row)
+            trainMat += acc + '\t' + mutation + '\t'
+            trainMat += str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t'
+            trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
+            trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
+            trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+            trainMat += mut_type + '\n'
 
 data = np.array(data)
 # scaler = MinMaxScaler()
