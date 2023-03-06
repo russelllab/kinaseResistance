@@ -273,7 +273,7 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
 
 '''Make training matrix'''
 trainMat = 'Acc\tGene\tMutation\t'
-trainMat += 'hmmPos\thmmScoreWT\thmmScoreMUT\t'
+trainMat += 'hmmPos\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
 trainMat += 'Phosphomimic\t'
 trainMat += '\t'.join(PTM_TYPES) + '\t'
 trainMat += '_pfam\t'.join(PTM_TYPES) + '_pfam\t'
@@ -297,7 +297,7 @@ for acc in kinases:
         position = mutation_obj.position
         mutAA = mutation_obj.mutAA
         wtAA = mutation_obj.wtAA
-        mut_types = list(sort(set(mutation_obj.mut_types)))
+        mut_types = ''.join(np.sort(list(set(mutation_obj.mut_types))))
         hmmPos, hmmScoreWT, hmmScoreMUT = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
         ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
@@ -311,6 +311,7 @@ for acc in kinases:
         row.append(int(hmmPos))
         row.append(float(hmmScoreWT))
         row.append(float(hmmScoreMUT))
+        row.append(float(hmmScoreMUT)-float(hmmScoreWT))
         row.append(is_phosphomimic)
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
@@ -323,21 +324,20 @@ for acc in kinases:
         data.append(row)
 
         trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t'
-        trainMat += str(hmmPos) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t'
+        trainMat += str(hmmPos) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
         trainMat += str(is_phosphomimic) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
-        trainMat += ''.join(mut_types) + '\n'
+        trainMat += mut_types + '\n'
 
-        for mut_type in mut_types:
-            if mut_type == 'A':
-                mut_types_colors.append('green')
-            elif mut_type == 'D':
-                mut_types_colors.append('red')
-            else:
-                mut_types_colors.append('violet')
+        if mut_types == 'A':
+            mut_types_colors.append('green')
+        elif mut_types == 'D':
+            mut_types_colors.append('red')
+        else:
+            mut_types_colors.append('violet')
 
 gzip.open('trainData.tsv.gz', 'wt').write(trainMat)
 data = np.array(data)
