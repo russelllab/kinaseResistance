@@ -18,7 +18,7 @@ df = pd.read_csv('trainData.tsv.gz', sep = '\t')
 # exclude columns
 # df = df.loc[:, ~df.columns.isin(['allHomologs','exclParalogs','specParalogs','orthologs', 'bpso','bpsh'])]
 df = df.loc[:, ~df.columns.isin([
-                            'allHomologs',
+                            # 'allHomologs',
                             'exclParalogs',
                             'specParalogs',
                             'orthologs',
@@ -27,14 +27,25 @@ df = df.loc[:, ~df.columns.isin([
                             ])]
 # exclude columns to make the data matrix
 original_df = df.copy()
-columns_to_exclude = ['Acc', 'Mutation', 'Gene', 'hmmPos']
-# for aa in AA:
-#     columns_to_exclude.append(aa+'_WT')
-#     columns_to_exclude.append(aa+'_MUT')
+columns_to_exclude = ['Acc', 'Mutation', 'Gene', 'hmmScoreWT', 'hmmScoreMUT', 'hmmPos', 'hmmSS']
+for aa in AA:
+    columns_to_exclude.append(aa+'_WT')
+    columns_to_exclude.append(aa+'_MUT')
+columns_to_exclude += ['p_pfam',
+                       'ac_pfam',
+                       'me_pfam',
+                       'gl_pfam',
+                       'm1_pfam',
+                       'm2_pfam',
+                       'm3_pfam',
+                       'sm_pfam',
+                       'ub_pfam'
+                       ] 
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 
 scaler = MinMaxScaler()
-columns_to_scale = ['p', 'p_pfam', 'ac', 'ac_pfam', 'me', 'me_pfam','gl', 'gl_pfam', 'm1', 'm1_pfam', 'm2', 'm2_pfam', 'm3', 'm3_pfam', 'sm', 'sm_pfam', 'ub', 'ub_pfam']
+# columns_to_scale = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
+columns_to_scale = ['hmmScoreDiff']
 df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
 
 print (df.to_numpy())
@@ -108,6 +119,7 @@ fig = px.scatter(
                         'me_pfam',
                         'hmmScoreWT',
                         'hmmScoreMUT',
+                        'hmmSS',
                         'hmmPos'
                         ],
                 color_discrete_map={
