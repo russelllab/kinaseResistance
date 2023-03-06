@@ -12,6 +12,8 @@ from sklearn import decomposition
 from sklearn.preprocessing import MinMaxScaler
 import plotly.express as px
 
+AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+
 df = pd.read_csv('trainData.tsv.gz', sep = '\t')
 # exclude columns
 # df = df.loc[:, ~df.columns.isin(['allHomologs','exclParalogs','specParalogs','orthologs', 'bpso','bpsh'])]
@@ -25,7 +27,16 @@ df = df.loc[:, ~df.columns.isin([
                             ])]
 # exclude columns to make the data matrix
 original_df = df.copy()
-df = df.loc[:, ~df.columns.isin(['Acc', 'Mutation'])]
+columns_to_exclude = ['Acc', 'Mutation', 'Gene', 'hmmPos']
+for aa in AA:
+    columns_to_exclude.append(aa+'_WT')
+    columns_to_exclude.append(aa+'_MUT')
+df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
+
+scaler = MinMaxScaler()
+columns_to_scale = ['p', 'p_pfam', 'ac', 'ac_pfam', 'me', 'me_pfam','gl', 'gl_pfam', 'm1', 'm1_pfam', 'm2', 'm2_pfam', 'm3', 'm3_pfam', 'sm', 'sm_pfam', 'ub', 'ub_pfam']
+df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
+
 print (df.to_numpy())
 # sys.exit()
 data = []
@@ -43,7 +54,7 @@ for row in df.to_numpy():
         mut_types_colors.append('violet')
     data.append(row[:-1])
 
-# data = np.array(data)
+data = np.array(data)
 # scaler = MinMaxScaler()
 # scaler.fit(data)
 # data = scaler.transform(data)
@@ -80,14 +91,29 @@ print (pca_df)
 # print (original_df)
 plt.show()
 
+pca_df.to_csv('trainDataPostPCA.tsv.gz', sep = '\t')
+
 fig = px.scatter(
                 pca_df, x="PCA1", y="PCA2", color="MUT_TYPE",
-                 hover_data=['Acc', 'Mutation', 'p', 'p_pfam'],
-                 color_discrete_map={
-                                    "A": "green",
-                                    "D": "red",
-                                    "R": "blue"
-                                    }
+                # size = pca_df['orthologs'],
+                hover_data=[
+                        'Gene',
+                        'Mutation',
+                        'p',
+                        'p_pfam',
+                        'ac',
+                        'ac_pfam',
+                        'me',
+                        'me_pfam',
+                        'hmmScoreWT',
+                        'hmmScoreMUT',
+                        'hmmPos'
+                        ],
+                color_discrete_map={
+                                "A": "green",
+                                "D": "red",
+                                "R": "blue"
+                                }
                  )
 fig.show()
 # plt.savefig('pca_plot.png')

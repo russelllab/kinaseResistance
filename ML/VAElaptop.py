@@ -274,6 +274,7 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
 '''Make training matrix'''
 trainMat = 'Acc\tGene\tMutation\t'
 trainMat += 'hmmPos\thmmScoreWT\thmmScoreMUT\t'
+trainMat += 'Phosphomimic\t'
 trainMat += '\t'.join(PTM_TYPES) + '\t'
 trainMat += '_pfam\t'.join(PTM_TYPES) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
@@ -296,11 +297,12 @@ for acc in kinases:
         position = mutation_obj.position
         mutAA = mutation_obj.mutAA
         wtAA = mutation_obj.wtAA
-        mut_types = list(set(mutation_obj.mut_types))
+        mut_types = list(sort(set(mutation_obj.mut_types)))
         hmmPos, hmmScoreWT, hmmScoreMUT = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
         ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
+        is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
@@ -309,6 +311,7 @@ for acc in kinases:
         row.append(int(hmmPos))
         row.append(float(hmmScoreWT))
         row.append(float(hmmScoreMUT))
+        row.append(is_phosphomimic)
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
         row += homology_row
@@ -317,6 +320,17 @@ for acc in kinases:
             if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
             else: adr_row.append(0)
         row += [int(item) for item in adr_row]
+        data.append(row)
+
+        trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t'
+        trainMat += str(hmmPos) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t'
+        trainMat += str(is_phosphomimic) + '\t'
+        trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
+        trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
+        trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+        trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
+        trainMat += ''.join(mut_types) + '\n'
+
         for mut_type in mut_types:
             if mut_type == 'A':
                 mut_types_colors.append('green')
@@ -324,14 +338,6 @@ for acc in kinases:
                 mut_types_colors.append('red')
             else:
                 mut_types_colors.append('violet')
-            data.append(row)
-            trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t'
-            trainMat += str(hmmPos) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t'
-            trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
-            trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
-            trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
-            trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
-            trainMat += mut_type + '\n'
 
 gzip.open('trainData.tsv.gz', 'wt').write(trainMat)
 data = np.array(data)
