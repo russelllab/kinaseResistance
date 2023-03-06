@@ -272,8 +272,8 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
 # sys.exit()
 
 '''Make training matrix'''
-trainMat = 'Acc\tMutation\t'
-trainMat += 'hmmScoreWT\thmmScoreMUT\t'
+trainMat = 'Acc\tGene\tMutation\t'
+trainMat += 'hmmPos\thmmScoreWT\thmmScoreMUT\t'
 trainMat += '\t'.join(PTM_TYPES) + '\t'
 trainMat += '_pfam\t'.join(PTM_TYPES) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
@@ -306,6 +306,7 @@ for acc in kinases:
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
             ','.join(aa_row) + '\t' + '\t'.join(mut_types)
             )
+        row.append(int(hmmPos))
         row.append(float(hmmScoreWT))
         row.append(float(hmmScoreMUT))
         row += [int(item) for item in ptm_row]
@@ -324,8 +325,8 @@ for acc in kinases:
             else:
                 mut_types_colors.append('violet')
             data.append(row)
-            trainMat += acc + '\t' + mutation + '\t'
-            trainMat += str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t'
+            trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t'
+            trainMat += str(hmmPos) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t'
             trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
             trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
             trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
