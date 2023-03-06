@@ -212,8 +212,8 @@ for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     if line.split()[0] == 'uniprot_name': continue
     gene = line.split('\t')[0]
     acc = line.split('\t')[1]
-    wtAA = line.split('\t')[2]
-    mutAA = line.split('\t')[4]
+    wtAA = line.split('\t')[2].replace(',', '')
+    mutAA = line.split('\t')[4].replace(',', '')
     if len(wtAA) > 1 or len(mutAA) > 1: continue
     position = str(line.split('\t')[3])
     mut_type = line.split('\t')[5]
