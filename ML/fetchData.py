@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import os, gzip
+import os, sys, gzip
 
 '''
 List of functions that fetch data from
 different files
 '''
+
+PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
+AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
 def fetchFasta(kinases, Kinase):
     for line in open('../data/humanKinases.fasta', 'r'):
@@ -181,3 +184,87 @@ def homologyScores(kinases, Kinase):
                 createDicForDSSP(dic, position, residue, score)
                 #if acc == 'Q9NYV4' and position == 877:
                 #    print (dic[position])
+
+def getHomologyScores(acc, wtAA, position, mutAA, kinases):
+    mutation = wtAA+str(position)+mutAA
+    row = []
+    for dic in [
+                #kinases[acc].allHomologs,
+                kinases[acc].orthologs,
+                #kinases[acc].exclParalogs,
+                #kinases[acc].specParalogs,
+                #kinases[acc].bpso,
+                #kinases[acc].bpsh
+                ]:
+        # print (acc, mutation, position)
+        #print (dic)
+        #print (dic[position])
+        row.append(dic[position][mutAA])
+    return row
+
+def getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase):
+    domainNum = 1
+    flag = 0
+    while domainNum>0:
+        for hmmPos in kinases[acc].domains[domainNum]:
+            seqPos = kinases[acc].domains[domainNum][hmmPos]
+            if seqPos == position:
+                flag = 1
+                break
+        if flag == 1:
+            break
+        domainNum += 1
+        if domainNum not in kinases[acc].domains:
+            break
+    # print (acc, mutation)
+    if flag == 1:
+        '''
+        print (acc + "\t" + mutation + "\t" +
+                str(seqPos) + "\t" + str(hmmPos) + "\t" +
+                #hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA],
+                str(round(hmmPkinase[hmmPos][mutAA] - hmmPkinase[hmmPos][wtAA], 2)) + "\t" +
+                mut_type)
+        '''
+        print (acc, wtAA, position, mutAA)
+        return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA]
+    else:
+        print (acc, wtAA, position, mutAA, 'not found')
+        sys.exit()
+
+def getPTMscore(acc, position, kinases, hmmPTM):
+    ## prepare vector for known information
+    row = []
+    for ptm_type in PTM_TYPES:
+        if ptm_type not in kinases[acc].ptm:
+            row.append('0')
+        elif position in kinases[acc].ptm[ptm_type]:
+            row.append('1')
+        else:
+            row.append('0')
+    ## prepare vector for inference
+    
+    hmm_position = kinases[acc].returnhmmPos(position)
+    if hmm_position not in hmmPTM:
+        for ptm_type in PTM_TYPES:
+            row.append('0')
+    else:
+        # print (hmmPTM[hmm_position])
+        for ptm_type in PTM_TYPES:
+            count_ptm_type = hmmPTM[hmm_position].count(ptm_type)
+            # row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
+            row.append( '0' if count_ptm_type==0 else '1' )
+    
+    # print (row)
+    # sys.exit()
+    return row
+
+def getAAvector(wtAA, mutAA):
+    row = []
+    for amino_acid in [wtAA, mutAA]:
+        for aa in 'ACDEFGHIKLMNPQRSTVWY':
+        # for aa in 'DEKQRSTY':
+            if aa == amino_acid:
+                row.append('1')
+            else:
+                row.append('0')
+    return row

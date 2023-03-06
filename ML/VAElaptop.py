@@ -18,7 +18,6 @@ from cls import Kinase, Mutation
 import fetchData
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
-# PTM_TYPES = ['ac', 'p', 'ub']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
 exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
@@ -42,7 +41,7 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # # print (kinases['Q9NYV4'].burr[3])
 # # print (kinases['Q92772'].dihedral)
 # fetchData.iupredScores(kinases, Kinase)
-fetchData.homologyScores(kinases, Kinase)
+# fetchData.homologyScores(kinases, Kinase)
 
 # #print (kinases['Q9NYV4'].mechismo)
 # data = []
@@ -196,6 +195,18 @@ def oneHotEncoding(acc, domainNum):
     #print (np.stack(trainData, axis=0).shape)
     return (data, AA)
 
+'''Map sequence to Pfam for all canonical kinases'''
+seq2pfam = {}
+for line in gzip.open('../data/humanKinasesHmmsearchMappings2.tsv.gz', 'rt'):
+    if line[0] =='#':
+        continue
+    acc = line.split('\t')[0].split('|')[1]
+    seqPos = str(line.split('\t')[2])
+    pfamPos = str(line.replace('\n', '').split('\t')[4])
+    if acc not in seq2pfam: seq2pfam[acc] = {}
+    seq2pfam[acc][seqPos] = pfamPos
+
+pkinase_act_deact_res = {'A': [], 'D': [], 'R': []}
 '''Fetch act/deact mutation data'''
 for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     if line.split()[0] == 'uniprot_name': continue
@@ -207,13 +218,18 @@ for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     position = str(line.split('\t')[3])
     mut_type = line.split('\t')[5]
     # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-    kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
+    mutation = wtAA + position + mutAA
+    kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc)
+    kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
+    pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
 
+pkinase_resistant = []
 '''Fetch resistant mutation data'''
 for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
     if line[0] == '#': continue
-    gene = line.split('\t')[0]
-    if '_' in gene: gene = gene.split('_')[0]
+    actual_gene = line.split('\t')[0]
+    if '_' in actual_gene: gene = actual_gene.split('_')[0]
+    else: gene = actual_gene
     acc = line.split('\t')[2]
     cosmic_mutation = line.split('\t')[1]
     wtAA = cosmic_mutation[0]
@@ -224,7 +240,14 @@ for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
     mutation = wtAA + uniprot_position + mutAA
     mut_type = 'R'
     # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-    if mutation not in kinases[acc].mutations: kinases[acc].mutations[mutation] = Mutation(mutation, mut_type)
+    if mutation not in kinases[acc].mutations:
+        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc)
+        try:
+            kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][uniprot_position]
+            pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
+        except:
+            print (acc, actual_gene, uniprot_position, mutation, cosmic_mutation)
+            sys.exit()
     else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
     # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
 
@@ -248,90 +271,6 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
 # print (hmmPTM[141])
 # sys.exit()
 
-def getHomologyScores(acc, wtAA, position, mutAA):
-    mutation = wtAA+str(position)+mutAA
-    row = []
-    for dic in [
-                #kinases[acc].allHomologs,
-                kinases[acc].orthologs,
-                #kinases[acc].exclParalogs,
-                #kinases[acc].specParalogs,
-                #kinases[acc].bpso,
-                #kinases[acc].bpsh
-                ]:
-        # print (acc, mutation, position)
-        #print (dic)
-        #print (dic[position])
-        row.append(dic[position][mutAA])
-    return row
-
-def getHmmPkinaseScore(wtAA, position, mutAA):
-    domainNum = 1
-    flag = 0
-    while domainNum>0:
-        for hmmPos in kinases[acc].domains[domainNum]:
-            seqPos = kinases[acc].domains[domainNum][hmmPos]
-            if seqPos == position:
-                flag = 1
-                break
-        if flag == 1:
-            break
-        domainNum += 1
-        if domainNum not in kinases[acc].domains:
-            break
-    # print (acc, mutation)
-    if flag == 1:
-        '''
-        print (acc + "\t" + mutation + "\t" +
-                str(seqPos) + "\t" + str(hmmPos) + "\t" +
-                #hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA],
-                str(round(hmmPkinase[hmmPos][mutAA] - hmmPkinase[hmmPos][wtAA], 2)) + "\t" +
-                mut_type)
-        '''
-        print (acc, wtAA, position, mutAA)
-        return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA]
-    else:
-        print (acc, mutation, 'not found')
-        sys.exit()
-
-def getPTMscore(acc, position):
-    ## prepare vector for known information
-    row = []
-    for ptm_type in PTM_TYPES:
-        if ptm_type not in kinases[acc].ptm:
-            row.append('0')
-        elif position in kinases[acc].ptm[ptm_type]:
-            row.append('1')
-        else:
-            row.append('0')
-    ## prepare vector for inference
-    
-    hmm_position = kinases[acc].returnhmmPos(position)
-    if hmm_position not in hmmPTM:
-        for ptm_type in PTM_TYPES:
-            row.append('0')
-    else:
-        # print (hmmPTM[hmm_position])
-        for ptm_type in PTM_TYPES:
-            count_ptm_type = hmmPTM[hmm_position].count(ptm_type)
-            # row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
-            row.append( '0' if count_ptm_type==0 else '1' )
-    
-    # print (row)
-    # sys.exit()
-    return row
-
-def getAAvector(wtAA, mutAA):
-    row = []
-    for amino_acid in [wtAA, mutAA]:
-        for aa in 'ACDEFGHIKLMNPQRSTVWY':
-        # for aa in 'DEKQRSTY':
-            if aa == amino_acid:
-                row.append('1')
-            else:
-                row.append('0')
-    return row
-
 '''Make training matrix'''
 trainMat = 'Acc\tMutation\t'
 trainMat += 'hmmScoreWT\thmmScoreMUT\t'
@@ -339,7 +278,8 @@ trainMat += '\t'.join(PTM_TYPES) + '\t'
 trainMat += '_pfam\t'.join(PTM_TYPES) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
-trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+# trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+trainMat += '_known\t'.join(['A', 'D', 'R']) + '_known\t'
 trainMat += 'MUT_TYPE\n'
 # print (trainMat)
 # print ('_WT\t'.join(AA) + '\t')
@@ -357,10 +297,10 @@ for acc in kinases:
         mutAA = mutation_obj.mutAA
         wtAA = mutation_obj.wtAA
         mut_types = list(set(mutation_obj.mut_types))
-        hmmPos, hmmScoreWT, hmmScoreMUT = getHmmPkinaseScore(wtAA, position, mutAA)
-        ptm_row = getPTMscore(acc, position)
-        aa_row = getAAvector(wtAA, mutAA)
-        homology_row = getHomologyScores(acc, wtAA, position, mutAA)
+        hmmPos, hmmScoreWT, hmmScoreMUT = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
+        ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM)
+        aa_row = fetchData.getAAvector(wtAA, mutAA)
+        # homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
@@ -370,8 +310,12 @@ for acc in kinases:
         row.append(float(hmmScoreMUT))
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        row += homology_row
-        # row.append(mut_types)
+        # row += homology_row
+        adr_row = []
+        for mut_type in ['A', 'D', 'R']:
+            if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
+            else: adr_row.append(0)
+        row += [int(item) for item in adr_row]
         for mut_type in mut_types:
             if mut_type == 'A':
                 mut_types_colors.append('green')
@@ -384,7 +328,8 @@ for acc in kinases:
             trainMat += str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t'
             trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
             trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
-            trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+            # trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+            trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
             trainMat += mut_type + '\n'
 
 gzip.open('trainData.tsv.gz', 'wt').write(trainMat)
@@ -392,7 +337,7 @@ data = np.array(data)
 # scaler = MinMaxScaler()
 # scaler.fit(data)
 # data = scaler.transform(data)
-print (list(data))
+# print (trainMat)
 # sys.exit()
 
 pca = decomposition.PCA(n_components=2)
