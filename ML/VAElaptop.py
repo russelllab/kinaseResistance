@@ -273,7 +273,7 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
 
 '''Make training matrix'''
 trainMat = 'Acc\tGene\tMutation\t'
-trainMat += 'hmmPos\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
+trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
 trainMat += 'Phosphomimic\t'
 trainMat += '\t'.join(PTM_TYPES) + '\t'
 trainMat += '_pfam\t'.join(PTM_TYPES) + '_pfam\t'
@@ -298,7 +298,7 @@ for acc in kinases:
         mutAA = mutation_obj.mutAA
         wtAA = mutation_obj.wtAA
         mut_types = ''.join(np.sort(list(set(mutation_obj.mut_types))))
-        hmmPos, hmmScoreWT, hmmScoreMUT = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
+        hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
         ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
@@ -309,6 +309,7 @@ for acc in kinases:
             ','.join(aa_row) + '\t' + '\t'.join(mut_types)
             )
         row.append(int(hmmPos))
+        row.append(str(hmmSS))
         row.append(float(hmmScoreWT))
         row.append(float(hmmScoreMUT))
         row.append(float(hmmScoreMUT)-float(hmmScoreWT))
@@ -324,7 +325,7 @@ for acc in kinases:
         data.append(row)
 
         trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t'
-        trainMat += str(hmmPos) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
+        trainMat += str(hmmPos) + '\t' + str(hmmSS) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
         trainMat += str(is_phosphomimic) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'

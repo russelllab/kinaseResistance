@@ -21,16 +21,16 @@ df = df.loc[:, ~df.columns.isin([
                             'allHomologs',
                             'exclParalogs',
                             'specParalogs',
-                            # 'orthologs',
+                            'orthologs',
                             'bpso',
                             'bpsh'
                             ])]
 # exclude columns to make the data matrix
 original_df = df.copy()
 columns_to_exclude = ['Acc', 'Mutation', 'Gene', 'hmmPos']
-for aa in AA:
-    columns_to_exclude.append(aa+'_WT')
-    columns_to_exclude.append(aa+'_MUT')
+# for aa in AA:
+#     columns_to_exclude.append(aa+'_WT')
+#     columns_to_exclude.append(aa+'_MUT')
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 
 scaler = MinMaxScaler()
@@ -99,6 +99,7 @@ fig = px.scatter(
                 hover_data=[
                         'Gene',
                         'Mutation',
+                        'Phosphomimic',
                         'p',
                         'p_pfam',
                         'ac',

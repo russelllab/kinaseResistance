@@ -33,13 +33,15 @@ def fetchGroup(kinases, Kinase):
             kinases[acc].group = line.split('\t')[4]
 
 def fetchPkinaseHMM():
+    dic_ss = {'G': 1, 'H': 1, 'B': 2, 'C': 3, 'E': 4, 'S': 5, 'T': 6, '-':7}
     hmm = {} # hmmPosition > AA > bit-score
     for line in open('../pfam/Pkinase.hmm'):
         if len(line.split()) > 2:
             if line.split()[-2] == '-' and line.split()[-3] == '-':
                 #print (line.split())
                 position = int(line.split()[0])
-                hmm[position] = {}
+                ss = dic_ss[line.split()[-1].replace('\n', '')]
+                hmm[position] = {'ss': ss}
                 for value, aa in zip(line.split()[1:-5], AA):
                     hmm[position][aa] = float(value)
             elif line.split()[0] == 'HMM':
@@ -226,7 +228,7 @@ def getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase):
                 mut_type)
         '''
         print (acc, wtAA, position, mutAA)
-        return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA]
+        return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA], hmmPkinase[hmmPos]['ss']
     else:
         print (acc, wtAA, position, mutAA, 'not found')
         sys.exit()
