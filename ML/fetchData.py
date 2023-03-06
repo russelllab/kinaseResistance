@@ -189,12 +189,12 @@ def getHomologyScores(acc, wtAA, position, mutAA, kinases):
     mutation = wtAA+str(position)+mutAA
     row = []
     for dic in [
-                #kinases[acc].allHomologs,
+                kinases[acc].allHomologs,
                 kinases[acc].orthologs,
-                #kinases[acc].exclParalogs,
-                #kinases[acc].specParalogs,
-                #kinases[acc].bpso,
-                #kinases[acc].bpsh
+                kinases[acc].exclParalogs,
+                kinases[acc].specParalogs,
+                kinases[acc].bpso,
+                kinases[acc].bpsh
                 ]:
         # print (acc, mutation, position)
         #print (dic)
