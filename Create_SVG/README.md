@@ -11,8 +11,8 @@ ___
 ## General use case
 In general, this script needs two things: 
 * An alignment in clustal format 
-* a python dictionary formatted as {Protein:{Feature:\[Residues]}} 
-* an optional protein feature dictionary, formatted as (and based on protein of interest) {Feature:[Startposition, Endposition]}
+* a python dictionary formatted as {Protein:{Feature:\[Residues]}}, **see Version3/AlignmentAnnotationdDictionary_Example.txt**
+* an optional protein feature dictionary, formatted as (and based on protein of interest) {Feature:[Startposition, Endposition]}, **see Version3/RegionAnnotationsDictionary_Example.txt**
 
 to work. The dictionary can be created elsewhere and could contain different features than the one I included here, so it is **versatile**.
 
@@ -36,7 +36,7 @@ from Bio import AlignIO
 ___
 ## Features (Version 3)
 
-- Conservation: Gives a black rectangle as an indicator of sequence identity (top).
+- Conservation: Gives a black rectangle as an indicator of sequence identity (top) for the POI residue at that position.
 
 - Residue Numbering: Gives the residue number (every 10 residues), based on sequence of interest, and highlights the input residue in red.
 
