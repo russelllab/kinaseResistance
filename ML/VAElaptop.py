@@ -42,7 +42,7 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # # print (kinases['Q9NYV4'].burr[3])
 # # print (kinases['Q92772'].dihedral)
 # fetchData.iupredScores(kinases, Kinase)
-# fetchData.homologyScores(kinases, Kinase)
+fetchData.homologyScores(kinases, Kinase)
 
 # #print (kinases['Q9NYV4'].mechismo)
 # data = []
@@ -302,7 +302,7 @@ for position in range(startWS, endWS+1):
     trainMat += '_'+str(position)+'_pfam_\t'.join(PTM_TYPES) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
-# trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
 trainMat += '_known\t'.join(['A', 'D', 'R']) + '_known\t'
 trainMat += 'MUT_TYPE\n'
 # print (trainMat)
@@ -324,7 +324,7 @@ for acc in kinases:
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
         ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM, WS)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
-        # homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
+        homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
@@ -340,7 +340,7 @@ for acc in kinases:
         row.append(is_phosphomimic)
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        # row += homology_row
+        row += homology_row
         adr_row = []
         for mut_type in ['A', 'D', 'R']:
             if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
@@ -353,7 +353,7 @@ for acc in kinases:
         trainMat += str(is_phosphomimic) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
-        # trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+        trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
         trainMat += mut_types + '\n'
 
