@@ -11,8 +11,8 @@ ___
 ## General use case
 In general, this script needs two things: 
 * An alignment in clustal format 
-* a python dictionary formatted as {Protein:{Feature:\[Residues]}}, see Version3/AlignmentAnnotationdDictionary_Example.txt
-* an optional protein feature dictionary, formatted as (and based on protein of interest) {Feature:[Startposition, Endposition]}, see Version3/RegionAnnotationsDictionary_Example.txt
+* a python dictionary formatted as {Protein:{Feature:\[Residues]}}, **see Version3/AlignmentAnnotationdDictionary_Example.txt**
+* an optional protein feature dictionary, formatted as (and based on protein of interest) {Feature:[Startposition, Endposition]}, **see Version3/RegionAnnotationsDictionary_Example.txt**
 
 to work. The dictionary can be created elsewhere and could contain different features than the one I included here, so it is **versatile**.
 
