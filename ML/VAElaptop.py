@@ -208,17 +208,18 @@ for line in gzip.open('../data/humanKinasesHmmsearchMappings2.tsv.gz', 'rt'):
 
 '''Fetch test mutation data'''
 for line in open('test_mutations.txt', 'r'):
-    gene = line.split('\t')[1]
-    acc = line.split('\t')[0]
-    mutation = line.split('\t')[2]
+    gene = line.split()[1]
+    acc = line.split()[0]
+    mutation = line.split()[2]
     wtAA = mutation[0]
     mutAA = mutation[-1]
     position = str(mutation[1:-1])
     mut_type = line.split()[3].replace('\n', '')
     dataset = 'test'
     # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-    kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
-    kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
+    if position in seq2pfam[acc]:
+        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
+        kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
     # pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
 
 pkinase_act_deact_res = {'A': [], 'D': [], 'R': []}
@@ -326,7 +327,7 @@ for acc in kinases:
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
             ','.join(aa_row) + '\t' + '\t'.join(mut_types)
             )
-        row.append(mutation_obj.dataset)
+        # row.append(mutation_obj.dataset)
         row.append(int(hmmPos))
         row.append(str(hmmSS))
         row.append(float(hmmScoreWT))
