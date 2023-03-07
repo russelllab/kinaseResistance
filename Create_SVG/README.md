@@ -36,7 +36,7 @@ from Bio import AlignIO
 ___
 ## Features (Version 3)
 
-- Conservation: Gives a black rectangle as an indicator of sequence identity (top).
+- Conservation: Gives a black rectangle as an indicator of sequence identity (top) for the POI residue at that position.
 
 - Residue Numbering: Gives the residue number (every 10 residues), based on sequence of interest, and highlights the input residue in red.
 
