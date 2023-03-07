@@ -38,7 +38,7 @@ columns_to_exclude = ['Acc',
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
-                      'Phosphomimic',
+                    #   'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT',
                       'hmmScoreDiff'
@@ -46,16 +46,39 @@ columns_to_exclude = ['Acc',
 # for aa in AA:
 #     columns_to_exclude.append(aa+'_WT')
 #     columns_to_exclude.append(aa+'_MUT')
-columns_to_exclude += ['p_pfam_',
-                       'ac_pfam_',
-                       'me_pfam_',
-                       'gl_pfam_',
-                       'm1_pfam_',
-                       'm2_pfam_',
-                       'm3_pfam_',
-                       'sm_pfam_',
-                       'ub_pfam_'
-                        ]
+pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
+for i in range(-5,6):
+    for col in pfam_ptm_cols:
+        columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
+# print (columns_to_exclude)
+# columns_to_exclude += ['p_pfam',
+#                        'ac_pfam',
+#                        'me_pfam',
+#                        'gl_pfam',
+#                        'm1_-1_pfam',
+#                        'm2_-1_pfam',
+#                        'm3_-1_pfam',
+#                        'sm_-1_pfam',
+#                        'ub_-1_pfam',
+#                        'p_0_pfam',
+#                        'ac_0_pfam',
+#                        'me_0_pfam',
+#                        'gl_0_pfam',
+#                        'm1_0_pfam',
+#                        'm2_0_pfam',
+#                        'm3_0_pfam',
+#                        'sm_0_pfam',
+#                        'ub_0_pfam'
+#                        'p_1_pfam',
+#                        'ac_1_pfam',
+#                        'me_1_pfam',
+#                        'gl_1_pfam',
+#                        'm1_1_pfam',
+#                        'm2_1_pfam',
+#                        'm3_1_pfam',
+#                        'sm_1_pfam',
+#                        'ub_1_pfam'
+#                         ]
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 
 # scaler = MinMaxScaler()
@@ -131,8 +154,8 @@ fig = px.scatter(
                         'Gene',
                         'Mutation',
                         'Phosphomimic',
-                        'p',
-                        'p_pfam',
+                        'p_0',
+                        'p_0_pfam',
                         # 'ac',
                         # 'ac_pfam',
                         # 'me',
