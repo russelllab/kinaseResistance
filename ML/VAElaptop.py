@@ -298,8 +298,8 @@ trainMat += 'Phosphomimic\t'
 startWS = int((WS-1)/2) * -1
 endWS = int((WS-1)/2)
 for position in range(startWS, endWS+1):
-    trainMat += '_'+str(position)+'_\t'.join(PTM_TYPES) + '\t'
-    trainMat += '_'+str(position)+'_pfam_\t'.join(PTM_TYPES) + '_pfam\t'
+    trainMat += ('_'+str(position)+'\t').join(PTM_TYPES) + '\t'
+    trainMat += ('_'+str(position)+'_pfam\t').join(PTM_TYPES) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
 trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
