@@ -38,8 +38,9 @@ class Kinase:
             domainNum += 1
 
 class Mutation:
-    def __init__(self, mutation, mut_type, acc):
+    def __init__(self, mutation, mut_type, acc, dataset):
         self.position = int(mutation[1:-1])
+        self.dataset = dataset
         self.wtAA = mutation[0]
         self.mutAA = mutation[-1]
         self.positionHmm = None

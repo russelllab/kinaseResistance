@@ -206,6 +206,21 @@ for line in gzip.open('../data/humanKinasesHmmsearchMappings2.tsv.gz', 'rt'):
     if acc not in seq2pfam: seq2pfam[acc] = {}
     seq2pfam[acc][seqPos] = pfamPos
 
+'''Fetch test mutation data'''
+for line in open('test_mutations.txt', 'r'):
+    gene = line.split('\t')[1]
+    acc = line.split('\t')[0]
+    mutation = line.split('\t')[2]
+    wtAA = mutation[0]
+    mutAA = mutation[-1]
+    position = str(mutation[1:-1])
+    mut_type = line.split()[3].replace('\n', '')
+    dataset = 'test'
+    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
+    kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
+    kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
+    # pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
+
 pkinase_act_deact_res = {'A': [], 'D': [], 'R': []}
 '''Fetch act/deact mutation data'''
 for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
@@ -219,9 +234,11 @@ for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     mut_type = line.split('\t')[5]
     # print (acc, kinases[acc].gene, wtAA, position, mutAA)
     mutation = wtAA + position + mutAA
-    kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc)
-    kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
-    pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
+    if mutation not in kinases[acc].mutations:
+        dataset = 'train'
+        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
+        kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
+        pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
 
 pkinase_resistant = []
 '''Fetch resistant mutation data'''
@@ -241,7 +258,8 @@ for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
     mut_type = 'R'
     # print (acc, kinases[acc].gene, wtAA, position, mutAA)
     if mutation not in kinases[acc].mutations:
-        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc)
+        dataset = 'train'
+        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
         try:
             kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][uniprot_position]
             pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
@@ -272,7 +290,7 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
 # sys.exit()
 
 '''Make training matrix'''
-trainMat = 'Acc\tGene\tMutation\t'
+trainMat = 'Acc\tGene\tMutation\tDataset\t'
 trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
 trainMat += 'Phosphomimic\t'
 trainMat += '\t'.join(PTM_TYPES) + '\t'
@@ -308,6 +326,7 @@ for acc in kinases:
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
             ','.join(aa_row) + '\t' + '\t'.join(mut_types)
             )
+        row.append(mutation_obj.dataset)
         row.append(int(hmmPos))
         row.append(str(hmmSS))
         row.append(float(hmmScoreWT))
@@ -324,7 +343,7 @@ for acc in kinases:
         row += [int(item) for item in adr_row]
         data.append(row)
 
-        trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t'
+        trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t' + mutation_obj.dataset + '\t'
         trainMat += str(hmmPos) + '\t' + str(hmmSS) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
         trainMat += str(is_phosphomimic) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
