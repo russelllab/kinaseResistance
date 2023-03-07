@@ -19,6 +19,7 @@ import fetchData
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+WS = 3
 
 exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
              'Q99683', 'Q8IVW4', 'Q9H792', 'Q9P286', 'Q86Z02',
@@ -41,7 +42,7 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # # print (kinases['Q9NYV4'].burr[3])
 # # print (kinases['Q92772'].dihedral)
 # fetchData.iupredScores(kinases, Kinase)
-fetchData.homologyScores(kinases, Kinase)
+# fetchData.homologyScores(kinases, Kinase)
 
 # #print (kinases['Q9NYV4'].mechismo)
 # data = []
@@ -294,11 +295,14 @@ for line in open('../data/Kinase_psites4.tsv', 'r'):
 trainMat = 'Acc\tGene\tMutation\tDataset\t'
 trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
 trainMat += 'Phosphomimic\t'
-trainMat += '\t'.join(PTM_TYPES) + '\t'
-trainMat += '_pfam\t'.join(PTM_TYPES) + '_pfam\t'
+startWS = int((WS-1)/2) * -1
+endWS = int((WS-1)/2)
+for position in range(startWS, endWS+1):
+    trainMat += '_'+str(position)+'_\t'.join(PTM_TYPES) + '\t'
+    trainMat += '_'+str(position)+'_pfam_\t'.join(PTM_TYPES) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
-trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+# trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
 trainMat += '_known\t'.join(['A', 'D', 'R']) + '_known\t'
 trainMat += 'MUT_TYPE\n'
 # print (trainMat)
@@ -318,9 +322,9 @@ for acc in kinases:
         wtAA = mutation_obj.wtAA
         mut_types = ''.join(np.sort(list(set(mutation_obj.mut_types))))
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
-        ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM)
+        ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM, WS)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
-        homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
+        # homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
@@ -336,7 +340,7 @@ for acc in kinases:
         row.append(is_phosphomimic)
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        row += homology_row
+        # row += homology_row
         adr_row = []
         for mut_type in ['A', 'D', 'R']:
             if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
@@ -349,7 +353,7 @@ for acc in kinases:
         trainMat += str(is_phosphomimic) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
-        trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+        # trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
         trainMat += mut_types + '\n'
 

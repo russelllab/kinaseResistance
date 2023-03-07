@@ -30,12 +30,13 @@ class Kinase:
     def returnhmmPos(self, seqPos):
         domainNum = 1
         while domainNum > 0:
-            if domainNum in self.domains is False:
+            if domainNum not in self.domains:
                 break
             for hmmPos in self.domains[domainNum]:
                 if seqPos == self.domains[domainNum][hmmPos]:
                     return hmmPos
             domainNum += 1
+        return None
 
 class Mutation:
     def __init__(self, mutation, mut_type, acc, dataset):

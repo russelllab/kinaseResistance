@@ -233,31 +233,36 @@ def getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase):
         print (acc, wtAA, position, mutAA, 'not found')
         sys.exit()
 
-def getPTMscore(acc, position, kinases, hmmPTM):
+def getPTMscore(acc, mutation_position, kinases, hmmPTM, ws=0):
+    if ws > 0: ws -= 1
+    ws = int(ws/2)
+    print (acc, kinases[acc].gene, mutation_position)
     ## prepare vector for known information
     row = []
-    for ptm_type in PTM_TYPES:
-        if ptm_type not in kinases[acc].ptm:
-            row.append('0')
-        elif position in kinases[acc].ptm[ptm_type]:
-            row.append('1')
+    for position in range(mutation_position-ws, mutation_position+ws+1):
+        for ptm_type in PTM_TYPES:
+            if ptm_type not in kinases[acc].ptm:
+                row.append('0')
+            elif position in kinases[acc].ptm[ptm_type]:
+                row.append('1')
+            else:
+                row.append('0')
+        
+        ## prepare vector for inference
+        hmm_position = kinases[acc].returnhmmPos(position)
+        if hmm_position not in hmmPTM:
+            for ptm_type in PTM_TYPES:
+                row.append('0')
         else:
-            row.append('0')
-    ## prepare vector for inference
+            print (position, hmm_position, hmmPTM[hmm_position])
+            for ptm_type in PTM_TYPES:
+                count_ptm_type = hmmPTM[hmm_position].count(ptm_type)
+                row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
+                # row.append( '0' if count_ptm_type==0 else '1' )
     
-    hmm_position = kinases[acc].returnhmmPos(position)
-    if hmm_position not in hmmPTM:
-        for ptm_type in PTM_TYPES:
-            row.append('0')
-    else:
-        # print (hmmPTM[hmm_position])
-        for ptm_type in PTM_TYPES:
-            count_ptm_type = hmmPTM[hmm_position].count(ptm_type)
-            row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
-            # row.append( '0' if count_ptm_type==0 else '1' )
-    
-    # print (row)
-    # sys.exit()
+    # if row.count('1')>=5:
+    #     print (row)
+    #     sys.exit()
     return row
 
 def getAAvector(wtAA, mutAA):
