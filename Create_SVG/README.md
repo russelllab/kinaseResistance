@@ -70,6 +70,10 @@ MAP2K3, Position 84, Windowsize 30
 
 <img src="https://github.com/russelllab/kinaseResistance/blob/61b2365956c9f8157cf562a5827d359d837e5f74/Create_SVG/Version_K(inases)/MAP2K3_Position84_Windowsize30.svg?sanitize=true">
 
+MAP2K3, Position 110, Windowsize 30
+
+<img src="https://github.com/russelllab/kinaseResistance/blob/dd3f1a3b9d234ea833e8641500c198141347fa88/Create_SVG/Version_K(inases)/MAP2K3_Position110_Windowsize30.svg?sanitize=true">
+
 MAP2K3, Position 210, Windowsize 30
 
 <img src="https://github.com/russelllab/kinaseResistance/blob/61b2365956c9f8157cf562a5827d359d837e5f74/Create_SVG/Version_K(inases)/MAP2K3_Position210_Windowsize30.svg?sanitize=true">
