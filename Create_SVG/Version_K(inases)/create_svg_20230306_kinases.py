@@ -2,7 +2,7 @@ import svgwrite
 from Bio import AlignIO
 import sys
 import ast
-import pickle
+
 
 #### Changelog from previous version: 06. March 2023
 # - added try-catch to save script if feature_dict is empty
@@ -107,7 +107,10 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 	mini = min(proteinfeatures[feat])
 	for i in range(mini,maxi+1):
 		proteinfeatures[feat].append(i)
-    filename = translator[poi]+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+".svg"
+    try:
+    	filename = translator[poi]+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+".svg"
+    except:
+	filename = poi+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+".svg"
     dwg = svgwrite.Drawing(filename, profile='full')
     x = 50
     y = 80
@@ -149,10 +152,14 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 		old_y = y
 		x = 50
 		y = 60
+		try:
+			drawname = translator[namus]
+		except:
+			drawname = namus
 		dwg.add(dwg.rect((x-65, y-2), (45, 14), fill="yellow"))
-		dwg.add(dwg.text(translator[uniprot], insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+		dwg.add(dwg.text(drawname, insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
 	else:
-		dwg.add(dwg.text(translator[uniprot], insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+		dwg.add(dwg.text(drawname, insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
 	#charactercount = 0
 	totalcount = 0
 	if startingpoint <= 0:
@@ -247,7 +254,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 
     viewboxwidth = (viewboxcounter+40)
     viewboxheight = len(sequences_dict)*20+100
-    dwg.viewbox(-15, 0,viewboxwidth,viewboxheight)
+    dwg.viewbox(-35, 0,viewboxwidth,viewboxheight)
     
 
     x = 50
