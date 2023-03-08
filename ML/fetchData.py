@@ -269,8 +269,8 @@ def getADRvector(acc, mutation_position, kinases, pkinase_act_deact_res, ws=0):
     if ws > 0: ws -= 1
     ws = int(ws/2)
     adr_row = []
-    for mut_type in ['A', 'D', 'R']:
-        for position in range(mutation_position-ws, mutation_position+ws+1):
+    for position in range(mutation_position-ws, mutation_position+ws+1):
+        for mut_type in ['A', 'D', 'R']:
             hmmPos = kinases[acc].returnhmmPos(position)
             if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
             else: adr_row.append(0)
