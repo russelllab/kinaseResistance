@@ -70,11 +70,14 @@ df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 # df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
 
 print (df.columns.to_numpy())
+# sys.exit()
 feature_names = df.columns.to_numpy()
-feature_names = feature_names[:-1]
+feature_names = feature_names[3:-1]
 # sys.exit()
 X = []
 y = []
+train_names = []
+y_names = []
 
 X_test = []
 y_test = []
@@ -82,17 +85,31 @@ test_names = []
 for row in df.to_numpy():
     if row[-1] == 'A':
         y.append(1)
+        y_names.append(row[-1])
         X.append(row[3:-1])
+        train_names.append('/'.join(row[:3]))
     elif row[-1] == 'D':
         y.append(0)
+        y_names.append(row[-1])
         X.append(row[3:-1])
+        train_names.append('/'.join(row[:3]))
     # elif row[-1] == 'R':
     #     y.append(2)
     #     X.append(row[:-1])
-    elif row[-1] != 'R':
+    # elif row[-1] != 'R':
+    # elif row[-1] == 'Inconclusive':
+    else:
         y_test.append(row[-1])
         X_test.append(row[3:-1])
         test_names.append('/'.join(row[:3]))
+        # print ('/'.join(row[:3]), row[-1])
+        # if row[2] == 'K373E':
+        #     print (row)
+            # sys.exit()
+
+# for (test_name, y_pred) in zip(test_names, y_test):
+#     print (test_name, y_pred)
+# sys.exit()
 
 X = np.array(X)
 X = np.array(X)
@@ -276,16 +293,40 @@ clf.fit(X,y)
 estimator = clf.estimator_
 estimator.fit(X, y)
 text_representation = tree.export_text(estimator)
-print(text_representation)
+# print(text_representation)
 fig = plt.figure(figsize=(25,20))
 _ = tree.plot_tree(estimator, 
-                #    feature_names=iris.feature_names,  
-                #    class_names=iris.target_names,
+                   feature_names = feature_names,
+                   class_names = y_names,
                    filled=True)
 plt.show()
 
+print (''.join(['#' for i in range(1,25)]))
 for feature_name, importance in zip(feature_names, clf.feature_importances_):
     if importance > 0: print (feature_name, importance)
 
-for test_name, y_pred, y_known in zip(test_names, clf.predict_proba(X_test), y_test):
-    print (test_name, round(y_pred[1], 2), y_known)
+test_types = ['AR', 'R', 'Activating', 'TBD', 'Inconclusive']
+for test_type in test_types:
+    print (''.join(['#' for i in range(1,25)]))
+    if test_type in ['AR', 'R']:
+        X_sub_test = []; y_sub_test = []
+        for test_name, p, q in zip(test_names, X_test, y_test):
+            if q != test_type: continue
+            X_sub_test.append(p)
+            y_sub_test.append(1)
+            
+        # print (test_name, round(y_pred[1], 2), y_known)
+        print (test_type, 'results', '(', len(X_sub_test), ')')
+        # print(roc_auc_score(y_sub_test, clf.predict_proba(X_sub_test)[:,1]))
+        # print('MCC:', matthews_corrcoef(y_sub_test, clf.predict(X_sub_test)))
+        # print('F1:', f1_score(y_sub_test, clf.predict(X_sub_test)))
+        # print('PRE:', precision_score(y_sub_test, clf.predict(X_sub_test)))
+        print('REC:', round(recall_score(y_sub_test, clf.predict(X_sub_test)), 3))
+        # print('SPE:', recall_score(y_sub_test, clf.predict(X_sub_test), pos_label=0))
+    else:
+        for test_name, p, q in zip(test_names, X_test, y_test):
+            if q != test_type: continue
+            X_sub_test = []
+            X_sub_test.append(p)
+            y_pred = round((clf.predict_proba(X_sub_test)[0])[1], 3)
+            print (test_name, y_pred, q)

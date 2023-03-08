@@ -265,6 +265,20 @@ def getPTMscore(acc, mutation_position, kinases, hmmPTM, ws=0):
     #     sys.exit()
     return row
 
+def getADRvector(acc, mutation_position, kinases, pkinase_act_deact_res, ws=0):
+    if ws > 0: ws -= 1
+    ws = int(ws/2)
+    adr_row = []
+    for mut_type in ['A', 'D', 'R']:
+        for position in range(mutation_position-ws, mutation_position+ws+1):
+            hmmPos = kinases[acc].returnhmmPos(position)
+            if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
+            else: adr_row.append(0)
+    print (acc, kinases[acc].gene, mutation_position, adr_row)
+    # sys.exit()
+
+    return adr_row
+
 def getAAvector(wtAA, mutAA):
     row = []
     for amino_acid in [wtAA, mutAA]:
