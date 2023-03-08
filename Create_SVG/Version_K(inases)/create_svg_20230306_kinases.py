@@ -147,15 +147,16 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 	seq 	= sequences_dict[uniprot]
 	namus 	= uniprot
 	startingpoint = startposition - windowsize	### this is required for the correct labeling according to the sequence of interest
+	try:
+		drawname = translator[namus]
+	except:
+		drawname = namus
 	if namus == poi:	##### this if/else conditional can probably be put in yet another function to reduce the amount of code being used here
 		old_x = x
 		old_y = y
 		x = 50
 		y = 60
-		try:
-			drawname = translator[namus]
-		except:
-			drawname = namus
+
 		dwg.add(dwg.rect((x-65, y-2), (45, 14), fill="yellow"))
 		dwg.add(dwg.text(drawname, insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
 	else:
