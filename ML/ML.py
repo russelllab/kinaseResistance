@@ -20,6 +20,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.metrics import confusion_matrix, matthews_corrcoef, f1_score, precision_score, recall_score
 from sklearn.metrics import auc
 from sklearn.metrics import RocCurveDisplay
+from sklearn import tree
 
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
@@ -38,12 +39,13 @@ df = df.loc[:, ~df.columns.isin([
                             ])]
 # exclude columns to make the data matrix
 original_df = df.copy()
-columns_to_exclude = ['Acc',
-                      'Mutation',
-                      'Gene',
-                      'Dataset',
-                      'hmmPos',
-                      'hmmSS',
+columns_to_exclude = [
+                    #'Acc',
+                    #'Mutation',
+                    #'Gene',
+                    'Dataset',
+                    'hmmPos',
+                    'hmmSS',
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
@@ -76,26 +78,28 @@ y = []
 
 X_test = []
 y_test = []
+test_names = []
 for row in df.to_numpy():
     if row[-1] == 'A':
         y.append(1)
-        X.append(row[:-1])
+        X.append(row[3:-1])
     elif row[-1] == 'D':
         y.append(0)
-        X.append(row[:-1])
+        X.append(row[3:-1])
     # elif row[-1] == 'R':
     #     y.append(2)
     #     X.append(row[:-1])
-    # elif row[-1] == 'R':
-    #     y_test.append(0)
-    #     X_test.append(row[:-1])
+    elif row[-1] != 'R':
+        y_test.append(row[-1])
+        X_test.append(row[3:-1])
+        test_names.append('/'.join(row[:3]))
 
 X = np.array(X)
 X = np.array(X)
 scaler = MinMaxScaler()
 scaler.fit(X)
 X = scaler.transform(X)
-# X_test = scaler.transform(X_test)
+X_test = scaler.transform(X_test)
 
 y = np.array(y)
 
@@ -268,5 +272,20 @@ clf = RandomForestClassifier(n_estimators=model.best_params_['n_estimators'],
             random_state=0, class_weight="balanced"
             )
 clf.fit(X,y)
+# print (clf.estimator_.decision_path(X))
+estimator = clf.estimator_
+estimator.fit(X, y)
+text_representation = tree.export_text(estimator)
+print(text_representation)
+fig = plt.figure(figsize=(25,20))
+_ = tree.plot_tree(estimator, 
+                #    feature_names=iris.feature_names,  
+                #    class_names=iris.target_names,
+                   filled=True)
+plt.show()
+
 for feature_name, importance in zip(feature_names, clf.feature_importances_):
     if importance > 0: print (feature_name, importance)
+
+for test_name, y_pred, y_known in zip(test_names, clf.predict_proba(X_test), y_test):
+    print (test_name, round(y_pred[1], 2), y_known)
