@@ -257,8 +257,8 @@ def getPTMscore(acc, mutation_position, kinases, hmmPTM, ws=0):
             print (position, hmm_position, hmmPTM[hmm_position])
             for ptm_type in PTM_TYPES:
                 count_ptm_type = hmmPTM[hmm_position].count(ptm_type)
-                row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
-                # row.append( '0' if count_ptm_type==0 else '1' )
+                # row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
+                row.append( '0' if count_ptm_type==0 else '1' )
     
     # if row.count('1')>=5:
     #     print (row)
