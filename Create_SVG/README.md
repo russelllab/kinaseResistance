@@ -48,6 +48,11 @@ This command has several field after calling the script:
 | 4     | Mutational_Infofile.txt | The file containing positional information |
 | 5     | Features_Infofile.txt | A file containing structural/domain features, numbering based on **protein of interest** |
 
+**Note**: The script allows for a little hack here. If you want a (large) .svg containing the whole alignment just give a big number in field 2, for example 20000. The script will then produce a complete alignment view.
+
+- **NEW** Named Output files. The resultfile will already be named depending on the input settings, so one can easily try different settings. The name follows this format: 
+`poi+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+".svg"`
+
 - Conservation: Gives a black rectangle as an indicator of sequence identity (top) for the POI residue at that position.
 
 - Residue Numbering: Gives the residue number (every 10 residues), based on sequence of interest, and highlights the input residue in red.
@@ -61,5 +66,11 @@ This command has several field after calling the script:
 - Highlighting protein features, *here* for example p-loop, Switch I and the Effector region of RHOA. We currently support the displaying of up to 9 features (dependent on the given colors in *featurecolors* on line 2518 of this example script).
 
 
-<img src="https://github.com/russelllab/kinaseResistance/blob/68b6218879d1c1e53a2bc3c0b8605b125be59fb2/Create_SVG/Version3/sequence_20230228.svg?sanitize=true">
+MAP2K3, Position 84, Windowsize 30
+
+<img src="https://github.com/russelllab/kinaseResistance/blob/61b2365956c9f8157cf562a5827d359d837e5f74/Create_SVG/Version_K(inases)/MAP2K3_Position84_Windowsize30.svg?sanitize=true">
+
+MAP2K3, Position 210, Windowsize 30
+
+<img src="https://github.com/russelllab/kinaseResistance/blob/61b2365956c9f8157cf562a5827d359d837e5f74/Create_SVG/Version_K(inases)/MAP2K3_Position210_Windowsize30.svg?sanitize=true">
 
