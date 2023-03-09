@@ -59,8 +59,15 @@ columns_to_exclude = [
 #     columns_to_exclude.append(aa+'_MUT')
 pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
+    # if i == 0: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
+
+adr_cols = ['A', 'D', 'R']
+for i in range(-5, 6):
+    if i == 0: continue
+    for col in adr_cols:
+        columns_to_exclude.append(col+'_'+str(i))
 
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 
@@ -158,16 +165,18 @@ parameters = {'C': [0.001],
             'max_iter': [100, 250, 500]
             }
 
-parameters = {'max_depth': [2],
-            'min_samples_leaf': [5],
-            'n_estimators': [10]
+parameters = {'max_depth': [None],
+            'min_samples_split': [2],
+            'min_samples_leaf': [3],
+            'max_features': ['sqrt'],
+            'n_estimators': [100]
             }
 model = RandomForestClassifier(random_state=0, class_weight="balanced")
 # model = LogisticRegression(class_weight='balanced')
 model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
 model.fit(X, y)
 
-breakLine = '-'.join(['-' for i in range(0, 50)])
+breakLine = '#'.join(['-' for i in range(0, 50)])
 print (breakLine)
 ## Best model hyper-parameters
 print ('Best model found during the CV')
@@ -176,8 +185,10 @@ print (model.best_params_)
 # clf = LogisticRegression(class_weight='balanced', max_iter=model.best_params_['max_iter'], solver=model.best_params_['solver'], C=model.best_params_['C'], penalty=model.best_params_['penalty'])
 clf = RandomForestClassifier(n_estimators=model.best_params_['n_estimators'],
             min_samples_leaf=model.best_params_['min_samples_leaf'],
+            min_samples_split=model.best_params_['min_samples_split'],
             max_depth=model.best_params_['max_depth'],
-            random_state=0, class_weight="balanced"
+            max_features=model.best_params_['max_features'],
+            random_state=100, class_weight="balanced"
             )
 
 tprs = []
@@ -197,7 +208,9 @@ for i in range(0,10):
         clf = RandomForestClassifier(n_estimators=model.best_params_['n_estimators'],
             min_samples_leaf=model.best_params_['min_samples_leaf'],
             max_depth=model.best_params_['max_depth'],
-            random_state=0, class_weight="balanced"
+            min_samples_split=model.best_params_['min_samples_split'],
+            max_features=model.best_params_['max_features'],
+            random_state=100, class_weight="balanced"
             )
         clf.fit(X_train, y_train)
         tn, fp, fn, tp = confusion_matrix(y_train, model.predict(X_train)).ravel()
@@ -231,7 +244,7 @@ for i in range(0,10):
     REC.append(np.mean(rec_itr))
 
 #####################################################
-ax.plot([0, 1], [0, 1], "k--", label="chance level (AUC = 0.5)")
+ax.plot([0, 1], [0, 1], "k--", label="random (AUC = 0.5)")
 mean_tpr = np.mean(tprs, axis=0)
 mean_tpr[-1] = 1.0
 mean_auc = auc(mean_fpr, mean_tpr)
@@ -286,7 +299,8 @@ print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(
 clf = RandomForestClassifier(n_estimators=model.best_params_['n_estimators'],
             min_samples_leaf=model.best_params_['min_samples_leaf'],
             max_depth=model.best_params_['max_depth'],
-            random_state=0, class_weight="balanced"
+            max_features=model.best_params_['max_features'],
+            random_state=100, class_weight="balanced"
             )
 clf.fit(X,y)
 # print (clf.estimator_.decision_path(X))
@@ -302,8 +316,22 @@ _ = tree.plot_tree(estimator,
 plt.show()
 
 print (''.join(['#' for i in range(1,25)]))
+data = []
 for feature_name, importance in zip(feature_names, clf.feature_importances_):
-    if importance > 0: print (feature_name, importance)
+    if importance > 0.01:
+        print (feature_name, importance)
+        row = []
+        row.append(feature_name)
+        row.append(importance)
+        data.append(row)
+
+df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
+df_feature_importances.sort_values(by=['Importance'], ascending=False)
+sns.set(font_scale = 0.6)
+sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
+plt.grid(True, lw=0.1)
+plt.savefig('feature_imp.png')
+# plt.show()
 
 test_types = ['AR', 'R', 'Activating', 'TBD', 'Inconclusive']
 for test_type in test_types:

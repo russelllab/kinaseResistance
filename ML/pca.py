@@ -15,6 +15,12 @@ import plotly.express as px
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
 df = pd.read_csv('trainData.tsv.gz', sep = '\t')
+
+# Enable this if you want to plot only train data
+# df = df[df.Dataset == 'train']
+# print (df.to_numpy().tolist())
+# sys.exit()
+
 df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.025, regex=True)
 df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
 # exclude columns
@@ -33,14 +39,14 @@ columns_to_exclude = ['Acc',
                       'Mutation',
                       'Gene',
                       'Dataset',
-                      'hmmPos',
+                      'hmmPos'
                       'hmmSS',
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
                     #   'Phosphomimic',
                     #   'hmmScoreWT',
-                    #   'hmmScoreMUT',
+                    #   'hmmScoreMUT'
                       'hmmScoreDiff'
                       ]
 # for aa in AA:
@@ -48,37 +54,22 @@ columns_to_exclude = ['Acc',
 #     columns_to_exclude.append(aa+'_MUT')
 pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
+    # if i in [0]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
-# print (columns_to_exclude)
-# columns_to_exclude += ['p_pfam',
-#                        'ac_pfam',
-#                        'me_pfam',
-#                        'gl_pfam',
-#                        'm1_-1_pfam',
-#                        'm2_-1_pfam',
-#                        'm3_-1_pfam',
-#                        'sm_-1_pfam',
-#                        'ub_-1_pfam',
-#                        'p_0_pfam',
-#                        'ac_0_pfam',
-#                        'me_0_pfam',
-#                        'gl_0_pfam',
-#                        'm1_0_pfam',
-#                        'm2_0_pfam',
-#                        'm3_0_pfam',
-#                        'sm_0_pfam',
-#                        'ub_0_pfam'
-#                        'p_1_pfam',
-#                        'ac_1_pfam',
-#                        'me_1_pfam',
-#                        'gl_1_pfam',
-#                        'm1_1_pfam',
-#                        'm2_1_pfam',
-#                        'm3_1_pfam',
-#                        'sm_1_pfam',
-#                        'ub_1_pfam'
-#                         ]
+
+# ptm_cols = ['p', 'ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
+# for i in range(-5,6):
+#     if i in [-1, 0, 1]: continue
+#     for col in pfam_ptm_cols:
+#         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
+
+adr_cols = ['A', 'D', 'R']
+for i in range(-5, 6):
+    if i in [0]: continue
+    for col in adr_cols:
+        columns_to_exclude.append(col+'_'+str(i))
+
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 
 # scaler = MinMaxScaler()
@@ -143,33 +134,38 @@ pca_df = pd.concat([pca_df, original_df], axis=1)
 # print (pca_df)
 # print (original_df)
 plt.show()
+# plt.savefig('pca_plot.png')
 
 pca_df.to_csv('trainDataPostPCA.tsv.gz', sep = '\t')
 
 fig = px.scatter(
                 pca_df, x="PCA1", y="PCA2", color="MUT_TYPE",
                 # symbol = 'Dataset',
-                size = pca_df['Dataset'].to_numpy(),
+                # size = pca_df['Dataset'].to_numpy(),
+                size = 'Dataset',
                 hover_data=[
                         'Gene',
                         'Mutation',
-                        'Phosphomimic',
+                        # 'Phosphomimic',
                         'p_0',
-                        'p_0_pfam',
+                        # 'p_0_pfam',
                         # 'ac',
                         # 'ac_pfam',
                         # 'me',
                         # 'me_pfam',
-                        'hmmScoreWT',
-                        'hmmScoreMUT',
-                        'hmmSS',
+                        # 'hmmScoreWT',
+                        # 'hmmScoreMUT',
+                        # 'hmmSS',
                         'hmmPos'
                         ],
                 color_discrete_map={
                                 "A": "green",
                                 "D": "red",
-                                "R": "blue"
+                                "R": "blue",
+                                "AR": "cyan",
+                                "TBD": "yellow",
+                                "Activating": "lightgreen",
+                                "Inconclusive": "grey"
                                 }
                  )
 fig.show()
-# plt.savefig('pca_plot.png')
