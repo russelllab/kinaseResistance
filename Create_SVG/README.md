@@ -65,7 +65,12 @@ This command has several field after calling the script:
 
 - Highlighting protein features, *here* for example p-loop, Switch I and the Effector region of RHOA. We currently support the displaying of up to 9 features (dependent on the given colors in *featurecolors* on line 2518 of this example script).
 
+___
+## What is next?
+Updating the script to be pure python3.
 
+___
+## Some example results
 MAP2K3, Position 84, Windowsize 30
 
 <img src="https://github.com/russelllab/kinaseResistance/blob/61b2365956c9f8157cf562a5827d359d837e5f74/Create_SVG/Version_K(inases)/MAP2K3_Position84_Windowsize30.svg?sanitize=true">
