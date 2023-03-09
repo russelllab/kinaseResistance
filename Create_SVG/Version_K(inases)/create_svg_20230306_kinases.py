@@ -33,7 +33,7 @@ def CUSTOM_ALIGN(targetfile):
 def conservation_checker(identifier, seqdict):
 	for protein in seqdict:
 		sequence = seqdict[protein]
-		if protein == identifier:
+		if identifier in protein:
 			truesequenzler = sequence
 	sequencelength = len(truesequenzler) ### including gaps, meaning this is the alignment length
 	positionalcounter = 1
@@ -43,7 +43,7 @@ def conservation_checker(identifier, seqdict):
 	for i in range(0,sequencelength):
 		identitycontainer = []
 		for ident in seqdict:
-			if ident == identifier:
+			if identifier in ident:
 				orires = seqdict[ident][i]
 				identitycontainer.append(seqdict[ident][i])
 			else:
@@ -151,13 +151,13 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 		drawname = translator[namus]
 	except:
 		drawname = namus
-	if namus == poi:	##### this if/else conditional can probably be put in yet another function to reduce the amount of code being used here
+	if poi in namus:	##### this if/else conditional can probably be put in yet another function to reduce the amount of code being used here
 		old_x = x
 		old_y = y
 		x = 50
 		y = 60
 
-		dwg.add(dwg.rect((x-65, y-2), (45, 14), fill="yellow"))
+		dwg.add(dwg.rect((x-65, y), (45, 14), fill="yellow"))
 		dwg.add(dwg.text(drawname, insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
 	else:
 		dwg.add(dwg.text(drawname, insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
@@ -186,10 +186,12 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 	
 				if totalcount not in forbidden:
 	
-					if namus == poi:
+					if poi in namus:
 
 					    viewboxcounter += 1
 					    if startnumberlabel == startposition:
+							position_interest_x = x
+							position_interest_y = y
 							dwg.add(dwg.rect((x, 40), (10, 14*float(Konserve[startnumberlabel][0])), fill="black"))
         			        		dwg.add(dwg.text(str(startnumberlabel), insert=(x+5, 37), text_anchor='middle', dominant_baseline='central', font_size='8px', font_family='Arial', font_weight='bold', fill='red'))			
 					    else:
@@ -244,8 +246,8 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 					dwg.add(dwg.text(letter, insert=(x+5, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='white'))	
 					x += 10
 	viewboxcounter = x
-	if namus == poi:
-		dwg.add(dwg.rect((-15,y-2),(x+15,14), fill="none",stroke="black",stroke_width=1))	
+	if poi in namus:
+		dwg.add(dwg.rect((-15,y),(x+15,14), fill="none",stroke="black",stroke_width=1))	
 		x = 50
 		y = old_y
 	else:
@@ -253,10 +255,11 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
  	        y += 20
 
 
-    viewboxwidth = (viewboxcounter+40)
+    viewboxwidth = (viewboxcounter+60)
     viewboxheight = len(sequences_dict)*20+100
-    dwg.viewbox(-35, 0,viewboxwidth,viewboxheight)
-    
+    dwg.viewbox(-40, 0,viewboxwidth,viewboxheight)
+
+    dwg.add(dwg.rect((position_interest_x, position_interest_y), (10, len(sequences_dict)*20),fill="none",stroke="black",stroke_width=1))
 
     x = 50
     y = 0
