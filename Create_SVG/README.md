@@ -76,7 +76,8 @@ MAP2K3, Position 84, Windowsize 30
 <img src="https://github.com/russelllab/kinaseResistance/blob/ac8fb82c5fbf26a116d23f3b84c61e7c543108b2/Create_SVG/Version_K(inases)/MAP2K3_Position84_Windowsize30.svg?sanitize=true">
 
 MAP2K3, Position 84, Windowsize 20, highlights done via CONNECTOR, region annotations taken from Interpro
-<img src="https://github.com/russelllab/kinaseResistance/blob/64b23da3487d9a376790ee9d4a9325b6e6e2731e/Create_SVG/Version_K(inases)/AnnotatedAlignment.svg?sanitize=true">
+
+<img src="https://github.com/russelllab/kinaseResistance/blob/1f81be16c8fd62121950b02d21f4da526a8962cc/Create_SVG/Version_K(inases)/AnnotatedAlignment.svg?sanitize=true">
 
 MAP2K3, Position 110, Windowsize 30
 
