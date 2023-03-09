@@ -75,15 +75,15 @@ MAP2K3, Position 84, Windowsize 30
 
 <img src="https://github.com/russelllab/kinaseResistance/blob/ac8fb82c5fbf26a116d23f3b84c61e7c543108b2/Create_SVG/Version_K(inases)/MAP2K3_Position84_Windowsize30.svg?sanitize=true">
 
-MAP2K3, Position 84, Windowsize 20, highlights done via CONNECTOR, region annotations taken from Interpro
+MAP2K3, Position 84, Windowsize 30, highlights done via CONNECTOR, region annotations taken from Interpro
 
 <img src="https://github.com/russelllab/kinaseResistance/blob/1f81be16c8fd62121950b02d21f4da526a8962cc/Create_SVG/Version_K(inases)/AnnotatedAlignment.svg?sanitize=true">
 
-MAP2K3, Position 110, Windowsize 30
-
-<img src="https://github.com/russelllab/kinaseResistance/blob/dd3f1a3b9d234ea833e8641500c198141347fa88/Create_SVG/Version_K(inases)/MAP2K3_Position110_Windowsize30.svg?sanitize=true">
 
 MAP2K3, Position 210, Windowsize 30
 
 <img src="https://github.com/russelllab/kinaseResistance/blob/61b2365956c9f8157cf562a5827d359d837e5f74/Create_SVG/Version_K(inases)/MAP2K3_Position210_Windowsize30.svg?sanitize=true">
 
+MAP2K3, Position 210, Windowsize 30, highlights done via CONNECTOR, region annotations taken from Interpro
+
+<img src="https://github.com/russelllab/kinaseResistance/blob/59022d9441ee7207c8f14cf474dafa269d612416/Create_SVG/Version_K(inases)/AnnotatedAlignment_G210C.svg?sanitize=true">
