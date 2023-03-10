@@ -155,6 +155,7 @@ clustaltypes = {"hydrophobic":"blue",
 		"aromatic":"cyan"}
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 def create_svg(sequences_dict, positions, colordict, startposition, windowsize, poi, forbidden, proteinfeatures):
+    heatmapper = {}
     startposition_checker = startposition	
     #### do this when havng constructed the dictionary with interesting positions
     #### here it is supplied as is, but needs to be further modified
@@ -178,7 +179,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 	filename = poi+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+".svg"
     dwg = svgwrite.Drawing(filename, profile='full')
     x = 50
-    y = 80
+    y = 120
     sequence_of_interest = sequences_dict[poi]
     non_minus_count = 0
     distance_end = len(sequence_of_interest)+100	### to make sure it gets weeded out below, if none of the if statements directly below trigger
@@ -222,7 +223,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 		old_x = x
 		old_y = y
 		x = 50
-		y = 60
+		y = 100
 
 		dwg.add(dwg.rect((x-65, y), (45, 14), fill="yellow"))
 		dwg.add(dwg.text(drawname, insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
@@ -294,11 +295,20 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 #      				        	dwg.add(dwg.text(letter, insert=(x+5, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='white'))
 					try:
 						drawn = 0
+						radius = 8
 						for colorcateg in coloringcategories:
 			        		    if str(charactercount) in positions[namus][colorcateg]:
-	        				        dwg.add(dwg.circle((x+5, y+7.5), (5), fill=colordict[colorcateg]))
+	        				        dwg.add(dwg.circle((x+5, y+7.5), (radius), fill=colordict[colorcateg]))
 	        				        dwg.add(dwg.text(letter, insert=(x+5, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill="black"))
 							drawn = 1
+							if heatmapper.has_key(x)==False:
+								heatmapper[x]={}
+								heatmapper[x][colorcateg]=1
+							elif heatmapper[x].has_key(colorcateg)==False:
+								heatmapper[x][colorcateg]=1
+							else:
+								heatmapper[x][colorcateg]+=1
+						    radius -= 1.5
 	        				if drawn == 0:
 	       					        dwg.add(dwg.text(letter, insert=(x+5, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill="black"))
 				    	except:
@@ -330,17 +340,33 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 
     x = 50
     y = 0
+
+    maxfinder = []
+    for xval in heatmapper:
+	for category in colors:
+		if heatmapper[xval].has_key(category)==False:
+			heatmapper[xval][category]=0
+	for categ in heatmapper[xval]:
+		maxfinder.append(int(heatmapper[xval][categ]))
+    heatmap_maximum = max(maxfinder)
+    mapx = 40
+    mapy = 60
+    #print heatmapper
+    for category in colors:
+	dwg.add(dwg.text(category, insert=(40, mapy+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+	for xval in heatmapper:
+		#print xval, "\t", mapy
+		dwg.add(dwg.rect((xval, mapy), (10, 10), fill="red", opacity = float(heatmapper[xval][category])/float(heatmap_maximum)))
+	mapy += 10
+
+
+    x = 50
+    y = 0
     for category in colors:
 	 dwg.add(dwg.rect((x-30, y), (60, 10), fill=colors[category]))
     	 dwg.add(dwg.text(category, insert=(x, y+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
- 	 x += 60	
+ 	 x += 60
     dwg.save()
-
-
-
-
-
-
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 alignmentfile = sys.argv[4]	#### change this to the location of the alignmentfile.
 ###
