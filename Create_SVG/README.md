@@ -70,7 +70,13 @@ ___
 Updating the script to be pure python3.
 
 ___
-## Some example results
+## The most recent type of results
+PLK3, a random position close to the activation loop, windowsize 30
+<img src="https://github.com/russelllab/kinaseResistance/blob/62620ed81d53713f8b28266c95aee5057b853391/Create_SVG/Version_K(inases)/PLK3_Position200_Windowsize30.svg?sanitize=true">
+
+
+___
+## Legacy Results
 MAP2K3, Position 84, Windowsize 30
 
 <img src="https://github.com/russelllab/kinaseResistance/blob/ac8fb82c5fbf26a116d23f3b84c61e7c543108b2/Create_SVG/Version_K(inases)/MAP2K3_Position84_Windowsize30.svg?sanitize=true">
