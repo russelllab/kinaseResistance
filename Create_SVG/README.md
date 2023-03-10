@@ -70,7 +70,9 @@ This command has several field after calling the script:
 
 ___
 ## What is next?
-Updating the script to be pure python3.
+- Adjust circle size by evidence.
+- Make heatmap prettier.
+- Updating the script to be pure python3.
 
 ___
 ## The most recent type of results
