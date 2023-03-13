@@ -225,10 +225,16 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 		x = 50
 		y = 100
 
-		dwg.add(dwg.rect((x-65, y), (45, 14), fill="yellow"))
-		dwg.add(dwg.text(drawname, insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+		dwg.add(dwg.rect((x-80, y), (75, 14), fill="yellow"))
+		if len(drawname) < 8:
+			dwg.add(dwg.text(drawname, insert = (x-60,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+		else:
+			dwg.add(dwg.text(drawname, insert = (x-60,y+7), text_anchor='middle', dominant_baseline='central', font_size='8px', font_family='Arial', font_weight='bold', fill='black'))
 	else:
-		dwg.add(dwg.text(drawname, insert = (x-45,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+		if len(drawname) < 8:
+			dwg.add(dwg.text(drawname, insert = (x-60,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+		else:
+			dwg.add(dwg.text(drawname, insert = (x-60,y+7), text_anchor='middle', dominant_baseline='central', font_size='8px', font_family='Arial', font_weight='bold', fill='black'))
 	#charactercount = 0
 	totalcount = 0
 	if startingpoint <= 0:
@@ -240,15 +246,26 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 	charactercount = 0
 	tempfeat = {}
 	featcount = 0
+	firstdone = "false"
+	lastdone = "false"
+	forbidden_start = "false"
+	forbidden_end = "false"
+	gapcounter = 0
 	for i, letter in enumerate(seq, start=1):
 	    totalcount += 1		#### gives the alignment position, including gaps
 	    letter = seq[i-1]
 	    if letter not in gapletters:
 	    	charactercount += 1
-	    	if totalcount <= distance_end:	### distance_end refers to the last alignment position that will be considered, which is +20 non-gap residues from the input position
+	    	if totalcount <= distance_end:	### distance_end refers to the last alignment position that will be considered, which is +windowsize non-gap residues from the input position
+			endcounter = charactercount
 			testlenge = int(distance_end)-int(totalcount)
 			if testlenge <= maximumdistance:	### checks that we still operate around the position of interest +/- residues only
 			    if totalcount >= distance_start:
+				if firstdone == "false":
+					forbidden_start = "true"
+					startcounter = charactercount
+					dwg.add(dwg.text(charactercount, insert=(35, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill="black"))					
+					firstdone = "true"
 				if totalcount not in forbidden:
 					if poi in namus:
 					    if float(Konserve[startnumberlabel][0])>= 0.7:
@@ -314,7 +331,8 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 				    	except:
 						dwg.add(dwg.text(letter, insert=(x+5, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill="black"))	
         			    	x += 10
-				    
+			    	else:
+					gapcounter += 1
 	    else:	### will draw just a "-" for a gap in the alignment
 		if totalcount >= distance_start:
 			if totalcount <= distance_end:
@@ -322,8 +340,13 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 					dwg.add(dwg.text(letter, insert=(x+5, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='white'))	
 					x += 10
 	viewboxcounter = x
+	lastx = x
+	lasty = y
+	finalresidue = startcounter+gapcounter+(2*windowsize)
+	dwg.add(dwg.text(endcounter, insert=(lastx+20, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill="black"))	
+							
 	if poi in namus:
-		dwg.add(dwg.rect((-15,y),(x+15,14), fill="none",stroke="black",stroke_width=1))	
+		dwg.add(dwg.rect((-30,y),(x+40,14), fill="none",stroke="black",stroke_width=1))	
 		x = 50
 		y = old_y
 	else:
@@ -331,7 +354,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
  	        y += 20
 
 
-    viewboxwidth = (viewboxcounter+60)
+    viewboxwidth = (viewboxcounter+100)
     viewboxheight = len(sequences_dict)*20+100
     dwg.viewbox(-40, 0,viewboxwidth,viewboxheight)
 
@@ -357,8 +380,12 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 	for xval in heatmapper:
 		#print xval, "\t", mapy
 		dwg.add(dwg.rect((xval, mapy), (10, 10), fill="red", opacity = float(heatmapper[xval][category])/float(heatmap_maximum)))
+		if mapy == 60:
+			pass		#### I need to get all necessary xvals first, dammit
+	dwg.add(dwg.rect((50, mapy), (lastx-mapx-10, 10),fill="none",stroke="black",stroke_width=0.5))	### <<<<
 	mapy += 10
-
+    for i in range(50,lastx-10,10):
+	dwg.add(dwg.rect((i, 60), (10, 30),fill="none",stroke="black",stroke_width=0.5))
 
     x = 50
     y = 0
