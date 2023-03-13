@@ -34,7 +34,11 @@ In case we have to deal with .pkl files I did a dirty solution to reformat them 
 
 ___
 ## Features (Version K)
-- **NEW** Command line functionality. 
+- **New** Added transparent rectangles to highlight a sequence conservation (= identity) over >= 70 %, based on the sequence of interest. The colors for this are taken from CLUSTAL/Jalview.
+- **New** Change highlighting to circles. Circle radius can later be adjusted based on evidence.
+- **New** Added basic heatmapping above the alignment, showing how many highlights per position & per category we have.
+- **New** Added start and end positions for each displayed sequence.
+- Command line functionality. 
 To use the script we can now execute the following command:
 `python create_svg_20230306_kinases.py P46734 210 30 MAP2K3.aln Mutational_Infofile.txt Features_Infofile.txt` 
 This command has several field after calling the script:
@@ -48,9 +52,9 @@ This command has several field after calling the script:
 | 4     | Mutational_Infofile.txt | The file containing positional information |
 | 5     | Features_Infofile.txt | A file containing structural/domain features, numbering based on **protein of interest** |
 
-**Note**: The script allows for a little hack here. If you want a (large) .svg containing the whole alignment just give a big number in field 2, for example 20000. The script will then produce a complete alignment view.
+**Note**: The script allows for a little hack here. If you want a (large) .svg containing the whole alignment just give a big number in field 2, for example 20000. The script will then produce a complete alignment view. **New** Giving "none" instead of a position to be highlighted (field 1) works the same + it removed the position specific rectangle.
 
-- **NEW** Named Output files. The resultfile will already be named depending on the input settings, so one can easily try different settings. The name follows this format: 
+- Named Output files. The resultfile will already be named depending on the input settings, so one can easily try different settings. The name follows this format: 
 `poi+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+".svg"`
 
 - Conservation: Gives a black rectangle as an indicator of sequence identity (top) for the POI residue at that position.
@@ -67,10 +71,17 @@ This command has several field after calling the script:
 
 ___
 ## What is next?
-Updating the script to be pure python3.
+- Make circle size adjustable by evidence.
+- Updating the script to be pure python3.
 
 ___
-## Some example results
+## The most recent type of results
+PLK3, a random position close to the activation loop, windowsize 30
+<img src="https://github.com/russelllab/kinaseResistance/blob/5e63c6a6d701c3e0062cb9bb3e4cb74b80e7bdb1/Create_SVG/Version_K(inases)/PLK3_Position220_Windowsize30.svg?sanitize=true">
+
+
+___
+## Legacy Results
 MAP2K3, Position 84, Windowsize 30
 
 <img src="https://github.com/russelllab/kinaseResistance/blob/ac8fb82c5fbf26a116d23f3b84c61e7c543108b2/Create_SVG/Version_K(inases)/MAP2K3_Position84_Windowsize30.svg?sanitize=true">
