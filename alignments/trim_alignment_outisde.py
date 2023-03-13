@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
-''' A script to take an alignment as input
-and trim based on some paramerters'''
+'''
+A script to take an alignment as input
+and trim based on some paramerters
+'''
 
 import pandas as pd
 import numpy as np
@@ -18,12 +20,13 @@ WINDOW = 30
 class Kinase:
     '''A class to store information about a kinase'''
     def __init__(self, acc, name, sequence):
+        self.acc = acc
         self.name = name
         self.sequence = sequence
         self.fasta = ''
         self.aln2seq = {}
         self.seq2aln = {}
-        self.mutations = {'A':[], 'D':[], 'R': []}
+        self.mutations = {'A':[], 'D':[], 'R':[]}
     def convert2fasta(self) -> None:
         '''Convert the alignment to a fasta sequence'''
         self.fasta = self.sequence.replace('-', '').replace('.', '').upper()
@@ -103,6 +106,8 @@ for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
     uniprot_position = str(line.split('\t')[5].strip())
     uniprot_mutation = wtAA + uniprot_position + mutAA
     mut_type = 'R'
+    if kinases[acc].fasta[int(uniprot_position)-1] != wtAA:
+        raise Exception(f'{kinases[acc].fasta[int(uniprot_position)-1]} found rather than {wtAA} pos {uniprot_position} in {acc}')
     if uniprot_position not in kinases[acc].mutations[mut_type]:
         kinases[acc].mutations[mut_type].append(uniprot_position)
 
@@ -112,7 +117,10 @@ for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
         continue
     acc = line.split('\t')[1]
     mut_type = line.split('\t')[5]
+    wtAA = line.split('\t')[2]
     uniprot_position = line.split('\t')[3]
+    if kinases[acc].fasta[int(uniprot_position)-1] != wtAA:
+        raise Exception(f'{kinases[acc].fasta[int(uniprot_position)-1]} found rather than {wtAA} pos {uniprot_position} in {acc}')
     if uniprot_position not in kinases[acc].mutations[mut_type]:
         kinases[acc].mutations[mut_type].append(uniprot_position)
 
