@@ -76,6 +76,10 @@ ___
 
 ___
 ## The most recent type of results
+MAP2K3, A84 with the most recent testdata (cleaned and trimmed kinase alignment made by Gurdeep). Kinases with no highlights were removed from the SVG visualization. Columns with > 90 % gaps were removed, unless there is a position with an annotation, then the column is kept despite having many gaps (see for example BRAF V600).
+<img src="https://github.com/russelllab/kinaseResistance/blob/646b21fcfc6729faf1219a352a9ac8e0679d4a1a/Create_SVG/Version_K(inases)/MP2K3_HUMAN_Position84_Windowsize30000.svg?sanitize=true">
+
+
 PLK3, a random position close to the activation loop, windowsize 30
 <img src="https://github.com/russelllab/kinaseResistance/blob/5e63c6a6d701c3e0062cb9bb3e4cb74b80e7bdb1/Create_SVG/Version_K(inases)/PLK3_Position220_Windowsize30.svg?sanitize=true">
 
