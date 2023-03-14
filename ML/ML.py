@@ -24,7 +24,7 @@ from sklearn import tree
 
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
-df = pd.read_csv('trainData.tsv.gz', sep = '\t')
+df = pd.read_csv('trainDataFromTrimmedAln.tsv.gz', sep = '\t')
 df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.025, regex=True)
 df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
 # exclude columns
@@ -49,7 +49,7 @@ columns_to_exclude = [
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
-                    #   'Phosphomimic',
+                      'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT',
                       'hmmScoreDiff'

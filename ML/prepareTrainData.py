@@ -42,7 +42,7 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # # print (kinases['Q9NYV4'].burr[3])
 # # print (kinases['Q92772'].dihedral)
 # fetchData.iupredScores(kinases, Kinase)
-fetchData.homologyScores(kinases, Kinase)
+# fetchData.homologyScores(kinases, Kinase)
 
 # #print (kinases['Q9NYV4'].mechismo)
 # data = []
@@ -224,7 +224,7 @@ for line in open('test_mutations.txt', 'r'):
         kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
     # pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
 
-pkinase_act_deact_res = {'A': [], 'D': [], 'R': []}
+pkinase_act_deact_res = {'A': [], 'D': [], 'R': [], 'N': []}
 '''Fetch act/deact mutation data'''
 for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     if line.split()[0] == 'uniprot_name': continue
@@ -245,8 +245,8 @@ for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
         kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
         pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
 
-pkinase_resistant = []
 '''Fetch resistant mutation data'''
+'''
 for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
     if line[0] == '#': continue
     actual_gene = line.split('\t')[0]
@@ -273,6 +273,72 @@ for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
             sys.exit()
     else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
     # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
+'''
+
+'''Fetch resistant mutation data'''
+for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
+    if line.split('\t')[0] == 'uniprot_id': continue
+    # actual_gene = line.split('\t')[0]
+    # if '_' in actual_gene: gene = actual_gene.split('_')[0]
+    # else: gene = actual_gene
+    acc = line.split('\t')[0]
+    # cosmic_mutation = line.split('\t')[1]
+    wtAA = line.split('\t')[1]
+    mutAA = line.split('\t')[3]
+    if mutAA == 'X': continue
+    if len(wtAA) > 1 or len(mutAA) > 1: continue
+    uniprot_position = line.split('\t')[2].replace('\n', '')
+    mutation = wtAA + uniprot_position + mutAA
+    mut_type = 'R'
+    if acc not in seq2pfam:
+        continue
+    if uniprot_position not in seq2pfam[acc]:
+        print (f'{uniprot_position} seems to be outside the domain in {acc} and reported {mut_type}')
+        continue
+    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
+    if mutation not in kinases[acc].mutations:
+        dataset = 'train'
+        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
+        try:
+            kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][uniprot_position]
+            pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
+        except:
+            print (acc, uniprot_position, mutation, mut_type)
+            sys.exit()
+    else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
+    # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
+
+'''Fetch neutral mutation data'''
+for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
+    if line.split('\t')[1] == 'UniProtID': continue
+    acc = line.split('\t')[1]
+    wtAA = line.split('\t')[2]
+    mutAA = line.split('\t')[4]
+    if mutAA == 'X': continue
+    if len(wtAA) > 1 or len(mutAA) > 1: continue
+    uniprot_position = line.split('\t')[3].replace('\n', '')
+    mutation = wtAA + uniprot_position + mutAA
+    mut_type = 'N'
+    if acc not in seq2pfam:
+        continue
+    if uniprot_position not in seq2pfam[acc]:
+        print (f'{uniprot_position} seems to be outside the domain and reported {mut_type}')
+        print (seq2pfam[acc])
+        continue
+    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
+    if mutation not in kinases[acc].mutations:
+        dataset = 'train'
+        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
+        try:
+            kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][uniprot_position]
+            pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
+        except:
+            print (acc, uniprot_position, mutation, mut_type)
+            sys.exit()
+    else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
+    # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
+
+
 
 '''Fetch PTM data'''
 hmmPTM = {}
@@ -306,7 +372,7 @@ for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'_pfam\t').join(PTM_TYPES) + '_' + str(position) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
-trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+# trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
 for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'\t').join(['A', 'D', 'R']) + '_'+str(position)+'\t'
 # trainMat += '_known\t'.join(['A', 'D', 'R']) + '_known\t'
@@ -330,7 +396,7 @@ for acc in kinases:
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
         ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM, WS)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
-        homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
+        # homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
@@ -346,7 +412,7 @@ for acc in kinases:
         row.append(is_phosphomimic)
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        row += homology_row
+        # row += homology_row
         # print (mutation, mut_types)
         adr_row = fetchData.getADRvector(acc, position, kinases, pkinase_act_deact_res, WS)
         # for mut_type in ['A', 'D', 'R']:
@@ -360,7 +426,7 @@ for acc in kinases:
         trainMat += str(is_phosphomimic) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
-        trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+        # trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
         trainMat += mut_types + '\n'
 
@@ -368,6 +434,8 @@ for acc in kinases:
             mut_types_colors.append('green')
         elif mut_types == 'D':
             mut_types_colors.append('red')
+        elif mut_types == 'R':
+            mut_types_colors.append('cyan')
         else:
             mut_types_colors.append('violet')
 

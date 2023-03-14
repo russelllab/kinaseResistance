@@ -14,7 +14,7 @@ import plotly.express as px
 
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
-df = pd.read_csv('trainData.tsv.gz', sep = '\t')
+df = pd.read_csv('trainDataFromTrimmedAln.tsv.gz', sep = '\t')
 
 # Enable this if you want to plot only train data
 # df = df[df.Dataset == 'train']
@@ -44,7 +44,7 @@ columns_to_exclude = ['Acc',
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
-                    #   'Phosphomimic',
+                      'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT'
                       'hmmScoreDiff'
