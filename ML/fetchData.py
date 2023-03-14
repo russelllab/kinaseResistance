@@ -35,7 +35,8 @@ def fetchGroup(kinases, Kinase):
 def fetchPkinaseHMM():
     dic_ss = {'G': 1, 'H': 1, 'B': 2, 'C': 3, 'E': 4, 'S': 5, 'T': 6, '-':7}
     hmm = {} # hmmPosition > AA > bit-score
-    for line in open('../pfam/Pkinase.hmm'):
+    # for line in open('../pfam/Pkinase.hmm'):
+    for line in open('../pfam/humanKinasesTrimmed.hmm'):
         if len(line.split()) > 2:
             if line.split()[-2] == '-' and line.split()[-3] == '-':
                 #print (line.split())
@@ -54,7 +55,8 @@ def fetchHmmsearch(kinases, Kinase):
     and store the mappings. Note that some kinases may have more than
     one Pkinase domain.
     '''
-    os.system('hmmsearch -o out.txt ../pfam/Pkinase.hmm ../data/humanKinases.fasta')
+    # os.system('hmmsearch -o out.txt ../pfam/Pkinase.hmm ../data/humanKinases.fasta')
+    os.system('hmmsearch -o out.txt ../pfam/humanKinasesTrimmed.hmm ../data/humanKinases.fasta')
     flag = 0
     for line in open('out.txt', 'r'):
         if line[:2] == '>>':
@@ -65,12 +67,14 @@ def fetchHmmsearch(kinases, Kinase):
             if '== domain' in line:
                 domainNum = int(line.split('domain')[1].split()[0])
                 kinases[acc].domains[domainNum] = {}
-            elif line.split()[0] == 'Pkinase':
+            elif line.split()[0] == 'humanKinasesTrimmed':
                 hmmStart = int(line.split()[1])
                 hmmSeq = line.split()[2]
                 hmmEnd = int(line.split()[3])
             elif acc in line.split()[0]:
-                kinaseStart = int(line.split()[1])
+                kinaseStart = line.split()[1]
+                if kinaseStart == '-': continue
+                kinaseStart = int(kinaseStart)
                 kinaseSeq = line.split()[2]
                 kinaseEnd = int(line.split()[3])
                 for hmmChar, kinaseChar in zip(hmmSeq, kinaseSeq):
@@ -85,7 +89,8 @@ def fetchHmmsearch(kinases, Kinase):
                         hmmStart += 1
         #print (kinases[acc].domains)
         #sys.exit()
-    print (kinases['Q96NX5'].domains[1][174])
+    # print (kinases['Q96NX5'].domains)
+    # print (kinases['Q96NX5'].domains[1][1384])
 
 def createDicForDSSP(dic, position, mutation, value):
     if position not in dic:

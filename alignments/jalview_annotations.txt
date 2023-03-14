@@ -1,0 +1,9 @@
+JALVIEW_ANNOTATION
+# Created: Tue Mar 14 11:11:14 CET 2023
+
+SEQUENCE_GROUP	JGroup:1028523531	61	61	-1	sp|Q08345|DDR1_HUMAN|584	
+PROPERTIES	JGroup:1028523531	colour=Red	outlineColour=000000	displayBoxes=true	displayText=true	colourText=true	showUnconserved=false	textColThreshold=192	
+
+SEQUENCE_GROUP	JGroup:180307386	44	44	-1	sp|Q96SB4|SRPK1_HUMAN|51	
+PROPERTIES	JGroup:180307386	colour=Red	outlineColour=000000	displayBoxes=true	displayText=true	colourText=false	showUnconserved=false	
+

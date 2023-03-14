@@ -15,7 +15,7 @@ import plotly.express as px
 PATH_TO_FASTA = '../KA/UniProtFasta2/'
 PFAM_DOMS = ['PK_Tyr_Ser-Thr', 'Pkinase'] # Domains to search for
 OUT_TEXT = '#Acc\tGene\tPfam_Dom\tPfam_Position\tPfam_Residue\tPTM_type\n'
-OUT_FILE = 'Kinase_psites4.tsv'
+OUT_FILE = 'Kinase_psites_trimmed.tsv'
 
 class Kinases:
     '''
