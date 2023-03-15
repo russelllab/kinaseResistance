@@ -51,7 +51,7 @@ class Mutation:
     def checkPhosphomimic(self):
         if self.wtAA in ['S', 'T', 'Y'] and self.mutAA in ['D', 'E']:
             return 1
-        # elif self.wtAA in ['S', 'T', 'Y']:
-        #     return -1
+        elif self.wtAA in ['S', 'T', 'Y']:
+            return -1
         else:
             return 0

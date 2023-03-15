@@ -58,18 +58,27 @@ columns_to_exclude = [
                     #   'hmmScoreMUT',
                     #   'hmmScoreDiff'
                       ]
-# for aa in AA:
-#     columns_to_exclude.append(aa+'_WT')
-#     columns_to_exclude.append(aa+'_MUT')
+for aa in AA:
+    if aa not in ['S', 'T', 'Y']:
+        columns_to_exclude.append(aa+'_WT')
+    if aa not in ['D', 'E']:
+        columns_to_exclude.append(aa+'_MUT')
+
 pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    if i in [-1, 0, 1]: continue
+    if i in [0]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
+ptm_cols = ['p', 'ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
+for i in range(-5,6):
+    if i in [0]: continue
+    for col in pfam_ptm_cols:
+        columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
+
 adr_cols = ['A', 'D', 'R']
 for i in range(-5, 6):
-    if i in [-1, 0, 1]: continue
+    if i in [0]: continue
     for col in adr_cols:
         columns_to_exclude.append(col+'_'+str(i))
 
@@ -169,11 +178,11 @@ parameters = {'C': [0.001],
             'max_iter': [100, 250, 500]
             }
 
-parameters = {'max_depth': [2, 3, 4, 5, None],
-            'min_samples_split': [2, 3, 5],
-            'min_samples_leaf': [3, 4, 5],
+parameters = {'max_depth': [None],
+            'min_samples_split': [2],
+            'min_samples_leaf': [3],
             'max_features': ['sqrt', 'log2'],
-            'n_estimators': [10, 25, 50, 100]
+            'n_estimators': [25, 50, 100]
             }
 model = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1)
 # model = LogisticRegression(class_weight='balanced')

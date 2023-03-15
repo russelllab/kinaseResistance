@@ -110,7 +110,7 @@ class Sampling(layers.Layer):
 latent_dim = 2
 
 '''Encoder'''
-encoder_inputs = keras.Input(shape=(503, 154, None))
+encoder_inputs = keras.Input(shape=(503, 154, 1, 2))
 x = layers.Conv2D(32, 3, activation="relu", strides=2, padding="same")(encoder_inputs)
 x = layers.Conv2D(64, 3, activation="relu", strides=2, padding="same")(x)
 x = layers.Flatten()(x)
@@ -124,8 +124,8 @@ encoder.summary()
 
 '''Decoder'''
 latent_inputs = keras.Input(shape=(latent_dim,))
-x = layers.Dense(1 * 126 * 64, activation="relu")(latent_inputs)
-x = layers.Reshape((64, 126, 1))(x)
+x = layers.Dense(50 * 10 * 5, activation="relu")(latent_inputs)
+x = layers.Reshape((50, 10, 5))(x)
 x = layers.Conv2DTranspose(3, 64, activation="relu", strides=2, padding="same")(x)
 x = layers.Conv2DTranspose(2, 32, activation="relu", strides=2, padding="same")(x)
 decoder_outputs = layers.Conv2DTranspose(1, 3, activation="sigmoid", padding="same")(x)

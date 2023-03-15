@@ -28,11 +28,11 @@ df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
 # df = df.loc[:, ~df.columns.isin(['allHomologs','exclParalogs','specParalogs','orthologs', 'bpso','bpsh'])]
 df = df.loc[:, ~df.columns.isin([
                             # 'allHomologs',
-                            'exclParalogs',
-                            'specParalogs',
-                            'orthologs'
-                            'bpso',
-                            'bpsh'
+                            # 'exclParalogs',
+                            # 'specParalogs',
+                            # 'orthologs'
+                            # 'bpso',
+                            # 'bpsh'
                             ])]
 # exclude columns to make the data matrix
 original_df = df.copy()
@@ -48,26 +48,29 @@ columns_to_exclude = ['Acc',
                     #   'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT',
-                    #   'hmmScoreDiff'
+                      'hmmScoreDiff'
                       ]
-# for aa in AA:
-#     columns_to_exclude.append(aa+'_WT')
-#     columns_to_exclude.append(aa+'_MUT')
+for aa in AA:
+    # if aa not in ['S', 'T', 'Y']:
+        columns_to_exclude.append(aa+'_WT')
+    # if aa not in ['D', 'E']:
+        columns_to_exclude.append(aa+'_MUT')
+
 pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    if i in [-1, 0, 1]: continue
+    if i in [0]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
-# ptm_cols = ['p', 'ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
-# for i in range(-5,6):
-#     if i in [-1, 0, 1]: continue
-#     for col in pfam_ptm_cols:
-#         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
+ptm_cols = ['p', 'ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
+for i in range(-5,6):
+    if i in [0]: continue
+    for col in pfam_ptm_cols:
+        columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
 adr_cols = ['A', 'D', 'R']
 for i in range(-5, 6):
-    if i in [-1, 0, 1]: continue
+    if i in [0]: continue
     for col in adr_cols:
         columns_to_exclude.append(col+'_'+str(i))
 
