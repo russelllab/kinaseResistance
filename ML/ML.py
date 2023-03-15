@@ -22,6 +22,10 @@ from sklearn.metrics import auc
 from sklearn.metrics import RocCurveDisplay
 from sklearn import tree
 
+RANDOM_STATE = 0
+N_SPLITS = 10
+N_REPEATS = 10
+
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
 df = pd.read_csv('trainDataFromTrimmedAln.tsv.gz', sep = '\t')
@@ -52,20 +56,20 @@ columns_to_exclude = [
                     #   'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT',
-                      'hmmScoreDiff'
+                    #   'hmmScoreDiff'
                       ]
 # for aa in AA:
 #     columns_to_exclude.append(aa+'_WT')
 #     columns_to_exclude.append(aa+'_MUT')
 pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    if i == 0: continue
+    if i in [-1, 0, 1]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
 adr_cols = ['A', 'D', 'R']
 for i in range(-5, 6):
-    if i == 0: continue
+    if i in [-1, 0, 1]: continue
     for col in adr_cols:
         columns_to_exclude.append(col+'_'+str(i))
 
@@ -147,8 +151,8 @@ for i, (train_index, test_index) in enumerate(skf.split(X, y)):
     print(f"  Test:  index={test_index}")
 '''
 ## stratified CV
-skf = StratifiedKFold(n_splits=10)
-rskf = RepeatedStratifiedKFold(n_splits=10, n_repeats=10)
+skf = StratifiedKFold(n_splits=N_SPLITS, shuffle=True)
+rskf = RepeatedStratifiedKFold(n_splits=N_SPLITS, n_repeats=N_REPEATS)
 
 ## To perform the randomizationt test (Salzberg test), enable the this line
 # np.random.shuffle(y)
@@ -165,13 +169,13 @@ parameters = {'C': [0.001],
             'max_iter': [100, 250, 500]
             }
 
-parameters = {'max_depth': [None],
-            'min_samples_split': [2],
-            'min_samples_leaf': [3],
-            'max_features': ['sqrt'],
-            'n_estimators': [100]
+parameters = {'max_depth': [2, 3, 4, 5, None],
+            'min_samples_split': [2, 3, 5],
+            'min_samples_leaf': [3, 4, 5],
+            'max_features': ['sqrt', 'log2'],
+            'n_estimators': [10, 25, 50, 100]
             }
-model = RandomForestClassifier(random_state=0, class_weight="balanced")
+model = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1)
 # model = LogisticRegression(class_weight='balanced')
 model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
 model.fit(X, y)
@@ -188,7 +192,7 @@ clf = RandomForestClassifier(n_estimators=model.best_params_['n_estimators'],
             min_samples_split=model.best_params_['min_samples_split'],
             max_depth=model.best_params_['max_depth'],
             max_features=model.best_params_['max_features'],
-            random_state=100, class_weight="balanced"
+            random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
             )
 
 tprs = []
@@ -198,8 +202,8 @@ fig, ax = plt.subplots(figsize=(6, 6))
 
 AUC= []; MCC= []; F1=[]; PRE=[]; REC=[]; SPE=[]
 for i in range(0,10):
-    skf = StratifiedKFold(n_splits=10, shuffle=True)
-    rskf = RepeatedStratifiedKFold(n_splits=5, n_repeats=10)
+    skf = StratifiedKFold(n_splits=N_SPLITS, shuffle=True)
+    rskf = RepeatedStratifiedKFold(n_splits=N_SPLITS, n_repeats=N_REPEATS)
     auc_itr = []; mcc_itr= []; f1_itr=[]; pre_itr=[]; rec_itr=[]; spe_itr=[]
     for fold, (train_index, test_index) in enumerate(skf.split(X, y)):
         X_train, X_validation = X[train_index], X[test_index]
@@ -210,7 +214,7 @@ for i in range(0,10):
             max_depth=model.best_params_['max_depth'],
             min_samples_split=model.best_params_['min_samples_split'],
             max_features=model.best_params_['max_features'],
-            random_state=100, class_weight="balanced"
+            random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
             )
         clf.fit(X_train, y_train)
         tn, fp, fn, tp = confusion_matrix(y_train, model.predict(X_train)).ravel()
@@ -300,7 +304,7 @@ clf = RandomForestClassifier(n_estimators=model.best_params_['n_estimators'],
             min_samples_leaf=model.best_params_['min_samples_leaf'],
             max_depth=model.best_params_['max_depth'],
             max_features=model.best_params_['max_features'],
-            random_state=100, class_weight="balanced"
+            random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
             )
 clf.fit(X,y)
 # print (clf.estimator_.decision_path(X))

@@ -40,12 +40,12 @@ columns_to_exclude = ['Acc',
                       'Mutation',
                       'Gene',
                       'Dataset',
-                    #   'hmmPos',
+                      'hmmPos',
                       'hmmSS',
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
-                      'Phosphomimic',
+                    #   'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT',
                     #   'hmmScoreDiff'
@@ -55,7 +55,7 @@ columns_to_exclude = ['Acc',
 #     columns_to_exclude.append(aa+'_MUT')
 pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    # if i in [0]: continue
+    if i in [-1, 0, 1]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
@@ -66,10 +66,10 @@ for i in range(-5,6):
 #         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
 adr_cols = ['A', 'D', 'R']
-# for i in range(-5, 6):
-#     if i in [0]: continue
-#     for col in adr_cols:
-#         columns_to_exclude.append(col+'_'+str(i))
+for i in range(-5, 6):
+    if i in [-1, 0, 1]: continue
+    for col in adr_cols:
+        columns_to_exclude.append(col+'_'+str(i))
 
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 
