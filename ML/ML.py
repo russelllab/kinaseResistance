@@ -49,7 +49,7 @@ columns_to_exclude = [
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
-                      'Phosphomimic',
+                    #   'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT',
                       'hmmScoreDiff'
@@ -59,7 +59,7 @@ columns_to_exclude = [
 #     columns_to_exclude.append(aa+'_MUT')
 pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    # if i == 0: continue
+    if i == 0: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
@@ -95,7 +95,7 @@ for row in df.to_numpy():
         y_names.append(row[-1])
         X.append(row[3:-1])
         train_names.append('/'.join(row[:3]))
-    elif row[-1] == 'D':
+    elif row[-1] in ['N', 'D']:
         y.append(0)
         y_names.append(row[-1])
         X.append(row[3:-1])

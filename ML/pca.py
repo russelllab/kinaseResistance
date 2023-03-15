@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 from sklearn import decomposition
 from sklearn.preprocessing import MinMaxScaler
 import plotly.express as px
+from sklearn.manifold import TSNE
 
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
@@ -27,11 +28,11 @@ df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
 # df = df.loc[:, ~df.columns.isin(['allHomologs','exclParalogs','specParalogs','orthologs', 'bpso','bpsh'])]
 df = df.loc[:, ~df.columns.isin([
                             # 'allHomologs',
-                            # 'exclParalogs',
-                            # 'specParalogs',
-                            # 'orthologs'
-                            # 'bpso',
-                            # 'bpsh'
+                            'exclParalogs',
+                            'specParalogs',
+                            'orthologs'
+                            'bpso',
+                            'bpsh'
                             ])]
 # exclude columns to make the data matrix
 original_df = df.copy()
@@ -39,15 +40,15 @@ columns_to_exclude = ['Acc',
                       'Mutation',
                       'Gene',
                       'Dataset',
-                      'hmmPos'
+                    #   'hmmPos',
                       'hmmSS',
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
                       'Phosphomimic',
                     #   'hmmScoreWT',
-                    #   'hmmScoreMUT'
-                      'hmmScoreDiff'
+                    #   'hmmScoreMUT',
+                    #   'hmmScoreDiff'
                       ]
 # for aa in AA:
 #     columns_to_exclude.append(aa+'_WT')
@@ -65,10 +66,10 @@ for i in range(-5,6):
 #         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
 adr_cols = ['A', 'D', 'R']
-for i in range(-5, 6):
-    if i in [0]: continue
-    for col in adr_cols:
-        columns_to_exclude.append(col+'_'+str(i))
+# for i in range(-5, 6):
+#     if i in [0]: continue
+#     for col in adr_cols:
+#         columns_to_exclude.append(col+'_'+str(i))
 
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 
@@ -91,6 +92,8 @@ for row in df.to_numpy():
         mut_types_colors.append('red')
     elif mut_type == 'R':
         mut_types_colors.append('blue')
+    elif mut_type == 'N':
+        mut_types_colors.append('cyan')
     elif mut_type == 'AR':
         mut_types_colors.append('violet')
     else:
@@ -106,10 +109,12 @@ data = scaler.transform(data)
 # print (trainMat)
 # sys.exit()
 
-pca = decomposition.PCA(n_components=2)
-pca.fit(data)
-X = pca.transform(data)
-print (pca.explained_variance_ratio_, pca.n_components_)
+X = TSNE(n_components=2, learning_rate='auto', init='random', perplexity=100).fit_transform(data)
+
+# pca = decomposition.PCA(n_components=2)
+# pca.fit(data)
+# X = pca.transform(data)
+# print (pca.explained_variance_ratio_, pca.n_components_)
 
 fig = plt.figure(1, figsize=(4, 3))
 plt.clf()
@@ -162,7 +167,8 @@ fig = px.scatter(
                                 "A": "green",
                                 "D": "red",
                                 "R": "blue",
-                                "AR": "cyan",
+                                "N": "cyan",
+                                "AR": "violet",
                                 "TBD": "yellow",
                                 "Activating": "lightgreen",
                                 "Inconclusive": "grey"

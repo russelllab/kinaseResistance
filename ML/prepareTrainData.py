@@ -116,87 +116,6 @@ def fetchStrucFeat(acc, domainNum):
 
     return df
 
-def fetchSeqFeat(acc, domainNum):
-    data = []
-    df = pd.DataFrame()
-    for dic, name in zip([
-                        kinases[acc].orthologs,
-                        kinases[acc].exclParalogs,
-                        kinases[acc].specParalogs,
-                        kinases[acc].allHomologs,
-                        kinases[acc].bpso,
-                        kinases[acc].bpsh
-                        ],[
-                        'orthologs',
-                        'exclParalogs',
-                        'specParalogs',
-                        'allHomologs',
-                        'bpso',
-                        'bpsh'
-                        ]):
-        row = []
-        for hmmPosition in range(1,265):
-            if hmmPosition in kinases[acc].domains[domainNum]:
-                SeqPosition = kinases[acc].domains[domainNum][hmmPosition]
-                residue = kinases[acc].fasta[SeqPosition-1]
-                #print (SeqPosition)
-                try:
-                    #print (dic[str(SeqPosition)])
-                    for mutation in dic[str(SeqPosition)]:
-                        if mutation[-1] == residue:
-                            value = dic[str(SeqPosition)][mutation]
-                            break
-                except:
-                    print (acc, SeqPosition, len(dic), residue)
-                    sys.exit()
-            else:
-                value = 3
-            row.append(value)
-        #f = pd.DataFrame(data, columns=AA)
-        df[name] = row
-    #print (df)
-    return df
-
-
-def oneHotEncoding(acc, domainNum):
-    '''
-    A function to take acc and alignment cutoff values to return
-    the feature matrix (one hot encoded)
-    '''
-    #print (len(AA))
-    data = []
-    numZeros = 0
-    for i in range(1,265):
-        if i in kinases[acc].domains[domainNum]:
-            position = kinases[acc].domains[domainNum][i]
-            residue = kinases[acc].fasta[position-1]
-        else:
-            residue = '-'
-
-        row = []
-        for aa in AA:
-            if residue == aa:
-                row.append(1)
-            else:
-                row.append(0)
-        data.append(row)
-        '''
-        if acc == 'Q96NX5' and i == 173:
-            print (residue)
-            print (row)
-        '''
-    data = np.array(data)
-    kinases[acc].oneHotEncoding[domainNum] = data
-    '''
-    if data.shape == (264,len(AA)):
-        #print (data.shape)
-        trainData.append(data)
-    '''
-
-    #trainData = np.array(trainData)
-    #print (np.stack(trainData, axis=0).shape)
-    return (data, AA)
-
 '''Map sequence to Pfam for all canonical kinases'''
 seq2pfam = {}
 for line in gzip.open('../data/humanKinasesHmmsearchMappingsTrimmed.tsv.gz', 'rt'):
@@ -398,12 +317,14 @@ for acc in kinases:
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
+        adr_row = fetchData.getADRvector(acc, position, kinases, pkinase_act_deact_res, WS)
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
             str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
             ','.join(aa_row) + '\t' + '\t'.join(mut_types)
             )
         # row.append(mutation_obj.dataset)
+        # Prepare rows for the numpy data
         row.append(int(hmmPos))
         row.append(str(hmmSS))
         row.append(float(hmmScoreWT))
@@ -412,15 +333,11 @@ for acc in kinases:
         row.append(is_phosphomimic)
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        row += homology_row
-        # print (mutation, mut_types)
-        adr_row = fetchData.getADRvector(acc, position, kinases, pkinase_act_deact_res, WS)
-        # for mut_type in ['A', 'D', 'R']:
-        #     if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
-        #     else: adr_row.append(0)
+        row += [int(item) for item in homology_row]
         row += [int(item) for item in adr_row]
         data.append(row)
 
+        # Prepare rows for writing the numpy data
         trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t' + mutation_obj.dataset + '\t'
         trainMat += str(hmmPos) + '\t' + str(hmmSS) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
         trainMat += str(is_phosphomimic) + '\t'
@@ -434,8 +351,10 @@ for acc in kinases:
             mut_types_colors.append('green')
         elif mut_types == 'D':
             mut_types_colors.append('red')
-        elif mut_types == 'R':
+        elif mut_types == 'N':
             mut_types_colors.append('cyan')
+        elif mut_types == 'R':
+            mut_types_colors.append('blue')
         else:
             mut_types_colors.append('violet')
 
@@ -458,195 +377,9 @@ ax = fig.add_subplot(111)
 # ax = fig.add_subplot(111, projection="3d", elev=48, azim=134)
 ax.set_position([0.1, 0.1, 0.8, 0.8])
 
-
 plt.cla()
 
 # ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=mut_type_colors, cmap=plt.cm.nipy_spectral, edgecolor="k")
 ax.scatter(X[:, 0], X[:, 1], c=mut_types_colors, cmap=plt.cm.nipy_spectral, edgecolor="k")
 plt.show()
 # plt.savefig('pca_plot.png')
-sys.exit()
-
-df = pd.DataFrame()
-trainData = []
-alignmentCutoff = 200
-labels = []
-for acc in kinases:
-    for domainNum in kinases[acc].domains:
-        if len(kinases[acc].domains[domainNum]) >= alignmentCutoff:
-            labels.append(kinases[acc].group)
-            '''
-            data, AA = oneHotEncoding(acc, domainNum)
-            df = pd.DataFrame(data, columns=AA)
-            df['HMM'] = fetchPkinase(acc, domainNum)
-            df = pd.concat([df, fetchSeqFeat(acc, domainNum), fetchStrucFeat(acc, domainNum)], axis=1)
-            #print (acc, kinases[acc].hmm)
-            df['Group'] = kinases[acc].group
-            trainData.append(df.to_numpy())
-            '''
-        #break
-
-print (df)
-trainData = np.array(trainData)
-sys.exit()
-'''
-np.stack(trainData, axis=0)
-print (trainData.shape)
-np.save('trainData.npy', trainData)
-numSamples, numRows, numCols = trainData.shape
-'''
-#for data in trainData:
-#    print (data.shape)
-
-
-# In[31]:
-
-
-trainData = np.load('trainData.npy')
-trainData = trainData[:, :, :28]
-numSamples, numRows, numCols = trainData.shape
-print (trainData.shape)
-
-
-# In[55]:
-
-
-## Create Sampling layer
-class Sampling(layers.Layer):
-    """Uses (z_mean, z_log_var) to sample z, the vector encoding a digit."""
-
-    def call(self, inputs):
-        z_mean, z_log_var = inputs
-        batch = tf.shape(z_mean)[0]
-        dim = tf.shape(z_mean)[1]
-        epsilon = tf.keras.backend.random_normal(shape=(batch, dim))
-        return z_mean + tf.exp(0.5 * z_log_var) * epsilon
-
-## Built encoder
-latent_dim = 50
-
-encoder_inputs = keras.Input(shape=(numRows, numCols, 1))
-x = layers.Conv2D(20, 3, activation="relu", strides=2, padding="same")(encoder_inputs)
-x = layers.BatchNormalization()(x)
-x = layers.Conv2D(50, 3, activation="relu", strides=2, padding="same")(x)
-x = layers.BatchNormalization()(x)
-x = layers.Flatten()(x)
-x = layers.Dense(20, activation="relu")(x)
-x = layers.BatchNormalization()(x)
-z_mean = layers.Dense(latent_dim, name="z_mean")(x)
-z_log_var = layers.Dense(latent_dim, name="z_log_var")(x)
-z = Sampling()([z_mean, z_log_var])
-encoder = keras.Model(encoder_inputs, [z_mean, z_log_var, z], name="encoder")
-encoder.summary()
-
-
-## Built decoder
-latent_inputs = keras.Input(shape=(latent_dim,))
-x = layers.Dense(66 * 7 * 50, activation="relu")(latent_inputs)
-x = layers.BatchNormalization()(x)
-x = layers.Reshape((66, 7, 50))(x)
-x = layers.Conv2DTranspose(50, 3, activation="relu", strides=2, padding="same")(x)
-x = layers.BatchNormalization()(x)
-x = layers.Conv2DTranspose(20, 3, activation="relu", strides=2, padding="same")(x)
-x = layers.BatchNormalization()(x)
-#decoder_outputs = layers.Cropping2D(cropping=((0, 0), (2, 2)))(x)
-#decoder_outputs = layers.Conv2DTranspose(1, 3, activation="sigmoid", padding="same")(decoder_outputs)
-decoder_outputs = layers.Conv2DTranspose(1, 3, activation="sigmoid", padding="same")(x)
-decoder = keras.Model(latent_inputs, decoder_outputs, name="decoder")
-decoder.summary()
-
-
-# In[56]:
-
-
-## Define VAE
-class VAE(keras.Model):
-    def __init__(self, encoder, decoder, **kwargs):
-        super(VAE, self).__init__(**kwargs)
-        self.encoder = encoder
-        self.decoder = decoder
-        self.total_loss_tracker = keras.metrics.Mean(name="total_loss")
-        self.reconstruction_loss_tracker = keras.metrics.Mean(
-            name="reconstruction_loss"
-        )
-        self.kl_loss_tracker = keras.metrics.Mean(name="kl_loss")
-
-    @property
-    def metrics(self):
-        return [
-            self.total_loss_tracker,
-            self.reconstruction_loss_tracker,
-            self.kl_loss_tracker,
-        ]
-
-    def train_step(self, data):
-        with tf.GradientTape() as tape:
-            z_mean, z_log_var, z = self.encoder(data)
-            reconstruction = self.decoder(z)
-            '''
-            reconstruction_loss = tf.reduce_mean(
-                tf.reduce_sum(
-                    keras.losses.binary_crossentropy(data, reconstruction), axis=(1, 2)
-                )
-            )
-            '''
-            reconstruction_loss = tf.reduce_mean(
-                tf.reduce_sum(
-                    tf.square(
-                        tf.subtract(data, reconstruction)
-                    )
-                )
-            )
-            kl_loss = -0.5 * (1 + z_log_var - tf.square(z_mean) - tf.exp(z_log_var))
-            kl_loss = tf.reduce_mean(tf.reduce_sum(kl_loss, axis=1))
-            total_loss = reconstruction_loss + kl_loss
-        grads = tape.gradient(total_loss, self.trainable_weights)
-        self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
-        self.total_loss_tracker.update_state(total_loss)
-        self.reconstruction_loss_tracker.update_state(reconstruction_loss)
-        self.kl_loss_tracker.update_state(kl_loss)
-        return {
-            "loss": self.total_loss_tracker.result(),
-            "reconstruction_loss": self.reconstruction_loss_tracker.result(),
-            "kl_loss": self.kl_loss_tracker.result(),
-        }
-
-print (trainData.shape)
-trainData = trainData.reshape(numSamples, numRows, numCols, 1)
-vae = VAE(encoder, decoder)
-vae.compile(optimizer=keras.optimizers.Adam())
-vae.fit(trainData, epochs=50, batch_size=30)
-
-
-# In[57]:
-
-
-## dic = {}
-colors = ['red', 'yellow', 'green', 'blue', 'grey', 'orange', 'blue', 'cyan', 'brown', 'gold', 'pink']
-setLabels = list(set(labels))
-for label, color in zip(setLabels, colors):
-    dic[label] = color
-
-labelColors = []
-for label in labels:
-    labelColors.append(dic[label])
-
-
-def plot_label_clusters(vae, data, labels=None):
-    # display a 2D plot of the digit classes in the latent space
-    z_mean, _, _ = vae.encoder.predict(data)
-    plt.figure(figsize=(12, 10))
-    plt.scatter(z_mean[:, 0], z_mean[:, 1], c=labelColors)
-    plt.colorbar()
-    plt.xlabel("z[0]")
-    plt.ylabel("z[1]")
-    plt.show()
-
-
-#(x_train, y_train), _ = keras.datasets.mnist.load_data()
-#x_train = np.expand_dims(x_train, -1).astype("float32") / 255
-
-plot_label_clusters(vae, trainData, labelColors)
-
-
-# In[ ]:

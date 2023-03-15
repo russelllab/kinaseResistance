@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import os, sys, gzip
+from tqdm import tqdm
 
 '''
 List of functions that fetch data from
@@ -67,6 +68,7 @@ def fetchHmmsearch(kinases, Kinase):
             if '== domain' in line:
                 domainNum = int(line.split('domain')[1].split()[0])
                 kinases[acc].domains[domainNum] = {}
+                kinases[acc].seq2pfam[domainNum] = {}
             elif line.split()[0] == 'humanKinasesTrimmed':
                 hmmStart = int(line.split()[1])
                 hmmSeq = line.split()[2]
@@ -81,6 +83,7 @@ def fetchHmmsearch(kinases, Kinase):
                     if hmmChar not in ['.', '-'] and kinaseChar not in ['.', '-']:
                         #kinases[acc].domains[domainNum][kinaseStart] = hmmStart
                         kinases[acc].domains[domainNum][hmmStart] = kinaseStart
+                        kinases[acc].seq2pfam[domainNum][kinaseStart] = hmmStart
                         hmmStart += 1
                         kinaseStart += 1
                     elif hmmChar in ['.', '-']:
@@ -93,8 +96,7 @@ def fetchHmmsearch(kinases, Kinase):
     # print (kinases['Q96NX5'].domains[1][1384])
 
 def createDicForDSSP(dic, position, mutation, value):
-    if position not in dic:
-        dic[position] = {}
+    if position not in dic: dic[position] = {}
     dic[position][mutation] = float(value)
 
 def dsspScores(kinases, Kinase):
@@ -158,9 +160,7 @@ def mechismoScores(kinases, Kinase):
 def homologyScores(kinases, Kinase):
     remove = []
     path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
-    for num, acc in enumerate(kinases):
-        if ((num+1)%50 == 0):
-            print (num+1)
+    for acc in tqdm(kinases):
         for dic, fileEnd in zip([
                             kinases[acc].allHomologs,
                             kinases[acc].orthologs,
@@ -211,7 +211,18 @@ def getHomologyScores(acc, wtAA, position, mutAA, kinases):
 
 def getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase):
     domainNum = 1
-    flag = 0
+    hmmPos = None
+    while domainNum in kinases[acc].seq2pfam:
+        if int(position) in kinases[acc].seq2hmm[domainNum]:
+            hmmPos = kinases[acc].seq2hmm[domainNum][int(position)]
+            break
+        domainNum += 1
+    try:
+        return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA], hmmPkinase[hmmPos]['ss']
+    except:
+        raise Exception(f'HMMscore in {acc} for {wtAA}{position}{mutAA} not found')
+    
+    '''flag = 0
     while domainNum>0:
         for hmmPos in kinases[acc].domains[domainNum]:
             seqPos = kinases[acc].domains[domainNum][hmmPos]
@@ -225,26 +236,26 @@ def getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase):
             break
     # print (acc, mutation)
     if flag == 1:
-        '''
-        print (acc + "\t" + mutation + "\t" +
-                str(seqPos) + "\t" + str(hmmPos) + "\t" +
-                #hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA],
-                str(round(hmmPkinase[hmmPos][mutAA] - hmmPkinase[hmmPos][wtAA], 2)) + "\t" +
-                mut_type)
-        '''
+        
+        # print (acc + "\t" + mutation + "\t" +
+        #         str(seqPos) + "\t" + str(hmmPos) + "\t" +
+        #         #hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA],
+        #         str(round(hmmPkinase[hmmPos][mutAA] - hmmPkinase[hmmPos][wtAA], 2)) + "\t" +
+        #         mut_type)
         print (acc, wtAA, position, mutAA)
         return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA], hmmPkinase[hmmPos]['ss']
     else:
         print (acc, wtAA, position, mutAA, 'not found')
-        sys.exit()
+        sys.exit()'''
 
 def getPTMscore(acc, mutation_position, kinases, hmmPTM, ws=0):
     if ws > 0: ws -= 1
     ws = int(ws/2)
-    print (acc, kinases[acc].gene, mutation_position)
-    ## prepare vector for known information
+    # print (acc, kinases[acc].gene, mutation_position)
+    
     row = []
     for position in range(mutation_position-ws, mutation_position+ws+1):
+        ## prepare vector for known information
         for ptm_type in PTM_TYPES:
             if ptm_type not in kinases[acc].ptm:
                 row.append('0')
@@ -259,11 +270,11 @@ def getPTMscore(acc, mutation_position, kinases, hmmPTM, ws=0):
             for ptm_type in PTM_TYPES:
                 row.append('0')
         else:
-            print (position, hmm_position, hmmPTM[hmm_position])
+            # print (position, hmm_position, hmmPTM[hmm_position])
             for ptm_type in PTM_TYPES:
                 count_ptm_type = hmmPTM[hmm_position].count(ptm_type)
-                # row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
-                row.append( '0' if count_ptm_type==0 else '1' )
+                row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
+                # row.append( '0' if count_ptm_type==0 else '1' )
     
     # if row.count('1')>=5:
     #     print (row)
