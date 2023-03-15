@@ -213,8 +213,8 @@ def getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase):
     domainNum = 1
     hmmPos = None
     while domainNum in kinases[acc].seq2pfam:
-        if int(position) in kinases[acc].seq2hmm[domainNum]:
-            hmmPos = kinases[acc].seq2hmm[domainNum][int(position)]
+        if int(position) in kinases[acc].seq2pfam[domainNum]:
+            hmmPos = kinases[acc].seq2pfam[domainNum][int(position)]
             break
         domainNum += 1
     try:
