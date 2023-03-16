@@ -106,120 +106,6 @@ open('humanKinasesTrimmed.fasta', 'w').write(trimmed_aln_fasta)
 
 jalview_annotations = 'JALVIEW_ANNOTATION\n'
 
-'''Resistance Mutations'''
-'''
-for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
-    if line[0] == '#':
-        continue
-    acc = line.split('\t')[2]
-    cosmic_mutation = line.split('\t')[1]
-    wtAA = cosmic_mutation[0]
-    mutAA = cosmic_mutation[-1]
-    uniprot_position = str(line.split('\t')[5].strip())
-    uniprot_mutation = wtAA + uniprot_position + mutAA
-    mut_type = 'R'
-    if kinases[acc].fasta[int(uniprot_position)-1] != wtAA:
-        raise Exception(f'{kinases[acc].fasta[int(uniprot_position)-1]} found rather than {wtAA} pos {uniprot_position} in {acc}')
-    if uniprot_position not in kinases[acc].mutations[mut_type]:
-        kinases[acc].mutations[mut_type].append(uniprot_position)
-    aln_position = kinases[acc].seq2aln[int(uniprot_position)-1]
-    new_aln_position = aln_position-START_ALN+WINDOW + 1
-    jalview_annotations += '\t'.join(
-                            [
-                            'SEQUENCE_GROUP',
-                             mut_type,
-                             str(new_aln_position),
-                             str(new_aln_position),
-                             '-1',
-                             kinases[acc].trimmed_aln_name
-                             ]
-                            ) + '\n'
-    # break
-    # print (new_aln_position, uniprot_mutation, acc, kinases[acc].name)
-'''
-for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
-    if line.split()[0] == 'uniprot_id':
-        continue
-    acc = line.split('\t')[0]
-    # cosmic_mutation = line.split('\t')[1]
-    wtAA = line.split('\t')[1]
-    mutAA = line.split('\t')[3]
-    uniprot_position = str(line.split('\t')[2].strip())
-    uniprot_mutation = wtAA + uniprot_position + mutAA
-    mut_type = 'R'
-    if kinases[acc].fasta[int(uniprot_position)-1] != wtAA:
-        raise Exception(f'{kinases[acc].fasta[int(uniprot_position)-1]} found rather than {wtAA} pos {uniprot_position} in {acc}')
-    if uniprot_position not in kinases[acc].mutations[mut_type]:
-        kinases[acc].mutations[mut_type].append(uniprot_position)
-    aln_position = kinases[acc].seq2aln[int(uniprot_position)-1]
-    new_aln_position = aln_position-START_ALN+WINDOW + 1
-    jalview_annotations += '\t'.join(
-                            [
-                            'SEQUENCE_GROUP',
-                             mut_type,
-                             str(new_aln_position),
-                             str(new_aln_position),
-                             '-1',
-                             kinases[acc].trimmed_aln_name
-                             ]
-                            ) + '\n'
-    # break
-    # print (new_aln_position, uniprot_mutation, acc, kinases[acc].name)
-
-jalview_annotations += '\t'.join(
-                            [
-                            'PROPERTIES',
-                             'R',
-                             'colour=Cyan',
-                             'outlineColour=000000',
-                             'displayBoxes=true',
-                             'displayText=true',
-                             'colourText=false',
-                             'showUnconserved=false'
-                             ]
-                            ) + '\n'
-# open('jalview_annotations2.txt', 'w').write(jalview_annotations)
-# exit()
-
-'''ACT/DEACT mutations'''
-for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
-    if line.split('\t')[0] == 'uniprot_name':
-        continue
-    acc = line.split('\t')[1]
-    mut_type = line.split('\t')[5]
-    wtAA = line.split('\t')[2]
-    uniprot_position = line.split('\t')[3]
-    if kinases[acc].fasta[int(uniprot_position)-1] != wtAA:
-        raise Exception(f'{kinases[acc].fasta[int(uniprot_position)-1]} found rather than {wtAA} pos {uniprot_position} in {acc}')
-    if uniprot_position not in kinases[acc].mutations[mut_type]:
-        kinases[acc].mutations[mut_type].append(uniprot_position)
-    aln_position = kinases[acc].seq2aln[int(uniprot_position)-1]
-    new_aln_position = aln_position-START_ALN+WINDOW + 1
-    jalview_annotations += '\t'.join(
-                            [
-                            'SEQUENCE_GROUP',
-                             mut_type,
-                             str(new_aln_position),
-                             str(new_aln_position),
-                             '-1',
-                             kinases[acc].trimmed_aln_name
-                             ]
-                            ) + '\n'
-
-for mut_type, color in zip(['A', 'D'], ['Green', 'Red']):
-    jalview_annotations += '\t'.join(
-                            [
-                            'PROPERTIES',
-                             mut_type,
-                             'colour='+color,
-                             'outlineColour=000000',
-                             'displayBoxes=true',
-                             'displayText=true',
-                             'colourText=false',
-                             'showUnconserved=false'
-                             ]
-                            ) + '\n'
-
 '''PTM sites'''
 PTM_TYPES = []
 ## Read phospho, acetyl and methyl sites files
@@ -343,7 +229,121 @@ for ptm_type in PTM_TYPES:
                              ]
                             ) + '\n'
 
-open('jalview_annotations2.txt', 'w').write(jalview_annotations)
+'''Resistance Mutations'''
+'''
+for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
+    if line[0] == '#':
+        continue
+    acc = line.split('\t')[2]
+    cosmic_mutation = line.split('\t')[1]
+    wtAA = cosmic_mutation[0]
+    mutAA = cosmic_mutation[-1]
+    uniprot_position = str(line.split('\t')[5].strip())
+    uniprot_mutation = wtAA + uniprot_position + mutAA
+    mut_type = 'R'
+    if kinases[acc].fasta[int(uniprot_position)-1] != wtAA:
+        raise Exception(f'{kinases[acc].fasta[int(uniprot_position)-1]} found rather than {wtAA} pos {uniprot_position} in {acc}')
+    if uniprot_position not in kinases[acc].mutations[mut_type]:
+        kinases[acc].mutations[mut_type].append(uniprot_position)
+    aln_position = kinases[acc].seq2aln[int(uniprot_position)-1]
+    new_aln_position = aln_position-START_ALN+WINDOW + 1
+    jalview_annotations += '\t'.join(
+                            [
+                            'SEQUENCE_GROUP',
+                             mut_type,
+                             str(new_aln_position),
+                             str(new_aln_position),
+                             '-1',
+                             kinases[acc].trimmed_aln_name
+                             ]
+                            ) + '\n'
+    # break
+    # print (new_aln_position, uniprot_mutation, acc, kinases[acc].name)
+'''
+for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
+    if line.split()[0] == 'uniprot_id':
+        continue
+    acc = line.split('\t')[0]
+    # cosmic_mutation = line.split('\t')[1]
+    wtAA = line.split('\t')[1]
+    mutAA = line.split('\t')[3]
+    uniprot_position = str(line.split('\t')[2].strip())
+    uniprot_mutation = wtAA + uniprot_position + mutAA
+    mut_type = 'R'
+    if kinases[acc].fasta[int(uniprot_position)-1] != wtAA:
+        raise Exception(f'{kinases[acc].fasta[int(uniprot_position)-1]} found rather than {wtAA} pos {uniprot_position} in {acc}')
+    if uniprot_position not in kinases[acc].mutations[mut_type]:
+        kinases[acc].mutations[mut_type].append(uniprot_position)
+    aln_position = kinases[acc].seq2aln[int(uniprot_position)-1]
+    new_aln_position = aln_position-START_ALN+WINDOW + 1
+    jalview_annotations += '\t'.join(
+                            [
+                            'SEQUENCE_GROUP',
+                             mut_type,
+                             str(new_aln_position),
+                             str(new_aln_position),
+                             '-1',
+                             kinases[acc].trimmed_aln_name
+                             ]
+                            ) + '\n'
+    # break
+    # print (new_aln_position, uniprot_mutation, acc, kinases[acc].name)
+
+jalview_annotations += '\t'.join(
+                            [
+                            'PROPERTIES',
+                             'R',
+                             'colour=Cyan',
+                             'outlineColour=000000',
+                             'displayBoxes=true',
+                             'displayText=true',
+                             'colourText=false',
+                             'showUnconserved=false'
+                             ]
+                            ) + '\n'
+# open('jalview_annotations2.txt', 'w').write(jalview_annotations)
+# exit()
+
+'''ACT/DEACT mutations'''
+for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
+    if line.split('\t')[0] == 'uniprot_name':
+        continue
+    acc = line.split('\t')[1]
+    mut_type = line.split('\t')[5]
+    wtAA = line.split('\t')[2]
+    uniprot_position = line.split('\t')[3]
+    if kinases[acc].fasta[int(uniprot_position)-1] != wtAA:
+        raise Exception(f'{kinases[acc].fasta[int(uniprot_position)-1]} found rather than {wtAA} pos {uniprot_position} in {acc}')
+    if uniprot_position not in kinases[acc].mutations[mut_type]:
+        kinases[acc].mutations[mut_type].append(uniprot_position)
+    aln_position = kinases[acc].seq2aln[int(uniprot_position)-1]
+    new_aln_position = aln_position-START_ALN+WINDOW + 1
+    jalview_annotations += '\t'.join(
+                            [
+                            'SEQUENCE_GROUP',
+                             mut_type,
+                             str(new_aln_position),
+                             str(new_aln_position),
+                             '-1',
+                             kinases[acc].trimmed_aln_name
+                             ]
+                            ) + '\n'
+
+for mut_type, color in zip(['A', 'D'], ['Green', 'Red']):
+    jalview_annotations += '\t'.join(
+                            [
+                            'PROPERTIES',
+                             mut_type,
+                             'colour='+color,
+                             'outlineColour=000000',
+                             'displayBoxes=true',
+                             'displayText=true',
+                             'colourText=false',
+                             'showUnconserved=false'
+                             ]
+                            ) + '\n'
+
+open('jalview_annotations3.txt', 'w').write(jalview_annotations)
 exit()
 dic_mutations = {}
 for acc in kinases:

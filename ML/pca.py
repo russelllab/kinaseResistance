@@ -48,7 +48,7 @@ columns_to_exclude = ['Acc',
                     #   'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT',
-                      'hmmScoreDiff'
+                    #   'hmmScoreDiff'
                       ]
 for aa in AA:
     # if aa not in ['S', 'T', 'Y']:
@@ -58,7 +58,7 @@ for aa in AA:
 
 pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    if i in [0]: continue
+    # if i in [0]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
@@ -112,7 +112,7 @@ data = scaler.transform(data)
 # print (trainMat)
 # sys.exit()
 
-X = TSNE(n_components=2, learning_rate='auto', init='random', perplexity=100).fit_transform(data)
+X = TSNE(n_components=2, learning_rate='auto', init='random', perplexity=50).fit_transform(data)
 
 # pca = decomposition.PCA(n_components=2)
 # pca.fit(data)
@@ -137,7 +137,11 @@ print (kmeans.labels_)
 # kmeans.predict([[0, 0], [12, 3]])
 print (kmeans.cluster_centers_)
 
-pca_df = pd.DataFrame(X, columns = ['PCA1', 'PCA2'])
+col1 = 'PCA1'
+col1 = 'tsne_1'
+col2 = 'PCA2'
+col2 = 'tsne_2'
+pca_df = pd.DataFrame(X, columns = [col1, col2])
 pca_df = pd.concat([pca_df, original_df], axis=1)
 # print (pca_df)
 # print (original_df)
@@ -147,7 +151,7 @@ plt.show()
 pca_df.to_csv('trainDataPostPCA.tsv.gz', sep = '\t')
 
 fig = px.scatter(
-                pca_df, x="PCA1", y="PCA2", color="MUT_TYPE",
+                pca_df, x="tsne_1", y="tsne_2", color="MUT_TYPE",
                 # symbol = 'Dataset',
                 # size = pca_df['Dataset'].to_numpy(),
                 size = 'Dataset',

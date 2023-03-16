@@ -50,11 +50,11 @@ def get_train_set2():
     # df = df.loc[:, ~df.columns.isin(['allHomologs','exclParalogs','specParalogs','orthologs', 'bpso','bpsh'])]
     df = df.loc[:, ~df.columns.isin([
                                 # 'allHomologs',
-                                'exclParalogs',
-                                'specParalogs',
-                                'orthologs'
-                                'bpso',
-                                'bpsh'
+                                # 'exclParalogs',
+                                # 'specParalogs',
+                                # 'orthologs'
+                                # 'bpso',
+                                # 'bpsh'
                                 ])]
     # exclude columns to make the data matrix
     original_df = df.copy()
@@ -73,24 +73,27 @@ def get_train_set2():
                         #   'hmmScoreMUT',
                         #   'hmmScoreDiff'
                         ]
-    # for aa in AA:
-    #     columns_to_exclude.append(aa+'_WT')
-    #     columns_to_exclude.append(aa+'_MUT')
+    for aa in AA:
+        # if aa not in ['S', 'T', 'Y']:
+            columns_to_exclude.append(aa+'_WT')
+        # if aa not in ['D', 'E']:
+            columns_to_exclude.append(aa+'_MUT')
+
     pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
     for i in range(-5,6):
-        if i in [-1, 0, 1]: continue
+        # if i in [0]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
-    # ptm_cols = ['p', 'ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
-    # for i in range(-5,6):
-    #     if i in [-1, 0, 1]: continue
-    #     for col in pfam_ptm_cols:
-    #         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
+    ptm_cols = ['p', 'ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
+    for i in range(-5,6):
+        if i in [0]: continue
+        for col in pfam_ptm_cols:
+            columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
     adr_cols = ['A', 'D', 'R']
     for i in range(-5, 6):
-        if i in [-1, 0, 1]: continue
+        if i in [0]: continue
         for col in adr_cols:
             columns_to_exclude.append(col+'_'+str(i))
 
@@ -159,17 +162,17 @@ print (x_train.shape)
 # x_train = x_train / 255.
 # x_test = x_test / 255.
 
-latent_dim = 16
+latent_dim = 8
 
 # Images are 28 by 28
 img_shape = (x_train.shape[1], x_train.shape[2])
 
 encoder = Sequential([
     Flatten(input_shape=img_shape),
-    # Dense(256, activation='relu'),
-    Dense(128, activation='relu'),
-    Dense(64, activation='relu'),
-    Dense(32, activation='relu'),
+    Dense(256, activation='sigmoid'),
+    Dense(128, activation='sigmoid'),
+    Dense(64, activation='sigmoid'),
+    Dense(32, activation='sigmoid'),
     Dense(latent_dim, name='encoder_output')
 ])
 
@@ -177,7 +180,7 @@ decoder = Sequential([
     Dense(32, activation='sigmoid', input_shape=(latent_dim,)),
     Dense(64, activation='sigmoid'),
     Dense(128, activation='sigmoid'),
-    # Dense(256, activation='sigmoid'),
+    Dense(256, activation='sigmoid'),
     Dense(img_shape[0] * img_shape[1], activation='sigmoid'),
     Reshape(img_shape)
 ])
@@ -217,7 +220,7 @@ class TestEncoder(tf.keras.callbacks.Callback):
                               outputs=self.model.get_layer('encoder_output').output)
         encoder_output = encoder_model(self.x_test)
         # plt.subplot(25, 4, self.current_epoch)
-        if self.current_epoch == 100:
+        if self.current_epoch == 200:
             color_discrete_map={
                         "A": "green",
                         "D": "red",
@@ -251,7 +254,7 @@ autoencoder = Model(inputs=encoder.input, outputs=decoder(encoder.output))
 autoencoder.compile(loss='binary_crossentropy', optimizer='adam')
 
 plt.figure(figsize=(15,15))
-model_history = autoencoder.fit(x_train, x_train, epochs=100, batch_size=32, verbose=0,
+model_history = autoencoder.fit(x_train, x_train, epochs=200, batch_size=50, verbose=0, shuffle=True,
                                 callbacks=[TestEncoder(x_test, y_test, y_test_color, y_test_radius)])
 plt.show()
 
