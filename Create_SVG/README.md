@@ -22,16 +22,15 @@ The alignment is read in from a file & parsed via Biopython. Both are then hande
 ___
 ## Required libraries/software
 
-Python 2.7. (sorry folks)
+Python 2.7. or Python 3.6
 
 import svgwrite
 import ast
 imposrt sys
-from Bio import AlignIO
+from Bio import AlignIO (only when using Python 2.7)
 
-**Note**: Libraries are also available for >= Python 3.6, print statements and dictionary handling could be converted 
 
-In case we have to deal with .pkl files I did a dirty solution to reformat them into a script that Python2.7 can use. Ironically this script is obviously in Python3. **See reformatter.py**
+In case we have to deal with .pkl files I did a quick solution to reformat them into a script that Python2.7 can use. Ironically this script is obviously in Python3. **See reformatter.py**
 
 ___
 ## Features (Version K)
@@ -73,7 +72,6 @@ This command has several field after calling the script:
 ___
 ## What is next?
 - Make circle size adjustable by evidence.
-- Updating the script to be pure python3.
 
 ___
 ## The most recent type of results
