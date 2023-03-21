@@ -25,8 +25,11 @@ ___
 Python 2.7. or Python 3.6
 
 import svgwrite
+
 import ast
+
 imposrt sys
+
 from Bio import AlignIO (only when using Python 2.7)
 
 
