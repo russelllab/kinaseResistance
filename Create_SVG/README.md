@@ -37,6 +37,7 @@ In case we have to deal with .pkl files I did a quick solution to reformat them 
 
 ___
 ## Features (Version K)
+- **New** Upgraded the code to work under Python3.6
 - **New** Added transparent rectangles to highlight a sequence conservation (= identity) over >= 70 %, based on the sequence of interest. The colors for this are taken from CLUSTAL/Jalview.
 - **New** Change highlighting to circles. Circle radius can later be adjusted based on evidence.
 - **New** Added basic heatmapping above the alignment, showing how many highlights per position & per category we have.
