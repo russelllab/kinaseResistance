@@ -8,7 +8,8 @@ import os, sys, gzip
 
 flag = 0
 dic_kinase = {}
-for line in gzip.open('humanKinasesHmmsearchTrimmed.txt.gz', 'rt'):
+# for line in gzip.open('humanKinasesHitsSplitHmmsearchTrimmed.txt.gz', 'rt'):
+for line in gzip.open('humanKinasesHitsHmmsearch.txt.gz', 'rt'):
 	if len(line.split()) == 0:
 		continue
 	if 'Domain annotation for each sequence (and alignments):' in line:
@@ -23,7 +24,7 @@ for line in gzip.open('humanKinasesHmmsearchTrimmed.txt.gz', 'rt'):
 		# if len(dic_kinase) == 2: break
 		# print (acc)
 		continue
-	if line.split()[0] == 'humanKinasesTrimmed':
+	if line.split()[0] == 'humanKinasesHitsSplitTrimmed':
 		start_pfam = int(line.split()[1])
 		seq_pfam = line.split()[2]
 		end_pfam = int(line.split()[3].rstrip('\n'))
@@ -54,4 +55,4 @@ for acc in dic_kinase:
 	# print (dic_kinase[acc])
 	text += dic_kinase[acc]
 
-gzip.open('humanKinasesHmmsearchMappingsTrimmed.tsv.gz', 'wt').write(text)
+gzip.open('humanKinasesHitsHmmsearchMappings.tsv.gz', 'wt').write(text)

@@ -37,7 +37,7 @@ def fetchPkinaseHMM():
     dic_ss = {'G': 1, 'H': 1, 'B': 2, 'C': 3, 'E': 4, 'S': 5, 'T': 6, '-':7}
     hmm = {} # hmmPosition > AA > bit-score
     # for line in open('../pfam/Pkinase.hmm'):
-    for line in open('../pfam/humanKinasesTrimmed.hmm'):
+    for line in open('../pfam/humanKinasesHitsSplitTrimmed.hmm'):
         if len(line.split()) > 2:
             if line.split()[-2] == '-' and line.split()[-3] == '-':
                 #print (line.split())
@@ -57,7 +57,7 @@ def fetchHmmsearch(kinases, Kinase):
     one Pkinase domain.
     '''
     # os.system('hmmsearch -o out.txt ../pfam/Pkinase.hmm ../data/humanKinases.fasta')
-    os.system('hmmsearch -o out.txt ../pfam/humanKinasesTrimmed.hmm ../data/humanKinases.fasta')
+    os.system('hmmsearch -o out.txt ../pfam/humanKinasesHitsSplitTrimmed.hmm ../data/humanKinases.fasta')
     flag = 0
     for line in open('out.txt', 'r'):
         if line[:2] == '>>':
@@ -69,7 +69,7 @@ def fetchHmmsearch(kinases, Kinase):
                 domainNum = int(line.split('domain')[1].split()[0])
                 kinases[acc].domains[domainNum] = {}
                 kinases[acc].seq2pfam[domainNum] = {}
-            elif line.split()[0] == 'humanKinasesTrimmed':
+            elif line.split()[0] == 'humanKinasesHitsSplitTrimmed':
                 hmmStart = int(line.split()[1])
                 hmmSeq = line.split()[2]
                 hmmEnd = int(line.split()[3])

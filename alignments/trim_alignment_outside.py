@@ -11,7 +11,7 @@ from tqdm import tqdm
 import sys, gzip
 import pickle
 
-INPUT_FILE = 'humanKinases.clustal'
+INPUT_FILE = 'humanKinasesHitsSplit.clustal'
 GAP_THRESHOLD = 0.9
 START_ALN = 32178
 END_ALN = 33550
@@ -101,8 +101,8 @@ for acc, row in zip(aln_accs, df.to_numpy()):
     trimmed_aln_fasta += kinases[acc].find_fasta_position(START_ALN - WINDOW) + '\n'
     trimmed_aln_fasta += ''.join(row) + '\n'
 
-open('humanKinasesTrimmed.aln', 'w').write(trimmed_aln_clustal)
-open('humanKinasesTrimmed.fasta', 'w').write(trimmed_aln_fasta)
+open('humanKinasesHitsSplitTrimmed.aln', 'w').write(trimmed_aln_clustal)
+open('humanKinasesHitsSplitTrimmed.fasta', 'w').write(trimmed_aln_fasta)
 
 jalview_annotations = 'JALVIEW_ANNOTATION\n'
 
@@ -343,7 +343,7 @@ for mut_type, color in zip(['A', 'D'], ['Green', 'Red']):
                              ]
                             ) + '\n'
 
-open('jalview_annotations3.txt', 'w').write(jalview_annotations)
+open('jalview_annotations5.txt', 'w').write(jalview_annotations)
 exit()
 dic_mutations = {}
 for acc in kinases:

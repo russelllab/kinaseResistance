@@ -42,7 +42,7 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # # print (kinases['Q9NYV4'].burr[3])
 # # print (kinases['Q92772'].dihedral)
 # fetchData.iupredScores(kinases, Kinase)
-fetchData.homologyScores(kinases, Kinase)
+# fetchData.homologyScores(kinases, Kinase)
 
 # #print (kinases['Q9NYV4'].mechismo)
 # data = []
@@ -118,7 +118,7 @@ def fetchStrucFeat(acc, domainNum):
 
 '''Map sequence to Pfam for all canonical kinases'''
 seq2pfam = {}
-for line in gzip.open('../data/humanKinasesHmmsearchMappingsTrimmed.tsv.gz', 'rt'):
+for line in gzip.open('../data/humanKinasesHitsHmmsearchMappings.tsv.gz', 'rt'):
     if line[0] =='#':
         continue
     acc = line.split('\t')[0].split('|')[1]
@@ -161,6 +161,7 @@ for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     if mutation not in kinases[acc].mutations:
         dataset = 'train'
         kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
+        # print (acc, gene, position, wtAA, mutAA)
         kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
         pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
 
@@ -262,9 +263,10 @@ for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
 '''Fetch PTM data'''
 hmmPTM = {}
 # for line in open('../data/Kinase_psites4.tsv', 'r'):
-for line in open('../data/Kinase_psites_trimmed.tsv', 'r'):
+# for line in open('../data/Kinase_psites_trimmed.tsv', 'r'):
+for line in open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r'):
     if line[0] == '#': continue
-    if line.split()[2] != 'humanKinasesTrimmed': continue
+    if line.split()[2] != 'humanKinasesHitsSplitTrimmed': continue
     acc = line.split('\t')[0]
     if acc not in kinases: continue
     position = int((line.split('\t')[3].split('-')[0])[1:])
@@ -291,7 +293,7 @@ for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'_pfam\t').join(PTM_TYPES) + '_' + str(position) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
-trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+# trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
 for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'\t').join(['A', 'D', 'R']) + '_'+str(position)+'\t'
 # trainMat += '_known\t'.join(['A', 'D', 'R']) + '_known\t'
@@ -315,7 +317,7 @@ for acc in kinases:
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
         ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM, WS)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
-        homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
+        # homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
         adr_row = fetchData.getADRvector(acc, position, kinases, pkinase_act_deact_res, WS)
         print (
@@ -333,7 +335,7 @@ for acc in kinases:
         row.append(is_phosphomimic)
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        row += [int(item) for item in homology_row]
+        # row += [int(item) for item in homology_row]
         row += [int(item) for item in adr_row]
         data.append(row)
 
@@ -343,7 +345,7 @@ for acc in kinases:
         trainMat += str(is_phosphomimic) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
-        trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+        # trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
         trainMat += mut_types + '\n'
 
@@ -358,7 +360,7 @@ for acc in kinases:
         else:
             mut_types_colors.append('violet')
 
-gzip.open('trainDataFromTrimmedAln.tsv.gz', 'wt').write(trainMat)
+gzip.open('trainDataFromHitsSplitTrimmedAln.tsv.gz', 'wt').write(trainMat)
 data = np.array(data)
 scaler = MinMaxScaler()
 scaler.fit(data)

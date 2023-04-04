@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 from tqdm import tqdm
 
-INPUT_FILE = 'humanKinases.clustal'
+INPUT_FILE = 'humanKinasesHITS.clustal'
 GAP_THRESHOLD = 0.9
 
 class Kinase:

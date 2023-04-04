@@ -13,9 +13,10 @@ from scipy.stats import fisher_exact
 import plotly.express as px
 
 PATH_TO_FASTA = '../KA/UniProtFasta2/'
-PFAM_DOMS = ['humanKinasesTrimmed'] # Domains to search for
+# PFAM_DOMS = ['humanKinasesTrimmed'] # Domains to search for
+PFAM_DOMS = ['humanKinasesHitsSplitTrimmed'] # Domains to search for
 OUT_TEXT = '#Acc\tGene\tPfam_Dom\tPfam_Position\tPfam_Residue\tPTM_type\n'
-OUT_FILE = 'Kinase_psites_trimmed.tsv'
+OUT_FILE = 'Kinase_psites_hits_split_trimmed.tsv'
 
 class Kinases:
     '''
@@ -35,7 +36,7 @@ class Kinases:
         self.kinase_to_pfam = {}
     def get_fasta_formatted(self, gene):
         '''
-        Fucntion to return FASTA formatted sequence
+        Function to return FASTA formatted sequence
         '''
         return '>'+self.acc+'\n'+self.sequence
 
@@ -145,15 +146,16 @@ for acc in kinases_dic:
 open('allKinases.fasta', 'w').write(all_kinases_fasta)
 '''
 # Run HMMSEARCH against saved sequences
-os.system('hmmsearch -o allKinasesHmmsearchTrimmed.txt ../pfam/humanKinasesTrimmed.hmm allKinases.fasta')
+os.system('hmmsearch -o allKinasesHitsSplitHmmsearchTrimmed.txt ../pfam/humanKinasesHitsSplitTrimmed.hmm allKinases.fasta')
 
 # print(kinases_dic)
 ## read the HMMSEARCH output
 for pfam_dom in PFAM_DOMS:
-    HMMSEARCH_OUT = 'allKinasesHmmsearchTrimmed.txt'
+    HMMSEARCH_OUT = 'allKinasesHitsSplitHmmsearchTrimmed.txt'
     pfam = {}
     flag = 0
     for line in open(HMMSEARCH_OUT, 'r'):
+        # print (line)
         if len(line.split()) == 0:
             continue
         if line[:2] == '>>':
