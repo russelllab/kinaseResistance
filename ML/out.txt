@@ -23,7 +23,7 @@ Scores for complete sequences (score includes all domains):
    6.6e-140  463.6  68.1    1.9e-76  253.7   0.0    7.6  2  sp|Q15772|SPEG_HUMAN   Striated muscle preferentially express
      1e-138  459.6   5.0    1.1e-85  284.3   1.5    2.1  2  sp|O60674|JAK2_HUMAN   Tyrosine-protein kinase JAK2 OS=Homo s
    2.2e-137  455.2  68.7      4e-80  265.9  66.7    6.9  2  sp|Q5VST9|OBSCN_HUMAN  Obscurin OS=Homo sapiens OX=9606 GN=OB
-   5.2e-136  450.7  44.5   6.1e-136  450.4  44.5    1.0  1  sp|Q9H0K1|SIK2_HUMAN   Serine/threonine-protein kinase SIK2 O
+   5.2e-136  450.7  44.6   6.1e-136  450.4  44.6    1.0  1  sp|Q9H0K1|SIK2_HUMAN   Serine/threonine-protein kinase SIK2 O
    6.6e-136  450.4   6.2    3.6e-84  279.3   0.6    2.1  2  sp|P23458|JAK1_HUMAN   Tyrosine-protein kinase JAK1 OS=Homo s
      4e-135  447.8  27.5   5.2e-135  447.4  27.5    1.0  1  sp|Q8IYT8|ULK2_HUMAN   Serine/threonine-protein kinase ULK2 O
    1.4e-134  445.9  30.9   1.4e-134  445.9  30.9    1.9  1  sp|Q7L7X3|TAOK1_HUMAN  Serine/threonine-protein kinase TAO1 O
@@ -169,7 +169,7 @@ Scores for complete sequences (score includes all domains):
    4.1e-105  348.5   3.6   4.6e-105  348.4   3.6    1.0  1  sp|O43318|M3K7_HUMAN   Mitogen-activated protein kinase kinas
    4.4e-105  348.4   0.1   5.4e-105  348.1   0.1    1.0  1  sp|Q86SG6|NEK8_HUMAN   Serine/threonine-protein kinase Nek8 O
    5.1e-105  348.2   0.1   1.1e-104  347.1   0.0    1.5  1  sp|Q13177|PAK2_HUMAN   Serine/threonine-protein kinase PAK 2 
-   7.1e-105  347.7   2.9   8.8e-105  347.4   2.9    1.1  1  sp|Q9H4B4|PLK3_HUMAN   Serine/threonine-protein kinase PLK3 O
+   7.2e-105  347.7   2.9   8.8e-105  347.4   2.9    1.1  1  sp|Q9H4B4|PLK3_HUMAN   Serine/threonine-protein kinase PLK3 O
    7.7e-105  347.6  13.9   7.7e-105  347.6  13.9    2.1  1  sp|O95382|M3K6_HUMAN   Mitogen-activated protein kinase kinas
      9e-105  347.4   0.0   1.3e-104  346.9   0.0    1.2  1  sp|P29320|EPHA3_HUMAN  Ephrin type-A receptor 3 OS=Homo sapie
    1.2e-104  347.0   0.0   1.4e-104  346.7   0.0    1.1  1  sp|Q16566|KCC4_HUMAN   Calcium/calmodulin-dependent protein k
@@ -1202,10 +1202,10 @@ Domain annotation for each sequence (and alignments):
 >> sp|Q9H0K1|SIK2_HUMAN  Serine/threonine-protein kinase SIK2 OS=Homo sapiens OX=9606 GN=SIK2 PE=1 SV=1
    #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
  ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 !  450.4  44.5  5.6e-136  6.1e-136      18     968 ..       8     891 ..       2     892 .. 0.99
+   1 !  450.4  44.6  5.7e-136  6.1e-136      18     968 ..       8     891 ..       2     892 .. 0.99
 
   Alignments for each domain:
-  == domain 1  score: 450.4 bits;  conditional E-value: 5.6e-136
+  == domain 1  score: 450.4 bits;  conditional E-value: 5.7e-136
   humanKinasesHitsSplitTrimmed  18 elaeelrrkldlYellevLGeGaFGeVylardkktgelVAvKilkkkklkkeeevverflrEikiLkklrgHpNIvrLygv 98 
                                       +++++   +Y+++ +LG+G+F++V+l+r++ t+++VA+Ki++k++l+  +   e+++rE++i+k+l+ Hp+I++Ly v
           sp|Q9H0K1|SIK2_HUMAN   8 RHLQRGPVRVGFYDIEGTLGKGNFAVVKLGRHRITKTEVAIKIIDKSQLDAVNL--EKIYREVQIMKMLD-HPHIIKLYQV 85 
@@ -21241,7 +21241,7 @@ Passed Vit filter:                       483  (0.928846); expected 0.5 (0.001)
 Passed Fwd filter:                       480  (0.923077); expected 0.0 (1e-05)
 Initial search space (Z):                520  [actual number of targets]
 Domain search space  (domZ):             478  [number of targets reported over threshold]
-# CPU time: 5.81u 0.01s 00:00:05.81 Elapsed: 00:00:05.81
-# Mc/sec: 77.90
+# CPU time: 6.26u 0.05s 00:00:06.31 Elapsed: 00:00:06.30
+# Mc/sec: 71.92
 //
 [ok]
