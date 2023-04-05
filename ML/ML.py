@@ -18,13 +18,16 @@ from sklearn.model_selection import StratifiedKFold, RepeatedStratifiedKFold
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import roc_auc_score, roc_curve
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import confusion_matrix, matthews_corrcoef, f1_score, precision_score, recall_score
 from sklearn.metrics import auc
 from sklearn.metrics import RocCurveDisplay
 from sklearn import tree
+import xgboost as xgb
 
 RANDOM_STATE = 1
+ALGO = 'XGB' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10
 
@@ -188,43 +191,82 @@ rskf = RepeatedStratifiedKFold(n_splits=N_SPLITS, n_repeats=N_REPEATS)
 ## To perform the randomizationt test (Salzberg test), enable the this line
 # np.random.shuffle(y)
 
-parameters = {'C': [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0],
-            'solver': ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga'],
-            'penalty': ['l1', 'l2', 'elasticnet', 'none'],
-            'max_iter': [100, 250, 500, 1000, 1500, 2000]
-            }
-
-parameters = {'C': [0.001],
-            'solver': ['lbfgs'],
-            'penalty': ['l2'],
-            'max_iter': [100, 250, 500]
-            }
-
-parameters = {'max_depth': [None],
-            'min_samples_split': [2],
-            'min_samples_leaf': [3],
-            'max_features': ['sqrt', 'log2'],
-            'n_estimators': [100]
-            }
-model = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1)
-# model = LogisticRegression(class_weight='balanced')
-model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
-model.fit(X, y)
-
-breakLine = '#'.join(['-' for i in range(0, 50)])
-print (breakLine)
-## Best model hyper-parameters
-print ('Best model found during the CV')
-print (model.best_params_)
-
-# clf = LogisticRegression(class_weight='balanced', max_iter=model.best_params_['max_iter'], solver=model.best_params_['solver'], C=model.best_params_['C'], penalty=model.best_params_['penalty'])
-clf = RandomForestClassifier(n_estimators=model.best_params_['n_estimators'],
+if ALGO == 'LR':
+    '''
+    parameters = {'C': [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0],
+                'solver': ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga'],
+                'penalty': ['l1', 'l2', 'elasticnet', 'none'],
+                'max_iter': [100, 250, 500, 1000, 1500, 2000]
+                }
+    '''
+    parameters = {
+                'C': [0.001],
+                'solver': ['lbfgs'],
+                'penalty': ['l2'],
+                'max_iter': [100, 250, 500]
+                }
+    model = LogisticRegression(class_weight='balanced')
+    model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
+    model.fit(X, y)
+    clf = LogisticRegression(
+                        class_weight='balanced',
+                        max_iter=model.best_params_['max_iter'],
+                        solver=model.best_params_['solver'],
+                        C=model.best_params_['C'],
+                        penalty=model.best_params_['penalty']
+                        )
+elif ALGO == 'XGB':
+    parameters = {
+                'max_depth': [3],
+                'objective': ["binary:logistic"],
+                # 'learning_rate': [0.1],
+                # 'min_samples_split': [2],
+                # 'min_samples_leaf': [3],
+                # 'max_features': ['sqrt', 'log2'],
+                # 'n_estimators': [100]
+                }
+    xgb_model = xgb.XGBClassifier(
+                    random_state=RANDOM_STATE,
+                    scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0)
+                    )
+    model = GridSearchCV(xgb_model, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
+    model.fit(X, y)
+    clf = xgb.XGBClassifier(
+            # n_estimators=model.best_params_['n_estimators'],
+            # leaarning_rate=model.best_params_['learning_rate'],
+            # min_samples_leaf=model.best_params_['min_samples_leaf'],
+            # min_samples_split=model.best_params_['min_samples_split'],
+            max_depth=model.best_params_['max_depth'],
+            objective=model.best_params_['objective'],
+            # max_features=model.best_params_['max_features'],
+            random_state=RANDOM_STATE,
+            scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0)
+            )
+elif ALGO == 'RF':
+    parameters = {
+                'max_depth': [None],
+                'min_samples_split': [2],
+                'min_samples_leaf': [3],
+                'max_features': ['sqrt', 'log2'],
+                'n_estimators': [100]
+                }
+    rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1)
+    model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
+    model.fit(X, y)
+    clf = RandomForestClassifier(
+            n_estimators=model.best_params_['n_estimators'],
             min_samples_leaf=model.best_params_['min_samples_leaf'],
             min_samples_split=model.best_params_['min_samples_split'],
             max_depth=model.best_params_['max_depth'],
             max_features=model.best_params_['max_features'],
             random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
             )
+
+breakLine = '#'.join(['-' for i in range(0, 50)])
+print (breakLine)
+## Best model hyper-parameters
+print ('Best model found during the CV')
+print (model.best_params_)
 
 tprs = []
 aucs = []
@@ -239,14 +281,35 @@ for i in range(0,10):
     for fold, (train_index, test_index) in enumerate(skf.split(X, y)):
         X_train, X_validation = X[train_index], X[test_index]
         y_train, y_validation = y[train_index], y[test_index]
-        # clf = LogisticRegression(class_weight='balanced', max_iter=model.best_params_['max_iter'], solver=model.best_params_['solver'], C=model.best_params_['C'], penalty=model.best_params_['penalty'])
-        clf = RandomForestClassifier(n_estimators=model.best_params_['n_estimators'],
-            min_samples_leaf=model.best_params_['min_samples_leaf'],
-            max_depth=model.best_params_['max_depth'],
-            min_samples_split=model.best_params_['min_samples_split'],
-            max_features=model.best_params_['max_features'],
-            random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
-            )
+        if ALGO == 'LR':
+            clf = LogisticRegression(
+                        class_weight='balanced',
+                        max_iter=model.best_params_['max_iter'],
+                        solver=model.best_params_['solver'],
+                        C=model.best_params_['C'],
+                        penalty=model.best_params_['penalty']
+                        )
+        elif ALGO == 'XGB':
+            clf = xgb.XGBClassifier(
+                # n_estimators=model.best_params_['n_estimators'],
+                # learning_rate=model.best_params_['learning_rate'],
+                # min_samples_leaf=model.best_params_['min_samples_leaf'],
+                max_depth=model.best_params_['max_depth'],
+                objective=model.best_params_['objective'],
+                # min_samples_split=model.best_params_['min_samples_split'],
+                # max_features=model.best_params_['max_features'],
+                random_state=RANDOM_STATE,
+                scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0)
+                )
+        elif ALGO == 'RF':
+            clf = RandomForestClassifier(
+                n_estimators=model.best_params_['n_estimators'],
+                min_samples_leaf=model.best_params_['min_samples_leaf'],
+                max_depth=model.best_params_['max_depth'],
+                min_samples_split=model.best_params_['min_samples_split'],
+                max_features=model.best_params_['max_features'],
+                random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
+                )
         clf.fit(X_train, y_train)
         tn, fp, fn, tp = confusion_matrix(y_train, model.predict(X_train)).ravel()
         #print (tn, fp, fn, tp)
@@ -330,43 +393,64 @@ print ('Number of act mutations in the train set:', np.count_nonzero(y))
 print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
 
 ## Fit the best model on the data
-# clf = LogisticRegression(class_weight='balanced', max_iter=model.best_params_['max_iter'], solver=model.best_params_['solver'], C=model.best_params_['C'], penalty=model.best_params_['penalty'])
-clf = RandomForestClassifier(n_estimators=model.best_params_['n_estimators'],
-            min_samples_leaf=model.best_params_['min_samples_leaf'],
-            max_depth=model.best_params_['max_depth'],
-            max_features=model.best_params_['max_features'],
-            random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
-            )
+if ALGO == 'LR':
+    clf = LogisticRegression(
+                class_weight='balanced',
+                max_iter=model.best_params_['max_iter'],
+                solver=model.best_params_['solver'],
+                C=model.best_params_['C'],
+                penalty=model.best_params_['penalty']
+                )
+elif ALGO == 'XGB':
+    clf = xgb.XGBClassifier(
+                # n_estimators=model.best_params_['n_estimators'],
+                # learning_rate=model.best_params_['learning_rate'],
+                # min_samples_leaf=model.best_params_['min_samples_leaf'],
+                max_depth=model.best_params_['max_depth'],
+                objective=model.best_params_['objective'],
+                # max_features=model.best_params_['max_features'],
+                random_state=RANDOM_STATE,
+                scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0)
+                )
+elif ALGO == 'RF':
+    clf = RandomForestClassifier(
+                n_estimators=model.best_params_['n_estimators'],
+                min_samples_leaf=model.best_params_['min_samples_leaf'],
+                max_depth=model.best_params_['max_depth'],
+                max_features=model.best_params_['max_features'],
+                random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
+                )
 clf.fit(X,y)
-# print (clf.estimator_.decision_path(X))
-estimator = clf.estimator_
-estimator.fit(X, y)
-text_representation = tree.export_text(estimator)
-# print(text_representation)
-fig = plt.figure(figsize=(25,20))
-_ = tree.plot_tree(estimator, 
-                   feature_names = feature_names,
-                   class_names = y_names,
-                   filled=True)
-# plt.show()
+if ALGO == 'RF':
+    # print (clf.estimator_.decision_path(X))
+    estimator = clf.estimator_
+    estimator.fit(X, y)
+    text_representation = tree.export_text(estimator)
+    # print(text_representation)
+    fig = plt.figure(figsize=(25,20))
+    _ = tree.plot_tree(estimator, 
+                    feature_names = feature_names,
+                    class_names = y_names,
+                    filled=True)
+    # plt.show()
 
-print (''.join(['#' for i in range(1,25)]))
-data = []
-for feature_name, importance in zip(feature_names, clf.feature_importances_):
-    if importance > 0.01:
-        print (feature_name, importance)
-        row = []
-        row.append(feature_name)
-        row.append(importance)
-        data.append(row)
+    print (''.join(['#' for i in range(1,25)]))
+    data = []
+    for feature_name, importance in zip(feature_names, clf.feature_importances_):
+        if importance > 0.01:
+            print (feature_name, importance)
+            row = []
+            row.append(feature_name)
+            row.append(importance)
+            data.append(row)
 
-df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
-df_feature_importances.sort_values(by=['Importance'], ascending=False)
-sns.set(font_scale = 0.6)
-sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
-plt.grid(True, lw=0.1)
-# plt.savefig('feature_imp.png')
-# plt.show()
+    df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
+    df_feature_importances.sort_values(by=['Importance'], ascending=False)
+    sns.set(font_scale = 0.6)
+    sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
+    plt.grid(True, lw=0.1)
+    # plt.savefig('feature_imp.png')
+    # plt.show()
 
 test_types = ['AR', 'R', 'Activating', 'TBD', 'Inconclusive']
 for test_type in test_types:
@@ -377,7 +461,7 @@ for test_type in test_types:
             if q != test_type: continue
             X_sub_test.append(p)
             y_sub_test.append(1)
-            
+        X_sub_test = np.array(X_sub_test)
         # print (test_name, round(y_pred[1], 2), y_known)
         print (test_type, 'results', '(', len(X_sub_test), ')')
         # print(roc_auc_score(y_sub_test, clf.predict_proba(X_sub_test)[:,1]))
@@ -391,5 +475,6 @@ for test_type in test_types:
             if q != test_type: continue
             X_sub_test = []
             X_sub_test.append(p)
+            X_sub_test = np.array(X_sub_test)
             y_pred = round((clf.predict_proba(X_sub_test)[0])[1], 3)
             print (test_name, y_pred, q)
