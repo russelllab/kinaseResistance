@@ -15,7 +15,7 @@ from sklearn.manifold import TSNE
 
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
-df = pd.read_csv('trainDataFromTrimmedAln.tsv.gz', sep = '\t')
+df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t')
 
 # Enable this if you want to plot only train data
 # df = df[df.Dataset == 'train']
@@ -51,21 +51,21 @@ columns_to_exclude = ['Acc',
                     #   'hmmScoreDiff'
                       ]
 for aa in AA:
-    # if aa not in ['S', 'T', 'Y']:
+    if aa not in ['S', 'T', 'Y']:
         columns_to_exclude.append(aa+'_WT')
-    # if aa not in ['D', 'E']:
+    if aa not in ['D', 'E']:
         columns_to_exclude.append(aa+'_MUT')
 
 pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    # if i in [0]: continue
+    if i in [0]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
 ptm_cols = ['p', 'ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
 for i in range(-5,6):
     if i in [0]: continue
-    for col in pfam_ptm_cols:
+    for col in ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
 adr_cols = ['A', 'D', 'R']

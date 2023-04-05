@@ -48,6 +48,24 @@ class Mutation:
         self.positionHmm = None
         self.mut_types = [mut_type]
     
+    def findChangeInCharge(self):
+        '''
+        Function to calculate the change in charge of the mutation
+        and return the array of charges for the wildtype and mutant
+        '''
+        positiveAA = ['R', 'K', 'H']
+        negativeAA = ['D', 'E']
+        # neutral_AA = ['S', 'T', 'N', 'Q', 'C', 'G', 'P', 'A', 'V', 'I', 'L', 'M', 'F', 'W', 'Y']
+        charges =[]
+        for aa in [self.wtAA, self.mutAA]:
+            if aa in positiveAA:
+                charges.append(1)
+            elif aa in negativeAA:
+                charges.append(-1)
+            else:
+                charges.append(0)
+        return charges
+        
     def checkPhosphomimic(self):
         if self.wtAA in ['S', 'T', 'Y'] and self.mutAA in ['D', 'E']:
             return 1

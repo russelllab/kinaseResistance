@@ -286,6 +286,7 @@ for line in open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r'):
 trainMat = 'Acc\tGene\tMutation\tDataset\t'
 trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
 trainMat += 'Phosphomimic\t'
+trainMat += 'ChargesWT\tChargesMUT\t'
 startWS = int((WS-1)/2) * -1
 endWS = int((WS-1)/2)
 for position in range(startWS, endWS+1):
@@ -319,6 +320,7 @@ for acc in kinases:
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
+        charges_row = kinases[acc].mutations[mutation].findChangeInCharge()
         adr_row = fetchData.getADRvector(acc, position, kinases, pkinase_act_deact_res, WS)
         print (
             acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
@@ -333,6 +335,7 @@ for acc in kinases:
         row.append(float(hmmScoreMUT))
         row.append(float(hmmScoreMUT)-float(hmmScoreWT))
         row.append(is_phosphomimic)
+        row += [int(item) for item in charges_row]
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
         row += [int(item) for item in homology_row]
@@ -343,6 +346,7 @@ for acc in kinases:
         trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t' + mutation_obj.dataset + '\t'
         trainMat += str(hmmPos) + '\t' + str(hmmSS) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
         trainMat += str(is_phosphomimic) + '\t'
+        trainMat += '\t'.join([str(item) for item in charges_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'

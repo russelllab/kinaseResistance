@@ -1,12 +1,14 @@
+#!/usr/bin/env python3
+
 import numpy as np
 import scipy as sp
 import os, sys, gzip
 from sklearn.cluster import KMeans
 import seaborn as sns
 import pandas as pd
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras import layers
+# import tensorflow as tf
+# from tensorflow import keras
+# from tensorflow.keras import layers
 import matplotlib.pyplot as plt
 from sklearn import decomposition
 from sklearn.preprocessing import MinMaxScaler
@@ -22,13 +24,13 @@ from sklearn.metrics import auc
 from sklearn.metrics import RocCurveDisplay
 from sklearn import tree
 
-RANDOM_STATE = 0
+RANDOM_STATE = 1
 N_SPLITS = 10
 N_REPEATS = 10
 
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
-df = pd.read_csv('trainDataFromTrimmedAln.tsv.gz', sep = '\t')
+df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t')
 df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.025, regex=True)
 df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
 # exclude columns
@@ -56,29 +58,47 @@ columns_to_exclude = [
                     #   'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT',
-                    #   'hmmScoreDiff'
+                      'hmmScoreDiff'
                       ]
+'''
 for aa in AA:
     if aa not in ['S', 'T', 'Y']:
         columns_to_exclude.append(aa+'_WT')
     if aa not in ['D', 'E']:
         columns_to_exclude.append(aa+'_MUT')
+'''
 
-pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
+############
+pfam_ptm_cols = ['ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
+for i in range(-5,6):
+    # if i in [0]: continue
+    for col in pfam_ptm_cols:
+        columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
+
+pfam_ptm_cols = ['p_pfam']
 for i in range(-5,6):
     if i in [0]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
+############
 
-ptm_cols = ['p', 'ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
+ptm_cols = ['ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
 for i in range(-5,6):
-    if i in [0]: continue
-    for col in pfam_ptm_cols:
+    if i in [-2, -1, 0, 1, 2]: continue
+    for col in ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
+
+ptm_cols = ['p']
+for i in range(-5,6):
+    if i in [-2, -1, 0, 1, 2]: continue
+    for col in ptm_cols:
+        columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
+
+############
 
 adr_cols = ['A', 'D', 'R']
 for i in range(-5, 6):
-    if i in [0]: continue
+    if i in [-1,0,1]: continue
     for col in adr_cols:
         columns_to_exclude.append(col+'_'+str(i))
 
@@ -89,7 +109,7 @@ df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 # columns_to_scale += ['hmmScoreDiff', 'hmmScoreWT', 'hmmScoreMUT']
 # df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
 
-print (df.columns.to_numpy())
+print ('columns to consider', df.columns.to_numpy())
 # sys.exit()
 feature_names = df.columns.to_numpy()
 feature_names = feature_names[3:-1]
@@ -103,12 +123,12 @@ X_test = []
 y_test = []
 test_names = []
 for row in df.to_numpy():
-    if row[-1] == 'A':
+    if row[-1] in ['A']:
         y.append(1)
         y_names.append(row[-1])
         X.append(row[3:-1])
         train_names.append('/'.join(row[:3]))
-    elif row[-1] in ['N', 'D']:
+    elif row[-1] in ['D']:
         y.append(0)
         y_names.append(row[-1])
         X.append(row[3:-1])
@@ -182,7 +202,7 @@ parameters = {'max_depth': [None],
             'min_samples_split': [2],
             'min_samples_leaf': [3],
             'max_features': ['sqrt', 'log2'],
-            'n_estimators': [25, 50, 100]
+            'n_estimators': [100]
             }
 model = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1)
 # model = LogisticRegression(class_weight='balanced')
@@ -343,8 +363,8 @@ df_feature_importances.sort_values(by=['Importance'], ascending=False)
 sns.set(font_scale = 0.6)
 sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
 plt.grid(True, lw=0.1)
-plt.savefig('feature_imp.png')
-# plt.show()
+# plt.savefig('feature_imp.png')
+plt.show()
 
 test_types = ['AR', 'R', 'Activating', 'TBD', 'Inconclusive']
 for test_type in test_types:
