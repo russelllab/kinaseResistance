@@ -286,7 +286,7 @@ for line in open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r'):
 trainMat = 'Acc\tGene\tMutation\tDataset\t'
 trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
 trainMat += 'Phosphomimic\t'
-trainMat += 'ChargesWT\tChargesMUT\t'
+trainMat += 'ChargesWT\tChargesMUT\tChargesDiff\t'
 startWS = int((WS-1)/2) * -1
 endWS = int((WS-1)/2)
 for position in range(startWS, endWS+1):

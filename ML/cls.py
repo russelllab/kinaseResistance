@@ -55,15 +55,18 @@ class Mutation:
         '''
         positiveAA = ['R', 'K', 'H']
         negativeAA = ['D', 'E']
-        # neutral_AA = ['S', 'T', 'N', 'Q', 'C', 'G', 'P', 'A', 'V', 'I', 'L', 'M', 'F', 'W', 'Y']
+        neutralAA = ['S', 'T', 'N', 'Q', 'C', 'G', 'P', 'A', 'V', 'I', 'L', 'M', 'F', 'W', 'Y']
+        charges_AA = {}
+        for aa in positiveAA:
+            charges_AA[aa] = 1.0
+        for aa in negativeAA:
+            charges_AA[aa] = -1.0
+        for aa in neutralAA:
+            charges_AA[aa] = 0.0
         charges =[]
-        for aa in [self.wtAA, self.mutAA]:
-            if aa in positiveAA:
-                charges.append(1)
-            elif aa in negativeAA:
-                charges.append(-1)
-            else:
-                charges.append(0)
+        charges.append(charges_AA[self.wtAA])
+        charges.append(charges_AA[self.mutAA])
+        charges.append(charges_AA[self.mutAA] - charges_AA[self.wtAA])
         return charges
         
     def checkPhosphomimic(self):

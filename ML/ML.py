@@ -52,6 +52,8 @@ columns_to_exclude = [
                     'Dataset',
                     'hmmPos',
                     'hmmSS',
+                    # 'ChargesWT',
+                    # 'ChargesMUT',
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
@@ -93,6 +95,10 @@ for i in range(-5,6):
     if i in [-2, -1, 0, 1, 2]: continue
     for col in ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
+
+############
+
+
 
 ############
 
