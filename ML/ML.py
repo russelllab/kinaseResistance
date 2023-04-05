@@ -52,8 +52,9 @@ columns_to_exclude = [
                     'Dataset',
                     'hmmPos',
                     'hmmSS',
-                    # 'ChargesWT',
-                    # 'ChargesMUT',
+                    'ChargesWT',
+                    'ChargesMUT',
+                    'ChargesDiff',
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
@@ -98,13 +99,9 @@ for i in range(-5,6):
 
 ############
 
-
-
-############
-
 adr_cols = ['A', 'D', 'R']
 for i in range(-5, 6):
-    if i in [-1,0,1]: continue
+    if i in [-1, 0, 1]: continue
     for col in adr_cols:
         columns_to_exclude.append(col+'_'+str(i))
 
@@ -157,7 +154,6 @@ for row in df.to_numpy():
 #     print (test_name, y_pred)
 # sys.exit()
 
-X = np.array(X)
 X = np.array(X)
 scaler = MinMaxScaler()
 scaler.fit(X)
@@ -318,7 +314,7 @@ ax.set(
 )
 ax.axis("square")
 ax.legend(loc="lower right")
-plt.show()
+# plt.show()
 #####################################################
     
 
@@ -352,7 +348,7 @@ _ = tree.plot_tree(estimator,
                    feature_names = feature_names,
                    class_names = y_names,
                    filled=True)
-plt.show()
+# plt.show()
 
 print (''.join(['#' for i in range(1,25)]))
 data = []
@@ -370,7 +366,7 @@ sns.set(font_scale = 0.6)
 sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
 plt.grid(True, lw=0.1)
 # plt.savefig('feature_imp.png')
-plt.show()
+# plt.show()
 
 test_types = ['AR', 'R', 'Activating', 'TBD', 'Inconclusive']
 for test_type in test_types:
