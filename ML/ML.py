@@ -27,7 +27,7 @@ from sklearn import tree
 import xgboost as xgb
 
 RANDOM_STATE = 1
-ALGO = 'XGB' #LR, XGB, RF
+ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10
 

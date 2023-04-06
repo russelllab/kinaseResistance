@@ -29,7 +29,6 @@ exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
              'O60229', 'Q96RG2', 'Q5VST9', 'Q8WZ42', 'O75962',
              'O95835', 'Q13535']
 
-
 kinases = {}
 
 fetchData.fetchFasta(kinases, Kinase)
