@@ -3,6 +3,7 @@
 
 import os, sys, gzip
 from tqdm import tqdm
+import psycopg2
 
 '''
 List of functions that fetch data from
@@ -11,6 +12,21 @@ different files
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+
+def connection():
+    '''Function to connect to postgresql database'''
+    '''mydb = mysql.connector.connect(
+    host="localhost",
+    user="kinase_user",
+    password=""
+    )'''
+    mydb = psycopg2.connect(
+                            database = "kinase_project",
+                            user = "gurdeep",
+                            password = "hellokitty",
+                            host = "localhost",
+                            port = "5432")
+    return mydb
 
 def fetchFasta(kinases, Kinase):
     for line in open('../data/humanKinases.fasta', 'r'):

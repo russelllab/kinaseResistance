@@ -8,20 +8,27 @@ kinase mutations project
 import mysql.connector
 import os, gzip, sys
 from tqdm import tqdm
+import psycopg2
 
 def connection():
-    '''Function to connect to the database'''
-    mydb = mysql.connector.connect(
+    '''Function to connect to postgresql database'''
+    '''mydb = mysql.connector.connect(
     host="localhost",
     user="kinase_user",
     password=""
-    )
+    )'''
+    mydb = psycopg2.connect(
+                            database = "kinase_project",
+                            user = "gurdeep",
+                            password = "hellokitty",
+                            host = "localhost",
+                            port = "5432")
     return mydb
 def create_hmm_table(mycursor)->None:
     '''Function to create HMM table'''
     AA = 'ACDEFGHIKLMNPQRSTVWY'
-    mycursor.execute("SET FOREIGN_KEY_CHECKS=0")
-    mycursor.execute("DROP TABLE IF EXISTS hmm")
+    # mycursor.execute("SET FOREIGN_KEY_CHECKS=0")
+    mycursor.execute("DROP TABLE IF EXISTS hmm CASCADE")
     hmm_score_names = ['pfam'+aa + 'VARCHAR(1)' for aa in AA]
     mycursor.execute("CREATE TABLE hmm (\
                      pfamPos VARCHAR(10) PRIMARY KEY, pfamAA VARCHAR(10),\
@@ -34,7 +41,7 @@ def create_hmm_table(mycursor)->None:
     dic_ss = {'G': 1, 'H': 1, 'B': 2, 'C': 3, 'E': 4, 'S': 5, 'T': 6, '-':7}
     hmm = {} # hmmPosition > AA > bit-score
     # for line in open('../pfam/Pkinase.hmm'):
-    for line in open('../pfam/humanKinasesHitsSplitTrimmed.hmm'):
+    for line in open('../pfam/humanKinasesHitsSplitTrimmed.hmm', 'r'):
         if len(line.split()) > 2:
             if line.split()[-2] == '-' and line.split()[-3] == '-':
                 #print (line.split())
@@ -64,12 +71,31 @@ def create_hmm_table(mycursor)->None:
                                  
             elif line.split()[0] == 'HMM':
                 AA = line.replace('\n', '').split()[1:]
+    
+    # Inserting the '-' position
+    mycursor.execute("INSERT INTO hmm (pfamPos, pfamAA, \
+                                pfamA, pfamC, pfamD, pfamE, pfamF, pfamG, pfamH, \
+                                pfamI, pfamK, pfamL, pfamM, pfamN, pfamP, pfamQ, \
+                                pfamR, pfamS, pfamT, pfamV, pfamW, pfamY) \
+                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, \
+                                        %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, \
+                                        %s, %s)", \
+                                ('-', 'X', \
+                                0, 0, \
+                                0, 0, \
+                                0, 0, \
+                                0, 0, \
+                                0, 0, \
+                                0, 0, \
+                                0, 0, \
+                                0, 0, \
+                                0, 0, \
+                                0, 0))
     # return hmm
 
 def create_ptm_table(mycursor)->None:
     '''Function to create the PTM table'''
-    mycursor.execute("SET FOREIGN_KEY_CHECKS=0")
-    mycursor.execute("DROP TABLE IF EXISTS ptms")
+    mycursor.execute("DROP TABLE IF EXISTS ptms CASCADE")
     mycursor.execute("CREATE TABLE ptms (\
                      uniprotPos INT, uniprotAA VARCHAR(1),\
                      pfamPos VARCHAR(10), pfamAA VARCHAR(1),\
@@ -82,6 +108,8 @@ def create_ptm_table(mycursor)->None:
         if line.startswith('#'): continue
         line = line.rstrip().split('\t')
         acc = line[0]
+        ## Neglect the isoforms
+        if '-' in acc: continue
         gene = line[1]
         ptmType = line[3].split('-')[1]
         residue = line[3].split('-')[0]
@@ -90,6 +118,13 @@ def create_ptm_table(mycursor)->None:
         pfamAA = (line[5])[0]
         pfamPos = line[4]
         name = acc + '/' + uniprotAA + str(uniprotPos)
+
+        mycursor.execute("select * from positions where name=%s", (name,))
+        if mycursor.fetchone() is None:
+            print (f'{name} not found in the positions table but in the PTMs file, \
+                hence excluded')
+            continue
+
         mycursor.execute("INSERT INTO ptms (\
                             uniprotPos, uniprotAA, pfamPos, pfamAA, acc, gene, ptmType, name) \
                             VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", \
@@ -100,7 +135,7 @@ def fetch_mappings_dic():
 
     '''
     mycursor.execute("DROP TABLE IF EXISTS positions")
-    mycursor.execute("CREATE TABLE positions (id INT AUTO_INCREMENT PRIMARY KEY, \
+    mycursor.execute("CREATE TABLE positions (id SERIAL PRIMARY KEY, \
                      uniprotPos INT, uniprotAA VARCHAR(1),\
                      pfamPos INT, pfamAA VARCHAR(1),\
                      acc VARCHAR(20), uniprot_id VARCHAR(25) \
@@ -133,8 +168,8 @@ def fetch_mappings_dic():
 
 def create_mutations_table(mycursor)->None:
     '''Function to create the mutations table'''
-    mycursor.execute("DROP TABLE IF EXISTS mutations")
-    mycursor.execute("CREATE TABLE mutations (id INT AUTO_INCREMENT PRIMARY KEY, \
+    mycursor.execute("DROP TABLE IF EXISTS mutations CASCADE")
+    mycursor.execute("CREATE TABLE mutations (id SERIAL PRIMARY KEY, \
                      mutation VARCHAR(10), wtAA VARCHAR(1), wtPos INT, \
                      mutAA VARCHAR(1), mut_type VARCHAR(10), \
                      acc VARCHAR(10), gene VARCHAR(10), \
@@ -163,20 +198,21 @@ def create_mutations_table(mycursor)->None:
 
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
-    mycursor.execute("DROP TABLE IF EXISTS kinases")
-    mycursor.execute("CREATE TABLE kinases (id INT AUTO_INCREMENT PRIMARY KEY, \
+    mycursor.execute("DROP TABLE IF EXISTS kinases CASCADE")
+    mycursor.execute("CREATE TABLE kinases (id SERIAL PRIMARY KEY, \
                      acc VARCHAR(10), gene VARCHAR(10), uniprot_id VARCHAR(25), \
                      fasta TEXT) \
                      ")
                     #  UNIQUE(acc, gene, uniprot_id, fasta))\
-    mycursor.execute("DROP TABLE IF EXISTS positions")
+    mycursor.execute("DROP TABLE IF EXISTS positions CASCADE")
     mycursor.execute("CREATE TABLE positions (\
                      uniprotPos INT, uniprotAA VARCHAR(1),\
-                     pfamPos VARCHAR(10), pfamAA VARCHAR(1),\
-                     acc VARCHAR(20), uniprot_id VARCHAR(25), \
-                     name VARCHAR(50) PRIMARY KEY, \
-                     CONSTRAINT pfamPos FOREIGN KEY (pfamPos) REFERENCES hmm(pfamPos) \
+                     pfamPos VARCHAR(10) REFERENCES hmm DEFERRABLE, \
+                     pfamAA VARCHAR(1), acc VARCHAR(20), \
+                     uniprot_id VARCHAR(25), \
+                     name VARCHAR(50) PRIMARY KEY \
                      )")
+    # CONSTRAINT pfamPos FOREIGN KEY (pfamPos) REFERENCES hmm(pfamPos) DEFERRABLE\
                      
     kinases = {}
     for line in open('../data/humanKinases.fasta', 'r'):
@@ -224,10 +260,14 @@ def create_kinases_table(mycursor)->None:
 
 if __name__ == '__main__':
     mydb = connection()
-    mycursor = mydb.cursor(buffered=True)
+    mydb.autocommit = True
+    mycursor = mydb.cursor()
     # Execute SQL query to check if database exists
-    mycursor.execute("SHOW DATABASES")
+    # mycursor.execute("SHOW DATABASES")
+    # sql = '''CREATE DATABASE kinase_project''';
+    # mycursor.execute(sql)
 
+    '''
     # Loop through results and check if database exists
     db_name = 'kinase_project'
     db_exists = False
@@ -237,9 +277,9 @@ if __name__ == '__main__':
             break
     if db_exists == False: mycursor.execute("CREATE DATABASE "+db_name)
     mycursor.execute("use "+db_name)
+    '''
 
-    # Create PTM table
-    # create_ptm_table(mycursor)
+    # Create tables
     create_hmm_table(mycursor)
     create_mutations_table(mycursor)
     create_kinases_table(mycursor)
@@ -247,8 +287,8 @@ if __name__ == '__main__':
     mydb.commit()
 
     # Use mysqldump to create backup file
-    backup_file = "kinaseDB.sql"
-    os.system(f"mysqldump -u {mydb.user} {mydb.database} > {backup_file}")
+    # backup_file = "kinaseDB.sql"
+    # os.system(f"mysqldump -u {mydb.user} {mydb.database} > {backup_file}")
 
     # Close MySQL connection
     mydb.close()

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-## Develop VAE for kinase resistance predtictions
+## Develop training set data
 import numpy as np
 import scipy as sp
 import os, sys, gzip
@@ -30,6 +30,11 @@ exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
              'O95835', 'Q13535']
 
 kinases = {}
+
+mydb = connection()
+mydb.autocommit = True
+mycursor = mydb.cursor()
+sys.exit()
 
 fetchData.fetchFasta(kinases, Kinase)
 fetchData.fetchGroup(kinases, Kinase)
