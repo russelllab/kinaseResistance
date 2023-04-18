@@ -453,7 +453,7 @@ def create_kinases_table(mycursor)->None:
                                 )
             '''
     df = pd.DataFrame(data, columns=['uniprotPos', 'uniprotAA', 'pfamPos', 'pfamAA', 'acc', 'uniprot_id', 'name'])
-    print (df)
+    # print (df)
     tmp_df = "./tmp_dataframe.csv"
     df.to_csv(tmp_df, index=False, header=False)
     f = open(tmp_df, 'r')
