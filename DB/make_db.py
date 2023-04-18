@@ -391,7 +391,7 @@ def create_kinases_table(mycursor)->None:
     for kinase in tqdm(kinases):
         num += 1
         if num == 3:
-            break
+           break
         acc = kinase.split('|')[0]
         uniprot_id = kinase.split('|')[1].split()[0]
         gene = kinase.split('|')[2]
@@ -442,7 +442,7 @@ if __name__ == '__main__':
     # Create tables
     create_hmm_table(mycursor)
     create_mutations_table(mycursor)
-    sys.exit()
+    # sys.exit()
     create_kinases_table(mycursor)
     create_homology_table(mycursor)
     create_ptm_table(mycursor)
