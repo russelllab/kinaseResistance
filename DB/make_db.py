@@ -241,7 +241,7 @@ def create_homology_table(mycursor) -> None:
                 mutation = line.split()[0].split('/')[1]
                 position = int(mutation[1:-1])
                 wtaa = mutation[0]
-                mutaa = mutation[1]
+                mutaa = mutation[-1]
                 wtscore = float(line.split()[2])
                 mutscore = float(line.split()[3])
                 diffscore = float(line.split()[4])
