@@ -224,12 +224,23 @@ def create_homology_table(mycursor) -> None:
         homology = fileEnd.split('.scores')[0]
         homology = homology[1:]
         mycursor.execute("DROP TABLE IF EXISTS "+homology+" CASCADE")
+        '''
         mycursor.execute("CREATE TABLE "+homology+" (id SERIAL PRIMARY KEY, \
                     acc VARCHAR(10), mutation VARCHAR(10), \
                     wtaa VARCHAR(5), position INT, mutaa VARCHAR(5), \
                     wtscore FLOAT, mutscore FLOAT, diffscore FLOAT, \
                     info TEXT) \
                     ")
+        '''
+        AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+        mycursor.execute("CREATE TABLE "+homology+" (id SERIAL PRIMARY KEY, \
+                    acc VARCHAR(10), wtaa VARCHAR(5), position INT, \
+                    A_score, C_score, D_score, E_score, F_score, G_score, \
+                    H_score, I_score, K_score, L_score, M_score, N_score, \
+                    P_score, Q_score, R_score, S_score, T_score, V_score, \
+                    W_score, Y_score, info TEXT) \
+                    ")
+        dic = {}
         for row in tqdm(accs):
             acc = row[0]
             if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
@@ -247,6 +258,9 @@ def create_homology_table(mycursor) -> None:
                 diffscore = float(line.split()[4])
                 # info = line.split()[5].rstrip()
                 info = '-'
+                if position not in dic: dic[position] = {'wtaa': wtaa, 'info': info}
+                dic[position][mutaa+'_score'] = mutscore
+                '''
                 mycursor.execute('INSERT INTO '+homology+' (acc, mutation, \
                                  wtaa, position, mutaa, \
                                  wtscore, mutscore, diffscore, \
@@ -255,6 +269,21 @@ def create_homology_table(mycursor) -> None:
                                 (acc, mutation, wtaa, position, mutaa, \
                                 wtscore, mutscore, diffscore, \
                                 info))
+                '''
+            for position in dic:
+                mycursor.execute('INSERT INTO '+homology+' (acc, wtaa, position,'+ 
+                                dic[position]['A_score']+','+dic[position]['C_score']+','+
+                                dic[position]['D_score']+','+
+                                dic[position]['E_score']+','+dic[position]['F_score']+','+
+                                dic[position]['G_score']+','+dic[position]['H_score']+','+
+                                dic[position]['I_score']+','+dic[position]['K_score']+','+
+                                dic[position]['L_score']+','+dic[position]['M_score']+','+
+                                dic[position]['N_score']+','+dic[position]['P_score']+','+
+                                dic[position]['Q_score']+','+dic[position]['R_score']+','+
+                                dic[position]['S_score']+','+dic[position]['T_score']+','+
+                                dic[position]['V_score']+','+dic[position]['W_score']+','+
+                                dic[position]['Y_score']+','+dic[position]['info']+')' \
+                                 )
 
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
