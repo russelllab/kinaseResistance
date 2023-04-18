@@ -294,7 +294,7 @@ def create_homology_table(mycursor) -> None:
         num = 0
         for row in tqdm(accs):
             num += 1
-            if num == 10: break
+            # if num == 10: break
             acc = row[0]
             if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
                 print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
@@ -373,7 +373,7 @@ def create_homology_table(mycursor) -> None:
                                  )
                 '''
         df = pd.DataFrame(data)
-        print (df)
+        # print (df)
         tmp_df = "./tmp_dataframe.csv"
         df.to_csv(tmp_df, index=False, header=False)
         f = open(tmp_df, 'r')
@@ -484,7 +484,7 @@ if __name__ == '__main__':
     create_hmm_table(mycursor)
     create_mutations_table(mycursor)
     # sys.exit()
-    # create_kinases_table(mycursor)
+    create_kinases_table(mycursor)
     create_homology_table(mycursor)
     create_ptm_table(mycursor)
     mydb.commit()
