@@ -5,8 +5,8 @@
 import numpy as np
 import scipy as sp
 import os, sys, gzip
-import seaborn as sns
-import pandas as pd
+# import seaborn as sns
+# import pandas as pd
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -31,22 +31,26 @@ exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
 
 kinases = {}
 
-mydb = connection()
+mydb = fetchData.connection()
 mydb.autocommit = True
 mycursor = mydb.cursor()
-sys.exit()
+mycursor.execute("select fasta from kinases where acc=%s", ('P06493',))
+fasta = mycursor.fetchone()[0]
+print (fasta)
 
-fetchData.fetchFasta(kinases, Kinase)
+# fetchData.fetchFasta(kinases, Kinase)
+fetchData.fetchFasta(kinases, Kinase, mycursor)
 fetchData.fetchGroup(kinases, Kinase)
 # print (kinases['P00533'].group)
-hmmPkinase = fetchData.fetchPkinaseHMM() # hmmPosition > AA > bit-score
+hmmPkinase = fetchData.fetchPkinaseHMM(mycursor) # hmmPosition > AA > bit-score
 # print (hmmPkinase[30]['K'])
 fetchData.fetchHmmsearch(kinases, Kinase)
 # fetchData.dsspScores(kinases, Kinase)
 # # print (kinases['Q9NYV4'].burr[3])
 # # print (kinases['Q92772'].dihedral)
 # fetchData.iupredScores(kinases, Kinase)
-fetchData.homologyScores(kinases, Kinase)
+# fetchData.homologyScores(kinases, Kinase)
+# sys.exit()
 
 # #print (kinases['Q9NYV4'].mechismo)
 # data = []
@@ -122,6 +126,14 @@ def fetchStrucFeat(acc, domainNum):
 
 '''Map sequence to Pfam for all canonical kinases'''
 seq2pfam = {}
+mycursor.execute("select acc, uniprotpos, pfampos from positions")
+for row in mycursor.fetchall():
+    acc = row[0]
+    seqPos = str(row[1])
+    pfamPos = str(row[2])
+    if acc not in seq2pfam: seq2pfam[acc] = {}
+    seq2pfam[acc][seqPos] = pfamPos
+'''
 for line in gzip.open('../data/humanKinasesHitsHmmsearchMappings.tsv.gz', 'rt'):
     if line[0] =='#':
         continue
@@ -130,6 +142,7 @@ for line in gzip.open('../data/humanKinasesHitsHmmsearchMappings.tsv.gz', 'rt'):
     pfamPos = str(line.replace('\n', '').split('\t')[4])
     if acc not in seq2pfam: seq2pfam[acc] = {}
     seq2pfam[acc][seqPos] = pfamPos
+'''
 
 '''Fetch test mutation data'''
 for line in open('test_mutations.txt', 'r'):
@@ -149,6 +162,22 @@ for line in open('test_mutations.txt', 'r'):
 
 pkinase_act_deact_res = {'A': [], 'D': [], 'R': [], 'N': []}
 '''Fetch act/deact mutation data'''
+mycursor.execute("select acc, gene, mutation, wtaa, mutaa, wtpos, mut_type from mutations")
+for row in mycursor.fetchall():
+    acc = row[0]
+    gene = row[1]
+    mutation = row[2]
+    wtAA = row[3]
+    mutAA = row[4]
+    position = str(row[5])
+    mut_type = row[6]
+    dataset = 'train'
+    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
+    if position in seq2pfam[acc]:
+        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
+        kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
+        pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
+'''
 for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     if line.split()[0] == 'uniprot_name': continue
     gene = line.split('\t')[0]
@@ -168,6 +197,7 @@ for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
         # print (acc, gene, position, wtAA, mutAA)
         kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
         pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
+'''
 
 '''Fetch resistant mutation data'''
 '''
@@ -262,10 +292,23 @@ for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
     else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
     # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
 
-
-
 '''Fetch PTM data'''
 hmmPTM = {}
+mycursor.execute("select acc, ptmtype, uniprotpos, pfampos from ptms")
+for row in mycursor.fetchall():
+    acc = row[0]
+    ptm_type = row[1]
+    uniprot_position = row[2]
+    hmm_position = int(row[3])
+    if ptm_type not in kinases[acc].ptm:
+        kinases[acc].ptm[ptm_type] = []
+    kinases[acc].ptm[ptm_type].append(int(uniprot_position))
+    if hmm_position not in hmmPTM:
+        hmmPTM[hmm_position] = []
+    hmmPTM[hmm_position].append(ptm_type)
+# print (hmmPTM[200])
+       
+'''
 # for line in open('../data/Kinase_psites4.tsv', 'r'):
 # for line in open('../data/Kinase_psites_trimmed.tsv', 'r'):
 for line in open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r'):
@@ -284,7 +327,7 @@ for line in open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r'):
     hmmPTM[hmm_position].append(ptm_type)
     # print (acc, kinases[acc].gene, position, ptm_type)
 # print (hmmPTM[141])
-# sys.exit()
+'''
 
 '''Make training matrix'''
 trainMat = 'Acc\tGene\tMutation\tDataset\t'
@@ -298,7 +341,7 @@ for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'_pfam\t').join(PTM_TYPES) + '_' + str(position) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
-trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+# trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
 for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'\t').join(['A', 'D', 'R']) + '_'+str(position)+'\t'
 # trainMat += '_known\t'.join(['A', 'D', 'R']) + '_known\t'
@@ -322,7 +365,7 @@ for acc in kinases:
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
         ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM, WS)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
-        homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
+        # homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
         charges_row = kinases[acc].mutations[mutation].findChangeInCharge()
         adr_row = fetchData.getADRvector(acc, position, kinases, pkinase_act_deact_res, WS)
@@ -342,7 +385,7 @@ for acc in kinases:
         row += [int(item) for item in charges_row]
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        row += [int(item) for item in homology_row]
+        # row += [int(item) for item in homology_row]
         row += [int(item) for item in adr_row]
         data.append(row)
 
@@ -353,7 +396,7 @@ for acc in kinases:
         trainMat += '\t'.join([str(item) for item in charges_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
-        trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+        # trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
         trainMat += mut_types + '\n'
 

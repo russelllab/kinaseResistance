@@ -31,7 +31,8 @@ def create_hmm_table(mycursor)->None:
     mycursor.execute("DROP TABLE IF EXISTS hmm CASCADE")
     hmm_score_names = ['pfam'+aa + 'VARCHAR(1)' for aa in AA]
     mycursor.execute("CREATE TABLE hmm (\
-                     pfamPos VARCHAR(10) PRIMARY KEY, pfamAA VARCHAR(10),\
+                     pfamPos VARCHAR(5) PRIMARY KEY, pfamAA VARCHAR(5),\
+                     pfamSS VARCHAR(5), alnPos VARCHAR(5),\
                      pfamA FLOAT, pfamC FLOAT, pfamD FLOAT, pfamE FLOAT,\
                      pfamF FLOAT, pfamG FLOAT, pfamH FLOAT, pfamI FLOAT,\
                      pfamK FLOAT, pfamL FLOAT, pfamM FLOAT, pfamN FLOAT,\
@@ -46,18 +47,22 @@ def create_hmm_table(mycursor)->None:
             if line.split()[-2] == '-' and line.split()[-3] == '-':
                 #print (line.split())
                 position = int(line.split()[0])
-                ss = dic_ss[line.split()[-1].replace('\n', '')]
-                hmm[position] = {'ss': ss}
+                aln_position = int(line.split()[-5])
+                pfam_aa = line.split()[-4]
+                pfam_ss = dic_ss[line.split()[-1].replace('\n', '')]
+                hmm[position] = {'ss': pfam_ss}
                 for value, aa in zip(line.split()[1:-5], AA):
                     hmm[position][aa] = float(value)
                 mycursor.execute("INSERT INTO hmm (pfamPos, pfamAA, \
+                                pfamSS, alnPos,\
                                 pfamA, pfamC, pfamD, pfamE, pfamF, pfamG, pfamH, \
                                 pfamI, pfamK, pfamL, pfamM, pfamN, pfamP, pfamQ, \
                                 pfamR, pfamS, pfamT, pfamV, pfamW, pfamY) \
-                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, \
+                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, \
                                         %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, \
                                         %s, %s)", \
-                                (position, 'X', \
+                                (position, pfam_aa, \
+                                pfam_ss, aln_position, \
                                 hmm[position]['A'], hmm[position]['C'], \
                                 hmm[position]['D'], hmm[position]['E'], \
                                 hmm[position]['F'], hmm[position]['G'], \
@@ -74,13 +79,15 @@ def create_hmm_table(mycursor)->None:
     
     # Inserting the '-' position
     mycursor.execute("INSERT INTO hmm (pfamPos, pfamAA, \
+                                pfamSS, alnPos,\
                                 pfamA, pfamC, pfamD, pfamE, pfamF, pfamG, pfamH, \
                                 pfamI, pfamK, pfamL, pfamM, pfamN, pfamP, pfamQ, \
                                 pfamR, pfamS, pfamT, pfamV, pfamW, pfamY) \
-                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, \
+                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, \
                                         %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, \
                                         %s, %s)", \
-                                ('-', 'X', \
+                                ('-', '-', \
+                                '-', '-', \
                                 0, 0, \
                                 0, 0, \
                                 0, 0, \
@@ -196,6 +203,48 @@ def create_mutations_table(mycursor)->None:
                          VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", \
                         (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source))
 
+def createDicForDSSP(dic, position, mutation, value):
+    if position not in dic: dic[position] = {}
+    dic[position][mutation] = float(value)
+
+def create_homology_table(mycursor) -> None:
+    '''Function to create the homology  table'''
+    mycursor.execute("DROP TABLE IF EXISTS homology CASCADE")
+    mycursor.execute("CREATE TABLE homology (id SERIAL PRIMARY KEY, \
+                     acc VARCHAR(10), mutation VARCHAR(10), \
+                     wtaa VARCHAR(5), position INT, mutaa VARCHAR(5), \
+                     wtscore FLOAT, mutscore FLOAT, diffscore FLOAT, \
+                     info TEXT) \
+                     ")
+    path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
+    mycursor.execute('select acc from kinases')
+    print (mycursor.fetchall())
+    for row in tqdm(mycursor.fetchall()):
+        acc = row[0]
+        for fileEnd in (
+                        '_all_homs.scores.txt.gz',
+                            '_orth.scores.txt.gz',
+                            '_excl_para.scores.txt.gz',
+                            '_spec_para.scores.txt.gz',
+                            '_bpso.scores.txt.gz',
+                            '_bpsh.scores.txt.gz'
+                            ):
+            if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
+                print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
+                continue
+            for line in gzip.open(path + acc[:4] + '/' + acc + fileEnd, 'rt'):
+                #print (acc, line.split())
+                #sys.exit()
+                value = line.split()[0].split('/')[1]
+                position = int(value[1:-1])
+                residue = value[-1]
+                print (value, position)
+                ## Mechismo score
+                score = float(line.split()[4])
+                # createDicForDSSP(dic, position, residue, score)
+                #if acc == 'Q9NYV4' and position == 877:
+                #    print (dic[position])
+
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
     mycursor.execute("DROP TABLE IF EXISTS kinases CASCADE")
@@ -230,8 +279,8 @@ def create_kinases_table(mycursor)->None:
     num = 0
     for kinase in tqdm(kinases):
         num += 1
-        # if num == 10:
-        #     break
+        if num == 10:
+            break
         acc = kinase.split('|')[0]
         uniprot_id = kinase.split('|')[1].split()[0]
         gene = kinase.split('|')[2]
@@ -283,6 +332,8 @@ if __name__ == '__main__':
     create_hmm_table(mycursor)
     create_mutations_table(mycursor)
     create_kinases_table(mycursor)
+    create_homology_table(mycursor)
+    sys.exit()
     create_ptm_table(mycursor)
     mydb.commit()
 

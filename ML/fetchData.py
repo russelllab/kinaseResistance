@@ -28,7 +28,8 @@ def connection():
                             port = "5432")
     return mydb
 
-def fetchFasta(kinases, Kinase):
+def fetchFasta(kinases, Kinase, mycursor):
+    '''
     for line in open('../data/humanKinases.fasta', 'r'):
         #print (line)
         if line[0] == '>':
@@ -42,6 +43,12 @@ def fetchFasta(kinases, Kinase):
         else:
             # if flag == 1:
             kinases[acc].fasta += line.replace('\n', '')
+    '''
+    mycursor.execute("select acc, gene, fasta from kinases")
+    for acc, gene, fasta in mycursor.fetchall():
+        # print (acc, gene, fasta)
+        kinases[acc] = Kinase(acc, gene)
+        kinases[acc].fasta = fasta
 
 def fetchGroup(kinases, Kinase):
     for line in open('../data/kinases.tsv', 'r'):
@@ -49,9 +56,10 @@ def fetchGroup(kinases, Kinase):
         if acc in kinases:
             kinases[acc].group = line.split('\t')[4]
 
-def fetchPkinaseHMM():
+def fetchPkinaseHMM(mycursor):
     dic_ss = {'G': 1, 'H': 1, 'B': 2, 'C': 3, 'E': 4, 'S': 5, 'T': 6, '-':7}
     hmm = {} # hmmPosition > AA > bit-score
+    '''
     # for line in open('../pfam/Pkinase.hmm'):
     for line in open('../pfam/humanKinasesHitsSplitTrimmed.hmm'):
         if len(line.split()) > 2:
@@ -64,6 +72,14 @@ def fetchPkinaseHMM():
                     hmm[position][aa] = float(value)
             elif line.split()[0] == 'HMM':
                 AA = line.replace('\n', '').split()[1:]
+    '''
+    mycursor.execute("select * from hmm")
+    for row in mycursor.fetchall():
+        pfampos = row[0]
+        pfamaa = row[1]
+        for aa, bitscore in zip(AA, row[2:-1]):
+            if pfampos not in hmm: hmm[pfampos] = {'ss': 'ss'}
+            hmm[pfampos][aa] = float(bitscore)
     return hmm
 
 def fetchHmmsearch(kinases, Kinase):
