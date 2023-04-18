@@ -290,6 +290,7 @@ def create_homology_table(mycursor) -> None:
                     info TEXT) \
                     ")
         dic = {}
+        data = []
         for row in tqdm(accs):
             acc = row[0]
             if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
@@ -320,6 +321,16 @@ def create_homology_table(mycursor) -> None:
                                 info))
                 '''
             for position in dic:
+                row = []
+                row = [acc, dic[position]['wtaa'], position]
+                for aa in AA:
+                    if aa+'_score' in dic[position]:
+                        row.append(dic[position][aa+'_score'])
+                    else:
+                        row.append(None)
+                row.append(dic[position]['info'] if 'info' in dic[position] else None)
+                data.append(row)
+                '''
                 mycursor.execute('INSERT INTO '+homology+' (acc, wtaa, position, \
                                 A_score, C_score, D_score, E_score, \
                                 F_score, G_score, H_score, I_score, \
@@ -357,6 +368,13 @@ def create_homology_table(mycursor) -> None:
                                 dic[position]['Y_score'] if 'Y_score' in dic[position] else None, \
                                 dic[position]['info'] if 'info' in dic[position] else None)
                                  )
+                '''
+        df = pd.DataFrame(data)
+        print (df)
+        tmp_df = "./tmp_dataframe.csv"
+        df.to_csv(tmp_df, index=False, header=False)
+        f = open(tmp_df, 'r')
+        mycursor.copy_from(f, homology, sep=',') 
 
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
