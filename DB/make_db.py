@@ -203,6 +203,51 @@ def create_mutations_table(mycursor)->None:
                          VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", \
                         (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source))
 
+    '''Fetch resistant mutation data'''
+    for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
+        if line.split('\t')[0] == 'uniprot_id': continue
+        acc = line.split('\t')[0]
+        wtAA = line.split('\t')[1]
+        mutAA = line.split('\t')[3]
+        if mutAA == 'X': continue
+        if len(wtAA) > 1 or len(mutAA) > 1: continue
+        wtPos = line.split('\t')[2].replace('\n', '')
+        mutation = wtAA + wtPos + mutAA
+        mut_type = 'R'
+        source = 'COSMIC'
+        info = '-'
+        # if wtPos not in seq2pfam[acc]:
+        #     print (f'{uniprot_position} seems to be outside the domain in {acc} and reported {mut_type}')
+        #     continue
+        mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, mut_type, \
+                         acc, gene, info, source) \
+                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", \
+                        (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source))
+    
+    '''Fetch neutral mutation data'''
+    for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
+        if line.split('\t')[1] == 'UniProtID': continue
+        acc = line.split('\t')[1]
+        wtAA = line.split('\t')[2]
+        mutAA = line.split('\t')[4]
+        if mutAA == 'X': continue
+        if len(wtAA) > 1 or len(mutAA) > 1: continue
+        wtPos = line.split('\t')[3].replace('\n', '')
+        mutation = wtAA + wtPos + mutAA
+        mut_type = 'N'
+        source = 'gnomAD'
+        info = '-'
+        # if acc not in seq2pfam:
+        #     continue
+        # if uniprot_position not in seq2pfam[acc]:
+        #     print (f'{uniprot_position} seems to be outside the domain and reported {mut_type}')
+        #     print (seq2pfam[acc])
+        #     continue
+        mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, mut_type, \
+                         acc, gene, info, source) \
+                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", \
+                        (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source))
+
 def createDicForDSSP(dic, position, mutation, value):
     if position not in dic: dic[position] = {}
     dic[position][mutation] = float(value)
@@ -397,9 +442,9 @@ if __name__ == '__main__':
     # Create tables
     create_hmm_table(mycursor)
     create_mutations_table(mycursor)
+    sys.exit()
     create_kinases_table(mycursor)
     create_homology_table(mycursor)
-    sys.exit()
     create_ptm_table(mycursor)
     mydb.commit()
 
