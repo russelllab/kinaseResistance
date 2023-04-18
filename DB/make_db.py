@@ -273,18 +273,42 @@ def create_homology_table(mycursor) -> None:
                                 info))
                 '''
             for position in dic:
-                mycursor.execute('INSERT INTO '+homology+' (acc, wtaa, position,'+ 
-                                str(dic[position]['A_score'])+','+str(dic[position]['C_score'])+','+
-                                str(dic[position]['D_score'])+','+
-                                str(dic[position]['E_score'])+','+str(dic[position]['F_score'])+','+
-                                str(dic[position]['G_score'])+','+str(dic[position]['H_score'])+','+
-                                str(dic[position]['I_score'])+','+str(dic[position]['K_score'])+','+
-                                str(dic[position]['L_score'])+','+str(dic[position]['M_score'])+','+
-                                str(dic[position]['N_score'])+','+str(dic[position]['P_score'])+','+
-                                str(dic[position]['Q_score'])+','+str(dic[position]['R_score'])+','+
-                                str(dic[position]['S_score'])+','+str(dic[position]['T_score'])+','+
-                                str(dic[position]['V_score'])+','+str(dic[position]['W_score'])+','+
-                                str(dic[position]['Y_score'])+','+dic[position]['info']+')' \
+                mycursor.execute('INSERT INTO '+homology+' (acc, wtaa, position, \
+                                A_score, C_score, D_score, E_score, \
+                                F_score, G_score, H_score, I_score, \
+                                K_score, L_score, M_score, N_score, \
+                                P_score, Q_score, R_score, S_score, \
+                                T_score, V_score, W_score, Y_score, \
+                                info) \
+                                VALUES (%s, %s, %s, \
+                                %s, %s, %s, %s, \
+                                %s, %s, %s, %s, \
+                                %s, %s, %s, %s, \
+                                %s, %s, %s, %s, \
+                                %s, %s, %s, %s, \
+                                %s)', \
+                                (acc, dic[position]['wtaa'], position, \
+                                dic[position]['A_score'] if 'A_score' in dic[position] else None, \
+                                dic[position]['C_score'] if 'C_score' in dic[position] else None, \
+                                dic[position]['D_score'] if 'D_score' in dic[position] else None, \
+                                dic[position]['E_score'] if 'E_score' in dic[position] else None, \
+                                dic[position]['F_score'] if 'F_score' in dic[position] else None, \
+                                dic[position]['G_score'] if 'G_score' in dic[position] else None, \
+                                dic[position]['H_score'] if 'H_score' in dic[position] else None, \
+                                dic[position]['I_score'] if 'I_score' in dic[position] else None, \
+                                dic[position]['K_score'] if 'K_score' in dic[position] else None, \
+                                dic[position]['L_score'] if 'L_score' in dic[position] else None, \
+                                dic[position]['M_score'] if 'M_score' in dic[position] else None, \
+                                dic[position]['N_score'] if 'N_score' in dic[position] else None, \
+                                dic[position]['P_score'] if 'P_score' in dic[position] else None, \
+                                dic[position]['Q_score'] if 'Q_score' in dic[position] else None, \
+                                dic[position]['R_score'] if 'R_score' in dic[position] else None, \
+                                dic[position]['S_score'] if 'S_score' in dic[position] else None, \
+                                dic[position]['T_score'] if 'T_score' in dic[position] else None, \
+                                dic[position]['V_score'] if 'V_score' in dic[position] else None, \
+                                dic[position]['W_score'] if 'W_score' in dic[position] else None, \
+                                dic[position]['Y_score'] if 'Y_score' in dic[position] else None, \
+                                dic[position]['info'] if 'info' in dic[position] else None)
                                  )
 
 def create_kinases_table(mycursor)->None:
