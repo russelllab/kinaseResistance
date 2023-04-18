@@ -209,36 +209,29 @@ def createDicForDSSP(dic, position, mutation, value):
 
 def create_homology_table(mycursor) -> None:
     '''Function to create the homology  table'''
-    mycursor.execute("DROP TABLE IF EXISTS homology CASCADE")
-    mycursor.execute("CREATE TABLE homology (id SERIAL PRIMARY KEY, \
-                     acc VARCHAR(10), mutation VARCHAR(10), \
-                     wtaa VARCHAR(5), position INT, mutaa VARCHAR(5), \
-                     wtscore FLOAT, mutscore FLOAT, diffscore FLOAT, \
-                     info TEXT) \
-                     ")
     path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
+    mycursor.execute("DROP TABLE IF EXISTS homology CASCADE")
     mycursor.execute('select acc from kinases')
     accs = mycursor.fetchall()
-    for row in tqdm(accs):
-        acc = row[0]
-        for fileEnd in tqdm([
-                        '_all_homs.scores.txt.gz',
-                        '_orth.scores.txt.gz',
-                        '_excl_para.scores.txt.gz',
-                        '_spec_para.scores.txt.gz',
-                        '_bpso.scores.txt.gz',
-                        '_bpsh.scores.txt.gz'
-                        ]):
-            homology = fileEnd.split('.scores')[0]
-            homology = homology[1:]
-            mycursor.execute("DROP TABLE IF EXISTS homology CASCADE")
-            mycursor.execute("CREATE TABLE homology (id SERIAL PRIMARY KEY, \
-                     acc VARCHAR(10), mutation VARCHAR(10), \
-                     wtaa VARCHAR(5), position INT, mutaa VARCHAR(5), \
-                     wtscore FLOAT, mutscore FLOAT, diffscore FLOAT, \
-                     info TEXT) \
-                     ")
-
+    for fileEnd in tqdm([
+                    '_all_homs.scores.txt.gz',
+                    '_orth.scores.txt.gz',
+                    '_excl_para.scores.txt.gz',
+                    '_spec_para.scores.txt.gz',
+                    '_bpso.scores.txt.gz',
+                    '_bpsh.scores.txt.gz'
+                    ]):
+        homology = fileEnd.split('.scores')[0]
+        homology = homology[1:]
+        mycursor.execute("DROP TABLE IF EXISTS "+homology+" CASCADE")
+        mycursor.execute("CREATE TABLE "+homology+" (id SERIAL PRIMARY KEY, \
+                    acc VARCHAR(10), mutation VARCHAR(10), \
+                    wtaa VARCHAR(5), position INT, mutaa VARCHAR(5), \
+                    wtscore FLOAT, mutscore FLOAT, diffscore FLOAT, \
+                    info TEXT) \
+                    ")
+        for row in tqdm(accs):
+            acc = row[0]
             if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
                 print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
                 continue
@@ -254,8 +247,7 @@ def create_homology_table(mycursor) -> None:
                 diffscore = float(line.split()[4])
                 # info = line.split()[5].rstrip()
                 info = '-'
-                '''
-                mycursor.execute('INSERT INTO homology (acc, mutation, \
+                mycursor.execute('INSERT INTO '+homology+' (acc, mutation, \
                                  wtaa, position, mutaa, \
                                  wtscore, mutscore, diffscore, \
                                  info) \
@@ -263,7 +255,6 @@ def create_homology_table(mycursor) -> None:
                                 (acc, mutation, wtaa, position, mutaa, \
                                 wtscore, mutscore, diffscore, \
                                 info))
-                '''
 
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
