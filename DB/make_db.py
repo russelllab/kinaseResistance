@@ -481,8 +481,8 @@ if __name__ == '__main__':
     create_hmm_table(mycursor)
     create_mutations_table(mycursor)
     # sys.exit()
-    create_kinases_table(mycursor)
-    # create_homology_table(mycursor)
+    # create_kinases_table(mycursor)
+    create_homology_table(mycursor)
     create_ptm_table(mycursor)
     mydb.commit()
 
