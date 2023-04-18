@@ -280,7 +280,7 @@ def create_homology_table(mycursor) -> None:
                     ")
         '''
         AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
-        mycursor.execute("CREATE TABLE "+homology+" (id SERIAL PRIMARY KEY, \
+        mycursor.execute("CREATE TABLE "+homology+" (\
                     acc VARCHAR(10), wtaa VARCHAR(5), position INT, \
                     A_score FLOAT, C_score FLOAT, D_score FLOAT, E_score FLOAT, \
                     F_score FLOAT, G_score FLOAT, H_score FLOAT, I_score FLOAT, \
@@ -291,7 +291,10 @@ def create_homology_table(mycursor) -> None:
                     ")
         dic = {}
         data = []
+        num = 0
         for row in tqdm(accs):
+            num += 1
+            if num == 10: break
             acc = row[0]
             if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
                 print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
