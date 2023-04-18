@@ -235,10 +235,12 @@ def create_homology_table(mycursor) -> None:
         AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
         mycursor.execute("CREATE TABLE "+homology+" (id SERIAL PRIMARY KEY, \
                     acc VARCHAR(10), wtaa VARCHAR(5), position INT, \
-                    A_score, C_score, D_score, E_score, F_score, G_score, \
-                    H_score, I_score, K_score, L_score, M_score, N_score, \
-                    P_score, Q_score, R_score, S_score, T_score, V_score, \
-                    W_score, Y_score, info TEXT) \
+                    A_score FLOAT, C_score FLOAT, D_score FLOAT, E_score FLOAT, \
+                    F_score FLOAT, G_score FLOAT, H_score FLOAT, I_score FLOAT, \
+                    K_score FLOAT, L_score FLOAT, M_score FLOAT, N_score FLOAT, \
+                    P_score FLOAT, Q_score FLOAT, R_score FLOAT, S_score FLOAT, \
+                    T_score FLOAT, V_score FLOAT, W_score FLOAT, Y_score FLOAT, \
+                    info TEXT) \
                     ")
         dic = {}
         for row in tqdm(accs):
