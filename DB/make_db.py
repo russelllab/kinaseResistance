@@ -5,10 +5,12 @@ Script to make a database for
 kinase mutations project
 '''
 
-import mysql.connector
+# import mysql.connector
 import os, gzip, sys
 from tqdm import tqdm
 import psycopg2
+# from backports import zoneinfo
+import pandas as pd
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -388,10 +390,11 @@ def create_kinases_table(mycursor)->None:
 
     mappings = fetch_mappings_dic()
     num = 0
+    data = []
     for kinase in tqdm(kinases):
         num += 1
-        if num == 3:
-            break
+        # if num == 3:
+        #     break
         acc = kinase.split('|')[0]
         uniprot_id = kinase.split('|')[1].split()[0]
         gene = kinase.split('|')[2]
@@ -412,11 +415,28 @@ def create_kinases_table(mycursor)->None:
             else:
                 pfamPos, pfamAA = '-', '-'
             name = acc+'/'+uniprotAA+str(uniprotPos)
+            row = []
+            row.append(uniprotPos)
+            row.append(uniprotAA)
+            row.append(pfamPos)
+            row.append(pfamAA)
+            row.append(acc)
+            row.append(uniprot_id)
+            row.append(name)
+            data.append(row)
+            '''
             mycursor.execute("INSERT INTO positions (uniprotPos, uniprotAA, pfamPos, pfamAA, \
                                 acc, uniprot_id, name) \
                                 VALUES (%s, %s, %s, %s, %s, %s, %s)", \
                                 (uniprotPos, uniprotAA, pfamPos, pfamAA, acc, uniprot_id, name)
                                 )
+            '''
+    df = pd.DataFrame(data, columns=['uniprotPos', 'uniprotAA', 'pfamPos', 'pfamAA', 'acc', 'uniprot_id', 'name'])
+    print (df)
+    tmp_df = "./tmp_dataframe.csv"
+    df.to_csv(tmp_df, index=False, header=False)
+    f = open(tmp_df, 'r')
+    mycursor.copy_from(f, 'positions', sep=',')
 
 if __name__ == '__main__':
     mydb = connection()
@@ -442,9 +462,9 @@ if __name__ == '__main__':
     # Create tables
     create_hmm_table(mycursor)
     create_mutations_table(mycursor)
-    sys.exit()
+    # sys.exit()
     create_kinases_table(mycursor)
-    create_homology_table(mycursor)
+    # create_homology_table(mycursor)
     create_ptm_table(mycursor)
     mydb.commit()
 
