@@ -221,29 +221,36 @@ def create_homology_table(mycursor) -> None:
     print (mycursor.fetchall())
     for row in tqdm(mycursor.fetchall()):
         acc = row[0]
-        for fileEnd in (
+        for fileEnd in [
                         '_all_homs.scores.txt.gz',
-                            '_orth.scores.txt.gz',
-                            '_excl_para.scores.txt.gz',
-                            '_spec_para.scores.txt.gz',
-                            '_bpso.scores.txt.gz',
-                            '_bpsh.scores.txt.gz'
-                            ):
+                        '_orth.scores.txt.gz',
+                        '_excl_para.scores.txt.gz',
+                        '_spec_para.scores.txt.gz',
+                        '_bpso.scores.txt.gz',
+                        '_bpsh.scores.txt.gz'
+                        ]:
             if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
                 print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
                 continue
             for line in gzip.open(path + acc[:4] + '/' + acc + fileEnd, 'rt'):
                 #print (acc, line.split())
                 #sys.exit()
-                value = line.split()[0].split('/')[1]
-                position = int(value[1:-1])
-                residue = value[-1]
-                print (value, position)
-                ## Mechismo score
-                score = float(line.split()[4])
-                # createDicForDSSP(dic, position, residue, score)
-                #if acc == 'Q9NYV4' and position == 877:
-                #    print (dic[position])
+                mutation = line.split()[0].split('/')[1]
+                position = int(mutation[1:-1])
+                wtaa = mutation[0]
+                mutaa = mutation[1]
+                wtscore = float(line.split()[2])
+                mutscore = float(line.split()[3])
+                diffscore = float(line.split()[4])
+                info = line.split()[5].rstrip()
+                mycursor.execute('INSERT INTO homology (acc, mutation, \
+                                 wtaa, position, mutaa, \
+                                 wtscore, mutscore, diffscore, \
+                                 info) \
+                                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)', \
+                                (acc, mutation, wtaa, position, mutaa, \
+                                wtscore, mutscore, diffscore, \
+                                info))
 
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
