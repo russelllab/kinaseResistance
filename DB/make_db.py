@@ -274,17 +274,17 @@ def create_homology_table(mycursor) -> None:
                 '''
             for position in dic:
                 mycursor.execute('INSERT INTO '+homology+' (acc, wtaa, position,'+ 
-                                dic[position]['A_score']+','+dic[position]['C_score']+','+
-                                dic[position]['D_score']+','+
-                                dic[position]['E_score']+','+dic[position]['F_score']+','+
-                                dic[position]['G_score']+','+dic[position]['H_score']+','+
-                                dic[position]['I_score']+','+dic[position]['K_score']+','+
-                                dic[position]['L_score']+','+dic[position]['M_score']+','+
-                                dic[position]['N_score']+','+dic[position]['P_score']+','+
-                                dic[position]['Q_score']+','+dic[position]['R_score']+','+
-                                dic[position]['S_score']+','+dic[position]['T_score']+','+
-                                dic[position]['V_score']+','+dic[position]['W_score']+','+
-                                dic[position]['Y_score']+','+dic[position]['info']+')' \
+                                str(dic[position]['A_score'])+','+str(dic[position]['C_score'])+','+
+                                str(dic[position]['D_score'])+','+
+                                str(dic[position]['E_score'])+','+str(dic[position]['F_score'])+','+
+                                str(dic[position]['G_score'])+','+str(dic[position]['H_score'])+','+
+                                str(dic[position]['I_score'])+','+str(dic[position]['K_score'])+','+
+                                str(dic[position]['L_score'])+','+str(dic[position]['M_score'])+','+
+                                str(dic[position]['N_score'])+','+str(dic[position]['P_score'])+','+
+                                str(dic[position]['Q_score'])+','+str(dic[position]['R_score'])+','+
+                                str(dic[position]['S_score'])+','+str(dic[position]['T_score'])+','+
+                                str(dic[position]['V_score'])+','+str(dic[position]['W_score'])+','+
+                                str(dic[position]['Y_score'])+','+dic[position]['info']+')' \
                                  )
 
 def create_kinases_table(mycursor)->None:
