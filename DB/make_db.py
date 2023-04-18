@@ -218,17 +218,27 @@ def create_homology_table(mycursor) -> None:
                      ")
     path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
     mycursor.execute('select acc from kinases')
-    print (mycursor.fetchall())
-    for row in tqdm(mycursor.fetchall()):
+    accs = mycursor.fetchall()
+    for row in tqdm(accs):
         acc = row[0]
-        for fileEnd in [
+        for fileEnd in tqdm([
                         '_all_homs.scores.txt.gz',
                         '_orth.scores.txt.gz',
                         '_excl_para.scores.txt.gz',
                         '_spec_para.scores.txt.gz',
                         '_bpso.scores.txt.gz',
                         '_bpsh.scores.txt.gz'
-                        ]:
+                        ]):
+            homology = fileEnd.split('.scores')[0]
+            homology = homology[1:]
+            mycursor.execute("DROP TABLE IF EXISTS homology CASCADE")
+            mycursor.execute("CREATE TABLE homology (id SERIAL PRIMARY KEY, \
+                     acc VARCHAR(10), mutation VARCHAR(10), \
+                     wtaa VARCHAR(5), position INT, mutaa VARCHAR(5), \
+                     wtscore FLOAT, mutscore FLOAT, diffscore FLOAT, \
+                     info TEXT) \
+                     ")
+
             if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
                 print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
                 continue
@@ -242,7 +252,9 @@ def create_homology_table(mycursor) -> None:
                 wtscore = float(line.split()[2])
                 mutscore = float(line.split()[3])
                 diffscore = float(line.split()[4])
-                info = line.split()[5].rstrip()
+                # info = line.split()[5].rstrip()
+                info = '-'
+                '''
                 mycursor.execute('INSERT INTO homology (acc, mutation, \
                                  wtaa, position, mutaa, \
                                  wtscore, mutscore, diffscore, \
@@ -251,6 +263,7 @@ def create_homology_table(mycursor) -> None:
                                 (acc, mutation, wtaa, position, mutaa, \
                                 wtscore, mutscore, diffscore, \
                                 info))
+                '''
 
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
@@ -286,7 +299,7 @@ def create_kinases_table(mycursor)->None:
     num = 0
     for kinase in tqdm(kinases):
         num += 1
-        if num == 10:
+        if num == 3:
             break
         acc = kinase.split('|')[0]
         uniprot_id = kinase.split('|')[1].split()[0]
