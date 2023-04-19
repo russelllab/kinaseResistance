@@ -333,13 +333,13 @@ def create_homology_table(mycursor) -> None:
                     T_score FLOAT, V_score FLOAT, W_score FLOAT, Y_score FLOAT, \
                     info TEXT) \
                     ")
-        dic = {}
         data = []
         num = 0
-        for row in tqdm(accs):
+        for acc_tuple in tqdm(accs):
+            dic = {}
             num += 1
             # if num == 10: break
-            acc = row[0]
+            acc = acc_tuple[0]
             if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
                 print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
                 continue
@@ -353,8 +353,8 @@ def create_homology_table(mycursor) -> None:
                 wtscore = float(line.split()[2])
                 mutscore = float(line.split()[3])
                 diffscore = float(line.split()[4])
-                info = line.split()[5].rstrip()
-                # info = '-'
+                # info = line.split()[5].rstrip()
+                info = '-'
                 if position not in dic: dic[position] = {'wtaa': wtaa, 'info': info}
                 dic[position][mutaa+'_score'] = mutscore
             for position in range(1, len(dic)+1):
@@ -479,12 +479,12 @@ if __name__ == '__main__':
     '''
 
     # Create tables
-    # create_hmm_table(mycursor)
+    create_hmm_table(mycursor)
     create_kinases_table(mycursor)
-    # create_mutations_table(mycursor)
+    create_mutations_table(mycursor)
     create_homology_table(mycursor)
-    # create_ptm_table(mycursor)
-    # create_alignment_table(mycursor)
+    create_ptm_table(mycursor)
+    create_alignment_table(mycursor)
     mydb.commit()
 
     # Use mysqldump to create backup file
