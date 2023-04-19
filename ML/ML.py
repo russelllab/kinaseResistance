@@ -25,8 +25,9 @@ from sklearn.metrics import auc
 from sklearn.metrics import RocCurveDisplay
 from sklearn import tree
 import xgboost as xgb
+import pickle
 
-RANDOM_STATE = 1
+RANDOM_STATE = 0
 ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10
@@ -116,7 +117,10 @@ df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 # df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
 
 print ('columns to consider', df.columns.to_numpy())
-# sys.exit()
+columns_to_consider = '\n'.join(df.columns.to_numpy())
+# print (columns_to_consider)
+open('columns_to_consider.txt', 'w').write(columns_to_consider)
+
 feature_names = df.columns.to_numpy()
 feature_names = feature_names[3:-1]
 # sys.exit()
@@ -162,6 +166,7 @@ scaler = MinMaxScaler()
 scaler.fit(X)
 X = scaler.transform(X)
 X_test = scaler.transform(X_test)
+pickle.dump(scaler, open('finalized_scaler.pkl', 'wb'))
 
 y = np.array(y)
 
@@ -248,7 +253,7 @@ elif ALGO == 'RF':
                 'min_samples_split': [2],
                 'min_samples_leaf': [3],
                 'max_features': ['sqrt', 'log2'],
-                'n_estimators': [100]
+                'n_estimators': [200]
                 }
     rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1)
     model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
@@ -451,6 +456,9 @@ if ALGO == 'RF':
     plt.grid(True, lw=0.1)
     # plt.savefig('feature_imp.png')
     # plt.show()
+
+filename = 'finalized_model.sav'
+pickle.dump(clf, open(filename, 'wb'))
 
 test_types = ['AR', 'R', 'Activating', 'TBD', 'Inconclusive']
 for test_type in test_types:

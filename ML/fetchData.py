@@ -28,6 +28,16 @@ def connection():
                             port = "5432")
     return mydb
 
+def getAccGene(mycursor, name):
+    '''Function to fetch acc and gene from the DB'''
+    check_with = ['acc', 'gene', 'uniprot_id']
+    for check in check_with:
+        mycursor.execute("select acc, gene, uniprot_id from kinases where "+check+" = %s", (name,))
+        hits = mycursor.fetchone()
+        if hits is not None: break
+    acc, gene, uniprot_id = hits[0], hits[1], hits[2]
+    return acc, gene, uniprot_id
+
 def fetchFasta(kinases, Kinase, mycursor):
     '''
     for line in open('../data/humanKinases.fasta', 'r'):
@@ -76,6 +86,7 @@ def fetchPkinaseHMM(mycursor):
     mycursor.execute("select * from hmm")
     for row in mycursor.fetchall():
         pfampos = row[0]
+        if pfampos == '-': continue
         pfamaa = row[1]
         for aa, bitscore in zip(AA, row[2:-1]):
             if pfampos not in hmm: hmm[pfampos] = {'ss': 'ss'}
@@ -224,87 +235,94 @@ def homologyScores(kinases, Kinase):
                 #if acc == 'Q9NYV4' and position == 877:
                 #    print (dic[position])
 
-def getHomologyScores(acc, wtAA, position, mutAA, kinases):
-    mutation = wtAA+str(position)+mutAA
+def getHomologyScores(mycursor, acc, wtAA, position, mutAA):
     row = []
-    for dic in [
-                kinases[acc].allHomologs,
-                kinases[acc].orthologs,
-                kinases[acc].exclParalogs,
-                kinases[acc].specParalogs,
-                kinases[acc].bpso,
-                kinases[acc].bpsh
-                ]:
-        # print (acc, mutation, position)
-        #print (dic)
-        #print (dic[position])
-        row.append(dic[position][mutAA])
+    for homology in ['all_homs','orth','excl_para','spec_para','bpso','bpsh']:
+        mycursor.execute("SELECT * FROM "+homology+" \
+                            WHERE acc=%s and position=%s", (acc, str(position),))
+        hit = mycursor.fetchone()
+        if hit is None:
+            row = [] # empty row if no hits found
+            break
+        # print (hit)
+        acc = hit[0]
+        AA = 'ACDEFGHIKLMNPQRSTVWY'
+        for logodd, aa in zip(hit[3:-1], AA):
+            if aa == mutAA:
+                row.append(float(logodd))
+                continue
+    if len(row) == 0: row = None
     return row
 
-def getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase):
-    domainNum = 1
-    hmmPos = None
-    while domainNum in kinases[acc].seq2pfam:
-        if int(position) in kinases[acc].seq2pfam[domainNum]:
-            hmmPos = kinases[acc].seq2pfam[domainNum][int(position)]
-            break
-        domainNum += 1
-    try:
-        return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA], hmmPkinase[hmmPos]['ss']
-    except:
-        raise Exception(f'HMMscore in {acc} for {wtAA}{position}{mutAA} not found')
+def getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA):
+    # print (f'HMMscore in {acc} for {wtAA}{position}{mutAA}')
+    mycursor.execute("SELECT pfampos FROM positions \
+                     WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+    pfampos = mycursor.fetchone()[0]
+    # print (f'pfampos of {acc}/{wtAA}{position}{mutAA} is {pfampos}')
+    mycursor.execute("SELECT * FROM hmm \
+                        WHERE pfampos = %s", (str(pfampos),))
+    row = mycursor.fetchone()
     
-    '''flag = 0
-    while domainNum>0:
-        for hmmPos in kinases[acc].domains[domainNum]:
-            seqPos = kinases[acc].domains[domainNum][hmmPos]
-            if seqPos == position:
-                flag = 1
-                break
-        if flag == 1:
-            break
-        domainNum += 1
-        if domainNum not in kinases[acc].domains:
-            break
-    # print (acc, mutation)
-    if flag == 1:
-        
-        # print (acc + "\t" + mutation + "\t" +
-        #         str(seqPos) + "\t" + str(hmmPos) + "\t" +
-        #         #hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA],
-        #         str(round(hmmPkinase[hmmPos][mutAA] - hmmPkinase[hmmPos][wtAA], 2)) + "\t" +
-        #         mut_type)
-        print (acc, wtAA, position, mutAA)
-        return hmmPos, hmmPkinase[hmmPos][wtAA], hmmPkinase[hmmPos][mutAA], hmmPkinase[hmmPos]['ss']
-    else:
-        print (acc, wtAA, position, mutAA, 'not found')
-        sys.exit()'''
+    AA = 'ACDEFGHIKLMNPQRSTVWY'
+    for aa, bitscore in zip(AA, row[4:]):
+        if aa == mutAA:
+            mut_bitscore = bitscore
+        elif aa == wtAA:
+            wt_bitscore = bitscore
+    return pfampos, wt_bitscore, mut_bitscore, 0
 
-def getPTMscore(acc, mutation_position, kinases, hmmPTM, ws=0):
+def getPTMscore(mycursor, acc, mutation_position, ws=0):
     if ws > 0: ws -= 1
     ws = int(ws/2)
     # print (acc, kinases[acc].gene, mutation_position)
     
     row = []
     for position in range(mutation_position-ws, mutation_position+ws+1):
+        mycursor.execute("SELECT ptmtype FROM ptms \
+                        WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+        hit = mycursor.fetchone()
+        if hit is not None:
+            ptm_type_at_position = hit[0]
+        else:
+            ptm_type_at_position = 'None'
         ## prepare vector for known information
         for ptm_type in PTM_TYPES:
-            if ptm_type not in kinases[acc].ptm:
+            if ptm_type_at_position == 'None':
                 row.append('0')
-            elif position in kinases[acc].ptm[ptm_type]:
+            elif ptm_type == ptm_type_at_position:
                 row.append('1')
             else:
                 row.append('0')
+            # if ptm_type not in kinases[acc].ptm:
+            #     row.append('0')
+            # elif position in kinases[acc].ptm[ptm_type]:
+            #     row.append('1')
+            # else:
+            #     row.append('0')
         
         ## prepare vector for inference
-        hmm_position = kinases[acc].returnhmmPos(position)
-        if hmm_position not in hmmPTM:
+        mycursor.execute("SELECT pfampos FROM ptms \
+                        WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+        hit = mycursor.fetchone()
+        if hit is not None:
+            hmmPos = hit[0]
+        else:
+            hmmPos = 'None'
+        if hmmPos not in ['-', 'None']:
+            mycursor.execute("SELECT ptmtype FROM ptms \
+                            WHERE pfampos = %s", (str(hmmPos),))
+            hits = mycursor.fetchall()
+            ptms_type_at_hmmPos = []
+            for hit in hits:
+                ptms_type_at_hmmPos.append(hit[0])
+        # hmm_position = kinases[acc].returnhmmPos(position)
+        if hmmPos in ['-', 'None']:
             for ptm_type in PTM_TYPES:
                 row.append('0')
         else:
-            # print (position, hmm_position, hmmPTM[hmm_position])
             for ptm_type in PTM_TYPES:
-                count_ptm_type = hmmPTM[hmm_position].count(ptm_type)
+                count_ptm_type = ptms_type_at_hmmPos.count(ptm_type)
                 # row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
                 row.append( '0' if count_ptm_type<3 else '1' )
     
@@ -313,16 +331,27 @@ def getPTMscore(acc, mutation_position, kinases, hmmPTM, ws=0):
     #     sys.exit()
     return row
 
-def getADRvector(acc, mutation_position, kinases, pkinase_act_deact_res, ws=0):
+def getADRvector(mycursor, acc, mutation_position, kinases, ws=0):
     if ws > 0: ws -= 1
     ws = int(ws/2)
     adr_row = []
     for position in range(mutation_position-ws, mutation_position+ws+1):
+        mycursor.execute("SELECT pfampos FROM positions \
+                        WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+        hmmPos = mycursor.fetchone()[0]
+        mycursor.execute("SELECT mut_type FROM mutations \
+                        WHERE pfampos = %s", (str(hmmPos),))
+        hits = mycursor.fetchall()
+        mut_types_at_hmmpos = []
+        for entry in hits:
+            mut_types_at_hmmpos.append(entry[0])
+        # print (mut_types_at_hmmpos)
         for mut_type in ['A', 'D', 'R']:
-            hmmPos = kinases[acc].returnhmmPos(position)
-            if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
+            # hmmPos = kinases[acc].returnhmmPos(position)
+            # if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
+            if mut_type in mut_types_at_hmmpos: adr_row.append(1)
             else: adr_row.append(0)
-    print (acc, kinases[acc].gene, mutation_position, adr_row)
+    # print (acc, kinases[acc].gene, mutation_position, adr_row)
     # sys.exit()
 
     return adr_row

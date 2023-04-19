@@ -1,0 +1,118 @@
+<head>
+	<!-- Load plotly.js into the DOM -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<!--
+	<script src="{{url_for('static', filename='/js/plt.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/createList.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/showStructure.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/dataTables.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/heatmap.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/ramachandran.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/g3-lollipop.js')}}"></script>
+	-->
+	<!-- g3lollipop -->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/cdsjsd3/g3-viz/0.5.0/g3-lollipop.min.js"></script>
+	<!-- DataTables -->
+	<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+	<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- PDBe Mol*-->
+	<link rel="stylesheet" type="text/css" href="https://www.ebi.ac.uk/pdbe/pdb-component-library/css/pdbe-molstar-light-3.0.0.css">
+    <script type="text/javascript" src="https://www.ebi.ac.uk/pdbe/pdb-component-library/js/pdbe-molstar-plugin-3.0.0.js"></script>
+	<!-- REACT-->
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<style>
+	.headingFont
+	{
+		font-family:    Arial, Helvetica, sans-serif;
+		font-size:      30px;
+		font-weight:    bold;
+		text-align: center;
+		padding-top: 200px;
+	}
+	#infoBox {
+		opacity: 1;
+		transition: opacity 1s;
+		}
+
+	#infoBox.hide {
+		opacity: 0;
+		}
+</style>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Search<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Help</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Russell lab</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+<h2 class="headingFont" id="headingText">KinaseX</h2>
+<div class="row">
+	<div class="col-sm-4">
+		</div>
+	<div class="col-sm-4" style="padding-top: 25px" id="infoBox" >
+		<form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
+			<textarea style="height: 250px" class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="inputMut">
+# Activating mutation in MAP2K3
+MAP2K3/A84T
+
+# Deactivating mutation in MAP2K1
+CDK14/K164R
+Q00534/T49A
+
+# Resistant mutation in BRAF
+BRAF/V600E
+			</textarea>
+		<div style="padding-top: 25px">
+			<button type="submit" class="btn btn-primary" onclick="call_onclick()">Submit</button>
+			<!--
+				<button onclick="call_onclick()">Toggle</button>
+			-->
+		</div>
+	</div>
+	<div class="col-sm-4">
+		</div>
+	</div>
+
+</div>
+<script>
+	function call_onclick() {
+		// alert('hello');
+		var x = document.getElementById("infoBox");
+		if (x.classList.contains("hide")) {
+			x.classList.remove("hide");
+		} else {
+			x.classList.add("hide");
+		}
+		var headingText = document.getElementById("headingText");
+		// headingText.innerHTML="Running your results....";
+		headingText.innerHTML = "Bitte haben Sie Geduld, während wir das Ergebnis vorbereiten...";
+	}
+</script>
+</body>

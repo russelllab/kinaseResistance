@@ -7,6 +7,7 @@ import scipy as sp
 import os, sys, gzip
 # import seaborn as sns
 # import pandas as pd
+from tqdm import tqdm
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -37,6 +38,7 @@ mycursor = mydb.cursor()
 mycursor.execute("select fasta from kinases where acc=%s", ('P06493',))
 fasta = mycursor.fetchone()[0]
 print (fasta)
+# sys.exit()
 
 # fetchData.fetchFasta(kinases, Kinase)
 fetchData.fetchFasta(kinases, Kinase, mycursor)
@@ -173,10 +175,14 @@ for row in mycursor.fetchall():
     mut_type = row[6]
     dataset = 'train'
     # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-    if position in seq2pfam[acc]:
+    # if position in seq2pfam[acc]:
+    if mutation not in kinases[acc].mutations:
+        dataset = 'train'
         kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
-        kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
-        pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
+    else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
+
+    # kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
+    # pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
 '''
 for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     if line.split()[0] == 'uniprot_name': continue
@@ -230,6 +236,7 @@ for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
 '''
 
 '''Fetch resistant mutation data'''
+'''
 for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
     if line.split('\t')[0] == 'uniprot_id': continue
     # actual_gene = line.split('\t')[0]
@@ -261,8 +268,10 @@ for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r
             sys.exit()
     else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
     # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
+'''
 
 '''Fetch neutral mutation data'''
+'''
 for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
     if line.split('\t')[1] == 'UniProtID': continue
     acc = line.split('\t')[1]
@@ -291,6 +300,8 @@ for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
             sys.exit()
     else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
     # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
+'''
+
 
 '''Fetch PTM data'''
 hmmPTM = {}
@@ -341,7 +352,7 @@ for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'_pfam\t').join(PTM_TYPES) + '_' + str(position) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
-# trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
 for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'\t').join(['A', 'D', 'R']) + '_'+str(position)+'\t'
 # trainMat += '_known\t'.join(['A', 'D', 'R']) + '_known\t'
@@ -352,9 +363,14 @@ trainMat += 'MUT_TYPE\n'
 # sys.exit()
 data = []
 mut_types_colors = []
-for acc in kinases:
+print ('Making training matrix')
+count_accs = 0
+for acc in tqdm(kinases):
     if len(kinases[acc].mutations) == 0:
         continue
+    count_accs += 1
+    # if count_accs == 3:
+    #     break
     for mutation in kinases[acc].mutations:
         row = []
         mutation_obj = kinases[acc].mutations[mutation]
@@ -362,18 +378,20 @@ for acc in kinases:
         mutAA = mutation_obj.mutAA
         wtAA = mutation_obj.wtAA
         mut_types = ''.join(np.sort(list(set(mutation_obj.mut_types))))
-        hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(acc, wtAA, position, mutAA, kinases, hmmPkinase)
-        ptm_row = fetchData.getPTMscore(acc, position, kinases, hmmPTM, WS)
+        hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
+        if hmmPos == '-': continue
+        ptm_row = fetchData.getPTMscore(mycursor, acc, position, WS)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
-        # homology_row = fetchData.getHomologyScores(acc, wtAA, position, mutAA, kinases)
+        homology_row = fetchData.getHomologyScores(mycursor, acc, wtAA, position, mutAA)
+        if homology_row == None: continue
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
         charges_row = kinases[acc].mutations[mutation].findChangeInCharge()
-        adr_row = fetchData.getADRvector(acc, position, kinases, pkinase_act_deact_res, WS)
-        print (
-            acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
-            str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
-            ','.join(aa_row) + '\t' + '\t'.join(mut_types)
-            )
+        adr_row = fetchData.getADRvector(mycursor, acc, position, kinases, WS)
+        # print (
+        #     acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
+        #     str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
+        #     ','.join(aa_row) + '\t' + '\t'.join(mut_types)
+        #     )
         # row.append(mutation_obj.dataset)
         # Prepare rows for the numpy data
         row.append(int(hmmPos))
@@ -385,7 +403,7 @@ for acc in kinases:
         row += [int(item) for item in charges_row]
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
-        # row += [int(item) for item in homology_row]
+        row += [int(item) for item in homology_row]
         row += [int(item) for item in adr_row]
         data.append(row)
 
@@ -396,7 +414,7 @@ for acc in kinases:
         trainMat += '\t'.join([str(item) for item in charges_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
-        # trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+        trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
         trainMat += mut_types + '\n'
 
