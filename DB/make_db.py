@@ -26,6 +26,46 @@ def connection():
                             host = "localhost",
                             port = "5432")
     return mydb
+
+def create_alignment_table(mycursor)->None:
+    aln2pfam = {}
+    for line in open('../pfam/humanKinasesHitsSplitTrimmed.hmm', 'r'):
+        if len(line.split()) <= 2:
+            continue
+        if line.split()[-2] == '-' and line.split()[-3] == '-':
+            #print (line.split())
+            pfam_position = int(line.split()[0])
+            aln_position = int(line.split()[-5])
+            aln2pfam[aln_position] = pfam_position
+    dic = {}
+    for line in open('../alignments/humanKinasesHitsSplitTrimmed.fasta', 'r'):
+        if line[0] == '>':
+            continue
+        sequence = line.replace('\n', '')
+        for num, residue in enumerate(sequence, start=1):
+            if num not in dic: dic[num] = []
+            dic[num].append(residue)
+    data = []
+    for num in range(1, len(dic)+1):
+        row = []
+        row.append(num)
+        row.append(aln2pfam[num] if num in aln2pfam else '-')
+        row.append(''.join(dic[num]))
+        data.append(row)
+    df = pd.DataFrame(data, columns=['alnPos', 'pfampos', 'alnAA'])
+    # df.to_sql('alignment', con=mycursor, if_exists='replace', index=False)
+    mycursor.execute("DROP TABLE IF EXISTS alignment CASCADE")
+    mycursor.execute("CREATE TABLE alignment (\
+                     alnPos VARCHAR(5) PRIMARY KEY, \
+                     pfamPos VARCHAR(10) REFERENCES hmm DEFERRABLE, \
+                     alnAA TEXT\
+                        )")
+    tmp_df = "./tmp_dataframe.csv"
+    df.to_csv(tmp_df, index=False, header=False)
+    f = open(tmp_df, 'r')
+    mycursor.copy_from(f, 'alignment', sep=',')
+    
+
 def create_hmm_table(mycursor)->None:
     '''Function to create HMM table'''
     AA = 'ACDEFGHIKLMNPQRSTVWY'
@@ -107,13 +147,13 @@ def create_ptm_table(mycursor)->None:
     mycursor.execute("DROP TABLE IF EXISTS ptms CASCADE")
     mycursor.execute("CREATE TABLE ptms (\
                      uniprotPos INT, uniprotAA VARCHAR(1),\
-                     pfamPos VARCHAR(10), pfamAA VARCHAR(1),\
-                     acc VARCHAR(20), gene VARCHAR(25), \
-                     ptmType VARCHAR(10),\
-                     name VARCHAR(50), \
+                     pfamPos VARCHAR(10) REFERENCES hmm DEFERRABLE, \
+                     pfamAA VARCHAR(1),\
+                     acc VARCHAR(10) REFERENCES kinases(acc) DEFERRABLE, \
+                     gene VARCHAR(25), ptmType VARCHAR(10), name VARCHAR(50), \
                      CONSTRAINT name FOREIGN KEY (name) REFERENCES positions(name) \
                      )")
-    for line in open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r'):
+    for line in tqdm(open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r')):
         if line.startswith('#'): continue
         line = line.rstrip().split('\t')
         acc = line[0]
@@ -175,13 +215,21 @@ def fetch_mappings_dic():
         '''
     return mappings
 
+def find_pfampos(mycursor, acc, uniprotPos)->None:
+    mycursor.execute("select pfampos from positions \
+                     where acc=%s and uniprotpos=%s", (acc, uniprotPos))
+    pfamPos = mycursor.fetchone()[0]
+    return pfamPos
+
 def create_mutations_table(mycursor)->None:
     '''Function to create the mutations table'''
     mycursor.execute("DROP TABLE IF EXISTS mutations CASCADE")
     mycursor.execute("CREATE TABLE mutations (id SERIAL PRIMARY KEY, \
-                     mutation VARCHAR(10), wtAA VARCHAR(1), wtPos INT, \
-                     mutAA VARCHAR(1), mut_type VARCHAR(10), \
-                     acc VARCHAR(10), gene VARCHAR(10), \
+                     mutation VARCHAR(10), wtAA VARCHAR(1), wtPos INT, mutAA VARCHAR(1), \
+                     pfamPos VARCHAR(10) REFERENCES hmm DEFERRABLE, \
+                     mut_type VARCHAR(10), \
+                     acc VARCHAR(10) REFERENCES kinases(acc) DEFERRABLE, \
+                     gene VARCHAR(10), \
                      info TEXT, source VARCHAR(200) \
                      )")
                     # UNIQUE(mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)\
@@ -193,6 +241,7 @@ def create_mutations_table(mycursor)->None:
         mutAA = line.split('\t')[4].replace(',', '')
         if len(wtAA) > 1 or len(mutAA) > 1: continue
         wtPos = str(line.split('\t')[3])
+        pfamPos = find_pfampos(mycursor, acc, wtPos)
         mut_type = line.split('\t')[5]
         # print (acc, kinases[acc].gene, wtAA, position, mutAA)
         mutation = wtAA + wtPos + mutAA
@@ -200,10 +249,10 @@ def create_mutations_table(mycursor)->None:
         # info = 'info'
         source = line.split('\t')[-1]
         # print (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)
-        mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, mut_type, \
-                         acc, gene, info, source) \
-                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", \
-                        (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source))
+        mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, \
+                         pfamPos, mut_type, acc, gene, info, source) \
+                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
+                        (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc, gene, info, source))
 
     '''Fetch resistant mutation data'''
     for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
@@ -214,6 +263,7 @@ def create_mutations_table(mycursor)->None:
         if mutAA == 'X': continue
         if len(wtAA) > 1 or len(mutAA) > 1: continue
         wtPos = line.split('\t')[2].replace('\n', '')
+        pfamPos = find_pfampos(mycursor, acc, wtPos)
         mutation = wtAA + wtPos + mutAA
         mut_type = 'R'
         source = 'COSMIC'
@@ -221,10 +271,10 @@ def create_mutations_table(mycursor)->None:
         # if wtPos not in seq2pfam[acc]:
         #     print (f'{uniprot_position} seems to be outside the domain in {acc} and reported {mut_type}')
         #     continue
-        mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, mut_type, \
-                         acc, gene, info, source) \
-                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", \
-                        (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source))
+        mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, \
+                         pfamPos, mut_type, acc, gene, info, source) \
+                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
+                        (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc, gene, info, source))
     
     '''Fetch neutral mutation data'''
     for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
@@ -235,6 +285,7 @@ def create_mutations_table(mycursor)->None:
         if mutAA == 'X': continue
         if len(wtAA) > 1 or len(mutAA) > 1: continue
         wtPos = line.split('\t')[3].replace('\n', '')
+        pfamPos = find_pfampos(mycursor, acc, wtPos)
         mutation = wtAA + wtPos + mutAA
         mut_type = 'N'
         source = 'gnomAD'
@@ -245,10 +296,10 @@ def create_mutations_table(mycursor)->None:
         #     print (f'{uniprot_position} seems to be outside the domain and reported {mut_type}')
         #     print (seq2pfam[acc])
         #     continue
-        mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, mut_type, \
-                         acc, gene, info, source) \
-                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", \
-                        (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source))
+        mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, \
+                         pfamPos, mut_type, acc, gene, info, source) \
+                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
+                        (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc, gene, info, source))
 
 def createDicForDSSP(dic, position, mutation, value):
     if position not in dic: dic[position] = {}
@@ -271,17 +322,10 @@ def create_homology_table(mycursor) -> None:
         homology = fileEnd.split('.scores')[0]
         homology = homology[1:]
         mycursor.execute("DROP TABLE IF EXISTS "+homology+" CASCADE")
-        '''
-        mycursor.execute("CREATE TABLE "+homology+" (id SERIAL PRIMARY KEY, \
-                    acc VARCHAR(10), mutation VARCHAR(10), \
-                    wtaa VARCHAR(5), position INT, mutaa VARCHAR(5), \
-                    wtscore FLOAT, mutscore FLOAT, diffscore FLOAT, \
-                    info TEXT) \
-                    ")
-        '''
         AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
         mycursor.execute("CREATE TABLE "+homology+" (\
-                    acc VARCHAR(10), wtaa VARCHAR(5), position INT, \
+                    acc VARCHAR(10) REFERENCES kinases(acc) DEFERRABLE, \
+                    wtaa VARCHAR(5), position INT, \
                     A_score FLOAT, C_score FLOAT, D_score FLOAT, E_score FLOAT, \
                     F_score FLOAT, G_score FLOAT, H_score FLOAT, I_score FLOAT, \
                     K_score FLOAT, L_score FLOAT, M_score FLOAT, N_score FLOAT, \
@@ -309,21 +353,11 @@ def create_homology_table(mycursor) -> None:
                 wtscore = float(line.split()[2])
                 mutscore = float(line.split()[3])
                 diffscore = float(line.split()[4])
-                # info = line.split()[5].rstrip()
-                info = '-'
+                info = line.split()[5].rstrip()
+                # info = '-'
                 if position not in dic: dic[position] = {'wtaa': wtaa, 'info': info}
                 dic[position][mutaa+'_score'] = mutscore
-                '''
-                mycursor.execute('INSERT INTO '+homology+' (acc, mutation, \
-                                 wtaa, position, mutaa, \
-                                 wtscore, mutscore, diffscore, \
-                                 info) \
-                                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)', \
-                                (acc, mutation, wtaa, position, mutaa, \
-                                wtscore, mutscore, diffscore, \
-                                info))
-                '''
-            for position in dic:
+            for position in range(1, len(dic)+1):
                 row = []
                 row = [acc, dic[position]['wtaa'], position]
                 for aa in AA:
@@ -333,57 +367,20 @@ def create_homology_table(mycursor) -> None:
                         row.append(None)
                 row.append(dic[position]['info'] if 'info' in dic[position] else None)
                 data.append(row)
-                '''
-                mycursor.execute('INSERT INTO '+homology+' (acc, wtaa, position, \
-                                A_score, C_score, D_score, E_score, \
-                                F_score, G_score, H_score, I_score, \
-                                K_score, L_score, M_score, N_score, \
-                                P_score, Q_score, R_score, S_score, \
-                                T_score, V_score, W_score, Y_score, \
-                                info) \
-                                VALUES (%s, %s, %s, \
-                                %s, %s, %s, %s, \
-                                %s, %s, %s, %s, \
-                                %s, %s, %s, %s, \
-                                %s, %s, %s, %s, \
-                                %s, %s, %s, %s, \
-                                %s)', \
-                                (acc, dic[position]['wtaa'], position, \
-                                dic[position]['A_score'] if 'A_score' in dic[position] else None, \
-                                dic[position]['C_score'] if 'C_score' in dic[position] else None, \
-                                dic[position]['D_score'] if 'D_score' in dic[position] else None, \
-                                dic[position]['E_score'] if 'E_score' in dic[position] else None, \
-                                dic[position]['F_score'] if 'F_score' in dic[position] else None, \
-                                dic[position]['G_score'] if 'G_score' in dic[position] else None, \
-                                dic[position]['H_score'] if 'H_score' in dic[position] else None, \
-                                dic[position]['I_score'] if 'I_score' in dic[position] else None, \
-                                dic[position]['K_score'] if 'K_score' in dic[position] else None, \
-                                dic[position]['L_score'] if 'L_score' in dic[position] else None, \
-                                dic[position]['M_score'] if 'M_score' in dic[position] else None, \
-                                dic[position]['N_score'] if 'N_score' in dic[position] else None, \
-                                dic[position]['P_score'] if 'P_score' in dic[position] else None, \
-                                dic[position]['Q_score'] if 'Q_score' in dic[position] else None, \
-                                dic[position]['R_score'] if 'R_score' in dic[position] else None, \
-                                dic[position]['S_score'] if 'S_score' in dic[position] else None, \
-                                dic[position]['T_score'] if 'T_score' in dic[position] else None, \
-                                dic[position]['V_score'] if 'V_score' in dic[position] else None, \
-                                dic[position]['W_score'] if 'W_score' in dic[position] else None, \
-                                dic[position]['Y_score'] if 'Y_score' in dic[position] else None, \
-                                dic[position]['info'] if 'info' in dic[position] else None)
-                                 )
-                '''
+        if len(data) == 0: continue
         df = pd.DataFrame(data)
         # print (df)
         tmp_df = "./tmp_dataframe.csv"
         df.to_csv(tmp_df, index=False, header=False)
         f = open(tmp_df, 'r')
-        mycursor.copy_from(f, homology, sep=',') 
+        mycursor.copy_from(f, homology, sep=',')
 
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
     mycursor.execute("DROP TABLE IF EXISTS kinases CASCADE")
-    mycursor.execute("CREATE TABLE kinases (id SERIAL PRIMARY KEY, \
-                     acc VARCHAR(10), gene VARCHAR(10), uniprot_id VARCHAR(25), \
+    mycursor.execute("CREATE TABLE kinases (\
+                     acc VARCHAR(10) PRIMARY KEY, \
+                     gene VARCHAR(10), uniprot_id VARCHAR(25), \
                      fasta TEXT) \
                      ")
                     #  UNIQUE(acc, gene, uniprot_id, fasta))\
@@ -391,7 +388,8 @@ def create_kinases_table(mycursor)->None:
     mycursor.execute("CREATE TABLE positions (\
                      uniprotPos INT, uniprotAA VARCHAR(1),\
                      pfamPos VARCHAR(10) REFERENCES hmm DEFERRABLE, \
-                     pfamAA VARCHAR(1), acc VARCHAR(20), \
+                     pfamAA VARCHAR(1), \
+                     acc VARCHAR(10) REFERENCES kinases DEFERRABLE, \
                      uniprot_id VARCHAR(25), \
                      name VARCHAR(50) PRIMARY KEY \
                      )")
@@ -481,12 +479,12 @@ if __name__ == '__main__':
     '''
 
     # Create tables
-    create_hmm_table(mycursor)
-    create_mutations_table(mycursor)
-    # sys.exit()
+    # create_hmm_table(mycursor)
     create_kinases_table(mycursor)
+    # create_mutations_table(mycursor)
     create_homology_table(mycursor)
-    create_ptm_table(mycursor)
+    # create_ptm_table(mycursor)
+    # create_alignment_table(mycursor)
     mydb.commit()
 
     # Use mysqldump to create backup file
