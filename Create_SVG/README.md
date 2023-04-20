@@ -2,7 +2,9 @@ ___
 # Introduction
 ## This script
 The file **create_svg_20230314_kinases.py** comes with several python2 functions that can annotate or highlight positions in a Clustal-formatted alignment.
-The file **create_svg_20230321_kinases.py** has identical functionalities and was upgraded to work under Python3.6.
+
+The file **create_svg_20230420_kinases.py** has similar (see below) functionalities and was upgraded to work under Python3.6.
+Further work will only be conducted on the Python3+ script.
 
 ___
 ## General use case
@@ -36,27 +38,30 @@ from Bio import AlignIO (only when using Python 2.7)
 In case we have to deal with .pkl files I did a quick solution to reformat them into a script that Python2.7 can use. Ironically this script is obviously in Python3. **See reformatter.py**
 
 ___
-## Features (Version K)
+## Features (Vlatest)
+- **New** Added a parameter to show only the Top X sequences (+ sequence of interest).
 - **New** Upgraded the code to work under Python3.6
 - **New** Added transparent rectangles to highlight a sequence conservation (= identity) over >= 70 %, based on the sequence of interest. The colors for this are taken from CLUSTAL/Jalview.
 - **New** Change highlighting to circles. Circle radius can later be adjusted based on evidence.
 - **New** Added basic heatmapping above the alignment, showing how many highlights per position & per category we have.
 - **New** Added start and end positions for each displayed sequence.
 - Command line functionality. 
+
 To use the script we can now execute the following command:
-`python create_svg_20230306_kinases.py P46734 210 30 MAP2K3.aln Mutational_Infofile.txt Features_Infofile.txt` 
-This command has several field after calling the script:
+`python3 create_svg_20230420_kinases.py O96017 372 30 10 humanKinasesTrimmed.clustal Mutational_Infofile_Kinases.txt` 
+This command has several fields after calling the script:
 
 | Field        | Example           | Description  |
 | ------------- |:-------------:| -----:|
 | 0     | P46734 | The uniprot ID of the protein we are interested in |
 | 1     | 210 | The position to be highlighted |
-| 2     | 30 | The Windowsize, we show +/- the windowsize of residues around the highlighted position|
-| 3     | MAP2K3.aln | The alignment file |
-| 4     | Mutational_Infofile.txt | The file containing positional information |
-| 5     | Features_Infofile.txt | A file containing structural/domain features, numbering based on **protein of interest** |
+| 2     | 30 | The Windowsize, we show +/- the windowsize of residues around the highlighted position. **WARNING** Does not work if the starting position of the sequences is != 1.|
+|3      |10 | Shows the top 10 sequences, based on information content|
+| 4     | MAP2K3.aln | The alignment file |
+| 5     | Mutational_Infofile.txt | The file containing positional information |
+| 6     | Features_Infofile.txt | A file containing structural/domain features, numbering based on **protein of interest** |
 
-**Note**: The script allows for a little hack here. If you want a (large) .svg containing the whole alignment just give a big number in field 2, for example 20000. The script will then produce a complete alignment view. **New** Giving "none" instead of a position to be highlighted (field 1) works the same + it removed the position specific rectangle.
+**Note**: The script allows for a little hack here. If you want a (large) .svg containing the whole alignment just give a big number in field 2, for example 20000. The script will then produce a complete alignment view. **New** Giving "none" instead of a position to be highlighted (field 1) works the same + it removes the position specific rectangle.
 
 - Named Output files. The resultfile will already be named depending on the input settings, so one can easily try different settings. The name follows this format: 
 `poi+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+".svg"`
@@ -76,6 +81,7 @@ This command has several field after calling the script:
 ___
 ## What is next?
 - Make circle size adjustable by evidence.
+- add mouseover tooltips
 
 ___
 ## The most recent type of results
