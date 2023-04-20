@@ -78,10 +78,7 @@
 		</div>
 	<div class="col-sm-4" style="padding-top: 5px" id="infoBox" >
 		<form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
-			<textarea style="height: 650px" class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="inputMut">
-# Activating mutation in MAP2K3
-MAP2K3/A84T
-
+			<textarea style="height: 550px" class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="inputMut">
 # Deactivating mutation in CDK6 
 Q00534/T49A
 
@@ -104,7 +101,6 @@ MAP2K1/V211D
 PIM1/T23I
 PIM1/S97N
 PIM1/Q127E
-
 			</textarea>
 		<div style="padding-top: 25px">
 			<button type="submit" class="btn btn-primary" onclick="call_onclick()">Submit</button>

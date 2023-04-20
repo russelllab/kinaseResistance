@@ -132,7 +132,8 @@ def configureRoutes(app):
 				os.system('mkdir static/predictor/output/'+uniqID)
 			with open('static/predictor/output/'+uniqID+'/input.txt', 'w') as f:
 				f.write(inputMuts)
-			results = prepareTestData.predict('static/predictor/output/'+uniqID+'/input.txt', BASE_DIR)
+			results = prepareTestData.predict('static/predictor/output/'+uniqID+'/input.txt', \
+				     BASE_DIR)
 			# return inputMuts
 			output = []; seq = ''; dic = {}
 			for line in inputMuts.split('\n'):
