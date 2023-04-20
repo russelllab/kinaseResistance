@@ -78,16 +78,33 @@
 		</div>
 	<div class="col-sm-4" style="padding-top: 25px" id="infoBox" >
 		<form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
-			<textarea style="height: 250px" class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="inputMut">
+			<textarea style="height: 500px" class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="inputMut">
 # Activating mutation in MAP2K3
 MAP2K3/A84T
 
-# Deactivating mutation in MAP2K1
-CDK14/K164R
+# Deactivating mutation in CDK6 
 Q00534/T49A
 
 # Resistant mutation in BRAF
 BRAF/V600E
+
+# Mutations in CHEK2
+CHEK2/K373E
+CHEK2/T68A
+
+# Mutations in MAP2K3
+MAP2K3/A84T
+MAP2K3/T222M
+
+# Mutations in MAP2K1
+MAP2K1/K97A
+MAP2K1/V211D
+
+# Mutations in PIM1
+PIM1/T23I
+PIM1/S97N
+PIM1/Q127E
+
 			</textarea>
 		<div style="padding-top: 25px">
 			<button type="submit" class="btn btn-primary" onclick="call_onclick()">Submit</button>
