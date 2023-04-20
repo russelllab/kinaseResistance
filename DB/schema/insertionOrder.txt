@@ -1,0 +1,12 @@
+kinases
+hmm
+alignment
+positions
+all_homs
+bpsh
+bpso
+excl_para
+orth
+spec_para
+mutations
+ptms
