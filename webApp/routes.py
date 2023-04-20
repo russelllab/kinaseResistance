@@ -18,8 +18,6 @@ import requests
 from requests.adapters import HTTPAdapter, Retry
 import socket
 import psycopg2
-#from webApp import app
-#import callUniProtAPI
 
 # Set up the base_url
 if socket.gethostname() == 'pevolution2.bioquant.uni-heidelberg.de':
@@ -36,11 +34,6 @@ import prepareTestData
 
 def connection():
     '''Function to connect to postgresql database'''
-    '''mydb = mysql.connector.connect(
-    host="localhost",
-    user="kinase_user",
-    password=""
-    )'''
     mydb = psycopg2.connect(
                             database = "kinase_project",
                             user = "gurdeep",
@@ -119,13 +112,9 @@ def configureRoutes(app):
 		a summary data table with mutation and related information.
 		'''
 		if request.method == 'POST':
-			print ('POST')
 			mydb = connection()
 			mydb.autocommit = True
 			mycursor = mydb.cursor()
-			# mycursor.execute("select fasta from kinases where acc=%s", ('O94921',))
-			# fasta = mycursor.fetchone()[0]
-			# print (fasta)
 			#sys.exit()
 			inputMuts = request.form['inputMut']
 			if os.path.isfile('static/predictor/output/'+uniqID) is False:
@@ -133,13 +122,10 @@ def configureRoutes(app):
 			with open('static/predictor/output/'+uniqID+'/input.txt', 'w') as f:
 				f.write(inputMuts)
 			results = prepareTestData.predict('static/predictor/output/'+uniqID+'/input.txt', \
-				     BASE_DIR)
+				     BASE_DIR = BASE_DIR)
 			# return inputMuts
 			output = []; seq = ''; dic = {}
 			for line in inputMuts.split('\n'):
-				# print ('>>>>', line.split())
-				# print ('==='+line.lstrip().rstrip()+'===')
-				# print ('<<<<', line)
 				if line[0] == '#' or line.lstrip().rstrip() == '':
 					continue
 				protein = line.split('/')[0].lstrip()
@@ -160,10 +146,6 @@ def configureRoutes(app):
 					dic['prediction'] = '-'
 					dic['hmmPos'] = '-'
 				output.append(dic)
-				## Check if the given input is acc or gene name
-				# acc, geneName = get_genename(protein)
-				# protein = acc
-				# mutation = line.split('/')[1].replace('\n', '').rstrip()
 			output = {'data': output}
 			with open('static/predictor/output/'+uniqID+'/output.json', 'w') as f:
 				json.dump(output, f)
@@ -180,7 +162,7 @@ if __name__ == "__main__":
 	app = Flask(__name__)
 	configureRoutes(app)
 	app.run(debug=True)
-	print ('hello')
+	print ('Ciao!')
 else:
 	#import webApp.callUniProtAPI as callUniProtAPI
 	# import callUniProtAPI
