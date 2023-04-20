@@ -18,8 +18,6 @@ import requests
 from requests.adapters import HTTPAdapter, Retry
 import socket
 import psycopg2
-sys.path.insert(1, '../ML/')
-import prepareTestData
 #from webApp import app
 #import callUniProtAPI
 
@@ -31,6 +29,10 @@ if socket.gethostname() == 'pevolution2.bioquant.uni-heidelberg.de':
 else:
 	BASE_URL = 'http://127.0.0.1:5000/'
 	BASE_DIR = '../'
+
+
+sys.path.insert(1, BASE_DIR+'/ML/')
+import prepareTestData
 
 def connection():
     '''Function to connect to postgresql database'''

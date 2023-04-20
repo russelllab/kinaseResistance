@@ -1,0 +1,104 @@
+#!/usr/bin/bash
+
+# ['/usr/local/bin/mod_wsgi-express', 'setup-server', '/var/www/flask_apps/kinaseResistance/webApp.wsgi', '--server-root=/var/www/flask_apps/kinaseResistance/server/', '--port=8014', '--reload-on-changes']
+
+HTTPD="/usr/sbin/httpd"
+HTTPD_ARGS="-f /var/www/flask_apps/kinaseResistance/server/httpd.conf -DMOD_WSGI_MPM_ENABLE_EVENT_MODULE -DMOD_WSGI_MPM_EXISTS_EVENT_MODULE -DMOD_WSGI_MPM_EXISTS_WORKER_MODULE -DMOD_WSGI_MPM_EXISTS_PREFORK_MODULE"
+
+HTTPD_COMMAND="$HTTPD $HTTPD_ARGS"
+
+MOD_WSGI_MODULES_DIRECTORY="/usr/lib64/httpd/modules"
+export MOD_WSGI_MODULES_DIRECTORY
+
+SHLIBPATH=""
+
+if [ "x$SHLIBPATH" != "x" ]; then
+    LD_LIBRARY_PATH="$SHLIBPATH:$LD_LIBRARY_PATH"
+    export LD_LIBRARY_PATH
+fi
+
+MOD_WSGI_SERVER_ROOT="/var/www/flask_apps/kinaseResistance/server/"
+
+export MOD_WSGI_SERVER_ROOT
+
+MOD_WSGI_LISTENER_HOST="localhost"
+
+export MOD_WSGI_LISTENER_HOST
+
+MOD_WSGI_HTTP_PORT="8014"
+MOD_WSGI_HTTPS_PORT="None"
+
+export MOD_WSGI_HTTP_PORT
+export MOD_WSGI_HTTPS_PORT
+
+WSGI_RUN_USER="${WSGI_RUN_USER:-bq_gsingh}"
+WSGI_RUN_GROUP="${WSGI_RUN_GROUP:-ag-russell}"
+
+MOD_WSGI_USER="${MOD_WSGI_USER:-${WSGI_RUN_USER}}"
+MOD_WSGI_GROUP="${MOD_WSGI_GROUP:-${WSGI_RUN_GROUP}}"
+
+export MOD_WSGI_USER
+export MOD_WSGI_GROUP
+
+if [ `id -u` = "0" -a ${MOD_WSGI_USER} = "root" ]; then
+    cat << EOF
+
+WARNING: When running as the 'root' user, it is required that the options
+'--user' and '--group' be specified to mod_wsgi-express. These should
+define a non 'root' user and group under which the Apache child worker
+processes and mod_wsgi daemon processes should be run. Failure to specify
+these options will result in Apache and/or the mod_wsgi daemon processes
+failing to start. See the mod_wsgi-express documentation for further
+information on this restriction.
+
+EOF
+
+fi
+
+MOD_WSGI_WORKING_DIRECTORY="/var/www/flask_apps/kinaseResistance"
+
+export MOD_WSGI_WORKING_DIRECTORY
+
+LANG='en_IN.ISO8859-1'
+LC_ALL='en_IN.ISO8859-1'
+
+export LANG
+export LC_ALL
+
+ACMD="$1"
+ARGV="$@"
+
+if test -f /var/www/flask_apps/kinaseResistance/server//envvars; then
+    . /var/www/flask_apps/kinaseResistance/server//envvars
+fi
+
+STATUSURL="http://localhost:8014/server-status"
+
+if [ "x$ARGV" = "x" ]; then
+    ARGV="-h"
+fi
+
+GDB="gdb"
+ENABLE_GDB="False"
+
+PROCESS_NAME="httpd (mod_wsgi-express)  "
+
+case $ACMD in
+start|stop|restart|graceful|graceful-stop)
+    if [ "x$ENABLE_GDB" != "xTrue" ]; then
+        exec -a "$PROCESS_NAME" $HTTPD_COMMAND -k $ARGV
+    else
+        echo "run $HTTPD_ARGS -k $ARGV" > /var/www/flask_apps/kinaseResistance/server//gdb.cmds
+        gdb -x /var/www/flask_apps/kinaseResistance/server//gdb.cmds $HTTPD
+    fi
+    ;;
+configtest)
+    exec $HTTPD_COMMAND -t
+    ;;
+status)
+    exec /usr/bin/python3 -m webbrowser -t $STATUSURL
+    ;;
+*)
+    exec $HTTPD_COMMAND $ARGV
+esac
+

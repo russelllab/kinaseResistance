@@ -1,0 +1,831 @@
+[Wed Apr 19 22:04:28.380295 2023] [core:notice] [pid 156664:tid 139977963829376] SELinux policy enabled; httpd running as context unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+[Wed Apr 19 22:04:28.386427 2023] [mpm_event:notice] [pid 157060:tid 139977963829376] AH00489: Apache/2.4.6 (CentOS) mod_wsgi/4.7.1 Python/3.6 configured -- resuming normal operations
+[Wed Apr 19 22:04:28.386443 2023] [core:notice] [pid 157060:tid 139977963829376] AH00094: Command line: 'httpd (mod_wsgi-express)   -f /var/www/flask_apps/kinaseResistance/server/httpd.conf -D MOD_WSGI_MPM_ENABLE_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_WORKER_MODULE -D MOD_WSGI_MPM_EXISTS_PREFORK_MODULE'
+[Wed Apr 19 22:04:28.386499 2023] [wsgi:error] [pid 157061:tid 139977963829376] mod_wsgi (pid=157061): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Wed Apr 19 22:04:28.406041 2023] [wsgi:error] [pid 157061:tid 139977963829376] mod_wsgi (pid=157061): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:04:28.406065 2023] [wsgi:error] [pid 157061:tid 139977963829376] mod_wsgi (pid=157061): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:04:28.410180 2023] [wsgi:error] [pid 157061:tid 139977963829376] Traceback (most recent call last):
+[Wed Apr 19 22:04:28.410202 2023] [wsgi:error] [pid 157061:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 7, in <module>
+[Wed Apr 19 22:04:28.410204 2023] [wsgi:error] [pid 157061:tid 139977963829376]     import mod_wsgi.server
+[Wed Apr 19 22:04:28.410214 2023] [wsgi:error] [pid 157061:tid 139977963829376] ModuleNotFoundError: No module named 'mod_wsgi.server'; 'mod_wsgi' is not a package
+[Wed Apr 19 22:04:46.093157 2023] [wsgi:error] [pid 157061:tid 139977732925184] [remote 127.0.0.1:34558] mod_wsgi (pid=157061): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:04:46.093213 2023] [wsgi:error] [pid 157061:tid 139977732925184] [remote 127.0.0.1:34558] mod_wsgi (pid=157061): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:04:46.093327 2023] [wsgi:error] [pid 157061:tid 139977732925184] [remote 127.0.0.1:34558] Traceback (most recent call last):
+[Wed Apr 19 22:04:46.093353 2023] [wsgi:error] [pid 157061:tid 139977732925184] [remote 127.0.0.1:34558]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 7, in <module>
+[Wed Apr 19 22:04:46.093356 2023] [wsgi:error] [pid 157061:tid 139977732925184] [remote 127.0.0.1:34558]     import mod_wsgi.server
+[Wed Apr 19 22:04:46.093369 2023] [wsgi:error] [pid 157061:tid 139977732925184] [remote 127.0.0.1:34558] ModuleNotFoundError: No module named 'mod_wsgi.server'; 'mod_wsgi' is not a package
+[Wed Apr 19 22:04:46.284458 2023] [wsgi:error] [pid 157061:tid 139977707747072] [remote 127.0.0.1:34572] mod_wsgi (pid=157061): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:04:46.284503 2023] [wsgi:error] [pid 157061:tid 139977707747072] [remote 127.0.0.1:34572] mod_wsgi (pid=157061): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:04:46.284596 2023] [wsgi:error] [pid 157061:tid 139977707747072] [remote 127.0.0.1:34572] Traceback (most recent call last):
+[Wed Apr 19 22:04:46.284619 2023] [wsgi:error] [pid 157061:tid 139977707747072] [remote 127.0.0.1:34572]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 7, in <module>
+[Wed Apr 19 22:04:46.284622 2023] [wsgi:error] [pid 157061:tid 139977707747072] [remote 127.0.0.1:34572]     import mod_wsgi.server
+[Wed Apr 19 22:04:46.284633 2023] [wsgi:error] [pid 157061:tid 139977707747072] [remote 127.0.0.1:34572] ModuleNotFoundError: No module named 'mod_wsgi.server'; 'mod_wsgi' is not a package
+[Wed Apr 19 22:05:02.422391 2023] [wsgi:error] [pid 157792:tid 139977963829376] mod_wsgi (pid=157792): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Wed Apr 19 22:05:02.444467 2023] [wsgi:error] [pid 157792:tid 139977963829376] mod_wsgi (pid=157792): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:05:02.444492 2023] [wsgi:error] [pid 157792:tid 139977963829376] mod_wsgi (pid=157792): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:05:02.448742 2023] [wsgi:error] [pid 157792:tid 139977963829376] Traceback (most recent call last):
+[Wed Apr 19 22:05:02.448764 2023] [wsgi:error] [pid 157792:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 7, in <module>
+[Wed Apr 19 22:05:02.448766 2023] [wsgi:error] [pid 157792:tid 139977963829376]     import mod_wsgi.server
+[Wed Apr 19 22:05:02.448777 2023] [wsgi:error] [pid 157792:tid 139977963829376] ModuleNotFoundError: No module named 'mod_wsgi.server'; 'mod_wsgi' is not a package
+[Wed Apr 19 22:07:10.855511 2023] [wsgi:error] [pid 157792:tid 139977741317888] [remote 127.0.0.1:43020] mod_wsgi (pid=157792): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:10.855557 2023] [wsgi:error] [pid 157792:tid 139977741317888] [remote 127.0.0.1:43020] mod_wsgi (pid=157792): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:10.855649 2023] [wsgi:error] [pid 157792:tid 139977741317888] [remote 127.0.0.1:43020] Traceback (most recent call last):
+[Wed Apr 19 22:07:10.855672 2023] [wsgi:error] [pid 157792:tid 139977741317888] [remote 127.0.0.1:43020]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 7, in <module>
+[Wed Apr 19 22:07:10.855674 2023] [wsgi:error] [pid 157792:tid 139977741317888] [remote 127.0.0.1:43020]     import mod_wsgi.server
+[Wed Apr 19 22:07:10.855686 2023] [wsgi:error] [pid 157792:tid 139977741317888] [remote 127.0.0.1:43020] ModuleNotFoundError: No module named 'mod_wsgi.server'; 'mod_wsgi' is not a package
+[Wed Apr 19 22:07:10.982157 2023] [wsgi:error] [pid 157792:tid 139977707747072] [remote 127.0.0.1:43034] mod_wsgi (pid=157792): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:10.982206 2023] [wsgi:error] [pid 157792:tid 139977707747072] [remote 127.0.0.1:43034] mod_wsgi (pid=157792): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:10.982303 2023] [wsgi:error] [pid 157792:tid 139977707747072] [remote 127.0.0.1:43034] Traceback (most recent call last):
+[Wed Apr 19 22:07:10.982326 2023] [wsgi:error] [pid 157792:tid 139977707747072] [remote 127.0.0.1:43034]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 7, in <module>
+[Wed Apr 19 22:07:10.982329 2023] [wsgi:error] [pid 157792:tid 139977707747072] [remote 127.0.0.1:43034]     import mod_wsgi.server
+[Wed Apr 19 22:07:10.982341 2023] [wsgi:error] [pid 157792:tid 139977707747072] [remote 127.0.0.1:43034] ModuleNotFoundError: No module named 'mod_wsgi.server'; 'mod_wsgi' is not a package
+[Wed Apr 19 22:07:27.571080 2023] [wsgi:error] [pid 161278:tid 139977963829376] mod_wsgi (pid=161278): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Wed Apr 19 22:07:27.635133 2023] [wsgi:error] [pid 161278:tid 139977963829376] mod_wsgi (pid=161278): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:27.635160 2023] [wsgi:error] [pid 161278:tid 139977963829376] mod_wsgi (pid=161278): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:27.635764 2023] [wsgi:error] [pid 161278:tid 139977963829376] Traceback (most recent call last):
+[Wed Apr 19 22:07:27.635801 2023] [wsgi:error] [pid 161278:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Wed Apr 19 22:07:27.635804 2023] [wsgi:error] [pid 161278:tid 139977963829376]     recorder_directory=recorder_directory)
+[Wed Apr 19 22:07:27.635808 2023] [wsgi:error] [pid 161278:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1481, in __init__
+[Wed Apr 19 22:07:27.635810 2023] [wsgi:error] [pid 161278:tid 139977963829376]     self.application = getattr(self.module, callable_object)
+[Wed Apr 19 22:07:27.635819 2023] [wsgi:error] [pid 161278:tid 139977963829376] AttributeError: module '__wsgi__' has no attribute 'application'
+[Wed Apr 19 22:07:51.865637 2023] [wsgi:error] [pid 161278:tid 139977668212480] [remote 127.0.0.1:45336] mod_wsgi (pid=161278): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:51.865674 2023] [wsgi:error] [pid 161278:tid 139977668212480] [remote 127.0.0.1:45336] mod_wsgi (pid=161278): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:51.865882 2023] [wsgi:error] [pid 161278:tid 139977668212480] [remote 127.0.0.1:45336] Traceback (most recent call last):
+[Wed Apr 19 22:07:51.865912 2023] [wsgi:error] [pid 161278:tid 139977668212480] [remote 127.0.0.1:45336]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Wed Apr 19 22:07:51.865915 2023] [wsgi:error] [pid 161278:tid 139977668212480] [remote 127.0.0.1:45336]     recorder_directory=recorder_directory)
+[Wed Apr 19 22:07:51.865920 2023] [wsgi:error] [pid 161278:tid 139977668212480] [remote 127.0.0.1:45336]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1481, in __init__
+[Wed Apr 19 22:07:51.865922 2023] [wsgi:error] [pid 161278:tid 139977668212480] [remote 127.0.0.1:45336]     self.application = getattr(self.module, callable_object)
+[Wed Apr 19 22:07:51.865934 2023] [wsgi:error] [pid 161278:tid 139977668212480] [remote 127.0.0.1:45336] AttributeError: module '__wsgi__' has no attribute 'application'
+[Wed Apr 19 22:07:51.988159 2023] [wsgi:error] [pid 161278:tid 139977643034368] [remote 127.0.0.1:45346] mod_wsgi (pid=161278): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:51.988184 2023] [wsgi:error] [pid 161278:tid 139977643034368] [remote 127.0.0.1:45346] mod_wsgi (pid=161278): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:07:51.988244 2023] [wsgi:error] [pid 161278:tid 139977643034368] [remote 127.0.0.1:45346] Traceback (most recent call last):
+[Wed Apr 19 22:07:51.988267 2023] [wsgi:error] [pid 161278:tid 139977643034368] [remote 127.0.0.1:45346]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Wed Apr 19 22:07:51.988270 2023] [wsgi:error] [pid 161278:tid 139977643034368] [remote 127.0.0.1:45346]     recorder_directory=recorder_directory)
+[Wed Apr 19 22:07:51.988274 2023] [wsgi:error] [pid 161278:tid 139977643034368] [remote 127.0.0.1:45346]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1481, in __init__
+[Wed Apr 19 22:07:51.988276 2023] [wsgi:error] [pid 161278:tid 139977643034368] [remote 127.0.0.1:45346]     self.application = getattr(self.module, callable_object)
+[Wed Apr 19 22:07:51.988286 2023] [wsgi:error] [pid 161278:tid 139977643034368] [remote 127.0.0.1:45346] AttributeError: module '__wsgi__' has no attribute 'application'
+[Wed Apr 19 22:08:08.613307 2023] [wsgi:error] [pid 162700:tid 139977963829376] mod_wsgi (pid=162700): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Wed Apr 19 22:08:08.675134 2023] [wsgi:error] [pid 162700:tid 139977963829376] mod_wsgi (pid=162700): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:08:08.675159 2023] [wsgi:error] [pid 162700:tid 139977963829376] mod_wsgi (pid=162700): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Wed Apr 19 22:08:08.675767 2023] [wsgi:error] [pid 162700:tid 139977963829376] Traceback (most recent call last):
+[Wed Apr 19 22:08:08.675794 2023] [wsgi:error] [pid 162700:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Wed Apr 19 22:08:08.675797 2023] [wsgi:error] [pid 162700:tid 139977963829376]     recorder_directory=recorder_directory)
+[Wed Apr 19 22:08:08.675801 2023] [wsgi:error] [pid 162700:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1481, in __init__
+[Wed Apr 19 22:08:08.675802 2023] [wsgi:error] [pid 162700:tid 139977963829376]     self.application = getattr(self.module, callable_object)
+[Wed Apr 19 22:08:08.675812 2023] [wsgi:error] [pid 162700:tid 139977963829376] AttributeError: module '__wsgi__' has no attribute 'application'
+[Thu Apr 20 07:26:55.379071 2023] [wsgi:error] [pid 162700:tid 139977676605184] [remote 127.0.0.1:38618] mod_wsgi (pid=162700): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:26:55.379119 2023] [wsgi:error] [pid 162700:tid 139977676605184] [remote 127.0.0.1:38618] mod_wsgi (pid=162700): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:26:55.381502 2023] [wsgi:error] [pid 162700:tid 139977676605184] [remote 127.0.0.1:38618] Traceback (most recent call last):
+[Thu Apr 20 07:26:55.381539 2023] [wsgi:error] [pid 162700:tid 139977676605184] [remote 127.0.0.1:38618]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:26:55.381543 2023] [wsgi:error] [pid 162700:tid 139977676605184] [remote 127.0.0.1:38618]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:26:55.381547 2023] [wsgi:error] [pid 162700:tid 139977676605184] [remote 127.0.0.1:38618]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1481, in __init__
+[Thu Apr 20 07:26:55.381549 2023] [wsgi:error] [pid 162700:tid 139977676605184] [remote 127.0.0.1:38618]     self.application = getattr(self.module, callable_object)
+[Thu Apr 20 07:26:55.381562 2023] [wsgi:error] [pid 162700:tid 139977676605184] [remote 127.0.0.1:38618] AttributeError: module '__wsgi__' has no attribute 'application'
+[Thu Apr 20 07:26:55.572418 2023] [wsgi:error] [pid 162700:tid 139977643034368] [remote 127.0.0.1:38634] mod_wsgi (pid=162700): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:26:55.572445 2023] [wsgi:error] [pid 162700:tid 139977643034368] [remote 127.0.0.1:38634] mod_wsgi (pid=162700): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:26:55.572504 2023] [wsgi:error] [pid 162700:tid 139977643034368] [remote 127.0.0.1:38634] Traceback (most recent call last):
+[Thu Apr 20 07:26:55.572529 2023] [wsgi:error] [pid 162700:tid 139977643034368] [remote 127.0.0.1:38634]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:26:55.572532 2023] [wsgi:error] [pid 162700:tid 139977643034368] [remote 127.0.0.1:38634]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:26:55.572536 2023] [wsgi:error] [pid 162700:tid 139977643034368] [remote 127.0.0.1:38634]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1481, in __init__
+[Thu Apr 20 07:26:55.572538 2023] [wsgi:error] [pid 162700:tid 139977643034368] [remote 127.0.0.1:38634]     self.application = getattr(self.module, callable_object)
+[Thu Apr 20 07:26:55.572555 2023] [wsgi:error] [pid 162700:tid 139977643034368] [remote 127.0.0.1:38634] AttributeError: module '__wsgi__' has no attribute 'application'
+[Thu Apr 20 07:27:10.605192 2023] [wsgi:error] [pid 192914:tid 139977963829376] mod_wsgi (pid=192914): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:27:10.831010 2023] [wsgi:error] [pid 192914:tid 139977963829376] mod_wsgi (pid=192914): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:27:10.831054 2023] [wsgi:error] [pid 192914:tid 139977963829376] mod_wsgi (pid=192914): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:27:10.837679 2023] [wsgi:error] [pid 192914:tid 139977963829376] Traceback (most recent call last):
+[Thu Apr 20 07:27:10.837708 2023] [wsgi:error] [pid 192914:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:27:10.837711 2023] [wsgi:error] [pid 192914:tid 139977963829376]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:27:10.837715 2023] [wsgi:error] [pid 192914:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1481, in __init__
+[Thu Apr 20 07:27:10.837717 2023] [wsgi:error] [pid 192914:tid 139977963829376]     self.application = getattr(self.module, callable_object)
+[Thu Apr 20 07:27:10.837734 2023] [wsgi:error] [pid 192914:tid 139977963829376] AttributeError: module '__wsgi__' has no attribute 'application'
+[Thu Apr 20 07:29:16.466659 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528] mod_wsgi (pid=192914): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:16.466695 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528] mod_wsgi (pid=192914): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:16.467035 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528] Traceback (most recent call last):
+[Thu Apr 20 07:29:16.467071 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:29:16.467074 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:29:16.467079 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:29:16.467081 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:29:16.467101 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 4, in <module>
+[Thu Apr 20 07:29:16.467103 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528]     print (os.getcwd())
+[Thu Apr 20 07:29:16.467115 2023] [wsgi:error] [pid 192914:tid 139977676605184] [remote 127.0.0.1:46528] NameError: name 'os' is not defined
+[Thu Apr 20 07:29:16.609746 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538] mod_wsgi (pid=192914): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:16.609786 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538] mod_wsgi (pid=192914): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:16.609878 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538] Traceback (most recent call last):
+[Thu Apr 20 07:29:16.609916 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:29:16.609919 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:29:16.609923 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:29:16.609925 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:29:16.609929 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 4, in <module>
+[Thu Apr 20 07:29:16.609930 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538]     print (os.getcwd())
+[Thu Apr 20 07:29:16.609942 2023] [wsgi:error] [pid 192914:tid 139977643034368] [remote 127.0.0.1:46538] NameError: name 'os' is not defined
+[Thu Apr 20 07:29:32.749466 2023] [wsgi:error] [pid 196245:tid 139977963829376] mod_wsgi (pid=196245): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:29:32.810403 2023] [wsgi:error] [pid 196245:tid 139977963829376] mod_wsgi (pid=196245): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:32.810431 2023] [wsgi:error] [pid 196245:tid 139977963829376] mod_wsgi (pid=196245): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:32.811107 2023] [wsgi:error] [pid 196245:tid 139977963829376] Traceback (most recent call last):
+[Thu Apr 20 07:29:32.811137 2023] [wsgi:error] [pid 196245:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:29:32.811140 2023] [wsgi:error] [pid 196245:tid 139977963829376]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:29:32.811144 2023] [wsgi:error] [pid 196245:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:29:32.811146 2023] [wsgi:error] [pid 196245:tid 139977963829376]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:29:32.811149 2023] [wsgi:error] [pid 196245:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 4, in <module>
+[Thu Apr 20 07:29:32.811151 2023] [wsgi:error] [pid 196245:tid 139977963829376]     print (os.getcwd())
+[Thu Apr 20 07:29:32.811161 2023] [wsgi:error] [pid 196245:tid 139977963829376] NameError: name 'os' is not defined
+[Thu Apr 20 07:29:46.407344 2023] [wsgi:error] [pid 196245:tid 139977676605184] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:29:46.413560 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208] mod_wsgi (pid=196245): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:46.413603 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208] mod_wsgi (pid=196245): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:46.413924 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208] Traceback (most recent call last):
+[Thu Apr 20 07:29:46.413971 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:29:46.413975 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:29:46.413990 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:29:46.413993 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:29:46.413999 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:29:46.414002 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208]     from webApp.routes import app as application
+[Thu Apr 20 07:29:46.414008 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 1, in <module>
+[Thu Apr 20 07:29:46.414011 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208]     from flask import Flask
+[Thu Apr 20 07:29:46.414030 2023] [wsgi:error] [pid 196245:tid 139977676605184] [remote 127.0.0.1:48208] ModuleNotFoundError: No module named 'flask'
+[Thu Apr 20 07:29:46.550495 2023] [wsgi:error] [pid 196245:tid 139977643034368] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:29:46.550926 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220] mod_wsgi (pid=196245): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:46.550955 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220] mod_wsgi (pid=196245): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:29:46.551035 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220] Traceback (most recent call last):
+[Thu Apr 20 07:29:46.551062 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:29:46.551065 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:29:46.551070 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:29:46.551072 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:29:46.551075 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:29:46.551077 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220]     from webApp.routes import app as application
+[Thu Apr 20 07:29:46.551080 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 1, in <module>
+[Thu Apr 20 07:29:46.551082 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220]     from flask import Flask
+[Thu Apr 20 07:29:46.551093 2023] [wsgi:error] [pid 196245:tid 139977643034368] [remote 127.0.0.1:48220] ModuleNotFoundError: No module named 'flask'
+[Thu Apr 20 07:30:02.779792 2023] [wsgi:error] [pid 1199:tid 139977963829376] mod_wsgi (pid=1199): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:30:02.840425 2023] [wsgi:error] [pid 1199:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:30:02.840791 2023] [wsgi:error] [pid 1199:tid 139977963829376] mod_wsgi (pid=1199): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:30:02.840817 2023] [wsgi:error] [pid 1199:tid 139977963829376] mod_wsgi (pid=1199): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:30:02.841527 2023] [wsgi:error] [pid 1199:tid 139977963829376] Traceback (most recent call last):
+[Thu Apr 20 07:30:02.841555 2023] [wsgi:error] [pid 1199:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:30:02.841557 2023] [wsgi:error] [pid 1199:tid 139977963829376]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:30:02.841561 2023] [wsgi:error] [pid 1199:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:30:02.841563 2023] [wsgi:error] [pid 1199:tid 139977963829376]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:30:02.841566 2023] [wsgi:error] [pid 1199:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:30:02.841567 2023] [wsgi:error] [pid 1199:tid 139977963829376]     from webApp.routes import app as application
+[Thu Apr 20 07:30:02.841570 2023] [wsgi:error] [pid 1199:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 1, in <module>
+[Thu Apr 20 07:30:02.841572 2023] [wsgi:error] [pid 1199:tid 139977963829376]     from flask import Flask
+[Thu Apr 20 07:30:02.841581 2023] [wsgi:error] [pid 1199:tid 139977963829376] ModuleNotFoundError: No module named 'flask'
+[Thu Apr 20 07:30:37.468476 2023] [wsgi:error] [pid 1199:tid 139977676605184] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:30:37.741788 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072] mod_wsgi (pid=1199): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:30:37.741827 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072] mod_wsgi (pid=1199): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:30:37.742066 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072] Traceback (most recent call last):
+[Thu Apr 20 07:30:37.742095 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:30:37.742098 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:30:37.742102 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:30:37.742104 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:30:37.742108 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:30:37.742110 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]     from webApp.routes import app as application
+[Thu Apr 20 07:30:37.742113 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:30:37.742115 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]     from webApp import routes
+[Thu Apr 20 07:30:37.742118 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 9, in <module>
+[Thu Apr 20 07:30:37.742119 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072]     import gzip, json, random, string, os, requests, urllib
+[Thu Apr 20 07:30:37.742130 2023] [wsgi:error] [pid 1199:tid 139977676605184] [remote 127.0.0.1:51072] ModuleNotFoundError: No module named 'requests'
+[Thu Apr 20 07:30:37.957995 2023] [wsgi:error] [pid 1199:tid 139977643034368] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:30:37.959397 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100] mod_wsgi (pid=1199): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:30:37.959437 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100] mod_wsgi (pid=1199): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:30:37.959509 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100] Traceback (most recent call last):
+[Thu Apr 20 07:30:37.959536 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:30:37.959539 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:30:37.959543 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:30:37.959545 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:30:37.959548 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:30:37.959550 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]     from webApp.routes import app as application
+[Thu Apr 20 07:30:37.959553 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:30:37.959555 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]     from webApp import routes
+[Thu Apr 20 07:30:37.959558 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 9, in <module>
+[Thu Apr 20 07:30:37.959560 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100]     import gzip, json, random, string, os, requests, urllib
+[Thu Apr 20 07:30:37.959569 2023] [wsgi:error] [pid 1199:tid 139977643034368] [remote 127.0.0.1:51100] ModuleNotFoundError: No module named 'requests'
+[Thu Apr 20 07:30:53.833112 2023] [wsgi:error] [pid 2582:tid 139977963829376] mod_wsgi (pid=2582): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:30:53.894219 2023] [wsgi:error] [pid 2582:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:30:54.109874 2023] [wsgi:error] [pid 2582:tid 139977963829376] mod_wsgi (pid=2582): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:30:54.109910 2023] [wsgi:error] [pid 2582:tid 139977963829376] mod_wsgi (pid=2582): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:30:54.110781 2023] [wsgi:error] [pid 2582:tid 139977963829376] Traceback (most recent call last):
+[Thu Apr 20 07:30:54.110812 2023] [wsgi:error] [pid 2582:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:30:54.110815 2023] [wsgi:error] [pid 2582:tid 139977963829376]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:30:54.110819 2023] [wsgi:error] [pid 2582:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:30:54.110821 2023] [wsgi:error] [pid 2582:tid 139977963829376]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:30:54.110830 2023] [wsgi:error] [pid 2582:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:30:54.110832 2023] [wsgi:error] [pid 2582:tid 139977963829376]     from webApp.routes import app as application
+[Thu Apr 20 07:30:54.110835 2023] [wsgi:error] [pid 2582:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:30:54.110836 2023] [wsgi:error] [pid 2582:tid 139977963829376]     from webApp import routes
+[Thu Apr 20 07:30:54.110839 2023] [wsgi:error] [pid 2582:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 9, in <module>
+[Thu Apr 20 07:30:54.110840 2023] [wsgi:error] [pid 2582:tid 139977963829376]     import gzip, json, random, string, os, requests, urllib
+[Thu Apr 20 07:30:54.110851 2023] [wsgi:error] [pid 2582:tid 139977963829376] ModuleNotFoundError: No module named 'requests'
+[Thu Apr 20 07:31:00.300617 2023] [wsgi:error] [pid 2582:tid 139977640130304] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:31:00.351990 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350] mod_wsgi (pid=2582): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:00.352018 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350] mod_wsgi (pid=2582): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:00.352105 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350] Traceback (most recent call last):
+[Thu Apr 20 07:31:00.352131 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:31:00.352134 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:31:00.352138 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:31:00.352140 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:31:00.352143 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:31:00.352145 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]     from webApp.routes import app as application
+[Thu Apr 20 07:31:00.352148 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:31:00.352150 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]     from webApp import routes
+[Thu Apr 20 07:31:00.352153 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 20, in <module>
+[Thu Apr 20 07:31:00.352155 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350]     import psycopg2
+[Thu Apr 20 07:31:00.352165 2023] [wsgi:error] [pid 2582:tid 139977640130304] [remote 127.0.0.1:52350] ModuleNotFoundError: No module named 'psycopg2'
+[Thu Apr 20 07:31:00.494620 2023] [wsgi:error] [pid 2582:tid 139977606559488] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:31:00.495928 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362] mod_wsgi (pid=2582): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:00.495950 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362] mod_wsgi (pid=2582): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:00.496026 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362] Traceback (most recent call last):
+[Thu Apr 20 07:31:00.496054 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:31:00.496056 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:31:00.496060 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:31:00.496062 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:31:00.496065 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:31:00.496067 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]     from webApp.routes import app as application
+[Thu Apr 20 07:31:00.496070 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:31:00.496071 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]     from webApp import routes
+[Thu Apr 20 07:31:00.496074 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 20, in <module>
+[Thu Apr 20 07:31:00.496076 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362]     import psycopg2
+[Thu Apr 20 07:31:00.496084 2023] [wsgi:error] [pid 2582:tid 139977606559488] [remote 127.0.0.1:52362] ModuleNotFoundError: No module named 'psycopg2'
+[Thu Apr 20 07:31:16.856315 2023] [wsgi:error] [pid 3396:tid 139977963829376] mod_wsgi (pid=3396): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:31:16.917781 2023] [wsgi:error] [pid 3396:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:31:17.175900 2023] [wsgi:error] [pid 3396:tid 139977963829376] mod_wsgi (pid=3396): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:17.175939 2023] [wsgi:error] [pid 3396:tid 139977963829376] mod_wsgi (pid=3396): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:17.176778 2023] [wsgi:error] [pid 3396:tid 139977963829376] Traceback (most recent call last):
+[Thu Apr 20 07:31:17.176811 2023] [wsgi:error] [pid 3396:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:31:17.176814 2023] [wsgi:error] [pid 3396:tid 139977963829376]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:31:17.176818 2023] [wsgi:error] [pid 3396:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:31:17.176821 2023] [wsgi:error] [pid 3396:tid 139977963829376]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:31:17.176824 2023] [wsgi:error] [pid 3396:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:31:17.176825 2023] [wsgi:error] [pid 3396:tid 139977963829376]     from webApp.routes import app as application
+[Thu Apr 20 07:31:17.176829 2023] [wsgi:error] [pid 3396:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:31:17.176830 2023] [wsgi:error] [pid 3396:tid 139977963829376]     from webApp import routes
+[Thu Apr 20 07:31:17.176841 2023] [wsgi:error] [pid 3396:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 20, in <module>
+[Thu Apr 20 07:31:17.176843 2023] [wsgi:error] [pid 3396:tid 139977963829376]     import psycopg2
+[Thu Apr 20 07:31:17.176855 2023] [wsgi:error] [pid 3396:tid 139977963829376] ModuleNotFoundError: No module named 'psycopg2'
+[Thu Apr 20 07:31:25.669170 2023] [wsgi:error] [pid 3396:tid 139977636419328] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:31:25.688968 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786] mod_wsgi (pid=3396): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:25.688996 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786] mod_wsgi (pid=3396): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:25.689086 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786] Traceback (most recent call last):
+[Thu Apr 20 07:31:25.689114 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:31:25.689117 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:31:25.689121 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:31:25.689123 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:31:25.689126 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:31:25.689128 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]     from webApp.routes import app as application
+[Thu Apr 20 07:31:25.689132 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:31:25.689133 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]     from webApp import routes
+[Thu Apr 20 07:31:25.689137 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 22, in <module>
+[Thu Apr 20 07:31:25.689138 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786]     import prepareTestData
+[Thu Apr 20 07:31:25.689148 2023] [wsgi:error] [pid 3396:tid 139977636419328] [remote 127.0.0.1:53786] ModuleNotFoundError: No module named 'prepareTestData'
+[Thu Apr 20 07:31:25.834258 2023] [wsgi:error] [pid 3396:tid 139977602848512] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:31:25.835569 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798] mod_wsgi (pid=3396): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:25.835591 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798] mod_wsgi (pid=3396): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:25.835660 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798] Traceback (most recent call last):
+[Thu Apr 20 07:31:25.835688 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:31:25.835690 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:31:25.835694 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:31:25.835702 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:31:25.835705 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:31:25.835707 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]     from webApp.routes import app as application
+[Thu Apr 20 07:31:25.835710 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:31:25.835712 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]     from webApp import routes
+[Thu Apr 20 07:31:25.835715 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 22, in <module>
+[Thu Apr 20 07:31:25.835716 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798]     import prepareTestData
+[Thu Apr 20 07:31:25.835729 2023] [wsgi:error] [pid 3396:tid 139977602848512] [remote 127.0.0.1:53798] ModuleNotFoundError: No module named 'prepareTestData'
+[Thu Apr 20 07:31:41.880352 2023] [wsgi:error] [pid 4037:tid 139977963829376] mod_wsgi (pid=4037): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:31:41.940886 2023] [wsgi:error] [pid 4037:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:31:42.207433 2023] [wsgi:error] [pid 4037:tid 139977963829376] mod_wsgi (pid=4037): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:42.207471 2023] [wsgi:error] [pid 4037:tid 139977963829376] mod_wsgi (pid=4037): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:31:42.208324 2023] [wsgi:error] [pid 4037:tid 139977963829376] Traceback (most recent call last):
+[Thu Apr 20 07:31:42.208356 2023] [wsgi:error] [pid 4037:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:31:42.208359 2023] [wsgi:error] [pid 4037:tid 139977963829376]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:31:42.208363 2023] [wsgi:error] [pid 4037:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:31:42.208365 2023] [wsgi:error] [pid 4037:tid 139977963829376]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:31:42.208368 2023] [wsgi:error] [pid 4037:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:31:42.208370 2023] [wsgi:error] [pid 4037:tid 139977963829376]     from webApp.routes import app as application
+[Thu Apr 20 07:31:42.208373 2023] [wsgi:error] [pid 4037:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:31:42.208375 2023] [wsgi:error] [pid 4037:tid 139977963829376]     from webApp import routes
+[Thu Apr 20 07:31:42.208378 2023] [wsgi:error] [pid 4037:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 22, in <module>
+[Thu Apr 20 07:31:42.208379 2023] [wsgi:error] [pid 4037:tid 139977963829376]     import prepareTestData
+[Thu Apr 20 07:31:42.208390 2023] [wsgi:error] [pid 4037:tid 139977963829376] ModuleNotFoundError: No module named 'prepareTestData'
+[Thu Apr 20 07:32:50.703557 2023] [wsgi:error] [pid 4037:tid 139977605199616] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:32:50.749233 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544] mod_wsgi (pid=4037): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:32:50.749267 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544] mod_wsgi (pid=4037): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:32:50.751554 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544] Traceback (most recent call last):
+[Thu Apr 20 07:32:50.751593 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:32:50.751596 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:32:50.751600 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:32:50.751602 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:32:50.751605 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:32:50.751607 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]     from webApp.routes import app as application
+[Thu Apr 20 07:32:50.751610 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:32:50.751611 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]     from webApp import routes
+[Thu Apr 20 07:32:50.751614 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 35, in <module>
+[Thu Apr 20 07:32:50.751616 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]     import prepareTestData
+[Thu Apr 20 07:32:50.751619 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/prepareTestData.py", line 4, in <module>
+[Thu Apr 20 07:32:50.751621 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]     import fetchData
+[Thu Apr 20 07:32:50.751624 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/fetchData.py", line 5, in <module>
+[Thu Apr 20 07:32:50.751625 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544]     from tqdm import tqdm
+[Thu Apr 20 07:32:50.751636 2023] [wsgi:error] [pid 4037:tid 139977605199616] [remote 127.0.0.1:58544] ModuleNotFoundError: No module named 'tqdm'
+[Thu Apr 20 07:32:50.905046 2023] [wsgi:error] [pid 4037:tid 139977571628800] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:32:50.910781 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558] mod_wsgi (pid=4037): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:32:50.910809 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558] mod_wsgi (pid=4037): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:32:50.910919 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558] Traceback (most recent call last):
+[Thu Apr 20 07:32:50.910952 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:32:50.910954 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:32:50.910959 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:32:50.910968 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:32:50.910972 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:32:50.910973 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]     from webApp.routes import app as application
+[Thu Apr 20 07:32:50.910976 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:32:50.910978 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]     from webApp import routes
+[Thu Apr 20 07:32:50.910981 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 35, in <module>
+[Thu Apr 20 07:32:50.910983 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]     import prepareTestData
+[Thu Apr 20 07:32:50.910985 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/prepareTestData.py", line 4, in <module>
+[Thu Apr 20 07:32:50.910987 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]     import fetchData
+[Thu Apr 20 07:32:50.910990 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/fetchData.py", line 5, in <module>
+[Thu Apr 20 07:32:50.910992 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558]     from tqdm import tqdm
+[Thu Apr 20 07:32:50.911003 2023] [wsgi:error] [pid 4037:tid 139977571628800] [remote 127.0.0.1:58558] ModuleNotFoundError: No module named 'tqdm'
+[Thu Apr 20 07:33:06.968133 2023] [wsgi:error] [pid 6193:tid 139977963829376] mod_wsgi (pid=6193): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:33:07.028362 2023] [wsgi:error] [pid 6193:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:33:07.299740 2023] [wsgi:error] [pid 6193:tid 139977963829376] mod_wsgi (pid=6193): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:33:07.299779 2023] [wsgi:error] [pid 6193:tid 139977963829376] mod_wsgi (pid=6193): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:33:07.301778 2023] [wsgi:error] [pid 6193:tid 139977963829376] Traceback (most recent call last):
+[Thu Apr 20 07:33:07.301813 2023] [wsgi:error] [pid 6193:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:33:07.301816 2023] [wsgi:error] [pid 6193:tid 139977963829376]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:33:07.301820 2023] [wsgi:error] [pid 6193:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:33:07.301822 2023] [wsgi:error] [pid 6193:tid 139977963829376]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:33:07.301826 2023] [wsgi:error] [pid 6193:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:33:07.301827 2023] [wsgi:error] [pid 6193:tid 139977963829376]     from webApp.routes import app as application
+[Thu Apr 20 07:33:07.301831 2023] [wsgi:error] [pid 6193:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:33:07.301840 2023] [wsgi:error] [pid 6193:tid 139977963829376]     from webApp import routes
+[Thu Apr 20 07:33:07.301844 2023] [wsgi:error] [pid 6193:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 35, in <module>
+[Thu Apr 20 07:33:07.301845 2023] [wsgi:error] [pid 6193:tid 139977963829376]     import prepareTestData
+[Thu Apr 20 07:33:07.301848 2023] [wsgi:error] [pid 6193:tid 139977963829376]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/prepareTestData.py", line 6, in <module>
+[Thu Apr 20 07:33:07.301850 2023] [wsgi:error] [pid 6193:tid 139977963829376]     import pandas as pd
+[Thu Apr 20 07:33:07.301861 2023] [wsgi:error] [pid 6193:tid 139977963829376] ModuleNotFoundError: No module named 'pandas'
+[Thu Apr 20 07:33:09.416844 2023] [wsgi:error] [pid 6193:tid 139977604937472] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:33:09.420034 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600] mod_wsgi (pid=6193): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:33:09.420062 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600] mod_wsgi (pid=6193): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:33:09.420163 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600] Traceback (most recent call last):
+[Thu Apr 20 07:33:09.420191 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:33:09.420194 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:33:09.420198 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:33:09.420200 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:33:09.420204 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:33:09.420206 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]     from webApp.routes import app as application
+[Thu Apr 20 07:33:09.420209 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:33:09.420211 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]     from webApp import routes
+[Thu Apr 20 07:33:09.420214 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 35, in <module>
+[Thu Apr 20 07:33:09.420215 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]     import prepareTestData
+[Thu Apr 20 07:33:09.420218 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/prepareTestData.py", line 6, in <module>
+[Thu Apr 20 07:33:09.420220 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600]     import pandas as pd
+[Thu Apr 20 07:33:09.420230 2023] [wsgi:error] [pid 6193:tid 139977604937472] [remote 127.0.0.1:59600] ModuleNotFoundError: No module named 'pandas'
+[Thu Apr 20 07:33:09.548546 2023] [wsgi:error] [pid 6193:tid 139977571366656] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:33:09.551181 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610] mod_wsgi (pid=6193): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:33:09.551204 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610] mod_wsgi (pid=6193): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:33:09.551295 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610] Traceback (most recent call last):
+[Thu Apr 20 07:33:09.551323 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:33:09.551326 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:33:09.551330 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:33:09.551332 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:33:09.551335 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:33:09.551337 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]     from webApp.routes import app as application
+[Thu Apr 20 07:33:09.551340 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:33:09.551341 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]     from webApp import routes
+[Thu Apr 20 07:33:09.551344 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 35, in <module>
+[Thu Apr 20 07:33:09.551346 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]     import prepareTestData
+[Thu Apr 20 07:33:09.551349 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/prepareTestData.py", line 6, in <module>
+[Thu Apr 20 07:33:09.551351 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610]     import pandas as pd
+[Thu Apr 20 07:33:09.551359 2023] [wsgi:error] [pid 6193:tid 139977571366656] [remote 127.0.0.1:59610] ModuleNotFoundError: No module named 'pandas'
+[Thu Apr 20 07:33:25.987336 2023] [wsgi:error] [pid 6734:tid 139977963829376] mod_wsgi (pid=6734): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:33:26.048205 2023] [wsgi:error] [pid 6734:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:33:26.321216 2023] [wsgi:error] [pid 6734:tid 139977963829376] mod_wsgi (pid=6734): Failed to exec Python script file '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:33:26.321253 2023] [wsgi:error] [pid 6734:tid 139977963829376] mod_wsgi (pid=6734): Exception occurred processing WSGI script '/var/www/flask_apps/kinaseResistance/server//handler.wsgi'.
+[Thu Apr 20 07:33:26.323184 2023] [wsgi:error] [pid 6734:tid 139977963829376] Traceback (most recent call last):
+[Thu Apr 20 07:33:26.323219 2023] [wsgi:error] [pid 6734:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/server//handler.wsgi", line 94, in <module>
+[Thu Apr 20 07:33:26.323222 2023] [wsgi:error] [pid 6734:tid 139977963829376]     recorder_directory=recorder_directory)
+[Thu Apr 20 07:33:26.323226 2023] [wsgi:error] [pid 6734:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/venv/lib64/python3.6/site-packages/mod_wsgi/server/__init__.py", line 1478, in __init__
+[Thu Apr 20 07:33:26.323228 2023] [wsgi:error] [pid 6734:tid 139977963829376]     exec(code, self.module.__dict__)
+[Thu Apr 20 07:33:26.323231 2023] [wsgi:error] [pid 6734:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp.wsgi", line 5, in <module>
+[Thu Apr 20 07:33:26.323238 2023] [wsgi:error] [pid 6734:tid 139977963829376]     from webApp.routes import app as application
+[Thu Apr 20 07:33:26.323242 2023] [wsgi:error] [pid 6734:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/__init__.py", line 3, in <module>
+[Thu Apr 20 07:33:26.323243 2023] [wsgi:error] [pid 6734:tid 139977963829376]     from webApp import routes
+[Thu Apr 20 07:33:26.323246 2023] [wsgi:error] [pid 6734:tid 139977963829376]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 35, in <module>
+[Thu Apr 20 07:33:26.323248 2023] [wsgi:error] [pid 6734:tid 139977963829376]     import prepareTestData
+[Thu Apr 20 07:33:26.323250 2023] [wsgi:error] [pid 6734:tid 139977963829376]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/prepareTestData.py", line 6, in <module>
+[Thu Apr 20 07:33:26.323252 2023] [wsgi:error] [pid 6734:tid 139977963829376]     import pandas as pd
+[Thu Apr 20 07:33:26.323263 2023] [wsgi:error] [pid 6734:tid 139977963829376] ModuleNotFoundError: No module named 'pandas'
+[Thu Apr 20 07:33:43.700313 2023] [wsgi:error] [pid 6734:tid 139977604937472] /var/www/flask_apps/kinaseResistance
+[Thu Apr 20 07:33:44.127897 2023] [wsgi:error] [pid 6734:tid 139977604937472] monitor (pid=6734): Starting change monitor.
+[Thu Apr 20 07:34:09.622565 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:34:09.676154 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760] ['MAP2K3/A84T']
+[Thu Apr 20 07:34:10.474625 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760] ['CDK14/K164R']
+[Thu Apr 20 07:34:10.763549 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760] ['Q00534/T49A']
+[Thu Apr 20 07:34:11.043102 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760] ['BRAF/V600E']
+[Thu Apr 20 07:34:11.399615 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760] [2023-04-20 07:34:11,398] ERROR in app: Exception on /output/Y5GWR [POST]
+[Thu Apr 20 07:34:11.399634 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760] Traceback (most recent call last):
+[Thu Apr 20 07:34:11.399636 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]   File "/var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+[Thu Apr 20 07:34:11.399638 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]     response = self.full_dispatch_request()
+[Thu Apr 20 07:34:11.399640 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]   File "/var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+[Thu Apr 20 07:34:11.399642 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]     rv = self.handle_user_exception(e)
+[Thu Apr 20 07:34:11.399643 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]   File "/var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+[Thu Apr 20 07:34:11.399645 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]     rv = self.dispatch_request()
+[Thu Apr 20 07:34:11.399646 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]   File "/var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+[Thu Apr 20 07:34:11.399648 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+[Thu Apr 20 07:34:11.399649 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 135, in output
+[Thu Apr 20 07:34:11.399651 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]     results = prepareTestData.predict('static/predictor/output/'+uniqID+'/input.txt', BASE_DIR)
+[Thu Apr 20 07:34:11.399659 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/prepareTestData.py", line 86, in predict
+[Thu Apr 20 07:34:11.399661 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760]     clf = pickle.load(open(filename, 'rb'))
+[Thu Apr 20 07:34:11.399663 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760] ModuleNotFoundError: No module named 'sklearn'
+[Thu Apr 20 07:34:11.399680 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:34760] 
+[Thu Apr 20 07:34:32.950105 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:34:32.974108 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074] ['MAP2K3/A84T']
+[Thu Apr 20 07:34:33.290292 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074] ['CDK14/K164R']
+[Thu Apr 20 07:34:33.576192 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074] ['Q00534/T49A']
+[Thu Apr 20 07:34:33.864260 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074] ['BRAF/V600E']
+[Thu Apr 20 07:34:34.192582 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074] [2023-04-20 07:34:34,192] ERROR in app: Exception on /output/65B39 [POST]
+[Thu Apr 20 07:34:34.192611 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074] Traceback (most recent call last):
+[Thu Apr 20 07:34:34.192614 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]   File "/var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+[Thu Apr 20 07:34:34.192616 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]     response = self.full_dispatch_request()
+[Thu Apr 20 07:34:34.192618 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]   File "/var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+[Thu Apr 20 07:34:34.192620 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]     rv = self.handle_user_exception(e)
+[Thu Apr 20 07:34:34.192621 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]   File "/var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+[Thu Apr 20 07:34:34.192623 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]     rv = self.dispatch_request()
+[Thu Apr 20 07:34:34.192624 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]   File "/var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+[Thu Apr 20 07:34:34.192626 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+[Thu Apr 20 07:34:34.192627 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]   File "/var/www/flask_apps/kinaseResistance/webApp/routes.py", line 135, in output
+[Thu Apr 20 07:34:34.192629 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]     results = prepareTestData.predict('static/predictor/output/'+uniqID+'/input.txt', BASE_DIR)
+[Thu Apr 20 07:34:34.192630 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]   File "/net/home.isilon/ds-russell/kinaseResistance//ML/prepareTestData.py", line 86, in predict
+[Thu Apr 20 07:34:34.192632 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074]     clf = pickle.load(open(filename, 'rb'))
+[Thu Apr 20 07:34:34.192634 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074] ModuleNotFoundError: No module named 'sklearn'
+[Thu Apr 20 07:34:34.192659 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:36074] 
+[Thu Apr 20 07:35:11.366203 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:35:11.396894 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] ['MAP2K3/A84T']
+[Thu Apr 20 07:35:11.800949 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] ['CDK14/K164R']
+[Thu Apr 20 07:35:12.094260 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] ['Q00534/T49A']
+[Thu Apr 20 07:35:12.382005 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] ['BRAF/V600E']
+[Thu Apr 20 07:35:13.277391 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:35:13.277413 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222]   UserWarning)
+[Thu Apr 20 07:35:13.285191 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:35:13.285201 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222]   UserWarning)
+[Thu Apr 20 07:35:13.288217 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator MinMaxScaler from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:35:13.288228 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222]   UserWarning)
+[Thu Apr 20 07:35:13.414942 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 07:35:13.414986 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] O94921 CDK14 K164R 59 0.141
+[Thu Apr 20 07:35:13.415013 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] Q00534 CDK6 T49A 65 0.451
+[Thu Apr 20 07:35:13.415038 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] P15056 BRAF V600E 194 0.789
+[Thu Apr 20 07:35:13.444780 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] P46734 MAP2K3 None None
+[Thu Apr 20 07:35:13.445768 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] O94921 CDK14 None D
+[Thu Apr 20 07:35:13.446577 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] Q00534 CDK6 p None
+[Thu Apr 20 07:35:13.447514 2023] [wsgi:error] [pid 6734:tid 139977604937472] [remote 127.0.0.1:38222] P15056 BRAF None R
+[Thu Apr 20 07:40:50.189093 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:40:50.220622 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['MAP2K3/A84T']
+[Thu Apr 20 07:40:50.541048 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['CDK14/K164R']
+[Thu Apr 20 07:40:50.828880 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['Q00534/T49A']
+[Thu Apr 20 07:40:51.115896 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['BRAF/V600E']
+[Thu Apr 20 07:40:51.423123 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['MAP2K1/Q56P']
+[Thu Apr 20 07:40:51.710508 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['PIM1/T23I']
+[Thu Apr 20 07:40:51.733076 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['PIM1/S97N']
+[Thu Apr 20 07:40:52.017293 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['PIM1/Q127E']
+[Thu Apr 20 07:40:52.304753 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['CHEK2/K373E']
+[Thu Apr 20 07:40:52.595015 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['CHEK2/T68A']
+[Thu Apr 20 07:40:52.613371 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['MAP2K3/A84T']
+[Thu Apr 20 07:40:52.903478 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['MAP2K3/R94L']
+[Thu Apr 20 07:40:53.186064 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['MAP2K3/R96W']
+[Thu Apr 20 07:40:53.463927 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['MAP2K3/L215W']
+[Thu Apr 20 07:40:53.746533 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['MAP2K3/T222M']
+[Thu Apr 20 07:40:54.028889 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['CDK5/F82I']
+[Thu Apr 20 07:40:54.313153 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['MAP2K1/K97A']
+[Thu Apr 20 07:40:54.595156 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] ['MAP2K1/V211D']
+[Thu Apr 20 07:40:54.912634 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:40:54.912664 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148]   UserWarning)
+[Thu Apr 20 07:40:54.920692 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:40:54.920701 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148]   UserWarning)
+[Thu Apr 20 07:40:54.922599 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator MinMaxScaler from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:40:54.922609 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148]   UserWarning)
+[Thu Apr 20 07:40:55.033931 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 07:40:55.033972 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] O94921 CDK14 K164R 59 0.141
+[Thu Apr 20 07:40:55.033996 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q00534 CDK6 T49A 65 0.451
+[Thu Apr 20 07:40:55.034017 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P15056 BRAF V600E 194 0.789
+[Thu Apr 20 07:40:55.034045 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q02750 MAP2K1 Q56P 18 0.57
+[Thu Apr 20 07:40:55.034065 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P11309 PIM1 S97N 87 0.543
+[Thu Apr 20 07:40:55.034086 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P11309 PIM1 Q127E 121 0.878
+[Thu Apr 20 07:40:55.034106 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] O96017 CHEK2 K373E 193 0.53
+[Thu Apr 20 07:40:55.034126 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 07:40:55.034162 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 R94L 60 0.651
+[Thu Apr 20 07:40:55.034182 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 R96W 62 0.455
+[Thu Apr 20 07:40:55.034202 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 L215W 195 0.293
+[Thu Apr 20 07:40:55.034222 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 T222M 209 0.411
+[Thu Apr 20 07:40:55.034241 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q00535 CDK5 F82I 116 0.769
+[Thu Apr 20 07:40:55.034261 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q02750 MAP2K1 K97A 59 0.023
+[Thu Apr 20 07:40:55.034280 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q02750 MAP2K1 V211D 191 0.58
+[Thu Apr 20 07:40:55.110914 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 None None
+[Thu Apr 20 07:40:55.111932 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] O94921 CDK14 None D
+[Thu Apr 20 07:40:55.112758 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q00534 CDK6 p None
+[Thu Apr 20 07:40:55.113708 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P15056 BRAF None R
+[Thu Apr 20 07:40:55.114644 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q02750 MAP2K1 None None
+[Thu Apr 20 07:40:55.115584 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P11309 PIM1 None None
+[Thu Apr 20 07:40:55.116524 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P11309 PIM1 None None
+[Thu Apr 20 07:40:55.117432 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P11309 PIM1 None None
+[Thu Apr 20 07:40:55.118322 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] O96017 CHEK2 None None
+[Thu Apr 20 07:40:55.119211 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] O96017 CHEK2 None None
+[Thu Apr 20 07:40:55.120101 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 None None
+[Thu Apr 20 07:40:55.120965 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 None None
+[Thu Apr 20 07:40:55.121816 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 None None
+[Thu Apr 20 07:40:55.122705 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 None None
+[Thu Apr 20 07:40:55.123630 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] P46734 MAP2K3 p None
+[Thu Apr 20 07:40:55.124582 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q00535 CDK5 None None
+[Thu Apr 20 07:40:55.125524 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q02750 MAP2K1 ub D
+[Thu Apr 20 07:40:55.126461 2023] [wsgi:error] [pid 6734:tid 139977571366656] [remote 127.0.0.1:57148] Q02750 MAP2K1 None None
+[Thu Apr 20 07:54:30.232608 2023] [mpm_event:notice] [pid 157060:tid 139977963829376] AH00493: SIGUSR1 received.  Doing graceful restart
+[Thu Apr 20 07:54:30.426073 2023] [mpm_event:notice] [pid 157060:tid 139977963829376] AH00489: Apache/2.4.6 (CentOS) mod_wsgi/4.7.1 Python/3.6 configured -- resuming normal operations
+[Thu Apr 20 07:54:30.426088 2023] [core:notice] [pid 157060:tid 139977963829376] AH00094: Command line: 'httpd (mod_wsgi-express)   -f /var/www/flask_apps/kinaseResistance/server/httpd.conf -D MOD_WSGI_MPM_ENABLE_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_WORKER_MODULE -D MOD_WSGI_MPM_EXISTS_PREFORK_MODULE'
+[Thu Apr 20 07:54:30.426300 2023] [wsgi:error] [pid 24620:tid 139977963829376] mod_wsgi (pid=24620): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:54:30.486233 2023] [wsgi:error] [pid 24620:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:54:31.092637 2023] [wsgi:error] [pid 24620:tid 139977963829376] monitor (pid=24620): Starting change monitor.
+[Thu Apr 20 07:55:12.937014 2023] [mpm_event:notice] [pid 157060:tid 139977963829376] AH00493: SIGUSR1 received.  Doing graceful restart
+[Thu Apr 20 07:55:13.036886 2023] [mpm_event:notice] [pid 157060:tid 139977963829376] AH00489: Apache/2.4.6 (CentOS) mod_wsgi/4.7.1 Python/3.6 configured -- resuming normal operations
+[Thu Apr 20 07:55:13.036902 2023] [core:notice] [pid 157060:tid 139977963829376] AH00094: Command line: 'httpd (mod_wsgi-express)   -f /var/www/flask_apps/kinaseResistance/server/httpd.conf -D MOD_WSGI_MPM_ENABLE_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_WORKER_MODULE -D MOD_WSGI_MPM_EXISTS_PREFORK_MODULE'
+[Thu Apr 20 07:55:13.036970 2023] [wsgi:error] [pid 25739:tid 139977963829376] mod_wsgi (pid=25739): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:55:13.097499 2023] [wsgi:error] [pid 25739:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:55:13.706821 2023] [wsgi:error] [pid 25739:tid 139977963829376] monitor (pid=25739): Starting change monitor.
+[Thu Apr 20 07:56:05.345097 2023] [mpm_event:notice] [pid 157060:tid 139977963829376] AH00493: SIGUSR1 received.  Doing graceful restart
+[Thu Apr 20 07:56:05.444618 2023] [mpm_event:notice] [pid 157060:tid 139977963829376] AH00489: Apache/2.4.6 (CentOS) mod_wsgi/4.7.1 Python/3.6 configured -- resuming normal operations
+[Thu Apr 20 07:56:05.444632 2023] [core:notice] [pid 157060:tid 139977963829376] AH00094: Command line: 'httpd (mod_wsgi-express)   -f /var/www/flask_apps/kinaseResistance/server/httpd.conf -D MOD_WSGI_MPM_ENABLE_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_WORKER_MODULE -D MOD_WSGI_MPM_EXISTS_PREFORK_MODULE'
+[Thu Apr 20 07:56:05.444716 2023] [wsgi:error] [pid 26890:tid 139977963829376] mod_wsgi (pid=26890): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:56:05.505074 2023] [wsgi:error] [pid 26890:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:56:06.112298 2023] [wsgi:error] [pid 26890:tid 139977963829376] monitor (pid=26890): Starting change monitor.
+[Thu Apr 20 07:56:20.723422 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:56:20.746867 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['MAP2K3/A84T']
+[Thu Apr 20 07:56:21.064520 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['Q00534/T49A']
+[Thu Apr 20 07:56:21.366774 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['BRAF/V600E']
+[Thu Apr 20 07:56:21.655996 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['CHEK2/K373E']
+[Thu Apr 20 07:56:21.948286 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['CHEK2/T68A']
+[Thu Apr 20 07:56:21.967165 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['MAP2K3/A84T']
+[Thu Apr 20 07:56:22.256137 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['MAP2K3/T222M']
+[Thu Apr 20 07:56:22.545987 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['MAP2K1/K97A']
+[Thu Apr 20 07:56:22.834847 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['MAP2K1/V211D']
+[Thu Apr 20 07:56:23.139316 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['PIM1/T23I']
+[Thu Apr 20 07:56:23.157683 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['PIM1/S97N']
+[Thu Apr 20 07:56:23.444133 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] ['PIM1/Q127E']
+[Thu Apr 20 07:56:24.238146 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:56:24.238213 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760]   UserWarning)
+[Thu Apr 20 07:56:24.245983 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:56:24.246014 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760]   UserWarning)
+[Thu Apr 20 07:56:24.248016 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator MinMaxScaler from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:56:24.248032 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760]   UserWarning)
+[Thu Apr 20 07:56:24.361443 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 07:56:24.361482 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] Q00534 CDK6 T49A 65 0.451
+[Thu Apr 20 07:56:24.361505 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P15056 BRAF V600E 194 0.789
+[Thu Apr 20 07:56:24.361526 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] O96017 CHEK2 K373E 193 0.53
+[Thu Apr 20 07:56:24.361547 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 07:56:24.361568 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P46734 MAP2K3 T222M 209 0.411
+[Thu Apr 20 07:56:24.361588 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] Q02750 MAP2K1 K97A 59 0.023
+[Thu Apr 20 07:56:24.361608 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] Q02750 MAP2K1 V211D 191 0.58
+[Thu Apr 20 07:56:24.361628 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P11309 PIM1 S97N 87 0.543
+[Thu Apr 20 07:56:24.361648 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P11309 PIM1 Q127E 121 0.878
+[Thu Apr 20 07:56:24.365800 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P46734 MAP2K3 None None
+[Thu Apr 20 07:56:24.366623 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] Q00534 CDK6 p None
+[Thu Apr 20 07:56:24.367488 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P15056 BRAF None R
+[Thu Apr 20 07:56:24.368367 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] O96017 CHEK2 None None
+[Thu Apr 20 07:56:24.369273 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] O96017 CHEK2 None None
+[Thu Apr 20 07:56:24.370156 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P46734 MAP2K3 None None
+[Thu Apr 20 07:56:24.371027 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P46734 MAP2K3 p None
+[Thu Apr 20 07:56:24.371920 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] Q02750 MAP2K1 ub D
+[Thu Apr 20 07:56:24.372846 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] Q02750 MAP2K1 None None
+[Thu Apr 20 07:56:24.373784 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P11309 PIM1 None None
+[Thu Apr 20 07:56:24.374709 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P11309 PIM1 None None
+[Thu Apr 20 07:56:24.375608 2023] [wsgi:error] [pid 26890:tid 139969486120704] [remote 127.0.0.1:52760] P11309 PIM1 None None
+[Thu Apr 20 07:56:50.558526 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+mkdir: cannot create directory 'static/predictor/output/T8W3L': File exists
+[Thu Apr 20 07:56:50.583398 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['MAP2K3/A84T']
+[Thu Apr 20 07:56:50.884388 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['Q00534/T49A']
+[Thu Apr 20 07:56:51.174073 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['BRAF/V600E']
+[Thu Apr 20 07:56:51.463909 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['CHEK2/K373E']
+[Thu Apr 20 07:56:51.753298 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['CHEK2/T68A']
+[Thu Apr 20 07:56:51.771850 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['MAP2K3/A84T']
+[Thu Apr 20 07:56:52.057625 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['MAP2K3/T222M']
+[Thu Apr 20 07:56:52.342938 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['MAP2K1/K97A']
+[Thu Apr 20 07:56:52.628939 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['MAP2K1/V211D']
+[Thu Apr 20 07:56:52.913296 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['PIM1/T23I']
+[Thu Apr 20 07:56:52.931629 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['PIM1/S97N']
+[Thu Apr 20 07:56:53.215810 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] ['PIM1/Q127E']
+[Thu Apr 20 07:56:53.532225 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:56:53.532255 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460]   UserWarning)
+[Thu Apr 20 07:56:53.539470 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:56:53.539480 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460]   UserWarning)
+[Thu Apr 20 07:56:53.541293 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator MinMaxScaler from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:56:53.541303 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460]   UserWarning)
+[Thu Apr 20 07:56:53.997837 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 07:56:53.997888 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] Q00534 CDK6 T49A 65 0.451
+[Thu Apr 20 07:56:53.997913 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P15056 BRAF V600E 194 0.789
+[Thu Apr 20 07:56:53.997936 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] O96017 CHEK2 K373E 193 0.53
+[Thu Apr 20 07:56:53.997969 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 07:56:53.997993 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P46734 MAP2K3 T222M 209 0.411
+[Thu Apr 20 07:56:53.998014 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] Q02750 MAP2K1 K97A 59 0.023
+[Thu Apr 20 07:56:53.998035 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] Q02750 MAP2K1 V211D 191 0.58
+[Thu Apr 20 07:56:53.998055 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P11309 PIM1 S97N 87 0.543
+[Thu Apr 20 07:56:53.998076 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P11309 PIM1 Q127E 121 0.878
+[Thu Apr 20 07:56:54.002339 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P46734 MAP2K3 None None
+[Thu Apr 20 07:56:54.003141 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] Q00534 CDK6 p None
+[Thu Apr 20 07:56:54.004029 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P15056 BRAF None R
+[Thu Apr 20 07:56:54.004981 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] O96017 CHEK2 None None
+[Thu Apr 20 07:56:54.005931 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] O96017 CHEK2 None None
+[Thu Apr 20 07:56:54.006872 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P46734 MAP2K3 None None
+[Thu Apr 20 07:56:54.007845 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P46734 MAP2K3 p None
+[Thu Apr 20 07:56:54.008805 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] Q02750 MAP2K1 ub D
+[Thu Apr 20 07:56:54.009752 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] Q02750 MAP2K1 None None
+[Thu Apr 20 07:56:54.010632 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P11309 PIM1 None None
+[Thu Apr 20 07:56:54.011530 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P11309 PIM1 None None
+[Thu Apr 20 07:56:54.012451 2023] [wsgi:error] [pid 26890:tid 139969452549888] [remote 127.0.0.1:54460] P11309 PIM1 None None
+[Thu Apr 20 07:57:02.628607 2023] [mpm_event:notice] [pid 157060:tid 139977963829376] AH00493: SIGUSR1 received.  Doing graceful restart
+[Thu Apr 20 07:57:02.821557 2023] [mpm_event:notice] [pid 157060:tid 139977963829376] AH00489: Apache/2.4.6 (CentOS) mod_wsgi/4.7.1 Python/3.6 configured -- resuming normal operations
+[Thu Apr 20 07:57:02.821570 2023] [core:notice] [pid 157060:tid 139977963829376] AH00094: Command line: 'httpd (mod_wsgi-express)   -f /var/www/flask_apps/kinaseResistance/server/httpd.conf -D MOD_WSGI_MPM_ENABLE_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_WORKER_MODULE -D MOD_WSGI_MPM_EXISTS_PREFORK_MODULE'
+[Thu Apr 20 07:57:02.821651 2023] [wsgi:error] [pid 28667:tid 139977963829376] mod_wsgi (pid=28667): Unsupported locale setting en_IN.ISO8859-1 specified for daemon process group localhost:8014. Consider using 'C.UTF-8' as fallback setting.
+[Thu Apr 20 07:57:02.884072 2023] [wsgi:error] [pid 28667:tid 139977963829376] /var/www/flask_apps/kinaseResistance
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 07:57:03.457697 2023] [wsgi:error] [pid 28667:tid 139977963829376] monitor (pid=28667): Starting change monitor.
+[Thu Apr 20 07:57:06.256534 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+mkdir: cannot create directory 'static/predictor/output/T8W3L': File exists
+[Thu Apr 20 07:57:06.283960 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['MAP2K3/A84T']
+[Thu Apr 20 07:57:06.584850 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['Q00534/T49A']
+[Thu Apr 20 07:57:06.872248 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['BRAF/V600E']
+[Thu Apr 20 07:57:07.154854 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['CHEK2/K373E']
+[Thu Apr 20 07:57:07.433595 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['CHEK2/T68A']
+[Thu Apr 20 07:57:07.451217 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['MAP2K3/A84T']
+[Thu Apr 20 07:57:07.730356 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['MAP2K3/T222M']
+[Thu Apr 20 07:57:08.010879 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['MAP2K1/K97A']
+[Thu Apr 20 07:57:08.284627 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['MAP2K1/V211D']
+[Thu Apr 20 07:57:08.564607 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['PIM1/T23I']
+[Thu Apr 20 07:57:08.582527 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['PIM1/S97N']
+[Thu Apr 20 07:57:08.859581 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] ['PIM1/Q127E']
+[Thu Apr 20 07:57:09.646041 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:57:09.646062 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346]   UserWarning)
+[Thu Apr 20 07:57:09.653110 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:57:09.653119 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346]   UserWarning)
+[Thu Apr 20 07:57:09.655140 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator MinMaxScaler from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 07:57:09.655149 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346]   UserWarning)
+[Thu Apr 20 07:57:09.765804 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 07:57:09.765842 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] Q00534 CDK6 T49A 65 0.451
+[Thu Apr 20 07:57:09.765865 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P15056 BRAF V600E 194 0.789
+[Thu Apr 20 07:57:09.765886 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] O96017 CHEK2 K373E 193 0.53
+[Thu Apr 20 07:57:09.765906 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 07:57:09.765927 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P46734 MAP2K3 T222M 209 0.411
+[Thu Apr 20 07:57:09.765947 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] Q02750 MAP2K1 K97A 59 0.023
+[Thu Apr 20 07:57:09.765966 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] Q02750 MAP2K1 V211D 191 0.58
+[Thu Apr 20 07:57:09.765986 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P11309 PIM1 S97N 87 0.543
+[Thu Apr 20 07:57:09.766006 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P11309 PIM1 Q127E 121 0.878
+[Thu Apr 20 07:57:09.770731 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P46734 MAP2K3 None None
+[Thu Apr 20 07:57:09.771578 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] Q00534 CDK6 p None
+[Thu Apr 20 07:57:09.772501 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P15056 BRAF None R
+[Thu Apr 20 07:57:09.773408 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] O96017 CHEK2 None None
+[Thu Apr 20 07:57:09.774295 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] O96017 CHEK2 None None
+[Thu Apr 20 07:57:09.775156 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P46734 MAP2K3 None None
+[Thu Apr 20 07:57:09.776016 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P46734 MAP2K3 p None
+[Thu Apr 20 07:57:09.776877 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] Q02750 MAP2K1 ub D
+[Thu Apr 20 07:57:09.777797 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] Q02750 MAP2K1 None None
+[Thu Apr 20 07:57:09.778730 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P11309 PIM1 None None
+[Thu Apr 20 07:57:09.779660 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P11309 PIM1 None None
+[Thu Apr 20 07:57:09.780587 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:55346] P11309 PIM1 None None
+[Thu Apr 20 10:18:58.898457 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 10:18:58.936557 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['MAP2K3/A84T']
+[Thu Apr 20 10:18:59.244794 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['Q00534/T49A']
+[Thu Apr 20 10:18:59.532447 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['BRAF/V600E']
+[Thu Apr 20 10:18:59.821432 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['CHEK2/K373E']
+[Thu Apr 20 10:19:00.103541 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['CHEK2/T68A']
+[Thu Apr 20 10:19:00.121334 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['MAP2K3/A84T']
+[Thu Apr 20 10:19:00.399107 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['MAP2K3/T222M']
+[Thu Apr 20 10:19:00.679043 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['MAP2K1/K97A']
+[Thu Apr 20 10:19:00.965852 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['MAP2K1/V211D']
+[Thu Apr 20 10:19:01.252706 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['PIM1/T23I']
+[Thu Apr 20 10:19:01.272683 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['PIM1/S97N']
+[Thu Apr 20 10:19:01.561536 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] ['PIM1/Q127E']
+[Thu Apr 20 10:19:01.876847 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 10:19:01.876878 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132]   UserWarning)
+[Thu Apr 20 10:19:01.884214 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 10:19:01.884224 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132]   UserWarning)
+[Thu Apr 20 10:19:01.886034 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator MinMaxScaler from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 10:19:01.886058 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132]   UserWarning)
+[Thu Apr 20 10:19:02.001177 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 10:19:02.001224 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] Q00534 CDK6 T49A 65 0.451
+[Thu Apr 20 10:19:02.001248 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P15056 BRAF V600E 194 0.789
+[Thu Apr 20 10:19:02.001270 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] O96017 CHEK2 K373E 193 0.53
+[Thu Apr 20 10:19:02.001290 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 10:19:02.001311 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P46734 MAP2K3 T222M 209 0.411
+[Thu Apr 20 10:19:02.001332 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] Q02750 MAP2K1 K97A 59 0.023
+[Thu Apr 20 10:19:02.001353 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] Q02750 MAP2K1 V211D 191 0.58
+[Thu Apr 20 10:19:02.001373 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P11309 PIM1 S97N 87 0.543
+[Thu Apr 20 10:19:02.001393 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P11309 PIM1 Q127E 121 0.878
+[Thu Apr 20 10:19:02.005625 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P46734 MAP2K3 None None
+[Thu Apr 20 10:19:02.006439 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] Q00534 CDK6 p None
+[Thu Apr 20 10:19:02.007334 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P15056 BRAF None R
+[Thu Apr 20 10:19:02.008224 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] O96017 CHEK2 None None
+[Thu Apr 20 10:19:02.009090 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] O96017 CHEK2 None None
+[Thu Apr 20 10:19:02.010007 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P46734 MAP2K3 None None
+[Thu Apr 20 10:19:02.010940 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P46734 MAP2K3 p None
+[Thu Apr 20 10:19:02.011818 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] Q02750 MAP2K1 ub D
+[Thu Apr 20 10:19:02.012699 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] Q02750 MAP2K1 None None
+[Thu Apr 20 10:19:02.013555 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P11309 PIM1 None None
+[Thu Apr 20 10:19:02.014439 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P11309 PIM1 None None
+[Thu Apr 20 10:19:02.015359 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52132] P11309 PIM1 None None
+[Thu Apr 20 10:49:57.361439 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 10:49:57.393255 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['MAP2K3/A84T']
+[Thu Apr 20 10:49:57.699373 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['Q00534/T49A']
+[Thu Apr 20 10:49:57.990767 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['BRAF/V600E']
+[Thu Apr 20 10:49:58.280323 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['CHEK2/K373E']
+[Thu Apr 20 10:49:58.567114 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['CHEK2/T68A']
+[Thu Apr 20 10:49:58.585587 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['MAP2K3/A84T']
+[Thu Apr 20 10:49:58.864527 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['MAP2K3/T222M']
+[Thu Apr 20 10:49:59.149765 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['MAP2K1/K97A']
+[Thu Apr 20 10:49:59.436238 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['MAP2K1/V211D']
+[Thu Apr 20 10:49:59.723993 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['PIM1/T23I']
+[Thu Apr 20 10:49:59.742612 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['PIM1/S97N']
+[Thu Apr 20 10:50:00.030043 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] ['PIM1/Q127E']
+[Thu Apr 20 10:50:00.342956 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 10:50:00.342986 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056]   UserWarning)
+[Thu Apr 20 10:50:00.350279 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 10:50:00.350289 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056]   UserWarning)
+[Thu Apr 20 10:50:00.352132 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator MinMaxScaler from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 10:50:00.352143 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056]   UserWarning)
+[Thu Apr 20 10:50:00.463334 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 10:50:00.463372 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] Q00534 CDK6 T49A 65 0.451
+[Thu Apr 20 10:50:00.463394 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P15056 BRAF V600E 194 0.789
+[Thu Apr 20 10:50:00.463414 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] O96017 CHEK2 K373E 193 0.53
+[Thu Apr 20 10:50:00.463434 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 10:50:00.463454 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P46734 MAP2K3 T222M 209 0.411
+[Thu Apr 20 10:50:00.463473 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] Q02750 MAP2K1 K97A 59 0.023
+[Thu Apr 20 10:50:00.463492 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] Q02750 MAP2K1 V211D 191 0.58
+[Thu Apr 20 10:50:00.463511 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P11309 PIM1 S97N 87 0.543
+[Thu Apr 20 10:50:00.463530 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P11309 PIM1 Q127E 121 0.878
+[Thu Apr 20 10:50:00.467543 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P46734 MAP2K3 None None
+[Thu Apr 20 10:50:00.468397 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] Q00534 CDK6 p None
+[Thu Apr 20 10:50:00.469310 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P15056 BRAF None R
+[Thu Apr 20 10:50:00.470237 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] O96017 CHEK2 None None
+[Thu Apr 20 10:50:00.471180 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] O96017 CHEK2 None None
+[Thu Apr 20 10:50:00.472115 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P46734 MAP2K3 None None
+[Thu Apr 20 10:50:00.473034 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P46734 MAP2K3 p None
+[Thu Apr 20 10:50:00.473911 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] Q02750 MAP2K1 ub D
+[Thu Apr 20 10:50:00.474765 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] Q02750 MAP2K1 None None
+[Thu Apr 20 10:50:00.475659 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P11309 PIM1 None None
+[Thu Apr 20 10:50:00.476552 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P11309 PIM1 None None
+[Thu Apr 20 10:50:00.477447 2023] [wsgi:error] [pid 28667:tid 139969486120704] [remote 127.0.0.1:47056] P11309 PIM1 None None
+[Thu Apr 20 10:51:25.895891 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] POST
+sh: warning: setlocale: LC_ALL: cannot change locale (en_IN.ISO8859-1)
+[Thu Apr 20 10:51:25.923105 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['MAP2K3/A84T']
+[Thu Apr 20 10:51:26.228653 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['Q00534/T49A']
+[Thu Apr 20 10:51:26.519053 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['BRAF/V600E']
+[Thu Apr 20 10:51:26.807464 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['CHEK2/K373E']
+[Thu Apr 20 10:51:27.096226 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['CHEK2/T68A']
+[Thu Apr 20 10:51:27.114679 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['MAP2K3/A84T']
+[Thu Apr 20 10:51:27.401546 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['MAP2K3/T222M']
+[Thu Apr 20 10:51:27.686953 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['MAP2K1/K97A']
+[Thu Apr 20 10:51:27.972270 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['MAP2K1/V211D']
+[Thu Apr 20 10:51:28.253935 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['PIM1/T23I']
+[Thu Apr 20 10:51:28.273252 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['PIM1/S97N']
+[Thu Apr 20 10:51:28.559292 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] ['PIM1/Q127E']
+[Thu Apr 20 10:51:28.868684 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 10:51:28.868711 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050]   UserWarning)
+[Thu Apr 20 10:51:28.875484 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 10:51:28.875494 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050]   UserWarning)
+[Thu Apr 20 10:51:28.877232 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] /var/www/flask_apps/kinaseResistance/venv/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator MinMaxScaler from version 1.2.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+[Thu Apr 20 10:51:28.877242 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050]   UserWarning)
+[Thu Apr 20 10:51:28.985410 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 10:51:28.985447 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] Q00534 CDK6 T49A 65 0.451
+[Thu Apr 20 10:51:28.985469 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P15056 BRAF V600E 194 0.789
+[Thu Apr 20 10:51:28.985505 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] O96017 CHEK2 K373E 193 0.53
+[Thu Apr 20 10:51:28.985523 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P46734 MAP2K3 A84T 50 0.314
+[Thu Apr 20 10:51:28.985543 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P46734 MAP2K3 T222M 209 0.411
+[Thu Apr 20 10:51:28.985561 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] Q02750 MAP2K1 K97A 59 0.023
+[Thu Apr 20 10:51:28.985579 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] Q02750 MAP2K1 V211D 191 0.58
+[Thu Apr 20 10:51:28.985597 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P11309 PIM1 S97N 87 0.543
+[Thu Apr 20 10:51:28.985615 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P11309 PIM1 Q127E 121 0.878
+[Thu Apr 20 10:51:28.990165 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P46734 MAP2K3 None None
+[Thu Apr 20 10:51:28.991053 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] Q00534 CDK6 p None
+[Thu Apr 20 10:51:28.992018 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P15056 BRAF None R
+[Thu Apr 20 10:51:28.992954 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] O96017 CHEK2 None None
+[Thu Apr 20 10:51:28.993895 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] O96017 CHEK2 None None
+[Thu Apr 20 10:51:28.994833 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P46734 MAP2K3 None None
+[Thu Apr 20 10:51:28.995772 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P46734 MAP2K3 p None
+[Thu Apr 20 10:51:28.996683 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] Q02750 MAP2K1 ub D
+[Thu Apr 20 10:51:28.997573 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] Q02750 MAP2K1 None None
+[Thu Apr 20 10:51:28.998467 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P11309 PIM1 None None
+[Thu Apr 20 10:51:28.999388 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P11309 PIM1 None None
+[Thu Apr 20 10:51:29.000328 2023] [wsgi:error] [pid 28667:tid 139969452549888] [remote 127.0.0.1:52050] P11309 PIM1 None None
