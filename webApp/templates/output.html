@@ -68,14 +68,23 @@
 		</ul>
 	  </div>
 	</nav>
-	<h3 class="headingText">Results</h3>
+
 	<div class="container">
+		<div class="row" style="padding-top: 50px;">
+			<!-- Button trigger modal -->
+			<button type="button" id="ignoreButton" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				Click here to see the ignored inputs
+			</button>
+		</div>
 		
 		<div class="row">
+			<h3 class="headingText">Results</h3>
 			<table id="outputTable" class="display" style="width:100%">
 				<thead>
 					<tr>
 						<th></th>
+						<th>View</th>
+						<th>Input</th>
 						<th>Gene</th>
 						<th>Acc</th>
 						<th>Mutation</th>
@@ -88,6 +97,8 @@
 				<tfoot>
 					<tr>
 						<th></th>
+						<th>View</th>
+						<th>Input</th>
 						<th>Gene</th>
 						<th>Acc</th>
 						<th>Mutation</th>
@@ -165,10 +176,10 @@
 								if ( data.prediction > 0.5 ) {
 									// $(row).addClass( 'important' );
 									// alert(data.prediction);
-									$('td:eq(7)', row).css('background-color', 'Lightgreen');
+									$('td:eq(9)', row).css('background-color', 'Lightgreen');
 								}
 								else if ( data.prediction < 0.5 ) {
-									$('td:eq(7)', row).css('background-color', '#FF6863');
+									$('td:eq(9)', row).css('background-color', '#FF6863');
 								}
 							},
 				dom: 'Bfrtip',
@@ -182,6 +193,8 @@
 						data: null,
 						defaultContent: '',
 					},
+					{ data: 'view' },
+					{ data: 'name' }, // input
 					{ data: 'gene' },
 					{ data: 'acc' },
 					{ data: 'mutation' },
@@ -269,4 +282,35 @@
 		} );
 		*/
 	</script>
+
+	<script>
+		// get a reference to the div element
+		const myDiv = document.getElementById('ignoreButton');
+		// check conditions and activate the div if they are met
+		if ({{error|safe}} != "") {
+		myDiv.style.display = 'block';
+		} else {
+		myDiv.style.display = 'none';
+		}
+	</script>
+	  
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Following inputs were ignored</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			{{error|safe}}
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+			</div>
+		</div>
+		</div>
+	</div>
+  
 </body>

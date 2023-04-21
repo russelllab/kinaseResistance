@@ -26,7 +26,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../'):
     # Make header
     data = []
     # trainMat = 'Acc\tGene\tMutation\tDataset\t'
-    row = ['Acc','Gene','Mutation','Dataset']
+    row = ['Input', 'Acc','Gene','Mutation','Dataset']
     # trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
     row += ['hmmPos','hmmSS','hmmScoreWT','hmmScoreMUT','hmmScoreDiff']
     # trainMat += 'Phosphomimic\t'
@@ -58,25 +58,45 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../'):
 
     # Go line by line through the contents
     kinases = {}
+    entries_not_found = {}
     # for line in tqdm(open(inputFile, 'r')):
     for line in tqdm(file_contents):
         # Ignore empty line
         if line.split() == []: continue
         # Ignore comments
-        if line[0] in ['#']: continue
+        if line[0] == '#' or line.lstrip().rstrip() == '': continue
         # Extract features
-        name = line.split()[0].split('/')[0]
-        acc, gene, uniprot_id = fetchData.getAccGene(mycursor, name)
+        name = line.split()[0] 
+        kinase = line.split()[0].split('/')[0]
+        mutation = line.split('/')[1].rstrip()
+        acc, gene, uniprot_id = fetchData.getAccGene(mycursor, kinase)
+        if acc is None:
+            entries_not_found[name] = 'Cound not find ' + kinase + ' in the database'
+            continue
+        error, aa_found = fetchData.checkInputPositionAA(acc, mutation, mycursor)
+        # print (name, error)
+        if error == 1:
+            entries_not_found[name] = 'Position ' + str(mutation[1:-1])
+            entries_not_found[name] += ' not found in ' + kinase
+            continue
+        if error == 2:
+            entries_not_found[name] = 'Found ' + aa_found + ' at position '
+            entries_not_found[name] += str(mutation[1:-1]) + ' in ' + kinase
+            entries_not_found[name] += ' instead of ' + mutation[0]
+            continue
+        
         if acc not in kinases:
             kinases[acc] = Kinase(acc, gene)
-        mutation = line.split('/')[1].rstrip()
         if mutation not in kinases[acc].mutations:
             kinases[acc].mutations[mutation] = Mutation(mutation, '-', acc, 'test')
+        
         position = int(mutation[1:-1])
         mutAA = mutation[-1]
         wtAA = mutation[0]
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
-        if hmmPos == '-': continue
+        ## Even if the position is not in the HMM,
+        ## we still want to show it in the output
+        # if hmmPos == '-': continue
         ptm_row = fetchData.getPTMscore(mycursor, acc, position, WS)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(mycursor, acc, wtAA, position, mutAA)
@@ -97,8 +117,8 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../'):
         # trainMat += '\t'.join([str(item) for item in adr_row]) + '\n'
         
         # store in 2D array
-        row = [acc, gene, mutation, 'test']
-        row += [int(hmmPos), str(hmmSS)]
+        row = [name, acc, gene, mutation, 'test']
+        row += [str(hmmPos), str(hmmSS)]
         row += [float(hmmScoreWT), float(hmmScoreMUT), float(hmmScoreMUT)-float(hmmScoreWT)]
         row.append(is_phosphomimic)
         row += [item for item in charges_row]
@@ -106,9 +126,17 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../'):
         row += [item for item in aa_row]
         row += [item for item in homology_row]
         row += [item for item in adr_row]
+        # print (row)
         data.append(row)
 
+    results = {
+                'entries_not_found': entries_not_found,
+               'predictions': {}
+               }
     df = pd.DataFrame(data[1:], columns=data[0])
+    if len(data) == 1:
+        print ('No data found in the input file.')
+        return results
     
     # columns to include
     columns_to_consider = []
@@ -128,14 +156,34 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../'):
     features = scaler.transform(features)
     
     # Print the results
-    results = {}
     print (''.join(['-' for i in range(50)]))
-    outputText = '#Acc\tGene\tMut\tHMMpos\tPrediction\n'
+    outputText = '#Input\tAcc\tGene\tMut\tHMMpos\tPrediction\n'
     for row, predict in zip(test_data, clf.predict_proba(features)):
-        outputText += row[0] +'\t'+ row[1] +'\t'+ row[2] +'\t'+ str(row[4]) +'\t'
-        outputText += str(round(predict[1], 3)) + '\n'
-        name = row[0] + '/' + row[2]
-        results[name] = {'prediction':round(predict[1], 3), 'hmmPos':row[4]}
+        ## Set prediction proba to NA if the position is not in the HMM
+        acc = row[1]
+        gene = row[2]
+        mutation = row[3]
+        if str(row[5]) != '-': prediction_prob = round(predict[1], 3)
+        else: prediction_prob = 'NA'
+        outputText += row[0] +'\t'+ row[1] +'\t'+ row[2] +'\t'+ row[3] +'\t'+ str(row[5]) +'\t'
+        outputText += str(prediction_prob) + '\n'
+        name = row[0]
+        for ptm_type_header in [ptm_type+'_0' for ptm_type in PTM_TYPES]:
+            # print (df[df['Input']==name][ptm_type_header])
+            ptmType = df[df['Input']==name][ptm_type_header].values[0]
+            if int(ptmType) != 0:
+                ptmType = ptm_type_header.split('_')[0]
+                break
+        results['predictions'][name] = {
+                        'acc':acc,
+                        'gene':gene,
+                        'mutation':mutation,
+                        'prediction':prediction_prob,
+                        'hmmPos':row[5],
+                        'ptmType':ptmType,
+                        'mutType':ptmType,
+                        }
+    # print (results)
     if outputFile != None: open(outputFile, 'w').write(outputText)
     else: print (outputText)
     return results
@@ -156,3 +204,4 @@ if __name__ == '__main__':
     outputFile = args.o
 
     results_json = predict(inputFile, outputFile)
+    print (results_json)

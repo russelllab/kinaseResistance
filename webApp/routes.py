@@ -41,7 +41,7 @@ def connection():
                             host = "localhost",
                             port = "5432")
     return mydb
-    
+
 def retrieve_entries(protein, mutation, mycursor):
 	'''For a give acc/gene/uniprot ID, retireve known information'''
 	mycursor.execute("select acc, gene from kinases where acc=%s", (protein,))
@@ -77,6 +77,24 @@ def retrieve_entries(protein, mutation, mycursor):
 	print (acc, gene, ptmType, mutType)
 	return (acc, gene, ptmType, mutType)
 
+def makeUniqID():
+	'''
+	Generates a unique ID for the job
+	'''
+	# A unique ID is created before the pocess begins
+	# Each submitted job is assigned a unique ID
+	uniqID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
+	return uniqID
+
+def runPrediction(uniqID, inputMuts):
+	if os.path.isfile('static/predictor/output/'+uniqID) is False:
+		os.system('mkdir static/predictor/output/'+uniqID)
+	with open('static/predictor/output/'+uniqID+'/input.txt', 'w') as f:
+		f.write(inputMuts)
+	results = prepareTestData.predict('static/predictor/output/'+uniqID+'/input.txt', \
+				BASE_DIR = BASE_DIR)
+	return results
+
 def configureRoutes(app):
 	# print (os.getcwd())
 	alignmentsPath = BASE_DIR + '/analysis/alignments/data/HUMAN/orthologs_only/'
@@ -100,7 +118,8 @@ def configureRoutes(app):
 		'''
 		# A unique ID is created before the pocess begins
 		# Each submitted job is assigned a unique ID
-		uniqID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
+		# uniqID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
+		uniqID = makeUniqID()
 		# return 'Home'
 		return render_template('home.html', uniqID=uniqID)
 
@@ -117,42 +136,134 @@ def configureRoutes(app):
 			mycursor = mydb.cursor()
 			#sys.exit()
 			inputMuts = request.form['inputMut']
-			if os.path.isfile('static/predictor/output/'+uniqID) is False:
-				os.system('mkdir static/predictor/output/'+uniqID)
-			with open('static/predictor/output/'+uniqID+'/input.txt', 'w') as f:
-				f.write(inputMuts)
-			results = prepareTestData.predict('static/predictor/output/'+uniqID+'/input.txt', \
-				     BASE_DIR = BASE_DIR)
-			# return inputMuts
-			output = []; seq = ''; dic = {}
-			for line in inputMuts.split('\n'):
-				if line[0] == '#' or line.lstrip().rstrip() == '':
-					continue
-				protein = line.split('/')[0].lstrip()
-				mutation = line.split('/')[1].rstrip()
-				acc, gene, ptmType, mutType = retrieve_entries(protein, mutation, mycursor)
-				if acc is None: continue
-				name = acc + '/' + mutation
+			results = runPrediction(uniqID, inputMuts)
+			print (results, 'dfgh')
+
+			if len(results) == 0:
+				return render_template('error1.html',
+									flaggedInput=json.dumps(kinase+'/'+mutation)
+									)
+			
+			output = []
+			entries_not_found = results['entries_not_found']
+			error_html_text = ''
+			for name in entries_not_found:
+				error_html_text += name + ' ' + entries_not_found[name] + '<br>'
+			
+			# print (entries_not_found)
+
+			for name in results['predictions']:
+				# name = acc + '/' + mutation
+				print (name)
+				kinase, mutation = name.split('/')
 				dic = {}
-				dic['mutation'] = mutation
-				dic['acc'] = acc
-				dic['gene'] = gene
-				dic['ptmType'] = ptmType
-				dic['mutType'] = mutType
-				if name in results:
-					dic['prediction'] = results[name]['prediction']
-					dic['hmmPos'] = results[name]['hmmPos']
-				else:
-					dic['prediction'] = '-'
-					dic['hmmPos'] = '-'
+				dic['name'] = name
+				dic['mutation'] = results['predictions'][name]['mutation']
+				dic['acc'] = results['predictions'][name]['acc']
+				dic['view'] = '<a href=\"'
+				dic['view'] += BASE_URL
+				dic['view'] += 'result?uniqID='+uniqID+'&kinase=' + kinase + '&mutation=' + mutation
+				dic['view'] += '\" target=\"_blank\">View</a>'
+				dic['gene'] = results['predictions'][name]['gene']
+				dic['ptmType'] = results['predictions'][name]['ptmType']
+				dic['mutType'] = results['predictions'][name]['mutType']
+				dic['prediction'] = results['predictions'][name]['prediction']
+				dic['hmmPos'] = results['predictions'][name]['hmmPos']
 				output.append(dic)
 			output = {'data': output}
 			with open('static/predictor/output/'+uniqID+'/output.json', 'w') as f:
 				json.dump(output, f)
-			return render_template('output.html', uniqID=json.dumps(uniqID), output=json.dumps(output))
+			return render_template('output.html',
+			  						uniqID=json.dumps(uniqID),
+									output=json.dumps(output),
+									error=json.dumps(error_html_text)
+									)
 		else:
 			print ('GET')
-			return 'You called GET'
+			return redirect(url_for('output/'+uniqID))
+		
+	@app.route('/result', methods=['GET', 'POST'])
+	def result():
+		'''
+		This function is called by the summary output
+		or directly by the user from the browser.
+		Takes kinase and mutation as input.
+		'''
+		if request.method == 'POST':
+			data = request.args.get('kinase')
+			#print (request.get_json(force=True))
+			#return redirect(url_for('home'))
+			#return render_template('home.html')
+		else:
+			uniqID = request.args.get('uniqID')
+			kinase = request.args.get('kinase')
+			mutation = request.args.get('mutation')
+			#print (request.args.get('data'))
+			results = {}
+			if uniqID is None:
+				uniqID = makeUniqID()
+				print (uniqID, kinase, mutation)
+				results = runPrediction(uniqID, kinase+'/'+mutation)
+			else:
+				with open('static/predictor/output/'+uniqID+'/output.json', 'r') as f:
+					dic = json.load(f)
+				for result in dic['data']:
+					if result['name'] == kinase+'/'+mutation:
+						results[kinase+'/'+mutation] = result
+						break
+			if len(results) == 0:
+				# return 'No results found' if input is not present in the database
+				return render_template('error1.html',
+										flaggedInput=json.dumps(kinase+'/'+mutation)
+										)
+			else:
+				return render_template('result.html',
+										uniqID=json.dumps(uniqID),
+										kinase=json.dumps(kinase),
+										mutation=json.dumps(mutation),
+										results=results
+										)
+
+	@app.route('/error1')
+	def error1():
+		return render_template('error1.html')
+
+	@app.route('/AJAXChart', methods=['GET', 'POST'])
+	def get_Chart(**kwargs):
+		'''
+		A function to take uniqID, kinase and mutation as input
+		and return prediction information as dic
+		'''
+		if request.method == 'POST':
+			data = request.get_json(force=True)
+			uniqID = data['uniqID']
+			kinase = data['kinase']
+			mutation = data['mutation']
+			results = data['results']
+		else:
+			kinase = kwargs['kinase']
+			mutation = kwargs['mutation']
+		
+		dic = {}
+		# print (kinase, mutation)
+		activating_prob = results[kinase+'/'+mutation]['prediction']
+		if activating_prob == 'NA':
+			activating_prob = 0.0
+			deactivating_prob = 0.0
+		else:
+			activating_prob = float(activating_prob)
+			deactivating_prob = 1.0 - activating_prob
+
+		results[kinase+'/'+mutation]['activating'] = activating_prob
+		results[kinase+'/'+mutation]['deactivating'] = deactivating_prob
+		results[kinase+'/'+mutation]['neutral'] = 0.5
+		results[kinase+'/'+mutation]['resistant'] = 0.5
+		dic = {'activating': results[kinase+'/'+mutation]['activating'],
+				'deactivating': results[kinase+'/'+mutation]['deactivating'],
+				'neutral': results[kinase+'/'+mutation]['neutral'],
+				'resistant': results[kinase+'/'+mutation]['resistant']}
+		return jsonify(dic)
+		
 
 '''
 This will be called if you run this from command line

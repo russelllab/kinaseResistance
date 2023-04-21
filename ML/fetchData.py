@@ -35,8 +35,50 @@ def getAccGene(mycursor, name):
         mycursor.execute("select acc, gene, uniprot_id from kinases where "+check+" = %s", (name,))
         hits = mycursor.fetchone()
         if hits is not None: break
+    if hits is None:
+        print (f'Neither acc nor gene with name {name} found')
+        return None, None, None
     acc, gene, uniprot_id = hits[0], hits[1], hits[2]
     return acc, gene, uniprot_id
+
+def checkInputPositionAA(acc, mutation, mycursor):
+	'''
+	Checks if the input position and amino acid are valid
+	'''
+	mycursor.execute("select uniprotaa from positions \
+		  				where acc=%s and uniprotpos=%s", (acc, mutation[1:-1],))
+	hits = mycursor.fetchone()
+	# print (hits)
+	if hits is None:
+		return 1, 'Position not found'
+	if hits[0] != mutation[0]:
+		return 2, hits[0]
+	return 0, 'OK'
+
+def retrieve_entries(mycursor, acc, mutation):
+	'''For a give acc/gene/uniprot ID, retireve known information'''
+	## fetch ptm_types
+	mycursor.execute(\
+					'select ptmtype from ptms \
+					where acc=%s and uniprotpos=%s', \
+					(acc, mutation[1:-1],)\
+					)
+	hits = mycursor.fetchone()
+	if hits is not None: ptmType = hits[0]
+	else: ptmType = 'None'
+	
+	## fetch mut_types
+	mycursor.execute(\
+					'select mut_type from mutations \
+					where acc=%s and mutation=%s', \
+					(acc, mutation,)\
+					)
+	hits = mycursor.fetchone()
+	if hits is not None: mutType = hits[0]
+	else: mutType = 'None'
+
+	print (ptmType, mutType)
+	return (ptmType, mutType)
 
 def fetchFasta(kinases, Kinase, mycursor):
     '''

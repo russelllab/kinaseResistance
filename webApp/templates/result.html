@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Load plotly.js into the DOM -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{kinase	|safe}}/{{mutation|safe}}</title>
+	<script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="{{url_for('static', filename='/js/showChart.js')}}"></script>
+	<!--
+	<script src="{{url_for('static', filename='/js/plt.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/createList.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/showStructure.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/showVariants.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/showPTM.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/dataTables.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/heatmap.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/ramachandran.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/g3-lollipop.js')}}"></script>
+	-->
+	<!-- D3.js -->
+	<!--
+		Load D3 version 3.0 and save it as d3version3,
+		which is used the in the script SPV_v1.1.js
+	-->
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script>
+		d3version3 = d3;
+		window.d3 = null;
+	</script>
+	<!-- Load D4, which is used for rest of the components (z.B. lollipop)-->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<!-- g3lollipop -->
+    <script src="https://s3-us-west-2.amazonaws.com/cdsjsd3/g3-viz/0.5.0/g3-lollipop.min.js"></script>
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/cdsjsd3/g3-viz/0.5.0/g3-lollipop.min.css">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/cdsjsd3/css/gist.css">
+
+	<!-- DataTables -->
+	<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+	<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+	<!-- PDBe Mol*-->
+	<!--
+	<link rel="stylesheet" type="text/css" href="static/pdbe-molstar/build/pdbe-molstar-3.0.0.css">
+    <script type="text/javascript" src="static/pdbe-molstar/build/pdbe-molstar-plugin-3.0.0.js"></script>
+	-->
+	<!--	
+	<link rel="stylesheet" type="text/css" href="https://www.ebi.ac.uk/pdbe/pdb-component-library/css/pdbe-molstar-light-3.0.0.css">
+    <script type="text/javascript" src="https://www.ebi.ac.uk/pdbe/pdb-component-library/js/pdbe-molstar-plugin-3.0.0.js"></script>
+	-->
+	
+	<!-- REACT JS-->
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	
+</head>
+
+<style>
+	#structureDiv{
+		width:400px;
+		height: 350px;
+		max-height: 100%;
+		float:left;
+        position:relative;
+	}
+      .viewerSection {
+        margin: 100px 0 0 0;
+      }
+    </style>
+<style>
+	.headingText
+	{
+		font-family:    Arial, Helvetica, sans-serif;
+		font-size:      25px;
+		font-weight:    bold;
+		text-align: center;
+		padding: 50px 0;
+	}
+</style>
+<style>
+	.tooltip-container {
+	  position: relative;
+	}
+	
+	.tooltip-box {
+	  position: absolute;
+	  background: rgba(0, 0, 0, 0.7);
+	  color: #fff;
+	  padding: 5px;
+	  border-radius: 5px;
+	  top: calc(100% + 5px);
+	  display: none;
+	}
+	
+	.tooltip-box.visible {
+	  display: block;
+	}
+	
+	.tooltip-arrow {
+	  position: absolute;
+	  top: -10px;
+	  left: 50%;
+	  border-width: 5px;
+	  border-style: solid;
+	  border-color: transparent transparent rgba(0, 0, 0, 0.7) transparent;
+	}
+	
+	.setFont {
+	  color: 'red';
+	}
+  
+	.taxonomyLineageClass {
+	  margin-top: 50px;
+	}
+  </style>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	  <div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+		  <li class="nav-item active">
+			<a class="nav-link" href="#">Search<span class="sr-only"></span></a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">About</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Help</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Russell lab</a>
+		  </li>
+		</ul>
+	  </div>
+	</nav>
+	
+	<div class="container">
+		
+	<div style="padding-top: 25px; padding-bottom: 25px;">
+		<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse-ptm">
+			Prediction chart
+		</button>
+		<div id="collapse-ptm" class="collapse show" style="padding-top: 25px;">
+			<div class="row" style="outline:none !important;">
+				<div class="card">
+					<div class="card-body">
+						<div id='myChart' class=".border-0" style="overflow: scroll;  max-width: 100%; height: 500px; outline: none !important; ">
+							<!-- PTM objekt will be drawn inside this DIV -->
+						</div>
+						<script>
+							// showPTM({{uniqID|safe}}, {{protein|safe}}, {{mutation|safe}});
+							showChart({{uniqID|safe}}, {{kinase|safe}}, {{mutation|safe}}, {{results|safe}});
+							// alert ({{uniqID|safe}});
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+	$(document).ready(function(){
+	  $("#myInput").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$(".dropdown-menu li").filter(function() {
+		  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	  });
+	});
+	</script>
+	
+
+    <script>
+		makeCalls({{uniqID|safe}}, {{protein|safe}}, {{mutation|safe}});
+	</script>
+
+</body>
+</html>
