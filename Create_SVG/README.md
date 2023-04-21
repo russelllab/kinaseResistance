@@ -86,6 +86,9 @@ ___
 
 ___
 ## The most recent type of results
+CHEK2, trimmed alignment (shown completely), Position 373, with tooltips and showing CHEK2 + top10 sequences (based on available information)
+<img src="https://github.com/russelllab/kinaseResistance/blob/cbc301c14832245d12157d244245595c9861259f/Create_SVG/Vlatest/CHK2_HUMAN_Position373_Windowsize30.svg?sanitize=true">
+
 MAP2K3, A84 with the most recent testdata (cleaned and trimmed kinase alignment made by Gurdeep). Kinases with no highlights were removed from the SVG visualization. Columns with > 90 % gaps were removed, unless there is a position with an annotation, then the column is kept despite having many gaps (see for example BRAF V600).
 <img src="https://github.com/russelllab/kinaseResistance/blob/646b21fcfc6729faf1219a352a9ac8e0679d4a1a/Create_SVG/Version_K(inases)/MP2K3_HUMAN_Position84_Windowsize30000.svg?sanitize=true">
 
