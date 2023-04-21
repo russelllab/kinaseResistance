@@ -3,7 +3,7 @@ ___
 ## This script
 The file **create_svg_20230314_kinases.py** comes with several python2 functions that can annotate or highlight positions in a Clustal-formatted alignment.
 
-The file **create_svg_20230420_kinases.py** has similar (see below) functionalities and was upgraded to work under Python3.6.
+The file **create_svg_20230421_kinases.py** has similar (see below) functionalities and was upgraded to work under Python3.6.
 Further work will only be conducted on the Python3+ script.
 
 ___
@@ -39,6 +39,7 @@ In case we have to deal with .pkl files I did a quick solution to reformat them 
 
 ___
 ## Features (Vlatest)
+- **New** Added tooltip functionality to the svgs.
 - **New** Added a parameter to show only the Top X sequences (+ sequence of interest).
 - **New** Upgraded the code to work under Python3.6
 - **New** Added transparent rectangles to highlight a sequence conservation (= identity) over >= 70 %, based on the sequence of interest. The colors for this are taken from CLUSTAL/Jalview.
@@ -48,7 +49,7 @@ ___
 - Command line functionality. 
 
 To use the script we can now execute the following command:
-`python3 create_svg_20230420_kinases.py O96017 372 30 10 humanKinasesTrimmed.clustal Mutational_Infofile_Kinases.txt` 
+`python3 create_svg_20230421_kinases.py O96017 372 30 10 humanKinasesTrimmed.clustal Mutational_Infofile_Kinases.txt` 
 This command has several fields after calling the script:
 
 | Field        | Example           | Description  |
