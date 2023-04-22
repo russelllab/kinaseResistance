@@ -6,14 +6,14 @@ A script to test the functions in prepareTestData.py
 
 import pytest
 import os, sys
-os.sys.path.append('../ML/')
+os.sys.path.append('ML/')
 import prepareTestData
 
 def test_predict():
     """
     Test the predict function in prepareTestData.py
     """
-    results = prepareTestData.predict('sample_mutations3.txt', BASE_DIR = '../')
+    results = prepareTestData.predict('tests/sample_mutations3.txt', BASE_DIR = './')
     assert 'BRAF/T600E' in results['entries_not_found']
     assert '-' == results['predictions']['BRAF/V600E']['ptmType']
     assert 'p' == results['predictions']['BRAF/T599E']['ptmType']
