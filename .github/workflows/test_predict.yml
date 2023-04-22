@@ -7,6 +7,13 @@ on:
   pull_request:
     paths:
       - 'ML/**'  # Run the workflow when a file in the 'ML' directory is changed in a pull request
+  
+  workflow_dispatch:  # Run the workflow manually
+    inputs:
+      test-folder:
+        description: 'The folder to run tests on'
+        required: true
+        default: './'
 
 jobs:
   test:
@@ -14,19 +21,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2  # Checkout the repository code
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
 
       # Setup Miniconda
-      - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v2.1.1
+      - name: Install dependencies
+        uses: exfly/setup-miniconda@v2
         with:
-          auto-update-conda: true
+          environment-file: environment.yml  # Load dependencies from environment.yml
 
       # Install and run pytest in webApp
       - name: run pytest
         shell: bash -l {0}
         run: |
-          conda env create -f environment.yml
           conda activate kinaseR
           pytest

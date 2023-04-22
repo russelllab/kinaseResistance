@@ -224,7 +224,7 @@ if __name__ == '__main__':
     inputFile = args.i
     if inputFile == None: inputFile = 'sample_mutations.txt'
 
-    # set output file
+    # extract output file if provided
     outputFile = args.o
 
     results_json = predict(inputFile, outputFile)
