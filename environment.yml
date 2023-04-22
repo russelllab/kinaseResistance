@@ -32,6 +32,7 @@ dependencies:
   - joblib=1.1.1=py310h06a4308_0
   - jpeg=9e=h5eee18b_1
   - kiwisolver=1.4.4=py310h6a678d5_0
+  - krb5=1.19.4=h568e23c_0
   - lcms2=2.12=h3be6417_0
   - ld_impl_linux-64=2.38=h1181459_1
   - lerc=3.0=h295c915_0
@@ -39,12 +40,14 @@ dependencies:
   - libbrotlidec=1.0.9=h5eee18b_7
   - libbrotlienc=1.0.9=h5eee18b_7
   - libdeflate=1.17=h5eee18b_0
+  - libedit=3.1.20221030=h5eee18b_0
   - libffi=3.3=he6710b0_2
   - libgcc-ng=11.2.0=h1234567_1
   - libgfortran-ng=11.2.0=h00389a5_1
   - libgfortran5=11.2.0=h1234567_1
   - libgomp=11.2.0=h1234567_1
   - libpng=1.6.39=h5eee18b_0
+  - libpq=12.9=h16c4e8d_3
   - libstdcxx-ng=11.2.0=h1234567_1
   - libtiff=4.5.0=h6a678d5_2
   - libuuid=1.41.5=h5eee18b_0
@@ -69,6 +72,7 @@ dependencies:
   - pip=23.0.1=py310h06a4308_0
   - pluggy=1.0.0=py310h06a4308_1
   - pooch=1.4.0=pyhd3eb1b0_0
+  - psycopg2=2.9.3=py310h37d81fd_0
   - py=1.11.0=pyhd3eb1b0_0
   - pycparser=2.21=pyhd3eb1b0_0
   - pyopenssl=23.0.0=py310h06a4308_0
@@ -89,6 +93,7 @@ dependencies:
   - threadpoolctl=2.2.0=pyh0d69192_0
   - tk=8.6.12=h1ccaba5_0
   - tomli=2.0.1=py310h06a4308_0
+  - tqdm=4.65.0=py310h2f386ee_0
   - tzdata=2023c=h04d1e81_0
   - urllib3=1.26.15=py310h06a4308_0
   - werkzeug=2.2.3=py310h06a4308_0
