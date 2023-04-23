@@ -84,9 +84,9 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         if line[0] == '#' or line.lstrip().rstrip() == '': continue # Ignore comments
         
         # Extract features i.e. name = kinase/mutation
-        name = line.split()[0] 
-        kinase = line.split()[0].split('/')[0]
-        mutation = line.split('/')[1].rstrip()
+        name = line.split()[0].rstrip().upper()
+        kinase = name.split()[0].split('/')[0]
+        mutation = name.split('/')[1].rstrip()
 
         # Retrieve acc and gene of the input kinase
         acc, gene, uniprot_id = fetchData.getAccGene(mycursor, kinase)
