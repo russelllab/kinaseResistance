@@ -21,7 +21,7 @@ import psycopg2
 
 # Set up the base_url
 if socket.gethostname() == 'pevolution2.bioquant.uni-heidelberg.de':
-	BASE_URL = 'http://kinaser.russelllab.org/'
+	BASE_URL = 'http://kinasex.russelllab.org/'
 	# BASE_DIR = '/net/home.isilon/ds-russell/kinaseResistance/'
 	BASE_DIR = '/var/www/flask_apps/kinaseResistance/'
 else:
