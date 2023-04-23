@@ -77,7 +77,9 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     # Go line by line through the contents
     kinases = {}
     entries_not_found = {}
+    count = 0
     for line in tqdm(file_contents):
+        count += 1
         if line.split() == []: continue # Ignore empty line
         if line[0] == '#' or line.lstrip().rstrip() == '': continue # Ignore comments
         
@@ -146,6 +148,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         row += [item for item in adr_row]
         # print (row)
         data.append(row)
+        # yield count/float(len(file_contents)) * 100
 
     # save entries not found in the results dic
     results ['entries_not_found'] = entries_not_found
@@ -158,6 +161,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     if len(data) == 1:
         print ('No data found in the input file.')
         return results
+        # yield results
     # else go ahead
 
     # columns to consider
@@ -211,6 +215,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     if outputFile != None: open(outputFile, 'w').write(outputText)
     else: print (outputText)
     return results
+    # yield results
 
 # Run this script from command line
 if __name__ == '__main__':

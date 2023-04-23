@@ -50,27 +50,126 @@
 	#infoBox.hide {
 		opacity: 0;
 		}
+	
 </style>
+<style>
+	.slider-text {
+			display: none;
+			position: absolute;
+			top: 45%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	.slider-box {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.slider {
+			display: inline-block;
+			width: 300px;
+			height: 20px;
+			border-radius: 10px;
+			background-color: #ccc;
+			overflow: hidden;
+		}
+
+		.slider:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color:#4cb5f5;
+			animation: slide 2s ease-in-out infinite;
+		}
+
+		@keyframes slide {
+			0% {
+				transform: translateX(0);
+			}
+			50% {
+				transform: translateX(280px);
+			}
+			100% {
+				transform: translateX(0);
+			}
+		}
+</style>
+<style>
+		/* Style the navigation bar */
+		.navbar {
+			background-color: #4cb5f5;
+			overflow: hidden;
+		}
+
+		.submitButton {
+			color: black;
+			overflow: hidden;
+		}
+
+		.submitButton a {
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		.submitButton a:hover {
+			color: white;
+		}
+
+		/* Style the links inside the navigation bar */
+		/* .navbar a {
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		} */
+
+		/* Change the color of links on hover */
+		/* .navbar a:hover {
+			background-color: white;
+			color: gray;
+		} */
+	</style>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Search<span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Help</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Russell lab</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+	<nav class="navbar navbar-expand-lg navbar-dark ">
+	<div class="navbar collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+		<li class="nav-item active">
+			<a class="nav-link" href="/">Search<span class="sr-only"></span></a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">About</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Help</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="http://russelllab.org">Russell lab</a>
+		</li>
+		<li>
+			<a class="nav-link" href="https://github.com/russelllab/kinaseResistance">
+			<img src="static/img/github-mark-white.png" width="20" height="20" alt="GitHub Logo">
+			</a>
+		</li>
+		</ul>
+	</div>
+	</nav>
+
+	<h2 class="slider-text" id="slider-text">Hang tight while we run your query..</h2>
+		<div class="slider-box" id="slider-box">		
+			<div class="slider"></div>
+		</div>
 <div class="container">
 <h2 class="headingFont" id="headingText">KinaseX</h2>
 <div class="row">
@@ -78,7 +177,7 @@
 		</div>
 	<div class="col-sm-4" style="padding-top: 5px" id="infoBox" >
 		<form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
-			<textarea style="height: 550px" class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="inputMut">
+			<textarea style="height: 550px; width: 600px;" class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="inputMut">
 # Deactivating mutation in CDK6 
 Q00534/T49A
 
@@ -103,7 +202,7 @@ PIM1/S97N
 PIM1/Q127E
 			</textarea>
 		<div style="padding-top: 25px">
-			<button type="submit" class="btn btn-primary" onclick="call_onclick()">Submit</button>
+			<button type="submit" class="btn submitButton" onclick="call_onclick()" style="background-color: #4cb5f5;">Submit</button>
 			<!--
 				<button onclick="call_onclick()">Toggle</button>
 			-->
@@ -123,9 +222,10 @@ PIM1/Q127E
 		} else {
 			x.classList.add("hide");
 		}
-		var headingText = document.getElementById("headingText");
-		// headingText.innerHTML="Running your results....";
-		headingText.innerHTML = "Bitte haben Sie Geduld, während wir das Ergebnis vorbereiten...";
+		document.getElementById("headingText").style.display = "none";
+		document.getElementById("slider-text").style.display = "block";
+		document.getElementById("slider-box").style.display = "block";
 	}
+
 </script>
 </body>
