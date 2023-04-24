@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KinAct</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/slider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/navbar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form.css') }}">
+    <script src="{{url_for('static', filename='/js/loadExamples.js')}}"></script>
+	<style>
+        .headingFont
+        {
+            font-family:    Arial, Helvetica, sans-serif;
+            font-size:      30px;
+            font-weight:    bold;
+            text-align: center;
+            padding-top: 50px;
+        }
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Help</a></li>
+			<li><a href="http://russelllab.org">Russell Lab</a></li>
+		</ul>
+		<img src="/static/img/github-mark-white.png" alt="GitHub Logo" style="height: 40px; width: 40px">
+	</nav>
+	
+    <h1 class="headingFont">KinAct</h1>
+    <div id="formArea">
+	<form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
+        <textarea style="height: 400px; width: 400px; font-size: 15px;" type="text" 
+                    placeholder="Default input" name="inputMut" id="inputMut">
+            
+                        </textarea>
+        <div style="display: inline; padding-top: 10px;">
+		    <input style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">
+        </div>
+        <div style="display: inline; padding-top: 10px;">
+            <button>Example 1</button>
+            <button>Example 2</button>
+        </div>
+	</form>
+    </div>
+	<h2 class="slider-text" id="slider-text">Hang tight while we run your query..</h2>
+		<div class="slider-box" id="slider-box">		
+			<div class="slider"></div>
+		</div>
+	<footer>
+        KinAct was developed in the Russell Lab at Uni-HD, 2023
+    </footer>

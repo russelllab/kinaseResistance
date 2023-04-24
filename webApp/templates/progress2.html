@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block head %}
+    <title>KinAct</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/slider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form.css') }}">
+    <script src="{{url_for('static', filename='/js/loadExamples.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+    <h1 class="headingFont">KinAct</h1>
+    <div id="formArea">
+	<form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
+        <textarea style="height: 400px; width: 400px; font-size: 15px;" type="text" 
+                    placeholder="Default input" name="inputMut" id="inputMut">
+            
+                        </textarea>
+        <div style="display: inline; padding-top: 10px;">
+		    <input style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">
+        </div>
+        <div style="display: inline; padding-top: 10px;">
+            <button>Example 1</button>
+            <button>Example 2</button>
+        </div>
+	</form>
+    </div>
+	<h2 class="slider-text" id="slider-text">Hang tight while we run your query..</h2>
+		<div class="slider-box" id="slider-box">		
+			<div class="slider"></div>
+		</div>
+{% endblock %}
+	

@@ -1,0 +1,48 @@
+/* Slider */
+.slider-text {
+    display: none;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider {
+    display: inline-block;
+    width: 750px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:#333;
+    animation: slide 2s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(730px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

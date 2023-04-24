@@ -28,7 +28,7 @@ function showChart(uniqID, kinase, mutation, results)
               title: 'Predicted effect of the mutation on the kinase activity',
             };
 
-            Plotly.newPlot('myChart', data, layout);
+            Plotly.newPlot('predictionChart', data, layout);
 
 		}
 	});

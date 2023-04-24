@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/navbar.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/footer.css') }}">
+	{% block head %}
+	{% endblock %}
+	<style>
+        .headingFont
+        {
+            font-family:    Arial, Helvetica, sans-serif;
+            font-size:      30px;
+            font-weight:    bold;
+            text-align: center;
+            padding-top: 0px;
+        }
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+			color: #333;
+		}
+    </style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="/" target="_blank">Search</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Help</a></li>
+			<li><a href="http://russelllab.org" target="_blank">Russell Lab</a></li>
+		</ul>
+		<a class="nav-link" href="https://github.com/russelllab/kinaseResistance" target="_blank">
+		<img src="/static/img/github-mark-white.png" alt="GitHub Logo" style="height: 40px; width: 40px">
+		</a>
+	</nav>
+	
+	{% block content %}
+	{% endblock %}
+
+	<footer>
+        KinAct was developed in the Russell Lab at Uni-HD, 2023
+    </footer>

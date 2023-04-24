@@ -378,17 +378,29 @@ def getADRvector(mycursor, acc, mutation_position, kinases, ws=0):
     ws = int(ws/2)
     adr_row = []
     for position in range(mutation_position-ws, mutation_position+ws+1):
-        mycursor.execute("SELECT pfampos FROM positions \
-                        WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
-        hmmPos = mycursor.fetchone()[0]
-        mycursor.execute("SELECT mut_type FROM mutations \
-                        WHERE pfampos = %s", (str(hmmPos),))
-        hits = mycursor.fetchall()
-        mut_types_at_hmmpos = []
-        for entry in hits:
-            mut_types_at_hmmpos.append(entry[0])
-        # print (mut_types_at_hmmpos)
         for mut_type in ['A', 'D', 'R']:
+            mycursor.execute("SELECT mut_type FROM mutations \
+                            WHERE acc = %s and wtpos = %s", (acc, str(position)))
+            hits = mycursor.fetchall()
+            mut_types_at_position = []
+            for entry in hits:
+                mut_types_at_position.append(entry[0])
+            # print (acc, position, mut_types_at_position)
+            if mut_type in mut_types_at_position: adr_row.append(1)
+            else: adr_row.append(0)
+
+        for mut_type in ['A', 'D', 'R']:
+            mycursor.execute("SELECT pfampos FROM positions \
+                            WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+            hmmPos = mycursor.fetchone()[0]
+            mycursor.execute("SELECT mut_type FROM mutations \
+                            WHERE pfampos = %s", (str(hmmPos),))
+            hits = mycursor.fetchall()
+            mut_types_at_hmmpos = []
+            for entry in hits:
+                mut_types_at_hmmpos.append(entry[0])
+            # print (mut_types_at_hmmpos)
+            
             # hmmPos = kinases[acc].returnhmmPos(position)
             # if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
             if mut_type in mut_types_at_hmmpos: adr_row.append(1)

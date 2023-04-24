@@ -41,7 +41,37 @@ def connection():
                             password = "hellokitty",
                             host = "localhost",
                             port = "5432")
-    return mydb
+    
+    mydb.autocommit = True
+    mycursor = mydb.cursor()
+    return mycursor
+
+def makeText(acc, mutation, mycursor):
+	'''
+	Make text for prediction
+	'''
+	ws = 3
+	if ws > 0: ws -= 1
+	ws = int(ws/2)
+	dic_mutations = {'A': 'activating', 'D': 'deactivating', 'R': 'drug-resistant'}
+	dic_ptms = {'p': 'phosphorylation', 'ub': 'ubiquitination', 'ac': 'acetylation', 'me': 'methylation', 'gl': 'glycosylation', 'sm': 'sumoylation', 'm1': 'myristoylation', 'm2': 'palmitoylation', 'm3': 'myristoylation'}
+	text = ''
+	mutation_position = int(mutation[1:-1])
+	for position in range(mutation_position-ws, mutation_position+ws+1):
+		mycursor.execute("SELECT mutation, mut_type FROM mutations \
+						WHERE acc = %s and wtpos = %s", (acc, str(position)))
+		hits = mycursor.fetchall()
+		for entry in hits:
+			text += entry[0] + ' is a known ' + dic_mutations[entry[1]] + ' mutation<br>'
+	
+	for position in range(mutation_position-ws, mutation_position+ws+1):
+		mycursor.execute("SELECT uniprotaa, ptmtype FROM ptms \
+						WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+		hits = mycursor.fetchall()
+		for entry in hits:
+			text += entry[0] + str(position) + ' is a known ' + dic_ptms[entry[1]] + ' site<br>'
+	
+	return text
 
 def makeUniqID():
 	'''
@@ -51,6 +81,33 @@ def makeUniqID():
 	# Each submitted job is assigned a unique ID
 	uniqID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
 	return uniqID
+
+def makeOutputJson(uniqID, results, mycursor) -> dict:
+	output = []
+	for name in results['predictions']:
+		# num += 1
+		# name = acc + '/' + mutation
+		# print (name)
+		kinase, mutation = name.split('/')
+		dic = {}
+		dic['name'] = name
+		dic['mutation'] = results['predictions'][name]['mutation']
+		dic['acc'] = results['predictions'][name]['acc']
+		dic['view'] = '<a href=\"'
+		dic['view'] += BASE_URL
+		dic['view'] += 'result?uniqID='+uniqID+'&kinase=' + kinase + '&mutation=' + mutation
+		dic['view'] += '\" target=\"_blank\">View</a>'
+		dic['gene'] = results['predictions'][name]['gene']
+		dic['ptmType'] = results['predictions'][name]['ptmType']
+		dic['mutType'] = results['predictions'][name]['mutType']
+		dic['prediction'] = results['predictions'][name]['prediction']
+		dic['hmmPos'] = results['predictions'][name]['hmmPos']
+		dic['text'] = makeText(dic['acc'], dic['mutation'], mycursor)
+		output.append(dic)
+		# yield str(num) + '\n'
+	
+	output = {'data': output}
+	return output
 
 def runPrediction(uniqID, inputMuts):
 	if os.path.isfile(BASE_DIR + '/webApp/static/predictor/output/'+uniqID) is False:
@@ -97,7 +154,8 @@ def configureRoutes(app):
 		# uniqID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
 		uniqID = makeUniqID()
 		# return 'Home'
-		return render_template('home.html', uniqID=uniqID)
+		# return render_template('home.html', uniqID=uniqID)
+		return render_template('progress2.html', uniqID=uniqID)
 
 	@app.route('/output/<string:uniqID>', methods=['GET', 'POST'])
 	def output(uniqID: str):
@@ -113,9 +171,7 @@ def configureRoutes(app):
 			f = open(BASE_DIR+'/tests/sample_mutations3.txt', "r")
 			inputMuts = f.read()
 
-		mydb = connection()
-		mydb.autocommit = True
-		mycursor = mydb.cursor()
+		mycursor = connection()
 		#sys.exit()
 		# inputMuts = request.form['inputMut']
 		results = runPrediction(uniqID, inputMuts)
@@ -123,55 +179,47 @@ def configureRoutes(app):
 		if isinstance(results, float):
 			return app.response_class(results, mimetype='text/plain')
 
-		if len(results) == 0:
+		if len(results['predictions']) == 0:
 			return render_template('error1.html',
 								flaggedInput=json.dumps(kinase+'/'+mutation)
 								)
 		
-		output = []
+		ignored = []
 		entries_not_found = results['entries_not_found']
-		error_html_text = ''
-		for name in entries_not_found:
-			error_html_text += name + ' ' + entries_not_found[name] + '<br>'
+		print (entries_not_found)
+		for name in results['entries_not_found']:
+			kinase, mutation = name.split('/')
+			dic = {}
+			dic['name'] = name
+			dic['reason'] = results['entries_not_found'][name]
+			ignored.append(dic)
+		ignored = {'data': ignored}
+
+		# error_html_text = ''
+		# for name in entries_not_found:
+		# 	error_html_text += name + ' ' + entries_not_found[name] + '<br>'
 		
 		# print (entries_not_found)
 
 		# def generate():
 		# 	num = 0
-		for name in results['predictions']:
-			# num += 1
-			# name = acc + '/' + mutation
-			# print (name)
-			kinase, mutation = name.split('/')
-			dic = {}
-			dic['name'] = name
-			dic['mutation'] = results['predictions'][name]['mutation']
-			dic['acc'] = results['predictions'][name]['acc']
-			dic['view'] = '<a href=\"'
-			dic['view'] += BASE_URL
-			dic['view'] += 'result?uniqID='+uniqID+'&kinase=' + kinase + '&mutation=' + mutation
-			dic['view'] += '\" target=\"_blank\">View</a>'
-			dic['gene'] = results['predictions'][name]['gene']
-			dic['ptmType'] = results['predictions'][name]['ptmType']
-			dic['mutType'] = results['predictions'][name]['mutType']
-			dic['prediction'] = results['predictions'][name]['prediction']
-			dic['hmmPos'] = results['predictions'][name]['hmmPos']
-			output.append(dic)
-			# yield str(num) + '\n'
 		
+		output = makeOutputJson(uniqID, results, mycursor)
 		# return app.response_class(generate(), mimetype='text/plain')
-	
-		output = {'data': output}
+		# Save the ignored entries to a json file to be used by datatables
+		with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/ignored.json', 'w') as f:
+			json.dump(ignored, f)
+
 		# Save the output to a json file to be used by datatables
 		with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/output.json', 'w') as f:
 			json.dump(output, f)
 		# Save the results to a json file to be used by the result page
 		with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/results.json', 'w') as f:
 			json.dump(results, f)
-		return render_template('output.html',
+		return render_template('output2.html',
 								uniqID=json.dumps(uniqID),
 								output=json.dumps(output),
-								error=json.dumps(error_html_text)
+								error=json.dumps(len(results['entries_not_found']))
 								)
 		
 	@app.route('/result', methods=['GET', 'POST'])
@@ -187,15 +235,21 @@ def configureRoutes(app):
 			#return redirect(url_for('home'))
 			#return render_template('home.html')
 		else:
+			
 			uniqID = request.args.get('uniqID')
 			kinase = request.args.get('kinase')
 			mutation = request.args.get('mutation')
 			#print (request.args.get('data'))
 			results = {}
 			if uniqID is None:
+				mycursor = connection()
 				uniqID = makeUniqID()
 				print (uniqID, kinase, mutation)
 				results = runPrediction(uniqID, kinase+'/'+mutation)
+				output = makeOutputJson(uniqID, results, mycursor)
+				# Save the output to a json file to be used by datatables
+				with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/output.json', 'w') as f:
+					json.dump(output, f)
 			else:
 				with open('static/predictor/output/'+uniqID+'/results.json', 'r') as f:
 					results = json.load(f)
@@ -205,12 +259,50 @@ def configureRoutes(app):
 										flaggedInput=json.dumps(kinase+'/'+mutation)
 										)
 			else:
-				return render_template('result.html',
+				return render_template('result2.html',
 										uniqID=json.dumps(uniqID),
 										kinase=json.dumps(kinase),
 										mutation=json.dumps(mutation),
 										results=results
 										)
+	
+	@app.route('/ignored/<string:uniqID>', methods=['GET', 'POST'])
+	def ignored(uniqID: str):
+		'''
+		This function is called by the summary output
+		or directly by the user from the browser.
+		Takes kinase and mutation as input.
+		'''
+		if request.method == 'POST':
+			data = request.args.get('kinase')
+			#print (request.get_json(force=True))
+			#return redirect(url_for('home'))
+			#return render_template('home.html')
+		else:
+			# uniqID = request.args.get('uniqID')
+			# kinase = request.args.get('kinase')
+			# mutation = request.args.get('mutation')
+			#print (request.args.get('data'))
+			# results = {}
+			# if uniqID is None:
+			# 	uniqID = makeUniqID()
+			# 	print (uniqID, kinase, mutation)
+			# 	results = runPrediction(uniqID, kinase+'/'+mutation)
+			# else:
+			# 	with open('static/predictor/output/'+uniqID+'/results.json', 'r') as f:
+			# 		results = json.load(f)
+			# if len(results) == 0:
+			# 	# return 'No results found' if input is not present in the database
+			# 	return render_template('error1.html',
+			# 							flaggedInput=json.dumps(kinase+'/'+mutation)
+			# 							)
+			# else:
+			return render_template('ignored2.html',
+									uniqID=json.dumps(uniqID),
+									# kinase=json.dumps(kinase),
+									# mutation=json.dumps(mutation),
+									# results=results
+									)
 
 	@app.route('/error1')
 	def error1():
@@ -251,10 +343,45 @@ def configureRoutes(app):
 				'neutral': results['predictions'][kinase+'/'+mutation]['neutral'],
 				'resistant': results['predictions'][kinase+'/'+mutation]['resistant']}
 		return jsonify(dic)
+	
+	@app.route('/AJAXSummary', methods=['GET', 'POST'])
+	def get_Summary(**kwargs):
+		'''
+		A function to take uniqID, kinase and mutation as input
+		and return summary as dic
+		'''
+		if request.method == 'POST':
+			data = request.get_json(force=True)
+			uniqID = data['uniqID']
+			kinase = data['kinase']
+			mutation = data['mutation']
+			results = data['results']
+		else:
+			kinase = kwargs['kinase']
+			mutation = kwargs['mutation']
+		with open('static/predictor/output/'+uniqID+'/output.json', 'r') as f:
+			output = json.load(f)
+		
+		text = ''
+		for row in output['data']:
+			if row['name'] == kinase+'/'+mutation:
+				text += '<table><tr><td><b>Input:</b></td><td>'+row['name']+'</td></tr>'
+				text += '<tr><td><b>UniProt Acc:</b></td><td>'+'<a href="https://www.uniprot.org/uniprotkb/'+row['acc']+'/entry" target="_blank">'+row['acc']+'</td></tr>'
+				text += '<tr><td><b>Mutations:</b></td><td>'+row['mutation']+'</td></tr></table>'
+				if row['text'] != '':
+					text += '<br><b>More information:</b><br>' + row['text']
+				break
+
+		dic = {'text': text}
+		return jsonify(dic)
 		
 	@app.route('/progress')
 	def progress():
 		return render_template('progress.html')
+	
+	@app.route('/progress2')
+	def progress2():
+		return render_template('progress2.html')
 
 '''
 This will be called if you run this from command line

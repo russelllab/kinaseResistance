@@ -19,6 +19,7 @@ from cls import Kinase, Mutation
 import argparse
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
+MUT_TYPES = ['A', 'D', 'R']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 WS = 5
 
@@ -67,7 +68,8 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     row += [aa+'_MUT' for aa in AA]
     row += ['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']
     for position in range(startWS, endWS+1):
-        row += [mut_type+'_'+str(position) for mut_type in ['A', 'D', 'R']]
+        row += [mut_type+'_'+str(position) for mut_type in MUT_TYPES]
+        row += [mut_type+'_'+str(position)+'_pfam' for mut_type in MUT_TYPES]
     data.append(row)
 
     # Open the input file and convert its contents into an array
@@ -155,6 +157,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     
     # convert the 2D array into dataframe
     df = pd.DataFrame(data[1:], columns=data[0])
+    print (df[['Input', 'A_0', 'D_0', 'R_0']])
 
     # if no values in data (besides the header)
     # then just end it here and return the dic results
@@ -202,6 +205,15 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             if int(ptmTypeCell) != 0:
                 ptmType = ptm_type_header.split('_')[0]
                 break
+        mutType = []
+        for mut_type_header in [mut_type+'_0' for mut_type in MUT_TYPES]:
+            mutTypeCell = df[df['Input']==name][mut_type_header].values[0]
+            if int(mutTypeCell) != 0:
+                # mutType = mut_type_header.split('_')[0]
+                mutType.append(mut_type_header.split('_')[0])
+                # break
+        if len(mutType) == 0: mutType = '-'
+        else: mutType = ''.join(mutType)
         results['predictions'][name] = {
                         'acc':acc,
                         'gene':gene,
@@ -209,7 +221,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                         'prediction':prediction_prob,
                         'hmmPos':row[5],
                         'ptmType':ptmType,
-                        'mutType':ptmType,
+                        'mutType':mutType,
                         }
     # print (results)
     if outputFile != None: open(outputFile, 'w').write(outputText)
