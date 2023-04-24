@@ -412,7 +412,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
         else:
             x = 50
             y += 20
-    viewboxwidth = (viewboxcounter+140)
+    viewboxwidth = (viewboxcounter+200)
     viewboxheight = len(roworder)*20+100
     dwg.viewbox(-70, 0,viewboxwidth,viewboxheight)
 
@@ -422,23 +422,27 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
     x = 50
     y = 0
 
-    maxfinder = []
+    maxfinder = {}
     for xval in heatmapper:
         for category in colors:
             if category not in heatmapper[xval]:
                 heatmapper[xval][category]=0
         for categ in heatmapper[xval]:
-            maxfinder.append(int(heatmapper[xval][categ]))
+            if categ not in maxfinder:
+                maxfinder[categ]=[int(heatmapper[xval][categ])]
+            else:
+                maxfinder[categ].append(int(heatmapper[xval][categ]))
     for allxval in all_x_vals:
        if allxval not in heatmapper:
            heatmapper[allxval]={}
            for category in colors:
                if category not in heatmapper[allxval]:		
                    heatmapper[allxval][category]=0.0
-    heatmap_maximum = max(maxfinder)
+
     mapx = 40
     mapy = 60
     for category in colors:
+        heatmap_maximum = max(maxfinder[category])
         dwg.add(dwg.text(category, insert=(40, mapy+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
         for xval in heatmapper:
 	    #print xval, "\t", mapy
@@ -460,7 +464,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
         dwg.add(dwg.text(category, insert=(x, y+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
         x += 60
 
-    dwg.add(dwg.text("", insert=(-20, -20), id='tooltip'))
+
     dwg.save()
 
     styletext = """<style>
@@ -492,7 +496,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
         cy = highlightsaver[hlid][1]
         txt = highlightsaver[hlid][2]
         circletext = circletext+"""<g xmlns="http://www.w3.org/2000/svg">
-          <circle xmlns="http://www.w3.org/2000/svg" cx='"""+str(cx)+"""' cy='"""+str(cy)+"""' r="10" style="fill:transparent;stroke:transparent;stroke-width:0.5;fill-opacity:0.25;stroke-opacity:0.25"/>      
+          <circle xmlns="http://www.w3.org/2000/svg" cx='"""+str(cx)+"""' cy='"""+str(cy)+"""' r="7" style="fill:transparent;stroke:transparent;stroke-width:0.5;fill-opacity:0.25;stroke-opacity:0.25"/>      
           <rect class="hiss" x='"""+str(cx)+"""' y='"""+str(cy-32)+"""' height='20' width='"""+str(len(txt)*10)+"""'></rect>
           <text class="moo" x='"""+str(cx)+"""' y='"""+str(cy-20)+"""'>"""+txt+"""</text>
           </g>"""
@@ -503,7 +507,6 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
     writeFile = open(filename, "w")
     writeFile.write(data)
 
-    ### https://stackoverflow.com/questions/31057699/mouseover-on-svg-circles
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 alignmentfile = sys.argv[5]	#### change this to the location of the alignmentfile.
 ###
