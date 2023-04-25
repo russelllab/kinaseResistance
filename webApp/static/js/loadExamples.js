@@ -10,7 +10,7 @@ window.onload = function() {
     var xhr = new XMLHttpRequest();
 
     // Set the URL of the text file
-    var url = "/static/sample.txt";
+    var url = "/static/examples/example1.txt";
 
     // Open the request
     xhr.open("GET", url);
@@ -33,11 +33,27 @@ window.onload = function() {
     xhr.send();
     
     // Set the text area's value to the default text
-    textarea.value = defaultText;
+    // textarea.value = defaultText;
 };
 
 function call_onclick() {
     document.getElementById("formArea").style.display = "none";
     document.getElementById("slider-text").style.display = "block";
     document.getElementById("slider-box").style.display = "block";
+}
+
+function load_example(num) {
+    var textarea = document.getElementById("inputMut");
+    var xhr = new XMLHttpRequest();
+    var url = "/static/examples/example" + num + '.txt';
+    xhr.open("GET", url);
+    xhr.responseType = "text";
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            textarea.value = xhr.responseText;
+        } else {
+            console.log("Error loading text file");
+        }
+    };
+    xhr.send();
 }

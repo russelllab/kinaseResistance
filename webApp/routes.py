@@ -432,7 +432,7 @@ def configureRoutes(app):
 		# print (dic_mutations_info)
 		# print (row['acc'], mutation_position)
 		filename = create_svg_20230421_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
-				 row['acc'], mutation_position, 30, 10, dic_mutations_info, \
+				 row['acc'], mutation_position, 30000, 10, dic_mutations_info, \
 					path = 'static/predictor/output/'+uniqID+'/')
 
 		dic = {'filepath': 'static/predictor/output/'+uniqID+'/'+filename}

@@ -15,13 +15,14 @@
             
                         </textarea>
         <div style="display: inline; padding-top: 10px;">
-		    <input style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">
+		    <!-- <input style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit"/> -->
+            <button id="exampleDefault" style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">Submit</button>
         </div>
         <div style="display: inline; padding-top: 10px;">
-            <button>Example 1</button>
-            <button>Example 2</button>
+            <button type="button" id="example1" onclick="load_example(1)">Example 1</button>
+            <button type="button" id="example2" onclick="load_example(2)">Example 2</button>
         </div>
-	</form>
+    </form>
     </div>
 	<h2 class="slider-text" id="slider-text">Hang tight while we run your query..</h2>
 		<div class="slider-box" id="slider-box">		
