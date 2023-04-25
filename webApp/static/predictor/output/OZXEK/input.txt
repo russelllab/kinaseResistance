@@ -1,0 +1,23 @@
+# Deactivating mutation in CDK6 
+Q00534/T49s
+
+# Resistant mutation in BRAF
+BRAF/V600E
+
+# Mutations in CHEK2
+CHEK2/K373e
+CHEK2/T68A
+
+# Mutations in MAP2K3
+MAP2K3/A84T
+MAP2K3/T222M
+
+# Mutations in MAP2K1
+MAP2K1/K97A
+MAP2K1/V211D
+
+# Mutations in PIM1
+PIM1/T23I
+PIM1/S97N
+PIM1/Q127E
+			

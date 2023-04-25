@@ -8,6 +8,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="{{url_for('static', filename='/js/showSummary.js')}}"></script>
 	<script src="{{url_for('static', filename='/js/showChart.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/showAlignment.js')}}"></script>
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<script>
 		d3version3 = d3;
@@ -56,13 +57,15 @@
 				<div class="row" style="outline:none !important;">
 					<div class="card">
 						<div class="card-body">
-							<div id='summaryCard' class=".border-0" style="overflow: scroll;  max-width: 100%; outline: none !important; ">
-								<!-- PTM objekt will be drawn inside this DIV -->
+							<div id='summaryCard' class=".border-0" style="overflow: scroll;  width: 50%; outline: none !important; float: left;">
+								<!-- Summary objekt will be drawn inside this DIV -->
+							</div>
+							<div id='predictionChart' class=".border-0" style="overflow: scroll; float: left;  width: 50%; outline: none !important; ">
+								<!-- prediction objekt will be drawn inside this DIV -->
 							</div>
 							<script>
-								// showPTM({{uniqID|safe}}, {{protein|safe}}, {{mutation|safe}});
 								showSummary({{uniqID|safe}}, {{kinase|safe}}, {{mutation|safe}}, {{results|safe}});
-								// alert ({{uniqID|safe}});
+								showChart({{uniqID|safe}}, {{kinase|safe}}, {{mutation|safe}}, {{results|safe}});
 							</script>
 						</div>
 					</div>
@@ -71,19 +74,20 @@
 		</div>
 
 		<div style="padding-top: 25px; padding-bottom: 25px;">
-			<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse-prediction">
-				Predictions
+			<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse-alignment">
+				Alignment
 			</button>
-			<div id="collapse-prediction" class="collapse show" style="padding-top: 25px;">
+			<div id="collapse-alignment" class="collapse show" style="padding-top: 25px;">
 				<div class="row" style="outline:none !important;">
 					<div class="card">
 						<div class="card-body">
-							<div id='predictionChart' class=".border-0" style="overflow: scroll;  max-width: 100%; height: 500px; outline: none !important; ">
-								<!-- PTM objekt will be drawn inside this DIV -->
+							<div id='alignmentCard' class=".border-0" style="overflow: scroll;  max-width: 100%; outline: none !important; ">
+								<!-- Img objekt will be drawn inside this DIV -->
+								<img id="aliView" style="height: 5000; width: 5000px;" alt="My Happy SVG"/>
 							</div>
 							<script>
 								// showPTM({{uniqID|safe}}, {{protein|safe}}, {{mutation|safe}});
-								showChart({{uniqID|safe}}, {{kinase|safe}}, {{mutation|safe}}, {{results|safe}});
+								showAlignment({{uniqID|safe}}, {{kinase|safe}}, {{mutation|safe}}, {{results|safe}});
 								// alert ({{uniqID|safe}});
 							</script>
 						</div>

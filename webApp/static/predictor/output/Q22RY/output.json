@@ -1,0 +1,1 @@
+{"data": [{"name": "BRAF/V600E", "mutation": "V600E", "acc": "P15056", "view": "<a href=\"http://127.0.0.1:5000/result?uniqID=Q22RY&kinase=BRAF&mutation=V600E\" target=\"_blank\">View</a>", "gene": "BRAF", "ptmType": "-", "mutType": "-", "prediction": 0.789, "hmmPos": "194"}]}

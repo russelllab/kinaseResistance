@@ -1,0 +1,1 @@
+{"data": [{"mutation": "S218E", "acc": "P46734", "view": "<a href=\"http://127.0.0.1:5000/result?uniqID=CG1FA&kinase=P46734&mutation=S218E\" target=\"_blank\">View</a>", "gene": "MAP2K3", "ptmType": "p", "mutType": "A", "prediction": 0.856, "hmmPos": 198}]}

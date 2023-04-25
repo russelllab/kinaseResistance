@@ -1,0 +1,2 @@
+# Deactivating mutation in CDK6 
+Q00534/T49A

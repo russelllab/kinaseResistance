@@ -1,0 +1,1 @@
+{"entries_not_found": {}, "predictions": {"Q00534/T49A": {"acc": "Q00534", "gene": "CDK6", "mutation": "T49A", "prediction": 0.451, "hmmPos": "65", "ptmType": "p", "mutType": "p"}, "BRAF/V600E": {"acc": "P15056", "gene": "BRAF", "mutation": "V600E", "prediction": 0.789, "hmmPos": "194", "ptmType": "-", "mutType": "-"}}}

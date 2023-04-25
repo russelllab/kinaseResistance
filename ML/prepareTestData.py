@@ -157,7 +157,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     
     # convert the 2D array into dataframe
     df = pd.DataFrame(data[1:], columns=data[0])
-    print (df[['Input', 'A_0', 'D_0', 'R_0']])
+    # print (df[['Input', 'A_0', 'D_0', 'R_0']])
 
     # if no values in data (besides the header)
     # then just end it here and return the dic results
@@ -246,6 +246,7 @@ if __name__ == '__main__':
 
     results_json = predict(inputFile, outputFile)
     if len(results_json['entries_not_found']) > 0:
-        print ('The following input(s) were ignored:')
+        if len(results_json['entries_not_found']) == 1: print ('The following input was ignored:')
+        else: print ('The following inputs were ignored:')
         for name in results_json['entries_not_found']:
             print (name+':', results_json['entries_not_found'][name])

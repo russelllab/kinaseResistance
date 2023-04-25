@@ -1,0 +1,1 @@
+{"entries_not_found": {}, "predictions": {"BRAF/V600E": {"acc": "P15056", "gene": "BRAF", "mutation": "V600E", "prediction": 0.789, "hmmPos": "194", "ptmType": "-", "mutType": "-"}}}

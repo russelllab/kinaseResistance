@@ -33,6 +33,9 @@ else:
 sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 
+sys.path.insert(1, BASE_DIR+'/Create_SVG/Vlatest/')
+import create_svg_20230421_kinases_GS
+
 def connection():
     '''Function to connect to postgresql database'''
     mydb = psycopg2.connect(
@@ -374,6 +377,66 @@ def configureRoutes(app):
 
 		dic = {'text': text}
 		return jsonify(dic)
+	
+	@app.route('/AJAXAlignment', methods=['GET', 'POST'])
+	def get_Alignment(**kwargs):
+		'''
+		A function to take uniqID, kinase and mutation as input
+		and return summary as dic
+		'''
+		if request.method == 'POST':
+			data = request.get_json(force=True)
+			uniqID = data['uniqID']
+			kinase = data['kinase']
+			mutation = data['mutation']
+			results = data['results']
+		else:
+			kinase = kwargs['kinase']
+			mutation = kwargs['mutation']
+
+		with open('static/predictor/output/'+uniqID+'/output.json', 'r') as f:
+			output = json.load(f)
+		
+		accs_in_alignment = {}
+		for line in open('static/hmm/humanKinasesTrimmed.clustal', 'r'):
+			if line.startswith('sp'):
+				accs_in_alignment[line.split('|')[1]] = line.split()[0]
+
+		mycursor = connection()
+
+		text = ''
+		for row in output['data']:
+			if row['name'] != kinase+'/'+mutation: continue			
+			mutation_position = int(row['mutation'][1:-1])
+			mycursor.execute("SELECT wtpos, mut_type, acc FROM mutations")
+			hits = mycursor.fetchall()
+			dic_mutations_info = {}
+			for hit in hits:
+				position, mutType, acc = hit
+				if acc not in dic_mutations_info:
+					dic_mutations_info[acc] = {'A':[], 'D':[], 'R':[]}
+				if mutType == 'N': continue
+				if acc not in accs_in_alignment: continue
+				name = accs_in_alignment[acc]
+				start = int(name.split('|')[-1])
+				# start, end = name.split('|')[-1].split('-')
+				# if start == 'start': start = 1
+				# else: start = int(start)
+				# if end == 'end': end = 10000
+				# else: end = int(end)
+				# if int(position) >= start and int(position) <= end:
+				if int(position) >= start:
+					dic_mutations_info[acc][mutType].append(str(position))
+			break
+		
+		# print (dic_mutations_info)
+		# print (row['acc'], mutation_position)
+		filename = create_svg_20230421_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
+				 row['acc'], mutation_position, 30, 10, dic_mutations_info, \
+					path = 'static/predictor/output/'+uniqID+'/')
+
+		dic = {'filepath': 'static/predictor/output/'+uniqID+'/'+filename}
+		return jsonify(dic)
 		
 	@app.route('/progress')
 	def progress():
@@ -382,6 +445,10 @@ def configureRoutes(app):
 	@app.route('/progress2')
 	def progress2():
 		return render_template('progress2.html')
+	
+	@app.route('/svg')
+	def svg():
+		return render_template('svg.html')
 
 '''
 This will be called if you run this from command line
