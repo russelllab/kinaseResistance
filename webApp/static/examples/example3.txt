@@ -1,0 +1,11 @@
+# Mutations in CDK6 
+CDK6/T49A
+CDK6/T48A
+
+# Mutations in BRAF
+BRAF/V600E
+BRAF/V6000E
+
+# Mutations in CHEK2
+CHEK2/K373E
+CHEEK2/K373E
