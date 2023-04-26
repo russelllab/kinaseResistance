@@ -591,6 +591,11 @@ def main(alignmentfile, protein_of_interest, position_of_interest, window, topgu
 				coloringcategories.append(v)
 			colors[v]=positioncolors[counter]
 			counter+=1
+	for seqident in sequences:
+		if seqident not in positions:
+			positions[seqident]={}
+			for colcateg in colors:
+				positions[seqident][colcateg]=[]
 
 	featurecolors = ["firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink"]
 	###
