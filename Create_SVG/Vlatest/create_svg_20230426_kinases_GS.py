@@ -298,8 +298,10 @@ def create_svg(sequences, positions, colordict, coloringcategories, featurecolor
             dwg.add(dwg.rect((x-90, y), (80, 14), fill="yellow"))
             if len(drawname) < 8:
                 dwg.add(dwg.text(drawname, insert = (x-60,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+                dwg.add(dwg.text(drawname, insert = (x-60,45), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
             else:
                 dwg.add(dwg.text(drawname, insert = (x-60,y+7), text_anchor='middle', dominant_baseline='central', font_size='7px', font_family='Arial', font_weight='bold', fill='black'))
+                dwg.add(dwg.text(drawname, insert = (x-60,45), text_anchor='middle', dominant_baseline='central', font_size='7px', font_family='Arial', font_weight='bold', fill='black'))
         else:
              if len(drawname) < 8:
                  dwg.add(dwg.text(drawname, insert = (x-60,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
@@ -480,7 +482,10 @@ def create_svg(sequences, positions, colordict, coloringcategories, featurecolor
     mapx = 40
     mapy = 60
     for category in colordict:
-        heatmap_maximum = max(maxfinder[category])
+        try:
+            heatmap_maximum = max(maxfinder[category])
+        except:
+            heatmap_maximum = 1
         dwg.add(dwg.text(category, insert=(40, mapy+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
         for xval in heatmapper:
 	    #print xval, "\t", mapy
@@ -592,6 +597,11 @@ def main(alignmentfile, protein_of_interest, position_of_interest, window, topgu
 				coloringcategories.append(v)
 			colors[v]=positioncolors[counter]
 			counter+=1
+	for seqident in sequences:
+		if seqident not in positions:
+			positions[seqident]={}
+			for colcateg in colors:
+				positions[seqident][colcateg]=[]
 
 	featurecolors = ["firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink"]
 	###
