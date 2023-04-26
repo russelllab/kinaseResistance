@@ -31,6 +31,7 @@ RANDOM_STATE = 0
 ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10
+N_JOBS = -1
 
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
@@ -56,16 +57,16 @@ columns_to_exclude = [
                     'Dataset',
                     'hmmPos',
                     'hmmSS',
-                    'ChargesWT',
-                    'ChargesMUT',
-                    'ChargesDiff',
+                    # 'ChargesWT',
+                    # 'ChargesMUT',
+                    # 'ChargesDiff',
                     #   'A_known',
                     #   'D_known',
                     #   'R_known',
                     #   'Phosphomimic',
                     #   'hmmScoreWT',
                     #   'hmmScoreMUT',
-                      'hmmScoreDiff'
+                    #   'hmmScoreDiff'
                       ]
 '''
 for aa in AA:
@@ -78,26 +79,26 @@ for aa in AA:
 ############
 pfam_ptm_cols = ['ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    # if i in [0]: continue
+    if i in [-1, 0, 1]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
 pfam_ptm_cols = ['p_pfam']
 for i in range(-5,6):
-    if i in [0]: continue
+    if i in [-1, 0, 1]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 ############
 
 ptm_cols = ['ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
 for i in range(-5,6):
-    if i in [-2, -1, 0, 1, 2]: continue
+    if i in [-1, 0, 1]: continue
     for col in ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
 ptm_cols = ['p']
 for i in range(-5,6):
-    if i in [-2, -1, 0, 1, 2]: continue
+    if i in [-1, 0, 1]: continue
     for col in ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
@@ -105,9 +106,17 @@ for i in range(-5,6):
 
 adr_cols = ['A', 'D', 'R']
 for i in range(-5, 6):
-    if i in [-1, 0, 1]: continue
+    if i in [-1, 1]: continue
     for col in adr_cols:
         columns_to_exclude.append(col+'_'+str(i))
+
+############
+
+adr_cols = ['A_pfam', 'D_pfam', 'R_pfam']
+for i in range(-5, 6):
+    if i in [-1, 1]: continue
+    for col in adr_cols:
+        columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 
@@ -119,7 +128,7 @@ df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 print ('columns to consider', df.columns.to_numpy())
 columns_to_consider = '\n'.join(df.columns.to_numpy())
 # print (columns_to_consider)
-open('columns_to_consider.txt', 'w').write(columns_to_consider)
+# open('columns_to_consider.txt', 'w').write(columns_to_consider)
 
 feature_names = df.columns.to_numpy()
 feature_names = feature_names[3:-1]
@@ -133,12 +142,12 @@ X_test = []
 y_test = []
 test_names = []
 for row in df.to_numpy():
-    if row[-1] in ['A']:
+    if row[-1] in ['A', 'D']:
         y.append(1)
         y_names.append(row[-1])
         X.append(row[3:-1])
         train_names.append('/'.join(row[:3]))
-    elif row[-1] in ['D']:
+    elif row[-1] in ['N']:
         y.append(0)
         y_names.append(row[-1])
         X.append(row[3:-1])
@@ -166,7 +175,7 @@ scaler = MinMaxScaler()
 scaler.fit(X)
 X = scaler.transform(X)
 X_test = scaler.transform(X_test)
-pickle.dump(scaler, open('finalized_scaler.pkl', 'wb'))
+# pickle.dump(scaler, open('finalized_scaler.pkl', 'wb'))
 
 y = np.array(y)
 
@@ -211,7 +220,7 @@ if ALGO == 'LR':
                 'max_iter': [100, 250, 500]
                 }
     model = LogisticRegression(class_weight='balanced')
-    model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
+    model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc', n_jobs=N_JOBS)
     model.fit(X, y)
     clf = LogisticRegression(
                         class_weight='balanced',
@@ -234,7 +243,7 @@ elif ALGO == 'XGB':
                     random_state=RANDOM_STATE,
                     scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0)
                     )
-    model = GridSearchCV(xgb_model, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
+    model = GridSearchCV(xgb_model, parameters, cv=rskf, scoring='roc_auc', n_jobs=N_JOBS)
     model.fit(X, y)
     clf = xgb.XGBClassifier(
             # n_estimators=model.best_params_['n_estimators'],
@@ -249,14 +258,21 @@ elif ALGO == 'XGB':
             )
 elif ALGO == 'RF':
     parameters = {
-                'max_depth': [None],
-                'min_samples_split': [2],
-                'min_samples_leaf': [3],
+                'max_depth': [2, 3],
+                'min_samples_split': [2,3],
+                'min_samples_leaf': [2,3],
                 'max_features': ['sqrt', 'log2'],
                 'n_estimators': [200]
                 }
-    rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1)
-    model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc', n_jobs=-1)
+    # parameters = {
+    #             'max_depth': [2,4,5,7,10],
+    #             'min_samples_split': [2,3,4,5],
+    #             'min_samples_leaf': [2,4,5],
+    #             'max_features': ['sqrt', 'log2'],
+    #             'n_estimators': [100, 200, 500]
+    #             }
+    rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS)
+    model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc', n_jobs=N_JOBS)
     model.fit(X, y)
     clf = RandomForestClassifier(
             n_estimators=model.best_params_['n_estimators'],
@@ -264,7 +280,7 @@ elif ALGO == 'RF':
             min_samples_split=model.best_params_['min_samples_split'],
             max_depth=model.best_params_['max_depth'],
             max_features=model.best_params_['max_features'],
-            random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
+            random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
             )
 
 breakLine = '#'.join(['-' for i in range(0, 50)])
@@ -272,7 +288,7 @@ print (breakLine)
 ## Best model hyper-parameters
 print ('Best model found during the CV')
 print (model.best_params_)
-
+'''
 tprs = []
 aucs = []
 mean_fpr = np.linspace(0, 1, 100)
@@ -313,7 +329,7 @@ for i in range(0,10):
                 max_depth=model.best_params_['max_depth'],
                 min_samples_split=model.best_params_['min_samples_split'],
                 max_features=model.best_params_['max_features'],
-                random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
+                random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
                 )
         clf.fit(X_train, y_train)
         tn, fp, fn, tp = confusion_matrix(y_train, model.predict(X_train)).ravel()
@@ -396,7 +412,7 @@ print ('AVG', round(np.mean(AUC),2),round(np.mean(MCC),2),round(np.mean(F1),2),r
 print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
 print ('Number of act mutations in the train set:', np.count_nonzero(y))
 print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
-
+'''
 ## Fit the best model on the data
 if ALGO == 'LR':
     clf = LogisticRegression(
@@ -423,7 +439,7 @@ elif ALGO == 'RF':
                 min_samples_leaf=model.best_params_['min_samples_leaf'],
                 max_depth=model.best_params_['max_depth'],
                 max_features=model.best_params_['max_features'],
-                random_state=RANDOM_STATE, class_weight="balanced", n_jobs=-1
+                random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
                 )
 clf.fit(X,y)
 if ALGO == 'RF':
@@ -457,8 +473,8 @@ if ALGO == 'RF':
     # plt.savefig('feature_imp.png')
     # plt.show()
 
-filename = 'finalized_model.sav'
-pickle.dump(clf, open(filename, 'wb'))
+# filename = 'finalized_model.sav'
+# pickle.dump(clf, open(filename, 'wb'))
 
 test_types = ['AR', 'R', 'Activating', 'TBD', 'Inconclusive']
 for test_type in test_types:

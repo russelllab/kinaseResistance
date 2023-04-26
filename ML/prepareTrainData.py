@@ -8,13 +8,9 @@ import os, sys, gzip
 # import seaborn as sns
 # import pandas as pd
 from tqdm import tqdm
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras import layers
 import matplotlib.pyplot as plt
 from sklearn import decomposition
 from sklearn.preprocessing import MinMaxScaler
-tf.random.set_seed(69)
 from cls import Kinase, Mutation
 import fetchData
 
@@ -35,9 +31,9 @@ kinases = {}
 mydb = fetchData.connection()
 mydb.autocommit = True
 mycursor = mydb.cursor()
-mycursor.execute("select fasta from kinases where acc=%s", ('P06493',))
-fasta = mycursor.fetchone()[0]
-print (fasta)
+# mycursor.execute("select fasta from kinases where acc=%s", ('P06493',))
+# fasta = mycursor.fetchone()[0]
+# print (fasta)
 # sys.exit()
 
 # fetchData.fetchFasta(kinases, Kinase)
@@ -355,6 +351,7 @@ trainMat += '_MUT\t'.join(AA) + '_MUT\t'
 trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
 for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'\t').join(['A', 'D', 'R']) + '_'+str(position)+'\t'
+    trainMat += ('_'+str(position)+'_pfam\t').join(['A', 'D', 'R']) + '_' + str(position) + '_pfam\t'
 # trainMat += '_known\t'.join(['A', 'D', 'R']) + '_known\t'
 trainMat += 'MUT_TYPE\n'
 # print (trainMat)
