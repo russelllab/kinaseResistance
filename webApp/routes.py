@@ -176,10 +176,10 @@ def configureRoutes(app):
 		if isinstance(results, float):
 			return app.response_class(results, mimetype='text/plain')
 
-		if len(results['predictions']) == 0:
-			return render_template('error1.html',
-								flaggedInput=json.dumps(kinase+'/'+mutation)
-								)
+		# if len(results['predictions']) == 0:
+		# 	return render_template('error1.html',
+		# 						# flaggedInput=json.dumps(kinase+'/'+mutation)
+		# 						)
 		
 		ignored = []
 		entries_not_found = results['entries_not_found']
@@ -206,6 +206,14 @@ def configureRoutes(app):
 		# Save the ignored entries to a json file to be used by datatables
 		with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/ignored.json', 'w') as f:
 			json.dump(ignored, f)
+		if len(results['predictions']) == 0:
+			text = 'Unfortunately, none of the mutations you submitted were found in the database.<br>Please check the input and try again.'
+			return render_template('ignored2.html',
+								uniqID=json.dumps(uniqID),
+								text=json.dumps(text),
+								# output=json.dumps(output),
+								# error=json.dumps(len(results['entries_not_found']))
+								)
 
 		# Save the output to a json file to be used by datatables
 		with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/output.json', 'w') as f:
@@ -294,8 +302,16 @@ def configureRoutes(app):
 			# 							flaggedInput=json.dumps(kinase+'/'+mutation)
 			# 							)
 			# else:
+			with open('static/predictor/output/'+uniqID+'/ignored.json', 'r') as f:
+				ignored = json.load(f)
+			
+			if len(ignored['data']) == 1:
+				text = 'Unfortunately, the following mutation you submitted was not found in the database.<br>Please check the input and try again.'
+			else:
+				text = 'Unfortunately, the following mutations you submitted were not found in the database.<br>Please check the input and try again.'
 			return render_template('ignored2.html',
 									uniqID=json.dumps(uniqID),
+									text=json.dumps(text),
 									# kinase=json.dumps(kinase),
 									# mutation=json.dumps(mutation),
 									# results=results

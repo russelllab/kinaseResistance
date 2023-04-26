@@ -97,7 +97,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         # that the input kinase was not found in
         # the DB
         if acc is None:
-            entries_not_found[name] = 'Cound not find ' + kinase + ' in the database'
+            entries_not_found[name] = 'Protein identifier ' + kinase + ' not found'
             continue
 
         # Run some other checks:

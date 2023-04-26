@@ -27,7 +27,7 @@
 		</div>
 		
 		<div class="row">
-			<h3 class="headingFont">Following input(s) were ignored</h3>
+			<h3 class="headingFont" id="headingText">{{text}}</h3>
 			<table id="ignoredTable" class="display" style="width:100%">
 				<thead>
 					<tr>
@@ -45,6 +45,9 @@
 				</tfoot>
 			</table>
 		</div>
+		<script>
+			document.getElementById("headingText").innerHTML = {{text|safe}};
+		</script>
 	</div>
     <script>
 		defineIgnoredDataTable("ignoredTable", {{uniqID|safe}});
