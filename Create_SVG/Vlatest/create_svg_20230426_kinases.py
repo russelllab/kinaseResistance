@@ -192,7 +192,7 @@ clustaltypes = {"hydrophobic":"blue",
 		"proline":"orange",
 		"aromatic":"cyan"}
 # ---------------------------------------------------------------------------------------------------------------------------------------------
-def create_svg(sequences_dict, positions, colordict, startposition, windowsize, poi, forbidden, proteinfeatures, wheretobegin, topguns):
+def create_svg(sequences_dict, positions, colordict, coloringcategories, featurecolors, startposition, windowsize, poi, forbidden, proteinfeatures, wheretobegin, topguns, path=''):
     heatmapper = {}
     startposition_checker = startposition	
     #### do this when havng constructed the dictionary with interesting positions
@@ -264,7 +264,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
     roworder = SHOWORDER(sequences_dict, positions, distance_start, distance_end, poi, wheretobegin)
     if topguns != 30000:
         roworder = roworder[0:topguns+1]
-    Konserve, forbidden 	= conservation_checker(poi ,sequences, trackstart, positions, roworder)
+    Konserve, forbidden 	= conservation_checker(poi ,sequences_dict, wheretobegin, positions, roworder)
     maximumdistance = distance_end - distance_start
     viewboxcounter = 1
     all_x_vals = []
@@ -462,7 +462,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
 
     maxfinder = {}
     for xval in heatmapper:
-        for category in colors:
+        for category in colordict:
             if category not in heatmapper[xval]:
                 heatmapper[xval][category]=0
         for categ in heatmapper[xval]:
@@ -473,13 +473,13 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
     for allxval in all_x_vals:
        if allxval not in heatmapper:
            heatmapper[allxval]={}
-           for category in colors:
+           for category in colordict:
                if category not in heatmapper[allxval]:		
                    heatmapper[allxval][category]=0.0
 
     mapx = 40
     mapy = 60
-    for category in colors:
+    for category in colordict:
         heatmap_maximum = max(maxfinder[category])
         dwg.add(dwg.text(category, insert=(40, mapy+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
         for xval in heatmapper:
@@ -488,7 +488,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
             if float(opac) == 0.0:
                 dwg.add(dwg.rect((xval, mapy), (10, 10), fill="lightblue", opacity = 0.15 ))
             else:
-                dwg.add(dwg.rect((xval, mapy), (10, 10), fill=colors[category], opacity = opac ))
+                dwg.add(dwg.rect((xval, mapy), (10, 10), fill=colordict[category], opacity = opac ))
             if mapy == 60:
                 pass		#### I need to get all necessary xvals first, dammit
         dwg.add(dwg.rect((50, mapy), (lastx-mapx-10, 10),fill="none",stroke="black",stroke_width=0.5))	### <<<<
@@ -497,8 +497,8 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
         dwg.add(dwg.rect((i, 60), (10, 30),fill="none",stroke="black",stroke_width=0.5))
     x = 50
     y = 0
-    for category in colors:
-        dwg.add(dwg.rect((x-30, y), (60, 10), fill=colors[category]))
+    for category in colordict:
+        dwg.add(dwg.rect((x-30, y), (60, 10), fill=colordict[category]))
         dwg.add(dwg.text(category, insert=(x, y+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
         x += 60
 
@@ -555,60 +555,71 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
     writeFile.close()
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
-alignmentfile = sys.argv[5]	#### change this to the location of the alignmentfile.
-###
-sequences, trackstart 	= CUSTOM_ALIGN(alignmentfile)
-protein_of_interest = sys.argv[1]
-try:
-	position_of_interest = int(sys.argv[2])
-except:
-	position_of_interest = str(sys.argv[2])
-window = int(sys.argv[3])
-topguns = int(sys.argv[4])
+def main(alignmentfile, protein_of_interest, position_of_interest, window, topguns, positions, path=''):
+	# print (positions['Q9NYV4'])
+	# sys.exit()
+	sequences, trackstart 	= CUSTOM_ALIGN(alignmentfile)
+	Konserve = {}
+	TheForbiddenPositions = []
+	#Konserve, TheForbiddenPositions 	= conservation_checker(protein_of_interest,sequences, trackstart, positions)
 
-if position_of_interest == "none":
-	window = 30000
+	### note: This is the real CONNECTORalpha dictionary I could fetch from uniprot on 31.01.2023
 
-with open(sys.argv[6]) as f:
-    data_align = f.read()
-positions = ast.literal_eval(data_align)
-Konserve = {}
-TheForbiddenPositions = []
+	feature_dict = {}
+	try:
+		with open(sys.argv[7]) as ff:
+			data_feat = ff.read()
+		feature_dict = ast.literal_eval(data_feat)
+		for k in feature_dict:
+			start 	= feature_dict[k][0]
+			end	= feature_dict[k][1]
+			for i in range(start, end+1):
+				if i not in feature_dict[k]:
+					feature_dict[k].append(i)
+	except:
+		pass
+	### to define the annotation colors we want to use
 
-try:
-	with open(sys.argv[7]) as ff:
-  		data_feat = ff.read()
-	feature_dict = ast.literal_eval(data_feat)
-	for k in feature_dict:
-		start 	= feature_dict[k][0]
-		end	= feature_dict[k][1]
-		for i in range(start, end+1):
-			if i not in feature_dict[k]:
-				feature_dict[k].append(i)
-except:
-	pass
-### to define the annotation colors we want to use
-
-positioncolors = ["lightgreen","salmon","yellow","purple","lightblue"]
-colors = {}
-coloringcategories = []
-for k in positions:
-	counter = 0
-	for v in positions[k]:
-		if v not in colors:
+	positioncolors = ["lightgreen","salmon","yellow","purple","lightblue"]
+	colors = {}
+	coloringcategories = []
+	for k in positions:
+		counter = 0
+		for v in positions[k]:
+			if v in colors: continue
 			if v not in coloringcategories:
 				coloringcategories.append(v)
 			colors[v]=positioncolors[counter]
 			counter+=1
-for identifier in sequences:
-    if identifier not in positions:
-        positions[identifier]={}
-        for catego in colors:
-            positions[identifier][catego]=[]
+	for seqident in sequences:
+		if seqident not in positions:
+			positions[seqident]={}
+			for colcateg in colors:
+				positions[seqident][colcateg]=[]
 
-featurecolors = ["firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink"]
-###
+	featurecolors = ["firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink"]
+	###
 
-create_svg(sequences, positions, colors, position_of_interest, window, protein_of_interest, TheForbiddenPositions, feature_dict, trackstart, topguns)	### def create_svg(sequences_dict, positions, colors, startposition, windowsize, poi):
+	filename = create_svg(sequences, positions, colors, coloringcategories, featurecolors, position_of_interest, window, protein_of_interest, TheForbiddenPositions, feature_dict, trackstart, topguns, path)	### def create_svg(sequences_dict, positions, colors, startposition, windowsize, poi):
+	return filename
 
+if __name__ == "__main__":
+	alignmentfile = sys.argv[5]	#### change this to the location of the alignmentfile.
+	###
+	protein_of_interest = sys.argv[1].replace('=', '|')
+	# print (protein_of_interest)
+	# sys.exit()
+	try:
+		position_of_interest = int(sys.argv[2])
+	except:
+		position_of_interest = str(sys.argv[2])
+	window = int(sys.argv[3])
+	topguns = int(sys.argv[4])
 
+	if position_of_interest == "none":
+		window = 30000
+
+	with open(sys.argv[6]) as f:
+		data_align = f.read()
+	positions = ast.literal_eval(data_align)
+	main(alignmentfile, protein_of_interest, position_of_interest, window, topguns, positions)
