@@ -5,7 +5,7 @@ function openImage(uniqID) {
 	// Get the SVG image URL
 	// const svgImageURL = window.URL.createObjectURL(new Blob([svgImage.outerHTML], {type: "image/svg+xml"}));
 	const svgImageURL = 'static/predictor/output/'+uniqID+'/'+svgImage.name;
-	alert(svgImageURL);
+	// alert(svgImageURL);
 
 	// Open the image in a new tab
 	window.open(svgImageURL, "_blank");

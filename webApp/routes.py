@@ -363,7 +363,7 @@ def configureRoutes(app):
 		for row in output['data']:
 			if row['name'] == kinase+'/'+mutation:
 				text += '<table><tr><td><b>Input:</b></td><td>'+row['name']+'</td></tr>'
-				text += '<table><tr><td><b>Gene:</b></td><td>'+row['gene']+'</td></tr>'
+				text += '<tr><tr><td><b>Gene:</b></td><td>'+row['gene']+'</td></tr>'
 				text += '<tr><td><b>UniProt Acc:</b></td><td>'+'<a href="https://www.uniprot.org/uniprotkb/'+row['acc']+'/entry" target="_blank">'+row['acc']+'</td></tr>'
 				text += '<tr><td><b>Mutations:</b></td><td>'+row['mutation']+'</td></tr></table>'
 				if row['text'] != '':
