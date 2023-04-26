@@ -34,7 +34,7 @@ sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 
 sys.path.insert(1, BASE_DIR+'/Create_SVG/Vlatest/')
-import create_svg_20230421_kinases_GS
+import create_svg_20230426_kinases_GS
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -56,23 +56,24 @@ def makeText(acc, mutation, mycursor):
 	ws = 3
 	if ws > 0: ws -= 1
 	ws = int(ws/2)
-	dic_mutations = {'A': 'activating', 'D': 'deactivating', 'R': 'drug-resistant'}
+	dic_mutations = {'A': 'activating', 'D': 'deactivating', 'R': 'resistance'}
 	dic_ptms = {'p': 'phosphorylation', 'ub': 'ubiquitination', 'ac': 'acetylation', 'me': 'methylation', 'gl': 'glycosylation', 'sm': 'sumoylation', 'm1': 'myristoylation', 'm2': 'palmitoylation', 'm3': 'myristoylation'}
 	text = ''
 	mutation_position = int(mutation[1:-1])
-	for position in range(mutation_position-ws, mutation_position+ws+1):
-		mycursor.execute("SELECT mutation, mut_type FROM mutations \
-						WHERE acc = %s and wtpos = %s", (acc, str(position)))
-		hits = mycursor.fetchall()
-		for entry in hits:
-			text += entry[0] + ' is a known ' + dic_mutations[entry[1]] + ' mutation<br>'
-	
 	for position in range(mutation_position-ws, mutation_position+ws+1):
 		mycursor.execute("SELECT uniprotaa, ptmtype FROM ptms \
 						WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
 		hits = mycursor.fetchall()
 		for entry in hits:
-			text += entry[0] + str(position) + ' is a known ' + dic_ptms[entry[1]] + ' site<br>'
+			text += "<b>"+str(entry[0]) + str(position)+ "</b>" + ' is a known ' + dic_ptms[entry[1]] + ' site<br>'
+	
+	for position in range(mutation_position-ws, mutation_position+ws+1):
+		mycursor.execute("SELECT mutation, mut_type, info FROM mutations \
+						WHERE acc = %s and wtpos = %s", (acc, str(position)))
+		hits = mycursor.fetchall()
+		for entry in hits:
+			text += "<b>" + str(entry[0]) + "</b>" + ' is a known '+dic_mutations[entry[1]]+' mutation.'
+			text += ' Ref: ' + entry[2] + '<br>'
 	
 	return text
 
@@ -139,13 +140,6 @@ def configureRoutes(app):
 	interactorsPath = BASE_DIR + '/analysis/interactors/data/VLatest/'
 	speciesTaxonomyPath = BASE_DIR + '/analysis/tax_lineage_table/'
 	idmappingPath = BASE_DIR + '/webApp/static/data/'
-
-	@app.route('/test')
-	def test():
-		'''
-		Test
-		'''
-		return 'Hello World'
 
 	@app.route('/', methods=['GET', 'POST'])
 	def home():
@@ -369,6 +363,7 @@ def configureRoutes(app):
 		for row in output['data']:
 			if row['name'] == kinase+'/'+mutation:
 				text += '<table><tr><td><b>Input:</b></td><td>'+row['name']+'</td></tr>'
+				text += '<table><tr><td><b>Gene:</b></td><td>'+row['gene']+'</td></tr>'
 				text += '<tr><td><b>UniProt Acc:</b></td><td>'+'<a href="https://www.uniprot.org/uniprotkb/'+row['acc']+'/entry" target="_blank">'+row['acc']+'</td></tr>'
 				text += '<tr><td><b>Mutations:</b></td><td>'+row['mutation']+'</td></tr></table>'
 				if row['text'] != '':
@@ -390,6 +385,8 @@ def configureRoutes(app):
 			kinase = data['kinase']
 			mutation = data['mutation']
 			results = data['results']
+			ws = data['WS']
+			topN = data['topN']
 		else:
 			kinase = kwargs['kinase']
 			mutation = kwargs['mutation']
@@ -431,11 +428,21 @@ def configureRoutes(app):
 		
 		# print (dic_mutations_info)
 		# print (row['acc'], mutation_position)
-		filename = create_svg_20230421_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
-				 row['acc'], mutation_position, 30000, 10, dic_mutations_info, \
-					path = 'static/predictor/output/'+uniqID+'/')
+		try:
+			filename = create_svg_20230426_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
+					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
+						path = 'static/predictor/output/'+uniqID+'/')
+		except Exception as e:
+			print (e)
+			filename = ''
 
-		dic = {'filepath': 'static/predictor/output/'+uniqID+'/'+filename}
+		runStatus = 'success' if filename != '' else 'error'
+		print (runStatus)
+
+		dic = {
+			'filepath': 'static/predictor/output/'+uniqID+'/'+filename,
+	 		'status': runStatus
+			}
 		return jsonify(dic)
 		
 	@app.route('/progress')
@@ -446,9 +453,9 @@ def configureRoutes(app):
 	def progress2():
 		return render_template('progress2.html')
 	
-	@app.route('/svg')
-	def svg():
-		return render_template('svg.html')
+	@app.route('/test')
+	def test():
+		return render_template('test.html')
 
 '''
 This will be called if you run this from command line

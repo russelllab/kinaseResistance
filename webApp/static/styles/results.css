@@ -1,0 +1,36 @@
+input-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .input-container label {
+	font-size: 17px;
+	font-weight: bold;
+	margin-right: 10px;
+  }
+  .input-container button {
+	font-size: 17px;
+	padding: 5px 10px;
+	margin: 0 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+  }
+  .input-container button:hover {
+	background-color: #555;
+  }
+  .input-container input[type=number] {
+	font-size: 17px;
+	width: 60px;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	background-color: #f5f5f5;
+  }

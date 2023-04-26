@@ -1,0 +1,12 @@
+# Activating & Deactivating mutations in MAPK2
+MAPK2/S272A
+MAPK2/S272D
+
+# Deactivating mutations at highly conserved Lysine (K)
+PLK3/K91R
+BRAF/K483S
+ERBB3/K742M
+
+# Deactivating mutations at the DFG motif
+RAF1/D486N
+MAPKAPK2/D207A

@@ -35,7 +35,7 @@ def test_index(client):
     response = client.get('/')
     print (response)
     assert response.status_code == 200
-    assert b'KinaseX' in response.data
+    assert b'KinAct' in response.data
 
 def test_output(client):
     """
@@ -43,8 +43,10 @@ def test_output(client):
     and has BRAF/V600E in the output
     """
     uniqID = makeUniqID()
+    print ('---'+uniqID+'---')
     client = client
     response = client.get('/output/'+uniqID)
+    # print (response.data)
     # print (response.data.decode('utf-8').split('<table')[1])
     assert response.status_code == 200
     assert b'BRAF/V600E' in response.data

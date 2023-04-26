@@ -1,0 +1,20 @@
+# BRAF 600 has V not T
+BRAF/T600E
+
+# BRAF 600 has V
+BRAF/V600E
+
+# BRAF 599 has T
+BRAF/T599E
+
+# EGFR mutaitons
+P00533/V689M
+P00533/E1005R
+P00533/D1006K
+
+# MAP2K3 mutaitons
+P46734/S218E
+P46734/T222E
+
+# FGFR2 mutaitons that is outside the kinase domain
+FGFR2/C278F
