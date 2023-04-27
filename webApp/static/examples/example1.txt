@@ -11,7 +11,7 @@ ERBB3/K742M
 RAF1/D486N
 MAPKAPK2/D207A
 
-# Resistant mutations
+# Resistance mutations
 BRAF/V600E
 EGFR/T790M
 FLT3/F691L
