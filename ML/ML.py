@@ -99,7 +99,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
 
     ptm_cols = ['p']
     for i in range(-5,6):
-        if i in [-1, 0, 1]: continue
+        # if i in [-1, 0, 1]: continue
         for col in ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
@@ -115,7 +115,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
 
     adr_cols = ['A_pfam', 'D_pfam', 'R_pfam']
     for i in range(-5, 6):
-        if i in [-1, 1]: continue
+        if i in [-1, 0, 1]: continue
         for col in adr_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
@@ -296,7 +296,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     ## Best model hyper-parameters
     print ('Best model found during the CV')
     print (model.best_params_)
-
+    '''
     tprs = []
     aucs = []
     mean_fpr = np.linspace(0, 1, 100)
@@ -420,7 +420,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
     print ('Number of act mutations in the train set:', np.count_nonzero(y))
     print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
-
+    '''
     ## Fit the best model on the data
     if ALGO == 'LR':
         clf = LogisticRegression(
@@ -450,6 +450,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
                     random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
                     )
     clf.fit(X,y)
+    '''
     if ALGO == 'RF':
         # print (clf.estimator_.decision_path(X))
         estimator = clf.estimator_
@@ -480,6 +481,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
         plt.grid(True, lw=0.1)
         # plt.savefig('feature_imp.png')
         # plt.show()
+    '''
 
     # filename = 'finalized_model.sav'
     # pickle.dump(clf, open(filename, 'wb'))
