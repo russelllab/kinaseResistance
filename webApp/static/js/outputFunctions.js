@@ -41,13 +41,21 @@ function defineDataTable (tableID, uniqID)
             "createdRow": function( row, data, dataIndex ) {
                             // alert(data.prediction)
                             // color based on score
-                            if ( data.prediction > 0.5 ) {
+                            if ( data.predAD >= 0.5 ) {
                                 // $(row).addClass( 'important' );
-                                // alert(data.prediction);
+                                // alert(data.predAD);
                                 $('td:eq(9)', row).css('background-color', 'Lightgreen');
                             }
-                            else if ( data.prediction < 0.5 ) {
+                            else if ( data.predAD < 0.5 ) {
                                 $('td:eq(9)', row).css('background-color', '#FF6863');
+                            }
+                            if ( data.predRN >= 0.5 ) {
+                                // $(row).addClass( 'important' );
+                                // alert(data.predRN);
+                                $('td:eq(10)', row).css('background-color', '#7CB9E8');
+                            }
+                            else if ( data.predRN < 0.5 ) {
+                                // $('td:eq(10)', row).css('background-color', '#FF6863');
                             }
                         },
             dom: 'Bfrtip',
@@ -69,7 +77,8 @@ function defineDataTable (tableID, uniqID)
                     { data: 'hmmPos' },
                     { data: 'ptmType' },
                     { data: 'mutType' },
-                    { data: 'prediction' }
+                    { data: 'predAD' },
+                    { data: 'predRN' }
                 ]
             });
     

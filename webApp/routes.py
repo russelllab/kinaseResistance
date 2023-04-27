@@ -104,7 +104,8 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['gene'] = results['predictions'][name]['gene']
 		dic['ptmType'] = results['predictions'][name]['ptmType']
 		dic['mutType'] = results['predictions'][name]['mutType']
-		dic['prediction'] = results['predictions'][name]['prediction']
+		dic['predAD'] = results['predictions'][name]['predAD']
+		dic['predRN'] = results['predictions'][name]['predRN']
 		dic['hmmPos'] = results['predictions'][name]['hmmPos']
 		dic['text'] = makeText(dic['acc'], dic['mutation'], mycursor)
 		output.append(dic)
@@ -339,7 +340,7 @@ def configureRoutes(app):
 		
 		dic = {}
 		# print (kinase, mutation)
-		activating_prob = results['predictions'][kinase+'/'+mutation]['prediction']
+		activating_prob = results['predictions'][kinase+'/'+mutation]['predAD']
 		if activating_prob == 'NA':
 			activating_prob = 0.0
 			deactivating_prob = 0.0
@@ -347,10 +348,11 @@ def configureRoutes(app):
 			activating_prob = float(activating_prob)
 			deactivating_prob = 1.0 - activating_prob
 
+		resistance_prob = results['predictions'][kinase+'/'+mutation]['predRN']
 		results['predictions'][kinase+'/'+mutation]['activating'] = activating_prob
 		results['predictions'][kinase+'/'+mutation]['deactivating'] = deactivating_prob
 		results['predictions'][kinase+'/'+mutation]['neutral'] = 0.5
-		results['predictions'][kinase+'/'+mutation]['resistant'] = 0.5
+		results['predictions'][kinase+'/'+mutation]['resistant'] = resistance_prob
 		dic = {'activating': results['predictions'][kinase+'/'+mutation]['activating'],
 				'deactivating': results['predictions'][kinase+'/'+mutation]['deactivating'],
 				'neutral': results['predictions'][kinase+'/'+mutation]['neutral'],

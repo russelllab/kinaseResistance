@@ -58,15 +58,15 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
                         'Dataset',
                         'hmmPos',
                         'hmmSS',
-                        # 'ChargesWT',
-                        # 'ChargesMUT',
+                        'ChargesWT',
+                        'ChargesMUT',
                         # 'ChargesDiff',
                         #   'A_known',
                         #   'D_known',
                         #   'R_known',
                         #   'Phosphomimic',
-                        #   'hmmScoreWT',
-                        #   'hmmScoreMUT',
+                          'hmmScoreWT',
+                          'hmmScoreMUT',
                         #   'hmmScoreDiff'
                         ]
     '''
@@ -115,7 +115,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
 
     adr_cols = ['A_pfam', 'D_pfam', 'R_pfam']
     for i in range(-5, 6):
-        if i in [-1, 0, 1]: continue
+        if i in [-1, 1]: continue
         for col in adr_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
@@ -129,7 +129,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     # print ('columns to consider', df.columns.to_numpy())
     columns_to_consider = '\n'.join(df.columns.to_numpy())
     # print (columns_to_consider)
-    # open('columns_to_consider.txt', 'w').write(columns_to_consider)
+    open('columns_to_consider.txt', 'w').write(columns_to_consider)
 
     feature_names = df.columns.to_numpy()
     feature_names = feature_names[3:-1]
@@ -143,12 +143,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     y_test = []
     test_names = []
     for row in df.to_numpy():
-        if row[-1] in ['A', 'D']:
+        if row[-1] in ['A']:
             y.append(1)
             y_names.append(row[-1])
             X.append(row[3:-1])
             train_names.append('/'.join(row[:3]))
-        elif row[-1] in ['N']:
+        elif row[-1] in ['D']:
             y.append(0)
             y_names.append(row[-1])
             X.append(row[3:-1])
@@ -176,7 +176,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     scaler.fit(X)
     X = scaler.transform(X)
     X_test = scaler.transform(X_test)
-    # pickle.dump(scaler, open('finalized_scaler.pkl', 'wb'))
+    pickle.dump(scaler, open('finalized_scaler_AD.pkl', 'wb'))
 
     y = np.array(y)
 
@@ -282,6 +282,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
         rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS)
         model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc', n_jobs=N_JOBS)
         model.fit(X, y)
+        print (model.cv_results_['mean_test_score'])
+        # print (model.cv_results_['mean_train_score'])
         clf = RandomForestClassifier(
                 n_estimators=model.best_params_['n_estimators'],
                 min_samples_leaf=model.best_params_['min_samples_leaf'],
@@ -340,15 +342,15 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
                     random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
                     )
             clf.fit(X_train, y_train)
-            tn, fp, fn, tp = confusion_matrix(y_train, model.predict(X_train)).ravel()
+            tn, fp, fn, tp = confusion_matrix(y_train, clf.predict(X_train)).ravel()
             #print (tn, fp, fn, tp)
-            auc_itr.append(roc_auc_score(y_validation, model.predict_proba(X_validation)[:,1]))
-            mcc_itr.append(matthews_corrcoef(y_validation, model.predict(X_validation)))
-            f1_itr.append(f1_score(y_validation, model.predict(X_validation)))
-            pre_itr.append(precision_score(y_validation, model.predict(X_validation)))
-            rec_itr.append(recall_score(y_validation, model.predict(X_validation)))
-            spe_itr.append(recall_score(y_validation, model.predict(X_validation), pos_label=0))
-            if i == 0:
+            auc_itr.append(roc_auc_score(y_validation, clf.predict_proba(X_validation)[:,1]))
+            mcc_itr.append(matthews_corrcoef(y_validation, clf.predict(X_validation)))
+            f1_itr.append(f1_score(y_validation, clf.predict(X_validation)))
+            pre_itr.append(precision_score(y_validation, clf.predict(X_validation)))
+            rec_itr.append(recall_score(y_validation, clf.predict(X_validation)))
+            spe_itr.append(recall_score(y_validation, clf.predict(X_validation), pos_label=0))
+            if i == 5:
                 viz = RocCurveDisplay.from_estimator(
                                                     clf,
                                                     X_validation,
@@ -363,7 +365,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
                 tprs.append(interp_tpr)
                 aucs.append(viz.roc_auc)
         AUC.append(np.mean(auc_itr))
-        # print (np.mean(auc_itr))
+        # print (np.mean(auc_itr), auc_itr)
         MCC.append(np.mean(mcc_itr))
         F1.append(np.mean(f1_itr))
         PRE.append(np.mean(pre_itr))
@@ -406,7 +408,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     )
     ax.axis("square")
     ax.legend(loc="lower right")
-    # plt.show()
+    plt.show()
     #####################################################
         
 
@@ -450,7 +452,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
                     random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
                     )
     clf.fit(X,y)
-    '''
+    
     if ALGO == 'RF':
         # print (clf.estimator_.decision_path(X))
         estimator = clf.estimator_
@@ -481,12 +483,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
         plt.grid(True, lw=0.1)
         # plt.savefig('feature_imp.png')
         # plt.show()
-    '''
+    
 
-    # filename = 'finalized_model.sav'
-    # pickle.dump(clf, open(filename, 'wb'))
+    filename = 'finalized_model_AD.sav'
+    pickle.dump(clf, open(filename, 'wb'))
 
-    test_types = ['AR', 'R', 'Activating', 'TBD', 'Inconclusive']
+    test_types = ['AR', 'Activating', 'TBD', 'Inconclusive']
     for test_type in test_types:
         print (''.join(['#' for i in range(1,25)]))
         if test_type in ['AR', 'R']:

@@ -178,25 +178,36 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     features = features.to_numpy()
     features = features[:, 3:]
 
-    # load the prediction and scaler models
+    # load the AD prediction and scaler models
     # and scale the features matrix
-    filename = BASE_DIR+'/ML/'+'finalized_model.sav'
-    clf = pickle.load(open(filename, 'rb'))
-    scaler = pickle.load(open(BASE_DIR+'/ML/'+'finalized_scaler.pkl', 'rb'))
-    features = scaler.transform(features)
+    filenameAD = BASE_DIR+'/ML/'+'finalized_model_AD.sav'
+    clfAD = pickle.load(open(filenameAD, 'rb'))
+    scalerAD = pickle.load(open(BASE_DIR+'/ML/'+'finalized_scaler_AD.pkl', 'rb'))
+    featuresAD = scalerAD.transform(features)
+
+    # load the RN prediction and scaler models
+    # and scale the features matrix
+    filenameRN = BASE_DIR+'/ML/'+'finalized_model_RN.sav'
+    clfRN = pickle.load(open(filenameRN, 'rb'))
+    scalerRN = pickle.load(open(BASE_DIR+'/ML/'+'finalized_scaler_RN.pkl', 'rb'))
+    featuresRN = scalerRN.transform(features)
     
     # Print the results
     print (''.join(['-' for i in range(50)]))
-    outputText = '#Input\tAcc\tGene\tMut\tHMMpos\tPrediction\n'
-    for row, predict in zip(test_data, clf.predict_proba(features)):
+    outputText = '# Input\tAcc\tGene\tMut\tHMMpos\tPredAD\tPredRN\n'
+    for row, predictAD, predictRN in zip(test_data, clfAD.predict_proba(featuresAD), clfRN.predict_proba(featuresRN)):
         ## Set prediction proba to NA if the position is not in the HMM
         acc = row[1]
         gene = row[2]
         mutation = row[3]
-        if str(row[5]) != '-': prediction_prob = round(predict[1], 3)
-        else: prediction_prob = 'NA'
+        if str(row[5]) != '-':
+            prediction_probAD = round(predictAD[1], 3)
+            prediction_probRN = round(predictRN[1], 3)
+        else:
+            prediction_probAD = 'NA'
+            prediction_probRN = 'NA'
         outputText += row[0] +'\t'+ row[1] +'\t'+ row[2] +'\t'+ row[3] +'\t'+ str(row[5]) +'\t'
-        outputText += str(prediction_prob) + '\n'
+        outputText += str(prediction_probAD) + '\t' +str(prediction_probRN) + '\n'
         name = row[0]
         ptmType = '-'
         for ptm_type_header in [ptm_type+'_0' for ptm_type in PTM_TYPES]:
@@ -218,7 +229,8 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                         'acc':acc,
                         'gene':gene,
                         'mutation':mutation,
-                        'prediction':prediction_prob,
+                        'predAD':prediction_probAD,
+                        'predRN':prediction_probRN,
                         'hmmPos':row[5],
                         'ptmType':ptmType,
                         'mutType':mutType,
