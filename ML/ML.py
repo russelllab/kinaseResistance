@@ -27,6 +27,9 @@ from sklearn import tree
 import xgboost as xgb
 import pickle
 
+# 5 3 3 100 for AD
+# 12 3 3 100 for RN
+
 RANDOM_STATE = 0
 ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
@@ -143,12 +146,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     y_test = []
     test_names = []
     for row in df.to_numpy():
-        if row[-1] in ['A']:
+        if row[-1] in ['R']:
             y.append(1)
             y_names.append(row[-1])
             X.append(row[3:-1])
             train_names.append('/'.join(row[:3]))
-        elif row[-1] in ['D']:
+        elif row[-1] in ['N']:
             y.append(0)
             y_names.append(row[-1])
             X.append(row[3:-1])
@@ -176,7 +179,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     scaler.fit(X)
     X = scaler.transform(X)
     X_test = scaler.transform(X_test)
-    pickle.dump(scaler, open('finalized_scaler_AD.pkl', 'wb'))
+    pickle.dump(scaler, open('finalized_scaler_RN.pkl', 'wb'))
 
     y = np.array(y)
 
@@ -485,7 +488,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
         # plt.show()
     
 
-    filename = 'finalized_model_AD.sav'
+    filename = 'finalized_model_RN.sav'
     pickle.dump(clf, open(filename, 'wb'))
 
     test_types = ['AR', 'Activating', 'TBD', 'Inconclusive']
