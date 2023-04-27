@@ -1,6 +1,6 @@
-# Activating/Deactivating mutations in MAPK2
-MAPKAPK2/S272A
-MAPKAPK2/S272D
+# Activating/Deactivating mutations in the A-loop of BRSK2
+BRSK2/T174E
+BRSK2/T174A
 
 # Deactivating mutations at the highly conserved Lysine (K)
 PLK3/K91R
@@ -10,3 +10,8 @@ ERBB3/K742M
 # Deactivating mutations at the DFG motif
 RAF1/D486N
 MAPKAPK2/D207A
+
+# Resistant mutations
+BRAF/V600E
+EGFR/T790M
+FLT3/F691L
