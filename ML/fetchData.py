@@ -28,6 +28,14 @@ def connection():
                             port = "5432")
     return mydb
 
+def mutTypes(mycursor, acc, mutation):
+    '''Function to fetch mutation types from the DB'''
+    mycursor.execute("select mut_type from mutations where \
+                     acc=%s and mutation=%s", (acc, mutation,))
+    hits = mycursor.fetchall()
+    mut_types = [hit[0] for hit in hits]
+    return mut_types
+
 def getAccGene(mycursor, name):
     '''Function to fetch acc and gene from the DB'''
     check_with = ['acc', 'gene', 'uniprot_id']

@@ -5,7 +5,6 @@ BRSK2/T174A
 # Deactivating mutations at the highly conserved Lysine (K)
 PLK3/K91R
 BRAF/K483S
-ERBB3/K742M
 
 # Deactivating mutations at the DFG motif
 RAF1/D486N

@@ -217,12 +217,15 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                 ptmType = ptm_type_header.split('_')[0]
                 break
         mutType = []
-        for mut_type_header in [mut_type+'_0' for mut_type in MUT_TYPES]:
-            mutTypeCell = df[df['Input']==name][mut_type_header].values[0]
-            if int(mutTypeCell) != 0:
-                # mutType = mut_type_header.split('_')[0]
-                mutType.append(mut_type_header.split('_')[0])
-                # break
+        mutType = fetchData.mutTypes(mycursor, acc, mutation)
+        # print (mutType)
+        # for mut_type_header in [mut_type+'_0' for mut_type in MUT_TYPES]:
+        #     mutTypeCell = df[df['Input']==name][mut_type_header].values[0]
+        #     if int(mutTypeCell) != 0:
+        #         # mutType = mut_type_header.split('_')[0]
+        #         print (name, mutation, mut_type_header.split('_')[0])
+        #         mutType.append(mut_type_header.split('_')[0])
+        #         # break
         if len(mutType) == 0: mutType = '-'
         else: mutType = ''.join(mutType)
         results['predictions'][name] = {
