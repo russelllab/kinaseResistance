@@ -489,7 +489,10 @@ def create_svg(sequences, positions, colordict, coloringcategories, featurecolor
         dwg.add(dwg.text(category, insert=(40, mapy+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
         for xval in heatmapper:
 	    #print xval, "\t", mapy
-            opac = float(heatmapper[xval][category])/float(heatmap_maximum)
+            try:
+                opac = float(heatmapper[xval][category])/float(heatmap_maximum)
+            except: ### this might happen if we do not have anything for one of the 3 categories A, D, R. In this care heatmap_maximum might be 0
+                opac = 0.0
             if float(opac) == 0.0:
                 dwg.add(dwg.rect((xval, mapy), (10, 10), fill="lightblue", opacity = 0.15 ))
             else:
