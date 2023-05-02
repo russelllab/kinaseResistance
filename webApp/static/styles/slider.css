@@ -1,5 +1,6 @@
 /* Slider */
 .slider-text {
+    font-family: Arial, Helvetica, sans-serif;
     display: none;
     position: absolute;
     top: 52%;
