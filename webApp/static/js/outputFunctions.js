@@ -44,15 +44,15 @@ function defineDataTable (tableID, uniqID)
                             if ( data.predAD >= 0.5 ) {
                                 // $(row).addClass( 'important' );
                                 // alert(data.predAD);
-                                $('td:eq(9)', row).css('background-color', 'Lightgreen');
+                                $('td:eq(9)', row).css('background-color', '#009e73');
                             }
                             else if ( data.predAD < 0.5 ) {
-                                $('td:eq(9)', row).css('background-color', '#FF6863');
+                                $('td:eq(9)', row).css('background-color', '#d55e00');
                             }
                             if ( data.predRN >= 0.5 ) {
                                 // $(row).addClass( 'important' );
                                 // alert(data.predRN);
-                                $('td:eq(10)', row).css('background-color', '#7CB9E8');
+                                $('td:eq(10)', row).css('background-color', '#0072b2');
                             }
                             else if ( data.predRN < 0.5 ) {
                                 // $('td:eq(10)', row).css('background-color', '#FF6863');
@@ -125,4 +125,79 @@ function makeIgnoredLink(uniqID)
     // String concatenation
     ignoredLink.href = '/ignored/'+uniqID;
 
+}
+
+function makeTableHeadFoot()
+{   
+    var table_contents = ['Info',
+                        'View',
+                        'Input',
+                        'Gene<br>name',
+                        'UniProt<br>accession',
+                        'Mutation',
+                        'HMM<br>position',
+                        'PTM<br>type',
+                        'Known<br>ADR',
+                        'Pred(A/D)',
+                        'Pred(R)'
+                        ];
+    
+    var table_contents_text = ['Known information about the input',
+                                'View individual results',
+                                'Input mutation',
+                                'Gene name',
+                                'UniProt accession',
+                                'Mutation',
+                                'HMM position',
+                                'Known PTM at the position of the mutation',
+                                'Known Activating/Deactivating/Resistance mutation',
+                                'Predicted probability of Activating/Deactivating',
+                                'Predicted probability of Resistance'
+                                ];
+    
+    var table_head_foot_id = ['table-head', 'table-foot'];
+    for (let i = 0; i <= 1; i++) {
+      var tableText = document.getElementById(table_head_foot_id[i]);
+      // Create a new row element
+      const row = document.createElement("tr");
+      if (i == 0) {
+        row.setAttribute("data-title", 'Header');
+        row.setAttribute("data-intro", 'Description of the table columns.');
+      }
+      
+      // Create 3 cells in the row using a nested for loop
+      for (let j = 0; j < table_contents.length; j++) {
+        // Create a new cell element
+        const cell = document.createElement("th");
+
+        // const cellText = document.createTextNode(table_contents[j]);
+
+        // cell.appendChild(cellText);
+        cell.innerHTML = table_contents[j];
+        cell.style = "white-space: nowrap";
+
+        const but = document.createElement("span");
+        but.setAttribute("data-toggle", "tooltip");
+        but.setAttribute("data-placement", "top");
+        but.setAttribute("title", table_contents_text[j]);
+        but.style = "display: inline-block; padding-left: 5px; padding-right: 5px";
+
+        const icon = document.createElement("i");
+        icon.setAttribute("class", "bi bi-info-circle");
+        if ((i == 0) && (j == 0)) {
+            icon.setAttribute("data-title", 'Help');
+            icon.setAttribute("data-intro", 'Click the help buttons to know more.');
+          }
+
+        but.appendChild(icon);
+        cell.appendChild(but);
+                
+        // Add the cell to the row
+        row.appendChild(cell);
+      }
+      
+      // Add the row to the table body
+      tableText.appendChild(row);
+    
+    }
 }

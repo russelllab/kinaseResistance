@@ -1,0 +1,2 @@
+This panel displays the prediction results and
+known information about the input mutations.

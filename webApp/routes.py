@@ -34,7 +34,9 @@ sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 
 sys.path.insert(1, BASE_DIR+'/Create_SVG/Vlatest/')
-import create_svg_20230426_kinases_GS
+# import create_svg_20230426_kinases_GS
+# import create_svg_20230428_kinases_GS
+import create_svg_20230502_kinases_GS
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -446,8 +448,13 @@ def configureRoutes(app):
 		
 		# print (dic_mutations_info)
 		# print (row['acc'], mutation_position)
+		'''
+		filename = create_svg_20230428_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
+					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
+						path = 'static/predictor/output/'+uniqID+'/')
+		'''
 		try:
-			filename = create_svg_20230426_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
+			filename = create_svg_20230502_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
 					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
 						path = 'static/predictor/output/'+uniqID+'/')
 		except Exception as e:
@@ -462,7 +469,23 @@ def configureRoutes(app):
 	 		'status': runStatus
 			}
 		return jsonify(dic)
-		
+
+	@app.route('/AJAXModals', methods=['GET', 'POST'])
+	def AJAXModals (**kwargs):
+		if request.method == 'POST':
+			data = request.get_json(force=True)
+			modalTitle = data['modalTitle']
+		else:
+			kinase = kwargs['kinase']
+			mutation = kwargs['mutation']
+		dic = {}
+		modalText = ''
+		for line in open('static/modals/'+modalTitle+'Modal.txt', 'r'):
+			modalText += line
+		dic['modalText'] = modalText
+		print (modalText)
+		return jsonify(dic)
+
 	@app.route('/progress')
 	def progress():
 		return render_template('progress.html')

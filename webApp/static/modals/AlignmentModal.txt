@@ -1,0 +1,2 @@
+This panel displays the alignment of the input kinase sequence with the remaining human kinase sequences.<br>
+			The sequences are aligned using the HMM profile of the human kinase sequences and sorted based on mutational information known around the position of the interest.

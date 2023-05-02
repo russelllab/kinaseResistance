@@ -15,9 +15,9 @@ function showChart(uniqID, kinase, mutation, results)
                   // response['neutral']
                 ],
               marker:{
-                color: ['rgba(50,171, 96, 0.7)',
-                        'rgba(222,45,38,0.8)',
-                        'rgba(124, 185, 232, 1.0)',
+                color: ['rgba(0, 158, 115, 1.0)',
+                        'rgba(213, 94, 0, 1.0)',
+                        'rgba(0, 114, 178, 1.0)',
                         // 'rgba(204,204,204,1)'
                       ]
               },

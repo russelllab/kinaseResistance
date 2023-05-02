@@ -8,13 +8,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-	<script>
-		d3version3 = d3;
-		window.d3 = null;
-	</script>
-	<!-- Load D4, which is used for rest of the components (z.B. lollipop)-->
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-
+	
 	<!-- DataTables -->
 	<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 	<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -24,85 +18,35 @@
 {% endblock %}
 
 {% block content %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Download SVG Image</title>
-  </head>
-  <body>
-    <h1><span class="icon-download"></span> Download SVG Image</h1>
-    <div id="image-container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-        <rect x="10" y="10" width="80" height="80" fill="#0066CC"/>
-      </svg>
-    </div>
-    <button onclick="downloadSVG()">Download Image<i class="fas fa-download"></i></button>
-	<button onclick="openImage()">Open in new tab</button>
-    
-    <script>
-		function openImage() {
-		// Get the image source
-		const imgSrc = document.getElementById("image-container").src;
+  <h2>Summary
+    <button type="button" class="btn btn-default btn-lg"><i class="bi bi-info-circle"></i></button>
+  </h2>
+  <button type="button" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+  </button>
+  <div class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    Enter a valid email address
+  </div>
 
-		// Open the image in a new tab
-		window.open(imgSrc, "_blank");
-		}
-      function downloadSVG() {
-        var svg = document.getElementById("image-container").innerHTML;
-        var blob = new Blob([svg], {type: "image/svg+xml;charset=utf-8"});
-        var filename = "image.svg";
-        if (navigator.msSaveBlob) { // IE10+
-          navigator.msSaveBlob(blob, filename);
-        } else {
-          var link = document.createElement("a");
-          if (link.download !== undefined) { // feature detection
-            // Browsers that support HTML5 download attribute
-            var url = URL.createObjectURL(blob);
-            link.setAttribute("href", url);
-            link.setAttribute("download", filename);
-            link.style.visibility = 'hidden';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-          } else {
-            alert("Your browser does not support downloading SVG images.");
-          }
-        }
-      }
-    </script>
-    
-    <style>
-      .icon-download:before {
-        content: "\2193";
-        font-size: 1.5em;
-        font-weight: bold;
-        color: #0066CC;
-      }
-      h1 {
-        text-align: center;
-      }
-      #image-container {
-        margin: 50px auto;
-        width: 100px;
-        height: 100px;
-      }
-      button {
-        display: block;
-        margin: 50px auto;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2em;
-        color: #fff;
-        background-color: #0066CC;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #003366;
-      }
-    </style>
-  </body>
-</html>
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 	  
 {% endblock %}
