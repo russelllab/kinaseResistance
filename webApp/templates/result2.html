@@ -105,31 +105,38 @@
 								<!-- AliButtons objekt will be drawn inside this DIV -->
 								<div class="input-container">
 									<label for="number1" style="display: flex;">Window Size</label>
-									<input type="number" id="number1" name="number1" value="30" style="width: 100px;">
+									<input type="number" id="number1" name="number1" value="20" style="width: 100px;">
 									<button id="decrement1">-</button>
 									<button id="increment1">+</button>
 								  </div>
 								  <div class="input-container">
-									<label for="number2" style="display: flex; padding-top: 10%;">Show top N kinases</label>
+									<label for="number2" style="display: flex; padding-top: 5%;">Show top N kinases</label>
 									<input type="number" id="number2" name="number2" value="10" style="width: 100px;">
 									<button id="decrement2">-</button>
 									<button id="increment2">+</button>
 								  </div>
-								  <div class="input-container" style="display: flex; padding-top: 10%;">
-									<button onclick=downloadSVG({{uniqID|safe}})>Download Image <i class="fas fa-download"></i></button>
+
+								  <div class="input-container" style="display: flex; padding-top: 5%;">
+									<button onclick=callShowAlignment()>Apply filters<i style="padding-left: 3px;" class="bi bi-arrow-repeat"></i></button>
 								  </div>
-								  <div class="input-container" style="display: flex; padding-top: 10%;">
-									<button onclick=openImage({{uniqID|safe}})>Open in new tab <i class="fas fa-external-link-alt"></i></button>
+								  <div class="input-container" style="display: flex; padding-top: 20%;">
+									<button onclick=downloadSVG({{uniqID|safe}})>Download Image <i style="padding-left: 3px;" class="bi bi-download"></i></button>
+								  </div>
+								  <div class="input-container" style="display: flex; padding-top: 5%;">
+									<button onclick=openImage({{uniqID|safe}})>Open in new tab <i style="padding-left: 3px;" class="bi bi-box-arrow-up-right"></i></button>
 								  </div>
 
 							</div>
 							<div id='alignmentCard' class=".border-0" style="width: 80%; max-height: 100%; outline: none !important; float: left;" data-step="6" data-title="Alignment SVG" data-intro="View the alignment">
 								<!-- Img objekt will be drawn inside this DIV -->
-								<img id="aliView" style="height: 5000; width: 5000px;" alt="Loading..."/>
+								<!-- <img id="aliView" style="height: 5000; width: 5000px;" alt="Loading..."></img> -->
+								<object id="aliView" type="image/svg+xml">
+								</object>
 							</div>
 							<script>
 								// showPTM({{uniqID|safe}}, {{protein|safe}}, {{mutation|safe}});
 								showAlignment({{uniqID|safe}}, {{kinase|safe}}, {{mutation|safe}}, {{results|safe}});
+								// callShowAlignment();
 								// alert ({{uniqID|safe}});
 							</script>
 						</div>
@@ -143,30 +150,30 @@
 			$("#increment1").click(function() {
 				var currentValue = parseInt($("#number1").val());
 				$("#number1").val(currentValue + 1);
-				callShowAlignment();
+				// callShowAlignment();
 			});
 			$("#decrement1").click(function() {
 				var currentValue = parseInt($("#number1").val());
 				$("#number1").val(currentValue - 1);
-				callShowAlignment();
+				// callShowAlignment();
 			});
 			$("#increment2").click(function() {
 				var currentValue = parseInt($("#number2").val());
 				$("#number2").val(currentValue + 1);
-				callShowAlignment();
+				// callShowAlignment();
 			});
 			$("#decrement2").click(function() {
 				var currentValue = parseInt($("#number2").val());
 				$("#number2").val(currentValue - 1);
-				callShowAlignment();
+				// callShowAlignment();
 			});
 			//Attach event handlers
-			$("#number1").change(function() {
-				callShowAlignment();
-			});
-			$("#number2").change(function() {
-				callShowAlignment();
-			});
+			// $("#number1").change(function() {
+			// 	callShowAlignment();
+			// });
+			// $("#number2").change(function() {
+			// 	callShowAlignment();
+			// });
 		});
 
 		function callShowAlignment() {

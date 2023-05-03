@@ -27,13 +27,19 @@ function downloadSVG(uniqID) {
 	document.body.removeChild(link);
 }
 function showAlignment(uniqID, kinase, mutation, results, currentValueWS, currentValueTopN)
-{
+{	
+	// Set the default values
 	if (currentValueWS === undefined) {
-		currentValueWS = 30;
+		currentValueWS = 20;
 	  }
 	if (currentValueTopN === undefined) {
 		currentValueTopN = 10;
 	  }
+	// Show "loading" while the process is running
+	var image = document.getElementById('aliView');
+	image.setAttribute('data', '');
+	image.innerHTML = 'Loading...';
+
     $.ajax({
 		url: '/AJAXAlignment',
 		type: 'post',
@@ -50,17 +56,13 @@ function showAlignment(uniqID, kinase, mutation, results, currentValueWS, curren
             // document.getElementById('alignmentCard').innerHTML = response['filepath'];
 			const image = document.getElementById('aliView');
 			if (response['status'] != 'error') {
-				image.setAttribute('src', response['filepath']);
-				image.setAttribute('name', response['filepath'].split("/").pop());
+				image.setAttribute('data', response['filepath']);
 				image.setAttribute('style', 'overflow: scroll;');
-				image.setAttribute('alt', kinase+'/'+mutation);
-				// alert (response['filepath']);
 			}
 			else {
 				document.getElementById('alignmentButtonsCard').style.display = 'none';
-				image.setAttribute('src', '');
-				image.setAttribute('alt', 'Could not generate the alignment.');
-				// image.setAttribute('style', 'height: 500px; width: 100%; object-fit: contain');
+				image.setAttribute('data', '');
+				image.innerHTML = 'Could not generate the alignment.';
 			}
 
 		}
