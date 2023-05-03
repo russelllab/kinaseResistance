@@ -38,7 +38,10 @@ function showAlignment(uniqID, kinase, mutation, results, currentValueWS, curren
 	// Show "loading" while the process is running
 	var image = document.getElementById('aliView');
 	image.setAttribute('data', '');
-	image.innerHTML = 'Loading...';
+	// image.innerHTML = 'Loading...';
+
+	var loadingText = document.getElementById('loadingText');
+	loadingText.setAttribute('style', 'display: block;');
 
     $.ajax({
 		url: '/AJAXAlignment',
@@ -57,7 +60,9 @@ function showAlignment(uniqID, kinase, mutation, results, currentValueWS, curren
 			const image = document.getElementById('aliView');
 			if (response['status'] != 'error') {
 				image.setAttribute('data', response['filepath']);
+				image.setAttribute('name', response['filepath'].split("/").pop());
 				image.setAttribute('style', 'overflow: scroll;');
+				loadingText.setAttribute('style', 'display: none;');
 			}
 			else {
 				document.getElementById('alignmentButtonsCard').style.display = 'none';

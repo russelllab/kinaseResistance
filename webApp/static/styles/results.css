@@ -34,3 +34,9 @@ input-container {
 	border-radius: 5px;
 	background-color: #f5f5f5;
   }
+  .loading-text {
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 30;
+	padding-left: 40%;
+    /* position: absolute; */
+}
