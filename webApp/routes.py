@@ -36,7 +36,7 @@ import prepareTestData
 sys.path.insert(1, BASE_DIR+'/Create_SVG/Vlatest/')
 # import create_svg_20230426_kinases_GS
 # import create_svg_20230428_kinases_GS
-import create_svg_20230502_kinases_GS
+import create_svg_20230503_kinases_GS
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -423,6 +423,7 @@ def configureRoutes(app):
 		mycursor = connection()
 
 		text = ''
+		mut_type_name = {'A': 'Activating', 'D': 'Deactivating', 'R': 'Resistant'}
 		for row in output['data']:
 			if row['name'] != kinase+'/'+mutation: continue			
 			mutation_position = int(row['mutation'][1:-1])
@@ -432,7 +433,8 @@ def configureRoutes(app):
 			for hit in hits:
 				position, mutType, acc = hit
 				if acc not in dic_mutations_info:
-					dic_mutations_info[acc] = {'A':[], 'D':[], 'R':[]}
+					# dic_mutations_info[acc] = {'A':[], 'D':[], 'R':[]}
+					dic_mutations_info[acc] = {'Activating':[], 'Deactivating':[], 'Resistant':[]}
 				if mutType == 'N': continue
 				if acc not in accs_in_alignment: continue
 				name = accs_in_alignment[acc]
@@ -444,7 +446,7 @@ def configureRoutes(app):
 				# else: end = int(end)
 				# if int(position) >= start and int(position) <= end:
 				if int(position) >= start:
-					dic_mutations_info[acc][mutType].append(str(position))
+					dic_mutations_info[acc][mut_type_name[mutType]].append(str(position))
 			break
 		
 		# print (dic_mutations_info)
@@ -455,7 +457,7 @@ def configureRoutes(app):
 						path = 'static/predictor/output/'+uniqID+'/')
 		'''
 		try:
-			filename = create_svg_20230502_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
+			filename = create_svg_20230503_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
 					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
 						path = 'static/predictor/output/'+uniqID+'/')
 		except Exception as e:
