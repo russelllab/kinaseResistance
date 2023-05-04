@@ -128,8 +128,10 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['view'] = '<a href=\"'
 		dic['view'] += BASE_URL
 		dic['view'] += 'result?uniqID='+uniqID+'&kinase=' + kinase + '&mutation=' + mutation
-		# dic['view'] += '\" target=\"_blank\">View</a>'
-		dic['view'] += '\" target=\"_blank\"><i class="bi bi-box-arrow-in-up-right"></i></a>'
+		dic['view'] += '\" target=\"_blank\">View</a>'
+		# dic['view'] += '\" target=\"_blank\"><i class="bi bi-box-arrow-in-up-right"></i></a>'
+		# dic['view'] += '\" target=\"_blank\"></a>'
+		# dic['view'] += '<a href="#"><i class="bi bi-box-arrow-in-up-right"></i></a>'
 		dic['gene'] = results['predictions'][name]['gene']
 		dic['uniprot_id'] = results['predictions'][name]['uniprot_id']
 		dic['protein_name'] = results['predictions'][name]['protein_name']
