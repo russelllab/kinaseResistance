@@ -8,7 +8,7 @@ function showChart(uniqID, kinase, mutation, results)
 		success: function (response){
             var trace1 = {
               name : 'Prediction',
-              x: ['Activating', 'Deactivating', 'Drug resistant', 'Neutral'],
+              x: ['Activating', 'Deactivating', 'Resistance', 'Neutral'],
               y: [response['activating'],
                   response['deactivating'],
                   response['resistant'],
@@ -31,7 +31,7 @@ function showChart(uniqID, kinase, mutation, results)
             };
             var data = [trace1, trace2];
             var layout = {
-              title: 'Predicted effect of the mutation on the kinase activity',
+              title: 'Predicted effect of the mutation<br>on the kinase activity',
               yaxis: {
                 // autorange: true,
                 range: [0, 1.0],

@@ -55,7 +55,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
 
     # Make header
     data = []
-    row = ['Input', 'Acc','Gene','Mutation','Dataset']
+    row = ['Input', 'Acc','Gene','UniProtID', 'ProteinName', 'Mutation','Region', 'Dataset']
     row += ['hmmPos','hmmSS','hmmScoreWT','hmmScoreMUT','hmmScoreDiff']
     row += ['Phosphomimic']
     row += ['ChargesWT','ChargesMUT','ChargesDiff']
@@ -91,7 +91,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         mutation = name.split('/')[1].rstrip()
 
         # Retrieve acc and gene of the input kinase
-        acc, gene, uniprot_id = fetchData.getAccGene(mycursor, kinase)
+        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, kinase)
 
         # Check if the acc is None, which means
         # that the input kinase was not found in
@@ -122,6 +122,9 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             kinases[acc] = Kinase(acc, gene)
         if mutation not in kinases[acc].mutations:
             kinases[acc].mutations[mutation] = Mutation(mutation, '-', acc, 'test')
+
+        # Get region
+        region = fetchData.getRegion(mycursor, acc, mutation)
         
         # Get features
         position = int(mutation[1:-1])
@@ -139,7 +142,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         adr_row = fetchData.getADRvector(mycursor, acc, position, kinases, WS)
         
         # store features in 2D array
-        row = [name, acc, gene, mutation, 'test']
+        row = [name, acc, gene, uniprot_id, protein_name, mutation, region, 'test']
         row += [str(hmmPos), str(hmmSS)]
         row += [float(hmmScoreWT), float(hmmScoreMUT), float(hmmScoreMUT)-float(hmmScoreWT)]
         row.append(is_phosphomimic)
@@ -194,21 +197,27 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     
     # Print the results
     print (''.join(['-' for i in range(50)]))
-    outputText = '# Input\tAcc\tGene\tMut\tHMMpos\tPredAD\tPredRN\n'
+    outputText = '#UserInput\tAcc\tGN\tUniProtID\tMutation\tHMMpos\tRegion\tPredAD\tPredRN\n'
     for row, predictAD, predictRN in zip(test_data, clfAD.predict_proba(featuresAD), clfRN.predict_proba(featuresRN)):
         ## Set prediction proba to NA if the position is not in the HMM
+        user_input = row[0]
         acc = row[1]
         gene = row[2]
-        mutation = row[3]
-        if str(row[5]) != '-':
+        uniprot_id = row[3]
+        protein_name = row[4]
+        mutation = row[5]
+        region = row[6]
+        hmmPos = row[8]
+        if str(hmmPos) != '-':
             prediction_probAD = round(predictAD[1], 3)
             prediction_probRN = round(predictRN[1], 3)
         else:
             prediction_probAD = 'NA'
             prediction_probRN = 'NA'
-        outputText += row[0] +'\t'+ row[1] +'\t'+ row[2] +'\t'+ row[3] +'\t'+ str(row[5]) +'\t'
+        outputText += user_input +'\t'+ acc +'\t'+ gene +'\t'+ uniprot_id +'\t' + mutation +'\t'
+        outputText += str(hmmPos) +'\t'+ region + '\t'
         outputText += str(prediction_probAD) + '\t' +str(prediction_probRN) + '\n'
-        name = row[0]
+        name = user_input
         ptmType = '-'
         for ptm_type_header in [ptm_type+'_0' for ptm_type in PTM_TYPES]:
             # print (df[df['Input']==name][ptm_type_header])
@@ -231,10 +240,13 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         results['predictions'][name] = {
                         'acc':acc,
                         'gene':gene,
+                        'uniprot_id': uniprot_id,
+                        'protein_name': protein_name,
                         'mutation':mutation,
                         'predAD':prediction_probAD,
                         'predRN':prediction_probRN,
-                        'hmmPos':row[5],
+                        'hmmPos':hmmPos,
+                        'region':region,
                         'ptmType':ptmType,
                         'mutType':mutType,
                         }

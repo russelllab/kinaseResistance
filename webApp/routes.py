@@ -36,7 +36,7 @@ import prepareTestData
 sys.path.insert(1, BASE_DIR+'/Create_SVG/Vlatest/')
 # import create_svg_20230426_kinases_GS
 # import create_svg_20230428_kinases_GS
-import create_svg_20230503_kinases_GS
+import create_svg_20230503_kinases_GS as create_svg
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -51,7 +51,13 @@ def connection():
     mycursor = mydb.cursor()
     return mycursor
 
-def makeText(acc, mutation, mycursor):
+def extract_pubmed_ids(string):
+	# https://pubmed.ncbi.nlm.nih.gov/11781872/
+	pattern = r"PubMed:\s*(\d+)"
+	matches = re.findall(pattern, string)
+	return [int(match) for match in matches]
+
+def makeText(acc, gene, mutation, mycursor):
 	'''
 	Make text for prediction
 	'''
@@ -67,16 +73,32 @@ def makeText(acc, mutation, mycursor):
 						WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
 		hits = mycursor.fetchall()
 		for entry in hits:
-			text += "<b>"+str(entry[0]) + str(position)+ "</b>" + ' is a known ' + dic_ptms[entry[1]] + ' site<br>'
+			text += "<b>"+str(entry[0]) + str(position)+ "</b>" + ' is a known ' + dic_ptms[entry[1]] + ' site. '
+			text += '<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>'
+			text += '<br>' # add a full stop at the end of the sentence
 	
 	for position in range(mutation_position-ws, mutation_position+ws+1):
 		mycursor.execute("SELECT mutation, mut_type, info FROM mutations \
 						WHERE acc = %s and wtpos = %s", (acc, str(position)))
 		hits = mycursor.fetchall()
 		for entry in hits:
-			text += "<b>" + str(entry[0]) + "</b>" + ' is a known '+dic_mutations[entry[1]]+' mutation.'
-			text += ' Ref: ' + entry[2] + '<br>'
-	
+			mutation = entry[0]
+			mut_type = entry[1]
+			info = entry[2]
+			text += "<b>" + str(mutation) + "</b>" + ' is a known '+dic_mutations[mut_type]+' mutation.'
+			if mut_type != 'R':
+				text += ' <u>Description</u>: ' + info.split('"""')[0]
+				pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
+				pubmed_ids_text = []
+				for pubmed_id in pubmed_ids:
+					pubmed_ids_text.append('<a href=\"https://pubmed.ncbi.nlm.nih.gov/' + str(pubmed_id) + '\" target=\"_blank\">' + str(pubmed_id) + '<i class="bi bi-box-arrow-in-up-right"></i></a>')
+				if pubmed_ids_text != []:
+					text += ' <u>PubMed</u>: ' + '; '.join(pubmed_ids_text)
+				text += '.<br>' # add a full stop at the end of the sentence
+			else:
+				text += ' ' + '<a href=\"https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln='
+				text += gene +'#drug-resistance\" target=\"_blank\">COSMIC <i class="bi bi-box-arrow-in-up-right"></i></a>'
+	# print (text)
 	return text
 
 def makeUniqID():
@@ -98,19 +120,26 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic = {}
 		dic['name'] = name
 		dic['mutation'] = results['predictions'][name]['mutation']
-		dic['acc'] = results['predictions'][name]['acc']
+		# https://www.uniprot.org/uniprotkb/P05067/entry
+		# dic['acc'] = results['predictions'][name]['acc']
+		acc = results['predictions'][name]['acc']
+		dic['acc'] = acc
+		# dic['acc'] = '<a href=\"https://www.uniprot.org/uniprot/'+acc+'\" target=\"_blank\">'+acc+'<i class="bi bi-box-arrow-in-up-right"></i></a>'
 		dic['view'] = '<a href=\"'
 		dic['view'] += BASE_URL
 		dic['view'] += 'result?uniqID='+uniqID+'&kinase=' + kinase + '&mutation=' + mutation
 		# dic['view'] += '\" target=\"_blank\">View</a>'
 		dic['view'] += '\" target=\"_blank\"><i class="bi bi-box-arrow-in-up-right"></i></a>'
 		dic['gene'] = results['predictions'][name]['gene']
+		dic['uniprot_id'] = results['predictions'][name]['uniprot_id']
+		dic['protein_name'] = results['predictions'][name]['protein_name']
+		dic['region'] = results['predictions'][name]['region']
 		dic['ptmType'] = results['predictions'][name]['ptmType']
 		dic['mutType'] = results['predictions'][name]['mutType']
 		dic['predAD'] = results['predictions'][name]['predAD']
 		dic['predRN'] = results['predictions'][name]['predRN']
 		dic['hmmPos'] = results['predictions'][name]['hmmPos']
-		dic['text'] = makeText(dic['acc'], dic['mutation'], mycursor)
+		dic['text'] = makeText(dic['acc'], dic['gene'], dic['mutation'], mycursor)
 		output.append(dic)
 		# yield str(num) + '\n'
 	
@@ -383,10 +412,18 @@ def configureRoutes(app):
 		text = ''
 		for row in output['data']:
 			if row['name'] == kinase+'/'+mutation:
-				text += '<table><tr><td><b>Input:</b></td><td>'+row['name']+'</td></tr>'
-				text += '<tr><tr><td><b>Gene:</b></td><td>'+row['gene']+'</td></tr>'
-				text += '<tr><td><b>UniProt Acc:</b></td><td>'+'<a href="https://www.uniprot.org/uniprotkb/'+row['acc']+'/entry" target="_blank">'+row['acc']+'</td></tr>'
-				text += '<tr><td><b>Mutations:</b></td><td>'+row['mutation']+'</td></tr></table>'
+				text += '<table><tr><td><b>User input:</b></td><td>'+row['name']+'</td></tr>'
+				text += '<tr><tr><td><b>Gene name:</b></td><td>'+row['gene']+'</td></tr>'
+				text += '<tr><tr><td><b>UniProt ID:</b></td><td>'+row['uniprot_id']+'</td></tr>'
+				# text for acc begins here
+				text += '<tr><td><b>UniProt acc:</b></td><td>'
+				text += '<a href="https://www.uniprot.org/uniprotkb/'
+				text += row['acc']+'/entry" target="_blank">'
+				text += row['acc']+'<i class="bi bi-box-arrow-in-up-right"></i></td></tr>'
+				# text for acc ends here
+				text += '<tr><tr><td><b>Protein name:</b></td><td>'+row['protein_name']+'</td></tr>'
+				text += '<tr><td><b>Mutation:</b></td><td>'+row['mutation']+'</td></tr>'
+				text += '<tr><tr><td><b>Region of the site:</b></td><td>'+row['region']+'</td></tr></table>'
 				if row['text'] != '':
 					text += '<br><b>More information:</b><br>' + row['text']
 				break
@@ -457,7 +494,7 @@ def configureRoutes(app):
 						path = 'static/predictor/output/'+uniqID+'/')
 		'''
 		try:
-			filename = create_svg_20230503_kinases_GS.main('static/hmm/humanKinasesTrimmed.clustal',\
+			filename = create_svg.main('static/hmm/humanKinasesTrimmed.clustal',\
 					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
 						path = 'static/predictor/output/'+uniqID+'/')
 		except Exception as e:

@@ -36,18 +36,52 @@ def mutTypes(mycursor, acc, mutation):
     mut_types = [hit[0] for hit in hits]
     return mut_types
 
+def getRegion(mycursor, acc, mutation):
+    '''Function to fetch region from the DB'''
+    mycursor.execute("select alnpos from positions where \
+                     acc=%s and uniprotpos=%s", (acc, mutation[1:-1],))
+    hits = mycursor.fetchone()
+    if hits is None:
+        return '-'
+    else:
+        alnpos = hits[0]
+        if alnpos == '-': return '-'
+        else: alnpos = int(alnpos)
+        region = []
+        if alnpos in range(453,457):
+            region.append('DFG-motif')
+        if alnpos in range(549, 552):
+            region.append('APE-motif')
+        if alnpos in range(396, 399):
+            region.append('HrD-motif')
+        if alnpos in range(453, 550):
+            region.append('Activation-loop')
+        if alnpos in range(37, 45):
+            region.append('Gly-rich-loop')
+        if alnpos == 129:
+            region.append('Conserved-Lys-N-term')
+        if alnpos < 30:
+            region.append('N-term')
+        if alnpos > 812:
+            region.append('C-term')
+        
+        if len(region) == 0:
+            return '-'
+        else:
+            return ';'.join(region)
+
 def getAccGene(mycursor, name):
     '''Function to fetch acc and gene from the DB'''
     check_with = ['acc', 'gene', 'uniprot_id']
     for check in check_with:
-        mycursor.execute("select acc, gene, uniprot_id from kinases where "+check+" = %s", (name,))
+        mycursor.execute("select acc, gene, uniprot_id, protein_name from kinases where "+check+" = %s", (name,))
         hits = mycursor.fetchone()
         if hits is not None: break
     if hits is None:
         print (f'Neither acc nor gene with name {name} found')
-        return None, None, None
-    acc, gene, uniprot_id = hits[0], hits[1], hits[2]
-    return acc, gene, uniprot_id
+        return None, None, None, None
+    acc, gene, uniprot_id, protein_name = hits[0], hits[1], hits[2], hits[3]
+    return acc, gene, uniprot_id, protein_name
 
 def checkInputPositionAA(acc, mutation, mycursor):
 	'''

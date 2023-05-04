@@ -44,15 +44,15 @@ function defineDataTable (tableID, uniqID)
                             if ( data.predAD >= 0.5 ) {
                                 // $(row).addClass( 'important' );
                                 // alert(data.predAD);
-                                $('td:eq(9)', row).css('background-color', '#009e73');
+                                $('td:eq(10)', row).css('background-color', '#009e73');
                             }
                             else if ( data.predAD < 0.5 ) {
-                                $('td:eq(9)', row).css('background-color', '#d55e00');
+                                $('td:eq(10)', row).css('background-color', '#d55e00');
                             }
                             if ( data.predRN >= 0.5 ) {
                                 // $(row).addClass( 'important' );
                                 // alert(data.predRN);
-                                $('td:eq(10)', row).css('background-color', '#0072b2');
+                                $('td:eq(11)', row).css('background-color', '#0072b2');
                             }
                             else if ( data.predRN < 0.5 ) {
                                 // $('td:eq(10)', row).css('background-color', '#FF6863');
@@ -75,6 +75,7 @@ function defineDataTable (tableID, uniqID)
                     { data: 'acc' },
                     { data: 'mutation' },
                     { data: 'hmmPos' },
+                    { data: 'region' },
                     { data: 'ptmType' },
                     { data: 'mutType' },
                     { data: 'predAD' },
@@ -136,10 +137,11 @@ function makeTableHeadFoot()
                         'UniProt<br>accession',
                         'Mutation',
                         'HMM<br>position',
+                        'Region',
                         'PTM<br>type',
                         'Known<br>ADR',
-                        'Pred(A/D)',
-                        'Pred(R)'
+                        'Pred<br>(A or D)',
+                        'Pred<br>(R)'
                         ];
     
     var table_contents_text = ['Known information about the input',
@@ -149,9 +151,10 @@ function makeTableHeadFoot()
                                 'UniProt accession',
                                 'Mutation',
                                 'HMM position',
+                                'Region of the mutation site<br>in the kinase canonical structure',
                                 'Known PTM at the position of the mutation',
                                 'Known Activating/Deactivating/Resistance mutation',
-                                'Predicted probability of Activating/Deactivating',
+                                'Predicted probability of Activating(>=0.5)<br>or Deactivating(<0.5)',
                                 'Predicted probability of Resistance'
                                 ];
     
@@ -173,7 +176,7 @@ function makeTableHeadFoot()
         // const cellText = document.createTextNode(table_contents[j]);
 
         // cell.appendChild(cellText);
-        cell.innerHTML = table_contents[j];
+        cell.innerHTML = table_contents[j] + '<br>';
         cell.style = "white-space: nowrap";
 
         const but = document.createElement("span");
