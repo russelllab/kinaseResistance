@@ -21,7 +21,7 @@ import psycopg2
 
 # Set up the base_url
 if socket.gethostname() == 'pevolution2.bioquant.uni-heidelberg.de':
-	BASE_URL = 'http://kinasex.russelllab.org/'
+	BASE_URL = 'http://activark.russelllab.org/'
 	# BASE_DIR = '/net/home.isilon/ds-russell/kinaseResistance/'
 	BASE_DIR = '/var/www/flask_apps/kinaseResistance/'
 else:
@@ -128,8 +128,8 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['view'] = '<a href=\"'
 		dic['view'] += BASE_URL
 		dic['view'] += 'result?uniqID='+uniqID+'&kinase=' + kinase + '&mutation=' + mutation
-		dic['view'] += '\" target=\"_blank\">View</a>'
-		# dic['view'] += '\" target=\"_blank\"><i class="bi bi-box-arrow-in-up-right"></i></a>'
+		# dic['view'] += '\" target=\"_blank\">View</a>'
+		dic['view'] += '\" target=\"_blank\"><i class="bi bi-box-arrow-in-up-right"></i></a>'
 		# dic['view'] += '\" target=\"_blank\"></a>'
 		# dic['view'] += '<a href="#"><i class="bi bi-box-arrow-in-up-right"></i></a>'
 		dic['gene'] = results['predictions'][name]['gene']
