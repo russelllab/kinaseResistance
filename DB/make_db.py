@@ -375,18 +375,38 @@ def create_homology_table(mycursor) -> None:
         f = open(tmp_df, 'r')
         mycursor.copy_from(f, homology, sep=',')
 
+def fetch_map_fasta2aln():
+    '''Function to map from fasta to alignment'''
+    map_fasta2aln = {}
+    for line in open('../alignments/humanKinasesHitsSplitTrimmed.fasta', 'r'):
+        if line.startswith('>'):
+            acc = line.split('|')[1]
+            # print (acc)
+            start = line.split('|')[3].split('-')[0]
+            if start == 'start': start = 0
+            else: start = int(start)
+            start += int(line.split('|')[4].split()[0])
+            continue
+        if acc not in map_fasta2aln: map_fasta2aln[acc] = {}
+        current_position = start
+        for alnpos, aa in enumerate(line.rstrip(), start=1):
+            if aa not in ['-', '.']:
+                map_fasta2aln[acc][current_position] = alnpos
+                current_position += 1
+    return map_fasta2aln
+
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
     mycursor.execute("DROP TABLE IF EXISTS kinases CASCADE")
     mycursor.execute("CREATE TABLE kinases (\
                      acc VARCHAR(10) PRIMARY KEY, \
                      gene VARCHAR(10), uniprot_id VARCHAR(25), \
-                     fasta TEXT) \
+                     protein_name VARCHAR(100), fasta TEXT) \
                      ")
                     #  UNIQUE(acc, gene, uniprot_id, fasta))\
     mycursor.execute("DROP TABLE IF EXISTS positions CASCADE")
     mycursor.execute("CREATE TABLE positions (\
-                     uniprotPos INT, uniprotAA VARCHAR(1),\
+                     uniprotPos INT, uniprotAA VARCHAR(1), alnPos VARCHAR(50),\
                      pfamPos VARCHAR(10) REFERENCES hmm DEFERRABLE, \
                      pfamAA VARCHAR(1), \
                      acc VARCHAR(10) REFERENCES kinases DEFERRABLE, \
@@ -402,12 +422,14 @@ def create_kinases_table(mycursor)->None:
             acc = line.split('|')[1]
             uniprot_id = line.split('|')[2]
             gene = line.split('GN=')[1].split()[0]
-            name = acc + '|' + uniprot_id + '|' + gene
+            protein_name = line.split('_HUMAN')[1].split('OS=')[0].rstrip().lstrip()
+            name = acc + '|' + uniprot_id + '|' + gene + '|' + protein_name
             kinases[name] = ''
         else:
             kinases[name] += line.rstrip()
 
     mappings = fetch_mappings_dic()
+    map_fasta2aln = fetch_map_fasta2aln()
     num = 0
     data = []
     for kinase in tqdm(kinases):
@@ -417,12 +439,14 @@ def create_kinases_table(mycursor)->None:
         acc = kinase.split('|')[0]
         uniprot_id = kinase.split('|')[1].split()[0]
         gene = kinase.split('|')[2]
+        protein_name = kinase.split('|')[3]
         fasta = str(kinases[kinase])
         # print (acc, gene, uniprot_id, fasta)
-        mycursor.execute("INSERT INTO kinases (acc, gene, uniprot_id, fasta) \
-                            VALUES (%s, %s, %s, %s)", \
-                            (acc, gene, uniprot_id, fasta))
+        mycursor.execute("INSERT INTO kinases (acc, gene, uniprot_id, protein_name, fasta) \
+                            VALUES (%s, %s, %s, %s, %s)", \
+                            (acc, gene, uniprot_id, protein_name, fasta))
         if acc not in mappings: continue
+        if acc not in map_fasta2aln: continue
         for uniprotPos, uniprotAA in enumerate(fasta, start=1):
             if uniprotPos in mappings[acc]['positions']:
                 if mappings[acc]['positions'][uniprotPos]['uniprotAA'] != uniprotAA:
@@ -433,10 +457,15 @@ def create_kinases_table(mycursor)->None:
                 # print (uniprotPos, uniprotAA, pfamPos, pfamAA, acc, uniprot_id)
             else:
                 pfamPos, pfamAA = '-', '-'
+            if uniprotPos in map_fasta2aln[acc]:
+                alnPos = map_fasta2aln[acc][uniprotPos]
+            else:
+                alnPos = '-'
             name = acc+'/'+uniprotAA+str(uniprotPos)
             row = []
             row.append(uniprotPos)
             row.append(uniprotAA)
+            row.append(alnPos)
             row.append(pfamPos)
             row.append(pfamAA)
             row.append(acc)
@@ -444,13 +473,13 @@ def create_kinases_table(mycursor)->None:
             row.append(name)
             data.append(row)
             '''
-            mycursor.execute("INSERT INTO positions (uniprotPos, uniprotAA, pfamPos, pfamAA, \
+            mycursor.execute("INSERT INTO positions (uniprotPos, uniprotAA, alnPos, pfamPos, pfamAA, \
                                 acc, uniprot_id, name) \
-                                VALUES (%s, %s, %s, %s, %s, %s, %s)", \
-                                (uniprotPos, uniprotAA, pfamPos, pfamAA, acc, uniprot_id, name)
+                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", \
+                                (uniprotPos, uniprotAA, alnPos, pfamPos, pfamAA, acc, uniprot_id, name)
                                 )
             '''
-    df = pd.DataFrame(data, columns=['uniprotPos', 'uniprotAA', 'pfamPos', 'pfamAA', 'acc', 'uniprot_id', 'name'])
+    df = pd.DataFrame(data, columns=['uniprotPos', 'uniprotAA', 'alnPos', 'pfamPos', 'pfamAA', 'acc', 'uniprot_id', 'name'])
     # print (df)
     tmp_df = "./tmp_dataframe.csv"
     df.to_csv(tmp_df, index=False, header=False)
@@ -479,12 +508,12 @@ if __name__ == '__main__':
     '''
 
     # Create tables
-    create_hmm_table(mycursor)
+    # create_hmm_table(mycursor)
     create_kinases_table(mycursor)
-    create_mutations_table(mycursor)
-    create_homology_table(mycursor)
-    create_ptm_table(mycursor)
-    create_alignment_table(mycursor)
+    # create_mutations_table(mycursor)
+    # create_homology_table(mycursor)
+    # create_ptm_table(mycursor)
+    # create_alignment_table(mycursor)
     mydb.commit()
 
     # Use mysqldump to create backup file
