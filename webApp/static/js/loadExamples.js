@@ -40,6 +40,17 @@ function call_onclick() {
     document.getElementById("formArea").style.display = "none";
     document.getElementById("slider-text").style.display = "block";
     document.getElementById("slider-box").style.display = "block";
+
+    var div = document.getElementById("headingElement");
+    div.style.position = "absolute";
+    div.style.top = "40%";
+    div.style.left = "50%";
+    div.style.transform = "translate(-40%, -50%) scale(1.5)";
+}
+
+function call_onclick_clear() {
+    // alert(document.getElementById("inputMut").innerHTML)
+    document.getElementById("inputMut").value = "";
 }
 
 function load_example(num) {

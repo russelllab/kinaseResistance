@@ -7,27 +7,44 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="headingFont">Activark</h1>
+    <style>
+        .fa-hourglass-half {
+            font-size: 30px;
+            color: black;
+            animation: rotate 3s linear infinite;
+            }
+
+            @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+            }
+    </style>
+    <h1 class="headingFontHomePage" id="headingElement">Activark <i class="bi bi-diagram-3-fill"></i></h1>
     <div id="formArea">
 	<form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
         <textarea style="height: 400px; width: 400px; font-size: 15px;" type="text" 
-                    placeholder="Default input" name="inputMut" id="inputMut">
+                    placeholder="#Input format&#10;&#10;PLK3/K91R&#10;RAF1/D486N&#10;EGFR_HUMAN/T790M" name="inputMut" id="inputMut">
             
                         </textarea>
         <div style="display: inline; padding-top: 10px;">
 		    <!-- <input style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit"/> -->
-            <button id="exampleDefault" style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">Submit</button>
+            <button id="exampleDefault" style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">Submit <i class="bi bi-send"></i></button>
+            <button id="clearButton" style="padding-top: 10px;" type="button" onclick="call_onclick_clear()" value="Submit">Clear <i class="bi bi-repeat"></i></button>
         </div>
         <div style="display: inline; padding-top: 10px;">
-            <button type="button" id="example1" onclick="load_example(1)">Example 1</button>
-            <button type="button" id="example2" onclick="load_example(2)">Example 2</button>
+            <button type="button" id="example1" onclick="load_example(1)">Example 1 <i class="bi bi-arrow-bar-up"></i></button>
+            <button type="button" id="example2" onclick="load_example(2)">Example 2 <i class="bi bi-arrow-bar-up"></i></button>
         </div>
         <div style="display: inline; padding-top: 10px;">
-            <button style="background-color: crimson;" type="button" id="example3" onclick="load_example(3)">Incorrect examples</button>
+            <button style="background-color: crimson;" type="button" id="example3" onclick="load_example(3)">Wrong inputs <i class="bi bi-patch-exclamation"></i></button>
         </div>
     </form>
     </div>
-	<h2 class="slider-text" id="slider-text">Hang tight while we run your query..</h2>
+	<h2 class="slider-text" id="slider-text">Hang tight while we run your query... <i style="padding-left: 10px;" class="fas fa-hourglass-half"></i></h2>
 		<div class="slider-box" id="slider-box">		
 			<div class="slider"></div>
 		</div>

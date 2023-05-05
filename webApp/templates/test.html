@@ -3,11 +3,13 @@
 	<!-- Load plotly.js into the DOM -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>KinAct: {{kinase	|safe}}/{{mutation|safe}}</title>
-	<script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+	<title>Activark: {{kinase	|safe}}/{{mutation|safe}}</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
+	<!-- <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://d3js.org/d3.v3.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
 	
 	<!-- DataTables -->
 	<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
@@ -18,35 +20,30 @@
 {% endblock %}
 
 {% block content %}
-  <h2>Summary
-    <button type="button" class="btn btn-default btn-lg"><i class="bi bi-info-circle"></i></button>
-  </h2>
-  <button type="button" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
-  </button>
-  <div class="alert alert-danger" role="alert">
-    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-    <span class="sr-only">Error:</span>
-    Enter a valid email address
-  </div>
+  <i class="fas fa-hourglass-half"></i>
+<style>
+  /* .icon-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
-<div class="modal fade" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal Title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+.fa-hourglass-half {
+  font-size: 30px;
+  color: black;
+  animation: rotate 2s linear infinite;
+}
 
-	  
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
 {% endblock %}

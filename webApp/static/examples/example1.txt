@@ -1,12 +1,12 @@
-# Activating/Deactivating mutations in the A-loop of BRSK2
+# (De)Activating (phosphomimicking) mutations in the A-loop of BRSK2
 BRSK2/T174E
 BRSK2/T174A
 
-# Deactivating mutations at the highly conserved Lysine (K)
+# Deactivating mutations at the highly conserved N-term Lysine (K)
 PLK3/K91R
 BRAF/K483S
 
-# Deactivating mutations at the DFG motif
+# Deactivating mutations in the DFG motif
 RAF1/D486N
 MAPKAPK2/D207A
 

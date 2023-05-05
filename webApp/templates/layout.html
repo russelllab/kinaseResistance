@@ -3,6 +3,8 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/navbar.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/footer.css') }}">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	<script src='https://unpkg.com/intro.js/intro.js'></script>
 	<script src="{{url_for('static', filename='/js/makeModals.js')}}"></script>
@@ -17,6 +19,24 @@
             font-weight:    bold;
             text-align: center;
             padding-top: 0px;
+			/* position: absolute; */
+			/* top: 10%; */
+  			/* left: 50%; */
+			/* transform: translate(-50%, -50%); */
+  			/* transition: all 2s ease-in-out; */
+        }
+		.headingFontHomePage
+        {
+            font-family:    Arial, Helvetica, sans-serif;
+            font-size:      30px;
+            font-weight:    bold;
+            text-align: center;
+            padding-top: 0px;
+			position: absolute;
+			top: 10%;
+  			left: 50%;
+			transform: translate(-50%, -50%);
+  			transition: all 2s ease-in-out;
         }
 		body {
 			margin: 0;
@@ -44,14 +64,22 @@
 
 	<nav>
 		<ul>
-			<li><a href="/" target="_blank">Search</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Help</a></li>
-			<li><a href="http://russelllab.org" target="_blank">Russell Lab</a></li>
+			<li><a href="/" target="_blank">Search <i class="bi bi-search"></i></a></li>
+			<li><a href="#">About <i class="bi bi-info-circle"></i></a></li>
+			<li><a href="#">Help <i class="bi bi-book"></i></a></li>
+			<li><a href="http://russelllab.org" target="_blank">Russell Lab <i class="bi bi-people"></i></a></li>
 		</ul>
+		<div class="nav-link">
 		<a class="nav-link" href="https://github.com/russelllab/kinaseResistance" target="_blank">
-		<img src="/static/img/github-mark-white.png" alt="GitHub Logo" style="height: 40px; width: 40px">
+			<i class="bi bi-github"></i>
 		</a>
+		<a style="padding-left: 20px; padding-right: 15px;" href="https://twitter.com/MechismoNews" target="_blank">
+			<i class="bi bi-twitter"></i>
+		</a>
+	</div>
+		<!-- <a class="nav-link" href="https://github.com/russelllab/kinaseResistance" target="_blank">
+		<img src="/static/img/github-mark-white.png" alt="GitHub Logo" style="height: 40px; width: 40px">
+		</a> -->
 	</nav>
 
 	<div id="modalPosition"></div>
