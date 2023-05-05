@@ -194,7 +194,7 @@ def makeText(acc, gene, mutation, hmmPos, mycursor):
 			row = []
 			row.append(ref_gene)
 			# row.append(ref_acc)
-			row.append('<a href=\"https://www.uniprot.org/uniprot/'+acc+'\" target=\"_blank\">'+acc+'<i class="bi bi-box-arrow-in-up-right"></i></a>')
+			row.append('<a href=\"https://www.uniprot.org/uniprot/'+ref_acc+'\" target=\"_blank\">'+ref_acc+'<i class="bi bi-box-arrow-in-up-right"></i></a>')
 			row.append(ref_mutation[0])
 			row.append(ref_mutation[1:-1])
 			row.append(ref_mutation[-1])
@@ -597,7 +597,7 @@ def configureRoutes(app):
 				# 	text += '<br><b>More information:</b><br>' + row['text']
 				# break
 
-		dic = {'data': data, 'acc': acc}
+		dic = {'data': data, 'acc': acc, 'gene': gene}
 		return jsonify(dic)
 	
 	@app.route('/AJAXAlignment', methods=['GET', 'POST'])

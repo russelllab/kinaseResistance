@@ -11,6 +11,8 @@ from tqdm import tqdm
 import psycopg2
 # from backports import zoneinfo
 import pandas as pd
+sys.path.insert(1, '../ML/')
+import fetchData
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -218,7 +220,8 @@ def fetch_mappings_dic():
 def find_pfampos(mycursor, acc, uniprotPos)->None:
     mycursor.execute("select pfampos from positions \
                      where acc=%s and uniprotpos=%s", (acc, uniprotPos))
-    pfamPos = mycursor.fetchone()[0]
+    pfamPos = mycursor.fetchone()
+    if pfamPos is not None: pfamPos = pfamPos[0]
     return pfamPos
 
 def create_mutations_table(mycursor)->None:
@@ -241,7 +244,9 @@ def create_mutations_table(mycursor)->None:
         mutAA = line.split('\t')[4].replace(',', '')
         if len(wtAA) > 1 or len(mutAA) > 1: continue
         wtPos = str(line.split('\t')[3])
+        print (gene, acc, wtAA, wtPos, mutAA)
         pfamPos = find_pfampos(mycursor, acc, wtPos)
+        if pfamPos is None: continue
         mut_type = line.split('\t')[5]
         # print (acc, kinases[acc].gene, wtAA, position, mutAA)
         mutation = wtAA + wtPos + mutAA
@@ -258,6 +263,7 @@ def create_mutations_table(mycursor)->None:
     for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
         if line.split('\t')[0] == 'uniprot_id': continue
         acc = line.split('\t')[0]
+        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
         wtAA = line.split('\t')[1]
         mutAA = line.split('\t')[3]
         if mutAA == 'X': continue
@@ -280,6 +286,7 @@ def create_mutations_table(mycursor)->None:
     for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
         if line.split('\t')[1] == 'UniProtID': continue
         acc = line.split('\t')[1]
+        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
         wtAA = line.split('\t')[2]
         mutAA = line.split('\t')[4]
         if mutAA == 'X': continue
@@ -509,8 +516,8 @@ if __name__ == '__main__':
 
     # Create tables
     # create_hmm_table(mycursor)
-    create_kinases_table(mycursor)
-    # create_mutations_table(mycursor)
+    # create_kinases_table(mycursor)
+    create_mutations_table(mycursor)
     # create_homology_table(mycursor)
     # create_ptm_table(mycursor)
     # create_alignment_table(mycursor)

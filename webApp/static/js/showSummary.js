@@ -33,7 +33,7 @@ function defineSummaryDataTable (tableID, uniqID, kinase, mutation, results)
 							buttons: [
 								'copy', 'csv', 'excel', 'pdf', 'print', 'colvis',
 								{
-									text: "Show "+kinase+" instances only",
+									text: "Show "+response['gene']+" instances only",
 									action: function(e, dt, node, config){
 										dt.column(1).search(response['acc']).draw();
 									}
