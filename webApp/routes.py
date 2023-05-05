@@ -58,7 +58,7 @@ def extract_pubmed_ids(string):
 	matches = re.findall(pattern, string)
 	return [int(match) for match in matches]
 
-def makeText(acc, gene, mutation, mycursor):
+def makeText(acc, gene, mutation, hmmPos, mycursor):
 	'''
 	Make text for prediction
 	'''
@@ -69,24 +69,138 @@ def makeText(acc, gene, mutation, mycursor):
 	dic_ptms = {'p': 'phosphorylation', 'ub': 'ubiquitination', 'ac': 'acetylation', 'me': 'methylation', 'gl': 'glycosylation', 'sm': 'sumoylation', 'm1': 'myristoylation', 'm2': 'palmitoylation', 'm3': 'myristoylation'}
 	text = ''
 	mutation_position = int(mutation[1:-1])
+	data = []
 	for position in range(mutation_position-ws, mutation_position+ws+1):
-		mycursor.execute("SELECT uniprotaa, ptmtype FROM ptms \
-						WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+	# 	# do it for the acc of interest
+	# 	mycursor.execute("SELECT pfampos FROM positions \
+	# 		WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+	# 	pfampos = mycursor.fetchone()[0]
+	# 	mycursor.execute("SELECT uniprotaa, ptmtype FROM ptms \
+	# 					WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+	# 	hits = mycursor.fetchall()
+	# 	for entry in hits:
+	# 		text += "<b>"+str(entry[0]) + str(position)+ "</b>" + ' is a known ' + dic_ptms[entry[1]] + ' site. '
+	# 		text += '<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>'
+	# 		text += '<br>' # add a full stop at the end of the sentence
+	# 		row = []
+	# 		row.append('-')
+	# 		row.append(gene)
+	# 		row.append(acc)
+	# 		row.append(entry[0]+str(position))
+	# 		row.append(pfampos)
+	# 		row.append(entry[1])
+	# 		row.append(dic_ptms[entry[1]])
+	# 		if gene == 'BRAF': print ('gene', row)
+	# 		row.append('<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>')
+	# 		data.append(row)
+		
+		# do it for all the accs at the position of interest
+		mycursor.execute("SELECT pfampos FROM positions \
+			WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+		pfampos = mycursor.fetchone()[0]
+		# print(pfampos)
+		if pfampos == '-': continue
+		mycursor.execute("SELECT uniprotaa, uniprotpos, ptmtype, acc, gene FROM ptms \
+						WHERE pfampos = %s", (str(pfampos), ))
 		hits = mycursor.fetchall()
 		for entry in hits:
-			text += "<b>"+str(entry[0]) + str(position)+ "</b>" + ' is a known ' + dic_ptms[entry[1]] + ' site. '
-			text += '<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>'
+			uniprotaa = entry[0]
+			uniprotpos = entry[1]
+			ptmtype = entry[2]
+			ref_acc = entry[3]
+			# if ref_acc == acc: continue
+			ref_gene = entry[4]
+			text += "<b>"+ref_gene+'/'+str(uniprotaa) + str(uniprotpos)+ "</b>" + ' is a known ' + dic_ptms[ptmtype] + ' site. '
+			text += '<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ ref_acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>'
 			text += '<br>' # add a full stop at the end of the sentence
+			row = []
+			# row.append('-')
+			row.append(ref_gene)
+			# row.append(ref_acc)
+			row.append('<a href=\"https://www.uniprot.org/uniprot/'+ref_acc+'\" target=\"_blank\">'+ref_acc+'<i class="bi bi-box-arrow-in-up-right"></i></a>')
+			row.append(uniprotaa)
+			row.append(uniprotpos)
+			row.append('-') # MUT aa = blank for PTMs
+			row.append(pfampos)
+			row.append(dic_ptms[ptmtype])
+			row.append('-') # Description = blank for PTMs
+			if ref_gene == 'BRAF': print ('ref_gene', row)
+			row.append('<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ ref_acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>')
+			data.append(row)
+
+	# print (data)
 	
 	for position in range(mutation_position-ws, mutation_position+ws+1):
-		mycursor.execute("SELECT mutation, mut_type, info FROM mutations \
-						WHERE acc = %s and wtpos = %s", (acc, str(position)))
+		# do it for acc of interest
+		# mycursor.execute("SELECT pfampos FROM positions \
+		# 	WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+		# pfampos = mycursor.fetchone()[0]
+		# mycursor.execute("SELECT mutation, mut_type, info FROM mutations \
+		# 				WHERE acc = %s and wtpos = %s", (acc, str(position)))
+		# hits = mycursor.fetchall()
+		# for entry in hits:
+		# 	mutation = entry[0]
+		# 	mut_type = entry[1]
+		# 	info = entry[2]
+		# 	text += "<b>" + str(mutation) + "</b>" + ' is a known '+dic_mutations[mut_type]+' mutation.'
+		# 	row = []
+		# 	row.append('-')
+		# 	row.append(gene)
+		# 	row.append(acc)
+		# 	row.append(mutation)
+		# 	row.append(pfampos)
+		# 	row.append(mut_type)
+		# 	row.append(dic_mutations[mut_type])
+		# 	if mut_type != 'R':
+		# 		text += ' <u>Description</u>: ' + info.split('"""')[0]
+		# 		pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
+		# 		pubmed_ids_text = []
+		# 		for pubmed_id in pubmed_ids:
+		# 			pubmed_ids_text.append('<a href=\"https://pubmed.ncbi.nlm.nih.gov/' + str(pubmed_id) + '\" target=\"_blank\">' + str(pubmed_id) + '<i class="bi bi-box-arrow-in-up-right"></i></a>')
+		# 		if pubmed_ids_text != []:
+		# 			text += ' <u>PubMed</u>: ' + '; '.join(pubmed_ids_text)
+		# 			row.append('<u>PubMed</u>: ' + '; '.join(pubmed_ids_text))
+		# 		else:
+		# 			row.append('-')
+		# 		text += '.<br>' # add a full stop at the end of the sentence
+		# 	else:
+		# 		cosmic = ' ' + '<a href=\"https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln='
+		# 		cosmic += gene +'#drug-resistance\" target=\"_blank\">COSMIC <i class="bi bi-box-arrow-in-up-right"></i></a>'
+		# 		text += cosmic
+		# 		row.append(cosmic)
+		# 	data.append(row)
+		
+		# do it for all the accs at the position of interest
+		mycursor.execute("SELECT pfampos FROM positions \
+			WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+		pfampos = mycursor.fetchone()[0]
+		# print(pfampos)
+		if pfampos == '-': continue
+		mycursor.execute("SELECT mutation, wtaa, wtpos, mut_type, acc, gene, info FROM mutations \
+						WHERE pfampos = %s", (str(pfampos), ))
 		hits = mycursor.fetchall()
 		for entry in hits:
-			mutation = entry[0]
-			mut_type = entry[1]
-			info = entry[2]
-			text += "<b>" + str(mutation) + "</b>" + ' is a known '+dic_mutations[mut_type]+' mutation.'
+			ref_mutation = entry[0]
+			uniprotaa = entry[1]
+			uniprotpos = entry[2]
+			mut_type = entry[3]
+			if mut_type == 'N': continue
+			ref_acc = entry[4]
+			# skip the acc of interest since it has been already done
+			# if ref_acc == acc: continue
+			ref_gene = entry[5]
+			info = entry[6]
+			text += "<b>" + str(ref_mutation) + "</b>" + ' is a known '+dic_mutations[mut_type]+' mutation.'
+			row = []
+			row.append(ref_gene)
+			# row.append(ref_acc)
+			row.append('<a href=\"https://www.uniprot.org/uniprot/'+acc+'\" target=\"_blank\">'+acc+'<i class="bi bi-box-arrow-in-up-right"></i></a>')
+			row.append(ref_mutation[0])
+			row.append(ref_mutation[1:-1])
+			row.append(ref_mutation[-1])
+			row.append(pfampos)
+			row.append(dic_mutations[mut_type])
+			row.append(info.split('"""')[0] if '"' in info else '-')
 			if mut_type != 'R':
 				text += ' <u>Description</u>: ' + info.split('"""')[0]
 				pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
@@ -95,12 +209,18 @@ def makeText(acc, gene, mutation, mycursor):
 					pubmed_ids_text.append('<a href=\"https://pubmed.ncbi.nlm.nih.gov/' + str(pubmed_id) + '\" target=\"_blank\">' + str(pubmed_id) + '<i class="bi bi-box-arrow-in-up-right"></i></a>')
 				if pubmed_ids_text != []:
 					text += ' <u>PubMed</u>: ' + '; '.join(pubmed_ids_text)
+					row.append('<u>PubMed</u>: ' + '; '.join(pubmed_ids_text))
+				else:
+					row.append('-')
 				text += '.<br>' # add a full stop at the end of the sentence
 			else:
-				text += ' ' + '<a href=\"https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln='
-				text += gene +'#drug-resistance\" target=\"_blank\">COSMIC <i class="bi bi-box-arrow-in-up-right"></i></a>'
+				cosmic = ' ' + '<a href=\"https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln='
+				cosmic += ref_gene +'#drug-resistance\" target=\"_blank\">COSMIC <i class="bi bi-box-arrow-in-up-right"></i></a>'
+				text += cosmic
+				row.append(cosmic)
+			data.append(row)
 	# print (text)
-	return text
+	return data, text
 
 def makeUniqID():
 	'''
@@ -142,7 +262,7 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['predAD'] = results['predictions'][name]['predAD']
 		dic['predRN'] = results['predictions'][name]['predRN']
 		dic['hmmPos'] = results['predictions'][name]['hmmPos']
-		dic['text'] = makeText(dic['acc'], dic['gene'], dic['mutation'], mycursor)
+		_, dic['text'] = makeText(dic['acc'], dic['gene'], dic['mutation'], dic['hmmPos'], mycursor)
 		output.append(dic)
 		# yield str(num) + '\n'
 	
@@ -426,12 +546,58 @@ def configureRoutes(app):
 				# text for acc ends here
 				text += '<tr><tr><td><b>Protein name:</b></td><td>'+row['protein_name']+'</td></tr>'
 				text += '<tr><td><b>Mutation:</b></td><td>'+row['mutation']+'</td></tr>'
+				text += '<tr><td><b>HMM position:</b></td><td>'+row['hmmPos']+'</td></tr>'
 				text += '<tr><tr><td><b>Region of the site:</b></td><td>'+row['region']+'</td></tr></table>'
-				if row['text'] != '':
-					text += '<br><b>More information:</b><br>' + row['text']
+				# if row['text'] != '':
+				# 	text += '<br><b>More information:</b><br>' + row['text']
 				break
 
 		dic = {'text': text}
+		return jsonify(dic)
+	
+	@app.route('/AJAXSummaryTable', methods=['GET', 'POST'])
+	def get_SummaryTable(**kwargs):
+		'''
+		A function to take uniqID, kinase and mutation as input
+		and return summary as dic
+		'''
+		if request.method == 'POST':
+			data = request.get_json(force=True)
+			uniqID = data['uniqID']
+			kinase = data['kinase']
+			mutation = data['mutation']
+			results = data['results']
+		else:
+			kinase = kwargs['kinase']
+			mutation = kwargs['mutation']
+		with open('static/predictor/output/'+uniqID+'/output.json', 'r') as f:
+			output = json.load(f)
+		
+		text = ''
+		for row in output['data']:
+			if row['name'] == kinase+'/'+mutation:
+				acc = row['acc']
+				gene = row['gene']
+				hmmPos = row['hmmPos']
+				data, _ = makeText(acc, gene, mutation, hmmPos, connection())
+				break
+				# text += '<table><tr><td><b>User input:</b></td><td>'+row['name']+'</td></tr>'
+				# text += '<tr><tr><td><b>Gene name:</b></td><td>'+row['gene']+'</td></tr>'
+				# text += '<tr><tr><td><b>UniProt ID:</b></td><td>'+row['uniprot_id']+'</td></tr>'
+				# # text for acc begins here
+				# text += '<tr><td><b>UniProt acc:</b></td><td>'
+				# text += '<a href="https://www.uniprot.org/uniprotkb/'
+				# text += row['acc']+'/entry" target="_blank">'
+				# text += row['acc']+'<i class="bi bi-box-arrow-in-up-right"></i></td></tr>'
+				# # text for acc ends here
+				# text += '<tr><tr><td><b>Protein name:</b></td><td>'+row['protein_name']+'</td></tr>'
+				# text += '<tr><td><b>Mutation:</b></td><td>'+row['mutation']+'</td></tr>'
+				# text += '<tr><tr><td><b>Region of the site:</b></td><td>'+row['region']+'</td></tr></table>'
+				# if row['text'] != '':
+				# 	text += '<br><b>More information:</b><br>' + row['text']
+				# break
+
+		dic = {'data': data, 'acc': acc}
 		return jsonify(dic)
 	
 	@app.route('/AJAXAlignment', methods=['GET', 'POST'])

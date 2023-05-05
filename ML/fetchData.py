@@ -60,10 +60,16 @@ def getRegion(mycursor, acc, mutation):
             region.append('Gly-rich-loop')
         if alnpos == 129:
             region.append('Conserved-Lys-N-term')
-        if alnpos < 30:
-            region.append('N-term')
-        if alnpos > 812:
-            region.append('C-term')
+        
+        # if no specific region found 
+        # then assign a general term
+        if len(region) == 0:
+            if alnpos < 30:
+                region.append('N-term')
+            elif alnpos > 812:
+                region.append('C-term')
+            elif alnpos in range(30, 813):
+                region.append('Kinase-domain')
         
         if len(region) == 0:
             return '-'

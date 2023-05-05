@@ -31,7 +31,7 @@ function showChart(uniqID, kinase, mutation, results)
             };
             var data = [trace1, trace2];
             var layout = {
-              title: 'Predicted effect of the mutation<br>on the kinase activity',
+              title: 'Predicted effect of the '+mutation+'<br>on '+kinase+' activity',
               yaxis: {
                 // autorange: true,
                 range: [0, 1.0],

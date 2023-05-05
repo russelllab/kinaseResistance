@@ -60,7 +60,7 @@ function defineDataTable (tableID, uniqID)
                         },
             dom: 'Bfrtip',
             buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
+                'copy', 'csv', 'excel', 'pdf', 'print', 'colvis'
             ],
             columns: [
                     {
