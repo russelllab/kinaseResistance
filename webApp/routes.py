@@ -9,7 +9,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 import gzip, json, random, string, os, requests, urllib
 from urllib.parse import urlparse
 from urllib.parse import parse_qs
-import re, sys, math
+import re, sys, math, ast
 import time
 import json
 import zlib
@@ -36,7 +36,8 @@ import prepareTestData
 sys.path.insert(1, BASE_DIR+'/Create_SVG/Vlatest/')
 # import create_svg_20230426_kinases_GS
 # import create_svg_20230428_kinases_GS
-import create_svg_20230503_kinases_GS as create_svg
+import create_svg_20230505_kinases_GS as create_svg
+conservation_dic_path = BASE_DIR+'/Create_SVG/Vlatest/'+'Conservation_Dictionary_20230504.txt'
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -462,7 +463,7 @@ def configureRoutes(app):
 		mycursor = connection()
 
 		text = ''
-		mut_type_name = {'A': 'Activating', 'D': 'Deactivating', 'R': 'Resistant'}
+		mut_type_name = {'A': 'Activating', 'D': 'Deactivating', 'R': 'Resistance'}
 		for row in output['data']:
 			if row['name'] != kinase+'/'+mutation: continue			
 			mutation_position = int(row['mutation'][1:-1])
@@ -473,7 +474,7 @@ def configureRoutes(app):
 				position, mutType, acc = hit
 				if acc not in dic_mutations_info:
 					# dic_mutations_info[acc] = {'A':[], 'D':[], 'R':[]}
-					dic_mutations_info[acc] = {'Activating':[], 'Deactivating':[], 'Resistant':[]}
+					dic_mutations_info[acc] = {'Activating':[], 'Deactivating':[], 'Resistance':[]}
 				if mutType == 'N': continue
 				if acc not in accs_in_alignment: continue
 				name = accs_in_alignment[acc]
@@ -495,8 +496,13 @@ def configureRoutes(app):
 					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
 						path = 'static/predictor/output/'+uniqID+'/')
 		'''
+		with open(conservation_dic_path) as g:
+			overconserv = g.read()
+		overallconservation = ast.literal_eval(overconserv)
+		# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
+		# geeky_file.write(str(dic_mutations_info))
 		try:
-			filename = create_svg.main('static/hmm/humanKinasesTrimmed.clustal',\
+			filename = create_svg.main(overallconservation, 'static/hmm/humanKinasesTrimmed.clustal',\
 					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
 						path = 'static/predictor/output/'+uniqID+'/')
 		except Exception as e:

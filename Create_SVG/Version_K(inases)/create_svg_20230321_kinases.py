@@ -9,6 +9,7 @@ import logging
 import re
 nums = re.compile(r"[+-]?\d+(?:\.\d+)?")
 whitespace_killer=re.compile(r"\s+")
+import math
 ### THIS VERSION WORKS FOR PYTHON3
 
 feature_dict = {}
@@ -25,7 +26,19 @@ def CUSTOM_ALIGN(targetfile):
 			#print(idcontainer," except")
 			seq		= newline.split("=")[1].replace("\n","")
 			checkvar = str(idcontainer).count("|")		### sp|Q8NEV4|MYO3A_HUMAN|1
-			if checkvar == 1:
+			if checkvar == 0:
+					try:
+						uniprotler = idcontainer.replace(" ","")
+						seq_name = uniprotler
+						if uniprotler not in translator:
+							translator[uniprotler]=seq_name
+						final_name = uniprotler
+					except:
+						final_name = idcontainer
+					if final_name not in alignments_to_keep:
+						alignments_to_keep[final_name]=str(seq)
+
+			elif checkvar == 1:
 					try:
 						uniprotler = idcontainer.split("|")[0]
 						seq_name = idcontainer.split("|")[1]
@@ -65,7 +78,8 @@ def CUSTOM_ALIGN(targetfile):
 			else:
 					if final_name not in alignments_to_keep:
 						alignments_to_keep[final_name]=str(seq)
-	#print(alignments_to_keep)
+#	print(alignments_to_keep)
+#	print(beginnerdict)
 	return alignments_to_keep, beginnerdict
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 def conservation_checker(identifier, seqdict, beginnerdict, relevantpositions):
@@ -335,9 +349,14 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
                                     startnumberlabel+=1
                                 try:
                                     drawn = 0
-                                    radius = 7
+                                    radi = 7
                                     for colorcateg in coloringcategories:
                                         if str(charactercount) in positions[namus][colorcateg]:
+                                            try:
+                                                radius = math.log10(int(positions[namus][colorcateg][str(charactercount)]))
+						### assuming a new nested dictionary like this: {unip:{colorcateg/A/R/D:{position:evidence}}}
+                                            except:
+                                                radius = radi
                                             dwg.add(dwg.circle((x+5, y+7.5), (radius), fill=colordict[colorcateg]))
                                             dwg.add(dwg.text(letter, insert=(x+5, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill="black"))
                                             drawn = 1
@@ -348,7 +367,7 @@ def create_svg(sequences_dict, positions, colordict, startposition, windowsize, 
                                                 heatmapper[x][colorcateg]=1
                                             else:
                                                 heatmapper[x][colorcateg]+=1
-                                        radius -= 1
+                                        radi -= 1
                                     if drawn == 0:
                                         dwg.add(dwg.text(letter, insert=(x+5, y+8), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill="black"))
                                 except:
@@ -473,6 +492,7 @@ for k in positions:
 
 featurecolors = ["firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink"]
 ###
+
 create_svg(sequences, positions, colors, position_of_interest, window, protein_of_interest, TheForbiddenPositions, feature_dict, trackstart)	### def create_svg(sequences_dict, positions, colors, startposition, windowsize, poi):
 
 
