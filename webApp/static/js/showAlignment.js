@@ -68,6 +68,7 @@ function showAlignment(uniqID, kinase, mutation, results, currentValueWS, curren
 				document.getElementById('alignmentButtonsCard').style.display = 'none';
 				image.setAttribute('data', '');
 				image.innerHTML = 'Could not generate the alignment.';
+				loadingText.setAttribute('style', 'display: none;');
 			}
 
 		}
