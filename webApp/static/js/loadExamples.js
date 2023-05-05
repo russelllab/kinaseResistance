@@ -43,9 +43,9 @@ function call_onclick() {
 
     var div = document.getElementById("headingElement");
     div.style.position = "absolute";
-    div.style.top = "40%";
+    div.style.top = "30%";
     div.style.left = "50%";
-    div.style.transform = "translate(-40%, -50%) scale(1.5)";
+    div.style.transform = "translate(-50%, -50%) scale(2.5)";
 }
 
 function call_onclick_clear() {

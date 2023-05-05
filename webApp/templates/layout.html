@@ -4,11 +4,12 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/navbar.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/footer.css') }}">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	<script src='https://unpkg.com/intro.js/intro.js'></script>
 	<script src="{{url_for('static', filename='/js/makeModals.js')}}"></script>
 	<link href="https://unpkg.com/intro.js/introjs.css" rel="stylesheet">
+	<link rel="icon" href="/static/img/diagram-3-fill.svg" type="image/svg">
 	{% block head %}
 	{% endblock %}
 	<style>
@@ -31,8 +32,8 @@
             font-size:      30px;
             font-weight:    bold;
             text-align: center;
-            padding-top: 0px;
-			position: absolute;
+            padding-top: 5%;
+			position: relative;
 			top: 10%;
   			left: 50%;
 			transform: translate(-50%, -50%);
@@ -94,5 +95,5 @@
 	{% endblock %}
 
 	<footer>
-        Activark was developed in the Russell Lab at Uni-HD, 2023
+		Activark was developed in the Russell Lab at Uni-HD, 2023
     </footer>
