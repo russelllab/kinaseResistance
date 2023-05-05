@@ -124,7 +124,7 @@ def makeText(acc, gene, mutation, hmmPos, mycursor):
 			row.append(pfampos)
 			row.append(dic_ptms[ptmtype])
 			row.append('-') # Description = blank for PTMs
-			if ref_gene == 'BRAF': print ('ref_gene', row)
+			# if ref_gene == 'BRAF': print ('ref_gene', row)
 			row.append('<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ ref_acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>')
 			data.append(row)
 
@@ -190,7 +190,7 @@ def makeText(acc, gene, mutation, hmmPos, mycursor):
 			# if ref_acc == acc: continue
 			ref_gene = entry[5]
 			info = entry[6]
-			text += "<b>" + str(ref_mutation) + "</b>" + ' is a known '+dic_mutations[mut_type]+' mutation.'
+			text += "<b>" + ref_gene+'/'+str(ref_mutation) + "</b>" + ' is a known '+dic_mutations[mut_type]+' mutation.'
 			row = []
 			row.append(ref_gene)
 			# row.append(ref_acc)
@@ -321,7 +321,8 @@ def configureRoutes(app):
 			inputMuts = request.form['inputMut']
 		if request.method == 'GET':
 			# inputMuts = 'BRAF/V600E'
-			f = open(BASE_DIR+'/tests/sample_mutations3.txt', "r")
+			# f = open(BASE_DIR+'/tests/sample_mutations3.txt', "r")
+			f = open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/input.txt', "r")
 			inputMuts = f.read()
 
 		mycursor = connection()
