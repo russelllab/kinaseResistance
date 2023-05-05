@@ -1,4 +1,4 @@
-# (De)activating (phosphomimetics) mutations in the A-loop of BRSK2
+# (De)activating mutations (phosphomimetics) in the A-loop of BRSK2
 BRSK2/T174E
 BRSK2/T174A
 
