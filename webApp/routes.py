@@ -58,17 +58,26 @@ def extract_pubmed_ids(string):
 	matches = re.findall(pattern, string)
 	return [int(match) for match in matches]
 
-def makeText(acc, gene, mutation, hmmPos, mycursor):
+def makeWindowText(position_of_interest, current_position):
+	window = int(current_position) - int(position_of_interest)
+	if window > 0: window = '+'+str(window)
+	else: window = str(window)
+	return '('+window+')'
+
+def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 	'''
 	Make text for prediction
 	'''
 	ws = 3
 	if ws > 0: ws -= 1
 	ws = int(ws/2)
-	dic_mutations = {'A': 'activating', 'D': 'deactivating', 'R': 'resistance'}
+	dic_mutations = {'A': 'Activating', 'D': 'Deactivating', 'R': 'Resistance'}
 	dic_ptms = {'p': 'phosphorylation', 'ub': 'ubiquitination', 'ac': 'acetylation', 'me': 'methylation', 'gl': 'glycosylation', 'sm': 'sumoylation', 'm1': 'myristoylation', 'm2': 'palmitoylation', 'm3': 'myristoylation'}
 	text = ''
 	mutation_position = int(mutation[1:-1])
+	mycursor.execute("SELECT alnpos FROM hmm \
+						WHERE pfampos = %s", (str(interested_kinase_pfampos), ))
+	interested_kinase_alnpos = mycursor.fetchone()[0]
 	data = []
 	for position in range(mutation_position-ws, mutation_position+ws+1):
 	# 	# do it for the acc of interest
@@ -95,9 +104,9 @@ def makeText(acc, gene, mutation, hmmPos, mycursor):
 	# 		data.append(row)
 		
 		# do it for all the accs at the position of interest
-		mycursor.execute("SELECT pfampos FROM positions \
+		mycursor.execute("SELECT alnpos, pfampos FROM positions \
 			WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
-		pfampos = mycursor.fetchone()[0]
+		alnpos, pfampos = mycursor.fetchone()
 		# print(pfampos)
 		if pfampos == '-': continue
 		mycursor.execute("SELECT uniprotaa, uniprotpos, ptmtype, acc, gene FROM ptms \
@@ -121,7 +130,8 @@ def makeText(acc, gene, mutation, hmmPos, mycursor):
 			row.append(uniprotaa)
 			row.append(uniprotpos)
 			row.append('-') # MUT aa = blank for PTMs
-			row.append(pfampos)
+			row.append(str(pfampos) + makeWindowText(pfampos, interested_kinase_pfampos))
+			row.append(str(alnpos) + makeWindowText(alnpos, interested_kinase_alnpos))
 			row.append(dic_ptms[ptmtype])
 			row.append('-') # Description = blank for PTMs
 			# if ref_gene == 'BRAF': print ('ref_gene', row)
@@ -171,9 +181,9 @@ def makeText(acc, gene, mutation, hmmPos, mycursor):
 		# 	data.append(row)
 		
 		# do it for all the accs at the position of interest
-		mycursor.execute("SELECT pfampos FROM positions \
+		mycursor.execute("SELECT alnpos, pfampos FROM positions \
 			WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
-		pfampos = mycursor.fetchone()[0]
+		alnpos, pfampos = mycursor.fetchone()
 		# print(pfampos)
 		if pfampos == '-': continue
 		mycursor.execute("SELECT mutation, wtaa, wtpos, mut_type, acc, gene, info FROM mutations \
@@ -198,7 +208,8 @@ def makeText(acc, gene, mutation, hmmPos, mycursor):
 			row.append(ref_mutation[0])
 			row.append(ref_mutation[1:-1])
 			row.append(ref_mutation[-1])
-			row.append(pfampos)
+			row.append(str(pfampos) + makeWindowText(pfampos, interested_kinase_pfampos))
+			row.append(str(alnpos) + makeWindowText(alnpos, interested_kinase_alnpos))
 			row.append(dic_mutations[mut_type])
 			row.append(info.split('"""')[0] if '"' in info else '-')
 			if mut_type != 'R':
@@ -262,6 +273,17 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['predAD'] = results['predictions'][name]['predAD']
 		dic['predRN'] = results['predictions'][name]['predRN']
 		dic['hmmPos'] = results['predictions'][name]['hmmPos']
+		dic['alnPos'] = results['predictions'][name]['alnPos']
+		adjacentSites = results['predictions'][name]['adjacentSites']
+		centerAdjacentSites = (len(adjacentSites)-1)/2
+		adjacentSitesBold = ''
+		for num, char in enumerate(adjacentSites):
+			if num == centerAdjacentSites:
+				adjacentSitesBold += '<b><u>' + char + '</u></b>'
+			else:
+				adjacentSitesBold += char
+		# dic['adjacentSites'] = results['predictions'][name]['adjacentSites']
+		dic['adjacentSites'] = adjacentSitesBold
 		_, dic['text'] = makeText(dic['acc'], dic['gene'], dic['mutation'], dic['hmmPos'], mycursor)
 		output.append(dic)
 		# yield str(num) + '\n'
@@ -540,7 +562,7 @@ def configureRoutes(app):
 				text += '<tr><tr><td><b>Gene name:</b></td><td>'+row['gene']+'</td></tr>'
 				text += '<tr><tr><td><b>UniProt ID:</b></td><td>'+row['uniprot_id']+'</td></tr>'
 				# text for acc begins here
-				text += '<tr><td><b>UniProt acc:</b></td><td>'
+				text += '<tr><td><b>UniProt accession:</b></td><td>'
 				text += '<a href="https://www.uniprot.org/uniprotkb/'
 				text += row['acc']+'/entry" target="_blank">'
 				text += row['acc']+'<i class="bi bi-box-arrow-in-up-right"></i></td></tr>'
@@ -548,6 +570,7 @@ def configureRoutes(app):
 				text += '<tr><tr><td><b>Protein name:</b></td><td>'+row['protein_name']+'</td></tr>'
 				text += '<tr><td><b>Mutation:</b></td><td>'+row['mutation']+'</td></tr>'
 				text += '<tr><td><b>HMM position:</b></td><td>'+row['hmmPos']+'</td></tr>'
+				text += '<tr><td><b>Alignment position:</b></td><td>'+row['alnPos']+'</td></tr>'
 				text += '<tr><tr><td><b>Region of the site:</b></td><td>'+row['region']+'</td></tr></table>'
 				# if row['text'] != '':
 				# 	text += '<br><b>More information:</b><br>' + row['text']

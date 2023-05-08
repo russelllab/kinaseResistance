@@ -64,15 +64,15 @@ function defineDataTable (tableID, uniqID)
                             if ( data.predAD >= 0.5 ) {
                                 // $(row).addClass( 'important' );
                                 // alert(data.predAD);
-                                $('td:eq(10)', row).css('background-color', '#009e73');
+                                $('td:eq(12)', row).css('background-color', '#009e73');
                             }
                             else if ( data.predAD < 0.5 ) {
-                                $('td:eq(10)', row).css('background-color', '#d55e00');
+                                $('td:eq(12)', row).css('background-color', '#d55e00');
                             }
                             if ( data.predRN >= 0.5 ) {
                                 // $(row).addClass( 'important' );
                                 // alert(data.predRN);
-                                $('td:eq(11)', row).css('background-color', '#0072b2');
+                                $('td:eq(13)', row).css('background-color', '#0072b2');
                             }
                             else if ( data.predRN < 0.5 ) {
                                 // $('td:eq(10)', row).css('background-color', '#FF6863');
@@ -94,7 +94,9 @@ function defineDataTable (tableID, uniqID)
                     { data: 'gene' },
                     { data: 'acc' },
                     { data: 'mutation' },
+                    { data: 'adjacentSites' },
                     { data: 'hmmPos' },
+                    { data: 'alnPos' },
                     { data: 'region' },
                     { data: 'ptmType' },
                     { data: 'mutType' },
@@ -157,7 +159,9 @@ function makeTableHeadFoot()
                         'Gene<br>name',
                         'UniProt<br>accession',
                         'Mutation',
+                        "Site<br>(+/-5 residues)",
                         'HMM<br>position',
+                        'Alignment<br>position',
                         'Region',
                         'PTM<br>type',
                         'Known<br>ADR',
@@ -171,7 +175,9 @@ function makeTableHeadFoot()
                                 'Gene name',
                                 'UniProt accession',
                                 'Mutation',
-                                'HMM position',
+                                'Adjacent residues to the mutation site',
+                                'hidden Markov Model position',
+                                'Alignment position',
                                 'Region of the mutation site<br>in the kinase canonical structure',
                                 'Known PTM at the position of the mutation',
                                 'Known Activating/Deactivating/Resistance mutation',

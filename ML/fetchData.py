@@ -36,6 +36,16 @@ def mutTypes(mycursor, acc, mutation):
     mut_types = [hit[0] for hit in hits]
     return mut_types
 
+def getAlnPos(mycursor, hmmpos):
+    '''Function to fetch aln pos from the DB for a given hmmpos'''
+    mycursor.execute("select alnpos from hmm where \
+                     pfampos=%s", (hmmpos,))
+    hits = mycursor.fetchone()
+    if hits is None:
+        return '-'
+    else:
+        return hits[0]
+
 def getRegion(mycursor, acc, mutation):
     '''Function to fetch region from the DB'''
     mycursor.execute("select alnpos from positions where \
@@ -65,9 +75,9 @@ def getRegion(mycursor, acc, mutation):
         # then assign a general term
         if len(region) == 0:
             if alnpos < 30:
-                region.append('N-term')
+                region.append('N-term Kinase-domain')
             elif alnpos > 812:
-                region.append('C-term')
+                region.append('C-term Kinase-domain')
             elif alnpos in range(30, 813):
                 region.append('Kinase-domain')
         
@@ -102,6 +112,19 @@ def checkInputPositionAA(acc, mutation, mycursor):
 	if hits[0] != mutation[0]:
 		return 2, hits[0]
 	return 0, 'OK'
+
+def getAdjacentSites(mycursor, acc, position, WS):
+    mycursor.execute("select fasta from kinases where acc=%s", (acc,))
+    hits = mycursor.fetchone()
+    if hits is None:
+        return None
+    else:
+        seq = hits[0]
+        startSite = position-WS-1
+        if startSite < 0: startSite = 0
+        endSite = position+WS+1
+        if endSite > len(seq): endSite = len(seq)
+        return seq[startSite:position-1]+seq[position-1].lower()+seq[position+1:endSite]
 
 def retrieve_entries(mycursor, acc, mutation):
 	'''For a give acc/gene/uniprot ID, retireve known information'''

@@ -56,7 +56,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     # Make header
     data = []
     row = ['Input', 'Acc','Gene','UniProtID', 'ProteinName', 'Mutation','Region', 'Dataset']
-    row += ['hmmPos','hmmSS','hmmScoreWT','hmmScoreMUT','hmmScoreDiff']
+    row += ['AdjacentSites', 'alnPos', 'hmmPos','hmmSS','hmmScoreWT','hmmScoreMUT','hmmScoreDiff']
     row += ['Phosphomimic']
     row += ['ChargesWT','ChargesMUT','ChargesDiff']
     startWS = int((WS-1)/2) * -1
@@ -131,6 +131,8 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         mutAA = mutation[-1]
         wtAA = mutation[0]
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
+        alnPos = fetchData.getAlnPos(mycursor, hmmPos)
+        adjacentSites = fetchData.getAdjacentSites(mycursor, acc, position, 5)
         ## Even if the position is not in the HMM,
         ## we still want to show it in the output
         ptm_row = fetchData.getPTMscore(mycursor, acc, position, WS)
@@ -143,7 +145,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         
         # store features in 2D array
         row = [name, acc, gene, uniprot_id, protein_name, mutation, region, 'test']
-        row += [str(hmmPos), str(hmmSS)]
+        row += [adjacentSites, str(alnPos), str(hmmPos), str(hmmSS)]
         row += [float(hmmScoreWT), float(hmmScoreMUT), float(hmmScoreMUT)-float(hmmScoreWT)]
         row.append(is_phosphomimic)
         row += [item for item in charges_row]
@@ -197,7 +199,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     
     # Print the results
     print (''.join(['-' for i in range(50)]))
-    outputText = '#UserInput\tAcc\tGN\tUniProtID\tMutation\tHMMpos\tRegion\tPredAD\tPredRN\n'
+    outputText = '#UserInput\tAcc\tGN\tUniProtID\tMutation\tAlnPos\tHMMpos\tRegion\tPredAD\tPredRN\n'
     for row, predictAD, predictRN in zip(test_data, clfAD.predict_proba(featuresAD), clfRN.predict_proba(featuresRN)):
         ## Set prediction proba to NA if the position is not in the HMM
         user_input = row[0]
@@ -207,13 +209,19 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         protein_name = row[4]
         mutation = row[5]
         region = row[6]
-        hmmPos = row[8]
-        if str(hmmPos) != '-':
-            prediction_probAD = round(predictAD[1], 3)
-            prediction_probRN = round(predictRN[1], 3)
-        else:
+        adjacentSites = row[8]
+        alnPos = row[9]
+        hmmPos = row[10]
+        if str(hmmPos) == '-':
             prediction_probAD = 'NA'
             prediction_probRN = 'NA'
+        # outside the kinase HMM model
+        elif int(hmmPos) < 30 and int(hmmPos) > 812:
+            prediction_probAD = 'NA'
+            prediction_probRN = 'NA'
+        else:
+            prediction_probAD = round(predictAD[1], 3)
+            prediction_probRN = round(predictRN[1], 3)
         outputText += user_input +'\t'+ acc +'\t'+ gene +'\t'+ uniprot_id +'\t' + mutation +'\t'
         outputText += str(hmmPos) +'\t'+ region + '\t'
         outputText += str(prediction_probAD) + '\t' +str(prediction_probRN) + '\n'
@@ -243,9 +251,11 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                         'uniprot_id': uniprot_id,
                         'protein_name': protein_name,
                         'mutation':mutation,
+                        'adjacentSites': adjacentSites,
                         'predAD':prediction_probAD,
                         'predRN':prediction_probRN,
                         'hmmPos':hmmPos,
+                        'alnPos':alnPos,
                         'region':region,
                         'ptmType':ptmType,
                         'mutType':mutType,

@@ -33,15 +33,38 @@ function defineSummaryDataTable (tableID, uniqID, kinase, mutation)
 							buttons: [
 								'copy', 'csv', 'excel', 'pdf', 'print', 'colvis',
 								{
-									text: "Show only "+response['gene']+" instances",
+									text: "Show all instances",
 									action: function(e, dt, node, config){
+										dt.column(7).search('').draw();
+										dt.column(1).search('').draw();
+									}
+								},
+								{
+									text: "Show all "+response['gene']+" instances",
+									action: function(e, dt, node, config){
+										dt.column(7).search('').draw();
 										dt.column(1).search(response['acc']).draw();
 									}
 								},
 								{
-									text: "Show all instances",
+									text: "Show all Activating instances",
 									action: function(e, dt, node, config){
 										dt.column(1).search('').draw();
+										dt.column(7).search("^"+'Activating', true, false).draw();
+									}
+								},
+								{
+									text: "Show all Drug-resistant instances",
+									action: function(e, dt, node, config){
+										dt.column(1).search('').draw();
+										dt.column(7).search("^"+'Resistance').draw();
+									}
+								},
+								{
+									text: "Show all Deactivating instances",
+									action: function(e, dt, node, config){
+										dt.column(1).search('').draw();
+										dt.column(7).search("^"+'Deactivating').draw();
 									}
 								},
 							],
@@ -59,6 +82,7 @@ function defineSummaryDataTable (tableID, uniqID, kinase, mutation)
 								{ title: 'Position' },
 								{ title: 'MUT' },
 								{ title: 'HMM<br>position' },
+								{ title: 'Alignment<br>position' },
 								{ title: 'Info<br>type' },
 								{ title: 'Description' },
 								{ title: 'Reference' },
