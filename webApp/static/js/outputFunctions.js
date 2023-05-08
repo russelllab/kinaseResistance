@@ -1,4 +1,4 @@
-function format(d) {
+function format(d, uniqID) {
     // `d` is the original data object for the row
     // var textToDisplay = '';
     // if (d.ptmType != '-') {
@@ -19,13 +19,33 @@ function format(d) {
     //     }
     //     textToDisplay += d.name + ' is a known ' + mutationTypes.join(' and ') + ' mutation. <br>'
     // }
+    const name = d.name;
+    const kinase = name.split('/')[0];
+    const mutation = name.split('/')[1];
+    const divElement = document.createElement("div");
+    const table = document.createElement("table");
+    table.setAttribute("id", "summaryTableOutput");
+    table.className = "display order-column";
+    table.style = "text-align: center;";
+    const header = document.createElement("h5");
+    header.innerHTML = "Information known in other kinases";
+    header.style = "text-align: left;";
+    divElement.appendChild(header);
+    divElement.appendChild(table);
+    defineSummaryDataTable ("summaryTableOutput", uniqID, kinase, mutation);
+
     return (
-        '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
-        '<tr>' +
-        d.text +
+        // '<table id="summaryTable" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+        // '<table id="summaryTableOutputput" class="display order-column" style="text-align: center;">' +
+        // '<tr>' +
+        // d.text +
         // textToDisplay +
-        '</tr>' +
-        '</table>'
+        // '</tr>' +
+        // '</table>'+
+        // '<script>'+
+        // 'defineSummaryDataTable ("summaryTableOutput", '+uniqID+', '+d.gene+', '+d.mutation+', '+d.acc+');'+
+        // '</script>'
+        divElement
     );
 }
 
@@ -86,6 +106,7 @@ function defineDataTable (tableID, uniqID)
         $('#'+tableID+' tbody').on('click', 'td.dt-control', function () {
             var tr = $(this).closest('tr');
             var row = table.row(tr);
+            // alert(row.data().name);
 
             if (row.child.isShown()) {
                 // This row is already open - close it
@@ -93,7 +114,7 @@ function defineDataTable (tableID, uniqID)
                 tr.removeClass('shown');
             } else {
                 // Open this row
-                row.child(format(row.data())).show();
+                row.child(format(row.data(), uniqID)).show();
                 tr.addClass('shown');
             }
         });

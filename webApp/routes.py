@@ -567,7 +567,6 @@ def configureRoutes(app):
 			uniqID = data['uniqID']
 			kinase = data['kinase']
 			mutation = data['mutation']
-			results = data['results']
 		else:
 			kinase = kwargs['kinase']
 			mutation = kwargs['mutation']
