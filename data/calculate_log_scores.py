@@ -1,4 +1,4 @@
-#/usr/bin/env python3
+#!/usr/bin/env python3
 # coding: utf-8
 
 '''
@@ -18,7 +18,7 @@ def calculate_log_odds(input_hmm):
     dic_background = {}
     dic_log_odds = {}
     dic_prevalent_aa = {}
-    for line in gzip.open(input_hmm, 'rt'):
+    for line in open(input_hmm, 'r'):
         if line.split()[0] == 'COMPO':
             background_scores = line.replace('\n', '').split()[1:]
             # print (background_scores)
@@ -44,7 +44,47 @@ class Protein:
         self.id = id
         self.seq = ''
 
-def make_alignment(input_aln):
+def make_alignment_fasta(input_aln):
+    '''
+    A function that takes FASTA-formatted alignment
+    file as input and creates a dic that stores Protein
+    class info. It also convert the alignent into a
+    matrix format and returns the name of human id in
+    the alignment
+    '''
+    dic_proteins = {}
+    alignment = []
+    human_name = ''
+    for line in open(input_aln, 'r'):
+        if line.split() == []:
+            continue
+        if line[0] == '#':
+            continue
+        # print (line.split())
+        if line.split()[0] in ['CLUSTAL', '//']:
+            continue
+        if line[0] == '>':
+            uniprot_acc = line.split('>')[1].rstrip().lstrip()
+            if uniprot_acc not in dic_proteins: dic_proteins[uniprot_acc] = Protein(uniprot_acc)    
+            # if 'HUMAN_' in uniprot_acc and human_name == '': # HUMAN_* can occur more than once, esp in paralogs - take the first one
+            if human_name == '': # HUMAN_* can occur more than once, esp in paralogs - take the first one
+                human_name = uniprot_acc
+        else:
+            seq_aln = line.replace('\n', '').split()[1].upper()
+            # print (seq_aln)
+            dic_proteins[uniprot_acc].seq += seq_aln
+
+    for uniprot_acc in dic_proteins:
+        row = []
+        for char in dic_proteins[uniprot_acc].seq:
+            row.append(char)
+        alignment.append(row)
+
+    alignment = np.array(alignment)
+    # print (alignment[:,9])
+    return dic_proteins, alignment, human_name
+
+def make_alignment_clustal(input_aln):
     '''
     A function that takes CLUSTAL-formatted alignment
     file as input and creates a dic that stores Protein
@@ -55,7 +95,7 @@ def make_alignment(input_aln):
     dic_proteins = {}
     alignment = []
     human_name = ''
-    for line in gzip.open(input_aln, 'rt'):
+    for line in open(input_aln, 'r'):
         if line.split() == []:
             continue
         if line[0] == '#':
@@ -64,7 +104,8 @@ def make_alignment(input_aln):
         if line.split()[0] in ['CLUSTAL', '//']:
             continue
         uniprot_acc = line.split()[0]
-        if 'HUMAN_' in uniprot_acc and human_name == '': # HUMAN_* can occur more than once, esp in paralogs - take the first one
+        # if 'HUMAN_' in uniprot_acc and human_name == '': # HUMAN_* can occur more than once, esp in paralogs - take the first one
+        if human_name == '': # HUMAN_* can occur more than once, esp in paralogs - take the first one
             human_name = uniprot_acc
         seq_aln = line.replace('\n', '').split()[1].upper()
         # print (seq_aln)
@@ -106,7 +147,7 @@ def main(input_aln, input_hmm):
         wt_score = dic_log_odds[aln_position+1][wt_aa]
         for mut_aa in 'ACDEFGHIKLMNPQRSTVWY':
             mut_score = dic_log_odds[aln_position+1][mut_aa]
-            text += human_name.split('_')[1] + '/' + wt_aa + str(count) + mut_aa + ' '
+            text += human_name + '/' + wt_aa + str(count) + mut_aa + ' '
             text += dic_prevalent_aa[aln_position+1] + ' '
             text += str(wt_score) + ' ' + str(mut_score) + ' ' + str(round(mut_score-wt_score, 5)) + ' '
             text += ''.join(alignment[:,aln_position])  + '\n'
