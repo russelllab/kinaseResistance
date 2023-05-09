@@ -8,6 +8,8 @@
 - Adjusted the Activating/Deactivating/Resistance labels and boxes
 - Introduced a second sorting rule. Default is **1**, that is sorting by available functional information. Rule **2** sorts by sequence identity.
 
+## Using the updated script
+
 To use the script we execute the following command:
 
 `python3 create_svg_20230509_kinases_GS.py P46734 84 9 5 humanKinasesTrimmed.clustal Mutational_Infofile_Kinases_V2.txt GenerelleKonservierung_May-09-2023.txt none SeqIdentity_Matrix_May-09-2023.txt 2` 
