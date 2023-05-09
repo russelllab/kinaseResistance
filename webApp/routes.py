@@ -33,11 +33,10 @@ else:
 sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 
-sys.path.insert(1, BASE_DIR+'/Create_SVG/Vlatest/')
-# import create_svg_20230426_kinases_GS
-# import create_svg_20230428_kinases_GS
-import create_svg_20230503_kinases_GS as create_svg
-conservation_dic_path = BASE_DIR+'/Create_SVG/Vlatest/'+'Conservation_Dictionary_20230504.txt'
+sys.path.insert(1, BASE_DIR+'/Create_SVG/Enhancements_May2023/')
+import create_svg_20230509_kinases_GS as create_svg
+conservation_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/'+'GenerelleKonservierung_May-09-2023.txt'
+identity_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/'+'SeqIdentity_Matrix_May-09-2023.txt'
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -688,10 +687,15 @@ def configureRoutes(app):
 		with open(conservation_dic_path) as g:
 			overconserv = g.read()
 		overallconservation = ast.literal_eval(overconserv)
+		with open(identity_dic_path) as h:
+			data_ident = h.read()
+		identitydictionary = ast.literal_eval(data_ident)
+		sortingvalue = '1'
 		# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
 		# geeky_file.write(str(dic_mutations_info))
 		try:
-			filename = create_svg.main('static/hmm/humanKinasesTrimmed.clustal',\
+			filename = create_svg.main(sortingvalue, identitydictionary, overallconservation, \
+			      'static/hmm/humanKinasesTrimmed.clustal',\
 					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
 						path = 'static/predictor/output/'+uniqID+'/')
 		except Exception as e:

@@ -6,12 +6,13 @@ A pytest script to test create_svg_2023*_kinases*.py
 
 import pytest
 import psycopg2
-import os, sys
+import os, sys, ast
 os.sys.path.append('ML/')
 import fetchData
-sys.path.insert(1, 'Create_SVG/Vlatest/')
-import create_svg_20230503_kinases_GS as create_svg
-# conservation_dic_path = BASE_DIR+'/Create_SVG/Vlatest/'+'Conservation_Dictionary_20230504.txt'
+sys.path.insert(1, 'Create_SVG/Enhancements_May2023/')
+import create_svg_20230509_kinases_GS as create_svg
+conservation_dic_path = 'Create_SVG/Enhancements_May2023/'+'GenerelleKonservierung_May-09-2023.txt'
+identity_dic_path = 'Create_SVG/Enhancements_May2023/'+'SeqIdentity_Matrix_May-09-2023.txt'
 
 def get_accs_in_alignment(alignmentFile):
     """
@@ -65,6 +66,12 @@ def test_createSVG():
     """
     Test the CreateSVG script
     """
+    with open(conservation_dic_path) as g:
+        overconserv = g.read()
+        overallconservation = ast.literal_eval(overconserv)
+    with open(identity_dic_path) as h:
+        data_ident = h.read()
+    identitydictionary = ast.literal_eval(data_ident)
     alignmentFile = 'webApp/static/hmm/humanKinasesTrimmed.clustal'
     accs_in_alignment = get_accs_in_alignment(alignmentFile)
     # Instances to test
@@ -76,22 +83,24 @@ def test_createSVG():
     for instance in instances:
         for ws in [10, 25, 50]:
             for topN in [10, 20, 50]:
-                # print (instance[0], ws, topN)
-                known_verdict = instance[2]
-                mutation_position = int(instance[1])
-                kinase = instance[0]
-                dic_mutations_info = make_dic_mutation_info(accs_in_alignment)
-                verdict = kinase in dic_mutations_info
-                # check if the verdict is correct (as specified)
-                assert verdict == known_verdict
-                # run the create_svg script
-                try:
-                    create_svg.main(alignmentFile, kinase, mutation_position,\
+                for sortingvalue in ['1', '2']:
+                    # print (instance[0], ws, topN)
+                    known_verdict = instance[2]
+                    mutation_position = int(instance[1])
+                    kinase = instance[0]
+                    dic_mutations_info = make_dic_mutation_info(accs_in_alignment)
+                    verdict = kinase in dic_mutations_info
+                    # check if the verdict is correct (as specified)
+                    assert verdict == known_verdict
+                    # run the create_svg script
+                    try:
+                        create_svg.main(sortingvalue, identitydictionary, overallconservation,\
+                                        alignmentFile, kinase, mutation_position,\
                                         int(ws), int(topN), dic_mutations_info)
-                except KeyError as error:
-                    # assert if this happens when the given kinase is in the list below
-                    assert kinase in ['P1506']
-                    continue
+                    except KeyError as error:
+                        # assert if this happens when the given kinase is in the list below
+                        assert kinase in ['P1506']
+                        continue
 
 if __name__ == '__main__':
     test_createSVG()
