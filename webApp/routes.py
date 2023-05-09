@@ -651,14 +651,17 @@ def configureRoutes(app):
 
 		mycursor = connection()
 
-		text = ''
+		dic_mutations_info = {}
 		mut_type_name = {'A': 'Activating', 'D': 'Deactivating', 'R': 'Resistance'}
+		ptm_type_name = {'me': 'Methylation', 'm1': 'Methylation', 'm2': 'Methylation',\
+		   				'm3': 'Methylation', 'p': 'Phosphorylation', 'ac': 'Acetylation',
+						'ub': 'Ubiquitination', 'sm': 'Sumoylation', 'gl': 'O-GlcNAc'}
 		for row in output['data']:
 			if row['name'] != kinase+'/'+mutation: continue			
 			mutation_position = int(row['mutation'][1:-1])
+			## Mutations
 			mycursor.execute("SELECT wtpos, mut_type, acc FROM mutations")
 			hits = mycursor.fetchall()
-			dic_mutations_info = {}
 			for hit in hits:
 				position, mutType, acc = hit
 				if acc not in dic_mutations_info:
@@ -668,14 +671,21 @@ def configureRoutes(app):
 				if acc not in accs_in_alignment: continue
 				name = accs_in_alignment[acc]
 				start = int(name.split('|')[-1])
-				# start, end = name.split('|')[-1].split('-')
-				# if start == 'start': start = 1
-				# else: start = int(start)
-				# if end == 'end': end = 10000
-				# else: end = int(end)
-				# if int(position) >= start and int(position) <= end:
 				if int(position) >= start:
 					dic_mutations_info[acc][mut_type_name[mutType]].append(str(position))
+			## PTMs
+			# mycursor.execute("SELECT uniprotpos, ptmtype, acc FROM ptms")
+			# hits = mycursor.fetchall()
+			# for hit in hits:
+			# 	position, ptmType, acc = hit
+			# 	if acc not in accs_in_alignment: continue
+			# 	if acc not in dic_mutations_info:
+			# 		dic_mutations_info[acc] = {}
+			# 	name = accs_in_alignment[acc]
+			# 	start = int(name.split('|')[-1])
+			# 	if int(position) >= start:
+			# 		if ptm_type_name[ptmType] not in dic_mutations_info[acc]: dic_mutations_info[acc][ptm_type_name[ptmType]] = []
+			# 		dic_mutations_info[acc][ptm_type_name[ptmType]].append(str(position))
 			break
 		
 		# print (dic_mutations_info)
