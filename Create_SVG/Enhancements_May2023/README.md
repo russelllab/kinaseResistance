@@ -1,3 +1,13 @@
+## Changelog 09. May 2023
+- Conservation barplots now go from bottom to top
+  - Conservation shown is based on the first non-gap character frequency. This fixes the issue that BRAF V600E was previously shown as highly conserved, although that came from this position being ~ 99 % GAPs.
+  - Conservation is now calculated based on the complete alignment, not only on the shown sequences
+- Heatmap is now scaled based on the complete alignment, not only on shown sequences. Additionally the colors are scaled based on the highest absolute value for a given category, and are not based on the visible window
+- Split the mouseover information into two lines, first line showing Mechismo-Style format, second line showing information
+  - This enables the user in principle to copy & paste the information, as the user mouse can now access the mouseover box
+- Adjusted the Activating/Deactivating/Resistance labels and boxes
+- Introduced a second sorting rule. Default is **1**, that is sorting by available functional information. Rule **2** sorts by sequence identity.
+
 To use the script we execute the following command:
 
 `python3 create_svg_20230509_kinases_GS.py P46734 84 9 5 humanKinasesTrimmed.clustal Mutational_Infofile_Kinases_V2.txt GenerelleKonservierung_May-09-2023.txt none SeqIdentity_Matrix_May-09-2023.txt 2` 
