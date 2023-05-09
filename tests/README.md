@@ -1,4 +1,4 @@
-### How to test your code?
+### How to prepare to test your code?
 This system of tests uses ![pytest](https://docs.pytest.org/en/7.3.x/)
 1. Always write tests in the `tests` folder
 2. The name of your test script must start with `test_` (this is default and <b><i>can</i></b> be changed but for sake of brevity we will let it be)
@@ -10,8 +10,12 @@ with `test_*`
 7. Remember these inputs can be intentionally wrong or right
 8. Write `assert` statements to check if your input returns the correct result
 
-### How to run your pytest?
+---
+
+### How to run pytest on your code?
 >pytest tests/test_createSVG.py
 
-### How to run all pytest?
+---
+
+### How to run pytest on all the tests?
 >pytest tests/*
