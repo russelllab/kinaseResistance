@@ -26,7 +26,7 @@ function downloadSVG(uniqID) {
 	link.click();
 	document.body.removeChild(link);
 }
-function showAlignment(uniqID, kinase, mutation, results, currentValueWS, currentValueTopN)
+function showAlignment(uniqID, kinase, mutation, results, currentValueWS, currentValueTopN, currentSortType)
 {	
 	// Set the default values
 	if (currentValueWS === undefined) {
@@ -35,6 +35,10 @@ function showAlignment(uniqID, kinase, mutation, results, currentValueWS, curren
 	if (currentValueTopN === undefined) {
 		currentValueTopN = 10;
 	  }
+	if (currentSortType === undefined) {
+		currentSortType = '1';
+	}					
+	// alert(currentSortType);
 	// Show "loading" while the process is running
 	var image = document.getElementById('aliView');
 	image.setAttribute('data', '');
@@ -54,6 +58,7 @@ function showAlignment(uniqID, kinase, mutation, results, currentValueWS, curren
 							'results': results,
 							'WS': currentValueWS,
 							'topN': currentValueTopN,
+							'sortType': currentSortType,
 						}),
 		success: function (response){
             // document.getElementById('alignmentCard').innerHTML = response['filepath'];

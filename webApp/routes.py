@@ -636,6 +636,7 @@ def configureRoutes(app):
 			results = data['results']
 			ws = data['WS']
 			topN = data['topN']
+			sortType = data['sortType']
 		else:
 			kinase = kwargs['kinase']
 			mutation = kwargs['mutation']
@@ -690,7 +691,7 @@ def configureRoutes(app):
 		with open(identity_dic_path) as h:
 			data_ident = h.read()
 		identitydictionary = ast.literal_eval(data_ident)
-		sortingvalue = '1'
+		sortingvalue = sortType
 		# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
 		# geeky_file.write(str(dic_mutations_info))
 		try:
