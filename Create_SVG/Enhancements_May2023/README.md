@@ -24,5 +24,5 @@ The dictionaries **GenerelleKonservierung_May-09-2023.txt** and **SeqIdentity_Ma
  
 Use the script like this:
 
-'python3 Precalculate.py humanKinasesTrimmed.clustal Mutational_Infofile_Kinases_V2.txt 2 P15056 600 20'.
+`python3 Precalculate.py humanKinasesTrimmed.clustal Mutational_Infofile_Kinases_V2.txt 2 P15056 600 20`.
 The last 4 fields ("2 P15056 600 20") are only for debugging purposes. Simply provide the alignment and the information and the aforementioned dictionaries will be written to disk.
