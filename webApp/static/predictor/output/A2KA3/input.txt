@@ -1,9 +1,0 @@
-# Deactivating mutation in CDK6 
-Q00534/T49A
-
-# Resistant mutation in BRAF
-BRAF/V600E
-
-BRAF/T600E
-
-BRAQ/V600E
