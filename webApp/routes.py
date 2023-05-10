@@ -32,11 +32,12 @@ else:
 
 sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
+import fetchData
 
-sys.path.insert(1, BASE_DIR+'/Create_SVG/Enhancements_May2023/')
-import create_svg_20230509_kinases_GS as create_svg
-conservation_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/'+'GenerelleKonservierung_May-09-2023.txt'
-identity_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/'+'SeqIdentity_Matrix_May-09-2023.txt'
+sys.path.insert(1, BASE_DIR+'/Create_SVG/Enhancements_May2023/May10th/')
+import create_svg_20230510_kinases_GS as create_svg
+conservation_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/May10th/'+'GenerelleKonservierung_May-10-2023.txt'
+identity_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/May10th/'+'SeqIdentity_Matrix_May-10-2023.txt'
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -55,7 +56,7 @@ def extract_pubmed_ids(string):
 	# https://pubmed.ncbi.nlm.nih.gov/11781872/
 	pattern = r"PubMed:\s*(\d+)"
 	matches = re.findall(pattern, string)
-	return [int(match) for match in matches]
+	return [str(match) for match in matches]
 
 def makeWindowText(position_of_interest, current_position):
 	window = int(current_position) - int(position_of_interest)
@@ -214,12 +215,14 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			if mut_type != 'R':
 				text += ' <u>Description</u>: ' + info.split('"""')[0]
 				pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
-				pubmed_ids_text = []
-				for pubmed_id in pubmed_ids:
-					pubmed_ids_text.append('<a href=\"https://pubmed.ncbi.nlm.nih.gov/' + str(pubmed_id) + '\" target=\"_blank\">' + str(pubmed_id) + '<i class="bi bi-box-arrow-in-up-right"></i></a>')
-				if pubmed_ids_text != []:
-					text += ' <u>PubMed</u>: ' + '; '.join(pubmed_ids_text)
-					row.append('<u>PubMed</u>: ' + '; '.join(pubmed_ids_text))
+				pubmed_ids_text = '+or+'.join(pubmed_ids)
+				# for pubmed_id in pubmed_ids:
+					# pubmed_ids_text.append('<a href=\"https://pubmed.ncbi.nlm.nih.gov/' + str(pubmed_id) + '\" target=\"_blank\">' + str(pubmed_id) + '<i class="bi bi-box-arrow-in-up-right"></i></a>')
+				if pubmed_ids != []:
+					# text += ' <u>PubMed</u>: ' + '; '.join(pubmed_ids_text)
+					text += '<a href=\"https://pubmed.ncbi.nlm.nih.gov/?term=' + str(pubmed_ids_text) + '\" target=\"_blank\">PubMed<i class="bi bi-box-arrow-in-up-right"></i></a>'
+					# row.append('<u>PubMed</u>: ' + '; '.join(pubmed_ids_text))
+					row.append('<a href=\"https://pubmed.ncbi.nlm.nih.gov/?term=' + str(pubmed_ids_text) + '\" target=\"_blank\">PubMed<i class="bi bi-box-arrow-in-up-right"></i></a>')
 				else:
 					row.append('-')
 				text += '.<br>' # add a full stop at the end of the sentence
@@ -660,32 +663,44 @@ def configureRoutes(app):
 			if row['name'] != kinase+'/'+mutation: continue			
 			mutation_position = int(row['mutation'][1:-1])
 			## Mutations
-			mycursor.execute("SELECT wtpos, mut_type, acc FROM mutations")
+			mycursor.execute("SELECT wtpos, mut_type, acc, info FROM mutations")
 			hits = mycursor.fetchall()
 			for hit in hits:
-				position, mutType, acc = hit
+				position, mutType, acc, info = hit
 				if acc not in dic_mutations_info:
 					# dic_mutations_info[acc] = {'A':[], 'D':[], 'R':[]}
 					dic_mutations_info[acc] = {'Activating':[], 'Deactivating':[], 'Resistance':[]}
 				if mutType == 'N': continue
 				if acc not in accs_in_alignment: continue
+				if mutType in ['A', 'D']:
+					pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
+					text = ''
+					if pubmed_ids != []:
+						search_text = '+or+'.join(pubmed_ids)
+						text += '<a href=\"https://pubmed.ncbi.nlm.nih.gov/?term=' + str(search_text) + '\" target=\"_blank\">PubMed<i class="bi bi-box-arrow-in-up-right"></i></a>'
+				else:
+					text = ' ' + '<a href=\"https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln='
+					text += row['gene'] +'#drug-resistance\" target=\"_blank\">COSMIC <i class="bi bi-box-arrow-in-up-right"></i></a>'
 				name = accs_in_alignment[acc]
 				start = int(name.split('|')[-1])
 				if int(position) >= start:
 					dic_mutations_info[acc][mut_type_name[mutType]].append(str(position))
-			## PTMs
-			# mycursor.execute("SELECT uniprotpos, ptmtype, acc FROM ptms")
-			# hits = mycursor.fetchall()
-			# for hit in hits:
-			# 	position, ptmType, acc = hit
-			# 	if acc not in accs_in_alignment: continue
-			# 	if acc not in dic_mutations_info:
-			# 		dic_mutations_info[acc] = {}
-			# 	name = accs_in_alignment[acc]
-			# 	start = int(name.split('|')[-1])
-			# 	if int(position) >= start:
-			# 		if ptm_type_name[ptmType] not in dic_mutations_info[acc]: dic_mutations_info[acc][ptm_type_name[ptmType]] = []
-			# 		dic_mutations_info[acc][ptm_type_name[ptmType]].append(str(position))
+					# dic_mutations_info[acc][mut_type_name[mutType]].append([str(position), text])
+			# PTMs
+			mycursor.execute("SELECT uniprotpos, ptmtype, acc FROM ptms")
+			hits = mycursor.fetchall()
+			for hit in hits:
+				position, ptmType, acc = hit
+				if acc not in accs_in_alignment: continue
+				if acc not in dic_mutations_info:
+					dic_mutations_info[acc] = {}
+				name = accs_in_alignment[acc]
+				start = int(name.split('|')[-1])
+				if int(position) >= start:
+					if ptm_type_name[ptmType] not in dic_mutations_info[acc]: dic_mutations_info[acc][ptm_type_name[ptmType]] = []
+					text = '<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ row['acc'] +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>'
+					# dic_mutations_info[acc][ptm_type_name[ptmType]].append([str(position), text])
+					dic_mutations_info[acc][ptm_type_name[ptmType]].append(str(position))
 			break
 		
 		# print (dic_mutations_info)
@@ -736,6 +751,152 @@ def configureRoutes(app):
 			modalText += line
 		dic['modalText'] = modalText
 		print (modalText)
+		return jsonify(dic)
+	
+	@app.route('/AJAXHomology', methods=['GET', 'POST'])
+	def get_homology (**kwargs):
+		'''
+		mycursor = connection()
+		mycursor.execute("SELECT mutation, mut_type, acc FROM mutations")
+		hits = mycursor.fetchall()
+		dic_mutations_info = {'A':[], 'D':[], 'R':[], 'N':[]}
+		for hit in hits:
+			mutation, mutType, acc = hit
+			dic_mutations_info[mutType].append(acc+'/'+mutation)
+		
+		# extract homology scores from DB
+		homologs = ['orth', 'all_homs', 'bpsh', 'bpso', 'excl_para', 'spec_para']
+		# dic_scores = {'A':[], 'D':[], 'R':[], 'N':[]}
+		dic_scores = {}
+		data = []
+		for homolog in homologs:
+			if homolog not in dic_scores: dic_scores[homolog] = {'A':[], 'D':[], 'R':[], 'N':[]}
+			for mutType in dic_mutations_info:
+				# if mutType not in ['A', 'D']: continue
+				for instance in dic_mutations_info[mutType]:
+					acc = instance.split('/')[0]
+					mutation = instance.split('/')[1]
+					position = str(mutation[1:-1])
+					wtAA = mutation[0]
+					mutAA = mutation[-1]
+					mycursor.execute("SELECT "+wtAA+"_score, "+mutAA+"_score  FROM "+homolog+"\
+									WHERE acc = '"+acc+"' AND position = '"+position+"'")
+					hits = mycursor.fetchall()
+					for hit in hits:
+						wt_score, mut_score = hit
+						dic_scores[homolog][mutType].append(float(mut_score) - float(wt_score))
+						data.append([homolog, mutType, acc, mutation, str(float(mut_score)-float(wt_score))])
+		
+		text = 'homolog\tmutType\tacc\tmutation\tscore\n'
+		for row in data:
+			text += '\t'.join(row) + '\n'
+		open('static/data/homologyScores.tsv', 'w').write(text)
+					
+			
+		dic = dic_scores
+		'''
+		dic = {}
+		return jsonify(dic)
+	
+	@app.route('/AJAXPTM', methods=['GET', 'POST'])
+	def get_PTM (**kwargs):
+		'''
+		PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
+		mycursor = connection()
+		mycursor.execute("SELECT mutation, mut_type, acc FROM mutations")
+		hits = mycursor.fetchall()
+		dic_mutations_info = {'A':[], 'D':[], 'R':[], 'N':[]}
+		for hit in hits:
+			mutation, mutType, acc = hit
+			dic_mutations_info[mutType].append(acc+'/'+mutation)
+		
+		WS = 3
+		if WS > 0: ws = WS - 1
+		ws = int(WS/2)
+		# extract homology scores from DB
+		ptm_header = []
+		for position in range(ws*(-1), ws+1):
+			for ptm_type in PTM_TYPES:
+				ptm_header.append(ptm_type+'_'+str(position))
+				ptm_header.append(ptm_type+'_pfam_'+str(position))
+		
+		dic_scores = {}
+		data = []
+		for mutType in dic_mutations_info:
+			# if mutType not in ['A', 'D']: continue
+			for instance in dic_mutations_info[mutType]:
+				acc = instance.split('/')[0]
+				mutation = instance.split('/')[1]
+				position = int(mutation[1:-1])
+				wtAA = mutation[0]
+				mutAA = mutation[-1]
+				values = fetchData.getPTMscore(mycursor, acc, position, WS)
+				for value, ptm_head in zip(values, ptm_header):
+					if ptm_head not in dic_scores: dic_scores[ptm_head] = {'A':[], 'D':[], 'R':[], 'N':[]}
+					dic_scores[ptm_head][mutType].append(value)
+					data.append([ptm_head, mutType, acc, mutation, str(value)])
+		
+		text = 'ptm_head\tmutType\tacc\tmutation\tscore\n'
+		for row in data:
+			text += '\t'.join(row) + '\n'
+		open('static/data/ptmScores.tsv', 'w').write(text)
+		'''
+			
+		# dic = dic_scores
+		
+		dic = {}
+		return jsonify(dic)
+	
+	@app.route('/AJAXADR', methods=['GET', 'POST'])
+	def get_ADR (**kwargs):
+		'''
+		MUT_TYPES = ['A', 'D', 'R']
+		mycursor = connection()
+		mycursor.execute("SELECT mutation, mut_type, acc FROM mutations")
+		hits = mycursor.fetchall()
+		dic_mutations_info = {'A':[], 'D':[], 'R':[], 'N':[]}
+		for hit in hits:
+			mutation, mutType, acc = hit
+			dic_mutations_info[mutType].append(acc+'/'+mutation)
+		
+		WS = 3
+		if WS > 0: ws = WS - 1
+		ws = int(WS/2)
+		# extract homology scores from DB
+		mut_header = []
+		for position in range(ws*(-1), ws+1):
+			for mut_type in MUT_TYPES:
+				mut_header.append(mut_type+'_'+str(position))
+				mut_header.append(mut_type+'_pfam_'+str(position))
+		
+		dic_scores = {}
+		data = []
+		num = 0
+		for mutType in dic_mutations_info:
+			# print (num)
+			# if mutType not in ['A', 'D']: continue
+			for instance in dic_mutations_info[mutType]:
+				acc = instance.split('/')[0]
+				mutation = instance.split('/')[1]
+				position = int(mutation[1:-1])
+				wtAA = mutation[0]
+				mutAA = mutation[-1]
+				values = fetchData.getADRvector(mycursor, acc, position, WS, WS)
+				print (values)
+				for value, mut_head in zip(values, mut_header):
+					if mut_head not in dic_scores: dic_scores[mut_head] = {'A':[], 'D':[], 'R':[], 'N':[]}
+					dic_scores[mut_head][mutType].append(value)
+					data.append([mut_head, mutType, acc, mutation, str(value)])
+		
+		text = 'adr_head\tmutType\tacc\tmutation\tscore\n'
+		for row in data:
+			text += '\t'.join(row) + '\n'
+		open('static/data/adrScores.tsv', 'w').write(text)
+		'''
+			
+		# dic = dic_scores
+		
+		dic = {}
 		return jsonify(dic)
 
 	@app.route('/progress')
