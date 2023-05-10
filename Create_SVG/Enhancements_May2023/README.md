@@ -1,3 +1,26 @@
+## Changelog 10. May 2023
+- Changed some of the positionings (heatmap, color legend, conservation barplots) to be dynamically placed based on the length of provided functional annotations
+- Added new sorting rules
+
+| Sorting Value        | Sorting by ...  | 
+| ------------- |:-------------:| 
+| 1 | No. of functional infos |
+| 2 | Sequence Identity |
+| 3| Activating |
+| 4 |Deactivating  |
+| 5 | Resistance |
+| 6 |Phosphorylation  |
+| 7 | Acetylation |
+| 8 | Ubiquitination |
+| 9 | Sumoylation |
+| 10 | O-GlcNAc |
+| 11 |  Methylation|
+     
+- Please use the dictionaries **GenerelleKonservierung_May-10-2023.txt** and **SeqIdentity_Matrix_May-10-2023.txt**
+- **No changes to how the script or main is called!**
+
+
+
 ## Changelog 09. May 2023
 - Conservation barplots now go from bottom to top
   - Conservation shown is based on the first non-gap character frequency. This fixes the issue that BRAF V600E was previously shown as highly conserved, although that came from this position being ~ 99 % GAPs.
