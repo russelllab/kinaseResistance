@@ -124,52 +124,39 @@
 						</button>
 					</h3>
 					<!-- Alignment buttons -->
-					<div id='alignmentButtonsCard' class=".border-0" style="width: 20%; outline: none !important; float: left;" data-step="7" data-title="Alignment control panel" data-intro="Use the control panel to set filters and download the image">
+					<div id='alignmentButtonsCard' class=".border-0" style="width: 20%; outline: none !important; float: left; text-align: center;" data-step="7" data-title="Alignment control panel" data-intro="Use the control panel to set filters and download the image">
 						<!-- AliButtons objekt will be drawn inside this DIV -->
 						<div class="input-container">
-							<label for="number1" style="display: flex;">Window Size</label>
+							<label for="number1" style="padding-top: 0%; display:block;">Window Size</label>
 							<input type="number" id="number1" name="number1" value="20" style="width: 100px;">
 							<button id="decrement1">-</button>
 							<button id="increment1">+</button>
 						</div>
 						<div class="input-container">
-							<label for="number2" style="display: flex; padding-top: 5%;">Show top N kinases</label>
+							<label for="number2" style="padding-top: 5%;">Show top N kinases</label>
 							<input type="number" id="number2" name="number2" value="10" style="width: 100px;">
 							<button id="decrement2">-</button>
 							<button id="increment2">+</button>
 						</div>
 						<!-- Example single danger button -->
-						<div class="input-container" style="display: flex; padding-top: 5%;">
-							<label style="display: flex; padding-top: 5%; text-align: center;">Sort alignment by</label>
-							<div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio1" checked>
-									<label class="form-check-label" for="flexRadio1">
-										Known information
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio2">
-									<label class="form-check-label" for="flexRadio2">
-										Sequence identity
-									</label>
-								</div>
-							</div>
+						<div class="input-container">
+							<label for="dropdownButton" style="padding-top: 5%;">Sort alignment by</label>
+							<div class="dropdown" id="dropdownButton">
+							  </div>
 						</div>
-						
-
-						<div class="input-container" style="display: flex; padding-top: 5%;">
+						<div class="input-container" style="padding-top: 10%;">
 							<button onclick=callShowAlignment()>Apply filters<i style="padding-left: 3px;" class="bi bi-funnel"></i></button>
 						</div>
-						<div class="input-container" style="display: flex; padding-top: 20%;">
+						<hr>
+						<div class="input-container" style="padding-top: 10%;">
 							<button onclick=downloadSVG({{uniqID|safe}})>Download Image <i style="padding-left: 3px;" class="bi bi-download"></i></button>
 						</div>
-						<div class="input-container" style="display: flex; padding-top: 5%;">
+						<div class="input-container" style="padding-top: 5%;">
 							<button onclick=openImage({{uniqID|safe}})>Open in a new tab <i style="padding-left: 3px;" class="bi bi-box-arrow-up-right"></i></button>
 						</div>
 					</div>
 					<!-- Alignment SVG -->
-					<div id='alignmentCard' class=".border-0" style="width: 80%; max-height: 100%; outline: none !important; float: left;" data-step="6" data-title="Alignment SVG" data-intro="Scroll/hover to view the alignment components">
+					<div id='alignmentCard' class=".border-0" style="width: 80%; max-height: 100%; outline: none !important; float: right;" data-step="6" data-title="Alignment SVG" data-intro="Scroll/hover to view the alignment components">
 						<h5 id='loadingText' class="loading-text">Loading...<i style="padding-left: 10px;" class="fas fa-hourglass-half"></i></h5>
 						<!-- SVG objekt will be drawn inside this DIV -->
 						<!-- <img id="aliView" style="height: 5000; width: 5000px;" alt="Loading..."></img> -->
@@ -189,6 +176,62 @@
 </div>
 
 <script>
+	var dropdown = document.getElementById("dropdownButton");
+	var button = document.createElement("button");
+	button.setAttribute("class", "btn btn-secondary btn-sm dropdown-toggle");
+	button.setAttribute("type", "button");
+	button.setAttribute("id", "dropdownMenuButton");
+	button.setAttribute("data-toggle", "dropdown");
+	button.setAttribute("aria-haspopup", "true");
+	button.setAttribute("aria-expanded", "false");
+	button.innerHTML = "Functional Information";
+	dropdown.appendChild(button);
+
+	var divElement = document.createElement("div");
+	divElement.setAttribute("class", "dropdown-menu");
+	divElement.setAttribute("aria-labelledby", "dropdownMenuButton");
+
+	// buttonList = ['Sequence identity', 'Phosphorylation', 'Acetylation']
+	buttonList = ['Functional Information','Sequence Identity','Activating',
+					'Deactivating','Resistance','Phosphorylation','Acetylation',
+					'Ubiquitination','Sumoylation','O-GlcNAc','Methylation']
+	for (let i = 0; i < buttonList.length; i++){
+		var buttonAtag = document.createElement("a");
+		buttonAtag.setAttribute("class", "dropdown-item");
+		// buttonAtag.setAttribute("href", "#");
+		if (i == 0) {
+			buttonAtag.setAttribute("class", "dropdown-item active");
+		}
+		buttonAtag.onclick = function() {
+			setActiveClass("dropdownButton");
+		};
+		buttonAtag.innerHTML = buttonList[i];
+		divElement.appendChild(buttonAtag);
+	}
+	dropdown.appendChild(divElement);
+
+	function setActiveClass(dropdownId) {
+		// Rename the button
+		var button = document.getElementById("dropdownMenuButton");
+		button.innerHTML = event.target.innerHTML;
+
+		// Set active class to the clicked button
+		var dropdown = document.getElementById(dropdownId);
+		var links = dropdown.getElementsByTagName('a');
+
+		for (var i = 0; i < links.length; i++) {
+			links[i].addEventListener('click', function() {
+			// Remove active class from all links
+			for (var j = 0; j < links.length; j++) {
+				links[j].classList.remove('active');
+			}
+
+			// Add active class to the clicked link
+			this.classList.add('active');
+			});
+		}
+		}
+
 	$(document).ready(function() {
 	// Attach click event handlers to the increment/decrement buttons
 	$("#increment1").click(function() {
@@ -212,13 +255,56 @@
 	function callShowAlignment() {
 		var currentValueWS = parseInt($("#number1").val());
 		var currentValueTopN = parseInt($("#number2").val());
-		for (let i=1; i<=2; i++) {
-			var radioButton = document.getElementById("flexRadio"+i);
-			if (radioButton.checked) {
-				var currentSortType = i.toString();
-				break;
-			}
+		// for (let i=1; i<=2; i++) {
+		// 	var radioButton = document.getElementById("flexRadio"+i);
+		// 	if (radioButton.checked) {
+		// 		var currentSortType = i.toString();
+		// 		break;
+		// 	}
+		// }
+	// 'No. of functional infos','Sequence Identity','Activating','Deactivating','Resistance',
+	// 'Phosphorylation','Acetylation','Ubiquitination','Sumoylation','O-GlcNAc','Methylation'
+
+		// Find the active button
+		var button = document.getElementById("dropdownMenuButton");
+		currentSortTypeText = button.innerHTML;
+		if (currentSortTypeText == 'Functional Information'){
+			currentSortType = '1';
 		}
+		if (currentSortTypeText == 'Sequence Identity'){
+			currentSortType = '2';
+		}
+		else if (currentSortType == 'Activating'){
+			currentSortType = '3'
+		}
+		else if (currentSortType == 'Deactivating'){
+			currentSortType = '4'
+		}
+		else if (currentSortType == 'Resistance'){
+			currentSortType = '5'
+		}
+		else if (currentSortType == 'Phosphorylation'){
+			currentSortType = '6'
+		}
+		else if (currentSortType == 'Acetylation'){
+			currentSortType = '7'
+		}
+		else if (currentSortType == 'Ubiquitination'){
+			currentSortType = '8'
+		}
+		else if (currentSortType == 'Sumoylation'){
+			currentSortType = '9'
+		}
+		else if (currentSortType == 'O-GlcNAc'){
+			currentSortType = '10'
+		}
+		else if (currentSortType == 'Methylation'){
+			currentSortType = '11'
+		}
+		else {
+			currentSortType = '1'
+		}
+
 		showAlignment(
 					{{uniqID|safe}},
 					{{kinase|safe}},

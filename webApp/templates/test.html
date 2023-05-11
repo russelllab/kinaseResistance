@@ -6,10 +6,11 @@
 	<title>Activark: {{kinase	|safe}}/{{mutation|safe}}</title>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
-	<!-- <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+	<script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://d3js.org/d3.v3.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
 	
 	<!-- DataTables -->
 	<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
@@ -17,33 +18,79 @@
 	<!-- Bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+  <script src="{{url_for('static', filename='/js/showFeatures.js')}}"></script>
 {% endblock %}
 
 {% block content %}
-  <i class="fas fa-hourglass-half"></i>
-<style>
-  /* .icon-container {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.fa-hourglass-half {
-  font-size: 30px;
-  color: black;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-</style>
+<div class="container" style="padding-bottom: 50px; padding-top: 30px;">
+  <div class="row" style="outline:none !important;">
+    <div class="card">
+      <div class="card-body">
+        <div id="divHomology_RN">
+          <script>showFeatures({'domElement': 'divHomology_RN', 'filePath': 'static/data/homologyScores.tsv',
+            'head': 'homolog', 'firstGroup': 'R', 'secondGroup': 'N',})
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="outline:none !important;">
+    <div class="card">
+      <div class="card-body">
+        <div id="divHomology_AD">
+          <script>showFeatures({'domElement': 'divHomology_AD', 'filePath': 'static/data/homologyScores.tsv',
+            'head': 'homolog', 'firstGroup': 'A', 'secondGroup': 'D',})
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="outline:none !important;">
+    <div class="card">
+      <div class="card-body">
+        <div id="divPTM_RN">
+          <script>showFeatures({'domElement': 'divPTM_RN', 'filePath': 'static/data/ptmScores.tsv',
+            'head': 'ptm_head', 'firstGroup': 'R', 'secondGroup': 'N',})
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="outline:none !important;">
+    <div class="card">
+      <div class="card-body">
+        <div id="divPTM_AD">
+          <script>showFeatures({'domElement': 'divPTM_AD', 'filePath': 'static/data/ptmScores.tsv',
+            'head': 'ptm_head', 'firstGroup': 'A', 'secondGroup': 'D',})
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="outline:none !important;">
+    <div class="card">
+      <div class="card-body">
+        <div id="divADR_RN">
+          <script>showFeatures({'domElement': 'divADR_RN', 'filePath': 'static/data/adrScores.tsv',
+            'head': 'adr_head', 'firstGroup': 'R', 'secondGroup': 'N',})
+</script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="outline:none !important;">
+    <div class="card">
+      <div class="card-body">
+        <div id="divADR_AD">
+          <script>showFeatures({'domElement': 'divADR_AD', 'filePath': 'static/data/adrScores.tsv',
+                                'head': 'adr_head', 'firstGroup': 'A', 'secondGroup': 'D',})
+        </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script>showFeatures()</script> -->
+  
 {% endblock %}

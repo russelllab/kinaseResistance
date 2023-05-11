@@ -436,8 +436,8 @@ def getPTMscore(mycursor, acc, mutation_position, ws=0):
         else:
             for ptm_type in PTM_TYPES:
                 count_ptm_type = ptms_type_at_hmmPos.count(ptm_type)
-                # row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
-                row.append( '0' if count_ptm_type<3 else '1' )
+                row.append( '0' if count_ptm_type==0 else str(count_ptm_type) )
+                # row.append( '0' if count_ptm_type<3 else '1' )
     
     # if row.count('1')>=5:
     #     print (row)
