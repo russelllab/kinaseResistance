@@ -3,7 +3,7 @@
 - Added Clickable hyperlinks
 - Cosmetic changes 
   - changed position of the mouseover box to make hyperlinks more easily clickable
-  - changed rule how circle radii are determined. **Now** Circle radius is determined for categories with a decreasing number of entries, zum Beispiel categories with the most entries will have the biggest circle radius
+  - changed rule how circle radii are determined. **Now**: Circle radius is determined for categories with a decreasing number of entries, zum Beispiel categories with the most entries will have the biggest circle radius
 
 
 ## Changelog 10. May 2023
