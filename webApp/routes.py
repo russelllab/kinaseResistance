@@ -581,6 +581,31 @@ def configureRoutes(app):
 		dic = {'text': text}
 		return jsonify(dic)
 	
+	@app.route('/AJAXButtons', methods=['POST', 'GET'])
+	def get_Buttons(**kwargs):
+		'''
+		A function to take uniqID, kinase and mutation as input
+		and return summary as dic
+		'''
+		if request.method == 'POST':
+			data = request.get_json(force=True)
+			# uniqID = data['uniqID']
+			# kinase = data['kinase']
+			# mutation = data['mutation']
+		else:
+			kinase = kwargs['kinase']
+			mutation = kwargs['mutation']
+		
+		buttonText = []
+		for line in open('../Create_SVG/Enhancements_May2023/May10th//Ranking_Values.csv', 'r'):
+			buttonText.append(line.strip().split(','))
+
+		dic = {'data': buttonText}
+		if request.endpoint == 'AJAXButtons':
+			return jsonify(dic)
+		else:
+			return dic
+	
 	@app.route('/AJAXSummaryTable', methods=['GET', 'POST'])
 	def get_SummaryTable(**kwargs):
 		'''
@@ -639,7 +664,7 @@ def configureRoutes(app):
 			results = data['results']
 			ws = data['WS']
 			topN = data['topN']
-			sortType = data['sortType']
+			sortTypeText = data['sortTypeText']
 		else:
 			kinase = kwargs['kinase']
 			mutation = kwargs['mutation']
@@ -663,10 +688,10 @@ def configureRoutes(app):
 			if row['name'] != kinase+'/'+mutation: continue			
 			mutation_position = int(row['mutation'][1:-1])
 			## Mutations
-			mycursor.execute("SELECT wtpos, mut_type, acc, info FROM mutations")
+			mycursor.execute("SELECT mutation, wtpos, mut_type, acc, gene, info FROM mutations")
 			hits = mycursor.fetchall()
 			for hit in hits:
-				position, mutType, acc, info = hit
+				otherMutation, position, mutType, acc, gene, info = hit
 				if acc not in dic_mutations_info:
 					# dic_mutations_info[acc] = {'A':[], 'D':[], 'R':[]}
 					dic_mutations_info[acc] = {'Activating':[], 'Deactivating':[], 'Resistance':[]}
@@ -677,20 +702,22 @@ def configureRoutes(app):
 					text = ''
 					if pubmed_ids != []:
 						search_text = '+or+'.join(pubmed_ids)
-						text += '<a href=\"https://pubmed.ncbi.nlm.nih.gov/?term=' + str(search_text) + '\" target=\"_blank\">PubMed<i class="bi bi-box-arrow-in-up-right"></i></a>'
+						# text += '<a href=\"https://pubmed.ncbi.nlm.nih.gov/?term=' + str(search_text) + '\" target=\"_blank\">PubMed<i class="bi bi-box-arrow-in-up-right"></i></a>'
+						text += 'https://pubmed.ncbi.nlm.nih.gov/?term=' + str(search_text)
 				else:
-					text = ' ' + '<a href=\"https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln='
-					text += row['gene'] +'#drug-resistance\" target=\"_blank\">COSMIC <i class="bi bi-box-arrow-in-up-right"></i></a>'
+					# text = ' ' + '<a href=\"https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln='
+					# text += gene +'#drug-resistance\" target=\"_blank\">COSMIC <i class="bi bi-box-arrow-in-up-right"></i></a>'
+					text = 'https://www.cancerrxgene.org/translation/AllDrugs?gene='+gene +'#drug-resistance'
 				name = accs_in_alignment[acc]
 				start = int(name.split('|')[-1])
 				if int(position) >= start:
 					dic_mutations_info[acc][mut_type_name[mutType]].append(str(position))
-					# dic_mutations_info[acc][mut_type_name[mutType]].append([str(position), text])
+					# dic_mutations_info[acc][mut_type_name[mutType]].append([str(position), otherMutation, text])
 			# PTMs
-			mycursor.execute("SELECT uniprotpos, ptmtype, acc FROM ptms")
+			mycursor.execute("SELECT uniprotaa, uniprotpos, ptmtype, acc FROM ptms")
 			hits = mycursor.fetchall()
 			for hit in hits:
-				position, ptmType, acc = hit
+				wtAA, position, ptmType, acc = hit
 				if acc not in accs_in_alignment: continue
 				if acc not in dic_mutations_info:
 					dic_mutations_info[acc] = {}
@@ -698,8 +725,9 @@ def configureRoutes(app):
 				start = int(name.split('|')[-1])
 				if int(position) >= start:
 					if ptm_type_name[ptmType] not in dic_mutations_info[acc]: dic_mutations_info[acc][ptm_type_name[ptmType]] = []
-					text = '<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ row['acc'] +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>'
-					# dic_mutations_info[acc][ptm_type_name[ptmType]].append([str(position), text])
+					# text = '<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>'
+					text = 'http://www.phosphosite.org/uniprotAccAction?id='+ acc
+					# dic_mutations_info[acc][ptm_type_name[ptmType]].append([str(position), wtAA+str(position), text])
 					dic_mutations_info[acc][ptm_type_name[ptmType]].append(str(position))
 			break
 		
@@ -716,9 +744,15 @@ def configureRoutes(app):
 		with open(identity_dic_path) as h:
 			data_ident = h.read()
 		identitydictionary = ast.literal_eval(data_ident)
-		sortingvalue = sortType
-		# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
-		# geeky_file.write(str(dic_mutations_info))
+		sortingvalue = '1'
+		dic_buttons = get_Buttons()
+		for values in dic_buttons['data']:
+			if values[1] == sortTypeText:
+				sortingvalue = str(values[0])
+				break
+		# print (f'sortingValue is {sortingvalue}')
+		geeky_file = open('sample_dic_mutation_info.txt', 'wt')
+		geeky_file.write(str(dic_mutations_info))
 		try:
 			filename = create_svg.main(sortingvalue, identitydictionary, overallconservation, \
 			      'static/hmm/humanKinasesTrimmed.clustal',\

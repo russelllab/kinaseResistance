@@ -1,0 +1,16 @@
+# (De)activating mutations (phosphomimetics) in the A-loop of BRSK2
+BRSK2/T174E
+BRSK2/T174A
+
+# Deactivating mutations at the highly conserved N-term Lysine
+PLK3/K91R
+BRAF/K483S
+
+# Deactivating mutations in the DFG motif
+RAF1/D486N
+MAPKAPK2/D207A
+
+# Resistance mutations
+BRAF/V600E
+EGFR/T790M
+FLT3/F691L

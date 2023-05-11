@@ -11,6 +11,7 @@
 	<script src="{{url_for('static', filename='/js/showSummary.js')}}"></script>
 	<script src="{{url_for('static', filename='/js/showChart.js')}}"></script>
 	<script src="{{url_for('static', filename='/js/showAlignment.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/showButtons.js')}}"></script>
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<script>
 		d3version3 = d3;
@@ -176,61 +177,39 @@
 </div>
 
 <script>
-	var dropdown = document.getElementById("dropdownButton");
-	var button = document.createElement("button");
-	button.setAttribute("class", "btn btn-secondary btn-sm dropdown-toggle");
-	button.setAttribute("type", "button");
-	button.setAttribute("id", "dropdownMenuButton");
-	button.setAttribute("data-toggle", "dropdown");
-	button.setAttribute("aria-haspopup", "true");
-	button.setAttribute("aria-expanded", "false");
-	button.innerHTML = "Functional Information";
-	dropdown.appendChild(button);
+	showButtons()
+	// var dropdown = document.getElementById("dropdownButton");
+	// var button = document.createElement("button");
+	// button.setAttribute("class", "btn btn-secondary btn-sm dropdown-toggle");
+	// button.setAttribute("type", "button");
+	// button.setAttribute("id", "dropdownMenuButton");
+	// button.setAttribute("data-toggle", "dropdown");
+	// button.setAttribute("aria-haspopup", "true");
+	// button.setAttribute("aria-expanded", "false");
+	// button.innerHTML = "Functional Information";
+	// dropdown.appendChild(button);
 
-	var divElement = document.createElement("div");
-	divElement.setAttribute("class", "dropdown-menu");
-	divElement.setAttribute("aria-labelledby", "dropdownMenuButton");
+	// var divElement = document.createElement("div");
+	// divElement.setAttribute("class", "dropdown-menu");
+	// divElement.setAttribute("aria-labelledby", "dropdownMenuButton");
 
-	// buttonList = ['Sequence identity', 'Phosphorylation', 'Acetylation']
-	buttonList = ['Functional Information','Sequence Identity','Activating',
-					'Deactivating','Resistance','Phosphorylation','Acetylation',
-					'Ubiquitination','Sumoylation','O-GlcNAc','Methylation']
-	for (let i = 0; i < buttonList.length; i++){
-		var buttonAtag = document.createElement("a");
-		buttonAtag.setAttribute("class", "dropdown-item");
-		// buttonAtag.setAttribute("href", "#");
-		if (i == 0) {
-			buttonAtag.setAttribute("class", "dropdown-item active");
-		}
-		buttonAtag.onclick = function() {
-			setActiveClass("dropdownButton");
-		};
-		buttonAtag.innerHTML = buttonList[i];
-		divElement.appendChild(buttonAtag);
-	}
-	dropdown.appendChild(divElement);
+	// buttonList = ['Functional Information','Sequence Identity','Activating',
+	// 				'Deactivating','Resistance','Phosphorylation','Acetylation',
+	// 				'Ubiquitination','Sumoylation','O-GlcNAc','Methylation']
+	// for (let i = 0; i < buttonList.length; i++){
+	// 	var buttonAtag = document.createElement("a");
+	// 	buttonAtag.setAttribute("class", "dropdown-item");
+	// 	if (i == 0) {
+	// 		buttonAtag.setAttribute("class", "dropdown-item active");
+	// 	}
+	// 	buttonAtag.onclick = function() {
+	// 		setActiveClass("dropdownButton");
+	// 	};
+	// 	buttonAtag.innerHTML = buttonList[i];
+	// 	divElement.appendChild(buttonAtag);
+	// }
+	// dropdown.appendChild(divElement);
 
-	function setActiveClass(dropdownId) {
-		// Rename the button
-		var button = document.getElementById("dropdownMenuButton");
-		button.innerHTML = event.target.innerHTML;
-
-		// Set active class to the clicked button
-		var dropdown = document.getElementById(dropdownId);
-		var links = dropdown.getElementsByTagName('a');
-
-		for (var i = 0; i < links.length; i++) {
-			links[i].addEventListener('click', function() {
-			// Remove active class from all links
-			for (var j = 0; j < links.length; j++) {
-				links[j].classList.remove('active');
-			}
-
-			// Add active class to the clicked link
-			this.classList.add('active');
-			});
-		}
-		}
 
 	$(document).ready(function() {
 	// Attach click event handlers to the increment/decrement buttons
@@ -262,48 +241,48 @@
 		// 		break;
 		// 	}
 		// }
-	// 'No. of functional infos','Sequence Identity','Activating','Deactivating','Resistance',
-	// 'Phosphorylation','Acetylation','Ubiquitination','Sumoylation','O-GlcNAc','Methylation'
+		// 'No. of functional infos','Sequence Identity','Activating','Deactivating','Resistance',
+		// 'Phosphorylation','Acetylation','Ubiquitination','Sumoylation','O-GlcNAc','Methylation'
 
 		// Find the active button
 		var button = document.getElementById("dropdownMenuButton");
 		currentSortTypeText = button.innerHTML;
-		if (currentSortTypeText == 'Functional Information'){
-			currentSortType = '1';
-		}
-		if (currentSortTypeText == 'Sequence Identity'){
-			currentSortType = '2';
-		}
-		else if (currentSortType == 'Activating'){
-			currentSortType = '3'
-		}
-		else if (currentSortType == 'Deactivating'){
-			currentSortType = '4'
-		}
-		else if (currentSortType == 'Resistance'){
-			currentSortType = '5'
-		}
-		else if (currentSortType == 'Phosphorylation'){
-			currentSortType = '6'
-		}
-		else if (currentSortType == 'Acetylation'){
-			currentSortType = '7'
-		}
-		else if (currentSortType == 'Ubiquitination'){
-			currentSortType = '8'
-		}
-		else if (currentSortType == 'Sumoylation'){
-			currentSortType = '9'
-		}
-		else if (currentSortType == 'O-GlcNAc'){
-			currentSortType = '10'
-		}
-		else if (currentSortType == 'Methylation'){
-			currentSortType = '11'
-		}
-		else {
-			currentSortType = '1'
-		}
+		// if (currentSortTypeText == 'Functional Information'){
+		// 	currentSortType = '1';
+		// }
+		// else if (currentSortTypeText == 'Sequence Identity'){
+		// 	currentSortType = '2';
+		// }
+		// else if (currentSortTypeText == 'Activating'){
+		// 	currentSortType = '3'
+		// }
+		// else if (currentSortTypeText == 'Deactivating'){
+		// 	currentSortType = '4'
+		// }
+		// else if (currentSortTypeText == 'Resistance'){
+		// 	currentSortType = '5'
+		// }
+		// else if (currentSortTypeText == 'Phosphorylation'){
+		// 	currentSortType = '6'
+		// }
+		// else if (currentSortTypeText == 'Acetylation'){
+		// 	currentSortType = '7'
+		// }
+		// else if (currentSortTypeText == 'Ubiquitination'){
+		// 	currentSortType = '8'
+		// }
+		// else if (currentSortTypeText == 'Sumoylation'){
+		// 	currentSortType = '9'
+		// }
+		// else if (currentSortTypeText == 'O-GlcNAc'){
+		// 	currentSortType = '10'
+		// }
+		// else if (currentSortTypeText == 'Methylation'){
+		// 	currentSortType = '11'
+		// }
+		// else {
+		// 	currentSortTypeText = '1'
+		// }
 
 		showAlignment(
 					{{uniqID|safe}},
@@ -312,7 +291,7 @@
 					{{results|safe}},
 					currentValueWS,
 					currentValueTopN,
-					currentSortType
+					currentSortTypeText
 					);
 		}
 	function callDownloadSVG() {
