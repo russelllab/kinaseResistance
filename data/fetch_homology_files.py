@@ -5,7 +5,7 @@ import os
 import sys
 
 accs = []
-for line in open('humnankinases.fasta', 'r'):
+for line in open('humanKinases.fasta', 'r'):
     if line.startswith('>') is False: continue
     accs.append(line.strip().split('|')[1])
 
@@ -18,3 +18,5 @@ for acc in accs:
         if os.path.isfile(homFile) is False:
             print(acc, homType)
             # sys.exit()
+        else:
+            os.system('cp '+homFile+' homFiles/')
