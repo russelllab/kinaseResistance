@@ -1,3 +1,11 @@
+## Changelog 11. May 2023
+- See [Create_SVG/Enhancements_May2023/May11th](https://github.com/russelllab/kinaseResistance/tree/main/Create_SVG/Enhancements_May2023/May11th)
+- Added Clickable hyperlinks
+- Cosmetic changes 
+  - changed position of the mouseover box to make hyperlinks more easily clickable
+  - changed rule how circle radii are determined. **Now** Circle radius is determined for categories with a decreasing number of entries, zum Beispiel categories with the most entries will have the biggest circle radius
+
+
 ## Changelog 10. May 2023
 - See [Create_SVG/Enhancements_May2023/May10th](https://github.com/russelllab/kinaseResistance/tree/main/Create_SVG/Enhancements_May2023/May10th)
 - Changed some of the positionings (heatmap, color legend, conservation barplots) to be dynamically placed based on the length of provided functional annotations
