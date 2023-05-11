@@ -144,8 +144,8 @@ sp|P49841|GSK3B_HUMAN -            420 Pkinase              PF00069.28   264   4
 sp|P49137|MAPK2_HUMAN -            400 Pkinase              PF00069.28   264   5.5e-70  230.7   0.0   1   1   7.2e-70   7.7e-70  230.2   0.0     4   264    67   325    64   325 0.91 MAP kinase-activated protein kinase 2 OS=Homo sapiens OX=9606 GN=MAPKAPK2 PE=1 SV=1
 sp|Q96PY6|NEK1_HUMAN  -           1258 Pkinase              PF00069.28   264   6.7e-70  230.4   0.0   1   1   6.3e-70   6.7e-70  230.4   0.0     1   263     4   257     4   258 0.93 Serine/threonine-protein kinase Nek1 OS=Homo sapiens OX=9606 GN=NEK1 PE=1 SV=2
 sp|P53778|MK12_HUMAN  -            367 Pkinase              PF00069.28   264   7.6e-70  230.2   0.0   1   1   8.6e-70   9.3e-70  230.0   0.0     1   264    27   311    27   311 0.92 Mitogen-activated protein kinase 12 OS=Homo sapiens OX=9606 GN=MAPK12 PE=1 SV=3
+sp|Q9HBY8|SGK2_HUMAN  -            367 Pkinase              PF00069.28   264   8.4e-70  230.1   0.0   1   1   9.6e-70     1e-69  229.8   0.0     3   264    37   292    35   292 0.92 Serine/threonine-protein kinase Sgk2 OS=Homo sapiens OX=9606 GN=SGK2 PE=1 SV=2
 sp|O94768|ST17B_HUMAN -            372 Pkinase              PF00069.28   264   9.7e-70  229.9   0.0   1   1   1.1e-69   1.2e-69  229.6   0.0     4   264    36   293    33   293 0.93 Serine/threonine-protein kinase 17B OS=Homo sapiens OX=9606 GN=STK17B PE=1 SV=1
-sp|Q9HBY8|SGK2_HUMAN  -            427 Pkinase              PF00069.28   264   1.3e-69  229.5   0.0   1   1   1.5e-69   1.6e-69  229.2   0.0     3   264    97   352    95   352 0.92 Serine/threonine-protein kinase Sgk2 OS=Homo sapiens OX=9606 GN=SGK2 PE=1 SV=1
 sp|Q99759|M3K3_HUMAN  -            626 Pkinase              PF00069.28   264   1.5e-69  229.3   0.0   1   1   1.9e-69   2.1e-69  228.8   0.0     3   263   364   621   362   622 0.93 Mitogen-activated protein kinase kinase kinase 3 OS=Homo sapiens OX=9606 GN=MAP3K3 PE=1 SV=2
 sp|O14936|CSKP_HUMAN  -            926 Pkinase              PF00069.28   264   1.5e-69  229.3   0.0   1   1   2.8e-69     3e-69  228.3   0.0     1   264    12   276    12   276 0.92 Peripheral plasma membrane protein CASK OS=Homo sapiens OX=9606 GN=CASK PE=1 SV=3
 sp|O94921|CDK14_HUMAN -            469 Pkinase              PF00069.28   264   2.1e-69  228.8   0.0   1   1   2.5e-69   2.7e-69  228.5   0.0     1   264   135   419   135   419 0.94 Cyclin-dependent kinase 14 OS=Homo sapiens OX=9606 GN=CDK14 PE=1 SV=3
@@ -531,5 +531,5 @@ sp|Q7Z695|ADCK2_HUMAN -            626 Pkinase              PF00069.28   264    
 # Target file:     humanKinases.fasta
 # Option settings: hmmsearch --domtblout humanKinasesHits.hmmsearch --noali ../pfam/Pkinase.hmm humanKinases.fasta 
 # Current dir:     /home/gurdeep/projects/kinaseResistance/data
-# Date:            Tue Apr  4 11:28:34 2023
+# Date:            Thu May 11 19:07:49 2023
 # [ok]

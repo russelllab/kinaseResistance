@@ -34,10 +34,10 @@ sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 import fetchData
 
-sys.path.insert(1, BASE_DIR+'/Create_SVG/Enhancements_May2023/May10th/')
-import create_svg_20230510_kinases_GS as create_svg
-conservation_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/May10th/'+'GenerelleKonservierung_May-10-2023.txt'
-identity_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/May10th/'+'SeqIdentity_Matrix_May-10-2023.txt'
+sys.path.insert(1, BASE_DIR+'/Create_SVG/Enhancements_May2023/May11th/')
+import create_svg_20230511_kinases_GS as create_svg
+conservation_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/May11th/'+'GenerelleKonservierung_May-11-2023.txt'
+identity_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/May11th/'+'SeqIdentity_Matrix_May-11-2023.txt'
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -707,12 +707,12 @@ def configureRoutes(app):
 				else:
 					# text = ' ' + '<a href=\"https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln='
 					# text += gene +'#drug-resistance\" target=\"_blank\">COSMIC <i class="bi bi-box-arrow-in-up-right"></i></a>'
-					text = 'https://www.cancerrxgene.org/translation/AllDrugs?gene='+gene +'#drug-resistance'
+					text = 'https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln='+gene +'#drug-resistance'
 				name = accs_in_alignment[acc]
 				start = int(name.split('|')[-1])
 				if int(position) >= start:
-					dic_mutations_info[acc][mut_type_name[mutType]].append(str(position))
-					# dic_mutations_info[acc][mut_type_name[mutType]].append([str(position), otherMutation, text])
+					# dic_mutations_info[acc][mut_type_name[mutType]].append(str(position))
+					dic_mutations_info[acc][mut_type_name[mutType]].append([str(position), otherMutation, text])
 			# PTMs
 			mycursor.execute("SELECT uniprotaa, uniprotpos, ptmtype, acc FROM ptms")
 			hits = mycursor.fetchall()
@@ -727,8 +727,8 @@ def configureRoutes(app):
 					if ptm_type_name[ptmType] not in dic_mutations_info[acc]: dic_mutations_info[acc][ptm_type_name[ptmType]] = []
 					# text = '<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>'
 					text = 'http://www.phosphosite.org/uniprotAccAction?id='+ acc
-					# dic_mutations_info[acc][ptm_type_name[ptmType]].append([str(position), wtAA+str(position), text])
-					dic_mutations_info[acc][ptm_type_name[ptmType]].append(str(position))
+					dic_mutations_info[acc][ptm_type_name[ptmType]].append([str(position), wtAA+str(position), text])
+					# dic_mutations_info[acc][ptm_type_name[ptmType]].append(str(position))
 			break
 		
 		# print (dic_mutations_info)

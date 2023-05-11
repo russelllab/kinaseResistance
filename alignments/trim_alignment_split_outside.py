@@ -10,12 +10,22 @@ import numpy as np
 from tqdm import tqdm
 import sys, gzip
 import pickle
+import argparse
 
-INPUT_FILE = 'humanKinasesHitsSplit.clustal'
-GAP_THRESHOLD = 0.9
-START_ALN = 32178
-END_ALN = 33550
-WINDOW = 30
+parser = argparse.ArgumentParser(
+                    prog='TrimAli',
+                    description='Trims the alignment based on some parameters',
+                    epilog='gurdeep')
+
+parser.add_argument('i', help='Input alignment in CLUSTAL format')
+parser.add_argument('s', help='Start of alignment position (32178)')
+parser.add_argument('e', help='End of alignment position (32960)')
+parser.add_argument('w', help='+/- Window size')
+args = parser.parse_args()
+INPUT_FILE = args.i
+START_ALN = int(args.s)
+END_ALN = int(args.e)
+WINDOW = int(args.w)
 
 class Kinase:
     '''A class to store information about a kinase'''
@@ -89,7 +99,7 @@ df = pd.DataFrame(aln_data, index=aln_accs)
 # print (df[range(START_ALN-WINDOW, END_ALN+WINDOW+1)])
 df = df[range(START_ALN-WINDOW, END_ALN+WINDOW+1)]
 
-trimmed_aln_clustal = 'CLUSTAL\n\n'
+trimmed_aln_clustal = '# CLUSTAL\n\n'
 trimmed_aln_fasta = ''
 for acc, row in zip(aln_accs, df.to_numpy()):
     # print (name, ''.join(row))
@@ -102,8 +112,8 @@ for acc, row in zip(aln_accs, df.to_numpy()):
     trimmed_aln_fasta += kinases[acc].find_fasta_position(START_ALN - WINDOW) + '\n'
     trimmed_aln_fasta += ''.join(row) + '\n'
 
-open('humanKinasesHitsSplitTrimmed.aln', 'w').write(trimmed_aln_clustal)
-open('humanKinasesHitsSplitTrimmed.fasta', 'w').write(trimmed_aln_fasta)
+open(INPUT_FILE.split('.')[0]+'Trimmed.aln', 'w').write(trimmed_aln_clustal)
+open(INPUT_FILE.split('.')[0]+'Trimmed.fasta', 'w').write(trimmed_aln_fasta)
 
 jalview_annotations = 'JALVIEW_ANNOTATION\n'
 
@@ -190,7 +200,7 @@ for count, files in enumerate(['Phosphorylation_site_dataset.gz',
                 break
         # print (acc, accession, ptm_position)
         if '_' not in acc:
-            print (f'PTM position {ptm_position} outside the domains of {acc}')
+            print (f'PTM position {ptm_position} outside the domain(s) of {acc}')
             continue
         if kinases[acc].fasta[int(ptm_position)-1] != aa:
             # raise Exception(f'{kinases[acc].fasta[int(ptm_position)-1]} found rather than {aa} pos {ptm_position} in {acc}')
@@ -296,7 +306,7 @@ for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
     # break
     # print (new_aln_position, uniprot_mutation, acc, kinases[acc].name)
 '''
-for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
+for line in open('../AK/AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
     if line.split()[0] == 'uniprot_id':
         continue
     acc = line.split('\t')[0]
@@ -367,7 +377,7 @@ jalview_annotations += '\t'.join(
 # exit()
 
 '''ACT/DEACT mutations'''
-for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
+for line in open('../AK/AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     if line.split('\t')[0] == 'uniprot_name':
         continue
     acc = line.split('\t')[1]
@@ -432,19 +442,5 @@ for mut_type, color in zip(['A', 'D'], ['Green', 'Red']):
                              ]
                             ) + '\n'
 
-open('jalview_annotations5.txt', 'w').write(jalview_annotations)
+open('jalview_annotations.txt', 'w').write(jalview_annotations)
 exit()
-dic_mutations = {}
-for acc in kinases:
-    for mut_type in kinases[acc].mutations:
-        if len(kinases[acc].mutations[mut_type]) > 0:
-            dic_mutations[acc] = kinases[acc].mutations
-            break
-
-with open('kinases_mutations.pkl', 'wb') as f:
-    pickle.dump(dic_mutations, f)
-
-with open('kinases_mutations.pkl', 'rb') as f:
-    dic_mutations = pickle.load(f)
-
-print (dic_mutations)
