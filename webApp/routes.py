@@ -751,8 +751,8 @@ def configureRoutes(app):
 				sortingvalue = str(values[0])
 				break
 		# print (f'sortingValue is {sortingvalue}')
-		geeky_file = open('sample_dic_mutation_info.txt', 'wt')
-		geeky_file.write(str(dic_mutations_info))
+		# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
+		# geeky_file.write(str(dic_mutations_info))
 		try:
 			filename = create_svg.main(sortingvalue, identitydictionary, overallconservation, \
 			      'static/hmm/humanKinasesTrimmed.clustal',\
