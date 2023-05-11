@@ -10,9 +10,9 @@ import os, sys, ast
 os.sys.path.append('ML/')
 import fetchData
 sys.path.insert(1, 'Create_SVG/Enhancements_May2023/')
-import create_svg_20230509_kinases_GS as create_svg
-conservation_dic_path = 'Create_SVG/Enhancements_May2023/'+'GenerelleKonservierung_May-09-2023.txt'
-identity_dic_path = 'Create_SVG/Enhancements_May2023/'+'SeqIdentity_Matrix_May-09-2023.txt'
+import create_svg_20230510_kinases_GS as create_svg
+conservation_dic_path = 'Create_SVG/Enhancements_May2023/'+'GenerelleKonservierung_May-10-2023.txt'
+identity_dic_path = 'Create_SVG/Enhancements_May2023/'+'SeqIdentity_Matrix_May-10-2023.txt'
 
 def get_accs_in_alignment(alignmentFile):
     """
