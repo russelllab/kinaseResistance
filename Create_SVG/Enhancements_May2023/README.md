@@ -1,3 +1,7 @@
+## Changelog 12. May 2023
+- Added [Bootstrap Box arrow up-right](https://icons.getbootstrap.com/icons/box-arrow-up-right/) icon as .svg to the .svg.
+You will find it in [Create_SVG/Enhancements_May2023/May11th](https://github.com/russelllab/kinaseResistance/tree/main/Create_SVG/Enhancements_May2023/May11th) with the name **create_svg_20230512_kinases_GS.py**
+
 ## Changelog 11. May 2023
 - See [Create_SVG/Enhancements_May2023/May11th](https://github.com/russelllab/kinaseResistance/tree/main/Create_SVG/Enhancements_May2023/May11th)
 - Added Clickable hyperlinks
