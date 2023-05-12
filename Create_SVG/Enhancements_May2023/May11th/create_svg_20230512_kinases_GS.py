@@ -1,4 +1,5 @@
 #!/usr/bin/env/Python 3.6.8
+
 import sys
 sys.path.append('/home/bq_tschmenger/svgwrite/')	### https://pypi.org/project/svgwrite/
 import svgwrite	### preferably install it using pip
