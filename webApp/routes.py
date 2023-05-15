@@ -366,7 +366,7 @@ def configureRoutes(app):
 		entries_not_found = results['entries_not_found']
 		print (entries_not_found)
 		for name in results['entries_not_found']:
-			kinase, mutation = name.split('/')
+			# kinase, mutation = name.split('/')
 			dic = {}
 			dic['name'] = name
 			dic['reason'] = results['entries_not_found'][name]

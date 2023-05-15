@@ -1,11 +1,36 @@
 # Mutations in CDK6 
-CDK6/T49A
+CDK6/.49A
 CDK6/T48A
 
 # Mutations in BRAF
-BRAF/V600E
+BRAF/V600V
 BRAF/V6000E
+BRAF/E600E
 
 # Mutations in CHEK2
-CHEK2/K373E
 CHEEK2/K373E
+
+# BRSK2 mutations
+BRSK2/T174
+BRSK2/174A
+
+# Deactivating mutations at the highly conserved N-term Lysine
+PLK3/91
+BRAF/KS
+
+# Deactivating mutations in the DFG motif
+RAF1/
+/D207A
+
+# Resistance mutations
+BRAF/V600X
+EGFR/TD790M
+
+# Random
+BRS_90
+DF
+.
+/
+hgju
+;_/
+
