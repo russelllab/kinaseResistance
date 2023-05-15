@@ -13,15 +13,10 @@ different files
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
-def connection():
+def connection(db_name='kinase_project'):
     '''Function to connect to postgresql database'''
-    '''mydb = mysql.connector.connect(
-    host="localhost",
-    user="kinase_user",
-    password=""
-    )'''
     mydb = psycopg2.connect(
-                            database = "kinase_project",
+                            database = db_name,
                             user = "gurdeep",
                             password = "hellokitty",
                             host = "localhost",
@@ -371,7 +366,10 @@ def getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA):
     # print (f'HMMscore in {acc} for {wtAA}{position}{mutAA}')
     mycursor.execute("SELECT pfampos FROM positions \
                      WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
-    pfampos = mycursor.fetchone()[0]
+    hits = mycursor.fetchone()
+    # print (hits)
+    if hits == None: return '-', None, None, None
+    else: pfampos = hits[0]
     # print (f'pfampos of {acc}/{wtAA}{position}{mutAA} is {pfampos}')
     mycursor.execute("SELECT * FROM hmm \
                         WHERE pfampos = %s", (str(pfampos),))
@@ -449,29 +447,27 @@ def getADRvector(mycursor, acc, mutation_position, kinases, ws=0):
     ws = int(ws/2)
     adr_row = []
     for position in range(mutation_position-ws, mutation_position+ws+1):
-        for mut_type in ['A', 'D', 'R']:
-            mycursor.execute("SELECT mut_type FROM mutations \
+        mycursor.execute("SELECT mut_type FROM mutations \
                             WHERE acc = %s and wtpos = %s", (acc, str(position)))
-            hits = mycursor.fetchall()
-            mut_types_at_position = []
-            for entry in hits:
-                mut_types_at_position.append(entry[0])
-            # print (acc, position, mut_types_at_position)
+        hits = mycursor.fetchall()
+        mut_types_at_position = []
+        for entry in hits:
+            mut_types_at_position.append(entry[0])
+        # print (acc, position, mut_types_at_position)
+        for mut_type in ['A', 'D', 'R']:
             if mut_type in mut_types_at_position: adr_row.append(1)
             else: adr_row.append(0)
 
-        for mut_type in ['A', 'D', 'R']:
-            mycursor.execute("SELECT pfampos FROM positions \
+        mycursor.execute("SELECT pfampos FROM positions \
                             WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
-            hmmPos = mycursor.fetchone()[0]
-            mycursor.execute("SELECT mut_type FROM mutations \
-                            WHERE pfampos = %s", (str(hmmPos),))
-            hits = mycursor.fetchall()
-            mut_types_at_hmmpos = []
-            for entry in hits:
-                mut_types_at_hmmpos.append(entry[0])
-            # print (mut_types_at_hmmpos)
-            
+        hmmPos = mycursor.fetchone()[0]
+        mycursor.execute("SELECT mut_type FROM mutations \
+                        WHERE pfampos = %s", (str(hmmPos),))
+        hits = mycursor.fetchall()
+        mut_types_at_hmmpos = []
+        for entry in hits:
+            mut_types_at_hmmpos.append(entry[0])
+        for mut_type in ['A', 'D', 'R']:
             # hmmPos = kinases[acc].returnhmmPos(position)
             # if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
             if mut_type in mut_types_at_hmmpos: adr_row.append(1)

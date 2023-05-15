@@ -40,28 +40,28 @@ function defineSummaryDataTable (tableID, uniqID, kinase, mutation)
 									}
 								},
 								{
-									text: "Show all "+response['gene']+" instances",
+									text: "Show only "+response['gene']+" instances",
 									action: function(e, dt, node, config){
 										dt.column(7).search('').draw();
 										dt.column(1).search(response['acc']).draw();
 									}
 								},
 								{
-									text: "Show all Activating instances",
+									text: "Show only activating instances",
 									action: function(e, dt, node, config){
 										dt.column(1).search('').draw();
 										dt.column(7).search("^"+'Activating', true, false).draw();
 									}
 								},
 								{
-									text: "Show all Drug-resistant instances",
+									text: "Show only resistance instances",
 									action: function(e, dt, node, config){
 										dt.column(1).search('').draw();
 										dt.column(7).search("^"+'Resistance').draw();
 									}
 								},
 								{
-									text: "Show all Deactivating instances",
+									text: "Show only deactivating instances",
 									action: function(e, dt, node, config){
 										dt.column(1).search('').draw();
 										dt.column(7).search("^"+'Deactivating').draw();

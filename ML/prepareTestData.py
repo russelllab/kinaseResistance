@@ -85,6 +85,44 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         if line.split() == []: continue # Ignore empty line
         if line[0] == '#' or line.lstrip().rstrip() == '': continue # Ignore comments
         
+        # Check if the line is in the correct format
+        if '/' not in line:
+            entries_not_found[line] = 'Incorrect format. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.'
+            continue
+
+        # Check if the line has more than one /
+        if line.count('/') > 1:
+            entries_not_found[line] = 'Incorrect format. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.'
+            continue
+
+        # Check if string before / is valid
+        kinase = line.split('/')[0].rstrip().upper()
+        mutation = line.split('/')[1].rstrip().upper()
+        if kinase == '' or mutation == '':
+            entries_not_found[line] = 'Kinase/mutation absent. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.'
+            continue
+        
+        # Check if the mutation is in the correct format
+        if len(mutation) < 3:
+            entries_not_found[line] = 'Incorrect mutation format. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.'
+            continue
+        if mutation[0] not in AA:
+            entries_not_found[line] = 'Incorrect wild type amino acid. '+mutation[0]+' not a valid amino acid.'
+            continue
+        if mutation[-1] not in AA:
+            entries_not_found[line] = 'Incorrect mutatant amino acid. '+mutation[-1]+' not a valid amino acid.'
+            continue
+        if not mutation[1:-1].isdigit():
+            entries_not_found[line] = 'Incorrect mutation. '+mutation[1:-1]+' not a valid position.'
+            continue
+        if int(mutation[1:-1]) < 1:
+            entries_not_found[line] = 'Incorrect mutation. '+mutation[1:-1]+' not a valid position.'
+            continue
+        if mutation[0] == mutation[-1]:
+            entries_not_found[line] = 'Incorrect mutation. Wild type and mutant amino acids are the same.'
+            continue
+
+        # When above checks are passed, run the prediction
         # Extract features i.e. name = kinase/mutation
         name = line.split()[0].rstrip().upper()
         kinase = name.split()[0].split('/')[0]

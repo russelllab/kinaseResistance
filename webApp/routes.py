@@ -108,7 +108,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
 		alnpos, pfampos = mycursor.fetchone()
 		# print(pfampos)
-		if pfampos == '-': continue
+		if pfampos == '-' or alnpos == '-': continue
 		mycursor.execute("SELECT uniprotaa, uniprotpos, ptmtype, acc, gene FROM ptms \
 						WHERE pfampos = %s", (str(pfampos), ))
 		hits = mycursor.fetchall()
@@ -185,7 +185,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
 		alnpos, pfampos = mycursor.fetchone()
 		# print(pfampos)
-		if pfampos == '-': continue
+		if pfampos == '-' or alnpos == '-': continue
 		mycursor.execute("SELECT mutation, wtaa, wtpos, mut_type, acc, gene, info FROM mutations \
 						WHERE pfampos = %s", (str(pfampos), ))
 		hits = mycursor.fetchall()
