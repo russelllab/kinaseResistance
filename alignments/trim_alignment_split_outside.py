@@ -18,19 +18,23 @@ parser = argparse.ArgumentParser(
                     epilog='gurdeep')
 
 parser.add_argument('i', help='Input alignment in CLUSTAL format')
+parser.add_argument('f', help='path to kinases sequences in FASTA format')
 parser.add_argument('s', help='Start of alignment position (32178)')
 parser.add_argument('e', help='End of alignment position (32960)')
 parser.add_argument('w', help='+/- Window size')
 args = parser.parse_args()
 INPUT_FILE = args.i
+PATH_TO_FASTA = args.f
 START_ALN = int(args.s)
 END_ALN = int(args.e)
 WINDOW = int(args.w)
 
 class Kinase:
     '''A class to store information about a kinase'''
-    def __init__(self, acc, name, sequence):
+    def __init__(self, acc, real_acc, name, sequence):
         self.acc = acc
+        self.real_acc = real_acc
+        self.gene = ''
         self.name = name
         self.sequence = sequence
         self.fasta = ''
@@ -76,11 +80,26 @@ for line in open(INPUT_FILE, 'r'):
     name = line.split()[0]
     region = line.split()[0].split('|')[3]
     acc = line.split()[0].split('|')[1] + '_' + region
+    real_acc = line.split()[0].split('|')[1]
     # add sequence to the object
     if acc not in kinases:
-        kinases[acc] = Kinase(acc, name, sequence)
+        kinases[acc] = Kinase(acc, real_acc, name, sequence)
     else:
         kinases[acc].sequence += sequence
+
+for acc_region in kinases:
+    for line in open(PATH_TO_FASTA, 'r'):
+        if line.startswith('>'):
+            acc = line.split('|')[1]
+            gene = line.split('GN=')[1].split()[0]
+        
+            if acc_region.split('_')[0] == acc:
+                kinases[acc_region].gene = gene
+                break
+
+for acc_region in kinases:
+    if kinases[acc_region].gene == '':
+        print ('Gene not found for', acc_region)
 
 # convert the alignment to fasta
 # and make the mapping dictionaries
@@ -101,6 +120,7 @@ df = df[range(START_ALN-WINDOW, END_ALN+WINDOW+1)]
 
 trimmed_aln_clustal = '# CLUSTAL\n\n'
 trimmed_aln_fasta = ''
+trimmed_aln_web = '# CLUSTAL\n\n'
 for acc, row in zip(aln_accs, df.to_numpy()):
     # print (name, ''.join(row))
     trimmed_aln_clustal += kinases[acc].name + '|'
@@ -112,8 +132,19 @@ for acc, row in zip(aln_accs, df.to_numpy()):
     trimmed_aln_fasta += kinases[acc].find_fasta_position(START_ALN - WINDOW) + '\n'
     trimmed_aln_fasta += ''.join(row) + '\n'
 
+    start, end = kinases[acc].name.split('|')[3].split('-')
+    num = kinases[acc].find_fasta_position(START_ALN - WINDOW)
+    if start == 'start': start = num
+    else: start = str(int(start) + int(num) - 1)
+    seq = ''.join(row).replace('-', '').replace('.', '')
+    end = str(int(start) + len(seq) - 1)
+    trimmed_aln_web += kinases[acc].gene + '|' +kinases[acc].real_acc + '|'
+    trimmed_aln_web += str(start) + '-' + str(end) + ' '
+    trimmed_aln_web += ''.join(row) + '\n'
+
 open(INPUT_FILE.split('.')[0]+'Trimmed.aln', 'w').write(trimmed_aln_clustal)
 open(INPUT_FILE.split('.')[0]+'Trimmed.fasta', 'w').write(trimmed_aln_fasta)
+open(INPUT_FILE.split('.')[0]+'TrimmedWeb.aln', 'w').write(trimmed_aln_web)
 
 jalview_annotations = 'JALVIEW_ANNOTATION\n'
 

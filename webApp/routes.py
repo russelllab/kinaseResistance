@@ -244,6 +244,32 @@ def makeUniqID():
 	uniqID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
 	return uniqID
 
+def resetDic(dic, alignment):
+	'''
+	dic[acc][ptm_type_name] = [str(position), wtAA+str(position), text]
+	dic[acc][mut_type_name] = [str(position), wtAA+str(position)+mutAA, text]
+	'''
+	new_dic = {}
+	for line in open(alignment, 'r'):
+		if line.startswith('#') or line.startswith('\n'): continue
+		name = line.split()[0]
+		acc = line.split()[0].split('|')[1]
+		if acc not in dic: continue
+		# print (line)
+		start, end = line.split()[0].split('|')[2].split('-')
+		for type_name in dic[acc]:
+			for row in dic[acc][type_name]:
+				position, site, text = row
+				if int(position) >= int(start) and int(position) <= int(end):
+					if name not in new_dic: new_dic[name] = {}
+					if type_name not in new_dic[name]: new_dic[name][type_name] = []
+					new_dic[name][type_name].append(row)
+	# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
+	# geeky_file.write(str(new_dic))
+	# print (new_dic)
+	# return new_dic
+
+
 def makeOutputJson(uniqID, results, mycursor) -> dict:
 	output = []
 	for name in results['predictions']:
@@ -731,6 +757,9 @@ def configureRoutes(app):
 					# dic_mutations_info[acc][ptm_type_name[ptmType]].append(str(position))
 			break
 		
+		alignment = 'static/hmm/humanKinasesTrimmed.clustal'
+		resetDic(dic_mutations_info, 'static/hmm/humanKinasesHitsSplitTrimmedWeb.aln')
+		# dic_mutations_info = resetDic(dic_mutations_info, alignment)
 		# print (dic_mutations_info)
 		# print (row['acc'], mutation_position)
 		'''
@@ -755,7 +784,7 @@ def configureRoutes(app):
 		# geeky_file.write(str(dic_mutations_info))
 		try:
 			filename = create_svg.main(sortingvalue, identitydictionary, overallconservation, \
-			      'static/hmm/humanKinasesTrimmed.clustal',\
+			      alignment,\
 					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
 						path = 'static/predictor/output/'+uniqID+'/')
 		except Exception as e:

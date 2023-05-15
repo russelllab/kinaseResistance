@@ -25,7 +25,7 @@ cd ../alignments/
 # and saves in both fasta and aln format
 # the script also saves the jalview annoptation file
 # jalview_annotations.txt
-python trim_alignment_split_outside.py humanKinasesHitsSplit.aln 32178 32960 30
+python trim_alignment_split_outside.py humanKinasesHitsSplit.aln ../data/humanKinases.fasta 32178 32960 30
 
 # Step 6: Build a hidden Markov model (HMM) from the alignment
 # Use the fasta file as input because the aln file fails (!!!!)
@@ -46,3 +46,9 @@ gzip -f humanKinasesHitsSplitHmmsearchTrimmed.txt
 # Save the output in the file humanKinasesHitsSplitHmmsearchTrimmedMapped.txt.gz
 # The scipt automatically adds the keyword "Mappings" to the input file name
 python map2domain.py humanKinasesHitsSplitHmmsearchTrimmed.txt.gz humanKinasesHitsSplitTrimmed 30 280
+
+# Step 9: Map the PTM sites to the new domain numbering in the
+# domain name 'humanKinasesHitsSplitTrimmed' (given as input
+# to the script) using the file humanKinasesHitsSplitHmmsearchTrimmed.txt.gz
+# Save the output in the file humanKinasesHitsSplitHmmsearchTrimmedPTM.tsv
+python3 make_table_psp_kinase_trimmed.py humanKinasesHitsSplitTrimmed humanKinasesHitsSplitHmmsearchTrimmedMappings.tsv.gz humanKinases.fasta humanKinasesHitsSplitTrimmedPTM.tsv
