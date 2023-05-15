@@ -99,7 +99,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         kinase = line.split('/')[0].rstrip().upper()
         mutation = line.split('/')[1].rstrip().upper()
         if kinase == '' or mutation == '':
-            entries_not_found[line] = 'Kinase/mutation absent. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.'
+            entries_not_found[line] = 'Kinase or mutation absent. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.'
             continue
         
         # Check if the mutation is in the correct format
@@ -113,10 +113,10 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             entries_not_found[line] = 'Incorrect mutatant amino acid. '+mutation[-1]+' not a valid amino acid.'
             continue
         if not mutation[1:-1].isdigit():
-            entries_not_found[line] = 'Incorrect mutation. '+mutation[1:-1]+' not a valid position.'
+            entries_not_found[line] = 'Incorrect mutation format. '+mutation[1:-1]+' not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.'
             continue
         if int(mutation[1:-1]) < 1:
-            entries_not_found[line] = 'Incorrect mutation. '+mutation[1:-1]+' not a valid position.'
+            entries_not_found[line] = 'Incorrect mutation format. '+mutation[1:-1]+' not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.'
             continue
         if mutation[0] == mutation[-1]:
             entries_not_found[line] = 'Incorrect mutation. Wild type and mutant amino acids are the same.'
@@ -135,7 +135,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         # that the input kinase was not found in
         # the DB
         if acc is None:
-            entries_not_found[name] = 'Protein identifier ' + kinase + ' not found'
+            entries_not_found[name] = 'Protein identifier ' + kinase + ' not found. Try another identifier.'
             continue
 
         # Run some other checks:
@@ -146,12 +146,12 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         # Skip if errors 1 or 2 returned
         if error == 1:
             entries_not_found[name] = 'Position ' + str(mutation[1:-1])
-            entries_not_found[name] += ' not found in ' + kinase
+            entries_not_found[name] += ' not found in ' + kinase + '.'
             continue
         if error == 2:
             entries_not_found[name] = 'Found ' + aa_found + ' at position '
             entries_not_found[name] += str(mutation[1:-1]) + ' in ' + kinase
-            entries_not_found[name] += ' instead of ' + mutation[0]
+            entries_not_found[name] += ' instead of ' + mutation[0] + '. Please ensure that you are using the canonical isoform.'
             continue
         
         # Make dictionary of Kinases
