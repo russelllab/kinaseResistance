@@ -78,7 +78,11 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 	mycursor.execute("SELECT alnpos FROM hmm \
 						WHERE pfampos = %s", (str(interested_kinase_pfampos), ))
 	interested_kinase_alnpos = mycursor.fetchone()[0]
+	# print (interested_kinase_alnpos, interested_kinase_pfampos, gene)
 	data = []
+	# If the pfampos does not exist
+	if interested_kinase_pfampos=='-':
+		return data, text
 	for position in range(mutation_position-ws, mutation_position+ws+1):
 	# 	# do it for the acc of interest
 	# 	mycursor.execute("SELECT pfampos FROM positions \
@@ -107,7 +111,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 		mycursor.execute("SELECT alnpos, pfampos FROM positions \
 			WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
 		alnpos, pfampos = mycursor.fetchone()
-		# print(pfampos)
+		# print(pfampos, interested_kinase_pfampos, alnpos, interested_kinase_alnpos)
 		if pfampos == '-' or alnpos == '-': continue
 		mycursor.execute("SELECT uniprotaa, uniprotpos, ptmtype, acc, gene FROM ptms \
 						WHERE pfampos = %s", (str(pfampos), ))
@@ -119,7 +123,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			ref_acc = entry[3]
 			# if ref_acc == acc: continue
 			ref_gene = entry[4]
-			text += "<b>"+ref_gene+'/'+str(uniprotaa) + str(uniprotpos)+ "</b>" + ' is a known ' + dic_ptms[ptmtype] + ' site. '
+			text += "<b>"+ref_gene+'/'+str(uniprotaa)+str(uniprotpos)+"</b>" +' is a known ' + dic_ptms[ptmtype] + ' site. '
 			text += '<a href=\"http://www.phosphosite.org/uniprotAccAction?id='+ ref_acc +'\" target=\"_blank\">PhosphoSitePlus <i class="bi bi-box-arrow-in-up-right"></i></a>'
 			text += '<br>' # add a full stop at the end of the sentence
 			row = []
