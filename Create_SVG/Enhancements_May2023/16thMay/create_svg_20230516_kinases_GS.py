@@ -606,17 +606,18 @@ def main(sortingvalue, identitydictionary,overallconservation, alignmentfile, pr
 	### to define the annotation colors we want to use
 
 	positioncolors = ["#009e73","#d55e00","#0072b2","lightgreen","salmon","yellow","blueviolet","deeppink","olive","dodgerblue","palegreen"]
+	generalcategories = ["Activating","Deactivating","Resistance","Phosphorylation","Acetylation","Ubiquitination","Sumoylation","O-GlcNAc","Methylation"]
 	colors = {}
 	coloringcategories = []
 	counter = 0
 	for k in positions:
 		for v in positions[k]:
-			if v in colors: 
-				continue
-			else:
+			if v not in coloringcategories: 
 				coloringcategories.append(v)
-				colors[v]=positioncolors[counter]
-				counter+=1
+	for item in generalcategories:
+		if item in coloringcategories:
+			colors[item]=positioncolors[counter]
+			counter+=1
 			
 	for seqident in sequences:
 		if seqident not in positions:
