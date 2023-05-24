@@ -1,6 +1,6 @@
 ## Changelog 16. May 2023
 - Adjusted code to accomodate for the new alignment, using different identifiers in case of multiple kinase domains per protein. Changed the position of the bootstrap arrow box and fixed the colors.
-Everything can be found in [Create_SVG/Enhancements_May2023/16thMay](https://github.com/russelllab/kinaseResistance/tree/main/Create_SVG/Enhancements_May2023/M16thMay)
+Everything can be found in [Create_SVG/Enhancements_May2023/16thMay](https://github.com/russelllab/kinaseResistance/tree/main/Create_SVG/Enhancements_May2023/16thMay)
 
 ## Changelog 12. May 2023
 - Added [Bootstrap Box arrow up-right](https://icons.getbootstrap.com/icons/box-arrow-up-right/) icon as .svg to the .svg.
