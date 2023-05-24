@@ -22,7 +22,7 @@ def connection():
     password=""
     )'''
     mydb = psycopg2.connect(
-                            database = "kinase_project",
+                            database = "kinase_project2",
                             user = "gurdeep",
                             password = "hellokitty",
                             host = "localhost",
@@ -155,7 +155,8 @@ def create_ptm_table(mycursor)->None:
                      gene VARCHAR(25), ptmType VARCHAR(10), name VARCHAR(50), \
                      CONSTRAINT name FOREIGN KEY (name) REFERENCES positions(name) \
                      )")
-    for line in tqdm(open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r')):
+    # for line in tqdm(open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r')):
+    for line in tqdm(open('../data/humanKinasesHitsSplitTrimmedPTM.tsv', 'r')):
         if line.startswith('#'): continue
         line = line.rstrip().split('\t')
         acc = line[0]
@@ -194,7 +195,8 @@ def fetch_mappings_dic():
                     # UNIQUE(mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)\
     '''
     mappings = {}
-    for line in tqdm(gzip.open('../data/humanKinasesHitsHmmsearchMappings.tsv.gz', 'rt')):
+    # for line in tqdm(gzip.open('../data/humanKinasesHitsHmmsearchMappings.tsv.gz', 'rt')):
+    for line in tqdm(gzip.open('../data/humanKinasesHitsSplitHmmsearchTrimmedMappings.tsv.gz', 'rt')):
         if line[0] == '#': continue
         acc = line.split('\t')[0].split('|')[1]
         uniprot_id = line.split('\t')[0].split('|')[2]
@@ -219,9 +221,10 @@ def fetch_mappings_dic():
 
 def find_pfampos(mycursor, acc, uniprotPos)->None:
     mycursor.execute("select pfampos from positions \
-                     where acc=%s and uniprotpos=%s", (acc, uniprotPos))
+                     where acc=%s and uniprotpos=%s", (acc, str(uniprotPos)))
     pfamPos = mycursor.fetchone()
     if pfamPos is not None: pfamPos = pfamPos[0]
+    else: pfamPos = '-'
     return pfamPos
 
 def create_mutations_table(mycursor)->None:
@@ -236,23 +239,27 @@ def create_mutations_table(mycursor)->None:
                      info TEXT, source VARCHAR(200) \
                      )")
                     # UNIQUE(mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)\
-    for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
-        if line.split()[0] == 'uniprot_name': continue
-        gene = line.split('\t')[0]
-        acc = line.split('\t')[1]
-        wtAA = line.split('\t')[2].replace(',', '')
-        mutAA = line.split('\t')[4].replace(',', '')
+    # for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
+    for line in open('../data/mutations/act_deact_mutlist_may2023.tsv', 'r'):
+        if line.split()[0] == 'Mutation_uniprot': continue
+        # gene = line.split('\t')[0]
+        acc = line.split('\t')[0].split('/')[0]
+        mutation = line.split('\t')[0].split('/')[1]
+        wtAA = mutation[0]
+        mutAA = mutation[-1]
         if len(wtAA) > 1 or len(mutAA) > 1: continue
-        wtPos = str(line.split('\t')[3])
-        print (gene, acc, wtAA, wtPos, mutAA)
+        wtPos = int(line.split('\t')[7])
         pfamPos = find_pfampos(mycursor, acc, wtPos)
-        if pfamPos is None: continue
-        mut_type = line.split('\t')[5]
+        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
+        # print (gene, acc, mutation, pfamPos)
+        # if pfamPos is None: continue
+        mut_type = line.split('\t')[-1].lstrip().rstrip()
         # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-        mutation = wtAA + wtPos + mutAA
-        info = line.split('\t')[-2]
+        # mutation = wtAA + wtPos + mutAA
+        info = line.split('\t')[9]
         # info = 'info'
-        source = line.split('\t')[-1]
+        # source = line.split('\t')[-1]
+        source = 'UniProt'
         # print (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)
         mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, \
                          pfamPos, mut_type, acc, gene, info, source) \
@@ -260,17 +267,19 @@ def create_mutations_table(mycursor)->None:
                         (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc, gene, info, source))
 
     '''Fetch resistant mutation data'''
-    for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
-        if line.split('\t')[0] == 'uniprot_id': continue
-        acc = line.split('\t')[0]
+    # for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
+    for line in open('../data/mutations/res_muts_apr_2023_from_cosmic.tsv', 'r'):
+        if line.split()[0] == 'Mutation_uniprot': continue
+        acc = line.split('/')[0]
+        mutation = line.split('/')[1].rstrip()
         acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
-        wtAA = line.split('\t')[1]
-        mutAA = line.split('\t')[3]
+        wtAA = mutation[0]
+        mutAA = mutation[-1]
         if mutAA == 'X': continue
         if len(wtAA) > 1 or len(mutAA) > 1: continue
-        wtPos = line.split('\t')[2].replace('\n', '')
+        wtPos = mutation[1:-1]
         pfamPos = find_pfampos(mycursor, acc, wtPos)
-        mutation = wtAA + wtPos + mutAA
+        # mutation = wtAA + wtPos + mutAA
         mut_type = 'R'
         source = 'COSMIC'
         info = '-'
@@ -283,7 +292,8 @@ def create_mutations_table(mycursor)->None:
                         (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc, gene, info, source))
     
     '''Fetch neutral mutation data'''
-    for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
+    # for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
+    for line in open('../data/mutations/nat_mut_tidy_all_samples_tidy_2.tsv', 'r'):
         if line.split('\t')[1] == 'UniProtID': continue
         acc = line.split('\t')[1]
         acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
@@ -314,7 +324,8 @@ def createDicForDSSP(dic, position, mutation, value):
 
 def create_homology_table(mycursor) -> None:
     '''Function to create the homology  table'''
-    path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
+    # path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
+    path = '../data/homFiles/'
     mycursor.execute("DROP TABLE IF EXISTS homology CASCADE")
     mycursor.execute('select acc from kinases')
     accs = mycursor.fetchall()
@@ -347,10 +358,10 @@ def create_homology_table(mycursor) -> None:
             num += 1
             # if num == 10: break
             acc = acc_tuple[0]
-            if os.path.isfile(path + acc[:4] + '/' + acc + fileEnd) is False:
-                print (path + acc[:4] + '/' + acc + fileEnd, 'does not exist')
+            if os.path.isfile(path + '/' + acc + fileEnd) is False:
+                print (path + '/' + acc + fileEnd, 'does not exist')
                 continue
-            for line in gzip.open(path + acc[:4] + '/' + acc + fileEnd, 'rt'):
+            for line in gzip.open(path + '/' + acc + fileEnd, 'rt'):
                 #print (acc, line.split())
                 #sys.exit()
                 mutation = line.split()[0].split('/')[1]
@@ -515,11 +526,17 @@ if __name__ == '__main__':
     '''
 
     # Create tables
+    # print ('Creating HMM table')
     # create_hmm_table(mycursor)
+    # print ('Creating kinases table')
     # create_kinases_table(mycursor)
+    print ('Creating mutation table')
     create_mutations_table(mycursor)
+    # print ('Creating homology table')
     # create_homology_table(mycursor)
+    # print ('Creating PTM table')
     # create_ptm_table(mycursor)
+    # print ('Creating alignment table')
     # create_alignment_table(mycursor)
     mydb.commit()
 

@@ -24,6 +24,7 @@ def CUSTOM_ALIGN(targetfile):	### RPS6KA1|Q15418|33-320 qpskdegvlk
 	beginnerdict = {}
 	with open(targetfile,"r") as alignfile:
 		for line in alignfile:
+			if line.startswith("#") or line.startswith('\n'): continue
 			idcontainer 	= line.split(" ")[0]
 			seq		= line.split(" ")[1].replace("\n","")
 			checkvar 	= str(idcontainer).count("|")		### RPS6KA1|Q15418|33-320 qpskdegvlk

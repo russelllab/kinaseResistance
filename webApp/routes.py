@@ -34,10 +34,11 @@ sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 import fetchData
 
-sys.path.insert(1, BASE_DIR+'/Create_SVG/Enhancements_May2023/May11th/')
-import create_svg_20230512_kinases_GS as create_svg
-conservation_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/May11th/'+'GenerelleKonservierung_May-11-2023.txt'
-identity_dic_path = BASE_DIR+'/Create_SVG/Enhancements_May2023/May11th/'+'SeqIdentity_Matrix_May-11-2023.txt'
+create_svg_path = '/Create_SVG/Enhancements_May2023/16thMay/'
+sys.path.insert(1, BASE_DIR+create_svg_path)
+import create_svg_20230516_kinases_GS as create_svg
+conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_May-24-2023.txt'
+identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_May-24-2023.txt'
 
 def connection():
     '''Function to connect to postgresql database'''
@@ -271,8 +272,7 @@ def resetDic(dic, alignment):
 	# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
 	# geeky_file.write(str(new_dic))
 	# print (new_dic)
-	# return new_dic
-
+	return new_dic
 
 def makeOutputJson(uniqID, results, mycursor) -> dict:
 	output = []
@@ -762,8 +762,10 @@ def configureRoutes(app):
 			break
 		
 		alignment = 'static/hmm/humanKinasesTrimmed.clustal'
-		resetDic(dic_mutations_info, 'static/hmm/humanKinasesHitsSplitTrimmedWeb.aln')
-		# dic_mutations_info = resetDic(dic_mutations_info, alignment)
+		# alignment = 'static/hmm/humanKinasesHitsSplitTrimmedWeb.aln'
+		alignment = BASE_DIR + '/alignments/humanKinasesHitsSplitTrimmedWeb.aln'
+		# resetDic(dic_mutations_info, alignment)
+		dic_mutations_info = resetDic(dic_mutations_info, alignment)
 		# print (dic_mutations_info)
 		# print (row['acc'], mutation_position)
 		'''
@@ -786,10 +788,22 @@ def configureRoutes(app):
 		# print (f'sortingValue is {sortingvalue}')
 		# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
 		# geeky_file.write(str(dic_mutations_info))
+		# try:
+
+		# The following searching  is needed to find the name of entry
+		# in the alignment file that contains the mutation position
+		# entry is like GN|Acc|start-end
+		entry_to_search = ''
+		for entry in dic_mutations_info:
+			entry_acc = entry.split('|')[1]
+			start, end = entry.split('|')[-1].split('-')
+			if int(start) <= int(mutation_position) <= int(end) and entry_acc == row['acc']:
+				entry_to_search = entry
+				break
 		try:
 			filename = create_svg.main(sortingvalue, identitydictionary, overallconservation, \
 			      alignment,\
-					row['acc'], mutation_position, int(ws), int(topN), dic_mutations_info, \
+					entry_to_search, mutation_position, int(ws), int(topN), dic_mutations_info, \
 						path = 'static/predictor/output/'+uniqID+'/')
 		except Exception as e:
 			print (e)

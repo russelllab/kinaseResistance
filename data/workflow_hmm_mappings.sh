@@ -21,6 +21,7 @@ cd ../alignments/
 
 # Step 5: Run the trim_alignment_split_script.py to trim the alignment
 # Save the output in the file humanKinasesHitsSplitTrimmed.aln/fasta
+# Also save the web vsersion humanKinasesHitsSplitTrimmedWeb.aln
 # The script automatically adds the keyword "trimmed" to the file name
 # and saves in both fasta and aln format
 # the script also saves the jalview annoptation file
@@ -31,7 +32,7 @@ python trim_alignment_split_outside.py humanKinasesHitsSplit.aln ../data/humanKi
 # Use the fasta file as input because the aln file fails (!!!!)
 # Save the output in the file humanKinasesHitsSplitTrimmed.hmm
 # in the pfam folder
-hmmbuild ../pfam/humanKinasesHitsSplitTrimmed.hmm humanKinasesHitsSplitTrimmed.fasta
+hmmbuild --symfrac 0.0 ../pfam/humanKinasesHitsSplitTrimmed.hmm humanKinasesHitsSplitTrimmed.fasta
 
 # Step 7: Do hmmsearch with the HMM profile against
 # the full kinase sequences. Save the output in the file

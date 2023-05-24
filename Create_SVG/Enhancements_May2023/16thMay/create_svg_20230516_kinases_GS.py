@@ -20,6 +20,7 @@ def CUSTOM_ALIGN(targetfile):	### RPS6KA1|Q15418|33-320 qpskdegvlk
 	beginnerdict = {}
 	with open(targetfile,"r") as alignfile:
 		for line in alignfile:
+			if line.startswith("#") or line.startswith('\n'): continue
 			idcontainer 	= line.split(" ")[0]
 			seq		= line.split(" ")[1].replace("\n","")
 			checkvar 	= str(idcontainer).count("|")		### RPS6KA1|Q15418|33-320 qpskdegvlk
@@ -586,7 +587,9 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
     return filename
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
-def main(sortingvalue, identitydictionary,overallconservation, alignmentfile, protein_of_interest, position_of_interest, window, topguns, positions, path=''):
+def main(sortingvalue, identitydictionary,overallconservation, alignmentfile\
+         , protein_of_interest, position_of_interest, window, topguns, \
+            positions, path=''):
 	sequences, trackstart 	= CUSTOM_ALIGN(alignmentfile)
 	TheForbiddenPositions = []
 	feature_dict = {}
