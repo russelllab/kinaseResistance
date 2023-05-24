@@ -3,7 +3,8 @@
 ![ActivarkLogo](webApp/static/img/ActivarkLogo.png)
 
 Activark is a predictor of activating, deactivating and resistance mutations in kinases
-Access the Flask webApp [here](http://activark.russelllab.org)
+
+Access the webserver [here](http://activark.russelllab.org)
 
 ---
 
