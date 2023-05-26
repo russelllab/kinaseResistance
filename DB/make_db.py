@@ -240,23 +240,30 @@ def create_mutations_table(mycursor)->None:
                      )")
                     # UNIQUE(mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)\
     # for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
-    for line in open('../data/mutations/act_deact_mutlist_may2023.tsv', 'r'):
-        if line.split()[0] == 'Mutation_uniprot': continue
+    # for line in open('../data/mutations/act_deact_mutlist_may2023.tsv', 'r'):
+    for line in gzip.open('../data/mutations/ad_mutations.tsv.gz', 'rt'):
+        if line.split()[0] == 'UniProtAcc': continue
         # gene = line.split('\t')[0]
-        acc = line.split('\t')[0].split('/')[0]
-        mutation = line.split('\t')[0].split('/')[1]
+        acc = line.split('\t')[0]
+        gene = line.split('\t')[1]
+        mutation = line.split('\t')[2]
         wtAA = mutation[0]
         mutAA = mutation[-1]
         if len(wtAA) > 1 or len(mutAA) > 1: continue
-        wtPos = int(line.split('\t')[7])
+        wtPos = int(mutation[1:-1])
         pfamPos = find_pfampos(mycursor, acc, wtPos)
         acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
         # print (gene, acc, mutation, pfamPos)
         # if pfamPos is None: continue
-        mut_type = line.split('\t')[-1].lstrip().rstrip()
+        mut_type = line.split('\t')[5].lstrip().rstrip()
+        if mut_type not in ['increase', 'activation', 'activating', 'decrease', 'loss']:
+            print (mutation, gene, 'is unknown', mut_type)
+            continue
+        mut_type = 'A' if mut_type in ['increase', 'activation', 'activating'] else 'D'
         # print (acc, kinases[acc].gene, wtAA, position, mutAA)
+        # print (mutation, mut_type, gene)
         # mutation = wtAA + wtPos + mutAA
-        info = line.split('\t')[9]
+        info = line.split('\t')[4]
         # info = 'info'
         # source = line.split('\t')[-1]
         source = 'UniProt'
@@ -293,20 +300,23 @@ def create_mutations_table(mycursor)->None:
     
     '''Fetch neutral mutation data'''
     # for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
-    for line in open('../data/mutations/nat_mut_tidy_all_samples_tidy_2.tsv', 'r'):
-        if line.split('\t')[1] == 'UniProtID': continue
-        acc = line.split('\t')[1]
+    #for line in open('../data/mutations/nat_mut_tidy_all_samples_tidy_2.tsv', 'r'):
+    for line in open('../data/mutations/20230525_AllNeutrals_1pSNP_5pHom.txt', 'r'):
+        if line.split('\t')[0] == 'Uniprot': continue
+        acc = line.split('\t')[0].lstrip().rstrip()
         acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
-        wtAA = line.split('\t')[2]
-        mutAA = line.split('\t')[4]
+        mutation = line.split('\t')[2].lstrip().rstrip()
+        wtAA = mutation[0]
+        mutAA = mutation[-1]
         if mutAA == 'X': continue
         if len(wtAA) > 1 or len(mutAA) > 1: continue
-        wtPos = line.split('\t')[3].replace('\n', '')
+        wtPos = mutation[1:-1]
+        if wtPos.isdigit() == False: continue
+        # print (acc, wtPos)
         pfamPos = find_pfampos(mycursor, acc, wtPos)
-        mutation = wtAA + wtPos + mutAA
         mut_type = 'N'
         source = 'gnomAD'
-        info = '-'
+        info = 'AC/AN:'+str(line.split('\t')[7]) + '; Hom/AC:'+str(line.split('\t')[8].rstrip())
         # if acc not in seq2pfam:
         #     continue
         # if uniprot_position not in seq2pfam[acc]:
@@ -463,22 +473,24 @@ def create_kinases_table(mycursor)->None:
         mycursor.execute("INSERT INTO kinases (acc, gene, uniprot_id, protein_name, fasta) \
                             VALUES (%s, %s, %s, %s, %s)", \
                             (acc, gene, uniprot_id, protein_name, fasta))
-        if acc not in mappings: continue
-        if acc not in map_fasta2aln: continue
+        # if acc not in mappings: continue
+        # if acc not in map_fasta2aln: continue
         for uniprotPos, uniprotAA in enumerate(fasta, start=1):
-            if uniprotPos in mappings[acc]['positions']:
-                if mappings[acc]['positions'][uniprotPos]['uniprotAA'] != uniprotAA:
-                    print ('ERROR', uniprotPos, uniprotAA, mappings[acc]['positions'][uniprotPos]['uniprotAA'])
-                    sys.exit()
-                pfamPos = mappings[acc]['positions'][uniprotPos]['pfamPos']
-                pfamAA = mappings[acc]['positions'][uniprotPos]['pfamAA']
-                # print (uniprotPos, uniprotAA, pfamPos, pfamAA, acc, uniprot_id)
-            else:
-                pfamPos, pfamAA = '-', '-'
-            if uniprotPos in map_fasta2aln[acc]:
-                alnPos = map_fasta2aln[acc][uniprotPos]
-            else:
-                alnPos = '-'
+            pfamPos, pfamAA = '-', '-'
+            if acc in mappings:
+                if uniprotPos in mappings[acc]['positions']:
+                    if mappings[acc]['positions'][uniprotPos]['uniprotAA'] != uniprotAA:
+                        print ('ERROR', uniprotPos, uniprotAA, mappings[acc]['positions'][uniprotPos]['uniprotAA'])
+                        sys.exit()
+                    pfamPos = mappings[acc]['positions'][uniprotPos]['pfamPos']
+                    pfamAA = mappings[acc]['positions'][uniprotPos]['pfamAA']
+                    # print (uniprotPos, uniprotAA, pfamPos, pfamAA, acc, uniprot_id)
+            
+            alnPos = '-'
+            if acc in map_fasta2aln:
+                if uniprotPos in map_fasta2aln[acc]:
+                    alnPos = map_fasta2aln[acc][uniprotPos]
+                
             name = acc+'/'+uniprotAA+str(uniprotPos)
             row = []
             row.append(uniprotPos)
@@ -530,7 +542,7 @@ if __name__ == '__main__':
     # create_hmm_table(mycursor)
     # print ('Creating kinases table')
     # create_kinases_table(mycursor)
-    print ('Creating mutation table')
+    # print ('Creating mutation table')
     create_mutations_table(mycursor)
     # print ('Creating homology table')
     # create_homology_table(mycursor)

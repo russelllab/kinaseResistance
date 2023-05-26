@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 
 ## Develop training set data
@@ -28,7 +28,7 @@ exceptions= ['Q9Y2K2', 'Q15303', 'Q9UIK4', 'P33981', 'P35916',
 
 kinases = {}
 
-mydb = fetchData.connection()
+mydb = fetchData.connection('kinase_project2')
 mydb.autocommit = True
 mycursor = mydb.cursor()
 # mycursor.execute("select fasta from kinases where acc=%s", ('P06493',))
@@ -49,38 +49,6 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # fetchData.iupredScores(kinases, Kinase)
 # fetchData.homologyScores(kinases, Kinase)
 # sys.exit()
-
-# #print (kinases['Q9NYV4'].mechismo)
-# data = []
-# for acc in kinases:
-#     #print (kinases[acc].domains)
-#     for domainNum in kinases[acc].domains:
-#         #print (domainNum)
-#         data.append(len(kinases[acc].domains[domainNum]))
-
-# #print (data)
-# df = pd.DataFrame(data = data, columns=['Length'])
-# sns.histplot(data=df, x="Length")
-
-'''
-def fetchPkinase(acc, domainNum):
-    # A function to take acc and alignment cutoff values to return
-    # the HMM bitscores
-    
-    row = []
-    for hmmPosition in range(1,265):
-        if hmmPosition in kinases[acc].domains[domainNum]:
-            SeqPosition = kinases[acc].domains[domainNum][hmmPosition]
-            aa = kinases[acc].fasta[SeqPosition-1]
-            value = float(hmmPkinase[hmmPosition][aa])
-        else:
-            value = 3
-
-        row.append(value)
-    #print (len(row))
-    kinases[acc].hmm[domainNum] = row
-    return row
-'''
 
 def fetchStrucFeat(acc, domainNum):
     data = []
@@ -131,16 +99,6 @@ for row in mycursor.fetchall():
     pfamPos = str(row[2])
     if acc not in seq2pfam: seq2pfam[acc] = {}
     seq2pfam[acc][seqPos] = pfamPos
-'''
-for line in gzip.open('../data/humanKinasesHitsHmmsearchMappings.tsv.gz', 'rt'):
-    if line[0] =='#':
-        continue
-    acc = line.split('\t')[0].split('|')[1]
-    seqPos = str(line.split('\t')[2])
-    pfamPos = str(line.replace('\n', '').split('\t')[4])
-    if acc not in seq2pfam: seq2pfam[acc] = {}
-    seq2pfam[acc][seqPos] = pfamPos
-'''
 
 '''Fetch test mutation data'''
 for line in open('test_mutations.txt', 'r'):
@@ -172,132 +130,18 @@ for row in mycursor.fetchall():
     dataset = 'train'
     # print (acc, kinases[acc].gene, wtAA, position, mutAA)
     # if position in seq2pfam[acc]:
+    if mutation == 'T508EE': continue
+    if acc == 'Q96RG2': print (mutation, mut_type)
     if mutation not in kinases[acc].mutations:
         dataset = 'train'
+        # print (mutation)
         kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
     else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
 
     # kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
     # pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
-'''
-for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
-    if line.split()[0] == 'uniprot_name': continue
-    gene = line.split('\t')[0]
-    acc = line.split('\t')[1]
-    wtAA = line.split('\t')[2].replace(',', '')
-    mutAA = line.split('\t')[4].replace(',', '')
-    if len(wtAA) > 1 or len(mutAA) > 1: continue
-    position = str(line.split('\t')[3])
-    mut_type = line.split('\t')[5]
-    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-    mutation = wtAA + position + mutAA
-    if acc not in seq2pfam:
-        continue
-    if mutation not in kinases[acc].mutations:
-        dataset = 'train'
-        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
-        # print (acc, gene, position, wtAA, mutAA)
-        kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
-        pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
-'''
-
-'''Fetch resistant mutation data'''
-'''
-for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
-    if line[0] == '#': continue
-    actual_gene = line.split('\t')[0]
-    if '_' in actual_gene: gene = actual_gene.split('_')[0]
-    else: gene = actual_gene
-    acc = line.split('\t')[2]
-    cosmic_mutation = line.split('\t')[1]
-    wtAA = cosmic_mutation[0]
-    mutAA = cosmic_mutation[-1]
-    if mutAA == 'X': continue
-    if len(wtAA) > 1 or len(mutAA) > 1: continue
-    uniprot_position = line.split('\t')[5].replace('\n', '')
-    mutation = wtAA + uniprot_position + mutAA
-    mut_type = 'R'
-    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-    if mutation not in kinases[acc].mutations:
-        dataset = 'train'
-        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
-        try:
-            kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][uniprot_position]
-            pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
-        except:
-            print (acc, actual_gene, uniprot_position, mutation, cosmic_mutation)
-            sys.exit()
-    else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
-    # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
-'''
-
-'''Fetch resistant mutation data'''
-'''
-for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
-    if line.split('\t')[0] == 'uniprot_id': continue
-    # actual_gene = line.split('\t')[0]
-    # if '_' in actual_gene: gene = actual_gene.split('_')[0]
-    # else: gene = actual_gene
-    acc = line.split('\t')[0]
-    # cosmic_mutation = line.split('\t')[1]
-    wtAA = line.split('\t')[1]
-    mutAA = line.split('\t')[3]
-    if mutAA == 'X': continue
-    if len(wtAA) > 1 or len(mutAA) > 1: continue
-    uniprot_position = line.split('\t')[2].replace('\n', '')
-    mutation = wtAA + uniprot_position + mutAA
-    mut_type = 'R'
-    if acc not in seq2pfam:
-        continue
-    if uniprot_position not in seq2pfam[acc]:
-        print (f'{uniprot_position} seems to be outside the domain in {acc} and reported {mut_type}')
-        continue
-    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-    if mutation not in kinases[acc].mutations:
-        dataset = 'train'
-        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
-        try:
-            kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][uniprot_position]
-            pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
-        except:
-            print (acc, uniprot_position, mutation, mut_type)
-            sys.exit()
-    else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
-    # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
-'''
-
-'''Fetch neutral mutation data'''
-'''
-for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
-    if line.split('\t')[1] == 'UniProtID': continue
-    acc = line.split('\t')[1]
-    wtAA = line.split('\t')[2]
-    mutAA = line.split('\t')[4]
-    if mutAA == 'X': continue
-    if len(wtAA) > 1 or len(mutAA) > 1: continue
-    uniprot_position = line.split('\t')[3].replace('\n', '')
-    mutation = wtAA + uniprot_position + mutAA
-    mut_type = 'N'
-    if acc not in seq2pfam:
-        continue
-    if uniprot_position not in seq2pfam[acc]:
-        print (f'{uniprot_position} seems to be outside the domain and reported {mut_type}')
-        print (seq2pfam[acc])
-        continue
-    # print (acc, kinases[acc].gene, wtAA, position, mutAA)
-    if mutation not in kinases[acc].mutations:
-        dataset = 'train'
-        kinases[acc].mutations[mutation] = Mutation(mutation, mut_type, acc, dataset)
-        try:
-            kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][uniprot_position]
-            pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
-        except:
-            print (acc, uniprot_position, mutation, mut_type)
-            sys.exit()
-    else: kinases[acc].mutations[mutation].mut_types.append(mut_type)
-    # kinases[acc].mutations[wtAA+position+mutAA] = Mutation(wtAA+position+mutAA, mut_type)
-'''
-
+print (kinases['Q96RG2'].mutations['Y1152F'].mut_types)
+# sys.exit()
 
 '''Fetch PTM data'''
 hmmPTM = {}
@@ -306,7 +150,9 @@ for row in mycursor.fetchall():
     acc = row[0]
     ptm_type = row[1]
     uniprot_position = row[2]
-    hmm_position = int(row[3])
+    hmm_position = row[3]
+    if hmm_position == '-': continue
+    else: hmm_position = int(hmm_position)
     if ptm_type not in kinases[acc].ptm:
         kinases[acc].ptm[ptm_type] = []
     kinases[acc].ptm[ptm_type].append(int(uniprot_position))
@@ -315,27 +161,6 @@ for row in mycursor.fetchall():
     hmmPTM[hmm_position].append(ptm_type)
 # print (hmmPTM[200])
        
-'''
-# for line in open('../data/Kinase_psites4.tsv', 'r'):
-# for line in open('../data/Kinase_psites_trimmed.tsv', 'r'):
-for line in open('../data/Kinase_psites_hits_split_trimmed.tsv', 'r'):
-    if line[0] == '#': continue
-    if line.split()[2] != 'humanKinasesHitsSplitTrimmed': continue
-    acc = line.split('\t')[0]
-    if acc not in kinases: continue
-    position = int((line.split('\t')[3].split('-')[0])[1:])
-    ptm_type = line.split('\t')[3].split('-')[1]
-    hmm_position = int(line.split('\t')[4])
-    if ptm_type not in kinases[acc].ptm:
-        kinases[acc].ptm[ptm_type] = []
-    kinases[acc].ptm[ptm_type].append(position)
-    if hmm_position not in hmmPTM:
-        hmmPTM[hmm_position] = []
-    hmmPTM[hmm_position].append(ptm_type)
-    # print (acc, kinases[acc].gene, position, ptm_type)
-# print (hmmPTM[141])
-'''
-
 '''Make training matrix'''
 trainMat = 'Acc\tGene\tMutation\tDataset\t'
 trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
@@ -375,6 +200,7 @@ for acc in tqdm(kinases):
         mutAA = mutation_obj.mutAA
         wtAA = mutation_obj.wtAA
         mut_types = ''.join(np.sort(list(set(mutation_obj.mut_types))))
+        # print (acc, mutation)
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
         if hmmPos == '-': continue
         ptm_row = fetchData.getPTMscore(mycursor, acc, position, WS)

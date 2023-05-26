@@ -30,7 +30,7 @@ import pickle
 # 5 3 3 100 for AD
 # 12 3 3 100 for RN
 
-RANDOM_STATE = 0
+RANDOM_STATE = 1
 ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10
@@ -61,15 +61,15 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
                         'Dataset',
                         'hmmPos',
                         'hmmSS',
-                        'ChargesWT',
-                        'ChargesMUT',
+                        # 'ChargesWT',
+                        # 'ChargesMUT',
                         # 'ChargesDiff',
                         #   'A_known',
                         #   'D_known',
                         #   'R_known',
                         #   'Phosphomimic',
-                          'hmmScoreWT',
-                          'hmmScoreMUT',
+                        #   'hmmScoreWT',
+                        #   'hmmScoreMUT',
                         #   'hmmScoreDiff'
                         ]
     '''
@@ -83,26 +83,26 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     ############
     pfam_ptm_cols = ['ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
     for i in range(-5,6):
-        if i in [-1, 0, 1]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
     pfam_ptm_cols = ['p_pfam']
     for i in range(-5,6):
-        if i in [-1, 0, 1]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
     ############
 
     ptm_cols = ['ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
     for i in range(-5,6):
-        if i in [-1, 0, 1]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
     ptm_cols = ['p']
     for i in range(-5,6):
-        # if i in [-1, 0, 1]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
@@ -110,7 +110,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
 
     adr_cols = ['A', 'D', 'R']
     for i in range(-5, 6):
-        if i in [-1, 1]: continue
+        if i in [-2, -1, 1, 2]: continue
         for col in adr_cols:
             columns_to_exclude.append(col+'_'+str(i))
 
@@ -118,7 +118,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
 
     adr_cols = ['A_pfam', 'D_pfam', 'R_pfam']
     for i in range(-5, 6):
-        if i in [-1, 1]: continue
+        if i in [-2, -1, 1, 2]: continue
         for col in adr_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
@@ -129,10 +129,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     # columns_to_scale += ['hmmScoreDiff', 'hmmScoreWT', 'hmmScoreMUT']
     # df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
 
-    # print ('columns to consider', df.columns.to_numpy())
+    print ('columns to consider', df.columns.to_numpy())
     columns_to_consider = '\n'.join(df.columns.to_numpy())
     # print (columns_to_consider)
-    open('columns_to_consider.txt', 'w').write(columns_to_consider)
+    # open('columns_to_consider.txt', 'w').write(columns_to_consider)
 
     feature_names = df.columns.to_numpy()
     feature_names = feature_names[3:-1]
@@ -146,12 +146,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     y_test = []
     test_names = []
     for row in df.to_numpy():
-        if row[-1] in ['R']:
+        if row[-1] in ['A']:
             y.append(1)
             y_names.append(row[-1])
             X.append(row[3:-1])
             train_names.append('/'.join(row[:3]))
-        elif row[-1] in ['N']:
+        elif row[-1] in ['D']:
             y.append(0)
             y_names.append(row[-1])
             X.append(row[3:-1])
@@ -179,7 +179,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     scaler.fit(X)
     X = scaler.transform(X)
     X_test = scaler.transform(X_test)
-    pickle.dump(scaler, open('finalized_scaler_RN.pkl', 'wb'))
+    # pickle.dump(scaler, open('finalized_scaler_RN.pkl', 'wb'))
 
     y = np.array(y)
 
@@ -488,8 +488,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
         # plt.show()
     
 
-    filename = 'finalized_model_RN.sav'
-    pickle.dump(clf, open(filename, 'wb'))
+    # filename = 'finalized_model_RN.sav'
+    # pickle.dump(clf, open(filename, 'wb'))
 
     test_types = ['AR', 'Activating', 'TBD', 'Inconclusive']
     for test_type in test_types:

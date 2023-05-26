@@ -1,0 +1,12 @@
+Q56UN5/T161E	Q56UN5	MAP3K19/T161E	MAP3K19	Reviewed;	MUTAGEN	T	161	E	 Constitutively active kinase with normal;accumulation in the nucleus."";/evidence=""ECO:0000269|PubMed:26443375""	activating	A	M3K19
+P42345/A431T	P42345	MTOR/A431T	MTOR	Reviewed;	MUTAGEN	A	431	T	 Does not completely restore mitochondrial DNA-;dependent respiratory chain activities in respiration-;defective mutant cells."";/evidence=""ECO:0000269|PubMed:22608499""	activating	A	MTOR
+P25098/K220R	P25098	GRK2/K220R	GRK2	Reviewed;	MUTAGEN	K	220	R	 Loss of activity."";/evidence=""ECO:0000269|PubMed:9892019""	loss	D	ARBK1
+Q9P2K8/K614A	Q9P2K8	EIF2AK4/K614A	EIF2AK4	Reviewed;	MUTAGEN	K	614	A	 Loss of activity."";/evidence=""ECO:0000269|PubMed:10026192""	loss	D	E2AK4
+Q8TF76/K282M	Q8TF76	HASPIN/K282M	HASPIN	Reviewed;	MUTAGEN	K	282	M	 Loss of catalytic activity. Reduced nuclear;size in larval salivary glands."";/evidence=""ECO:0000269|PubMed:32750047""	decrease	D	HASP
+Q6P2M8/T179A	Q6P2M8	PNCK/T179A	PNCK	Reviewed;	MUTAGEN	T	179	A	 Loss of activation by cmkC."";/evidence=""ECO:0000269|PubMed:10988293""	loss	D	KCC1B
+Q8IVH8/K48E	Q8IVH8	MAP4K3/K48E	MAP4K3	Reviewed;	MUTAGEN	K	48	E	 Loss of kinase activity and ability to;activate JNK family."";/evidence=""ECO:0000269|PubMed:9275185""	loss	D	M4K3
+Q7KZI7/S219A	Q7KZI7	MARK2/S219A	MARK2	Reviewed;	MUTAGEN	S	219	A	 Loss of kinase activity."";/evidence=""ECO:0000269|PubMed:14517247,;ECO:0000269|PubMed:9108484""	loss	D	MARK2
+Q52WX2/K61R	Q52WX2	SBK1/K61R	SBK1	Reviewed;	MUTAGEN	K	61	R	 Loss of activity."";/evidence=""ECO:0000269|PubMed:16403448""	loss	D	SBK1
+P0C263/K73M	P0C263	SBK2/K73M	SBK2	Reviewed;	MUTAGEN	K	73	M	 Loss of activity."";/evidence=""ECO:0000269|PubMed:11322885""	loss	D	SBK2
+O75716/T192A	O75716	STK16/T192A	STK16	Reviewed;	MUTAGEN	T	192	A	 Loss of autophosphorylation."";/evidence=""ECO:0000269|PubMed:8662877""	loss	D	STK16
+Q86Y07/K179E	Q86Y07	VRK2/K179E	VRK2	Reviewed;	MUTAGEN	K	179	E	 Abolished protein serine/threonine kinase;activity."";/evidence=""ECO:0000269|PubMed:33076429""	loss	D	VRK2

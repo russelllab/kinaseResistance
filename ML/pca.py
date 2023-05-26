@@ -1,12 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import scipy as sp
 import os, sys, gzip
 from sklearn.cluster import KMeans
 import seaborn as sns
 import pandas as pd
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras import layers
+# import tensorflow as tf
+# from tensorflow import keras
+# from tensorflow.keras import layers
 import matplotlib.pyplot as plt
 from sklearn import decomposition
 from sklearn.preprocessing import MinMaxScaler
