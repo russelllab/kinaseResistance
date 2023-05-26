@@ -256,10 +256,10 @@ def create_mutations_table(mycursor)->None:
         # print (gene, acc, mutation, pfamPos)
         # if pfamPos is None: continue
         mut_type = line.split('\t')[5].lstrip().rstrip()
-        if mut_type not in ['increase', 'activation', 'activating', 'decrease', 'loss']:
+        if mut_type not in ['increase', 'activating', 'decrease', 'loss']:
             print (mutation, gene, 'is unknown', mut_type)
             continue
-        mut_type = 'A' if mut_type in ['increase', 'activation', 'activating'] else 'D'
+        # mut_type = 'A' if mut_type in ['increase', 'activation', 'activating'] else 'D'
         # print (acc, kinases[acc].gene, wtAA, position, mutAA)
         # print (mutation, mut_type, gene)
         # mutation = wtAA + wtPos + mutAA
@@ -287,7 +287,7 @@ def create_mutations_table(mycursor)->None:
         wtPos = mutation[1:-1]
         pfamPos = find_pfampos(mycursor, acc, wtPos)
         # mutation = wtAA + wtPos + mutAA
-        mut_type = 'R'
+        mut_type = 'resistance'
         source = 'COSMIC'
         info = '-'
         # if wtPos not in seq2pfam[acc]:
@@ -314,7 +314,7 @@ def create_mutations_table(mycursor)->None:
         if wtPos.isdigit() == False: continue
         # print (acc, wtPos)
         pfamPos = find_pfampos(mycursor, acc, wtPos)
-        mut_type = 'N'
+        mut_type = 'neutral'
         source = 'gnomAD'
         info = 'AC/AN:'+str(line.split('\t')[7]) + '; Hom/AC:'+str(line.split('\t')[8].rstrip())
         # if acc not in seq2pfam:
@@ -539,17 +539,17 @@ if __name__ == '__main__':
 
     # Create tables
     # print ('Creating HMM table')
-    # create_hmm_table(mycursor)
+    create_hmm_table(mycursor)
     # print ('Creating kinases table')
-    # create_kinases_table(mycursor)
+    create_kinases_table(mycursor)
     # print ('Creating mutation table')
     create_mutations_table(mycursor)
     # print ('Creating homology table')
     # create_homology_table(mycursor)
     # print ('Creating PTM table')
-    # create_ptm_table(mycursor)
+    create_ptm_table(mycursor)
     # print ('Creating alignment table')
-    # create_alignment_table(mycursor)
+    create_alignment_table(mycursor)
     mydb.commit()
 
     # Use mysqldump to create backup file

@@ -116,7 +116,7 @@ for line in open('test_mutations.txt', 'r'):
         kinases[acc].mutations[mutation].positionHmm = seq2pfam[acc][position]
     # pkinase_act_deact_res[mut_type].append(kinases[acc].mutations[mutation].positionHmm)
 
-pkinase_act_deact_res = {'A': [], 'D': [], 'R': [], 'N': []}
+# pkinase_act_deact_res = {'A': [], 'D': [], 'R': [], 'N': []}
 '''Fetch act/deact mutation data'''
 mycursor.execute("select acc, gene, mutation, wtaa, mutaa, wtpos, mut_type from mutations")
 for row in mycursor.fetchall():
@@ -241,13 +241,13 @@ for acc in tqdm(kinases):
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
         trainMat += mut_types + '\n'
 
-        if mut_types == 'A':
+        if mut_types in ['activating', 'increase']:
             mut_types_colors.append('green')
-        elif mut_types == 'D':
+        elif mut_types in ['loss', 'decrease']:
             mut_types_colors.append('red')
-        elif mut_types == 'N':
+        elif mut_types == 'neutral':
             mut_types_colors.append('cyan')
-        elif mut_types == 'R':
+        elif mut_types == 'resistance':
             mut_types_colors.append('blue')
         else:
             mut_types_colors.append('violet')

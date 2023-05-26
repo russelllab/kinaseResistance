@@ -46,7 +46,7 @@ gzip -f humanKinasesHitsSplitHmmsearchTrimmed.txt
 # to the script) using the file humanKinasesHitsSplitHmmsearchTrimmed.txt.gz
 # Save the output in the file humanKinasesHitsSplitHmmsearchTrimmedMapped.txt.gz
 # The scipt automatically adds the keyword "Mappings" to the input file name
-python map2domain.py humanKinasesHitsSplitHmmsearchTrimmed.txt.gz humanKinasesHitsSplitTrimmed 30 280
+python map2domain.py humanKinasesHitsSplitHmmsearchTrimmed.txt.gz humanKinasesHitsSplitTrimmed 30 793
 
 # Step 9: Map the PTM sites to the new domain numbering in the
 # domain name 'humanKinasesHitsSplitTrimmed' (given as input

@@ -30,7 +30,7 @@ import pickle
 # 5 3 3 100 for AD
 # 12 3 3 100 for RN
 
-RANDOM_STATE = 1
+RANDOM_STATE = 0
 ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10
@@ -146,12 +146,13 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     y_test = []
     test_names = []
     for row in df.to_numpy():
-        if row[-1] in ['A']:
+        # print (row)
+        if row[-1] in ['activating', 'increase']:
             y.append(1)
             y_names.append(row[-1])
             X.append(row[3:-1])
             train_names.append('/'.join(row[:3]))
-        elif row[-1] in ['D']:
+        elif row[-1] in ['neutral', 'loss', 'decrease']:
             y.append(0)
             y_names.append(row[-1])
             X.append(row[3:-1])
@@ -285,7 +286,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
         rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS)
         model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc', n_jobs=N_JOBS)
         model.fit(X, y)
-        print (model.cv_results_['mean_test_score'])
+        print ('mean_test_score', model.cv_results_['mean_test_score'])
         # print (model.cv_results_['mean_train_score'])
         clf = RandomForestClassifier(
                 n_estimators=model.best_params_['n_estimators'],
@@ -491,10 +492,11 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     # filename = 'finalized_model_RN.sav'
     # pickle.dump(clf, open(filename, 'wb'))
 
-    test_types = ['AR', 'Activating', 'TBD', 'Inconclusive']
+    test_types = ['activatingresistance','resistance', 'A', 'TBD', 'Inconclusive']
     for test_type in test_types:
         print (''.join(['#' for i in range(1,25)]))
-        if test_type in ['AR', 'R']:
+        if test_type in ['resistance', 'activatingresistance']:
+        # if test_type in ['activatingresistance']:
             X_sub_test = []; y_sub_test = []
             for test_name, p, q in zip(test_names, X_test, y_test):
                 if q != test_type: continue
