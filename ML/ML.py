@@ -459,16 +459,19 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
     
     if ALGO == 'RF':
         # print (clf.estimator_.decision_path(X))
+        '''
         estimator = clf.estimator_
         estimator.fit(X, y)
         text_representation = tree.export_text(estimator)
         # print(text_representation)
+        
         fig = plt.figure(figsize=(25,20))
         _ = tree.plot_tree(estimator, 
                         feature_names = feature_names,
                         class_names = y_names,
                         filled=True)
         # plt.show()
+        
 
         print (''.join(['#' for i in range(1,25)]))
         data = []
@@ -485,6 +488,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators):
         sns.set(font_scale = 0.6)
         sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
         plt.grid(True, lw=0.1)
+        '''
         # plt.savefig('feature_imp.png')
         # plt.show()
     
