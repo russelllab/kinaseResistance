@@ -47,7 +47,7 @@ for name in dic_mutations:
     acc = name.split('/')[0]
     if acc in sift_dic: continue
     sift_dic[acc] = {}
-    for line in gzip.open(mechXpath+acc[:4]+acc+'/'+'.annotations.txt.gz', 'rt'):
+    for line in gzip.open(mechXpath+acc[:4]+'/'+acc+'.annotations.txt.gz', 'rt'):
         if line.startswith('UniProtID'): continue
         mutation = line.strip().split('\t')[0]+'/'+line.split('\t')[1]+line.split('\t')[2]+line.split('\t')[3]
         siftPred = 'damaging' if 'True' in line.strip().split('\t')[19] else 'benign'
