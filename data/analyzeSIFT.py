@@ -47,9 +47,27 @@ for name in dic_mutations:
     acc = name.split('/')[0]
     if acc in sift_dic: continue
     sift_dic[acc] = {}
-    for line in gzip.open(mechXpath+acc[:4]+acc+'P15056.annotations.txt.gz', 'rt'):
+    for line in gzip.open(mechXpath+acc[:4]+acc+'/'+'.annotations.txt.gz', 'rt'):
         if line.startswith('UniProtID'): continue
         mutation = line.strip().split('\t')[0]+'/'+line.split('\t')[1]+line.split('\t')[2]+line.split('\t')[3]
         siftPred = 'damaging' if 'True' in line.strip().split('\t')[19] else 'benign'
         sift_dic[acc][mutation] = siftPred
-        
+
+y_pred = []; y_true = []
+for mutation in dic_mutations:
+    if dic_mutations[mutation].prediction is None: continue
+    if dic_mutations[mutation].mut_type in ['resistance']: continue
+    # print (mutation, dic_mutations[mutation].mut_type, dic_mutations[mutation].prediction)
+    if 'damaging' in dic_mutations[mutation].prediction:
+        y_pred.append(1)
+    else:
+        y_pred.append(0)
+    if dic_mutations[mutation].mut_type in ['increase', 'activating', 'decrease', 'loss', 'resistance']:
+        y_true.append(1)
+    else:
+        y_true.append(0)
+
+# print (y_pred)
+print (matthews_corrcoef(y_true, y_pred))
+print (recall_score(y_true, y_pred))
+print (recall_score(y_true, y_pred, pos_label=0))
