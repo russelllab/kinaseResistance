@@ -1,3 +1,9 @@
+## Changelog 24. May 2023
+- Cosmetic fixes. Removed yellow highlighting of sequence of interest and shortened horizontal rectangle to avoid inconsistencies with sequence identifiers of significantly different number of characters.
+- Adjusted the font size of labels on the left (imaginary y-axis) axis to the same size.
+- Modified the mouse-over information. In line 1 in only says Genename|UniprotID|Mutation, the sequence range was removed to reduce clutter of the infobox.
+
+
 ## Changelog 16. May 2023
 - Adjusted code to accomodate for the new alignment, using different identifiers in case of multiple kinase domains per protein. Changed the position of the bootstrap arrow box and fixed the colors.
 Everything can be found in [Create_SVG/Enhancements_May2023/16thMay](https://github.com/russelllab/kinaseResistance/tree/main/Create_SVG/Enhancements_May2023/16thMay)
