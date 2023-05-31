@@ -7,7 +7,7 @@ code to analyze to SIFT4G
 import os, sys, gzip
 sys.path.insert(1, '../ML/')
 import fetchData
-from sklearn.metrics import matthews_corrcoef, recall_score
+from sklearn.metrics import matthews_corrcoef, recall_score, roc_auc_score
 
 class Mutation:
     def __init__(self, acc, pos, wtAA, mutAA, mut_type):
@@ -49,9 +49,12 @@ for name in dic_mutations:
     sift_dic[acc] = {}
     for line in gzip.open(mechXpath+acc[:4]+'/'+acc+'.annotations.txt.gz', 'rt'):
         if line.startswith('UniProtID'): continue
-        mutation = line.strip().split('\t')[0]+'/'+line.split('\t')[1]+line.split('\t')[2]+line.split('\t')[3]
+        mutation = line.split('\t')[1].strip()+line.split('\t')[2].strip()+line.split('\t')[3].strip()
         siftPred = 'damaging' if 'True' in line.strip().split('\t')[19] else 'benign'
         sift_dic[acc][mutation] = siftPred
+        #print (acc+'/'+mutation)
+        if acc+'/'+mutation in dic_mutations:
+                dic_mutations[acc+'/'+mutation].prediction = siftPred
 
 y_pred = []; y_true = []
 for mutation in dic_mutations:
@@ -68,6 +71,7 @@ for mutation in dic_mutations:
         y_true.append(0)
 
 # print (y_pred)
-print (matthews_corrcoef(y_true, y_pred))
-print (recall_score(y_true, y_pred))
-print (recall_score(y_true, y_pred, pos_label=0))
+print (f'MCC: {matthews_corrcoef(y_true, y_pred)}')
+print (f'REC: {recall_score(y_true, y_pred)}')
+print (f'SPE: {recall_score(y_true, y_pred, pos_label=0)}')
+print (f'AUC: {roc_auc_score(y_true, y_pred)}')
