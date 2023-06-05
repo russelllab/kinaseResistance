@@ -1,3 +1,14 @@
+## Changelog 05. June 2023
+Updated the feature annotation to work with the contents of the file ss.tsv. My script reads the lines without "#" and replaces any number of spaces with a single space, then reads the feature and the start & end positions. This file can therefore be updated later and should not break the script as long as the format remains the same.
+
+Do either
+
+`create_svg.main("1", identitydictionary, overallconser,"humanKinasesHitsSplitTrimmedWeb.aln", "BRAF|P15056|430-762", 600,30, 10, possis, feature_dict)`
+
+or
+
+`python3 create_svg_20230605_kinases_GS.py MAP2K3=P46734=37-347 84 30000 30000 humanKinasesHitsSplitTrimmedWeb.aln sample_dic_mutation_info.txt GenerelleKonservierung_May-24-2023.txt ss.tsv SeqIdentity_Matrix_May-24-2023.txt 1`
+
 ## Changelog 24. May 2023
 - Cosmetic fixes. Removed yellow highlighting of sequence of interest and shortened horizontal rectangle to avoid inconsistencies with sequence identifiers of significantly different number of characters.
 - Adjusted the font size of labels on the left (imaginary y-axis) axis to the same size.
