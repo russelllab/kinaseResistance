@@ -575,27 +575,10 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
     return filename
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
-def main(sortingvalue, identitydictionary,overallconservation, alignmentfile, protein_of_interest, position_of_interest, window, topguns, positions, path=''):
+def main(sortingvalue, identitydictionary,overallconservation, alignmentfile, protein_of_interest, position_of_interest, window, topguns, positions, feature_dict, path=''):
 	sequences, trackstart 	= CUSTOM_ALIGN(alignmentfile)
 	TheForbiddenPositions = []
-	feature_dict = {}
-	try:
-		if sys.argv[8] != "none":
-			with open(sys.argv[8]) as ff:
-				for line in ff:
-					if "#" not in line:
-						newline = whitespace_killer.sub(" ",line)
-						feature = newline.split(" ")[0]
-						start = int(newline.split(" ")[2].split("-")[0])
-						end = int(newline.split(" ")[2].split("-")[1].replace("\n",""))
-						if feature not in feature_dict:
-							feature_dict[feature]=[]
-						for i in range(start, end+1):
-							if i not in feature_dict[feature]:
-								feature_dict[feature].append(i)
-	except:
-		#print(logging.exception("message"))
-		pass
+	
 	### to define the annotation colors we want to use
 
 	positioncolors = ["#009e73","#d55e00","#0072b2","lightgreen","salmon","yellow","blueviolet","deeppink","olive","dodgerblue","palegreen"]
@@ -651,4 +634,22 @@ if __name__ == "__main__":
 		data_ident = h.read()
 	identitydictionary = ast.literal_eval(data_ident)
 	sortingvalue = sys.argv[10]
-	main(sortingvalue, identitydictionary, overallconservation, alignmentfile, protein_of_interest, position_of_interest, window, topguns, positions)
+	feature_dict = {}
+	try:
+		if sys.argv[8] != "none":
+			with open(sys.argv[8]) as ff:
+				for line in ff:
+					if "#" not in line:
+						newline = whitespace_killer.sub(" ",line)
+						feature = newline.split(" ")[0]
+						start = int(newline.split(" ")[2].split("-")[0])
+						end = int(newline.split(" ")[2].split("-")[1].replace("\n",""))
+						if feature not in feature_dict:
+							feature_dict[feature]=[]
+						for i in range(start, end+1):
+							if i not in feature_dict[feature]:
+								feature_dict[feature].append(i)
+	except:
+		#print(logging.exception("message"))
+		pass
+	main(sortingvalue, identitydictionary, overallconservation, alignmentfile, protein_of_interest, position_of_interest, window, topguns, positions, feature_dict)
