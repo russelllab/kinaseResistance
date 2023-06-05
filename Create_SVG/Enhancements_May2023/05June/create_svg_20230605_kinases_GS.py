@@ -182,6 +182,12 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
             if categ not in positions[item]:
                 positions[item][categ]=[]
     ### adjust the proteinfeatures dictionary
+    for feat in proteinfeatures:
+        mini = min(proteinfeatures[feat])
+        maxi = max(proteinfeatures[feat])
+        for i in range(mini,maxi+1):
+            if i not in proteinfeatures[feat]:
+                proteinfeatures[feat].append(i)
     if startposition == "none":
         startposition = 1
     try:
