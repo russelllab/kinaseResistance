@@ -25,8 +25,8 @@ df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t')
 # print (df.to_numpy().tolist())
 # sys.exit()
 
-df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.025, regex=True)
-df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
+df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.075, regex=True)
+df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.5, regex=True)
 # exclude columns
 # df = df.loc[:, ~df.columns.isin(['allHomologs','exclParalogs','specParalogs','orthologs', 'bpso','bpsh'])]
 df = df.loc[:, ~df.columns.isin([
@@ -39,43 +39,71 @@ df = df.loc[:, ~df.columns.isin([
                             ])]
 # exclude columns to make the data matrix
 original_df = df.copy()
-columns_to_exclude = ['Acc',
-                      'Mutation',
-                      'Gene',
-                      'Dataset',
-                      'hmmPos',
-                      'hmmSS',
-                    #   'A_known',
-                    #   'D_known',
-                    #   'R_known',
-                    #   'Phosphomimic',
-                    #   'hmmScoreWT',
-                    #   'hmmScoreMUT',
-                    #   'hmmScoreDiff'
-                      ]
-for aa in AA:
-    if aa not in ['S', 'T', 'Y']:
-        columns_to_exclude.append(aa+'_WT')
-    if aa not in ['D', 'E']:
-        columns_to_exclude.append(aa+'_MUT')
+columns_to_exclude = [
+                        'Acc',
+                        'Mutation',
+                        'Gene',
+                        'Dataset',
+                        'hmmPos',
+                        'hmmSS',
+                        'ChargesWT',
+                        'ChargesMUT',
+                        # 'ChargesDiff',
+                        #   'A_known',
+                        #   'D_known',
+                        #   'R_known',
+                        #   'Phosphomimic',
+                          'hmmScoreWT',
+                          'hmmScoreMUT',
+                        #   'hmmScoreDiff'
+                        ]
+# for aa in AA:
+#     if aa not in ['S', 'T', 'Y']:
+#         columns_to_exclude.append(aa+'_WT')
+#     if aa not in ['D', 'E']:
+#         columns_to_exclude.append(aa+'_MUT')
 
-pfam_ptm_cols = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
+############
+pfam_ptm_cols = ['ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    if i in [0]: continue
+    if i in [-1, 0, 1]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
-ptm_cols = ['p', 'ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
+pfam_ptm_cols = ['p_pfam']
 for i in range(-5,6):
-    if i in [0]: continue
+    if i in [-1, 0, 1]: continue
+    for col in pfam_ptm_cols:
+        columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
+############
+
+ptm_cols = ['ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
+for i in range(-5,6):
+    if i in [-1, 0, 1]: continue
     for col in ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
+ptm_cols = ['p']
+for i in range(-5,6):
+    if i in [-1, 0, 1]: continue
+    for col in ptm_cols:
+        columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
+
+############
+
 adr_cols = ['A', 'D', 'R']
 for i in range(-5, 6):
-    if i in [0]: continue
+    if i in [-2, -1, 1, 2]: continue
     for col in adr_cols:
         columns_to_exclude.append(col+'_'+str(i))
+
+############
+
+adr_cols = ['A_pfam', 'D_pfam', 'R_pfam']
+for i in range(-5, 6):
+    if i in [-2, -1, 0, 1, 2]: continue
+    for col in adr_cols:
+        columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
 
@@ -91,16 +119,16 @@ mut_types_colors = []
 # for line in gzip.open('trainData.tsv.gz', 'rt'):
 for row in df.to_numpy():
     mut_type = row[-1]
-    if mut_type == 'A':
+    if mut_type in ['activating', 'increase']:
         # continue
         mut_types_colors.append('green')
-    elif mut_type == 'D':
+    elif mut_type in ['loss', 'decrease']:
         mut_types_colors.append('red')
-    elif mut_type == 'R':
+    elif mut_type == 'resistance':
         mut_types_colors.append('blue')
-    elif mut_type == 'N':
+    elif mut_type == 'neutral':
         mut_types_colors.append('cyan')
-    elif mut_type == 'AR':
+    elif mut_type == 'activatingresistance':
         mut_types_colors.append('violet')
     else:
         # continue
@@ -174,13 +202,15 @@ fig = px.scatter(
                         'hmmPos'
                         ],
                 color_discrete_map={
-                                "A": "green",
-                                "D": "red",
-                                "R": "blue",
-                                "N": "cyan",
-                                "AR": "violet",
+                                "activating": "green",
+                                "increase": "lightgreen",
+                                "loss": "red",
+                                "decrease": "lightcoral",
+                                "resistance": "blue",
+                                "neutral": "cyan",
+                                "activatingresistance": "violet",
                                 "TBD": "yellow",
-                                "Activating": "lightgreen",
+                                "A": "darkgreen",
                                 "Inconclusive": "grey"
                                 }
                  )

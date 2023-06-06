@@ -40,10 +40,10 @@ import create_svg_20230516_kinases_GS as create_svg
 conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_May-24-2023.txt'
 identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_May-24-2023.txt'
 
-def connection():
+def connection(database='kinase_project2'):
     '''Function to connect to postgresql database'''
     mydb = psycopg2.connect(
-                            database = "kinase_project",
+                            database = database,
                             user = "gurdeep",
                             password = "hellokitty",
                             host = "localhost",
@@ -73,6 +73,9 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 	if ws > 0: ws -= 1
 	ws = int(ws/2)
 	dic_mutations = {'A': 'Activating', 'D': 'Deactivating', 'R': 'Resistance'}
+	dic_mutations = {'activating': 'Activating', 'increase': 'Activating',\
+		  			'loss': 'Deactivating', 'decrease': 'Deactivating',\
+					'resistance': 'Resistance'}
 	dic_ptms = {'p': 'phosphorylation', 'ub': 'ubiquitination', 'ac': 'acetylation', 'me': 'methylation', 'gl': 'glycosylation', 'sm': 'sumoylation', 'm1': 'myristoylation', 'm2': 'palmitoylation', 'm3': 'myristoylation'}
 	text = ''
 	mutation_position = int(mutation[1:-1])
@@ -199,7 +202,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			uniprotaa = entry[1]
 			uniprotpos = entry[2]
 			mut_type = entry[3]
-			if mut_type == 'N': continue
+			if mut_type == 'neutral': continue
 			ref_acc = entry[4]
 			# skip the acc of interest since it has been already done
 			# if ref_acc == acc: continue
@@ -302,8 +305,11 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['region'] = results['predictions'][name]['region']
 		dic['ptmType'] = results['predictions'][name]['ptmType']
 		dic['mutType'] = results['predictions'][name]['mutType']
-		dic['predAD'] = results['predictions'][name]['predAD']
-		dic['predRN'] = results['predictions'][name]['predRN']
+	
+		dic['AIvNLD'] = results['predictions'][name]['AIvNLD']
+		dic['LDvNAI'] = results['predictions'][name]['LDvNAI']
+		dic['RvN'] = results['predictions'][name]['RvN']
+		dic['AIvLD'] = results['predictions'][name]['AIvLD']
 		dic['hmmPos'] = results['predictions'][name]['hmmPos']
 		dic['alnPos'] = results['predictions'][name]['alnPos']
 		adjacentSites = results['predictions'][name]['adjacentSites']
@@ -550,23 +556,26 @@ def configureRoutes(app):
 		
 		dic = {}
 		# print (kinase, mutation)
-		activating_prob = results['predictions'][kinase+'/'+mutation]['predAD']
+		activating_prob = results['predictions'][kinase+'/'+mutation]['AIvNLD']
+		deactivating_prob = results['predictions'][kinase+'/'+mutation]['LDvNAI']
+		resistance_prob = results['predictions'][kinase+'/'+mutation]['RvN']
+		activating_AIvLD_prob = results['predictions'][kinase+'/'+mutation]['AIvLD']
 		if activating_prob == 'NA':
-			activating_prob = 0.0
-			deactivating_prob = 0.0
+			activating_AIvLD_prob = 0.0
+			deactivating_AIvLD_prob = 0.0
 		else:
-			activating_prob = float(activating_prob)
-			deactivating_prob = 1.0 - activating_prob
+			activating_AIvLD_prob = float(activating_AIvLD_prob)
+			deactivating_AIvLD_prob = 1.0 - activating_AIvLD_prob
 
-		resistance_prob = results['predictions'][kinase+'/'+mutation]['predRN']
 		results['predictions'][kinase+'/'+mutation]['activating'] = activating_prob
 		results['predictions'][kinase+'/'+mutation]['deactivating'] = deactivating_prob
-		results['predictions'][kinase+'/'+mutation]['neutral'] = 0.5
-		results['predictions'][kinase+'/'+mutation]['resistant'] = resistance_prob
+		results['predictions'][kinase+'/'+mutation]['resistance'] = resistance_prob
 		dic = {'activating': results['predictions'][kinase+'/'+mutation]['activating'],
 				'deactivating': results['predictions'][kinase+'/'+mutation]['deactivating'],
-				'neutral': results['predictions'][kinase+'/'+mutation]['neutral'],
-				'resistant': results['predictions'][kinase+'/'+mutation]['resistant']}
+				'resistance': results['predictions'][kinase+'/'+mutation]['resistance'],
+				'activating_AIvLD': activating_AIvLD_prob,
+				'deactivating_AIvLD': deactivating_AIvLD_prob
+				}
 		return jsonify(dic)
 	
 	@app.route('/AJAXSummary', methods=['GET', 'POST'])
@@ -707,10 +716,13 @@ def configureRoutes(app):
 			if line.startswith('sp'):
 				accs_in_alignment[line.split('|')[1]] = line.split()[0]
 
-		mycursor = connection()
+		mycursor = connection(database='kinase_project2')
 
 		dic_mutations_info = {}
-		mut_type_name = {'A': 'Activating', 'D': 'Deactivating', 'R': 'Resistance'}
+		# mut_type_name = {'A': 'Activating', 'D': 'Deactivating', 'R': 'Resistance'}
+		mut_type_name = {'activating': 'Activating', 'increase': 'Activating', \
+		   				'loss': 'Deactivating', 'decrease': 'Deactivating',\
+						'resistance': 'Resistance'}
 		ptm_type_name = {'me': 'Methylation', 'm1': 'Methylation', 'm2': 'Methylation',\
 		   				'm3': 'Methylation', 'p': 'Phosphorylation', 'ac': 'Acetylation',
 						'ub': 'Ubiquitination', 'sm': 'Sumoylation', 'gl': 'O-GlcNAc'}
@@ -725,9 +737,9 @@ def configureRoutes(app):
 				if acc not in dic_mutations_info:
 					# dic_mutations_info[acc] = {'A':[], 'D':[], 'R':[]}
 					dic_mutations_info[acc] = {'Activating':[], 'Deactivating':[], 'Resistance':[]}
-				if mutType == 'N': continue
+				if mutType == 'neutral': continue
 				if acc not in accs_in_alignment: continue
-				if mutType in ['A', 'D']:
+				if mutType in ['activating', 'increase', 'loss', 'decrease']:
 					pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
 					text = ''
 					if pubmed_ids != []:
@@ -785,7 +797,7 @@ def configureRoutes(app):
 			if values[1] == sortTypeText:
 				sortingvalue = str(values[0])
 				break
-		# print (f'sortingValue is {sortingvalue}')
+		print (f'sortingValue is {sortingvalue}')
 		# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
 		# geeky_file.write(str(dic_mutations_info))
 		# try:

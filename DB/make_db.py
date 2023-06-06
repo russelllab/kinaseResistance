@@ -387,7 +387,11 @@ def create_homology_table(mycursor) -> None:
                 dic[position][mutaa+'_score'] = mutscore
             for position in range(1, len(dic)+1):
                 row = []
-                row = [acc, dic[position]['wtaa'], position]
+                try:
+                    row = [acc, dic[position]['wtaa'], position]
+                except:
+                    print (acc, position, fileEnd, 'does not exist')
+                    sys.exit()
                 for aa in AA:
                     if aa+'_score' in dic[position]:
                         row.append(dic[position][aa+'_score'])
@@ -402,6 +406,235 @@ def create_homology_table(mycursor) -> None:
         df.to_csv(tmp_df, index=False, header=False)
         f = open(tmp_df, 'r')
         mycursor.copy_from(f, homology, sep=',')
+
+def create_iupred_table(mycursor) -> None:
+    '''Function to create the iupred table'''
+    # path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
+    path = '../data/strucFiles/'
+    mycursor.execute("DROP TABLE IF EXISTS structure CASCADE")
+    mycursor.execute('select acc from kinases')
+    accs = mycursor.fetchall()
+    fileEnd = 'iupred.gz'
+    strucType = fileEnd.split('.gz')[0]
+    mycursor.execute("DROP TABLE IF EXISTS "+strucType+" CASCADE")
+    AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+    mycursor.execute("CREATE TABLE "+strucType+" (\
+                acc VARCHAR(10) REFERENCES kinases(acc) DEFERRABLE, \
+                wtaa VARCHAR(5), position INT, \
+                A_score FLOAT, C_score FLOAT, D_score FLOAT, E_score FLOAT, \
+                F_score FLOAT, G_score FLOAT, H_score FLOAT, I_score FLOAT, \
+                K_score FLOAT, L_score FLOAT, M_score FLOAT, N_score FLOAT, \
+                P_score FLOAT, Q_score FLOAT, R_score FLOAT, S_score FLOAT, \
+                T_score FLOAT, V_score FLOAT, W_score FLOAT, Y_score FLOAT, \
+                info TEXT) \
+                ")
+    data = []
+    num = 0
+    for acc_tuple in tqdm(accs):
+        dic = {}
+        num += 1
+        # if num == 10: break
+        acc = acc_tuple[0]
+        filePath = path + '/AF-' + acc + '-F1-model_v1.' + fileEnd
+        if os.path.isfile(filePath) is False:
+            print (filePath, 'does not exist')
+            continue
+        for line in gzip.open(filePath, 'rt'):
+            #print (acc, line.split())
+            #sys.exit()
+            # mutation = line.split()[0].split('/')[1]
+            position = int(line.split()[0])
+            wtaa = line.split()[2]
+            mutaa = line.split()[3]
+            wtscore = float(line.split()[5])
+            mutscore = float(line.split()[7])
+            diffscore = float(line.split()[9].rstrip())
+            # info = line.split()[5].rstrip()
+            info = '-'
+            if position not in dic: dic[position] = {'wtaa': wtaa, 'info': info}
+            dic[position][mutaa+'_score'] = mutscore
+        for position in range(1, len(dic)+1):
+            row = []
+            row = [acc, dic[position]['wtaa'], position]
+            for aa in AA:
+                if aa+'_score' in dic[position]:
+                    row.append(dic[position][aa+'_score'])
+                else:
+                    row.append(None)
+            row.append(dic[position]['info'] if 'info' in dic[position] else None)
+            data.append(row)
+    # if len(data) == 0: continue
+    df = pd.DataFrame(data)
+    # print (df)
+    tmp_df = "./tmp_dataframe.csv"
+    df.to_csv(tmp_df, index=False, header=False)
+    f = open(tmp_df, 'r')
+    mycursor.copy_from(f, strucType, sep=',')
+
+def create_dssp_tables(mycursor) -> None:
+    '''Function to create dssp tables'''
+    # path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
+    path = '../data/strucFiles/'
+    mycursor.execute("DROP TABLE IF EXISTS structure CASCADE")
+    mycursor.execute('select acc from kinases')
+    accs = mycursor.fetchall()
+    fileEnd = 'dssp-scores.gz'
+    AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+    data_phi_psi = []
+    data_sec = []
+    data_acc = []
+    data_burr = []
+    num = 0
+    for acc_tuple in tqdm(accs):
+        dic_phi_psi = {}
+        dic_sec = {}
+        dic_acc = {}
+        dic_burr = {}
+        num += 1
+        # if num == 10: break
+        acc = acc_tuple[0]
+        filePath = path + '/AF-' + acc + '-F1-model_v1.' + fileEnd
+        if os.path.isfile(filePath) is False:
+            print (filePath, 'does not exist')
+            continue
+        for line in gzip.open(filePath, 'rt'):
+            if line.split()[0] == 'length': continue
+            #sys.exit()
+            # mutation = line.split()[0].split('/')[1]
+            position = int(line.split()[0])
+            wtaa = line.split()[2]
+            mutaa = line.split('PHI/PSI')[0].split()[-1]
+            content_after_phi_psi = line.split('PHI/PSI')[1]
+            # print (acc, line.split())
+            for scores, dic in [[(4,5),dic_phi_psi],
+                                [(8,9), dic_sec],
+                                [(12,13), dic_burr],
+                                [(16,17), dic_acc]
+                                ]:
+                wtscore, mutscore = float(content_after_phi_psi.split()[scores[0]]), float(content_after_phi_psi.split()[scores[1]])
+                if position not in dic: dic[position] = {'wtaa': wtaa}
+                dic[position][mutaa+'_score'] = mutscore
+        for data, dic in [
+                            [data_phi_psi, dic_phi_psi],
+                            [data_sec, dic_sec],
+                            [data_burr, dic_burr],
+                            [data_acc, dic_acc]
+                        ]:
+            for position in range(1, len(dic)+1):
+                row = []
+                row = [acc, dic[position]['wtaa'], position]
+                for aa in AA:
+                    if aa+'_score' in dic[position]:
+                        row.append(dic[position][aa+'_score'])
+                    else:
+                        row.append(None)
+                row.append(dic[position]['info'] if 'info' in dic[position] else None)
+                data.append(row)
+    for data, dsspType in [
+                    [data_phi_psi, 'phi_psi'],
+                    [data_sec, 'sec'],
+                    [data_burr, 'burr'],
+                    [data_acc, 'acc']
+                    ]:
+        mycursor.execute("DROP TABLE IF EXISTS "+dsspType+" CASCADE")
+        mycursor.execute("CREATE TABLE "+dsspType+" (\
+                    acc VARCHAR(10) REFERENCES kinases(acc) DEFERRABLE, \
+                    wtaa VARCHAR(5), position INT, \
+                    A_score FLOAT, C_score FLOAT, D_score FLOAT, E_score FLOAT, \
+                    F_score FLOAT, G_score FLOAT, H_score FLOAT, I_score FLOAT, \
+                    K_score FLOAT, L_score FLOAT, M_score FLOAT, N_score FLOAT, \
+                    P_score FLOAT, Q_score FLOAT, R_score FLOAT, S_score FLOAT, \
+                    T_score FLOAT, V_score FLOAT, W_score FLOAT, Y_score FLOAT, \
+                    info TEXT) \
+                    ")
+        # if len(data) == 0: continue
+        df = pd.DataFrame(data)
+        # print (df)
+        tmp_df = "./tmp_dataframe.csv"
+        df.to_csv(tmp_df, index=False, header=False)
+        f = open(tmp_df, 'r')
+        mycursor.copy_from(f, dsspType, sep=',')
+
+def create_mechismo_table(mycursor) -> None:
+    '''Function to create the mechismo table'''
+    # path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
+    path = '../data/strucFiles/'
+    mycursor.execute("DROP TABLE IF EXISTS mechismo CASCADE")
+    mycursor.execute('select acc from kinases')
+    accs = mycursor.fetchall()
+    fileEnd = 'mech_intra.gz'
+    strucType = fileEnd.split('.gz')[0]
+    mycursor.execute("DROP TABLE IF EXISTS "+strucType+" CASCADE")
+    AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+    mycursor.execute("CREATE TABLE "+strucType+" (\
+                acc VARCHAR(10) REFERENCES kinases(acc) DEFERRABLE, \
+                wtaa VARCHAR(5), position INT, \
+                ncontacts INT, nresidues INT, \
+                A_score FLOAT, C_score FLOAT, D_score FLOAT, E_score FLOAT, \
+                F_score FLOAT, G_score FLOAT, H_score FLOAT, I_score FLOAT, \
+                K_score FLOAT, L_score FLOAT, M_score FLOAT, N_score FLOAT, \
+                P_score FLOAT, Q_score FLOAT, R_score FLOAT, S_score FLOAT, \
+                T_score FLOAT, V_score FLOAT, W_score FLOAT, Y_score FLOAT, \
+                info TEXT) \
+                ")
+    data = []
+    num = 0
+    for acc_tuple in tqdm(accs):
+        dic = {}
+        num += 1
+        # if num == 10: break
+        acc = acc_tuple[0]
+        filePath = path + '/AF-' + acc + '-F1-model_v1.' + fileEnd
+        if os.path.isfile(filePath) is False:
+            print (filePath, 'does not exist')
+            continue
+        for line in gzip.open(filePath, 'rt'):
+            if line.split()[0] == 'CO':
+                position = int(line.split()[1])
+                wtaa = line.split()[2]
+                ncontacts = int(line.split()[3])
+                nresidues = int(line.split()[4])
+                if position not in dic: dic[position] = {'wtaa': wtaa}
+                dic[position]['ncontacts'] = ncontacts
+                dic[position]['nresidues'] = nresidues
+                # dic[position][mutaa+'_score'] = mutscore
+            elif line.split()[0] == 'MECH':
+                position = int(line.split()[1])
+                wtaa = line.split()[2]
+                mutaa = line.split()[3]
+                wtscore = float(line.split()[4])
+                mutscore = float(line.split()[5])
+                if len(line.split()) == 8:
+                    info = line.split()[7].rstrip()
+                else:
+                    info = '-'
+                if position not in dic: dic[position] = {'wtaa': wtaa, 'info': info}
+                if 'info' not in dic[position]: dic[position]['info'] = info
+                dic[position][mutaa+'_score'] = mutscore
+                # dic[position][mutaa+'_score'] = mutscore
+        for position in range(1, len(dic)+1):
+            row = []
+            row = [
+                    acc,
+                    dic[position]['wtaa'],
+                    position,
+                    dic[position]['ncontacts'],
+                    dic[position]['nresidues']
+                ]
+            for aa in AA:
+                if aa+'_score' in dic[position]:
+                    row.append(dic[position][aa+'_score'])
+                else:
+                    row.append(None)
+            row.append(dic[position]['info'] if 'info' in dic[position] else None)
+            data.append(row)
+    # if len(data) == 0: continue
+    df = pd.DataFrame(data)
+    # print (df)
+    tmp_df = "./tmp_dataframe.csv"
+    df.to_csv(tmp_df, index=False, header=False)
+    f = open(tmp_df, 'r')
+    mycursor.copy_from(f, strucType, sep=',')
 
 def fetch_map_fasta2aln():
     '''Function to map from fasta to alignment'''
@@ -423,13 +656,61 @@ def fetch_map_fasta2aln():
                 current_position += 1
     return map_fasta2aln
 
+def runHmmsearch(acc, path2fasta):
+    pdomains = ['Pkinase', 'PK_Tyr_Ser-Thr']
+    row = []
+    for pdomain in pdomains:
+        os.system('hmmsearch --tblout hh '+ ' ../pfam/' + pdomain +'.hmm '\
+                  + path2fasta + acc + '.fasta.gz')
+        for line in open('hh', 'r'):
+            if line.startswith('#'): continue
+            if line.split()[0] == acc: continue
+            print (line.split())
+            # print (line.split('\t')[4], acc)
+            if float(line.split()[4]) > 1e-5: continue
+            row.append(line.split()[3])
+    if len(row) == 0:
+        print (acc, 'nothing works')
+        sys.exit()
+    else:
+        return row
+
+def fetch_pfam_domains():
+    path2fasta = '../KA/UniProtFasta2/'
+    dic_kinase = {}
+    for line in open('../data/humanKinases.fasta', 'r'):
+        if line[0] != '>': continue
+        acc = line.split('|')[1]
+        if '-' in acc: continue
+        if acc not in dic_kinase: dic_kinase[acc] = []
+        for line in gzip.open(path2fasta + acc +'.txt.gz', 'rt'):
+            if line.startswith('DR') == False: continue
+            if line.split(';')[0].split()[1] != 'Pfam': continue
+            if line.split(';')[1].split()[0] in ['PF00069', 'PF07714', 'PF00454',\
+                                                'PF02518', 'PF02816', 'PF06743',\
+                                                'PF01163', 'PF10494', 'PF03109']:
+                dic_kinase[acc].append(line.split(';')[1].split()[0])
+
+    for acc in dic_kinase:
+        if len(dic_kinase[acc]) == 0:
+            if acc in ['O60885', 'Q9UIG0', 'P21675', 'Q13263',\
+                    'O15164', 'Q9NRL2', 'P53004', 'Q9Y5P4',\
+                        'Q5VZY9', 'Q9UPN9', 'P11274', 'Q8NI60',\
+                        'Q12979', 'Q12979', 'Q15059', 'Q58F21',\
+                        'P25440', 'Q58F21', 'Q8IZX4']:
+                dic_kinase[acc] = '-'
+            else:
+                dic_kinase[acc] = runHmmsearch(acc, path2fasta)
+    return dic_kinase
+
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
     mycursor.execute("DROP TABLE IF EXISTS kinases CASCADE")
     mycursor.execute("CREATE TABLE kinases (\
                      acc VARCHAR(10) PRIMARY KEY, \
                      gene VARCHAR(10), uniprot_id VARCHAR(25), \
-                     protein_name VARCHAR(100), fasta TEXT) \
+                     pfam_domain VARCHAR(50), protein_name VARCHAR(100), \
+                     fasta TEXT) \
                      ")
                     #  UNIQUE(acc, gene, uniprot_id, fasta))\
     mycursor.execute("DROP TABLE IF EXISTS positions CASCADE")
@@ -456,6 +737,7 @@ def create_kinases_table(mycursor)->None:
         else:
             kinases[name] += line.rstrip()
 
+    pfam_domains = fetch_pfam_domains()
     mappings = fetch_mappings_dic()
     map_fasta2aln = fetch_map_fasta2aln()
     num = 0
@@ -469,10 +751,12 @@ def create_kinases_table(mycursor)->None:
         gene = kinase.split('|')[2]
         protein_name = kinase.split('|')[3]
         fasta = str(kinases[kinase])
+        pfam_domain = ';'.join(pfam_domains[acc])
+        # print (acc, pfam_domain)
         # print (acc, gene, uniprot_id, fasta)
-        mycursor.execute("INSERT INTO kinases (acc, gene, uniprot_id, protein_name, fasta) \
-                            VALUES (%s, %s, %s, %s, %s)", \
-                            (acc, gene, uniprot_id, protein_name, fasta))
+        mycursor.execute("INSERT INTO kinases (acc, gene, uniprot_id, pfam_domain, protein_name, fasta) \
+                            VALUES (%s, %s, %s, %s, %s, %s)", \
+                            (acc, gene, uniprot_id, pfam_domain, protein_name, fasta))
         # if acc not in mappings: continue
         # if acc not in map_fasta2aln: continue
         for uniprotPos, uniprotAA in enumerate(fasta, start=1):
@@ -538,17 +822,23 @@ if __name__ == '__main__':
     '''
 
     # Create tables
-    # print ('Creating HMM table')
+    print ('Creating HMM table')
     create_hmm_table(mycursor)
-    # print ('Creating kinases table')
+    print ('Creating kinases table')
     create_kinases_table(mycursor)
-    # print ('Creating mutation table')
+    print ('Creating mutation table')
     create_mutations_table(mycursor)
-    # print ('Creating homology table')
-    # create_homology_table(mycursor)
-    # print ('Creating PTM table')
+    print ('Creating homology table')
+    create_homology_table(mycursor)
+    print ('Creating IUPRED table')
+    create_iupred_table(mycursor)
+    print ('Creating Mechismo table')
+    create_mechismo_table(mycursor)
+    print ('Creating DSSP tables')
+    create_dssp_tables(mycursor)
+    print ('Creating PTM table')
     create_ptm_table(mycursor)
-    # print ('Creating alignment table')
+    print ('Creating alignment table')
     create_alignment_table(mycursor)
     mydb.commit()
 

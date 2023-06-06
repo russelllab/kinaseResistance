@@ -164,7 +164,10 @@ for row in mycursor.fetchall():
 '''Make training matrix'''
 trainMat = 'Acc\tGene\tMutation\tDataset\t'
 trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
-trainMat += 'Phosphomimic\t'
+trainMat += 'Phosphomimic\tAcetylmimic\t'
+trainMat += 'IUPRED\t'
+trainMat += '\t'.join(['ncontacts', 'nresidues', 'mech_intra']) + '\t'
+trainMat += '\t'.join(['phi_psi', 'sec', 'burr', 'acc']) + '\t'
 trainMat += 'ChargesWT\tChargesMUT\tChargesDiff\t'
 startWS = int((WS-1)/2) * -1
 endWS = int((WS-1)/2)
@@ -203,11 +206,18 @@ for acc in tqdm(kinases):
         # print (acc, mutation)
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
         if hmmPos == '-': continue
+        iupred_score = fetchData.getIUPredScore(mycursor, acc, wtAA, position, mutAA)
+        if iupred_score == None: continue
         ptm_row = fetchData.getPTMscore(mycursor, acc, position, WS)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(mycursor, acc, wtAA, position, mutAA)
         if homology_row == None: continue
+        mech_intra_row = fetchData.getMechIntraScores(mycursor, acc, wtAA, position, mutAA)
+        if mech_intra_row == None: continue
+        dssp_row = fetchData.getDSSPScores(mycursor, acc, wtAA, position, mutAA)
+        if dssp_row == None: continue
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
+        is_acetylmimic = kinases[acc].mutations[mutation].checkAcetylmimic()
         charges_row = kinases[acc].mutations[mutation].findChangeInCharge()
         adr_row = fetchData.getADRvector(mycursor, acc, position, kinases, WS)
         # print (
@@ -223,6 +233,10 @@ for acc in tqdm(kinases):
         row.append(float(hmmScoreMUT))
         row.append(float(hmmScoreMUT)-float(hmmScoreWT))
         row.append(is_phosphomimic)
+        row.append(is_acetylmimic)
+        row.append(float(iupred_score))
+        row += [int(item) for item in mech_intra_row]
+        row += [int(item) for item in dssp_row]
         row += [int(item) for item in charges_row]
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
@@ -233,7 +247,10 @@ for acc in tqdm(kinases):
         # Prepare rows for writing the numpy data
         trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t' + mutation_obj.dataset + '\t'
         trainMat += str(hmmPos) + '\t' + str(hmmSS) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
-        trainMat += str(is_phosphomimic) + '\t'
+        trainMat += str(is_phosphomimic) + '\t' + str(is_acetylmimic) + '\t'
+        trainMat += str(iupred_score) + '\t'
+        trainMat += '\t'.join([str(item) for item in mech_intra_row]) + '\t'
+        trainMat += '\t'.join([str(item) for item in dssp_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in charges_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'

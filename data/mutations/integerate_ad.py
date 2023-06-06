@@ -51,7 +51,7 @@ for line in open('missing_cases_annotated.tsv', 'r'):
         dic[mutation] = Mutation(mutation, mutation_type, gene, info, outcome)
         dic[mutation].show()
 
-for line in open('final_mined_RR_checked_checked-again.txt', 'r'):
+for line in gzip.open('final_mined_RR_checked_checked-again.txt.gz', 'rt'):
     if line[0] == '#': continue
     mutation= line.split('\t')[0]
     mut = mutation.split('/')[1]
@@ -70,5 +70,6 @@ for line in open('final_mined_RR_checked_checked-again.txt', 'r'):
 text = 'UniProtAcc\tGene\tMutation\tMutationType\tInfo\tOutcome\n'
 for mutation in dic:
     text += dic[mutation].show() + '\n'
+    # print (dic[mutation].show())
 
 gzip.open('ad_mutations.tsv.gz', 'wt').write(text)

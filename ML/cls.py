@@ -76,3 +76,11 @@ class Mutation:
             return -1
         else:
             return 0
+    
+    def checkAcetylmimic(self):
+        if self.wtAA in ['K'] and self.mutAA in ['Q']:
+            return 1
+        elif self.wtAA in ['K']:
+            return -1
+        else:
+            return 0

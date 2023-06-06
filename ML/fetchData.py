@@ -7,11 +7,12 @@ import psycopg2
 
 '''
 List of functions that fetch data from
-different files
+the database
 '''
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
-AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L',\
+      'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
 def connection(db_name='kinase_project'):
     '''Function to connect to postgresql database'''
@@ -22,6 +23,13 @@ def connection(db_name='kinase_project'):
                             host = "localhost",
                             port = "5432")
     return mydb
+
+def checkGZfile(filename):
+    '''Function to check if the file is gzipped'''
+    if filename.endswith('.gz'):
+        return gzip.open(filename, 'rt')
+    else:
+        return open(filename, 'r')
 
 def mutTypes(mycursor, acc, mutation):
     '''Function to fetch mutation types from the DB'''
@@ -53,18 +61,25 @@ def getRegion(mycursor, acc, mutation):
         if alnpos == '-': return '-'
         else: alnpos = int(alnpos)
         region = []
-        if alnpos in range(453,457):
+        if alnpos in range(442,445):
             region.append('DFG-motif')
-        if alnpos in range(549, 552):
+        if alnpos in range(532, 535):
             region.append('APE-motif')
-        if alnpos in range(396, 399):
+        if alnpos in range(387, 390):
             region.append('HrD-motif')
-        if alnpos in range(453, 550):
-            region.append('Activation-loop')
-        if alnpos in range(37, 45):
+        # if alnpos in range(442, 535):
+        #     region.append('Activation-loop')
+        if alnpos in range(37, 43):
             region.append('Gly-rich-loop')
-        if alnpos == 129:
-            region.append('Conserved-Lys-N-term')
+        if alnpos == 127:
+            region.append('Catalytic-Lys')
+        
+        for line in open('../data/ss.tsv', 'r'):
+            if line.startswith('#'): continue
+            region_name = line.split()[0]
+            start, end = int(line.split()[-1].split('-')[0]), int(line.split()[-1].split('-')[1])
+            if alnpos in range(start, end+1):
+                region.append(region_name)
         
         # if no specific region found 
         # then assign a general term
@@ -85,7 +100,8 @@ def getAccGene(mycursor, name):
     '''Function to fetch acc and gene from the DB'''
     check_with = ['acc', 'gene', 'uniprot_id']
     for check in check_with:
-        mycursor.execute("select acc, gene, uniprot_id, protein_name from kinases where "+check+" = %s", (name,))
+        mycursor.execute("select acc, gene, uniprot_id, protein_name\
+                         from kinases where "+check+" = %s", (name,))
         hits = mycursor.fetchone()
         if hits is not None: break
     if hits is None:
@@ -208,7 +224,8 @@ def fetchHmmsearch(kinases, Kinase):
     one Pkinase domain.
     '''
     # os.system('hmmsearch -o out.txt ../pfam/Pkinase.hmm ../data/humanKinases.fasta')
-    os.system('hmmsearch -o out.txt ../pfam/humanKinasesHitsSplitTrimmed.hmm ../data/humanKinases.fasta')
+    os.system('hmmsearch -o out.txt ../pfam/humanKinasesHitsSplitTrimmed.hmm\
+                                    ../data/humanKinases.fasta')
     flag = 0
     for line in open('out.txt', 'r'):
         if line[:2] == '>>':
@@ -355,10 +372,80 @@ def getHomologyScores(mycursor, acc, wtAA, position, mutAA):
         # print (hit)
         acc = hit[0]
         AA = 'ACDEFGHIKLMNPQRSTVWY'
+        homology_score_wt, homology_score_mut = None, None
         for logodd, aa in zip(hit[3:-1], AA):
             if aa == mutAA:
-                row.append(float(logodd))
-                continue
+                # row.append(float(logodd))
+                homology_score_mut = float(logodd)
+            if aa == wtAA:
+                homology_score_wt = float(logodd)
+        row.append(homology_score_mut - homology_score_wt)
+    if len(row) == 0: row = None
+    return row
+
+def getIUPredScore(mycursor, acc, wtAA, position, mutAA):
+    iupred_score_wt, iupred_score_mut = None, None
+    mycursor.execute("SELECT * FROM iupred \
+                        WHERE acc=%s and position=%s", (acc, str(position),))
+    hit = mycursor.fetchone()
+    if hit is not None:
+        acc = hit[0]
+        AA = 'ACDEFGHIKLMNPQRSTVWY'
+        for logodd, aa in zip(hit[3:-1], AA):
+            if aa == mutAA:
+                # row.append(float(logodd))
+                iupred_score_mut = float(logodd)
+            if aa == wtAA:
+                iupred_score_wt = float(logodd)
+    # return row
+    if iupred_score_wt is None or iupred_score_mut is None:
+        return None
+    return iupred_score_mut - iupred_score_wt
+
+def getMechIntraScores(mycursor, acc, wtAA, position, mutAA):
+    row = []
+    mycursor.execute("SELECT * FROM mech_intra \
+                        WHERE acc=%s and position=%s", (acc, str(position),))
+    hit = mycursor.fetchone()
+    if hit is not None:
+        acc = hit[0]
+        ncontacts = hit[3]
+        nresidues = hit[4]
+        row = [int(ncontacts), int(nresidues)]
+        AA = 'ACDEFGHIKLMNPQRSTVWY'
+        mech_score_wt, mech_score_mut = None, None
+        for logodd, aa in zip(hit[5:-1], AA):
+            if aa == mutAA:
+                # row.append(float(logodd))
+                mech_score_mut = float(logodd)
+            if aa == wtAA:
+                mech_score_wt = float(logodd)
+        row.append(mech_score_mut - mech_score_wt)
+    if len(row) == 0: row = None
+    return row
+
+def getDSSPScores(mycursor, acc, wtAA, position, mutAA):
+    row = []
+    dsspTypes = ['phi_psi', 'sec', 'burr', 'acc']
+    for dsspType in dsspTypes:
+        mycursor.execute("SELECT * FROM "+dsspType+" \
+                            WHERE acc=%s and position=%s", (acc, str(position),))
+        hit = mycursor.fetchone()
+        if hit is not None:
+            acc = hit[0]
+            AA = 'ACDEFGHIKLMNPQRSTVWY'
+            dssp_score_wt, dssp_score_mut = None, None
+            for logodd, aa in zip(hit[3:-1], AA):
+                if aa == mutAA:
+                    # row.append(float(logodd))
+                    dssp_score_mut = float(logodd)
+                if aa == wtAA:
+                    dssp_score_wt = float(logodd)
+            row.append(dssp_score_mut - dssp_score_wt)
+        else:
+            # You can't take any entry if at least one of the dsspTypes is missing
+            row = []
+            break
     if len(row) == 0: row = None
     return row
 
@@ -367,9 +454,11 @@ def getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA):
     mycursor.execute("SELECT pfampos FROM positions \
                      WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
     hits = mycursor.fetchone()
-    # print (hits)
-    if hits == None: return '-', None, None, None
-    else: pfampos = hits[0]
+    # print (acc, wtAA, position, mutAA, hits)
+    if hits == None:
+        print (acc, wtAA, position, mutAA, hits)
+        return '-', None, None, None
+    pfampos = hits[0]
     # print (f'pfampos of {acc}/{wtAA}{position}{mutAA} is {pfampos}')
     mycursor.execute("SELECT * FROM hmm \
                         WHERE pfampos = %s", (str(pfampos),))

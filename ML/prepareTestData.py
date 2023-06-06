@@ -17,10 +17,12 @@ import pickle
 import pandas as pd
 from cls import Kinase, Mutation
 import argparse
+import gzip
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 MUT_TYPES = ['A', 'D', 'R']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+MODEL_NAMES = ['AIvNLD', 'LDvNAI', 'RvN', 'AIvLD']
 WS = 5
 
 def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
@@ -49,7 +51,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             }
 
     # Connect to DB
-    mydb = fetchData.connection()
+    mydb = fetchData.connection(db_name='kinase_project2')
     mydb.autocommit = True
     mycursor = mydb.cursor()
 
@@ -57,7 +59,10 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     data = []
     row = ['Input', 'Acc','Gene','UniProtID', 'ProteinName', 'Mutation','Region', 'Dataset']
     row += ['AdjacentSites', 'alnPos', 'hmmPos','hmmSS','hmmScoreWT','hmmScoreMUT','hmmScoreDiff']
-    row += ['Phosphomimic']
+    row += ['Phosphomimic', 'Acetylmimic']
+    row += ['IUPRED']
+    row += ['ncontacts', 'nresidues', 'mech_intra']
+    row += ['phi_psi', 'sec', 'burr', 'acc']
     row += ['ChargesWT','ChargesMUT','ChargesDiff']
     startWS = int((WS-1)/2) * -1
     endWS = int((WS-1)/2)
@@ -73,7 +78,8 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     data.append(row)
 
     # Open the input file and convert its contents into an array
-    f = open(inputFile, "r")
+    # f = open(inputFile, "r")
+    f = fetchData.checkGZfile(inputFile)
     file_contents = f.read().split('\n')
 
     # Go line by line through the contents
@@ -169,6 +175,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         mutAA = mutation[-1]
         wtAA = mutation[0]
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
+        iupred_score = fetchData.getIUPredScore(mycursor, acc, wtAA, position, mutAA)
         alnPos = fetchData.getAlnPos(mycursor, hmmPos)
         adjacentSites = fetchData.getAdjacentSites(mycursor, acc, position, 5)
         ## Even if the position is not in the HMM,
@@ -177,7 +184,12 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(mycursor, acc, wtAA, position, mutAA)
         if homology_row == None: continue
+        mech_intra_row = fetchData.getMechIntraScores(mycursor, acc, wtAA, position, mutAA)
+        if mech_intra_row == None: continue
+        dssp_row = fetchData.getDSSPScores(mycursor, acc, wtAA, position, mutAA)
+        if dssp_row == None: continue
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
+        is_acetylmimic = kinases[acc].mutations[mutation].checkAcetylmimic()
         charges_row = kinases[acc].mutations[mutation].findChangeInCharge()
         adr_row = fetchData.getADRvector(mycursor, acc, position, kinases, WS)
         
@@ -186,6 +198,10 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         row += [adjacentSites, str(alnPos), str(hmmPos), str(hmmSS)]
         row += [float(hmmScoreWT), float(hmmScoreMUT), float(hmmScoreMUT)-float(hmmScoreWT)]
         row.append(is_phosphomimic)
+        row.append(is_acetylmimic)
+        row.append(iupred_score)
+        row += [item for item in mech_intra_row]
+        row += [item for item in dssp_row]
         row += [item for item in charges_row]
         row += [item for item in ptm_row]
         row += [item for item in aa_row]
@@ -221,6 +237,19 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     features = features.to_numpy()
     features = features[:, 3:]
 
+    dic_features = {}
+    dic_scalers = {}
+    dic_clfs = {}
+    dic_predictions = {}
+    for model in MODEL_NAMES:
+        dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/'+'scaler_'+model+'.pkl', 'rb'))
+        dic_features[model] = dic_scalers[model].transform(features)
+        dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/'+'model_'+model+'.sav', 'rb'))
+        dic_predictions[model] = dic_clfs[model].predict_proba(dic_features[model])
+    
+    # print (dic_predictions)
+
+    '''
     # load the AD prediction and scaler models
     # and scale the features matrix
     filenameAD = BASE_DIR+'/ML/'+'finalized_model_AD.sav'
@@ -234,11 +263,15 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     clfRN = pickle.load(open(filenameRN, 'rb'))
     scalerRN = pickle.load(open(BASE_DIR+'/ML/'+'finalized_scaler_RN.pkl', 'rb'))
     featuresRN = scalerRN.transform(features)
+    '''
     
     # Print the results
     print (''.join(['-' for i in range(50)]))
-    outputText = '#UserInput\tAcc\tGN\tUniProtID\tMutation\tAlnPos\tHMMpos\tRegion\tPredAD\tPredRN\n'
-    for row, predictAD, predictRN in zip(test_data, clfAD.predict_proba(featuresAD), clfRN.predict_proba(featuresRN)):
+    outputText = '#UserInput\tAcc\tGN\tUniProtID\tMutation\tHMMpos\tRegion\tPTM\tKnownADR\tNeighSites'
+    for model in MODEL_NAMES: outputText += '\t'+model
+    outputText += '\n'
+    # for row, predictAD, predictRN in zip(test_data, clfAD.predict_proba(featuresAD), clfRN.predict_proba(featuresRN)):
+    for count, row in enumerate(test_data):
         ## Set prediction proba to NA if the position is not in the HMM
         user_input = row[0]
         acc = row[1]
@@ -250,19 +283,6 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         adjacentSites = row[8]
         alnPos = row[9]
         hmmPos = row[10]
-        if str(hmmPos) == '-':
-            prediction_probAD = 'NA'
-            prediction_probRN = 'NA'
-        # outside the kinase HMM model
-        elif int(hmmPos) < 30 and int(hmmPos) > 812:
-            prediction_probAD = 'NA'
-            prediction_probRN = 'NA'
-        else:
-            prediction_probAD = round(predictAD[1], 3)
-            prediction_probRN = round(predictRN[1], 3)
-        outputText += user_input +'\t'+ acc +'\t'+ gene +'\t'+ uniprot_id +'\t' + mutation +'\t'
-        outputText += str(hmmPos) +'\t'+ region + '\t'
-        outputText += str(prediction_probAD) + '\t' +str(prediction_probRN) + '\n'
         name = user_input
         ptmType = '-'
         for ptm_type_header in [ptm_type+'_0' for ptm_type in PTM_TYPES]:
@@ -273,14 +293,20 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                 break
         mutType = []
         mutType = fetchData.mutTypes(mycursor, acc, mutation)
-        # print (mutType)
-        # for mut_type_header in [mut_type+'_0' for mut_type in MUT_TYPES]:
-        #     mutTypeCell = df[df['Input']==name][mut_type_header].values[0]
-        #     if int(mutTypeCell) != 0:
-        #         # mutType = mut_type_header.split('_')[0]
-        #         print (name, mutation, mut_type_header.split('_')[0])
-        #         mutType.append(mut_type_header.split('_')[0])
-        #         # break
+        
+        scores = []
+        for model in MODEL_NAMES:
+            if str(hmmPos) == '-':
+                scores.append('NA')
+            elif int(hmmPos) < 30 and int(hmmPos) > 739:
+                scores.append('NA')
+            else:
+                scores.append(str(round(dic_predictions[model][count][1], 3)))
+            # outputText += str(prediction_probAD) + '\t' +str(prediction_probRN) + '\n'
+        outputText += user_input +'\t'+ acc +'\t'+ gene +'\t'+ uniprot_id +'\t' + mutation +'\t'
+        outputText += str(hmmPos) +'\t'+ region + '\t' + ptmType + '\t' + ','.join(mutType) + '\t'
+        outputText += adjacentSites + '\t'
+        outputText += '\t'.join(scores) + '\n'
         if len(mutType) == 0: mutType = '-'
         else: mutType = ''.join(mutType)
         results['predictions'][name] = {
@@ -290,16 +316,29 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                         'protein_name': protein_name,
                         'mutation':mutation,
                         'adjacentSites': adjacentSites,
-                        'predAD':prediction_probAD,
-                        'predRN':prediction_probRN,
+                        # 'predAD':prediction_probAD,
+                        # 'predRN':prediction_probRN,
                         'hmmPos':hmmPos,
                         'alnPos':alnPos,
                         'region':region,
                         'ptmType':ptmType,
                         'mutType':mutType,
                         }
-    # print (results)
-    if outputFile != None: open(outputFile, 'w').write(outputText)
+        for model in MODEL_NAMES:
+            if str(hmmPos) == '-':
+                results['predictions'][name][model] = 'NA\t'
+            elif int(hmmPos) < 30 and int(hmmPos) > 739:
+                results['predictions'][name][model] = 'NA\t'
+            else:
+                results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3)) + '\t'
+        
+            # if 'A84' in mutation and model=='AIvNLD':
+                # print (dic_features[model][count])
+                # print (len(dic_features[model][count]))
+                # for f, hh in zip(columns_to_consider, dic_features[model][count]):
+                #     print (f, hh)
+
+    if outputFile != None: gzip.open(outputFile+'.gz', 'wt').write(outputText)
     else: print (outputText)
     return results
     # yield results
@@ -307,7 +346,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
 # Run this script from command line
 if __name__ == '__main__':
     # set arguments
-    parser = argparse.ArgumentParser(description='kinaseX', epilog='End of help.')
+    parser = argparse.ArgumentParser(description='Activaark', epilog='End of help.')
     parser.add_argument('i', help='path to input file (mechismo-like format); see sample_mutations.txt')
     parser.add_argument('--o', help='path to output file; default: print on the screen')
     args = parser.parse_args()

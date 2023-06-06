@@ -13,209 +13,121 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
+sys.path.insert(1, '../ML/')
+import fetchData
 
-## Class to store information
-## about kinases
-class Kinase:
-	## initiate Object
-	def __init__(self, acc):
-		self.acc = acc
-		self.pfam2seq = {}
-		self.seq2pfam = {}
-		self.fastaToAln = {}
-		self.alnToFasta = {}
-		self.mut_types = {'A':[], 'D':[], 'R':[]}
+class HMM:
+	def __init__(self, pfampos) -> None:
+		self.pfampos = pfampos
+		self.mut_types = {}
+		self.ptm_types = 0
+		self.bitscore = None
 
-'''Load p-site information for a pfam_pos'''
+mydb = fetchData.connection(db_name='kinase_project2')
+mydb.autocommit = True
+mycursor = mydb.cursor()
+
+'''Load ptm information for a pfam_pos'''
 dic_ptm_pfam = {}
-for line in open('Kinase_psites4.tsv', 'r'):
-	if line[0] == '#': continue
-	if line.split('\t')[2] != 'Pkinase': continue
-	ptm_type = line.split('\t')[3].split('-')[1]
-	pfam_pos = line.split('\t')[4]
-	if ptm_type == 'p':
-		if pfam_pos not in dic_ptm_pfam:
-			dic_ptm_pfam[pfam_pos] = 0
+mycursor.execute("SELECT pfampos, ptmtype FROM ptms\
+		 		where pfampos!='-'")
+ptms = mycursor.fetchall()
+dic_ptm_pfam = {}
+dic_hmm = {}
+for ptm_row in ptms:
+	pfampos = int(ptm_row[0])
+	ptm_type = ptm_row[1]
+	if pfampos not in dic_hmm: dic_hmm[pfampos] = HMM(pfampos)
+	dic_hmm[pfampos].ptm_types += 1
+
+mycursor.execute("SELECT mutation, pfampos, mut_type FROM mutations\
+		 		where pfampos!=%s and pfampos!=%s", ('-', 'neutral'))
+mutations = mycursor.fetchall()
+# dic_mut_types = {'increase': 'A'
+for mut_row in mutations:
+	mutation, pfampos, mut_type = mut_row
+	pfampos = int(pfampos)
+	if pfampos not in dic_hmm: dic_hmm[pfampos] = HMM(pfampos)
+	if mut_type not in dic_hmm[pfampos].mut_types:
+		dic_hmm[pfampos].mut_types[mut_type] = []
+	dic_hmm[pfampos].mut_types[mut_type].append(mutation)
+
+
+'''Load HMM information for a pfam_pos'''
+mycursor.execute("SELECT * FROM hmm")
+hmm = mycursor.fetchall()
+for hmm_row in hmm:
+	pfampos, pfamaa = hmm_row[0], hmm_row[1]
+	if pfampos == '-': continue
+	pfampos = int(pfampos)
+	if pfampos not in dic_hmm: continue
+	num = 4
+	for count, aa in enumerate(['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L',
+				'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']):
+		if aa == pfamaa.upper():
+			bitscore = float(hmm_row[num+count])
+			dic_hmm[pfampos].bitscore = bitscore
+			break
+
+# Normalize data
+for pfampos in dic_hmm:
+	# numpy.log2
+	for mut_type in dic_hmm[pfampos].mut_types:
+		# print (dic_hmm[pfampos].mut_types[mut_type])
+		if len(dic_hmm[pfampos].mut_types[mut_type]) <2:
+			dic_hmm[pfampos].mut_types[mut_type] = 1
 		else:
-			dic_ptm_pfam[pfam_pos] += 1
+			dic_hmm[pfampos].mut_types[mut_type] = np.log2(len(dic_hmm[pfampos].mut_types[mut_type]))
+	'''
+	total = 0
+	for mut_type in dic_hmm[pfampos].mut_types:
+		total += len(dic_hmm[pfampos].mut_types[mut_type])
+	for mut_type in dic_hmm[pfampos].mut_types:
+		# print (dic_hmm[pfampos].mut_types[mut_type])
+		dic_hmm[pfampos].mut_types[mut_type] = len(dic_hmm[pfampos].mut_types[mut_type]) / float(total)
+		dic_hmm[pfampos].mut_types[mut_type] = round(dic_hmm[pfampos].mut_types[mut_type], 2)
+	'''
 
-kinases = {}
-'''Store Uniprot accessions mappings'''
-for line in gzip.open('../data/humanKinasesHmmsearchMappings2.tsv.gz', 'rt'):
-	if line[0] == '#': continue
-	acc = line.split('\t')[0].split('|')[1]
-	uniprot_pos = line.split('\t')[2]
-	pfam_pos = line.split('\t')[4].replace('\n', '')
-	if acc not in kinases: kinases[acc] = Kinase(acc)
-	kinases[acc].seq2pfam[uniprot_pos] = pfam_pos
-	kinases[acc].pfam2seq[pfam_pos] = uniprot_pos
-
-'''Load resistant mutation data'''
-for line in gzip.open('../KA/resistant_mutations_Mar_2023.tsv.gz', 'rt'):
-	if line[0] == '#': continue
-	uniprot_acc = line.split('\t')[2]
-	cosmic_pos = line.split('\t')[4]
-	uniprot_pos = line.split('\t')[5].replace('\n', '')
-	cosmic_mutation = line.split('\t')[1]
-	uniprot_mutation = cosmic_mutation[0] + uniprot_pos + cosmic_mutation[-1]
-	if uniprot_mutation not in kinases[uniprot_acc].mut_types['R']:
-		kinases[uniprot_acc].mut_types['R'].append(uniprot_mutation)
-
-print (kinases['P36507'].mut_types['R'])
-
-'''Load act/dact mutation data'''
-for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
-	if line.split()[0] == 'uniprot_name': continue
-	uniprot_acc = line.split('\t')[1]
-	uniprot_pos = line.split('\t')[3]
-	wtAA = line.split('\t')[2].replace(',', '')
-	mutAA = line.split('\t')[4].replace(',', '')
-	if len(wtAA) > 1 or len(mutAA) > 1:
-		continue
-	uniprot_mutation = wtAA + uniprot_pos + mutAA
-	mut_type = line.split('\t')[5]
-	if mut_type == 'A':
-		kinases[uniprot_acc].mut_types['A'].append(uniprot_mutation)
-	else:
-	    kinases[uniprot_acc].mut_types['D'].append(uniprot_mutation)
-
-print (kinases['P36507'].mut_types['R'])
+pfam_positions = [pfam_pos for pfam_pos in list(set(dic_hmm.keys()))]
 
 col_colors = []
-for pfam_pos in range(1,265):
-	if str(pfam_pos) not in dic_ptm_pfam:
-		col_colors.append('white')
-		continue
-	if dic_ptm_pfam[str(pfam_pos)] >= 1:
+for pfampos in pfam_positions:
+	# print (pfampos)
+	if dic_hmm[pfampos].bitscore <= 0.5:
+		col_colors.append('red')
+		print (pfampos, dic_hmm[pfampos].bitscore)
+	elif dic_hmm[pfampos].ptm_types >= 10:
 		col_colors.append('grey')
 	else:
 		col_colors.append('white')
 
+mut_types = ['activating', 'increase', 'resistance', 'loss', 'decrease']
 data = []
-for mut_type in ['A', 'D', 'R']:
+for mut_type in mut_types:
 	row = []
-	for pfam_pos in range(1,265):
-		value = 0
-		for acc in kinases:
-			for mutation in kinases[acc].mut_types[mut_type]:
-				# print (mutation	)
-				uniprot_position = mutation[1:-1]
-				wtAA = mutation[0]
-				mutAA = mutation[-1]
-				hmm_position = kinases[acc].seq2pfam[uniprot_position]
-				if str(hmm_position) == str(pfam_pos):
-					value += 1
-					break
-			if value  == 1:
-				break
+	for pfam_pos in pfam_positions:
+		if mut_type not in dic_hmm[pfam_pos].mut_types:
+			value = 0
+		else:
+			value = dic_hmm[pfam_pos].mut_types[mut_type]
 		row.append(value)
 	data.append(row)
 
 # print (data)
+# print ([pfam_pos for pfam_pos in pfam_positions])
 
 df = pd.DataFrame(
 				data,
-				index = ['A', 'D', 'R'],
-				columns = [str(pfam_pos) for pfam_pos in range(1,265)])
-df = df.loc[:, (df != 0).any(axis=0)]
+				index = mut_types,
+				columns = pfam_positions
+				)
+# df = df.loc[:, (df != 0).any(axis=0)]
 
-print (df)
+# print (df)
 
 palette = sns.light_palette("seagreen", as_cmap=True)
-g = sns.clustermap(df, cmap=palette, col_cluster=False, xticklabels=True, col_colors=col_colors)
-#plt.savefig('clusterMap.jpeg', format="jpeg", dpi=500)
-plt.show()
-sys.exit()
-## Store kinase information in
-## the dictionary kinases
-kinases = {}; allAlnPos = []
-for line in open('../KA/hmmAlignmentMappings3.tsv', 'r'):
-	if line[0] != '#':
-		name = line.split('\t')[0]
-		if name not in kinases:
-			kinases[name] = Kinases(name)
-		alnPos, fastaPos, fastaAA = int(line.split('\t')[1]), int(line.split('\t')[2]), str(line.replace('\n', '').split('\t')[3])
-		if fastaAA.isupper():
-			allAlnPos.append(alnPos)
-			kinases[name].fastaToAln[fastaPos] = alnPos
-			kinases[name].alnToFasta[alnPos] = fastaPos
-
-def find_name(accGiven):
-	for kinase in kinases:
-		if accGiven in kinase:
-			for name in kinase.split('_'):
-				#print(name, accGiven)
-				if name == accGiven:
-					return kinase
-	
-	return None
-
-## activating/inactivating mutations from UniProt
-for line in open('../KA/act_deact_mut_for_scores_fin.tsv', 'r'):
-	if line.split('\t')[0] != 'uniprot_id':
-		acc = line.split('\t')[0]
-		name = find_name(acc)
-		mutation = line.split('\t')[1] + line.split('\t')[2] + line.split('\t')[3]
-		status = line.replace('\n', '').split('\t')[-1]
-		if status == 'A':
-			kinases[name].act.append(mutation)
-		else:
-			kinases[name].deact.append(mutation)
-
-## Resistance mutations from COSMIC
-for line in open('../KA/resistance_mutations_w_scores_aligned_fin.tsv', 'r'):
-	if line.split('\t')[0] != 'Gene.Name':
-		name = line.split('\t')[0]
-		mutation = line.split('\t')[1]
-		kinases[name].resistance.append(mutation)
-
-def findActDeactRes(alnPos):
-	'''
-	function to extract number of act, deact and resistance there are for
-	the given alnPos
-	'''
-	act, deact, res = 0, 0, 0
-	for kinase in kinases:
-		for num, dic in enumerate([kinases[kinase].act, kinases[kinase].deact, kinases[kinase].resistance]):
-			for mutation in dic:
-				if mutation[-3:] == 'del':
-					continue
-				# print (mutation[-3:], alnPos, kinase, num)
-				fastaPos = int(mutation[1:-1])
-				if fastaPos not in kinases[kinase].fastaToAln:
-					continue
-				if alnPos == kinases[kinase].fastaToAln[fastaPos]:
-					if num == 0:
-						act += 1
-					elif num == 1:
-						deact += 1
-					elif num == 2:
-						res += 1
-	return (act, deact, res)
-
-allAlnPos = list(set(allAlnPos))
-selected_allAlnPos = []
-data = []
-for count, alnPos in enumerate(allAlnPos):
-	act, deact, res = findActDeactRes(alnPos)
-	#print (count+1, len(allAlnPos))
-	actBinary = 1 if act > 0 else 0
-	deactBinary = 1 if deact > 0 else 0
-	resBinary = 1 if res > 0 else 0
-	if actBinary == 1 or deactBinary == 1 or resBinary == 1:
-		selected_allAlnPos.append(alnPos)
-		row=[]
-		row.append(actBinary)
-		row.append(deactBinary)
-		row.append(resBinary)
-		data.append(row)
-
-#print (data)
-df = pd.DataFrame(data, columns=['Activating', 'Deactivating', 'Resistance'])
-print (df)
-df.index = selected_allAlnPos
-palette = sns.light_palette("seagreen", as_cmap=True)
-g = sns.clustermap(df, cmap=palette)
+g = sns.clustermap(df, cmap=palette, row_cluster=False, col_cluster=False,\
+		   			col_colors=col_colors)
 #plt.savefig('clusterMap.jpeg', format="jpeg", dpi=500)
 plt.show()
 sys.exit()

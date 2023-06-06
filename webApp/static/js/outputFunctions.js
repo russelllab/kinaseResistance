@@ -59,23 +59,20 @@ function defineDataTable (tableID, uniqID)
             ajax: '/static/predictor/output/'+uniqID+'/output.json',
             // ajax: '/static/predictor/output/GPBXK/output.json',
             "createdRow": function( row, data, dataIndex ) {
-                            // alert(data.prediction)
-                            // color based on score
-                            if ( data.predAD >= 0.5 ) {
-                                // $(row).addClass( 'important' );
-                                // alert(data.predAD);
-                                $('td:eq(12)', row).css('background-color', '#009e73');
+                            if ( data.AIvNLD >= 0.5 ) {
+                                $('td:eq(10)', row).css('background-color', '#009e73');
                             }
-                            else if ( data.predAD < 0.5 ) {
-                                $('td:eq(12)', row).css('background-color', '#d55e00');
+                            if ( data.LDvNAI >= 0.5 ) {
+                                $('td:eq(11)', row).css('background-color', '#d55e00');
                             }
-                            if ( data.predRN >= 0.5 ) {
-                                // $(row).addClass( 'important' );
-                                // alert(data.predRN);
-                                $('td:eq(13)', row).css('background-color', '#0072b2');
+                            if ( data.RvN >= 0.5 ) {
+                                $('td:eq(12)', row).css('background-color', '#0072b2');
                             }
-                            else if ( data.predRN < 0.5 ) {
-                                // $('td:eq(10)', row).css('background-color', '#FF6863');
+                            if ( data.AIvLD >= 0.5 ) {
+                                $('td:eq(13)', row).css('background-color', '#009e73');
+                            }
+                            else {
+                                $('td:eq(13)', row).css('background-color', '#d55e00');
                             }
                         },
             dom: 'Bfrtip',
@@ -95,13 +92,15 @@ function defineDataTable (tableID, uniqID)
                     { data: 'acc' },
                     { data: 'mutation' },
                     { data: 'adjacentSites' },
-                    { data: 'hmmPos' },
-                    { data: 'alnPos' },
+                    // { data: 'hmmPos' },
+                    // { data: 'alnPos' },
                     { data: 'region' },
                     { data: 'ptmType' },
                     { data: 'mutType' },
-                    { data: 'predAD' },
-                    { data: 'predRN' }
+                    { data: 'AIvNLD' },
+                    { data: 'LDvNAI' },
+                    { data: 'RvN' },
+                    { data: 'AIvLD' }
                 ]
             });
     
@@ -160,13 +159,15 @@ function makeTableHeadFoot()
                         'UniProt<br>accession',
                         'Mutation',
                         "Site<br>(+/-5 residues)",
-                        'HMM<br>position',
-                        'Alignment<br>position',
+                        // 'HMM<br>position',
+                        // 'Alignment<br>position',
                         'Region',
                         'PTM<br>type',
                         'Known<br>ADR',
-                        'Pred<br>(A or D)',
-                        'Pred<br>(R)'
+                        'Pred_A',
+                        'Pred_D',
+                        'Pred_R',
+                        'Pred<br>(A or D)'
                         ];
     
     var table_contents_text = ['Known information about the input',
@@ -176,13 +177,15 @@ function makeTableHeadFoot()
                                 'UniProt accession',
                                 'Mutation',
                                 'Adjacent residues to the mutation site',
-                                'hidden Markov Model position',
-                                'Alignment position',
+                                // 'hidden Markov Model position',
+                                // 'Alignment position',
                                 'Region of the mutation site<br>in the kinase canonical structure',
                                 'Known PTM at the position of the mutation',
                                 'Known Activating/Deactivating/Resistance mutation',
-                                'Predicted probability of Activating(>=0.5)<br>or Deactivating(<0.5)',
-                                'Predicted probability of Resistance'
+                                'Predicted probability of Activating',
+                                'Predicted probability of Deactivating',
+                                'Predicted probability of Resistance',
+                                'Predicted probability of Activating(>=0.5) or Deactivating(<0.5)',
                                 ];
     
     var table_head_foot_id = ['table-head', 'table-foot'];

@@ -1,0 +1,5196 @@
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.83697443]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'n_estimators': 10}
+[[0.51283538 0.48716462]
+ [0.45630859 0.54369141]
+ [0.77079189 0.22920811]
+ ...
+ [0.72164845 0.27835155]
+ [0.83707335 0.16292665]
+ [0.8484622  0.1515378 ]]
+########################
+hmmScoreWT 0.04628271924389292
+hmmScoreMUT 0.17151583036209922
+Phosphomimic 0.021093171588678385
+IUPRED 0.03586289733338069
+ncontacts 0.10368861151193062
+nresidues 0.06307671931910504
+sec 0.019785151058630997
+burr 0.025900006869355185
+acc 0.0495728428579391
+ChargesMUT 0.0979807622346405
+p_-1_pfam 0.03095901484326713
+p_0 0.012811033620301612
+ub_0_pfam 0.030814977409756517
+ub_1_pfam 0.011181868371284369
+S_WT 0.01014655791214804
+D_MUT 0.023828639192207478
+E_MUT 0.07188498480501995
+allHomologs 0.0230383701888715
+exclParalogs 0.014979065795702328
+bpso 0.026139332028610518
+bpsh 0.10039423501554041
+         Feature  Importance
+1    hmmScoreMUT    0.171516
+4      ncontacts    0.103689
+20          bpsh    0.100394
+9     ChargesMUT    0.097981
+16         E_MUT    0.071885
+5      nresidues    0.063077
+8            acc    0.049573
+0     hmmScoreWT    0.046283
+3         IUPRED    0.035863
+10     p_-1_pfam    0.030959
+12     ub_0_pfam    0.030815
+19          bpso    0.026139
+7           burr    0.025900
+15         D_MUT    0.023829
+17   allHomologs    0.023038
+2   Phosphomimic    0.021093
+6            sec    0.019785
+18  exclParalogs    0.014979
+11           p_0    0.012811
+13     ub_1_pfam    0.011182
+14          S_WT    0.010147
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.52 A
+PIM1/S97N/test 0.561 A
+########################
+CDK5/F82I/test 0.458 TBD
+MAP2K1/V211D/test 0.248 TBD
+########################
+CHEK2/K373E/test 0.491 Inconclusive
+MAP2K3/R94L/test 0.544 Inconclusive
+MAP2K3/R96W/test 0.439 Inconclusive
+MAP2K3/L215W/test 0.504 Inconclusive
+MAP2K3/T222M/test 0.553 Inconclusive
+PIM1/Q127E/test 0.554 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87015533]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'n_estimators': 50}
+[[0.58934632 0.41065368]
+ [0.41260516 0.58739484]
+ [0.71216716 0.28783284]
+ ...
+ [0.74930671 0.25069329]
+ [0.82046695 0.17953305]
+ [0.78806173 0.21193827]]
+########################
+hmmScoreWT 0.14056603529812992
+hmmScoreMUT 0.09613857251783801
+Phosphomimic 0.024694624234103544
+Acetylmimic 0.05367256261514297
+IUPRED 0.02585792520732723
+ncontacts 0.07606153196774551
+nresidues 0.0343690440589983
+sec 0.011160913496128591
+burr 0.0358623041609503
+acc 0.022148935509200073
+ChargesWT 0.011385399830555696
+ChargesMUT 0.041831856361419575
+K_WT 0.01694043407796894
+A_MUT 0.028562861949482436
+E_MUT 0.03488269081572042
+allHomologs 0.019073552357404273
+exclParalogs 0.03366972161588322
+specParalogs 0.03023194418939129
+orthologs 0.03108333434624638
+bpso 0.02808939903106065
+bpsh 0.08750828361036975
+         Feature  Importance
+0     hmmScoreWT    0.140566
+1    hmmScoreMUT    0.096139
+20          bpsh    0.087508
+5      ncontacts    0.076062
+3    Acetylmimic    0.053673
+11    ChargesMUT    0.041832
+8           burr    0.035862
+14         E_MUT    0.034883
+6      nresidues    0.034369
+16  exclParalogs    0.033670
+18     orthologs    0.031083
+17  specParalogs    0.030232
+13         A_MUT    0.028563
+19          bpso    0.028089
+4         IUPRED    0.025858
+2   Phosphomimic    0.024695
+9            acc    0.022149
+15   allHomologs    0.019074
+12          K_WT    0.016940
+10     ChargesWT    0.011385
+7            sec    0.011161
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.746
+########################
+MAP2K3/A84T/test 0.53 A
+PIM1/S97N/test 0.618 A
+########################
+CDK5/F82I/test 0.46 TBD
+MAP2K1/V211D/test 0.398 TBD
+########################
+CHEK2/K373E/test 0.567 Inconclusive
+MAP2K3/R94L/test 0.522 Inconclusive
+MAP2K3/R96W/test 0.418 Inconclusive
+MAP2K3/L215W/test 0.41 Inconclusive
+MAP2K3/T222M/test 0.573 Inconclusive
+PIM1/Q127E/test 0.556 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87630964]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'n_estimators': 100}
+[[0.59644475 0.40355525]
+ [0.43331819 0.56668181]
+ [0.71330366 0.28669634]
+ ...
+ [0.74869812 0.25130188]
+ [0.80564069 0.19435931]
+ [0.76168542 0.23831458]]
+########################
+hmmScoreWT 0.10921601861872883
+hmmScoreMUT 0.09043297395896312
+Phosphomimic 0.029351397229494425
+Acetylmimic 0.03838813354054873
+IUPRED 0.034782544522433734
+ncontacts 0.06290938982905912
+nresidues 0.03321483475549773
+sec 0.017666309773546874
+burr 0.04821628899859217
+acc 0.014340260987073961
+ChargesWT 0.011348826774238704
+ChargesMUT 0.04378943560957163
+K_WT 0.015024850143214204
+A_MUT 0.03070152275331535
+E_MUT 0.024635437968583973
+allHomologs 0.03585947656490626
+exclParalogs 0.06086083846419133
+specParalogs 0.020233796892886752
+orthologs 0.04816950326705218
+bpso 0.03172347666271416
+bpsh 0.07294355948067453
+         Feature  Importance
+0     hmmScoreWT    0.109216
+1    hmmScoreMUT    0.090433
+20          bpsh    0.072944
+5      ncontacts    0.062909
+16  exclParalogs    0.060861
+8           burr    0.048216
+18     orthologs    0.048170
+11    ChargesMUT    0.043789
+3    Acetylmimic    0.038388
+15   allHomologs    0.035859
+4         IUPRED    0.034783
+6      nresidues    0.033215
+19          bpso    0.031723
+13         A_MUT    0.030702
+2   Phosphomimic    0.029351
+14         E_MUT    0.024635
+17  specParalogs    0.020234
+7            sec    0.017666
+12          K_WT    0.015025
+9            acc    0.014340
+10     ChargesWT    0.011349
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.775
+########################
+MAP2K3/A84T/test 0.508 A
+PIM1/S97N/test 0.603 A
+########################
+CDK5/F82I/test 0.488 TBD
+MAP2K1/V211D/test 0.433 TBD
+########################
+CHEK2/K373E/test 0.559 Inconclusive
+MAP2K3/R94L/test 0.533 Inconclusive
+MAP2K3/R96W/test 0.443 Inconclusive
+MAP2K3/L215W/test 0.441 Inconclusive
+MAP2K3/T222M/test 0.566 Inconclusive
+PIM1/Q127E/test 0.566 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.84425516]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'n_estimators': 10}
+[[0.51056076 0.48943924]
+ [0.49037875 0.50962125]
+ [0.74778759 0.25221241]
+ ...
+ [0.72112471 0.27887529]
+ [0.8361309  0.1638691 ]
+ [0.8258766  0.1741234 ]]
+########################
+hmmScoreWT 0.07387756346403886
+hmmScoreMUT 0.17170008677794357
+Phosphomimic 0.021116420136971424
+IUPRED 0.035619870423783215
+ncontacts 0.09669954522047937
+nresidues 0.06349957859470665
+sec 0.01981497162259775
+burr 0.026670699080174144
+acc 0.041243373852797624
+ChargesMUT 0.09807315801838348
+p_-1_pfam 0.03101093583280335
+p_0 0.012811033620301612
+ub_0_pfam 0.030814977409756517
+ub_1_pfam 0.011200318994388152
+S_WT 0.010162819052258121
+D_MUT 0.023828639192207478
+E_MUT 0.0726189055035609
+exclParalogs 0.019919650219195024
+bpso 0.026139332028610518
+bpsh 0.1008547563370598
+         Feature  Importance
+1    hmmScoreMUT    0.171700
+19          bpsh    0.100855
+9     ChargesMUT    0.098073
+4      ncontacts    0.096700
+0     hmmScoreWT    0.073878
+16         E_MUT    0.072619
+5      nresidues    0.063500
+8            acc    0.041243
+3         IUPRED    0.035620
+10     p_-1_pfam    0.031011
+12     ub_0_pfam    0.030815
+7           burr    0.026671
+18          bpso    0.026139
+15         D_MUT    0.023829
+2   Phosphomimic    0.021116
+17  exclParalogs    0.019920
+6            sec    0.019815
+11           p_0    0.012811
+13     ub_1_pfam    0.011200
+14          S_WT    0.010163
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.704
+########################
+MAP2K3/A84T/test 0.522 A
+PIM1/S97N/test 0.563 A
+########################
+CDK5/F82I/test 0.424 TBD
+MAP2K1/V211D/test 0.27 TBD
+########################
+CHEK2/K373E/test 0.478 Inconclusive
+MAP2K3/R94L/test 0.532 Inconclusive
+MAP2K3/R96W/test 0.441 Inconclusive
+MAP2K3/L215W/test 0.467 Inconclusive
+MAP2K3/T222M/test 0.487 Inconclusive
+PIM1/Q127E/test 0.541 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87311684]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'n_estimators': 50}
+[[0.58488087 0.41511913]
+ [0.41900225 0.58099775]
+ [0.7025252  0.2974748 ]
+ ...
+ [0.74807543 0.25192457]
+ [0.8038662  0.1961338 ]
+ [0.78141604 0.21858396]]
+########################
+hmmScoreWT 0.14113443541751527
+hmmScoreMUT 0.0960489093892442
+Phosphomimic 0.028045093581249368
+Acetylmimic 0.054909215395702864
+IUPRED 0.02696431133777019
+ncontacts 0.07751232100821594
+nresidues 0.026679315772455966
+sec 0.011210001948817067
+burr 0.03875407159389411
+acc 0.02074461626020578
+ChargesWT 0.01219636778308721
+ChargesMUT 0.04208647688631629
+K_WT 0.017000673589552796
+A_MUT 0.02921941190631013
+E_MUT 0.037261998305095245
+allHomologs 0.015008915215195236
+exclParalogs 0.0335130224194695
+specParalogs 0.02812245056542197
+orthologs 0.0331072007503454
+bpso 0.03588473994624389
+bpsh 0.09247509865222704
+         Feature  Importance
+0     hmmScoreWT    0.141134
+1    hmmScoreMUT    0.096049
+20          bpsh    0.092475
+5      ncontacts    0.077512
+3    Acetylmimic    0.054909
+11    ChargesMUT    0.042086
+8           burr    0.038754
+14         E_MUT    0.037262
+19          bpso    0.035885
+16  exclParalogs    0.033513
+18     orthologs    0.033107
+13         A_MUT    0.029219
+17  specParalogs    0.028122
+2   Phosphomimic    0.028045
+4         IUPRED    0.026964
+6      nresidues    0.026679
+9            acc    0.020745
+12          K_WT    0.017001
+15   allHomologs    0.015009
+10     ChargesWT    0.012196
+7            sec    0.011210
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.761
+########################
+MAP2K3/A84T/test 0.544 A
+PIM1/S97N/test 0.631 A
+########################
+CDK5/F82I/test 0.444 TBD
+MAP2K1/V211D/test 0.404 TBD
+########################
+CHEK2/K373E/test 0.559 Inconclusive
+MAP2K3/R94L/test 0.511 Inconclusive
+MAP2K3/R96W/test 0.41 Inconclusive
+MAP2K3/L215W/test 0.401 Inconclusive
+MAP2K3/T222M/test 0.556 Inconclusive
+PIM1/Q127E/test 0.554 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.8765735]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'n_estimators': 100}
+[[0.60063514 0.39936486]
+ [0.433556   0.566444  ]
+ [0.70291289 0.29708711]
+ ...
+ [0.74475497 0.25524503]
+ [0.78665108 0.21334892]
+ [0.75252224 0.24747776]]
+########################
+hmmScoreWT 0.1089673690190771
+hmmScoreMUT 0.08438481345752935
+Phosphomimic 0.033462138050528965
+Acetylmimic 0.03907973528103339
+IUPRED 0.0361567765456532
+ncontacts 0.058446989665523495
+nresidues 0.029523481752100747
+sec 0.017378258533944126
+burr 0.0505479244635973
+acc 0.015174006020476404
+ChargesWT 0.013258422887107388
+ChargesMUT 0.04482795703849364
+K_WT 0.015224416169804193
+A_MUT 0.031573144372703275
+D_MUT 0.011118794748265482
+E_MUT 0.025813903537618706
+allHomologs 0.0296241306582962
+exclParalogs 0.06197813073707341
+specParalogs 0.018995760879837262
+orthologs 0.05240476115688535
+bpso 0.03617556059365461
+bpsh 0.07564186987438462
+         Feature  Importance
+0     hmmScoreWT    0.108967
+1    hmmScoreMUT    0.084385
+21          bpsh    0.075642
+17  exclParalogs    0.061978
+5      ncontacts    0.058447
+19     orthologs    0.052405
+8           burr    0.050548
+11    ChargesMUT    0.044828
+3    Acetylmimic    0.039080
+20          bpso    0.036176
+4         IUPRED    0.036157
+2   Phosphomimic    0.033462
+13         A_MUT    0.031573
+16   allHomologs    0.029624
+6      nresidues    0.029523
+15         E_MUT    0.025814
+18  specParalogs    0.018996
+7            sec    0.017378
+12          K_WT    0.015224
+9            acc    0.015174
+10     ChargesWT    0.013258
+14         D_MUT    0.011119
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.817
+########################
+MAP2K3/A84T/test 0.513 A
+PIM1/S97N/test 0.607 A
+########################
+CDK5/F82I/test 0.483 TBD
+MAP2K1/V211D/test 0.451 TBD
+########################
+CHEK2/K373E/test 0.561 Inconclusive
+MAP2K3/R94L/test 0.526 Inconclusive
+MAP2K3/R96W/test 0.434 Inconclusive
+MAP2K3/L215W/test 0.438 Inconclusive
+MAP2K3/T222M/test 0.556 Inconclusive
+PIM1/Q127E/test 0.564 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.84614249]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 3, 'n_estimators': 10}
+[[0.51056076 0.48943924]
+ [0.49037875 0.50962125]
+ [0.74778759 0.25221241]
+ ...
+ [0.72189904 0.27810096]
+ [0.8361309  0.1638691 ]
+ [0.82665094 0.17334906]]
+########################
+hmmScoreWT 0.0735552376839724
+hmmScoreMUT 0.1717257495652612
+Phosphomimic 0.02112196654919063
+IUPRED 0.036223281997328965
+ncontacts 0.09669954522047937
+nresidues 0.06387646184046455
+sec 0.01990709861315689
+burr 0.026670699080174144
+acc 0.039735524590929085
+ChargesMUT 0.0984824760469298
+p_-1_pfam 0.0310110619013029
+p_0 0.013028056474781516
+ub_0_pfam 0.030814977409756517
+ub_1_pfam 0.01120472076434578
+S_WT 0.010251727692640999
+D_MUT 0.024232303677770104
+E_MUT 0.07262356822046138
+exclParalogs 0.019919650219195024
+bpso 0.02613941078921226
+bpsh 0.1008547563370598
+         Feature  Importance
+1    hmmScoreMUT    0.171726
+19          bpsh    0.100855
+9     ChargesMUT    0.098482
+4      ncontacts    0.096700
+0     hmmScoreWT    0.073555
+16         E_MUT    0.072624
+5      nresidues    0.063876
+8            acc    0.039736
+3         IUPRED    0.036223
+10     p_-1_pfam    0.031011
+12     ub_0_pfam    0.030815
+7           burr    0.026671
+18          bpso    0.026139
+15         D_MUT    0.024232
+2   Phosphomimic    0.021122
+17  exclParalogs    0.019920
+6            sec    0.019907
+11           p_0    0.013028
+13     ub_1_pfam    0.011205
+14          S_WT    0.010252
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.704
+########################
+MAP2K3/A84T/test 0.522 A
+PIM1/S97N/test 0.561 A
+########################
+CDK5/F82I/test 0.424 TBD
+MAP2K1/V211D/test 0.281 TBD
+########################
+CHEK2/K373E/test 0.478 Inconclusive
+MAP2K3/R94L/test 0.532 Inconclusive
+MAP2K3/R96W/test 0.441 Inconclusive
+MAP2K3/L215W/test 0.467 Inconclusive
+MAP2K3/T222M/test 0.487 Inconclusive
+PIM1/Q127E/test 0.541 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.86592012]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 3, 'n_estimators': 50}
+[[0.57532401 0.42467599]
+ [0.42170535 0.57829465]
+ [0.71863838 0.28136162]
+ ...
+ [0.74158598 0.25841402]
+ [0.80995355 0.19004645]
+ [0.79341966 0.20658034]]
+########################
+hmmScoreWT 0.13818537410301965
+hmmScoreMUT 0.09627883048722628
+Phosphomimic 0.02825026953410994
+Acetylmimic 0.05267039102572022
+IUPRED 0.02639876478811036
+ncontacts 0.08136019701515913
+nresidues 0.033536715251313305
+sec 0.011722617129691318
+burr 0.05811265650016147
+acc 0.017962993732926667
+ChargesWT 0.012484473322214194
+ChargesMUT 0.04230564668149617
+K_WT 0.020867542811349025
+A_MUT 0.025308094002041457
+E_MUT 0.03727774675157027
+allHomologs 0.01515786554421424
+exclParalogs 0.03363005084885772
+specParalogs 0.025994556491481847
+orthologs 0.03471418829365784
+bpso 0.03620296787560459
+bpsh 0.08016688973435146
+         Feature  Importance
+0     hmmScoreWT    0.138185
+1    hmmScoreMUT    0.096279
+5      ncontacts    0.081360
+20          bpsh    0.080167
+8           burr    0.058113
+3    Acetylmimic    0.052670
+11    ChargesMUT    0.042306
+14         E_MUT    0.037278
+19          bpso    0.036203
+18     orthologs    0.034714
+16  exclParalogs    0.033630
+6      nresidues    0.033537
+2   Phosphomimic    0.028250
+4         IUPRED    0.026399
+17  specParalogs    0.025995
+13         A_MUT    0.025308
+12          K_WT    0.020868
+9            acc    0.017963
+15   allHomologs    0.015158
+10     ChargesWT    0.012484
+7            sec    0.011723
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.775
+########################
+MAP2K3/A84T/test 0.543 A
+PIM1/S97N/test 0.635 A
+########################
+CDK5/F82I/test 0.445 TBD
+MAP2K1/V211D/test 0.393 TBD
+########################
+CHEK2/K373E/test 0.537 Inconclusive
+MAP2K3/R94L/test 0.507 Inconclusive
+MAP2K3/R96W/test 0.422 Inconclusive
+MAP2K3/L215W/test 0.385 Inconclusive
+MAP2K3/T222M/test 0.57 Inconclusive
+PIM1/Q127E/test 0.532 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87591043]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 3, 'n_estimators': 100}
+[[0.58750186 0.41249814]
+ [0.44127467 0.55872533]
+ [0.71303107 0.28696893]
+ ...
+ [0.73544827 0.26455173]
+ [0.79085447 0.20914553]
+ [0.74777048 0.25222952]]
+########################
+hmmScoreWT 0.11263481153990912
+hmmScoreMUT 0.08331750926863135
+Phosphomimic 0.03364865888933029
+Acetylmimic 0.03761679315554705
+IUPRED 0.03616610695417324
+ncontacts 0.060656677653065004
+nresidues 0.024984789638096108
+sec 0.019192119247551945
+burr 0.060811163738082076
+acc 0.013799260703119156
+ChargesWT 0.013449220033959274
+ChargesMUT 0.044954914549650477
+K_WT 0.017539597630651563
+A_MUT 0.029646371398617075
+D_MUT 0.011166833710966493
+E_MUT 0.025821698223247758
+allHomologs 0.030103402155145575
+exclParalogs 0.06462560435214273
+specParalogs 0.022822751523197442
+orthologs 0.0540708372612736
+bpso 0.03454201070902099
+bpsh 0.07104700860027381
+         Feature  Importance
+0     hmmScoreWT    0.112635
+1    hmmScoreMUT    0.083318
+21          bpsh    0.071047
+17  exclParalogs    0.064626
+8           burr    0.060811
+5      ncontacts    0.060657
+19     orthologs    0.054071
+11    ChargesMUT    0.044955
+3    Acetylmimic    0.037617
+4         IUPRED    0.036166
+20          bpso    0.034542
+2   Phosphomimic    0.033649
+16   allHomologs    0.030103
+13         A_MUT    0.029646
+15         E_MUT    0.025822
+6      nresidues    0.024985
+18  specParalogs    0.022823
+7            sec    0.019192
+12          K_WT    0.017540
+9            acc    0.013799
+10     ChargesWT    0.013449
+14         D_MUT    0.011167
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.831
+########################
+MAP2K3/A84T/test 0.514 A
+PIM1/S97N/test 0.605 A
+########################
+CDK5/F82I/test 0.487 TBD
+MAP2K1/V211D/test 0.452 TBD
+########################
+CHEK2/K373E/test 0.559 Inconclusive
+MAP2K3/R94L/test 0.524 Inconclusive
+MAP2K3/R96W/test 0.441 Inconclusive
+MAP2K3/L215W/test 0.43 Inconclusive
+MAP2K3/T222M/test 0.555 Inconclusive
+PIM1/Q127E/test 0.559 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.84086023]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'n_estimators': 10}
+[[0.51283538 0.48716462]
+ [0.45630859 0.54369141]
+ [0.77079189 0.22920811]
+ ...
+ [0.72164845 0.27835155]
+ [0.83707335 0.16292665]
+ [0.8484622  0.1515378 ]]
+########################
+hmmScoreWT 0.04628271924389292
+hmmScoreMUT 0.17151583036209922
+Phosphomimic 0.021093171588678385
+IUPRED 0.03586289733338069
+ncontacts 0.10368861151193062
+nresidues 0.06307671931910504
+sec 0.019785151058630997
+burr 0.025900006869355185
+acc 0.0495728428579391
+ChargesMUT 0.0979807622346405
+p_-1_pfam 0.03095901484326713
+p_0 0.012811033620301612
+ub_0_pfam 0.030814977409756517
+ub_1_pfam 0.011181868371284369
+S_WT 0.01014655791214804
+D_MUT 0.023828639192207478
+E_MUT 0.07188498480501995
+allHomologs 0.0230383701888715
+exclParalogs 0.014979065795702328
+bpso 0.026139332028610518
+bpsh 0.10039423501554041
+         Feature  Importance
+1    hmmScoreMUT    0.171516
+4      ncontacts    0.103689
+20          bpsh    0.100394
+9     ChargesMUT    0.097981
+16         E_MUT    0.071885
+5      nresidues    0.063077
+8            acc    0.049573
+0     hmmScoreWT    0.046283
+3         IUPRED    0.035863
+10     p_-1_pfam    0.030959
+12     ub_0_pfam    0.030815
+19          bpso    0.026139
+7           burr    0.025900
+15         D_MUT    0.023829
+17   allHomologs    0.023038
+2   Phosphomimic    0.021093
+6            sec    0.019785
+18  exclParalogs    0.014979
+11           p_0    0.012811
+13     ub_1_pfam    0.011182
+14          S_WT    0.010147
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.52 A
+PIM1/S97N/test 0.561 A
+########################
+CDK5/F82I/test 0.458 TBD
+MAP2K1/V211D/test 0.248 TBD
+########################
+CHEK2/K373E/test 0.491 Inconclusive
+MAP2K3/R94L/test 0.544 Inconclusive
+MAP2K3/R96W/test 0.439 Inconclusive
+MAP2K3/L215W/test 0.504 Inconclusive
+MAP2K3/T222M/test 0.553 Inconclusive
+PIM1/Q127E/test 0.554 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87083226]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'n_estimators': 50}
+[[0.58934632 0.41065368]
+ [0.41260516 0.58739484]
+ [0.71216716 0.28783284]
+ ...
+ [0.74930671 0.25069329]
+ [0.82046695 0.17953305]
+ [0.78806173 0.21193827]]
+########################
+hmmScoreWT 0.14056603529812992
+hmmScoreMUT 0.09613857251783801
+Phosphomimic 0.024694624234103544
+Acetylmimic 0.05367256261514297
+IUPRED 0.02585792520732723
+ncontacts 0.07606153196774551
+nresidues 0.0343690440589983
+sec 0.011160913496128591
+burr 0.0358623041609503
+acc 0.022148935509200073
+ChargesWT 0.011385399830555696
+ChargesMUT 0.041831856361419575
+K_WT 0.01694043407796894
+A_MUT 0.028562861949482436
+E_MUT 0.03488269081572042
+allHomologs 0.019073552357404273
+exclParalogs 0.03366972161588322
+specParalogs 0.03023194418939129
+orthologs 0.03108333434624638
+bpso 0.02808939903106065
+bpsh 0.08750828361036975
+         Feature  Importance
+0     hmmScoreWT    0.140566
+1    hmmScoreMUT    0.096139
+20          bpsh    0.087508
+5      ncontacts    0.076062
+3    Acetylmimic    0.053673
+11    ChargesMUT    0.041832
+8           burr    0.035862
+14         E_MUT    0.034883
+6      nresidues    0.034369
+16  exclParalogs    0.033670
+18     orthologs    0.031083
+17  specParalogs    0.030232
+13         A_MUT    0.028563
+19          bpso    0.028089
+4         IUPRED    0.025858
+2   Phosphomimic    0.024695
+9            acc    0.022149
+15   allHomologs    0.019074
+12          K_WT    0.016940
+10     ChargesWT    0.011385
+7            sec    0.011161
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.746
+########################
+MAP2K3/A84T/test 0.53 A
+PIM1/S97N/test 0.618 A
+########################
+CDK5/F82I/test 0.46 TBD
+MAP2K1/V211D/test 0.398 TBD
+########################
+CHEK2/K373E/test 0.567 Inconclusive
+MAP2K3/R94L/test 0.522 Inconclusive
+MAP2K3/R96W/test 0.418 Inconclusive
+MAP2K3/L215W/test 0.41 Inconclusive
+MAP2K3/T222M/test 0.573 Inconclusive
+PIM1/Q127E/test 0.556 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87448759]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'n_estimators': 100}
+[[0.59644475 0.40355525]
+ [0.43331819 0.56668181]
+ [0.71330366 0.28669634]
+ ...
+ [0.74869812 0.25130188]
+ [0.80564069 0.19435931]
+ [0.76168542 0.23831458]]
+########################
+hmmScoreWT 0.10921601861872883
+hmmScoreMUT 0.09043297395896312
+Phosphomimic 0.029351397229494425
+Acetylmimic 0.03838813354054873
+IUPRED 0.034782544522433734
+ncontacts 0.06290938982905912
+nresidues 0.03321483475549773
+sec 0.017666309773546874
+burr 0.04821628899859217
+acc 0.014340260987073961
+ChargesWT 0.011348826774238704
+ChargesMUT 0.04378943560957163
+K_WT 0.015024850143214204
+A_MUT 0.03070152275331535
+E_MUT 0.024635437968583973
+allHomologs 0.03585947656490626
+exclParalogs 0.06086083846419133
+specParalogs 0.020233796892886752
+orthologs 0.04816950326705218
+bpso 0.03172347666271416
+bpsh 0.07294355948067453
+         Feature  Importance
+0     hmmScoreWT    0.109216
+1    hmmScoreMUT    0.090433
+20          bpsh    0.072944
+5      ncontacts    0.062909
+16  exclParalogs    0.060861
+8           burr    0.048216
+18     orthologs    0.048170
+11    ChargesMUT    0.043789
+3    Acetylmimic    0.038388
+15   allHomologs    0.035859
+4         IUPRED    0.034783
+6      nresidues    0.033215
+19          bpso    0.031723
+13         A_MUT    0.030702
+2   Phosphomimic    0.029351
+14         E_MUT    0.024635
+17  specParalogs    0.020234
+7            sec    0.017666
+12          K_WT    0.015025
+9            acc    0.014340
+10     ChargesWT    0.011349
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.775
+########################
+MAP2K3/A84T/test 0.508 A
+PIM1/S97N/test 0.603 A
+########################
+CDK5/F82I/test 0.488 TBD
+MAP2K1/V211D/test 0.433 TBD
+########################
+CHEK2/K373E/test 0.559 Inconclusive
+MAP2K3/R94L/test 0.533 Inconclusive
+MAP2K3/R96W/test 0.443 Inconclusive
+MAP2K3/L215W/test 0.441 Inconclusive
+MAP2K3/T222M/test 0.566 Inconclusive
+PIM1/Q127E/test 0.566 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.8453693]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'n_estimators': 10}
+[[0.51056076 0.48943924]
+ [0.49037875 0.50962125]
+ [0.74778759 0.25221241]
+ ...
+ [0.72112471 0.27887529]
+ [0.8361309  0.1638691 ]
+ [0.8258766  0.1741234 ]]
+########################
+hmmScoreWT 0.07387756346403886
+hmmScoreMUT 0.17170008677794357
+Phosphomimic 0.021116420136971424
+IUPRED 0.035619870423783215
+ncontacts 0.09669954522047937
+nresidues 0.06349957859470665
+sec 0.01981497162259775
+burr 0.026670699080174144
+acc 0.041243373852797624
+ChargesMUT 0.09807315801838348
+p_-1_pfam 0.03101093583280335
+p_0 0.012811033620301612
+ub_0_pfam 0.030814977409756517
+ub_1_pfam 0.011200318994388152
+S_WT 0.010162819052258121
+D_MUT 0.023828639192207478
+E_MUT 0.0726189055035609
+exclParalogs 0.019919650219195024
+bpso 0.026139332028610518
+bpsh 0.1008547563370598
+         Feature  Importance
+1    hmmScoreMUT    0.171700
+19          bpsh    0.100855
+9     ChargesMUT    0.098073
+4      ncontacts    0.096700
+0     hmmScoreWT    0.073878
+16         E_MUT    0.072619
+5      nresidues    0.063500
+8            acc    0.041243
+3         IUPRED    0.035620
+10     p_-1_pfam    0.031011
+12     ub_0_pfam    0.030815
+7           burr    0.026671
+18          bpso    0.026139
+15         D_MUT    0.023829
+2   Phosphomimic    0.021116
+17  exclParalogs    0.019920
+6            sec    0.019815
+11           p_0    0.012811
+13     ub_1_pfam    0.011200
+14          S_WT    0.010163
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.704
+########################
+MAP2K3/A84T/test 0.522 A
+PIM1/S97N/test 0.563 A
+########################
+CDK5/F82I/test 0.424 TBD
+MAP2K1/V211D/test 0.27 TBD
+########################
+CHEK2/K373E/test 0.478 Inconclusive
+MAP2K3/R94L/test 0.532 Inconclusive
+MAP2K3/R96W/test 0.441 Inconclusive
+MAP2K3/L215W/test 0.467 Inconclusive
+MAP2K3/T222M/test 0.487 Inconclusive
+PIM1/Q127E/test 0.541 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.86735286]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'n_estimators': 50}
+[[0.58488087 0.41511913]
+ [0.41900225 0.58099775]
+ [0.7025252  0.2974748 ]
+ ...
+ [0.74807543 0.25192457]
+ [0.8038662  0.1961338 ]
+ [0.78141604 0.21858396]]
+########################
+hmmScoreWT 0.14113443541751527
+hmmScoreMUT 0.0960489093892442
+Phosphomimic 0.028045093581249368
+Acetylmimic 0.054909215395702864
+IUPRED 0.02696431133777019
+ncontacts 0.07751232100821594
+nresidues 0.026679315772455966
+sec 0.011210001948817067
+burr 0.03875407159389411
+acc 0.02074461626020578
+ChargesWT 0.01219636778308721
+ChargesMUT 0.04208647688631629
+K_WT 0.017000673589552796
+A_MUT 0.02921941190631013
+E_MUT 0.037261998305095245
+allHomologs 0.015008915215195236
+exclParalogs 0.0335130224194695
+specParalogs 0.02812245056542197
+orthologs 0.0331072007503454
+bpso 0.03588473994624389
+bpsh 0.09247509865222704
+         Feature  Importance
+0     hmmScoreWT    0.141134
+1    hmmScoreMUT    0.096049
+20          bpsh    0.092475
+5      ncontacts    0.077512
+3    Acetylmimic    0.054909
+11    ChargesMUT    0.042086
+8           burr    0.038754
+14         E_MUT    0.037262
+19          bpso    0.035885
+16  exclParalogs    0.033513
+18     orthologs    0.033107
+13         A_MUT    0.029219
+17  specParalogs    0.028122
+2   Phosphomimic    0.028045
+4         IUPRED    0.026964
+6      nresidues    0.026679
+9            acc    0.020745
+12          K_WT    0.017001
+15   allHomologs    0.015009
+10     ChargesWT    0.012196
+7            sec    0.011210
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.761
+########################
+MAP2K3/A84T/test 0.544 A
+PIM1/S97N/test 0.631 A
+########################
+CDK5/F82I/test 0.444 TBD
+MAP2K1/V211D/test 0.404 TBD
+########################
+CHEK2/K373E/test 0.559 Inconclusive
+MAP2K3/R94L/test 0.511 Inconclusive
+MAP2K3/R96W/test 0.41 Inconclusive
+MAP2K3/L215W/test 0.401 Inconclusive
+MAP2K3/T222M/test 0.556 Inconclusive
+PIM1/Q127E/test 0.554 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87859796]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'n_estimators': 100}
+[[0.60063514 0.39936486]
+ [0.433556   0.566444  ]
+ [0.70291289 0.29708711]
+ ...
+ [0.74475497 0.25524503]
+ [0.78665108 0.21334892]
+ [0.75252224 0.24747776]]
+########################
+hmmScoreWT 0.1089673690190771
+hmmScoreMUT 0.08438481345752935
+Phosphomimic 0.033462138050528965
+Acetylmimic 0.03907973528103339
+IUPRED 0.0361567765456532
+ncontacts 0.058446989665523495
+nresidues 0.029523481752100747
+sec 0.017378258533944126
+burr 0.0505479244635973
+acc 0.015174006020476404
+ChargesWT 0.013258422887107388
+ChargesMUT 0.04482795703849364
+K_WT 0.015224416169804193
+A_MUT 0.031573144372703275
+D_MUT 0.011118794748265482
+E_MUT 0.025813903537618706
+allHomologs 0.0296241306582962
+exclParalogs 0.06197813073707341
+specParalogs 0.018995760879837262
+orthologs 0.05240476115688535
+bpso 0.03617556059365461
+bpsh 0.07564186987438462
+         Feature  Importance
+0     hmmScoreWT    0.108967
+1    hmmScoreMUT    0.084385
+21          bpsh    0.075642
+17  exclParalogs    0.061978
+5      ncontacts    0.058447
+19     orthologs    0.052405
+8           burr    0.050548
+11    ChargesMUT    0.044828
+3    Acetylmimic    0.039080
+20          bpso    0.036176
+4         IUPRED    0.036157
+2   Phosphomimic    0.033462
+13         A_MUT    0.031573
+16   allHomologs    0.029624
+6      nresidues    0.029523
+15         E_MUT    0.025814
+18  specParalogs    0.018996
+7            sec    0.017378
+12          K_WT    0.015224
+9            acc    0.015174
+10     ChargesWT    0.013258
+14         D_MUT    0.011119
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.817
+########################
+MAP2K3/A84T/test 0.513 A
+PIM1/S97N/test 0.607 A
+########################
+CDK5/F82I/test 0.483 TBD
+MAP2K1/V211D/test 0.451 TBD
+########################
+CHEK2/K373E/test 0.561 Inconclusive
+MAP2K3/R94L/test 0.526 Inconclusive
+MAP2K3/R96W/test 0.434 Inconclusive
+MAP2K3/L215W/test 0.438 Inconclusive
+MAP2K3/T222M/test 0.556 Inconclusive
+PIM1/Q127E/test 0.564 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.84239442]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 4, 'n_estimators': 10}
+[[0.51056076 0.48943924]
+ [0.49037875 0.50962125]
+ [0.74778759 0.25221241]
+ ...
+ [0.72189904 0.27810096]
+ [0.8361309  0.1638691 ]
+ [0.82665094 0.17334906]]
+########################
+hmmScoreWT 0.0735552376839724
+hmmScoreMUT 0.1717257495652612
+Phosphomimic 0.02112196654919063
+IUPRED 0.036223281997328965
+ncontacts 0.09669954522047937
+nresidues 0.06387646184046455
+sec 0.01990709861315689
+burr 0.026670699080174144
+acc 0.039735524590929085
+ChargesMUT 0.0984824760469298
+p_-1_pfam 0.0310110619013029
+p_0 0.013028056474781516
+ub_0_pfam 0.030814977409756517
+ub_1_pfam 0.01120472076434578
+S_WT 0.010251727692640999
+D_MUT 0.024232303677770104
+E_MUT 0.07262356822046138
+exclParalogs 0.019919650219195024
+bpso 0.02613941078921226
+bpsh 0.1008547563370598
+         Feature  Importance
+1    hmmScoreMUT    0.171726
+19          bpsh    0.100855
+9     ChargesMUT    0.098482
+4      ncontacts    0.096700
+0     hmmScoreWT    0.073555
+16         E_MUT    0.072624
+5      nresidues    0.063876
+8            acc    0.039736
+3         IUPRED    0.036223
+10     p_-1_pfam    0.031011
+12     ub_0_pfam    0.030815
+7           burr    0.026671
+18          bpso    0.026139
+15         D_MUT    0.024232
+2   Phosphomimic    0.021122
+17  exclParalogs    0.019920
+6            sec    0.019907
+11           p_0    0.013028
+13     ub_1_pfam    0.011205
+14          S_WT    0.010252
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.704
+########################
+MAP2K3/A84T/test 0.522 A
+PIM1/S97N/test 0.561 A
+########################
+CDK5/F82I/test 0.424 TBD
+MAP2K1/V211D/test 0.281 TBD
+########################
+CHEK2/K373E/test 0.478 Inconclusive
+MAP2K3/R94L/test 0.532 Inconclusive
+MAP2K3/R96W/test 0.441 Inconclusive
+MAP2K3/L215W/test 0.467 Inconclusive
+MAP2K3/T222M/test 0.487 Inconclusive
+PIM1/Q127E/test 0.541 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.8632784]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 4, 'n_estimators': 50}
+[[0.57532401 0.42467599]
+ [0.42170535 0.57829465]
+ [0.71863838 0.28136162]
+ ...
+ [0.74158598 0.25841402]
+ [0.80995355 0.19004645]
+ [0.79341966 0.20658034]]
+########################
+hmmScoreWT 0.13818537410301965
+hmmScoreMUT 0.09627883048722628
+Phosphomimic 0.02825026953410994
+Acetylmimic 0.05267039102572022
+IUPRED 0.02639876478811036
+ncontacts 0.08136019701515913
+nresidues 0.033536715251313305
+sec 0.011722617129691318
+burr 0.05811265650016147
+acc 0.017962993732926667
+ChargesWT 0.012484473322214194
+ChargesMUT 0.04230564668149617
+K_WT 0.020867542811349025
+A_MUT 0.025308094002041457
+E_MUT 0.03727774675157027
+allHomologs 0.01515786554421424
+exclParalogs 0.03363005084885772
+specParalogs 0.025994556491481847
+orthologs 0.03471418829365784
+bpso 0.03620296787560459
+bpsh 0.08016688973435146
+         Feature  Importance
+0     hmmScoreWT    0.138185
+1    hmmScoreMUT    0.096279
+5      ncontacts    0.081360
+20          bpsh    0.080167
+8           burr    0.058113
+3    Acetylmimic    0.052670
+11    ChargesMUT    0.042306
+14         E_MUT    0.037278
+19          bpso    0.036203
+18     orthologs    0.034714
+16  exclParalogs    0.033630
+6      nresidues    0.033537
+2   Phosphomimic    0.028250
+4         IUPRED    0.026399
+17  specParalogs    0.025995
+13         A_MUT    0.025308
+12          K_WT    0.020868
+9            acc    0.017963
+15   allHomologs    0.015158
+10     ChargesWT    0.012484
+7            sec    0.011723
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.775
+########################
+MAP2K3/A84T/test 0.543 A
+PIM1/S97N/test 0.635 A
+########################
+CDK5/F82I/test 0.445 TBD
+MAP2K1/V211D/test 0.393 TBD
+########################
+CHEK2/K373E/test 0.537 Inconclusive
+MAP2K3/R94L/test 0.507 Inconclusive
+MAP2K3/R96W/test 0.422 Inconclusive
+MAP2K3/L215W/test 0.385 Inconclusive
+MAP2K3/T222M/test 0.57 Inconclusive
+PIM1/Q127E/test 0.532 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.88046553]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 4, 'n_estimators': 100}
+[[0.58750186 0.41249814]
+ [0.44127467 0.55872533]
+ [0.71303107 0.28696893]
+ ...
+ [0.73544827 0.26455173]
+ [0.79085447 0.20914553]
+ [0.74777048 0.25222952]]
+########################
+hmmScoreWT 0.11263481153990912
+hmmScoreMUT 0.08331750926863135
+Phosphomimic 0.03364865888933029
+Acetylmimic 0.03761679315554705
+IUPRED 0.03616610695417324
+ncontacts 0.060656677653065004
+nresidues 0.024984789638096108
+sec 0.019192119247551945
+burr 0.060811163738082076
+acc 0.013799260703119156
+ChargesWT 0.013449220033959274
+ChargesMUT 0.044954914549650477
+K_WT 0.017539597630651563
+A_MUT 0.029646371398617075
+D_MUT 0.011166833710966493
+E_MUT 0.025821698223247758
+allHomologs 0.030103402155145575
+exclParalogs 0.06462560435214273
+specParalogs 0.022822751523197442
+orthologs 0.0540708372612736
+bpso 0.03454201070902099
+bpsh 0.07104700860027381
+         Feature  Importance
+0     hmmScoreWT    0.112635
+1    hmmScoreMUT    0.083318
+21          bpsh    0.071047
+17  exclParalogs    0.064626
+8           burr    0.060811
+5      ncontacts    0.060657
+19     orthologs    0.054071
+11    ChargesMUT    0.044955
+3    Acetylmimic    0.037617
+4         IUPRED    0.036166
+20          bpso    0.034542
+2   Phosphomimic    0.033649
+16   allHomologs    0.030103
+13         A_MUT    0.029646
+15         E_MUT    0.025822
+6      nresidues    0.024985
+18  specParalogs    0.022823
+7            sec    0.019192
+12          K_WT    0.017540
+9            acc    0.013799
+10     ChargesWT    0.013449
+14         D_MUT    0.011167
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.831
+########################
+MAP2K3/A84T/test 0.514 A
+PIM1/S97N/test 0.605 A
+########################
+CDK5/F82I/test 0.487 TBD
+MAP2K1/V211D/test 0.452 TBD
+########################
+CHEK2/K373E/test 0.559 Inconclusive
+MAP2K3/R94L/test 0.524 Inconclusive
+MAP2K3/R96W/test 0.441 Inconclusive
+MAP2K3/L215W/test 0.43 Inconclusive
+MAP2K3/T222M/test 0.555 Inconclusive
+PIM1/Q127E/test 0.559 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.84448634]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 10}
+[[0.51283538 0.48716462]
+ [0.45630859 0.54369141]
+ [0.77079189 0.22920811]
+ ...
+ [0.72164845 0.27835155]
+ [0.83707335 0.16292665]
+ [0.8484622  0.1515378 ]]
+########################
+hmmScoreWT 0.04628271924389292
+hmmScoreMUT 0.17151583036209922
+Phosphomimic 0.021093171588678385
+IUPRED 0.03586289733338069
+ncontacts 0.10368861151193062
+nresidues 0.06307671931910504
+sec 0.019785151058630997
+burr 0.025900006869355185
+acc 0.0495728428579391
+ChargesMUT 0.0979807622346405
+p_-1_pfam 0.03095901484326713
+p_0 0.012811033620301612
+ub_0_pfam 0.030814977409756517
+ub_1_pfam 0.011181868371284369
+S_WT 0.01014655791214804
+D_MUT 0.023828639192207478
+E_MUT 0.07188498480501995
+allHomologs 0.0230383701888715
+exclParalogs 0.014979065795702328
+bpso 0.026139332028610518
+bpsh 0.10039423501554041
+         Feature  Importance
+1    hmmScoreMUT    0.171516
+4      ncontacts    0.103689
+20          bpsh    0.100394
+9     ChargesMUT    0.097981
+16         E_MUT    0.071885
+5      nresidues    0.063077
+8            acc    0.049573
+0     hmmScoreWT    0.046283
+3         IUPRED    0.035863
+10     p_-1_pfam    0.030959
+12     ub_0_pfam    0.030815
+19          bpso    0.026139
+7           burr    0.025900
+15         D_MUT    0.023829
+17   allHomologs    0.023038
+2   Phosphomimic    0.021093
+6            sec    0.019785
+18  exclParalogs    0.014979
+11           p_0    0.012811
+13     ub_1_pfam    0.011182
+14          S_WT    0.010147
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.52 A
+PIM1/S97N/test 0.561 A
+########################
+CDK5/F82I/test 0.458 TBD
+MAP2K1/V211D/test 0.248 TBD
+########################
+CHEK2/K373E/test 0.491 Inconclusive
+MAP2K3/R94L/test 0.544 Inconclusive
+MAP2K3/R96W/test 0.439 Inconclusive
+MAP2K3/L215W/test 0.504 Inconclusive
+MAP2K3/T222M/test 0.553 Inconclusive
+PIM1/Q127E/test 0.554 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.86993835]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 50}
+[[0.58934632 0.41065368]
+ [0.41260516 0.58739484]
+ [0.71216716 0.28783284]
+ ...
+ [0.74930671 0.25069329]
+ [0.82046695 0.17953305]
+ [0.78806173 0.21193827]]
+########################
+hmmScoreWT 0.14056603529812992
+hmmScoreMUT 0.09613857251783801
+Phosphomimic 0.024694624234103544
+Acetylmimic 0.05367256261514297
+IUPRED 0.02585792520732723
+ncontacts 0.07606153196774551
+nresidues 0.0343690440589983
+sec 0.011160913496128591
+burr 0.0358623041609503
+acc 0.022148935509200073
+ChargesWT 0.011385399830555696
+ChargesMUT 0.041831856361419575
+K_WT 0.01694043407796894
+A_MUT 0.028562861949482436
+E_MUT 0.03488269081572042
+allHomologs 0.019073552357404273
+exclParalogs 0.03366972161588322
+specParalogs 0.03023194418939129
+orthologs 0.03108333434624638
+bpso 0.02808939903106065
+bpsh 0.08750828361036975
+         Feature  Importance
+0     hmmScoreWT    0.140566
+1    hmmScoreMUT    0.096139
+20          bpsh    0.087508
+5      ncontacts    0.076062
+3    Acetylmimic    0.053673
+11    ChargesMUT    0.041832
+8           burr    0.035862
+14         E_MUT    0.034883
+6      nresidues    0.034369
+16  exclParalogs    0.033670
+18     orthologs    0.031083
+17  specParalogs    0.030232
+13         A_MUT    0.028563
+19          bpso    0.028089
+4         IUPRED    0.025858
+2   Phosphomimic    0.024695
+9            acc    0.022149
+15   allHomologs    0.019074
+12          K_WT    0.016940
+10     ChargesWT    0.011385
+7            sec    0.011161
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.746
+########################
+MAP2K3/A84T/test 0.53 A
+PIM1/S97N/test 0.618 A
+########################
+CDK5/F82I/test 0.46 TBD
+MAP2K1/V211D/test 0.398 TBD
+########################
+CHEK2/K373E/test 0.567 Inconclusive
+MAP2K3/R94L/test 0.522 Inconclusive
+MAP2K3/R96W/test 0.418 Inconclusive
+MAP2K3/L215W/test 0.41 Inconclusive
+MAP2K3/T222M/test 0.573 Inconclusive
+PIM1/Q127E/test 0.556 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87762132]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 100}
+[[0.59644475 0.40355525]
+ [0.43331819 0.56668181]
+ [0.71330366 0.28669634]
+ ...
+ [0.74869812 0.25130188]
+ [0.80564069 0.19435931]
+ [0.76168542 0.23831458]]
+########################
+hmmScoreWT 0.10921601861872883
+hmmScoreMUT 0.09043297395896312
+Phosphomimic 0.029351397229494425
+Acetylmimic 0.03838813354054873
+IUPRED 0.034782544522433734
+ncontacts 0.06290938982905912
+nresidues 0.03321483475549773
+sec 0.017666309773546874
+burr 0.04821628899859217
+acc 0.014340260987073961
+ChargesWT 0.011348826774238704
+ChargesMUT 0.04378943560957163
+K_WT 0.015024850143214204
+A_MUT 0.03070152275331535
+E_MUT 0.024635437968583973
+allHomologs 0.03585947656490626
+exclParalogs 0.06086083846419133
+specParalogs 0.020233796892886752
+orthologs 0.04816950326705218
+bpso 0.03172347666271416
+bpsh 0.07294355948067453
+         Feature  Importance
+0     hmmScoreWT    0.109216
+1    hmmScoreMUT    0.090433
+20          bpsh    0.072944
+5      ncontacts    0.062909
+16  exclParalogs    0.060861
+8           burr    0.048216
+18     orthologs    0.048170
+11    ChargesMUT    0.043789
+3    Acetylmimic    0.038388
+15   allHomologs    0.035859
+4         IUPRED    0.034783
+6      nresidues    0.033215
+19          bpso    0.031723
+13         A_MUT    0.030702
+2   Phosphomimic    0.029351
+14         E_MUT    0.024635
+17  specParalogs    0.020234
+7            sec    0.017666
+12          K_WT    0.015025
+9            acc    0.014340
+10     ChargesWT    0.011349
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.775
+########################
+MAP2K3/A84T/test 0.508 A
+PIM1/S97N/test 0.603 A
+########################
+CDK5/F82I/test 0.488 TBD
+MAP2K1/V211D/test 0.433 TBD
+########################
+CHEK2/K373E/test 0.559 Inconclusive
+MAP2K3/R94L/test 0.533 Inconclusive
+MAP2K3/R96W/test 0.443 Inconclusive
+MAP2K3/L215W/test 0.441 Inconclusive
+MAP2K3/T222M/test 0.566 Inconclusive
+PIM1/Q127E/test 0.566 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.84066687]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 10}
+[[0.51056076 0.48943924]
+ [0.49037875 0.50962125]
+ [0.74778759 0.25221241]
+ ...
+ [0.72112471 0.27887529]
+ [0.8361309  0.1638691 ]
+ [0.8258766  0.1741234 ]]
+########################
+hmmScoreWT 0.07387756346403886
+hmmScoreMUT 0.17170008677794357
+Phosphomimic 0.021116420136971424
+IUPRED 0.035619870423783215
+ncontacts 0.09669954522047937
+nresidues 0.06349957859470665
+sec 0.01981497162259775
+burr 0.026670699080174144
+acc 0.041243373852797624
+ChargesMUT 0.09807315801838348
+p_-1_pfam 0.03101093583280335
+p_0 0.012811033620301612
+ub_0_pfam 0.030814977409756517
+ub_1_pfam 0.011200318994388152
+S_WT 0.010162819052258121
+D_MUT 0.023828639192207478
+E_MUT 0.0726189055035609
+exclParalogs 0.019919650219195024
+bpso 0.026139332028610518
+bpsh 0.1008547563370598
+         Feature  Importance
+1    hmmScoreMUT    0.171700
+19          bpsh    0.100855
+9     ChargesMUT    0.098073
+4      ncontacts    0.096700
+0     hmmScoreWT    0.073878
+16         E_MUT    0.072619
+5      nresidues    0.063500
+8            acc    0.041243
+3         IUPRED    0.035620
+10     p_-1_pfam    0.031011
+12     ub_0_pfam    0.030815
+7           burr    0.026671
+18          bpso    0.026139
+15         D_MUT    0.023829
+2   Phosphomimic    0.021116
+17  exclParalogs    0.019920
+6            sec    0.019815
+11           p_0    0.012811
+13     ub_1_pfam    0.011200
+14          S_WT    0.010163
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.704
+########################
+MAP2K3/A84T/test 0.522 A
+PIM1/S97N/test 0.563 A
+########################
+CDK5/F82I/test 0.424 TBD
+MAP2K1/V211D/test 0.27 TBD
+########################
+CHEK2/K373E/test 0.478 Inconclusive
+MAP2K3/R94L/test 0.532 Inconclusive
+MAP2K3/R96W/test 0.441 Inconclusive
+MAP2K3/L215W/test 0.467 Inconclusive
+MAP2K3/T222M/test 0.487 Inconclusive
+PIM1/Q127E/test 0.541 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.86891094]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 50}
+[[0.58488087 0.41511913]
+ [0.41900225 0.58099775]
+ [0.7025252  0.2974748 ]
+ ...
+ [0.74807543 0.25192457]
+ [0.8038662  0.1961338 ]
+ [0.78141604 0.21858396]]
+########################
+hmmScoreWT 0.14113443541751527
+hmmScoreMUT 0.0960489093892442
+Phosphomimic 0.028045093581249368
+Acetylmimic 0.054909215395702864
+IUPRED 0.02696431133777019
+ncontacts 0.07751232100821594
+nresidues 0.026679315772455966
+sec 0.011210001948817067
+burr 0.03875407159389411
+acc 0.02074461626020578
+ChargesWT 0.01219636778308721
+ChargesMUT 0.04208647688631629
+K_WT 0.017000673589552796
+A_MUT 0.02921941190631013
+E_MUT 0.037261998305095245
+allHomologs 0.015008915215195236
+exclParalogs 0.0335130224194695
+specParalogs 0.02812245056542197
+orthologs 0.0331072007503454
+bpso 0.03588473994624389
+bpsh 0.09247509865222704
+         Feature  Importance
+0     hmmScoreWT    0.141134
+1    hmmScoreMUT    0.096049
+20          bpsh    0.092475
+5      ncontacts    0.077512
+3    Acetylmimic    0.054909
+11    ChargesMUT    0.042086
+8           burr    0.038754
+14         E_MUT    0.037262
+19          bpso    0.035885
+16  exclParalogs    0.033513
+18     orthologs    0.033107
+13         A_MUT    0.029219
+17  specParalogs    0.028122
+2   Phosphomimic    0.028045
+4         IUPRED    0.026964
+6      nresidues    0.026679
+9            acc    0.020745
+12          K_WT    0.017001
+15   allHomologs    0.015009
+10     ChargesWT    0.012196
+7            sec    0.011210
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.761
+########################
+MAP2K3/A84T/test 0.544 A
+PIM1/S97N/test 0.631 A
+########################
+CDK5/F82I/test 0.444 TBD
+MAP2K1/V211D/test 0.404 TBD
+########################
+CHEK2/K373E/test 0.559 Inconclusive
+MAP2K3/R94L/test 0.511 Inconclusive
+MAP2K3/R96W/test 0.41 Inconclusive
+MAP2K3/L215W/test 0.401 Inconclusive
+MAP2K3/T222M/test 0.556 Inconclusive
+PIM1/Q127E/test 0.554 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.88424906]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 100}
+[[0.60063514 0.39936486]
+ [0.433556   0.566444  ]
+ [0.70291289 0.29708711]
+ ...
+ [0.74475497 0.25524503]
+ [0.78665108 0.21334892]
+ [0.75252224 0.24747776]]
+########################
+hmmScoreWT 0.1089673690190771
+hmmScoreMUT 0.08438481345752935
+Phosphomimic 0.033462138050528965
+Acetylmimic 0.03907973528103339
+IUPRED 0.0361567765456532
+ncontacts 0.058446989665523495
+nresidues 0.029523481752100747
+sec 0.017378258533944126
+burr 0.0505479244635973
+acc 0.015174006020476404
+ChargesWT 0.013258422887107388
+ChargesMUT 0.04482795703849364
+K_WT 0.015224416169804193
+A_MUT 0.031573144372703275
+D_MUT 0.011118794748265482
+E_MUT 0.025813903537618706
+allHomologs 0.0296241306582962
+exclParalogs 0.06197813073707341
+specParalogs 0.018995760879837262
+orthologs 0.05240476115688535
+bpso 0.03617556059365461
+bpsh 0.07564186987438462
+         Feature  Importance
+0     hmmScoreWT    0.108967
+1    hmmScoreMUT    0.084385
+21          bpsh    0.075642
+17  exclParalogs    0.061978
+5      ncontacts    0.058447
+19     orthologs    0.052405
+8           burr    0.050548
+11    ChargesMUT    0.044828
+3    Acetylmimic    0.039080
+20          bpso    0.036176
+4         IUPRED    0.036157
+2   Phosphomimic    0.033462
+13         A_MUT    0.031573
+16   allHomologs    0.029624
+6      nresidues    0.029523
+15         E_MUT    0.025814
+18  specParalogs    0.018996
+7            sec    0.017378
+12          K_WT    0.015224
+9            acc    0.015174
+10     ChargesWT    0.013258
+14         D_MUT    0.011119
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.817
+########################
+MAP2K3/A84T/test 0.513 A
+PIM1/S97N/test 0.607 A
+########################
+CDK5/F82I/test 0.483 TBD
+MAP2K1/V211D/test 0.451 TBD
+########################
+CHEK2/K373E/test 0.561 Inconclusive
+MAP2K3/R94L/test 0.526 Inconclusive
+MAP2K3/R96W/test 0.434 Inconclusive
+MAP2K3/L215W/test 0.438 Inconclusive
+MAP2K3/T222M/test 0.556 Inconclusive
+PIM1/Q127E/test 0.564 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.84329725]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 5, 'n_estimators': 10}
+[[0.51056076 0.48943924]
+ [0.49037875 0.50962125]
+ [0.74778759 0.25221241]
+ ...
+ [0.72189904 0.27810096]
+ [0.8361309  0.1638691 ]
+ [0.82665094 0.17334906]]
+########################
+hmmScoreWT 0.0735552376839724
+hmmScoreMUT 0.1717257495652612
+Phosphomimic 0.02112196654919063
+IUPRED 0.036223281997328965
+ncontacts 0.09669954522047937
+nresidues 0.06387646184046455
+sec 0.01990709861315689
+burr 0.026670699080174144
+acc 0.039735524590929085
+ChargesMUT 0.0984824760469298
+p_-1_pfam 0.0310110619013029
+p_0 0.013028056474781516
+ub_0_pfam 0.030814977409756517
+ub_1_pfam 0.01120472076434578
+S_WT 0.010251727692640999
+D_MUT 0.024232303677770104
+E_MUT 0.07262356822046138
+exclParalogs 0.019919650219195024
+bpso 0.02613941078921226
+bpsh 0.1008547563370598
+         Feature  Importance
+1    hmmScoreMUT    0.171726
+19          bpsh    0.100855
+9     ChargesMUT    0.098482
+4      ncontacts    0.096700
+0     hmmScoreWT    0.073555
+16         E_MUT    0.072624
+5      nresidues    0.063876
+8            acc    0.039736
+3         IUPRED    0.036223
+10     p_-1_pfam    0.031011
+12     ub_0_pfam    0.030815
+7           burr    0.026671
+18          bpso    0.026139
+15         D_MUT    0.024232
+2   Phosphomimic    0.021122
+17  exclParalogs    0.019920
+6            sec    0.019907
+11           p_0    0.013028
+13     ub_1_pfam    0.011205
+14          S_WT    0.010252
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.704
+########################
+MAP2K3/A84T/test 0.522 A
+PIM1/S97N/test 0.561 A
+########################
+CDK5/F82I/test 0.424 TBD
+MAP2K1/V211D/test 0.281 TBD
+########################
+CHEK2/K373E/test 0.478 Inconclusive
+MAP2K3/R94L/test 0.532 Inconclusive
+MAP2K3/R96W/test 0.441 Inconclusive
+MAP2K3/L215W/test 0.467 Inconclusive
+MAP2K3/T222M/test 0.487 Inconclusive
+PIM1/Q127E/test 0.541 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.86947049]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 5, 'n_estimators': 50}
+[[0.57532401 0.42467599]
+ [0.42170535 0.57829465]
+ [0.71863838 0.28136162]
+ ...
+ [0.74158598 0.25841402]
+ [0.80995355 0.19004645]
+ [0.79341966 0.20658034]]
+########################
+hmmScoreWT 0.13818537410301965
+hmmScoreMUT 0.09627883048722628
+Phosphomimic 0.02825026953410994
+Acetylmimic 0.05267039102572022
+IUPRED 0.02639876478811036
+ncontacts 0.08136019701515913
+nresidues 0.033536715251313305
+sec 0.011722617129691318
+burr 0.05811265650016147
+acc 0.017962993732926667
+ChargesWT 0.012484473322214194
+ChargesMUT 0.04230564668149617
+K_WT 0.020867542811349025
+A_MUT 0.025308094002041457
+E_MUT 0.03727774675157027
+allHomologs 0.01515786554421424
+exclParalogs 0.03363005084885772
+specParalogs 0.025994556491481847
+orthologs 0.03471418829365784
+bpso 0.03620296787560459
+bpsh 0.08016688973435146
+         Feature  Importance
+0     hmmScoreWT    0.138185
+1    hmmScoreMUT    0.096279
+5      ncontacts    0.081360
+20          bpsh    0.080167
+8           burr    0.058113
+3    Acetylmimic    0.052670
+11    ChargesMUT    0.042306
+14         E_MUT    0.037278
+19          bpso    0.036203
+18     orthologs    0.034714
+16  exclParalogs    0.033630
+6      nresidues    0.033537
+2   Phosphomimic    0.028250
+4         IUPRED    0.026399
+17  specParalogs    0.025995
+13         A_MUT    0.025308
+12          K_WT    0.020868
+9            acc    0.017963
+15   allHomologs    0.015158
+10     ChargesWT    0.012484
+7            sec    0.011723
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.775
+########################
+MAP2K3/A84T/test 0.543 A
+PIM1/S97N/test 0.635 A
+########################
+CDK5/F82I/test 0.445 TBD
+MAP2K1/V211D/test 0.393 TBD
+########################
+CHEK2/K373E/test 0.537 Inconclusive
+MAP2K3/R94L/test 0.507 Inconclusive
+MAP2K3/R96W/test 0.422 Inconclusive
+MAP2K3/L215W/test 0.385 Inconclusive
+MAP2K3/T222M/test 0.57 Inconclusive
+PIM1/Q127E/test 0.532 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87595975]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 5, 'n_estimators': 100}
+[[0.58750186 0.41249814]
+ [0.44127467 0.55872533]
+ [0.71303107 0.28696893]
+ ...
+ [0.73544827 0.26455173]
+ [0.79085447 0.20914553]
+ [0.74777048 0.25222952]]
+########################
+hmmScoreWT 0.11263481153990912
+hmmScoreMUT 0.08331750926863135
+Phosphomimic 0.03364865888933029
+Acetylmimic 0.03761679315554705
+IUPRED 0.03616610695417324
+ncontacts 0.060656677653065004
+nresidues 0.024984789638096108
+sec 0.019192119247551945
+burr 0.060811163738082076
+acc 0.013799260703119156
+ChargesWT 0.013449220033959274
+ChargesMUT 0.044954914549650477
+K_WT 0.017539597630651563
+A_MUT 0.029646371398617075
+D_MUT 0.011166833710966493
+E_MUT 0.025821698223247758
+allHomologs 0.030103402155145575
+exclParalogs 0.06462560435214273
+specParalogs 0.022822751523197442
+orthologs 0.0540708372612736
+bpso 0.03454201070902099
+bpsh 0.07104700860027381
+         Feature  Importance
+0     hmmScoreWT    0.112635
+1    hmmScoreMUT    0.083318
+21          bpsh    0.071047
+17  exclParalogs    0.064626
+8           burr    0.060811
+5      ncontacts    0.060657
+19     orthologs    0.054071
+11    ChargesMUT    0.044955
+3    Acetylmimic    0.037617
+4         IUPRED    0.036166
+20          bpso    0.034542
+2   Phosphomimic    0.033649
+16   allHomologs    0.030103
+13         A_MUT    0.029646
+15         E_MUT    0.025822
+6      nresidues    0.024985
+18  specParalogs    0.022823
+7            sec    0.019192
+12          K_WT    0.017540
+9            acc    0.013799
+10     ChargesWT    0.013449
+14         D_MUT    0.011167
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.831
+########################
+MAP2K3/A84T/test 0.514 A
+PIM1/S97N/test 0.605 A
+########################
+CDK5/F82I/test 0.487 TBD
+MAP2K1/V211D/test 0.452 TBD
+########################
+CHEK2/K373E/test 0.559 Inconclusive
+MAP2K3/R94L/test 0.524 Inconclusive
+MAP2K3/R96W/test 0.441 Inconclusive
+MAP2K3/L215W/test 0.43 Inconclusive
+MAP2K3/T222M/test 0.555 Inconclusive
+PIM1/Q127E/test 0.559 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87821777]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'n_estimators': 10}
+[[0.65885932 0.34114068]
+ [0.51552282 0.48447718]
+ [0.69533296 0.30466704]
+ ...
+ [0.85150621 0.14849379]
+ [0.78119327 0.21880673]
+ [0.80860551 0.19139449]]
+########################
+hmmScoreWT 0.03517594587414421
+hmmScoreMUT 0.1436754169066431
+Acetylmimic 0.018886183522041418
+IUPRED 0.028912089126142564
+ncontacts 0.11504724496448893
+nresidues 0.021331859069710166
+phi_psi 0.01850781682596194
+sec 0.014674470977356881
+acc 0.028972707257515624
+ChargesMUT 0.049985657373866024
+ub_0_pfam 0.015122711680206624
+ub_1_pfam 0.011802274237258307
+V_WT 0.019316765567433315
+A_MUT 0.023342316422260447
+D_MUT 0.015429749483451544
+E_MUT 0.043401470425395286
+F_MUT 0.010950689952955301
+S_MUT 0.029976446591603235
+allHomologs 0.02713590196908166
+exclParalogs 0.07231451413847603
+specParalogs 0.01690501761908376
+orthologs 0.01258050900136799
+bpso 0.07871530525071473
+bpsh 0.06038291772484503
+         Feature  Importance
+1    hmmScoreMUT    0.143675
+4      ncontacts    0.115047
+22          bpso    0.078715
+19  exclParalogs    0.072315
+23          bpsh    0.060383
+9     ChargesMUT    0.049986
+15         E_MUT    0.043401
+0     hmmScoreWT    0.035176
+17         S_MUT    0.029976
+8            acc    0.028973
+3         IUPRED    0.028912
+18   allHomologs    0.027136
+13         A_MUT    0.023342
+5      nresidues    0.021332
+12          V_WT    0.019317
+2    Acetylmimic    0.018886
+6        phi_psi    0.018508
+20  specParalogs    0.016905
+14         D_MUT    0.015430
+10     ub_0_pfam    0.015123
+7            sec    0.014674
+21     orthologs    0.012581
+11     ub_1_pfam    0.011802
+16         F_MUT    0.010951
+########################
+activatingresistance results ( 14 )
+REC: 0.714
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.437
+########################
+MAP2K3/A84T/test 0.534 A
+PIM1/S97N/test 0.579 A
+########################
+CDK5/F82I/test 0.214 TBD
+MAP2K1/V211D/test 0.28 TBD
+########################
+CHEK2/K373E/test 0.581 Inconclusive
+MAP2K3/R94L/test 0.523 Inconclusive
+MAP2K3/R96W/test 0.464 Inconclusive
+MAP2K3/L215W/test 0.244 Inconclusive
+MAP2K3/T222M/test 0.431 Inconclusive
+PIM1/Q127E/test 0.586 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.90010913]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'n_estimators': 50}
+[[0.65390511 0.34609489]
+ [0.37837041 0.62162959]
+ [0.81597497 0.18402503]
+ ...
+ [0.86357005 0.13642995]
+ [0.88568413 0.11431587]
+ [0.81297618 0.18702382]]
+########################
+hmmScoreWT 0.10803523459639959
+hmmScoreMUT 0.09219626954674214
+Phosphomimic 0.01661383300584212
+Acetylmimic 0.040387529116474315
+IUPRED 0.03982683252611906
+ncontacts 0.062180532110413606
+nresidues 0.02225193174607679
+phi_psi 0.014803538351907352
+sec 0.023326745699212444
+burr 0.03261443842610804
+acc 0.019181090505331767
+ChargesMUT 0.036942537315382995
+p_0 0.01149410218950668
+A_MUT 0.01892999376845129
+E_MUT 0.02028424715558572
+S_MUT 0.010633952645750943
+allHomologs 0.033903733573772424
+exclParalogs 0.04529393505317447
+specParalogs 0.049305315041936124
+orthologs 0.038660353177873655
+bpso 0.04689209951512493
+bpsh 0.07242143503811149
+         Feature  Importance
+0     hmmScoreWT    0.108035
+1    hmmScoreMUT    0.092196
+21          bpsh    0.072421
+5      ncontacts    0.062181
+18  specParalogs    0.049305
+20          bpso    0.046892
+17  exclParalogs    0.045294
+3    Acetylmimic    0.040388
+4         IUPRED    0.039827
+19     orthologs    0.038660
+11    ChargesMUT    0.036943
+16   allHomologs    0.033904
+9           burr    0.032614
+8            sec    0.023327
+6      nresidues    0.022252
+14         E_MUT    0.020284
+10           acc    0.019181
+13         A_MUT    0.018930
+2   Phosphomimic    0.016614
+7        phi_psi    0.014804
+12           p_0    0.011494
+15         S_MUT    0.010634
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.676
+########################
+MAP2K3/A84T/test 0.422 A
+PIM1/S97N/test 0.618 A
+########################
+CDK5/F82I/test 0.407 TBD
+MAP2K1/V211D/test 0.348 TBD
+########################
+CHEK2/K373E/test 0.635 Inconclusive
+MAP2K3/R94L/test 0.527 Inconclusive
+MAP2K3/R96W/test 0.38 Inconclusive
+MAP2K3/L215W/test 0.351 Inconclusive
+MAP2K3/T222M/test 0.505 Inconclusive
+PIM1/Q127E/test 0.604 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.9030148]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'n_estimators': 100}
+[[0.67093973 0.32906027]
+ [0.3788842  0.6211158 ]
+ [0.81094242 0.18905758]
+ ...
+ [0.85423761 0.14576239]
+ [0.88956861 0.11043139]
+ [0.85242115 0.14757885]]
+########################
+hmmScoreWT 0.10385872827674049
+hmmScoreMUT 0.09251323736090364
+Phosphomimic 0.025758491032765816
+Acetylmimic 0.036512051302889065
+IUPRED 0.036474562877792716
+ncontacts 0.03920054446272716
+nresidues 0.029366933368363705
+phi_psi 0.018843200438232503
+sec 0.027500534589044754
+burr 0.040444760765626364
+acc 0.021178794967965934
+ChargesWT 0.01155588611889801
+ChargesMUT 0.034756970677875025
+p_0_pfam 0.012662053883177317
+A_MUT 0.03320666511514424
+E_MUT 0.014440374765111093
+allHomologs 0.0463869766954485
+exclParalogs 0.048984713318912326
+specParalogs 0.03929402325888523
+orthologs 0.04017208422629217
+bpso 0.04951195896684244
+bpsh 0.06128302387634996
+         Feature  Importance
+0     hmmScoreWT    0.103859
+1    hmmScoreMUT    0.092513
+21          bpsh    0.061283
+20          bpso    0.049512
+17  exclParalogs    0.048985
+16   allHomologs    0.046387
+9           burr    0.040445
+19     orthologs    0.040172
+18  specParalogs    0.039294
+5      ncontacts    0.039201
+3    Acetylmimic    0.036512
+4         IUPRED    0.036475
+12    ChargesMUT    0.034757
+14         A_MUT    0.033207
+6      nresidues    0.029367
+8            sec    0.027501
+2   Phosphomimic    0.025758
+10           acc    0.021179
+7        phi_psi    0.018843
+15         E_MUT    0.014440
+13      p_0_pfam    0.012662
+11     ChargesWT    0.011556
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.419 A
+PIM1/S97N/test 0.621 A
+########################
+CDK5/F82I/test 0.46 TBD
+MAP2K1/V211D/test 0.387 TBD
+########################
+CHEK2/K373E/test 0.585 Inconclusive
+MAP2K3/R94L/test 0.542 Inconclusive
+MAP2K3/R96W/test 0.387 Inconclusive
+MAP2K3/L215W/test 0.383 Inconclusive
+MAP2K3/T222M/test 0.5 Inconclusive
+PIM1/Q127E/test 0.561 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.88054167]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'n_estimators': 10}
+[[0.65628013 0.34371987]
+ [0.37257343 0.62742657]
+ [0.70748907 0.29251093]
+ ...
+ [0.87980557 0.12019443]
+ [0.865651   0.134349  ]
+ [0.83040294 0.16959706]]
+########################
+hmmScoreWT 0.06048193646640358
+hmmScoreMUT 0.14905829417456024
+Acetylmimic 0.01873126318612723
+IUPRED 0.014189300765535453
+ncontacts 0.08084923873481194
+nresidues 0.04933260293279226
+phi_psi 0.015962453661356422
+sec 0.011438439239621925
+burr 0.012836995284895122
+acc 0.018599927183689708
+ChargesMUT 0.06358498697091555
+ub_0_pfam 0.014951775590661192
+ub_1_pfam 0.011807332083416652
+A_MUT 0.058217864590660515
+D_MUT 0.017471396584160193
+E_MUT 0.04110424594877115
+S_MUT 0.015022584132678504
+allHomologs 0.03334493932217843
+exclParalogs 0.06762653581469026
+specParalogs 0.03119498859567152
+orthologs 0.010271293093118045
+bpso 0.07360752348922461
+bpsh 0.05848565531827301
+         Feature  Importance
+1    hmmScoreMUT    0.149058
+4      ncontacts    0.080849
+21          bpso    0.073608
+18  exclParalogs    0.067627
+10    ChargesMUT    0.063585
+0     hmmScoreWT    0.060482
+22          bpsh    0.058486
+13         A_MUT    0.058218
+5      nresidues    0.049333
+15         E_MUT    0.041104
+17   allHomologs    0.033345
+19  specParalogs    0.031195
+2    Acetylmimic    0.018731
+9            acc    0.018600
+14         D_MUT    0.017471
+6        phi_psi    0.015962
+16         S_MUT    0.015023
+11     ub_0_pfam    0.014952
+3         IUPRED    0.014189
+8           burr    0.012837
+12     ub_1_pfam    0.011807
+7            sec    0.011438
+20     orthologs    0.010271
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.662
+########################
+MAP2K3/A84T/test 0.54 A
+PIM1/S97N/test 0.548 A
+########################
+CDK5/F82I/test 0.237 TBD
+MAP2K1/V211D/test 0.319 TBD
+########################
+CHEK2/K373E/test 0.583 Inconclusive
+MAP2K3/R94L/test 0.554 Inconclusive
+MAP2K3/R96W/test 0.442 Inconclusive
+MAP2K3/L215W/test 0.304 Inconclusive
+MAP2K3/T222M/test 0.437 Inconclusive
+PIM1/Q127E/test 0.669 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.89856576]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'n_estimators': 50}
+[[0.66183341 0.33816659]
+ [0.3203529  0.6796471 ]
+ [0.80633411 0.19366589]
+ ...
+ [0.83030953 0.16969047]
+ [0.89800311 0.10199689]
+ [0.82520335 0.17479665]]
+########################
+hmmScoreWT 0.12220423024752526
+hmmScoreMUT 0.09050252641718196
+Phosphomimic 0.01676146572090201
+Acetylmimic 0.046289647913630896
+IUPRED 0.038012153621964466
+ncontacts 0.057763773951382436
+nresidues 0.031584002356378975
+phi_psi 0.014145955597085624
+sec 0.022484908892390236
+burr 0.03344067193675251
+acc 0.013123617028772391
+ChargesWT 0.01131907128606077
+ChargesMUT 0.03697633734401366
+p_0_pfam 0.011563813529251156
+A_MUT 0.0339098422902792
+E_MUT 0.016721092301154185
+allHomologs 0.037025885966972434
+exclParalogs 0.0404904172264005
+specParalogs 0.058438879315097204
+orthologs 0.03256279446197803
+bpso 0.04985732259482743
+bpsh 0.07824312897365443
+         Feature  Importance
+0     hmmScoreWT    0.122204
+1    hmmScoreMUT    0.090503
+21          bpsh    0.078243
+18  specParalogs    0.058439
+5      ncontacts    0.057764
+20          bpso    0.049857
+3    Acetylmimic    0.046290
+17  exclParalogs    0.040490
+4         IUPRED    0.038012
+16   allHomologs    0.037026
+12    ChargesMUT    0.036976
+14         A_MUT    0.033910
+9           burr    0.033441
+19     orthologs    0.032563
+6      nresidues    0.031584
+8            sec    0.022485
+2   Phosphomimic    0.016761
+15         E_MUT    0.016721
+7        phi_psi    0.014146
+10           acc    0.013124
+13      p_0_pfam    0.011564
+11     ChargesWT    0.011319
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.718
+########################
+MAP2K3/A84T/test 0.439 A
+PIM1/S97N/test 0.632 A
+########################
+CDK5/F82I/test 0.427 TBD
+MAP2K1/V211D/test 0.405 TBD
+########################
+CHEK2/K373E/test 0.619 Inconclusive
+MAP2K3/R94L/test 0.555 Inconclusive
+MAP2K3/R96W/test 0.366 Inconclusive
+MAP2K3/L215W/test 0.337 Inconclusive
+MAP2K3/T222M/test 0.511 Inconclusive
+PIM1/Q127E/test 0.617 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.89832483]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'n_estimators': 100}
+[[0.67641781 0.32358219]
+ [0.33546383 0.66453617]
+ [0.79091298 0.20908702]
+ ...
+ [0.82787469 0.17212531]
+ [0.87593303 0.12406697]
+ [0.84921564 0.15078436]]
+########################
+hmmScoreWT 0.11766276392642337
+hmmScoreMUT 0.08657684678830926
+Phosphomimic 0.024313534731061105
+Acetylmimic 0.03814347346018663
+IUPRED 0.03780283218897445
+ncontacts 0.035832893832812455
+nresidues 0.034869127527126224
+phi_psi 0.017733581132130118
+sec 0.026101448226792223
+burr 0.03861969345564794
+acc 0.013257547987371195
+ChargesWT 0.014491683602530668
+ChargesMUT 0.034826677299141615
+p_0_pfam 0.016682574241558452
+A_MUT 0.041690162945333634
+E_MUT 0.012031286956398088
+allHomologs 0.051620154693009984
+exclParalogs 0.05200893789971876
+specParalogs 0.04486570920139093
+orthologs 0.04015484956794337
+bpso 0.04937507650023207
+bpsh 0.06350174013391974
+         Feature  Importance
+0     hmmScoreWT    0.117663
+1    hmmScoreMUT    0.086577
+21          bpsh    0.063502
+17  exclParalogs    0.052009
+16   allHomologs    0.051620
+20          bpso    0.049375
+18  specParalogs    0.044866
+14         A_MUT    0.041690
+19     orthologs    0.040155
+9           burr    0.038620
+3    Acetylmimic    0.038143
+4         IUPRED    0.037803
+5      ncontacts    0.035833
+6      nresidues    0.034869
+12    ChargesMUT    0.034827
+8            sec    0.026101
+2   Phosphomimic    0.024314
+7        phi_psi    0.017734
+13      p_0_pfam    0.016683
+11     ChargesWT    0.014492
+10           acc    0.013258
+15         E_MUT    0.012031
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.789
+########################
+MAP2K3/A84T/test 0.437 A
+PIM1/S97N/test 0.632 A
+########################
+CDK5/F82I/test 0.477 TBD
+MAP2K1/V211D/test 0.442 TBD
+########################
+CHEK2/K373E/test 0.592 Inconclusive
+MAP2K3/R94L/test 0.543 Inconclusive
+MAP2K3/R96W/test 0.372 Inconclusive
+MAP2K3/L215W/test 0.387 Inconclusive
+MAP2K3/T222M/test 0.523 Inconclusive
+PIM1/Q127E/test 0.586 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87557426]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 3, 'n_estimators': 10}
+[[0.62207012 0.37792988]
+ [0.38011579 0.61988421]
+ [0.60926404 0.39073596]
+ ...
+ [0.91100567 0.08899433]
+ [0.78414141 0.21585859]
+ [0.85630574 0.14369426]]
+########################
+hmmScoreWT 0.03719871155548529
+hmmScoreMUT 0.14648120525539526
+Acetylmimic 0.015121232698864751
+IUPRED 0.013686157668521692
+ncontacts 0.1026887146389873
+nresidues 0.059360620393693886
+sec 0.014596390231359207
+acc 0.020080383347246097
+ChargesMUT 0.065168190430794
+p_0 0.010144848441114847
+ub_0_pfam 0.01337200566906398
+A_MUT 0.07595574537763852
+D_MUT 0.018869510480393453
+E_MUT 0.052376180754804366
+allHomologs 0.03776567947127904
+exclParalogs 0.056900747479514666
+specParalogs 0.018674860988078884
+orthologs 0.02481007877096436
+bpso 0.07759552554452201
+bpsh 0.05828957101747945
+         Feature  Importance
+1    hmmScoreMUT    0.146481
+4      ncontacts    0.102689
+18          bpso    0.077596
+11         A_MUT    0.075956
+8     ChargesMUT    0.065168
+5      nresidues    0.059361
+19          bpsh    0.058290
+15  exclParalogs    0.056901
+13         E_MUT    0.052376
+14   allHomologs    0.037766
+0     hmmScoreWT    0.037199
+17     orthologs    0.024810
+7            acc    0.020080
+12         D_MUT    0.018870
+16  specParalogs    0.018675
+2    Acetylmimic    0.015121
+6            sec    0.014596
+3         IUPRED    0.013686
+10     ub_0_pfam    0.013372
+9            p_0    0.010145
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.577
+########################
+MAP2K3/A84T/test 0.541 A
+PIM1/S97N/test 0.472 A
+########################
+CDK5/F82I/test 0.263 TBD
+MAP2K1/V211D/test 0.361 TBD
+########################
+CHEK2/K373E/test 0.524 Inconclusive
+MAP2K3/R94L/test 0.506 Inconclusive
+MAP2K3/R96W/test 0.45 Inconclusive
+MAP2K3/L215W/test 0.373 Inconclusive
+MAP2K3/T222M/test 0.471 Inconclusive
+PIM1/Q127E/test 0.642 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.89674042]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 3, 'n_estimators': 50}
+[[0.59194228 0.40805772]
+ [0.34733399 0.65266601]
+ [0.79748153 0.20251847]
+ ...
+ [0.84111348 0.15888652]
+ [0.86519817 0.13480183]
+ [0.85933277 0.14066723]]
+########################
+hmmScoreWT 0.13163407280491743
+hmmScoreMUT 0.0868161970889674
+Phosphomimic 0.01763097710814823
+Acetylmimic 0.03863813594483783
+IUPRED 0.04030789061028589
+ncontacts 0.07623265919352307
+nresidues 0.0389906291499528
+phi_psi 0.01561339399959326
+sec 0.019783570395367846
+burr 0.03914223898306019
+acc 0.011987520180808994
+ChargesWT 0.0103202128869955
+ChargesMUT 0.042633580461352176
+K_WT 0.011199693298870507
+A_MUT 0.039486677904973344
+E_MUT 0.018478812846011876
+allHomologs 0.03673070818972087
+exclParalogs 0.03871437772639099
+specParalogs 0.047094705000110856
+orthologs 0.037003019171863126
+bpso 0.0457881345844387
+bpsh 0.0632266388080093
+         Feature  Importance
+0     hmmScoreWT    0.131634
+1    hmmScoreMUT    0.086816
+5      ncontacts    0.076233
+21          bpsh    0.063227
+18  specParalogs    0.047095
+20          bpso    0.045788
+12    ChargesMUT    0.042634
+4         IUPRED    0.040308
+14         A_MUT    0.039487
+9           burr    0.039142
+6      nresidues    0.038991
+17  exclParalogs    0.038714
+3    Acetylmimic    0.038638
+19     orthologs    0.037003
+16   allHomologs    0.036731
+8            sec    0.019784
+15         E_MUT    0.018479
+2   Phosphomimic    0.017631
+7        phi_psi    0.015613
+10           acc    0.011988
+13          K_WT    0.011200
+11     ChargesWT    0.010320
+########################
+activatingresistance results ( 14 )
+REC: 0.786
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.469 A
+PIM1/S97N/test 0.631 A
+########################
+CDK5/F82I/test 0.451 TBD
+MAP2K1/V211D/test 0.423 TBD
+########################
+CHEK2/K373E/test 0.545 Inconclusive
+MAP2K3/R94L/test 0.508 Inconclusive
+MAP2K3/R96W/test 0.368 Inconclusive
+MAP2K3/L215W/test 0.334 Inconclusive
+MAP2K3/T222M/test 0.529 Inconclusive
+PIM1/Q127E/test 0.598 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.9020021]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 3, 'n_estimators': 100}
+[[0.61261648 0.38738352]
+ [0.35427726 0.64572274]
+ [0.78316539 0.21683461]
+ ...
+ [0.82828011 0.17171989]
+ [0.85372072 0.14627928]
+ [0.85522078 0.14477922]]
+########################
+hmmScoreWT 0.12240461051175873
+hmmScoreMUT 0.08456920919477608
+Phosphomimic 0.02428949318648801
+Acetylmimic 0.03733929775782935
+IUPRED 0.0363707833000553
+ncontacts 0.04736862661768034
+nresidues 0.039437692468482034
+phi_psi 0.01938420935169498
+sec 0.029362161018068916
+burr 0.04214202839647741
+acc 0.012631907133443282
+ChargesWT 0.012066958340297463
+ChargesMUT 0.04503592561278186
+p_0_pfam 0.0118440992325901
+K_WT 0.011246954617984122
+A_MUT 0.045035588973432746
+E_MUT 0.012942374691123313
+allHomologs 0.0432041170430701
+exclParalogs 0.052796788453150244
+specParalogs 0.03690668603893827
+orthologs 0.041420434834084356
+bpso 0.04770878447146201
+bpsh 0.05942399278853261
+         Feature  Importance
+0     hmmScoreWT    0.122405
+1    hmmScoreMUT    0.084569
+22          bpsh    0.059424
+18  exclParalogs    0.052797
+21          bpso    0.047709
+5      ncontacts    0.047369
+12    ChargesMUT    0.045036
+15         A_MUT    0.045036
+17   allHomologs    0.043204
+9           burr    0.042142
+20     orthologs    0.041420
+6      nresidues    0.039438
+3    Acetylmimic    0.037339
+19  specParalogs    0.036907
+4         IUPRED    0.036371
+8            sec    0.029362
+2   Phosphomimic    0.024289
+7        phi_psi    0.019384
+16         E_MUT    0.012942
+10           acc    0.012632
+11     ChargesWT    0.012067
+13      p_0_pfam    0.011844
+14          K_WT    0.011247
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.453 A
+PIM1/S97N/test 0.62 A
+########################
+CDK5/F82I/test 0.49 TBD
+MAP2K1/V211D/test 0.455 TBD
+########################
+CHEK2/K373E/test 0.558 Inconclusive
+MAP2K3/R94L/test 0.519 Inconclusive
+MAP2K3/R96W/test 0.372 Inconclusive
+MAP2K3/L215W/test 0.39 Inconclusive
+MAP2K3/T222M/test 0.534 Inconclusive
+PIM1/Q127E/test 0.588 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87869892]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'n_estimators': 10}
+[[0.65885932 0.34114068]
+ [0.51552282 0.48447718]
+ [0.69533296 0.30466704]
+ ...
+ [0.85150621 0.14849379]
+ [0.78119327 0.21880673]
+ [0.80860551 0.19139449]]
+########################
+hmmScoreWT 0.03517594587414421
+hmmScoreMUT 0.1436754169066431
+Acetylmimic 0.018886183522041418
+IUPRED 0.028912089126142564
+ncontacts 0.11504724496448893
+nresidues 0.021331859069710166
+phi_psi 0.01850781682596194
+sec 0.014674470977356881
+acc 0.028972707257515624
+ChargesMUT 0.049985657373866024
+ub_0_pfam 0.015122711680206624
+ub_1_pfam 0.011802274237258307
+V_WT 0.019316765567433315
+A_MUT 0.023342316422260447
+D_MUT 0.015429749483451544
+E_MUT 0.043401470425395286
+F_MUT 0.010950689952955301
+S_MUT 0.029976446591603235
+allHomologs 0.02713590196908166
+exclParalogs 0.07231451413847603
+specParalogs 0.01690501761908376
+orthologs 0.01258050900136799
+bpso 0.07871530525071473
+bpsh 0.06038291772484503
+         Feature  Importance
+1    hmmScoreMUT    0.143675
+4      ncontacts    0.115047
+22          bpso    0.078715
+19  exclParalogs    0.072315
+23          bpsh    0.060383
+9     ChargesMUT    0.049986
+15         E_MUT    0.043401
+0     hmmScoreWT    0.035176
+17         S_MUT    0.029976
+8            acc    0.028973
+3         IUPRED    0.028912
+18   allHomologs    0.027136
+13         A_MUT    0.023342
+5      nresidues    0.021332
+12          V_WT    0.019317
+2    Acetylmimic    0.018886
+6        phi_psi    0.018508
+20  specParalogs    0.016905
+14         D_MUT    0.015430
+10     ub_0_pfam    0.015123
+7            sec    0.014674
+21     orthologs    0.012581
+11     ub_1_pfam    0.011802
+16         F_MUT    0.010951
+########################
+activatingresistance results ( 14 )
+REC: 0.714
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.437
+########################
+MAP2K3/A84T/test 0.534 A
+PIM1/S97N/test 0.579 A
+########################
+CDK5/F82I/test 0.214 TBD
+MAP2K1/V211D/test 0.28 TBD
+########################
+CHEK2/K373E/test 0.581 Inconclusive
+MAP2K3/R94L/test 0.523 Inconclusive
+MAP2K3/R96W/test 0.464 Inconclusive
+MAP2K3/L215W/test 0.244 Inconclusive
+MAP2K3/T222M/test 0.431 Inconclusive
+PIM1/Q127E/test 0.586 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.90046599]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'n_estimators': 50}
+[[0.65390511 0.34609489]
+ [0.37837041 0.62162959]
+ [0.81597497 0.18402503]
+ ...
+ [0.86357005 0.13642995]
+ [0.88568413 0.11431587]
+ [0.81297618 0.18702382]]
+########################
+hmmScoreWT 0.10803523459639959
+hmmScoreMUT 0.09219626954674214
+Phosphomimic 0.01661383300584212
+Acetylmimic 0.040387529116474315
+IUPRED 0.03982683252611906
+ncontacts 0.062180532110413606
+nresidues 0.02225193174607679
+phi_psi 0.014803538351907352
+sec 0.023326745699212444
+burr 0.03261443842610804
+acc 0.019181090505331767
+ChargesMUT 0.036942537315382995
+p_0 0.01149410218950668
+A_MUT 0.01892999376845129
+E_MUT 0.02028424715558572
+S_MUT 0.010633952645750943
+allHomologs 0.033903733573772424
+exclParalogs 0.04529393505317447
+specParalogs 0.049305315041936124
+orthologs 0.038660353177873655
+bpso 0.04689209951512493
+bpsh 0.07242143503811149
+         Feature  Importance
+0     hmmScoreWT    0.108035
+1    hmmScoreMUT    0.092196
+21          bpsh    0.072421
+5      ncontacts    0.062181
+18  specParalogs    0.049305
+20          bpso    0.046892
+17  exclParalogs    0.045294
+3    Acetylmimic    0.040388
+4         IUPRED    0.039827
+19     orthologs    0.038660
+11    ChargesMUT    0.036943
+16   allHomologs    0.033904
+9           burr    0.032614
+8            sec    0.023327
+6      nresidues    0.022252
+14         E_MUT    0.020284
+10           acc    0.019181
+13         A_MUT    0.018930
+2   Phosphomimic    0.016614
+7        phi_psi    0.014804
+12           p_0    0.011494
+15         S_MUT    0.010634
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.676
+########################
+MAP2K3/A84T/test 0.422 A
+PIM1/S97N/test 0.618 A
+########################
+CDK5/F82I/test 0.407 TBD
+MAP2K1/V211D/test 0.348 TBD
+########################
+CHEK2/K373E/test 0.635 Inconclusive
+MAP2K3/R94L/test 0.527 Inconclusive
+MAP2K3/R96W/test 0.38 Inconclusive
+MAP2K3/L215W/test 0.351 Inconclusive
+MAP2K3/T222M/test 0.505 Inconclusive
+PIM1/Q127E/test 0.604 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.90017202]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'n_estimators': 100}
+[[0.67093973 0.32906027]
+ [0.3788842  0.6211158 ]
+ [0.81094242 0.18905758]
+ ...
+ [0.85423761 0.14576239]
+ [0.88956861 0.11043139]
+ [0.85242115 0.14757885]]
+########################
+hmmScoreWT 0.10385872827674049
+hmmScoreMUT 0.09251323736090364
+Phosphomimic 0.025758491032765816
+Acetylmimic 0.036512051302889065
+IUPRED 0.036474562877792716
+ncontacts 0.03920054446272716
+nresidues 0.029366933368363705
+phi_psi 0.018843200438232503
+sec 0.027500534589044754
+burr 0.040444760765626364
+acc 0.021178794967965934
+ChargesWT 0.01155588611889801
+ChargesMUT 0.034756970677875025
+p_0_pfam 0.012662053883177317
+A_MUT 0.03320666511514424
+E_MUT 0.014440374765111093
+allHomologs 0.0463869766954485
+exclParalogs 0.048984713318912326
+specParalogs 0.03929402325888523
+orthologs 0.04017208422629217
+bpso 0.04951195896684244
+bpsh 0.06128302387634996
+         Feature  Importance
+0     hmmScoreWT    0.103859
+1    hmmScoreMUT    0.092513
+21          bpsh    0.061283
+20          bpso    0.049512
+17  exclParalogs    0.048985
+16   allHomologs    0.046387
+9           burr    0.040445
+19     orthologs    0.040172
+18  specParalogs    0.039294
+5      ncontacts    0.039201
+3    Acetylmimic    0.036512
+4         IUPRED    0.036475
+12    ChargesMUT    0.034757
+14         A_MUT    0.033207
+6      nresidues    0.029367
+8            sec    0.027501
+2   Phosphomimic    0.025758
+10           acc    0.021179
+7        phi_psi    0.018843
+15         E_MUT    0.014440
+13      p_0_pfam    0.012662
+11     ChargesWT    0.011556
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.419 A
+PIM1/S97N/test 0.621 A
+########################
+CDK5/F82I/test 0.46 TBD
+MAP2K1/V211D/test 0.387 TBD
+########################
+CHEK2/K373E/test 0.585 Inconclusive
+MAP2K3/R94L/test 0.542 Inconclusive
+MAP2K3/R96W/test 0.387 Inconclusive
+MAP2K3/L215W/test 0.383 Inconclusive
+MAP2K3/T222M/test 0.5 Inconclusive
+PIM1/Q127E/test 0.561 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87571437]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'n_estimators': 10}
+[[0.65628013 0.34371987]
+ [0.37257343 0.62742657]
+ [0.70748907 0.29251093]
+ ...
+ [0.87980557 0.12019443]
+ [0.865651   0.134349  ]
+ [0.83040294 0.16959706]]
+########################
+hmmScoreWT 0.06048193646640358
+hmmScoreMUT 0.14905829417456024
+Acetylmimic 0.01873126318612723
+IUPRED 0.014189300765535453
+ncontacts 0.08084923873481194
+nresidues 0.04933260293279226
+phi_psi 0.015962453661356422
+sec 0.011438439239621925
+burr 0.012836995284895122
+acc 0.018599927183689708
+ChargesMUT 0.06358498697091555
+ub_0_pfam 0.014951775590661192
+ub_1_pfam 0.011807332083416652
+A_MUT 0.058217864590660515
+D_MUT 0.017471396584160193
+E_MUT 0.04110424594877115
+S_MUT 0.015022584132678504
+allHomologs 0.03334493932217843
+exclParalogs 0.06762653581469026
+specParalogs 0.03119498859567152
+orthologs 0.010271293093118045
+bpso 0.07360752348922461
+bpsh 0.05848565531827301
+         Feature  Importance
+1    hmmScoreMUT    0.149058
+4      ncontacts    0.080849
+21          bpso    0.073608
+18  exclParalogs    0.067627
+10    ChargesMUT    0.063585
+0     hmmScoreWT    0.060482
+22          bpsh    0.058486
+13         A_MUT    0.058218
+5      nresidues    0.049333
+15         E_MUT    0.041104
+17   allHomologs    0.033345
+19  specParalogs    0.031195
+2    Acetylmimic    0.018731
+9            acc    0.018600
+14         D_MUT    0.017471
+6        phi_psi    0.015962
+16         S_MUT    0.015023
+11     ub_0_pfam    0.014952
+3         IUPRED    0.014189
+8           burr    0.012837
+12     ub_1_pfam    0.011807
+7            sec    0.011438
+20     orthologs    0.010271
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.662
+########################
+MAP2K3/A84T/test 0.54 A
+PIM1/S97N/test 0.548 A
+########################
+CDK5/F82I/test 0.237 TBD
+MAP2K1/V211D/test 0.319 TBD
+########################
+CHEK2/K373E/test 0.583 Inconclusive
+MAP2K3/R94L/test 0.554 Inconclusive
+MAP2K3/R96W/test 0.442 Inconclusive
+MAP2K3/L215W/test 0.304 Inconclusive
+MAP2K3/T222M/test 0.437 Inconclusive
+PIM1/Q127E/test 0.669 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.89858245]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'n_estimators': 50}
+[[0.66183341 0.33816659]
+ [0.3203529  0.6796471 ]
+ [0.80633411 0.19366589]
+ ...
+ [0.83030953 0.16969047]
+ [0.89800311 0.10199689]
+ [0.82520335 0.17479665]]
+########################
+hmmScoreWT 0.12220423024752526
+hmmScoreMUT 0.09050252641718196
+Phosphomimic 0.01676146572090201
+Acetylmimic 0.046289647913630896
+IUPRED 0.038012153621964466
+ncontacts 0.057763773951382436
+nresidues 0.031584002356378975
+phi_psi 0.014145955597085624
+sec 0.022484908892390236
+burr 0.03344067193675251
+acc 0.013123617028772391
+ChargesWT 0.01131907128606077
+ChargesMUT 0.03697633734401366
+p_0_pfam 0.011563813529251156
+A_MUT 0.0339098422902792
+E_MUT 0.016721092301154185
+allHomologs 0.037025885966972434
+exclParalogs 0.0404904172264005
+specParalogs 0.058438879315097204
+orthologs 0.03256279446197803
+bpso 0.04985732259482743
+bpsh 0.07824312897365443
+         Feature  Importance
+0     hmmScoreWT    0.122204
+1    hmmScoreMUT    0.090503
+21          bpsh    0.078243
+18  specParalogs    0.058439
+5      ncontacts    0.057764
+20          bpso    0.049857
+3    Acetylmimic    0.046290
+17  exclParalogs    0.040490
+4         IUPRED    0.038012
+16   allHomologs    0.037026
+12    ChargesMUT    0.036976
+14         A_MUT    0.033910
+9           burr    0.033441
+19     orthologs    0.032563
+6      nresidues    0.031584
+8            sec    0.022485
+2   Phosphomimic    0.016761
+15         E_MUT    0.016721
+7        phi_psi    0.014146
+10           acc    0.013124
+13      p_0_pfam    0.011564
+11     ChargesWT    0.011319
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.718
+########################
+MAP2K3/A84T/test 0.439 A
+PIM1/S97N/test 0.632 A
+########################
+CDK5/F82I/test 0.427 TBD
+MAP2K1/V211D/test 0.405 TBD
+########################
+CHEK2/K373E/test 0.619 Inconclusive
+MAP2K3/R94L/test 0.555 Inconclusive
+MAP2K3/R96W/test 0.366 Inconclusive
+MAP2K3/L215W/test 0.337 Inconclusive
+MAP2K3/T222M/test 0.511 Inconclusive
+PIM1/Q127E/test 0.617 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.8979674]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'n_estimators': 100}
+[[0.67641781 0.32358219]
+ [0.33546383 0.66453617]
+ [0.79091298 0.20908702]
+ ...
+ [0.82787469 0.17212531]
+ [0.87593303 0.12406697]
+ [0.84921564 0.15078436]]
+########################
+hmmScoreWT 0.11766276392642337
+hmmScoreMUT 0.08657684678830926
+Phosphomimic 0.024313534731061105
+Acetylmimic 0.03814347346018663
+IUPRED 0.03780283218897445
+ncontacts 0.035832893832812455
+nresidues 0.034869127527126224
+phi_psi 0.017733581132130118
+sec 0.026101448226792223
+burr 0.03861969345564794
+acc 0.013257547987371195
+ChargesWT 0.014491683602530668
+ChargesMUT 0.034826677299141615
+p_0_pfam 0.016682574241558452
+A_MUT 0.041690162945333634
+E_MUT 0.012031286956398088
+allHomologs 0.051620154693009984
+exclParalogs 0.05200893789971876
+specParalogs 0.04486570920139093
+orthologs 0.04015484956794337
+bpso 0.04937507650023207
+bpsh 0.06350174013391974
+         Feature  Importance
+0     hmmScoreWT    0.117663
+1    hmmScoreMUT    0.086577
+21          bpsh    0.063502
+17  exclParalogs    0.052009
+16   allHomologs    0.051620
+20          bpso    0.049375
+18  specParalogs    0.044866
+14         A_MUT    0.041690
+19     orthologs    0.040155
+9           burr    0.038620
+3    Acetylmimic    0.038143
+4         IUPRED    0.037803
+5      ncontacts    0.035833
+6      nresidues    0.034869
+12    ChargesMUT    0.034827
+8            sec    0.026101
+2   Phosphomimic    0.024314
+7        phi_psi    0.017734
+13      p_0_pfam    0.016683
+11     ChargesWT    0.014492
+10           acc    0.013258
+15         E_MUT    0.012031
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.789
+########################
+MAP2K3/A84T/test 0.437 A
+PIM1/S97N/test 0.632 A
+########################
+CDK5/F82I/test 0.477 TBD
+MAP2K1/V211D/test 0.442 TBD
+########################
+CHEK2/K373E/test 0.592 Inconclusive
+MAP2K3/R94L/test 0.543 Inconclusive
+MAP2K3/R96W/test 0.372 Inconclusive
+MAP2K3/L215W/test 0.387 Inconclusive
+MAP2K3/T222M/test 0.523 Inconclusive
+PIM1/Q127E/test 0.586 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87182194]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 4, 'n_estimators': 10}
+[[0.62207012 0.37792988]
+ [0.38011579 0.61988421]
+ [0.60926404 0.39073596]
+ ...
+ [0.91100567 0.08899433]
+ [0.78414141 0.21585859]
+ [0.85630574 0.14369426]]
+########################
+hmmScoreWT 0.03719871155548529
+hmmScoreMUT 0.14648120525539526
+Acetylmimic 0.015121232698864751
+IUPRED 0.013686157668521692
+ncontacts 0.1026887146389873
+nresidues 0.059360620393693886
+sec 0.014596390231359207
+acc 0.020080383347246097
+ChargesMUT 0.065168190430794
+p_0 0.010144848441114847
+ub_0_pfam 0.01337200566906398
+A_MUT 0.07595574537763852
+D_MUT 0.018869510480393453
+E_MUT 0.052376180754804366
+allHomologs 0.03776567947127904
+exclParalogs 0.056900747479514666
+specParalogs 0.018674860988078884
+orthologs 0.02481007877096436
+bpso 0.07759552554452201
+bpsh 0.05828957101747945
+         Feature  Importance
+1    hmmScoreMUT    0.146481
+4      ncontacts    0.102689
+18          bpso    0.077596
+11         A_MUT    0.075956
+8     ChargesMUT    0.065168
+5      nresidues    0.059361
+19          bpsh    0.058290
+15  exclParalogs    0.056901
+13         E_MUT    0.052376
+14   allHomologs    0.037766
+0     hmmScoreWT    0.037199
+17     orthologs    0.024810
+7            acc    0.020080
+12         D_MUT    0.018870
+16  specParalogs    0.018675
+2    Acetylmimic    0.015121
+6            sec    0.014596
+3         IUPRED    0.013686
+10     ub_0_pfam    0.013372
+9            p_0    0.010145
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.577
+########################
+MAP2K3/A84T/test 0.541 A
+PIM1/S97N/test 0.472 A
+########################
+CDK5/F82I/test 0.263 TBD
+MAP2K1/V211D/test 0.361 TBD
+########################
+CHEK2/K373E/test 0.524 Inconclusive
+MAP2K3/R94L/test 0.506 Inconclusive
+MAP2K3/R96W/test 0.45 Inconclusive
+MAP2K3/L215W/test 0.373 Inconclusive
+MAP2K3/T222M/test 0.471 Inconclusive
+PIM1/Q127E/test 0.642 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.89553821]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 4, 'n_estimators': 50}
+[[0.59194228 0.40805772]
+ [0.34733399 0.65266601]
+ [0.79748153 0.20251847]
+ ...
+ [0.84111348 0.15888652]
+ [0.86519817 0.13480183]
+ [0.85933277 0.14066723]]
+########################
+hmmScoreWT 0.13163407280491743
+hmmScoreMUT 0.0868161970889674
+Phosphomimic 0.01763097710814823
+Acetylmimic 0.03863813594483783
+IUPRED 0.04030789061028589
+ncontacts 0.07623265919352307
+nresidues 0.0389906291499528
+phi_psi 0.01561339399959326
+sec 0.019783570395367846
+burr 0.03914223898306019
+acc 0.011987520180808994
+ChargesWT 0.0103202128869955
+ChargesMUT 0.042633580461352176
+K_WT 0.011199693298870507
+A_MUT 0.039486677904973344
+E_MUT 0.018478812846011876
+allHomologs 0.03673070818972087
+exclParalogs 0.03871437772639099
+specParalogs 0.047094705000110856
+orthologs 0.037003019171863126
+bpso 0.0457881345844387
+bpsh 0.0632266388080093
+         Feature  Importance
+0     hmmScoreWT    0.131634
+1    hmmScoreMUT    0.086816
+5      ncontacts    0.076233
+21          bpsh    0.063227
+18  specParalogs    0.047095
+20          bpso    0.045788
+12    ChargesMUT    0.042634
+4         IUPRED    0.040308
+14         A_MUT    0.039487
+9           burr    0.039142
+6      nresidues    0.038991
+17  exclParalogs    0.038714
+3    Acetylmimic    0.038638
+19     orthologs    0.037003
+16   allHomologs    0.036731
+8            sec    0.019784
+15         E_MUT    0.018479
+2   Phosphomimic    0.017631
+7        phi_psi    0.015613
+10           acc    0.011988
+13          K_WT    0.011200
+11     ChargesWT    0.010320
+########################
+activatingresistance results ( 14 )
+REC: 0.786
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.469 A
+PIM1/S97N/test 0.631 A
+########################
+CDK5/F82I/test 0.451 TBD
+MAP2K1/V211D/test 0.423 TBD
+########################
+CHEK2/K373E/test 0.545 Inconclusive
+MAP2K3/R94L/test 0.508 Inconclusive
+MAP2K3/R96W/test 0.368 Inconclusive
+MAP2K3/L215W/test 0.334 Inconclusive
+MAP2K3/T222M/test 0.529 Inconclusive
+PIM1/Q127E/test 0.598 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.90109172]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 4, 'n_estimators': 100}
+[[0.61261648 0.38738352]
+ [0.35427726 0.64572274]
+ [0.78316539 0.21683461]
+ ...
+ [0.82828011 0.17171989]
+ [0.85372072 0.14627928]
+ [0.85522078 0.14477922]]
+########################
+hmmScoreWT 0.12240461051175873
+hmmScoreMUT 0.08456920919477608
+Phosphomimic 0.02428949318648801
+Acetylmimic 0.03733929775782935
+IUPRED 0.0363707833000553
+ncontacts 0.04736862661768034
+nresidues 0.039437692468482034
+phi_psi 0.01938420935169498
+sec 0.029362161018068916
+burr 0.04214202839647741
+acc 0.012631907133443282
+ChargesWT 0.012066958340297463
+ChargesMUT 0.04503592561278186
+p_0_pfam 0.0118440992325901
+K_WT 0.011246954617984122
+A_MUT 0.045035588973432746
+E_MUT 0.012942374691123313
+allHomologs 0.0432041170430701
+exclParalogs 0.052796788453150244
+specParalogs 0.03690668603893827
+orthologs 0.041420434834084356
+bpso 0.04770878447146201
+bpsh 0.05942399278853261
+         Feature  Importance
+0     hmmScoreWT    0.122405
+1    hmmScoreMUT    0.084569
+22          bpsh    0.059424
+18  exclParalogs    0.052797
+21          bpso    0.047709
+5      ncontacts    0.047369
+12    ChargesMUT    0.045036
+15         A_MUT    0.045036
+17   allHomologs    0.043204
+9           burr    0.042142
+20     orthologs    0.041420
+6      nresidues    0.039438
+3    Acetylmimic    0.037339
+19  specParalogs    0.036907
+4         IUPRED    0.036371
+8            sec    0.029362
+2   Phosphomimic    0.024289
+7        phi_psi    0.019384
+16         E_MUT    0.012942
+10           acc    0.012632
+11     ChargesWT    0.012067
+13      p_0_pfam    0.011844
+14          K_WT    0.011247
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.453 A
+PIM1/S97N/test 0.62 A
+########################
+CDK5/F82I/test 0.49 TBD
+MAP2K1/V211D/test 0.455 TBD
+########################
+CHEK2/K373E/test 0.558 Inconclusive
+MAP2K3/R94L/test 0.519 Inconclusive
+MAP2K3/R96W/test 0.372 Inconclusive
+MAP2K3/L215W/test 0.39 Inconclusive
+MAP2K3/T222M/test 0.534 Inconclusive
+PIM1/Q127E/test 0.588 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87398591]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 10}
+[[0.65885932 0.34114068]
+ [0.51552282 0.48447718]
+ [0.69533296 0.30466704]
+ ...
+ [0.85150621 0.14849379]
+ [0.78119327 0.21880673]
+ [0.80860551 0.19139449]]
+########################
+hmmScoreWT 0.03517594587414421
+hmmScoreMUT 0.1436754169066431
+Acetylmimic 0.018886183522041418
+IUPRED 0.028912089126142564
+ncontacts 0.11504724496448893
+nresidues 0.021331859069710166
+phi_psi 0.01850781682596194
+sec 0.014674470977356881
+acc 0.028972707257515624
+ChargesMUT 0.049985657373866024
+ub_0_pfam 0.015122711680206624
+ub_1_pfam 0.011802274237258307
+V_WT 0.019316765567433315
+A_MUT 0.023342316422260447
+D_MUT 0.015429749483451544
+E_MUT 0.043401470425395286
+F_MUT 0.010950689952955301
+S_MUT 0.029976446591603235
+allHomologs 0.02713590196908166
+exclParalogs 0.07231451413847603
+specParalogs 0.01690501761908376
+orthologs 0.01258050900136799
+bpso 0.07871530525071473
+bpsh 0.06038291772484503
+         Feature  Importance
+1    hmmScoreMUT    0.143675
+4      ncontacts    0.115047
+22          bpso    0.078715
+19  exclParalogs    0.072315
+23          bpsh    0.060383
+9     ChargesMUT    0.049986
+15         E_MUT    0.043401
+0     hmmScoreWT    0.035176
+17         S_MUT    0.029976
+8            acc    0.028973
+3         IUPRED    0.028912
+18   allHomologs    0.027136
+13         A_MUT    0.023342
+5      nresidues    0.021332
+12          V_WT    0.019317
+2    Acetylmimic    0.018886
+6        phi_psi    0.018508
+20  specParalogs    0.016905
+14         D_MUT    0.015430
+10     ub_0_pfam    0.015123
+7            sec    0.014674
+21     orthologs    0.012581
+11     ub_1_pfam    0.011802
+16         F_MUT    0.010951
+########################
+activatingresistance results ( 14 )
+REC: 0.714
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.437
+########################
+MAP2K3/A84T/test 0.534 A
+PIM1/S97N/test 0.579 A
+########################
+CDK5/F82I/test 0.214 TBD
+MAP2K1/V211D/test 0.28 TBD
+########################
+CHEK2/K373E/test 0.581 Inconclusive
+MAP2K3/R94L/test 0.523 Inconclusive
+MAP2K3/R96W/test 0.464 Inconclusive
+MAP2K3/L215W/test 0.244 Inconclusive
+MAP2K3/T222M/test 0.431 Inconclusive
+PIM1/Q127E/test 0.586 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.89835901]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 50}
+[[0.65390511 0.34609489]
+ [0.37837041 0.62162959]
+ [0.81597497 0.18402503]
+ ...
+ [0.86357005 0.13642995]
+ [0.88568413 0.11431587]
+ [0.81297618 0.18702382]]
+########################
+hmmScoreWT 0.10803523459639959
+hmmScoreMUT 0.09219626954674214
+Phosphomimic 0.01661383300584212
+Acetylmimic 0.040387529116474315
+IUPRED 0.03982683252611906
+ncontacts 0.062180532110413606
+nresidues 0.02225193174607679
+phi_psi 0.014803538351907352
+sec 0.023326745699212444
+burr 0.03261443842610804
+acc 0.019181090505331767
+ChargesMUT 0.036942537315382995
+p_0 0.01149410218950668
+A_MUT 0.01892999376845129
+E_MUT 0.02028424715558572
+S_MUT 0.010633952645750943
+allHomologs 0.033903733573772424
+exclParalogs 0.04529393505317447
+specParalogs 0.049305315041936124
+orthologs 0.038660353177873655
+bpso 0.04689209951512493
+bpsh 0.07242143503811149
+         Feature  Importance
+0     hmmScoreWT    0.108035
+1    hmmScoreMUT    0.092196
+21          bpsh    0.072421
+5      ncontacts    0.062181
+18  specParalogs    0.049305
+20          bpso    0.046892
+17  exclParalogs    0.045294
+3    Acetylmimic    0.040388
+4         IUPRED    0.039827
+19     orthologs    0.038660
+11    ChargesMUT    0.036943
+16   allHomologs    0.033904
+9           burr    0.032614
+8            sec    0.023327
+6      nresidues    0.022252
+14         E_MUT    0.020284
+10           acc    0.019181
+13         A_MUT    0.018930
+2   Phosphomimic    0.016614
+7        phi_psi    0.014804
+12           p_0    0.011494
+15         S_MUT    0.010634
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.676
+########################
+MAP2K3/A84T/test 0.422 A
+PIM1/S97N/test 0.618 A
+########################
+CDK5/F82I/test 0.407 TBD
+MAP2K1/V211D/test 0.348 TBD
+########################
+CHEK2/K373E/test 0.635 Inconclusive
+MAP2K3/R94L/test 0.527 Inconclusive
+MAP2K3/R96W/test 0.38 Inconclusive
+MAP2K3/L215W/test 0.351 Inconclusive
+MAP2K3/T222M/test 0.505 Inconclusive
+PIM1/Q127E/test 0.604 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.8993852]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 100}
+[[0.67093973 0.32906027]
+ [0.3788842  0.6211158 ]
+ [0.81094242 0.18905758]
+ ...
+ [0.85423761 0.14576239]
+ [0.88956861 0.11043139]
+ [0.85242115 0.14757885]]
+########################
+hmmScoreWT 0.10385872827674049
+hmmScoreMUT 0.09251323736090364
+Phosphomimic 0.025758491032765816
+Acetylmimic 0.036512051302889065
+IUPRED 0.036474562877792716
+ncontacts 0.03920054446272716
+nresidues 0.029366933368363705
+phi_psi 0.018843200438232503
+sec 0.027500534589044754
+burr 0.040444760765626364
+acc 0.021178794967965934
+ChargesWT 0.01155588611889801
+ChargesMUT 0.034756970677875025
+p_0_pfam 0.012662053883177317
+A_MUT 0.03320666511514424
+E_MUT 0.014440374765111093
+allHomologs 0.0463869766954485
+exclParalogs 0.048984713318912326
+specParalogs 0.03929402325888523
+orthologs 0.04017208422629217
+bpso 0.04951195896684244
+bpsh 0.06128302387634996
+         Feature  Importance
+0     hmmScoreWT    0.103859
+1    hmmScoreMUT    0.092513
+21          bpsh    0.061283
+20          bpso    0.049512
+17  exclParalogs    0.048985
+16   allHomologs    0.046387
+9           burr    0.040445
+19     orthologs    0.040172
+18  specParalogs    0.039294
+5      ncontacts    0.039201
+3    Acetylmimic    0.036512
+4         IUPRED    0.036475
+12    ChargesMUT    0.034757
+14         A_MUT    0.033207
+6      nresidues    0.029367
+8            sec    0.027501
+2   Phosphomimic    0.025758
+10           acc    0.021179
+7        phi_psi    0.018843
+15         E_MUT    0.014440
+13      p_0_pfam    0.012662
+11     ChargesWT    0.011556
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.419 A
+PIM1/S97N/test 0.621 A
+########################
+CDK5/F82I/test 0.46 TBD
+MAP2K1/V211D/test 0.387 TBD
+########################
+CHEK2/K373E/test 0.585 Inconclusive
+MAP2K3/R94L/test 0.542 Inconclusive
+MAP2K3/R96W/test 0.387 Inconclusive
+MAP2K3/L215W/test 0.383 Inconclusive
+MAP2K3/T222M/test 0.5 Inconclusive
+PIM1/Q127E/test 0.561 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.8769945]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 10}
+[[0.65628013 0.34371987]
+ [0.37257343 0.62742657]
+ [0.70748907 0.29251093]
+ ...
+ [0.87980557 0.12019443]
+ [0.865651   0.134349  ]
+ [0.83040294 0.16959706]]
+########################
+hmmScoreWT 0.06048193646640358
+hmmScoreMUT 0.14905829417456024
+Acetylmimic 0.01873126318612723
+IUPRED 0.014189300765535453
+ncontacts 0.08084923873481194
+nresidues 0.04933260293279226
+phi_psi 0.015962453661356422
+sec 0.011438439239621925
+burr 0.012836995284895122
+acc 0.018599927183689708
+ChargesMUT 0.06358498697091555
+ub_0_pfam 0.014951775590661192
+ub_1_pfam 0.011807332083416652
+A_MUT 0.058217864590660515
+D_MUT 0.017471396584160193
+E_MUT 0.04110424594877115
+S_MUT 0.015022584132678504
+allHomologs 0.03334493932217843
+exclParalogs 0.06762653581469026
+specParalogs 0.03119498859567152
+orthologs 0.010271293093118045
+bpso 0.07360752348922461
+bpsh 0.05848565531827301
+         Feature  Importance
+1    hmmScoreMUT    0.149058
+4      ncontacts    0.080849
+21          bpso    0.073608
+18  exclParalogs    0.067627
+10    ChargesMUT    0.063585
+0     hmmScoreWT    0.060482
+22          bpsh    0.058486
+13         A_MUT    0.058218
+5      nresidues    0.049333
+15         E_MUT    0.041104
+17   allHomologs    0.033345
+19  specParalogs    0.031195
+2    Acetylmimic    0.018731
+9            acc    0.018600
+14         D_MUT    0.017471
+6        phi_psi    0.015962
+16         S_MUT    0.015023
+11     ub_0_pfam    0.014952
+3         IUPRED    0.014189
+8           burr    0.012837
+12     ub_1_pfam    0.011807
+7            sec    0.011438
+20     orthologs    0.010271
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.662
+########################
+MAP2K3/A84T/test 0.54 A
+PIM1/S97N/test 0.548 A
+########################
+CDK5/F82I/test 0.237 TBD
+MAP2K1/V211D/test 0.319 TBD
+########################
+CHEK2/K373E/test 0.583 Inconclusive
+MAP2K3/R94L/test 0.554 Inconclusive
+MAP2K3/R96W/test 0.442 Inconclusive
+MAP2K3/L215W/test 0.304 Inconclusive
+MAP2K3/T222M/test 0.437 Inconclusive
+PIM1/Q127E/test 0.669 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.89807035]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 50}
+[[0.66183341 0.33816659]
+ [0.3203529  0.6796471 ]
+ [0.80633411 0.19366589]
+ ...
+ [0.83030953 0.16969047]
+ [0.89800311 0.10199689]
+ [0.82520335 0.17479665]]
+########################
+hmmScoreWT 0.12220423024752526
+hmmScoreMUT 0.09050252641718196
+Phosphomimic 0.01676146572090201
+Acetylmimic 0.046289647913630896
+IUPRED 0.038012153621964466
+ncontacts 0.057763773951382436
+nresidues 0.031584002356378975
+phi_psi 0.014145955597085624
+sec 0.022484908892390236
+burr 0.03344067193675251
+acc 0.013123617028772391
+ChargesWT 0.01131907128606077
+ChargesMUT 0.03697633734401366
+p_0_pfam 0.011563813529251156
+A_MUT 0.0339098422902792
+E_MUT 0.016721092301154185
+allHomologs 0.037025885966972434
+exclParalogs 0.0404904172264005
+specParalogs 0.058438879315097204
+orthologs 0.03256279446197803
+bpso 0.04985732259482743
+bpsh 0.07824312897365443
+         Feature  Importance
+0     hmmScoreWT    0.122204
+1    hmmScoreMUT    0.090503
+21          bpsh    0.078243
+18  specParalogs    0.058439
+5      ncontacts    0.057764
+20          bpso    0.049857
+3    Acetylmimic    0.046290
+17  exclParalogs    0.040490
+4         IUPRED    0.038012
+16   allHomologs    0.037026
+12    ChargesMUT    0.036976
+14         A_MUT    0.033910
+9           burr    0.033441
+19     orthologs    0.032563
+6      nresidues    0.031584
+8            sec    0.022485
+2   Phosphomimic    0.016761
+15         E_MUT    0.016721
+7        phi_psi    0.014146
+10           acc    0.013124
+13      p_0_pfam    0.011564
+11     ChargesWT    0.011319
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.718
+########################
+MAP2K3/A84T/test 0.439 A
+PIM1/S97N/test 0.632 A
+########################
+CDK5/F82I/test 0.427 TBD
+MAP2K1/V211D/test 0.405 TBD
+########################
+CHEK2/K373E/test 0.619 Inconclusive
+MAP2K3/R94L/test 0.555 Inconclusive
+MAP2K3/R96W/test 0.366 Inconclusive
+MAP2K3/L215W/test 0.337 Inconclusive
+MAP2K3/T222M/test 0.511 Inconclusive
+PIM1/Q127E/test 0.617 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.90007574]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 100}
+[[0.67641781 0.32358219]
+ [0.33546383 0.66453617]
+ [0.79091298 0.20908702]
+ ...
+ [0.82787469 0.17212531]
+ [0.87593303 0.12406697]
+ [0.84921564 0.15078436]]
+########################
+hmmScoreWT 0.11766276392642337
+hmmScoreMUT 0.08657684678830926
+Phosphomimic 0.024313534731061105
+Acetylmimic 0.03814347346018663
+IUPRED 0.03780283218897445
+ncontacts 0.035832893832812455
+nresidues 0.034869127527126224
+phi_psi 0.017733581132130118
+sec 0.026101448226792223
+burr 0.03861969345564794
+acc 0.013257547987371195
+ChargesWT 0.014491683602530668
+ChargesMUT 0.034826677299141615
+p_0_pfam 0.016682574241558452
+A_MUT 0.041690162945333634
+E_MUT 0.012031286956398088
+allHomologs 0.051620154693009984
+exclParalogs 0.05200893789971876
+specParalogs 0.04486570920139093
+orthologs 0.04015484956794337
+bpso 0.04937507650023207
+bpsh 0.06350174013391974
+         Feature  Importance
+0     hmmScoreWT    0.117663
+1    hmmScoreMUT    0.086577
+21          bpsh    0.063502
+17  exclParalogs    0.052009
+16   allHomologs    0.051620
+20          bpso    0.049375
+18  specParalogs    0.044866
+14         A_MUT    0.041690
+19     orthologs    0.040155
+9           burr    0.038620
+3    Acetylmimic    0.038143
+4         IUPRED    0.037803
+5      ncontacts    0.035833
+6      nresidues    0.034869
+12    ChargesMUT    0.034827
+8            sec    0.026101
+2   Phosphomimic    0.024314
+7        phi_psi    0.017734
+13      p_0_pfam    0.016683
+11     ChargesWT    0.014492
+10           acc    0.013258
+15         E_MUT    0.012031
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.789
+########################
+MAP2K3/A84T/test 0.437 A
+PIM1/S97N/test 0.632 A
+########################
+CDK5/F82I/test 0.477 TBD
+MAP2K1/V211D/test 0.442 TBD
+########################
+CHEK2/K373E/test 0.592 Inconclusive
+MAP2K3/R94L/test 0.543 Inconclusive
+MAP2K3/R96W/test 0.372 Inconclusive
+MAP2K3/L215W/test 0.387 Inconclusive
+MAP2K3/T222M/test 0.523 Inconclusive
+PIM1/Q127E/test 0.586 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.87423605]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 5, 'n_estimators': 10}
+[[0.62207012 0.37792988]
+ [0.38011579 0.61988421]
+ [0.60926404 0.39073596]
+ ...
+ [0.91100567 0.08899433]
+ [0.78414141 0.21585859]
+ [0.85630574 0.14369426]]
+########################
+hmmScoreWT 0.03719871155548529
+hmmScoreMUT 0.14648120525539526
+Acetylmimic 0.015121232698864751
+IUPRED 0.013686157668521692
+ncontacts 0.1026887146389873
+nresidues 0.059360620393693886
+sec 0.014596390231359207
+acc 0.020080383347246097
+ChargesMUT 0.065168190430794
+p_0 0.010144848441114847
+ub_0_pfam 0.01337200566906398
+A_MUT 0.07595574537763852
+D_MUT 0.018869510480393453
+E_MUT 0.052376180754804366
+allHomologs 0.03776567947127904
+exclParalogs 0.056900747479514666
+specParalogs 0.018674860988078884
+orthologs 0.02481007877096436
+bpso 0.07759552554452201
+bpsh 0.05828957101747945
+         Feature  Importance
+1    hmmScoreMUT    0.146481
+4      ncontacts    0.102689
+18          bpso    0.077596
+11         A_MUT    0.075956
+8     ChargesMUT    0.065168
+5      nresidues    0.059361
+19          bpsh    0.058290
+15  exclParalogs    0.056901
+13         E_MUT    0.052376
+14   allHomologs    0.037766
+0     hmmScoreWT    0.037199
+17     orthologs    0.024810
+7            acc    0.020080
+12         D_MUT    0.018870
+16  specParalogs    0.018675
+2    Acetylmimic    0.015121
+6            sec    0.014596
+3         IUPRED    0.013686
+10     ub_0_pfam    0.013372
+9            p_0    0.010145
+########################
+activatingresistance results ( 14 )
+REC: 0.929
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.577
+########################
+MAP2K3/A84T/test 0.541 A
+PIM1/S97N/test 0.472 A
+########################
+CDK5/F82I/test 0.263 TBD
+MAP2K1/V211D/test 0.361 TBD
+########################
+CHEK2/K373E/test 0.524 Inconclusive
+MAP2K3/R94L/test 0.506 Inconclusive
+MAP2K3/R96W/test 0.45 Inconclusive
+MAP2K3/L215W/test 0.373 Inconclusive
+MAP2K3/T222M/test 0.471 Inconclusive
+PIM1/Q127E/test 0.642 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.89072854]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 5, 'n_estimators': 50}
+[[0.59194228 0.40805772]
+ [0.34733399 0.65266601]
+ [0.79748153 0.20251847]
+ ...
+ [0.84111348 0.15888652]
+ [0.86519817 0.13480183]
+ [0.85933277 0.14066723]]
+########################
+hmmScoreWT 0.13163407280491743
+hmmScoreMUT 0.0868161970889674
+Phosphomimic 0.01763097710814823
+Acetylmimic 0.03863813594483783
+IUPRED 0.04030789061028589
+ncontacts 0.07623265919352307
+nresidues 0.0389906291499528
+phi_psi 0.01561339399959326
+sec 0.019783570395367846
+burr 0.03914223898306019
+acc 0.011987520180808994
+ChargesWT 0.0103202128869955
+ChargesMUT 0.042633580461352176
+K_WT 0.011199693298870507
+A_MUT 0.039486677904973344
+E_MUT 0.018478812846011876
+allHomologs 0.03673070818972087
+exclParalogs 0.03871437772639099
+specParalogs 0.047094705000110856
+orthologs 0.037003019171863126
+bpso 0.0457881345844387
+bpsh 0.0632266388080093
+         Feature  Importance
+0     hmmScoreWT    0.131634
+1    hmmScoreMUT    0.086816
+5      ncontacts    0.076233
+21          bpsh    0.063227
+18  specParalogs    0.047095
+20          bpso    0.045788
+12    ChargesMUT    0.042634
+4         IUPRED    0.040308
+14         A_MUT    0.039487
+9           burr    0.039142
+6      nresidues    0.038991
+17  exclParalogs    0.038714
+3    Acetylmimic    0.038638
+19     orthologs    0.037003
+16   allHomologs    0.036731
+8            sec    0.019784
+15         E_MUT    0.018479
+2   Phosphomimic    0.017631
+7        phi_psi    0.015613
+10           acc    0.011988
+13          K_WT    0.011200
+11     ChargesWT    0.010320
+########################
+activatingresistance results ( 14 )
+REC: 0.786
+########################
+increaseresistance results ( 1 )
+REC: 1.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.469 A
+PIM1/S97N/test 0.631 A
+########################
+CDK5/F82I/test 0.451 TBD
+MAP2K1/V211D/test 0.423 TBD
+########################
+CHEK2/K373E/test 0.545 Inconclusive
+MAP2K3/R94L/test 0.508 Inconclusive
+MAP2K3/R96W/test 0.368 Inconclusive
+MAP2K3/L215W/test 0.334 Inconclusive
+MAP2K3/T222M/test 0.529 Inconclusive
+PIM1/Q127E/test 0.598 Inconclusive
+columns to consider ['Acc' 'Gene' 'Mutation' 'hmmScoreWT' 'hmmScoreMUT' 'Phosphomimic'
+ 'Acetylmimic' 'IUPRED' 'ncontacts' 'nresidues' 'phi_psi' 'sec' 'burr'
+ 'acc' 'ChargesWT' 'ChargesMUT' 'ac_-1' 'gl_-1' 'm1_-1' 'm2_-1' 'm3_-1'
+ 'me_-1' 'p_-1' 'sm_-1' 'ub_-1' 'ac_-1_pfam' 'gl_-1_pfam' 'm1_-1_pfam'
+ 'm2_-1_pfam' 'm3_-1_pfam' 'me_-1_pfam' 'p_-1_pfam' 'sm_-1_pfam'
+ 'ub_-1_pfam' 'ac_0' 'gl_0' 'm1_0' 'm2_0' 'm3_0' 'me_0' 'p_0' 'sm_0'
+ 'ub_0' 'ac_0_pfam' 'gl_0_pfam' 'm1_0_pfam' 'm2_0_pfam' 'm3_0_pfam'
+ 'me_0_pfam' 'p_0_pfam' 'sm_0_pfam' 'ub_0_pfam' 'ac_1' 'gl_1' 'm1_1'
+ 'm2_1' 'm3_1' 'me_1' 'p_1' 'sm_1' 'ub_1' 'ac_1_pfam' 'gl_1_pfam'
+ 'm1_1_pfam' 'm2_1_pfam' 'm3_1_pfam' 'me_1_pfam' 'p_1_pfam' 'sm_1_pfam'
+ 'ub_1_pfam' 'A_WT' 'C_WT' 'D_WT' 'E_WT' 'F_WT' 'G_WT' 'H_WT' 'I_WT'
+ 'K_WT' 'L_WT' 'M_WT' 'N_WT' 'P_WT' 'Q_WT' 'R_WT' 'S_WT' 'T_WT' 'V_WT'
+ 'W_WT' 'Y_WT' 'A_MUT' 'C_MUT' 'D_MUT' 'E_MUT' 'F_MUT' 'G_MUT' 'H_MUT'
+ 'I_MUT' 'K_MUT' 'L_MUT' 'M_MUT' 'N_MUT' 'P_MUT' 'Q_MUT' 'R_MUT' 'S_MUT'
+ 'T_MUT' 'V_MUT' 'W_MUT' 'Y_MUT' 'allHomologs' 'exclParalogs'
+ 'specParalogs' 'orthologs' 'bpso' 'bpsh' 'A_-1' 'D_-1' 'R_-1' 'A_-1_pfam'
+ 'D_-1_pfam' 'R_-1_pfam' 'A_0_pfam' 'D_0_pfam' 'R_0_pfam' 'A_1' 'D_1'
+ 'R_1' 'A_1_pfam' 'D_1_pfam' 'R_1_pfam' 'MUT_TYPE']
+mean_test_score [0.90240198]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model found during the CV
+{'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 5, 'n_estimators': 100}
+[[0.61261648 0.38738352]
+ [0.35427726 0.64572274]
+ [0.78316539 0.21683461]
+ ...
+ [0.82828011 0.17171989]
+ [0.85372072 0.14627928]
+ [0.85522078 0.14477922]]
+########################
+hmmScoreWT 0.12240461051175873
+hmmScoreMUT 0.08456920919477608
+Phosphomimic 0.02428949318648801
+Acetylmimic 0.03733929775782935
+IUPRED 0.0363707833000553
+ncontacts 0.04736862661768034
+nresidues 0.039437692468482034
+phi_psi 0.01938420935169498
+sec 0.029362161018068916
+burr 0.04214202839647741
+acc 0.012631907133443282
+ChargesWT 0.012066958340297463
+ChargesMUT 0.04503592561278186
+p_0_pfam 0.0118440992325901
+K_WT 0.011246954617984122
+A_MUT 0.045035588973432746
+E_MUT 0.012942374691123313
+allHomologs 0.0432041170430701
+exclParalogs 0.052796788453150244
+specParalogs 0.03690668603893827
+orthologs 0.041420434834084356
+bpso 0.04770878447146201
+bpsh 0.05942399278853261
+         Feature  Importance
+0     hmmScoreWT    0.122405
+1    hmmScoreMUT    0.084569
+22          bpsh    0.059424
+18  exclParalogs    0.052797
+21          bpso    0.047709
+5      ncontacts    0.047369
+12    ChargesMUT    0.045036
+15         A_MUT    0.045036
+17   allHomologs    0.043204
+9           burr    0.042142
+20     orthologs    0.041420
+6      nresidues    0.039438
+3    Acetylmimic    0.037339
+19  specParalogs    0.036907
+4         IUPRED    0.036371
+8            sec    0.029362
+2   Phosphomimic    0.024289
+7        phi_psi    0.019384
+16         E_MUT    0.012942
+10           acc    0.012632
+11     ChargesWT    0.012067
+13      p_0_pfam    0.011844
+14          K_WT    0.011247
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+increaseresistance results ( 1 )
+REC: 0.0
+########################
+resistance results ( 71 )
+REC: 0.732
+########################
+MAP2K3/A84T/test 0.453 A
+PIM1/S97N/test 0.62 A
+########################
+CDK5/F82I/test 0.49 TBD
+MAP2K1/V211D/test 0.455 TBD
+########################
+CHEK2/K373E/test 0.558 Inconclusive
+MAP2K3/R94L/test 0.519 Inconclusive
+MAP2K3/R96W/test 0.372 Inconclusive
+MAP2K3/L215W/test 0.39 Inconclusive
+MAP2K3/T222M/test 0.534 Inconclusive
+PIM1/Q127E/test 0.588 Inconclusive
