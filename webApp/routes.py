@@ -365,7 +365,7 @@ def configureRoutes(app):
 		# A unique ID is created before the pocess begins
 		# Each submitted job is assigned a unique ID
 		# uniqID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
-		# return render_template('maintenance.html')
+		return render_template('maintenance.html')
 		uniqID = makeUniqID()
 		# return 'Home'
 		# return render_template('home.html', uniqID=uniqID)
