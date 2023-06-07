@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block head %}
+    <title>Activark</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/slider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form.css') }}">
+    <script src="{{url_for('static', filename='/js/loadExamples.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+{% endblock %}
+
+{% block content %}
+    <style>
+        .fa-hourglass-half {
+            font-size: 30px;
+            color: black;
+            animation: rotate 2s linear infinite;
+            }
+
+            @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+            }
+    </style>
+    <h1 class="headingFontHomePage" id="headingElement"><i class="bi bi-diagram-3-fill"></i> Activark</h1>
+    <h2 class="headingFontHomePage" id="headingElement" style="font-size: 30px;">Website under maintenance until 1600 hrs, 07 June 2023</h2>
+
+{% endblock %}
+	
