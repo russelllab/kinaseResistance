@@ -814,7 +814,7 @@ def configureRoutes(app):
 				entry_to_search = entry
 				break
 		feature_dic = {}
-		for line in open('../data/ss.tsv', 'r', encoding='ascii'):
+		for line in open('../data/ss.tsv', 'r', encoding='utf-8'):
 			if line.startswith('#'): continue
 			name = str(line.split()[0])
 			start, end = line.split()[2].rstrip().split('-')

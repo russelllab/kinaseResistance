@@ -74,7 +74,7 @@ def getRegion(mycursor, acc, mutation):
         # if alnpos == 127:
         #     region.append('Catalytic-Lys')
         
-        for line in open('../data/ss.tsv', 'r'):
+        for line in open('../data/ss.tsv', 'r', encoding='utf-8'):
             if line.startswith('#'): continue
             region_name = line.split()[0]
             start, end = int(line.split()[-1].split('-')[0]), int(line.split()[-1].split('-')[1])
