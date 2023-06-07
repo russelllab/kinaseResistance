@@ -236,13 +236,14 @@ def create_mutations_table(mycursor)->None:
                      mut_type VARCHAR(10), \
                      acc VARCHAR(10) REFERENCES kinases(acc) DEFERRABLE, \
                      gene VARCHAR(10), \
-                     info TEXT, source VARCHAR(200) \
+                     info TEXT, pubmed TEXT, source VARCHAR(200) \
                      )")
                     # UNIQUE(mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)\
     # for line in open('../AK_mut_w_sc_feb2023/act_deact_v2.tsv', 'r'):
     # for line in open('../data/mutations/act_deact_mutlist_may2023.tsv', 'r'):
     for line in gzip.open('../data/mutations/ad_mutations.tsv.gz', 'rt'):
         if line.split()[0] == 'UniProtAcc': continue
+        # print (line)
         # gene = line.split('\t')[0]
         acc = line.split('\t')[0]
         gene = line.split('\t')[1]
@@ -255,7 +256,7 @@ def create_mutations_table(mycursor)->None:
         acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
         # print (gene, acc, mutation, pfamPos)
         # if pfamPos is None: continue
-        mut_type = line.split('\t')[5].lstrip().rstrip()
+        mut_type = line.split('\t')[6].lstrip().rstrip()
         if mut_type not in ['increase', 'activating', 'decrease', 'loss']:
             print (mutation, gene, 'is unknown', mut_type)
             continue
@@ -267,11 +268,13 @@ def create_mutations_table(mycursor)->None:
         # info = 'info'
         # source = line.split('\t')[-1]
         source = 'UniProt'
+        pubmed = line.split('\t')[5]
         # print (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)
         mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, \
-                         pfamPos, mut_type, acc, gene, info, source) \
-                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
-                        (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc, gene, info, source))
+                         pfamPos, mut_type, acc, gene, info, pubmed, source) \
+                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
+                        (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type,\
+                         acc, gene, info, pubmed, source))
 
     '''Fetch resistant mutation data'''
     # for line in open('../AK_mut_w_sc_feb2023/res_mut_v3_only_subs_KD_neighb.tsv', 'r'):
@@ -290,13 +293,15 @@ def create_mutations_table(mycursor)->None:
         mut_type = 'resistance'
         source = 'COSMIC'
         info = '-'
+        pubmed = '-'
         # if wtPos not in seq2pfam[acc]:
         #     print (f'{uniprot_position} seems to be outside the domain in {acc} and reported {mut_type}')
         #     continue
         mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, \
-                         pfamPos, mut_type, acc, gene, info, source) \
-                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
-                        (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc, gene, info, source))
+                         pfamPos, mut_type, acc, gene, info, pubmed, source) \
+                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
+                        (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type,\
+                         acc, gene, info, pubmed, source))
     
     '''Fetch neutral mutation data'''
     # for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
@@ -317,6 +322,7 @@ def create_mutations_table(mycursor)->None:
         mut_type = 'neutral'
         source = 'gnomAD'
         info = 'AC/AN:'+str(line.split('\t')[7]) + '; Hom/AC:'+str(line.split('\t')[8].rstrip())
+        pubmed = '-'
         # if acc not in seq2pfam:
         #     continue
         # if uniprot_position not in seq2pfam[acc]:
@@ -324,9 +330,10 @@ def create_mutations_table(mycursor)->None:
         #     print (seq2pfam[acc])
         #     continue
         mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, \
-                         pfamPos, mut_type, acc, gene, info, source) \
-                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
-                        (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc, gene, info, source))
+                         pfamPos, mut_type, acc, gene, info, pubmed, source) \
+                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
+                        (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc,\
+                         gene, info, pubmed, source))
 
 def createDicForDSSP(dic, position, mutation, value):
     if position not in dic: dic[position] = {}
@@ -822,24 +829,24 @@ if __name__ == '__main__':
     '''
 
     # Create tables
-    print ('Creating HMM table')
-    create_hmm_table(mycursor)
-    print ('Creating kinases table')
-    create_kinases_table(mycursor)
+    # print ('Creating HMM table')
+    # create_hmm_table(mycursor)
+    # print ('Creating kinases table')
+    # create_kinases_table(mycursor)
     print ('Creating mutation table')
     create_mutations_table(mycursor)
-    print ('Creating homology table')
-    create_homology_table(mycursor)
-    print ('Creating IUPRED table')
-    create_iupred_table(mycursor)
-    print ('Creating Mechismo table')
-    create_mechismo_table(mycursor)
-    print ('Creating DSSP tables')
-    create_dssp_tables(mycursor)
-    print ('Creating PTM table')
-    create_ptm_table(mycursor)
-    print ('Creating alignment table')
-    create_alignment_table(mycursor)
+    # print ('Creating homology table')
+    # create_homology_table(mycursor)
+    # print ('Creating IUPRED table')
+    # create_iupred_table(mycursor)
+    # print ('Creating Mechismo table')
+    # create_mechismo_table(mycursor)
+    # print ('Creating DSSP tables')
+    # create_dssp_tables(mycursor)
+    # print ('Creating PTM table')
+    # create_ptm_table(mycursor)
+    # print ('Creating alignment table')
+    # create_alignment_table(mycursor)
     mydb.commit()
 
     # Use mysqldump to create backup file

@@ -194,7 +194,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 		alnpos, pfampos = mycursor.fetchone()
 		# print(pfampos)
 		if pfampos == '-' or alnpos == '-': continue
-		mycursor.execute("SELECT mutation, wtaa, wtpos, mut_type, acc, gene, info FROM mutations \
+		mycursor.execute("SELECT mutation, wtaa, wtpos, mut_type, acc, gene, info, pubmed FROM mutations \
 						WHERE pfampos = %s", (str(pfampos), ))
 		hits = mycursor.fetchall()
 		for entry in hits:
@@ -208,6 +208,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			# if ref_acc == acc: continue
 			ref_gene = entry[5]
 			info = entry[6]
+			pubmedIDs = entry[7]
 			text += "<b>" + ref_gene+'/'+str(ref_mutation) + "</b>" + ' is a known '+dic_mutations[mut_type]+' mutation.'
 			row = []
 			row.append(ref_gene)
@@ -219,10 +220,12 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			row.append(str(pfampos) + makeWindowText(pfampos, interested_kinase_pfampos))
 			row.append(str(alnpos) + makeWindowText(alnpos, interested_kinase_alnpos))
 			row.append(dic_mutations[mut_type])
-			row.append(info.split('"""')[0] if '"' in info else '-')
-			if mut_type != 'R':
+			# row.append(info.split('"""')[0] if '"' in info else '-')
+			row.append(info)
+			if mut_type != 'resistance':
 				text += ' <u>Description</u>: ' + info.split('"""')[0]
-				pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
+				# pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
+				pubmed_ids = pubmedIDs.split(',')
 				pubmed_ids_text = '+or+'.join(pubmed_ids)
 				# for pubmed_id in pubmed_ids:
 					# pubmed_ids_text.append('<a href=\"https://pubmed.ncbi.nlm.nih.gov/' + str(pubmed_id) + '\" target=\"_blank\">' + str(pubmed_id) + '<i class="bi bi-box-arrow-in-up-right"></i></a>')
