@@ -36,7 +36,7 @@ import fetchData
 
 create_svg_path = '/Create_SVG/Enhancements_May2023/05June/'
 sys.path.insert(1, BASE_DIR+create_svg_path)
-import create_svg_20230605_kinases_GS as create_svg
+import create_svg_20230607_kinases_GS as create_svg
 conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_May-24-2023.txt'
 identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_May-24-2023.txt'
 
