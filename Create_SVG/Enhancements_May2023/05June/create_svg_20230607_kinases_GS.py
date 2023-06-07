@@ -423,8 +423,32 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
             else:	### will draw just a "-" for a gap in the alignment
                 if totalcount >= distance_start:
                     if totalcount <= distance_end:
-                        if totalcount not in forbidden:        
-                            x += 10
+                        if totalcount not in forbidden:
+                                if poi in namus: 
+                                    for feat in proteinfeatures:
+                                        if int(totalcount) in proteinfeatures[feat]:
+                                            if feat not in tempfeat:
+                                                tempfeat[feat]=[featurecolors[featcount],featcount]
+                                                featcount+=1
+                                            elevator = tempfeat[feat][1]
+                                            elevator_floor = 0
+                                            if elevator >= 3:
+                                                if elevator_floor <= 3:
+                                                    elevator = elevator_floor
+                                                    elevator_floor += 1
+                                                else:
+                                                    elevator_floor = 0
+                                                    elevator = elevator_floor
+                                            y_level = featureypsilon + (elevator*5)
+                                            if textcounter > 4:
+                                                textcounter = 0
+                                            textlevel = featureypsilon + (textcounter*6.5)
+                                            dwg.add(dwg.rect((x, y_level), (10, 2), fill=tempfeat[feat][0]))
+                                            if "done" not in tempfeat[feat]:                                               
+                                                dwg.add(dwg.text(str(feat), insert=(x+10+len(str(feat)), textlevel-30), text_anchor='middle', dominant_baseline='central', font_size='8px', font_family='Arial', font_weight='bold', fill=tempfeat[feat][0]))
+                                                tempfeat[feat].append("done")	
+                                                textcounter+=1	       
+                                x += 10
         if proteincounter <= topguns+1:
             last_display_x = x
             last_display_y = x
@@ -444,7 +468,7 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
             y += 20
     viewboxwidth = (viewboxcounter+250)
     viewboxheight = len(roworder)*20+100+(100-Categoryypsilon)
-    dwg.viewbox(-70, Categoryypsilon-20,viewboxwidth,viewboxheight)
+    dwg.viewbox(-120, Categoryypsilon-20,viewboxwidth,viewboxheight)
 
     if startposition_checker != "none":
         dwg.add(dwg.rect((position_interest_x, position_interest_y), (10, len(roworder)*20),fill="none",stroke="black",stroke_width=1)) ### Note: This will fail if the requested position is outside the available alignment, this should not be an issue when given full alignments
