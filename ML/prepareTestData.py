@@ -340,7 +340,6 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
 
     if outputFile != None: gzip.open(outputFile+'.gz', 'wt').write(outputText)
     else: print (outputText)
-    print (sys.getdefaultencoding())
     return results
     # yield results
 
