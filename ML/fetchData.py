@@ -61,18 +61,18 @@ def getRegion(mycursor, acc, mutation):
         if alnpos == '-': return '-'
         else: alnpos = int(alnpos)
         region = []
-        if alnpos in range(442,445):
-            region.append('DFG-motif')
-        if alnpos in range(532, 535):
-            region.append('APE-motif')
-        if alnpos in range(387, 390):
-            region.append('HrD-motif')
+        # if alnpos in range(442,445):
+        #     region.append('DFG-motif')
+        # if alnpos in range(532, 535):
+        #     region.append('APE-motif')
+        # if alnpos in range(387, 390):
+        #     region.append('HrD-motif')
         # if alnpos in range(442, 535):
         #     region.append('Activation-loop')
-        if alnpos in range(37, 43):
-            region.append('Gly-rich-loop')
-        if alnpos == 127:
-            region.append('Catalytic-Lys')
+        # if alnpos in range(37, 43):
+        #     region.append('Gly-rich-loop')
+        # if alnpos == 127:
+        #     region.append('Catalytic-Lys')
         
         for line in open('../data/ss.tsv', 'r'):
             if line.startswith('#'): continue

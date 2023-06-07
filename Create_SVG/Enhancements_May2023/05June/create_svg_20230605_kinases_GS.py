@@ -658,4 +658,5 @@ if __name__ == "__main__":
 	except:
 		#print(logging.exception("message"))
 		pass
+	# print (feature_dict)
 	main(sortingvalue, identitydictionary, overallconservation, alignmentfile, protein_of_interest, position_of_interest, window, topguns, positions, feature_dict)

@@ -34,9 +34,9 @@ sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 import fetchData
 
-create_svg_path = '/Create_SVG/Enhancements_May2023/16thMay/'
+create_svg_path = '/Create_SVG/Enhancements_May2023/05June/'
 sys.path.insert(1, BASE_DIR+create_svg_path)
-import create_svg_20230516_kinases_GS as create_svg
+import create_svg_20230605_kinases_GS as create_svg
 conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_May-24-2023.txt'
 identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_May-24-2023.txt'
 
@@ -812,11 +812,19 @@ def configureRoutes(app):
 			if int(start) <= int(mutation_position) <= int(end) and entry_acc == row['acc']:
 				entry_to_search = entry
 				break
+		feature_dic = {}
+		for line in open('../data/ss.tsv', 'r'):
+			if line.startswith('#'): continue
+			name = line.split()[0]
+			start, end = line.split()[2].rstrip().split('-')
+			# print (name, start, end)
+			feature_dic[name] = [i for i in range(int(start), int(end)+1)]
 		try:
-			filename = create_svg.main(sortingvalue, identitydictionary, overallconservation, \
-			      alignment,\
-					entry_to_search, mutation_position, int(ws), int(topN), dic_mutations_info, \
-						path = 'static/predictor/output/'+uniqID+'/')
+			filename = create_svg.main(sortingvalue, identitydictionary,\
+			      	overallconservation, alignment, entry_to_search,\
+					mutation_position, int(ws), int(topN), dic_mutations_info,\
+					feature_dic,
+					path = 'static/predictor/output/'+uniqID+'/')
 		except Exception as e:
 			print (e)
 			filename = ''

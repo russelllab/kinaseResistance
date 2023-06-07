@@ -1,10 +1,12 @@
 #SS Pkinase NewAlignment
 N-term-β1	-    1-31
 β1   1-10    32-39
+Gly-rich-loop   -   37-43
 β1/β2-loop - 40-41
 β2   13-20   42-80
 β2/β3-loop - 81-108
 β3   25-33   109-130
+Catalytic-Lys   -   127-127
 β3/αHC-loop	-	131-140
 αHC  39-55   141-185
 αHC/β4-loop	-	186-204
@@ -15,8 +17,11 @@ N-term-β1	-    1-31
 αHD  85-92   282-313
 αHD/αHE-loop	-	314-322
 αHE  97-116  323-370
-αHE/A-loop-loop	-	371-441
+αHE/A-loop	-	371-441
+HrD-motif   -   387-389
 A-loop  141-167 442-534
+DFG-motif   -   442-444
+APE-motif   -   532-534
 αHF  168-192 535-600
 αHF/G	-	601-618
 αHG  202-219 619-652
