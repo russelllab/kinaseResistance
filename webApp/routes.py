@@ -365,11 +365,11 @@ def configureRoutes(app):
 		# A unique ID is created before the pocess begins
 		# Each submitted job is assigned a unique ID
 		# uniqID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
-		return render_template('maintenance.html')
+		# return render_template('maintenance.html')
 		uniqID = makeUniqID()
 		# return 'Home'
 		# return render_template('home.html', uniqID=uniqID)
-		# return render_template('progress2.html', uniqID=uniqID)
+		return render_template('progress2.html', uniqID=uniqID)
 
 	@app.route('/output/<string:uniqID>', methods=['GET', 'POST'])
 	def output(uniqID: str):
@@ -814,9 +814,9 @@ def configureRoutes(app):
 				entry_to_search = entry
 				break
 		feature_dic = {}
-		for line in open('../data/ss.tsv', 'r'):
+		for line in open('../data/ss.tsv', 'r', encoding='ascii'):
 			if line.startswith('#'): continue
-			name = line.split()[0]
+			name = str(line.split()[0])
 			start, end = line.split()[2].rstrip().split('-')
 			# print (name, start, end)
 			feature_dic[name] = [i for i in range(int(start), int(end)+1)]
@@ -1005,9 +1005,10 @@ def configureRoutes(app):
 	def progress():
 		return render_template('progress.html')
 	
-	@app.route('/progress2')
+	@app.route('/progress2', methods=['GET', 'POST'])
 	def progress2():
-		return render_template('progress2.html')
+		uniqID = makeUniqID()
+		return render_template('progress2.html', uniqID=uniqID)
 	
 	@app.route('/test')
 	def test():

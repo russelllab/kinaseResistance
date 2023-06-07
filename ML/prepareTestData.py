@@ -17,7 +17,7 @@ import pickle
 import pandas as pd
 from cls import Kinase, Mutation
 import argparse
-import gzip
+import gzip, sys
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 MUT_TYPES = ['A', 'D', 'R']
@@ -340,6 +340,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
 
     if outputFile != None: gzip.open(outputFile+'.gz', 'wt').write(outputText)
     else: print (outputText)
+    print (sys.getdefaultencoding())
     return results
     # yield results
 
