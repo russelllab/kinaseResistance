@@ -365,10 +365,11 @@ def configureRoutes(app):
 		# A unique ID is created before the pocess begins
 		# Each submitted job is assigned a unique ID
 		# uniqID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
+		return render_template('maintenance.html')
 		uniqID = makeUniqID()
 		# return 'Home'
 		# return render_template('home.html', uniqID=uniqID)
-		return render_template('progress2.html', uniqID=uniqID)
+		# return render_template('progress2.html', uniqID=uniqID)
 
 	@app.route('/output/<string:uniqID>', methods=['GET', 'POST'])
 	def output(uniqID: str):
