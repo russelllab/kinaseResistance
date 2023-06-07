@@ -267,20 +267,20 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
 
             if len(drawname) < 8:
                 #dwg.add(dwg.rect((x-70, y), (85, 14), fill="yellow"))
-                dwg.add(dwg.text(drawname, insert = (x-70,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
-                dwg.add(dwg.text(drawname, insert = (x-55,Konservierungsypsilon+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+                dwg.add(dwg.text(drawname, insert = (x-40,y+7), text_anchor='end', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+                dwg.add(dwg.text(drawname, insert = (x-40,Konservierungsypsilon+5), text_anchor='end', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
 
             else:
                 #dwg.add(dwg.rect((x-90, y), (85, 14), fill="yellow"))
-                dwg.add(dwg.text(drawname, insert = (x-90,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
-                dwg.add(dwg.text(drawname, insert = (x-75,Konservierungsypsilon+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+                dwg.add(dwg.text(drawname, insert = (x-40,y+7), text_anchor='end', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+                dwg.add(dwg.text(drawname, insert = (x-40,Konservierungsypsilon+5), text_anchor='end', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
 
         else:
              if proteincounter <= topguns+1: 
                  if len(drawname) < 8:
-                     dwg.add(dwg.text(drawname, insert = (x-90,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+                     dwg.add(dwg.text(drawname, insert = (x-40,y+7), text_anchor='end', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
                  else:
-                     dwg.add(dwg.text(drawname, insert = (x-90,y+7), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+                     dwg.add(dwg.text(drawname, insert = (x-40,y+7), text_anchor='end', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
 	#charactercount = 0
         totalcount = 0 ### is equivalent with the alignment position
         if startingpoint <= 0:
@@ -511,7 +511,7 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
 							   ### that are not shown
         except:
             heatmap_maximum = 1
-        dwg.add(dwg.text(category, insert=(10, mapy+5), text_anchor='middle', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
+        dwg.add(dwg.text(category, insert=(45, mapy+5), text_anchor='end', dominant_baseline='central', font_size='10px', font_family='Arial', font_weight='bold', fill='black'))
         for xval in heatmapper:
             try:
                 opac = float(heatmapper[xval][category])/float(heatmap_maximum)
@@ -646,13 +646,13 @@ def main(sortingvalue, identitydictionary,overallconservation, alignmentfile, pr
 			for colcateg in colors:
 				positions[seqident][colcateg]=[]
 
-	featurecolors = ["firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink",
-			"firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink",
-			"firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink",
-			"firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink",
-			"firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink",
-			"firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink",
-			"firebrick","tomato","orange","olive","palegreen","teal","dodgerblue","blueviolet","deeppink"]
+	featurecolors = ["firebrick","tomato","orange","olive","black","teal","dodgerblue","blueviolet","deeppink",
+			"firebrick","tomato","orange","olive","black","teal","dodgerblue","blueviolet","deeppink",
+			"firebrick","tomato","orange","olive","black","teal","dodgerblue","blueviolet","deeppink",
+			"firebrick","tomato","orange","olive","black","teal","dodgerblue","blueviolet","deeppink",
+			"firebrick","tomato","orange","olive","black","teal","dodgerblue","blueviolet","deeppink",
+			"firebrick","tomato","orange","olive","black","teal","dodgerblue","blueviolet","deeppink",
+			"firebrick","tomato","orange","olive","black","teal","dodgerblue","blueviolet","deeppink"]
 	###
 
 	filename = create_svg(sortingvalue, identitydictionary, overallconservation, sequences, positions, colors, coloringcategories, featurecolors, position_of_interest, window, protein_of_interest, TheForbiddenPositions, feature_dict, trackstart, topguns, path)	
