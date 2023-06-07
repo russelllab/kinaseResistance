@@ -530,11 +530,11 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
    svg g:hover .bootstrap {display: block;}
  </style>"""
 
-    imagefile = open(path+filename,"r")
+    imagefile = open(path+filename,"r", encoding='utf-8')
     data = imagefile.read()
     newdata = data.replace("</svg>", styletext+"</svg>")
     imagefile.close()
-    writeFile = open(path+filename, "w")
+    writeFile = open(path+filename, "w", encoding='utf-8')
     writeFile.write(newdata)
     writeFile.close()
 
@@ -570,12 +570,12 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
           <rect class="hiss" x='"""+str(cx-5)+"""' y='"""+str(cy-40-delty)+"""' height='"""+str(whiteboxheight)+"""' width='"""+str(len(uppertext)+80)+"""'></rect>
           <text class="moo" x='"""+str(cx)+"""' y='"""+str(cy-28-delty)+"""'><tspan class="text">"""+uppertext+"""</tspan></text>"""+tspanner+"""</g>"""
 
-    imagefile = open(path+filename,"r")
+    imagefile = open(path+filename,"r", encoding='utf-8')
     imagefile.seek(0)
     data= imagefile.read()
     imagefile.close()
     newdata = data.replace("</svg>", circletext+"</svg>")
-    writeFile = open(path+filename, "w")
+    writeFile = open(path+filename, "w", encoding='utf-8')
     writeFile.write(newdata)
     writeFile.close()
     return filename
