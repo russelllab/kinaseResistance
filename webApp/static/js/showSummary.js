@@ -57,14 +57,14 @@ function defineSummaryDataTable (tableID, uniqID, kinase, mutation)
 									text: "Show only resistance instances",
 									action: function(e, dt, node, config){
 										dt.column(1).search('').draw();
-										dt.column(7).search("^"+'resistance').draw();
+										dt.column(7).search("^"+'resistance', true, false).draw();
 									}
 								},
 								{
 									text: "Show only deactivating instances",
 									action: function(e, dt, node, config){
 										dt.column(1).search('').draw();
-										dt.column(7).search("^"+'deactivating').draw();
+										dt.column(7).search("^"+'deactivating', true, false).draw();
 									}
 								},
 							],

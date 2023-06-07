@@ -76,7 +76,11 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 	dic_mutations = {'activating': 'Activating', 'increase': 'Activating',\
 		  			'loss': 'Deactivating', 'decrease': 'Deactivating',\
 					'resistance': 'Resistance'}
-	dic_ptms = {'p': 'phosphorylation', 'ub': 'ubiquitination', 'ac': 'acetylation', 'me': 'methylation', 'gl': 'glycosylation', 'sm': 'sumoylation', 'm1': 'myristoylation', 'm2': 'palmitoylation', 'm3': 'myristoylation'}
+	dic_ptms = {'p': 'Phosphorylation-site', 'ub': 'Ubiquitination-site',
+	     		'ac': 'Acetylation-site', 'me': 'Methylation-site',\
+				'gl': 'Glycosylation-site', 'sm': 'Sumoylation-site',\
+				'm1': 'Myristoylation-site', 'm2': 'Palmitoylation-site',\
+				'm3': 'Myristoylation-site'}
 	text = ''
 	mutation_position = int(mutation[1:-1])
 	mycursor.execute("SELECT alnpos FROM hmm \
