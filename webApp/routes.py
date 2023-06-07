@@ -820,15 +820,15 @@ def configureRoutes(app):
 			start, end = line.split()[2].rstrip().split('-')
 			# print (name, start, end)
 			feature_dic[name] = [i for i in range(int(start), int(end)+1)]
-		# try:
-		filename = create_svg.main(sortingvalue, identitydictionary,\
-				overallconservation, alignment, entry_to_search,\
-				mutation_position, int(ws), int(topN), dic_mutations_info,\
-				feature_dic,
-				path = 'static/predictor/output/'+uniqID+'/')
-		# except Exception as e:
-		# 	print (e)
-		# 	filename = ''
+		try:
+			filename = create_svg.main(sortingvalue, identitydictionary,\
+					overallconservation, alignment, entry_to_search,\
+					mutation_position, int(ws), int(topN), dic_mutations_info,\
+					feature_dic,
+					path = 'static/predictor/output/'+uniqID+'/')
+		except Exception as e:
+			print (e)
+			filename = ''
 
 		runStatus = 'success' if filename != '' else 'error'
 		print (runStatus)
