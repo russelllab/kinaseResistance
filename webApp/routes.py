@@ -738,17 +738,18 @@ def configureRoutes(app):
 			if row['name'] != kinase+'/'+mutation: continue			
 			mutation_position = int(row['mutation'][1:-1])
 			## Mutations
-			mycursor.execute("SELECT mutation, wtpos, mut_type, acc, gene, info FROM mutations")
+			mycursor.execute("SELECT mutation, wtpos, mut_type, acc, gene, info, pubmed FROM mutations")
 			hits = mycursor.fetchall()
 			for hit in hits:
-				otherMutation, position, mutType, acc, gene, info = hit
+				otherMutation, position, mutType, acc, gene, info, pubmedIDs = hit
 				if acc not in dic_mutations_info:
 					# dic_mutations_info[acc] = {'A':[], 'D':[], 'R':[]}
 					dic_mutations_info[acc] = {'Activating':[], 'Deactivating':[], 'Resistance':[]}
 				if mutType == 'neutral': continue
 				if acc not in accs_in_alignment: continue
 				if mutType in ['activating', 'increase', 'loss', 'decrease']:
-					pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
+					# pubmed_ids = extract_pubmed_ids(info.replace('"', '')) # remove double quotes
+					pubmed_ids = pubmedIDs.split(',')
 					text = ''
 					if pubmed_ids != []:
 						search_text = '+or+'.join(pubmed_ids)
