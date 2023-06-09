@@ -377,6 +377,13 @@ def configureRoutes(app):
 		# return 'Home'
 		# return render_template('home.html', uniqID=uniqID)
 		return render_template('progress2.html', uniqID=uniqID)
+	
+	@app.route('/alignment', methods=['GET', 'POST'])
+	def alignment():
+		''''
+		Display the alignment page
+		'''
+		return render_template('alignment.html')
 
 	@app.route('/output/<string:uniqID>', methods=['GET', 'POST'])
 	def output(uniqID: str):

@@ -112,7 +112,7 @@ for mut_type, mut_type_color in zip(mut_types, mut_types_colors):
 
 ax.set_title("Top 15 most mutated alignment positions")
 ax.set_xlim(0,8)
-ax.legend(loc="upper right")
+# ax.legend(loc="upper right")
 plt.grid(linewidth=0.5, color='gray', linestyle='--')
 # plt.show()
 plt.savefig('most_mutated_pfam_positions.png', dpi=1000)
