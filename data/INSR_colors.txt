@@ -1,0 +1,11 @@
+978-1031 skyblue beta1+2+3
+1032-1060 cyan HelixC
+1061-1077 greencyan beta4+5
+1078-1104 smudge HelixD
+1105-1126 olive HelixE
+1127-1149 lightblue Catalytic-loop
+1150-1184 orange A-loop
+1185-1213 deepsalmon HelixF
+1214-1235 brown HelixG
+1236-1248 wheat HelixH
+1249-1283 grey50 HelixI

@@ -1,0 +1,62 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  ../pfam/Pkinase.hmm
+# target sequence database:        1gag.cif_A.fasta
+# output directed to file:         hmmsearch_INSR.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Pkinase  [M=264]
+Accession:   PF00069.28
+Description: Protein kinase domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.4e-48  150.4   0.0    4.2e-48  150.1   0.0    1.1  1  1gag.cif_A  
+
+
+Domain annotation for each sequence (and alignments):
+>> 1gag.cif_A  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  150.1   0.0   4.2e-48   4.2e-48       3     260 ..      18     278 ..      16     280 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 150.1 bits;  conditional E-value: 4.2e-48
+                 EEEEEEEESSEEEEEE.....EETTTTEEEEEEEEECHCHSHHHHHHHHHHHHHHHHHSCTTB--EEEEEEESSEEEEEEESSTTEBHHHHHH...... CS
+     Pkinase   3 kleklGeGsfGkVyka.....veketgkivAvKkikkekakkkkekkvlrEikilkklkhpnivrlyevfeekdelylvleyveggeladlle...... 90 
+                  l++lG+GsfG Vy++     ++ e +  vAvK+++++    ++  ++l+E +++k + + ++vrl++v+++ +  ++v+e++ +g+l+++l+      
+  1gag.cif_A  18 LLRELGQGSFGMVYEGnardiIKGEAETRVAVKTVNESASLRER-IEFLNEASVMKGFTCHHVVRLLGVVSKGQPTLVVMELMAHGDLKSYLRslrpea 115
+                 6799*********9972222245578999*******99888766.69*********************************************9554433 PP
+
+                 HHSS-THH..........HHHHHHHHHHHHHHHHHHTTEE-SS-SGGGEEEETTSEEEE-SGTTSEESSSSTSBSSTTSGGGGS-HHHHTTSCBSCHHH CS
+     Pkinase  91 rkgslsee..........eakkiakqilegleylHsegvvHrDlKpeNiLidekgelKitDFGlakelessskltsfvgtseYlAPEvlkeneyskkvD 179
+                 +      +          e+ ++a++i+ g++yl  +++vHrDl   N ++ ++  +Ki+DFG+ + +e++ k  +     +++APE lk+  +++++D
+  1gag.cif_A 116 E------NnpgrppptlqEMIQMAAEIADGMAYLNAKKFVHRDLAARNCMVAHDFTVKIGDFGMTRDIETDRKGGKGLLPVRWMAPESLKDGVFTTSSD 208
+                 1......2466667777799********************************9999******************************************* PP
+
+                 HHHHHHHHHHHHH.SS-SSTTSSHHHHHHHHHHHHHHHHHHCTSHTTTSTTCTTSSHHHHHHHHHHT-SSCTTSTTHHHHHT CS
+     Pkinase 180 vWslGvilyellt.gkppfsgekgkekvekeldqlekilkilgetkeklpeakeiseeakdllkkllkkdpkkRltaeellq 260
+                 +Ws Gv+l+e+++  ++p++g ++++  +  +d               l+++++++e ++dl++ +++ +pk R+t+ e+++
+  1gag.cif_A 209 MWSFGVVLWEITSlAEQPYQGLSNEQVLKFVMDG------------GYLDQPDNCPERVTDLMRMCWQFNPKMRPTFLEIVN 278
+                 **********985268899977666655555555............346889*************************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (264 nodes)
+Target sequences:                            1  (300 residues searched)
+Passed MSV filter:                         1  (1); expected 0.0 (0.02)
+Passed bias filter:                        1  (1); expected 0.0 (0.02)
+Passed Vit filter:                         1  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         1  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.01
+# Mc/sec: 7.92
+//
+[ok]
