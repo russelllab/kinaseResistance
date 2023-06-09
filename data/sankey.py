@@ -79,20 +79,26 @@ level_text_mining_activating = 38
 
 fig = go.Figure(data=[go.Sankey(
     node = dict(
-      pad = 15,
-      thickness = 20,
+      pad = 5,
+      thickness = 10,
       line = dict(color = "black", width = 0.5),
     #   label = ["A1", "A2", "B1", "B2", "C1", "C2"],
       label = levels,
-      color = ['gold', 'cyan', 'grey',\
+      x = [0.05, 0.05, 0.05,
+           0.5, 0.5, 0.5, 0.5, 0.5,
+           1.0, 1.0, 1.0],
+      y = [1.1, 0.45, 0.98,
+           0.8, 0.95, 0.22, 0.57, 1.075,
+           0.1, 0.6, 1.075],
+      color = ['gold', 'lightblue', 'grey',\
                 'green','lightgreen', 'red', 'lightcoral','cornflowerblue',\
                 'grey', 'grey', 'grey']
     ),
     link = dict(
-      source = [0, 1, 1, 1, 1, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7], # indices correspond to labels, eg A1, A2, A1, B1, ...
-      target = [7, 3, 4, 5, 6, 3, 8, 9, 10, 8, 9, 10, 8, 9, 10, 8, 9, 10, 8, 9],
-      value = [98, 129, 203, 567, 468, 38, 45, 99, 18, 43, 93,48,61, 404, 34, 120, 232, 75, 10, 86],
-      color = ['gold', 'cyan', 'cyan', 'cyan', 'cyan', 'silver', 'green', 'green', 'green'\
+      source = [0,    1,   1,   1,   1,  2,  3,  3,  3,  4,  4,  4,  5,   5,  5,   6,   6,  6,  7,  7], # indices correspond to labels, eg A1, A2, A1, B1, ...
+      target = [7,    3,   4,   5,   6,  3,  8,  9, 10,  8,  9, 10,  8,   9, 10,   8,   9, 10,  8,  9],
+      value =  [98, 129, 184, 499, 427, 38, 45, 99, 18, 43, 93, 48, 61, 404, 34, 120, 232, 75, 10, 86],
+      color = ['gold', 'lightblue', 'lightblue', 'lightblue', 'lightblue', 'silver', 'green', 'green', 'green'\
                ,'lightgreen', 'lightgreen', 'lightgreen', 'red', 'red', 'red'\
                 ,'lightcoral','lightcoral','lightcoral'\
                 ,'cornflowerblue','cornflowerblue','cornflowerblue'\
@@ -100,4 +106,5 @@ fig = go.Figure(data=[go.Sankey(
   ))])
 
 fig.update_layout(title_text="Basic Sankey Diagram", font_size=10)
-fig.show()
+# fig.show()
+fig.write_image("sankey_plot.svg")

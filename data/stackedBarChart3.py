@@ -81,7 +81,7 @@ for mut_type, mut_types_color in zip(mut_types, mut_types_colors):
 	row = np.array(row)
 	print (mut_type, row)
 	width = 0.5
-	p = ax.bar(['<AL', 'AL', '>AL'], row, width,\
+	p = ax.bar(['N-lobe', 'AL', 'C-lobe'], row, width,\
 	    		label=mut_type, bottom=bottom, color=mut_types_color)
 	bottom += row
 

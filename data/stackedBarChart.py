@@ -35,6 +35,7 @@ class Mutation:
 		self.pfampos = pfampos
 		self.mut_type = mut_type
 		self.ptm_types = []
+		self.neighbour_pac_sites = 0
 		self.bitscore = None
 		self.orthscore = None
 
@@ -64,6 +65,7 @@ mycursor.execute("SELECT acc, uniprotpos, pfampos, ptmtype FROM ptms\
 		 		where pfampos!='-'")
 ptms = mycursor.fetchall()
 dic_ptm_pfam = {}
+dic_ptm = {}
 dic_hmm = {}
 for ptm_row in ptms:
 	acc = ptm_row[0]
@@ -72,8 +74,16 @@ for ptm_row in ptms:
 	ptm_type = ptm_row[3]
 	for name in dic_mutations:
 		position = int(dic_mutations[name].position)
+		wtAA = dic_mutations[name].mutation[0]
+		mutAA = dic_mutations[name].mutation[-1]
 		if position == uniprotpos and acc == dic_mutations[name].acc:
 			dic_mutations[name].ptm_types.append(ptm_type)
+		elif uniprotpos in [position-1, position+1] and acc == dic_mutations[name].acc\
+			and ptm_type in ['p', 'ac']:
+			if wtAA in ['S', 'T', 'Y'] and mutAA in ['D', 'E']:
+				dic_mutations[name].neighbour_pac_sites = 1
+			elif wtAA in ['K'] and mutAA in ['Q']:
+				dic_mutations[name].neighbour_pac_sites = 1
 	# if pfampos not in dic_hmm: dic_hmm[pfampos] = HMM(pfampos)
 	# dic_hmm[pfampos].ptm_types += 1
 
@@ -124,7 +134,7 @@ fig, ax = plt.subplots()
 
 mut_types = ['constitutive-activation', 'increase', 'resistance', 'decrease', 'loss']
 mut_types_colors = ['green', 'lightgreen', 'blue', 'lightcoral', 'red']
-bottom = np.zeros(4	)
+bottom = np.zeros(4)
 for mut_type, mut_types_color in zip(mut_types, mut_types_colors):
 	ptmsite = []
 	for name in dic_mutations:
@@ -133,16 +143,25 @@ for mut_type, mut_types_color in zip(mut_types, mut_types_colors):
 		num_ptms = len(dic_mutations[name].ptm_types)
 		if num_ptms > 0:
 			ptmsite.append(name)
+	
+	neighbour_pac_sites = []
+	# for name in dic_mutations:
+	# 	if dic_mutations[name].mut_type != mut_type: continue
+	# 	mutation = dic_mutations[name].mutation
+	# 	neighbour_pac_site = dic_mutations[name].neighbour_pac_sites
+	# 	if neighbour_pac_site == 1:
+	# 		neighbour_pac_sites.append(name)
 
 	conserved_kinases = []
 	conserved_orthologs = []
 	for name in dic_mutations:
 		if dic_mutations[name].mut_type != mut_type: continue
 		if name in ptmsite: continue
+		if name in neighbour_pac_sites: continue
 		mutation = dic_mutations[name].mutation
 		bitscore = dic_mutations[name].bitscore
 		orthscore = dic_mutations[name].orthscore
-		if bitscore <= 0.5:
+		if bitscore <= 0.3:
 			conserved_kinases.append(name)
 		else:
 			if orthscore >= 3.0:
@@ -157,6 +176,7 @@ for mut_type, mut_types_color in zip(mut_types, mut_types_colors):
 	for name in dic_mutations:
 		if dic_mutations[name].mut_type != mut_type: continue
 		if name in ptmsite: continue
+		if name in neighbour_pac_sites: continue
 		if name in conserved_kinases: continue
 		if name in conserved_orthologs: continue
 		mutation = dic_mutations[name].mutation

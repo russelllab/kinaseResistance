@@ -31,14 +31,28 @@ for pfam_row in pfam:
     pfampos, pfamaa = pfam_row
     if pfampos not in dic_pfam: dic_pfam[pfampos] = pfamaa
 
-mycursor.execute("SELECT acc, mutation, pfampos, mut_type FROM mutations\
+# extracts p-sites
+mycursor.execute("SELECT acc, uniprotpos, ptmtype FROM ptms")
+ptms = mycursor.fetchall()
+dic_ptms = {}
+for ptm_row in ptms:
+    acc, uniprotpos, ptmtype = ptm_row
+    uniprotpos = int(uniprotpos)
+    if ptmtype != 'p': continue
+    if acc not in dic_ptms: dic_ptms[acc] = []
+    dic_ptms[acc].append(uniprotpos)
+
+# extracts mutations
+mycursor.execute("SELECT acc, wtpos, mutation, pfampos, mut_type FROM mutations\
                     where mut_type!=%s", ('neutral',))
 mutations = mycursor.fetchall()
 dic_hmm = {}
 for mutation in mutations:
-    acc, mutation, pfampos, mut_type = mutation
+    acc, wtpos, mutation, pfampos, mut_type = mutation
     if mut_type =='activating': mut_type = 'constitutive-activation'
     if pfampos == '-': continue
+    if acc in dic_ptms:
+        if int(wtpos) in dic_ptms[acc]: mut_type += ' at p-sites'
     if pfampos not in dic_hmm: dic_hmm[pfampos] = {}
     if mut_type not in dic_hmm[pfampos]: dic_hmm[pfampos][mut_type] = 0
     dic_hmm[pfampos][mut_type] += 1
@@ -50,6 +64,12 @@ for hmmpos in dic_hmm:
         total += dic_hmm[hmmpos][mut_type]
     if total >= 10:
         # print(hmmpos, total, dic_hmm[hmmpos])
+        total_log2 = np.log2(total)
+        for mut_type in dic_hmm[hmmpos]:
+            mut_type_count = dic_hmm[hmmpos][mut_type]
+            mut_type_fraction = float(mut_type_count) / total
+            mut_type_count_log2 = total_log2 * mut_type_fraction
+            dic_hmm[hmmpos][mut_type] = mut_type_count_log2
         pfamaa = dic_pfam[hmmpos]
         data.append([hmmpos, pfamaa, total, dic_hmm[hmmpos]])
 
@@ -62,7 +82,17 @@ pfam_position_labels = []
 for pfam_position in pfam_positions:
     pfam_position_labels.append(str(pfam_position) + ':' + dic_pfam[pfam_position])
 mut_types = ['constitutive-activation', 'increase', 'resistance', 'decrease', 'loss']
+new_mut_types = []
+for mut_type in mut_types:
+    new_mut_types.append(mut_type)
+    new_mut_types.append(mut_type+' at p-sites')
+mut_types = new_mut_types
 mut_types_colors = ['green', 'lightgreen', 'blue', 'lightcoral', 'red']
+new_mut_types_colors = []
+for mut_type_color in mut_types_colors:
+    new_mut_types_colors.append(mut_type_color)
+    new_mut_types_colors.append(mut_type_color)
+mut_types_colors = new_mut_types_colors
 left = np.zeros(len(pfam_positions))
 width = 0.5
 fig, ax = plt.subplots()
@@ -75,11 +105,14 @@ for mut_type, mut_type_color in zip(mut_types, mut_types_colors):
             row.append(dic_hmm[pfam_position][mut_type])
     row = np.array(row)
     p = ax.barh(pfam_position_labels, row, width,\
-                label=mut_type, left=left, color=mut_type_color)
+                label=mut_type, left=left, color=mut_type_color,\
+                edgecolor = 'black', linewidth = 0.5, \
+                hatch='.....' if ' at p-sites' in mut_type else None)
     left += row
 
 ax.set_title("Top 15 most mutated alignment positions")
-ax.legend(loc="upper center")
+ax.set_xlim(0,8)
+ax.legend(loc="upper right")
 plt.grid(linewidth=0.5, color='gray', linestyle='--')
 # plt.show()
 plt.savefig('most_mutated_pfam_positions.png', dpi=1000)
