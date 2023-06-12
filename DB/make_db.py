@@ -196,7 +196,8 @@ def fetch_mappings_dic():
     '''
     mappings = {}
     # for line in tqdm(gzip.open('../data/humanKinasesHitsHmmsearchMappings.tsv.gz', 'rt')):
-    for line in tqdm(gzip.open('../data/humanKinasesHitsSplitHmmsearchTrimmedMappings.tsv.gz', 'rt')):
+    # for line in tqdm(gzip.open('../data/humanKinasesHitsSplitHmmsearchTrimmedMappings.tsv.gz', 'rt')):
+    for line in tqdm(gzip.open('../data/humanKinasesHitsSplitTrimmedMappings.tsv.gz', 'rt')):
         if line[0] == '#': continue
         acc = line.split('\t')[0].split('|')[1]
         uniprot_id = line.split('\t')[0].split('|')[2]
@@ -334,6 +335,37 @@ def create_mutations_table(mycursor)->None:
                          VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", \
                         (mutation, wtAA, wtPos, mutAA, pfamPos, mut_type, acc,\
                          gene, info, pubmed, source))
+
+def create_ligands_table(mycursor)->None:
+    '''Function to create the ligands table'''
+    mycursor.execute("DROP TABLE IF EXISTS ligands CASCADE")
+    mycursor.execute("CREATE TABLE ligands (id SERIAL PRIMARY KEY, \
+                     ligand VARCHAR(100), ligand_id VARCHAR(100), uniprotpos INT, \
+                     pfamPos VARCHAR(10) REFERENCES hmm DEFERRABLE, \
+                     acc VARCHAR(10) REFERENCES kinases(acc) DEFERRABLE, \
+                     gene VARCHAR(10), \
+                     PDB TEXT, pubmed TEXT \
+                     )")
+                    # UNIQUE(mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)\
+    for line in gzip.open('../data/ATP_binding_sites/ATP_binding_sites_UniProt.tsv.gz', 'rt'):
+        if line.split()[0] == 'UniProtAcc': continue
+        acc = line.split('\t')[0]
+        gene = line.split('\t')[1]
+        uniprotpos = line.split('\t')[2]
+        pfamPos = find_pfampos(mycursor, acc, uniprotpos)
+        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
+        ligand = line.split('\t')[3]
+        ligand_id = line.split('\t')[4]
+        if ligand_id == '': ligand_id = '-'
+        pdbs = line.split('\t')[6]
+        if pdbs == '': pdbs = '-'
+        pubmeds = line.split('\t')[7]
+        if pubmeds == '': pubmeds = '-'
+        # print (ligand, ligand_id, uniprotpos, pfamPos, acc, gene, pdbs, pubmeds)
+        mycursor.execute("INSERT INTO ligands (ligand, ligand_id, uniprotpos, \
+                         pfamPos, acc, gene, PDB, pubmed) \
+                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", \
+                        (ligand, ligand_id, uniprotpos, pfamPos, acc, gene, pdbs, pubmeds))
 
 def createDicForDSSP(dic, position, mutation, value):
     if position not in dic: dic[position] = {}
@@ -661,6 +693,8 @@ def fetch_map_fasta2aln():
             if aa not in ['-', '.']:
                 map_fasta2aln[acc][current_position] = alnpos
                 current_position += 1
+    print (map_fasta2aln['P08581'][1100])
+    # sys.exit()
     return map_fasta2aln
 
 def runHmmsearch(acc, path2fasta):
@@ -771,7 +805,7 @@ def create_kinases_table(mycursor)->None:
             if acc in mappings:
                 if uniprotPos in mappings[acc]['positions']:
                     if mappings[acc]['positions'][uniprotPos]['uniprotAA'] != uniprotAA:
-                        print ('ERROR', uniprotPos, uniprotAA, mappings[acc]['positions'][uniprotPos]['uniprotAA'])
+                        print ('ERROR', acc, gene, uniprotPos, uniprotAA, mappings[acc]['positions'][uniprotPos]['uniprotAA'])
                         sys.exit()
                     pfamPos = mappings[acc]['positions'][uniprotPos]['pfamPos']
                     pfamAA = mappings[acc]['positions'][uniprotPos]['pfamAA']
@@ -783,6 +817,9 @@ def create_kinases_table(mycursor)->None:
                     alnPos = map_fasta2aln[acc][uniprotPos]
                 
             name = acc+'/'+uniprotAA+str(uniprotPos)
+            # if acc == 'P08581' and int(uniprotPos) == 1100:
+            #     print (name, uniprotPos, uniprotAA, alnPos, pfamPos, pfamAA, acc, uniprot_id)
+            #     sys.exit()
             row = []
             row.append(uniprotPos)
             row.append(uniprotAA)
@@ -827,14 +864,16 @@ if __name__ == '__main__':
     if db_exists == False: mycursor.execute("CREATE DATABASE "+db_name)
     mycursor.execute("use "+db_name)
     '''
-
+    # fetch_map_fasta2aln()
     # Create tables
     # print ('Creating HMM table')
-    # create_hmm_table(mycursor)
+    create_hmm_table(mycursor)
     # print ('Creating kinases table')
-    # create_kinases_table(mycursor)
-    print ('Creating mutation table')
+    create_kinases_table(mycursor)
+    # print ('Creating mutation table')
     create_mutations_table(mycursor)
+    # print ('Creating ligands table')
+    # create_ligands_table(mycursor)
     # print ('Creating homology table')
     # create_homology_table(mycursor)
     # print ('Creating IUPRED table')
@@ -844,9 +883,9 @@ if __name__ == '__main__':
     # print ('Creating DSSP tables')
     # create_dssp_tables(mycursor)
     # print ('Creating PTM table')
-    # create_ptm_table(mycursor)
+    create_ptm_table(mycursor)
     # print ('Creating alignment table')
-    # create_alignment_table(mycursor)
+    create_alignment_table(mycursor)
     mydb.commit()
 
     # Use mysqldump to create backup file

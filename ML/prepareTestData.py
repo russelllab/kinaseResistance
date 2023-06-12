@@ -17,6 +17,7 @@ import pickle
 import pandas as pd
 from cls import Kinase, Mutation
 import argparse
+import shutil
 import gzip, sys
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
@@ -60,7 +61,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     row = ['Input', 'Acc','Gene','UniProtID', 'ProteinName', 'Mutation','Region', 'Dataset']
     row += ['AdjacentSites', 'alnPos', 'hmmPos','hmmSS','hmmScoreWT','hmmScoreMUT','hmmScoreDiff']
     row += ['Phosphomimic', 'Acetylmimic']
-    row += ['IUPRED']
+    row += ['IUPRED', 'ATPcount']
     row += ['ncontacts', 'nresidues', 'mech_intra']
     row += ['phi_psi', 'sec', 'burr', 'acc']
     row += ['ChargesWT','ChargesMUT','ChargesDiff']
@@ -72,6 +73,11 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     row += [aa+'_WT' for aa in AA]
     row += [aa+'_MUT' for aa in AA]
     row += ['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']
+    for position in range(startWS, endWS+1):
+        for mut_type in ['A', 'D', 'R']:
+            for aa in AA:
+                row += [mut_type+'_'+aa+'_'+str(position) + '_pfam']
+
     for position in range(startWS, endWS+1):
         row += [mut_type+'_'+str(position) for mut_type in MUT_TYPES]
         row += [mut_type+'_'+str(position)+'_pfam' for mut_type in MUT_TYPES]
@@ -135,13 +141,34 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         mutation = name.split('/')[1].rstrip()
 
         # Retrieve acc and gene of the input kinase
-        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, kinase)
+        acc, gene, uniprot_id, protein_name, protein_length = fetchData.getAccGene(mycursor, kinase)
 
         # Check if the acc is None, which means
         # that the input kinase was not found in
         # the DB
         if acc is None:
             entries_not_found[name] = 'Protein identifier ' + kinase + ' not found. Try another identifier.'
+            continue
+
+        # Check if the mutation position is greater than the protein length
+        # or if the mutation is in the first or last 2 residues
+        if int(mutation[1:-1]) > protein_length:
+            entries_not_found[name] = 'Position ' + str(mutation[1:-1]) +\
+                                    ' is greater than the protein length'\
+                                    + str(protein_length) + '.' 
+            continue
+        if int(mutation[1:-1]) < 3:
+            entries_not_found[name] = 'Position ' + str(mutation[1:-1]) +\
+                                    ' is less than 3. Given the window size of 5, ' +\
+                                    'the mutation position should be greater than 2 and'+\
+                                    ' less than the protein length minus 2.'
+            continue
+        if int(mutation[1:-1]) > protein_length - 2:
+            entries_not_found[name] = 'Position ' + str(mutation[1:-1]) +\
+                                    ' is greater than the protein length'\
+                                    + str(protein_length) + '. Given the window size of 5, ' +\
+                                    'the mutation position should be greater than 2 and'+\
+                                    ' less than the protein length minus 2.'
             continue
 
         # Run some other checks:
@@ -155,9 +182,12 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             entries_not_found[name] += ' not found in ' + kinase + '.'
             continue
         if error == 2:
-            entries_not_found[name] = 'Found ' + aa_found + ' at position '
+            entries_not_found[name] = 'Did you mean ' + aa_found + mutation[1:] + '? '+\
+                                    'We found a ' + aa_found + ' at position '
             entries_not_found[name] += str(mutation[1:-1]) + ' in ' + kinase
-            entries_not_found[name] += ' instead of ' + mutation[0] + '. Please ensure that you are using the canonical isoform.'
+            entries_not_found[name] += ' instead of a ' + mutation[0] +\
+                                    '. Please ensure that you are using the canonical '+\
+                                    'isoform from UniProt (Release 2023_02).'
             continue
         
         # Make dictionary of Kinases
@@ -188,9 +218,11 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         if mech_intra_row == None: continue
         dssp_row = fetchData.getDSSPScores(mycursor, acc, wtAA, position, mutAA)
         if dssp_row == None: continue
+        atp_count = fetchData.getATPbindingScores(mycursor, acc, position)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
         is_acetylmimic = kinases[acc].mutations[mutation].checkAcetylmimic()
         charges_row = kinases[acc].mutations[mutation].findChangeInCharge()
+        count_aa_change_row = fetchData.getCountAAchange(mycursor, acc, position, kinases, ws=WS)
         adr_row = fetchData.getADRvector(mycursor, acc, position, kinases, WS)
         
         # store features in 2D array
@@ -200,12 +232,14 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         row.append(is_phosphomimic)
         row.append(is_acetylmimic)
         row.append(iupred_score)
+        row.append(atp_count)
         row += [item for item in mech_intra_row]
         row += [item for item in dssp_row]
         row += [item for item in charges_row]
         row += [item for item in ptm_row]
         row += [item for item in aa_row]
         row += [item for item in homology_row]
+        row += [int(item) for item in count_aa_change_row]
         row += [item for item in adr_row]
         # print (row)
         data.append(row)
@@ -266,10 +300,15 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     '''
     
     # Print the results
-    print (''.join(['-' for i in range(50)]))
-    outputText = '#UserInput\tAcc\tGN\tUniProtID\tMutation\tHMMpos\tRegion\tPTM\tKnownADR\tNeighSites'
-    for model in MODEL_NAMES: outputText += '\t'+model
-    outputText += '\n'
+    terminal_width, terminal_height = shutil.get_terminal_size()
+    print (''.join(['-' for i in range(terminal_width)]))
+    # outputText = '#UserInput\tAcc\tGN\tUniProtID\tMutation\tHMMpos\tRegion\tPTM\tKnownADR\tNeighSites'
+    # for model in MODEL_NAMES: outputText += '\t'+model
+    # outputText += '\n'
+    outputDict = {'UserInput': [], 'UniProtAcc': [], 'GeneName': [], 'UniProtID': [],
+                  'Mutation': [], 'HMMpos': [], 'Region': [], 'PTM': [], 'KnownADR': [],
+                  'NeighSites': []}
+    for model in MODEL_NAMES: outputDict[model] = []
     # for row, predictAD, predictRN in zip(test_data, clfAD.predict_proba(featuresAD), clfRN.predict_proba(featuresRN)):
     for count, row in enumerate(test_data):
         ## Set prediction proba to NA if the position is not in the HMM
@@ -302,11 +341,22 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                 scores.append('NA')
             else:
                 scores.append(str(round(dic_predictions[model][count][1], 3)))
-            # outputText += str(prediction_probAD) + '\t' +str(prediction_probRN) + '\n'
-        outputText += user_input +'\t'+ acc +'\t'+ gene +'\t'+ uniprot_id +'\t' + mutation +'\t'
-        outputText += str(hmmPos) +'\t'+ region + '\t' + ptmType + '\t' + ','.join(mutType) + '\t'
-        outputText += adjacentSites + '\t'
-        outputText += '\t'.join(scores) + '\n'
+        # outputText += user_input +'\t'+ acc +'\t'+ gene +'\t'+ uniprot_id +'\t' + mutation +'\t'
+        # outputText += str(hmmPos) +'\t'+ region + '\t' + ptmType + '\t' + ','.join(mutType) + '\t'
+        # outputText += adjacentSites + '\t'
+        # outputText += '\t'.join(scores) + '\n'
+        outputDict['UserInput'].append(user_input)
+        outputDict['UniProtAcc'].append(acc)
+        outputDict['GeneName'].append(gene)
+        outputDict['UniProtID'].append(uniprot_id)
+        outputDict['Mutation'].append(mutation)
+        outputDict['HMMpos'].append(hmmPos)
+        outputDict['Region'].append(region)
+        outputDict['PTM'].append(ptmType)
+        outputDict['KnownADR'].append(','.join(mutType))
+        outputDict['NeighSites'].append(adjacentSites)
+        for model, score in zip(MODEL_NAMES, scores):
+            outputDict[model].append(score)
         if len(mutType) == 0: mutType = '-'
         else: mutType = ''.join(mutType)
         results['predictions'][name] = {
@@ -337,9 +387,11 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                 # print (len(dic_features[model][count]))
                 # for f, hh in zip(columns_to_consider, dic_features[model][count]):
                 #     print (f, hh)
-
+    
+    outputDF = pd.DataFrame(outputDict)
     if outputFile != None: gzip.open(outputFile+'.gz', 'wt').write(outputText)
-    else: print (outputText)
+    # else: print (outputText)
+    else: print (outputDF.to_string(index=False))
     return results
     # yield results
 

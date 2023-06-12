@@ -165,7 +165,7 @@ for row in mycursor.fetchall():
 trainMat = 'Acc\tGene\tMutation\tDataset\t'
 trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
 trainMat += 'Phosphomimic\tAcetylmimic\t'
-trainMat += 'IUPRED\t'
+trainMat += 'IUPRED\tATPcount\t'
 trainMat += '\t'.join(['ncontacts', 'nresidues', 'mech_intra']) + '\t'
 trainMat += '\t'.join(['phi_psi', 'sec', 'burr', 'acc']) + '\t'
 trainMat += 'ChargesWT\tChargesMUT\tChargesDiff\t'
@@ -177,11 +177,20 @@ for position in range(startWS, endWS+1):
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
 trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+
+for position in range(startWS, endWS+1):
+    for mut_type in ['A', 'D', 'R']:
+        for aa in AA:
+            trainMat += mut_type+'_'+aa+'_'+str(position) + '_pfam\t'
+    # trainMat += ('_'+str(position)+'\t').join(['A', 'D', 'R']) + '_'+str(position)+'\t'
+    # trainMat += ('_'+str(position)+'_pfam\t').join(['A', 'D', 'R']) + '_' + str(position) + '_pfam\t'
+
 for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'\t').join(['A', 'D', 'R']) + '_'+str(position)+'\t'
     trainMat += ('_'+str(position)+'_pfam\t').join(['A', 'D', 'R']) + '_' + str(position) + '_pfam\t'
 # trainMat += '_known\t'.join(['A', 'D', 'R']) + '_known\t'
 trainMat += 'MUT_TYPE\n'
+header = trainMat.split('\t')
 # print (trainMat)
 # print ('_WT\t'.join(AA) + '\t')
 # print (AA)
@@ -208,7 +217,7 @@ for acc in tqdm(kinases):
         if hmmPos == '-': continue
         iupred_score = fetchData.getIUPredScore(mycursor, acc, wtAA, position, mutAA)
         if iupred_score == None: continue
-        ptm_row = fetchData.getPTMscore(mycursor, acc, position, WS)
+        ptm_row = fetchData.getPTMscore(mycursor, acc, position, ws=WS)
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(mycursor, acc, wtAA, position, mutAA)
         if homology_row == None: continue
@@ -216,10 +225,12 @@ for acc in tqdm(kinases):
         if mech_intra_row == None: continue
         dssp_row = fetchData.getDSSPScores(mycursor, acc, wtAA, position, mutAA)
         if dssp_row == None: continue
+        atp_count = fetchData.getATPbindingScores(mycursor, acc, position)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
         is_acetylmimic = kinases[acc].mutations[mutation].checkAcetylmimic()
         charges_row = kinases[acc].mutations[mutation].findChangeInCharge()
-        adr_row = fetchData.getADRvector(mycursor, acc, position, kinases, WS)
+        count_aa_change_row = fetchData.getCountAAchange(mycursor, acc, position, kinases, ws=WS)
+        adr_row = fetchData.getADRvector(mycursor, acc, position, kinases, ws=WS)
         # print (
         #     acc +'\t'+ mutation +'\t'+ str(hmmPos) +'\t'+
         #     str(hmmScoreWT)+'\t' +str(hmmScoreMUT)+'\t'+ ','.join(ptm_row) + '\t' +
@@ -235,12 +246,14 @@ for acc in tqdm(kinases):
         row.append(is_phosphomimic)
         row.append(is_acetylmimic)
         row.append(float(iupred_score))
+        row.append(int(atp_count))
         row += [int(item) for item in mech_intra_row]
         row += [int(item) for item in dssp_row]
         row += [int(item) for item in charges_row]
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
         row += [int(item) for item in homology_row]
+        row += [int(item) for item in count_aa_change_row]
         row += [int(item) for item in adr_row]
         data.append(row)
 
@@ -248,15 +261,20 @@ for acc in tqdm(kinases):
         trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t' + mutation_obj.dataset + '\t'
         trainMat += str(hmmPos) + '\t' + str(hmmSS) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
         trainMat += str(is_phosphomimic) + '\t' + str(is_acetylmimic) + '\t'
-        trainMat += str(iupred_score) + '\t'
+        trainMat += str(iupred_score) + '\t' + str(atp_count) + '\t'
         trainMat += '\t'.join([str(item) for item in mech_intra_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in dssp_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in charges_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+        trainMat += '\t'.join([str(item) for item in count_aa_change_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
         trainMat += mut_types + '\n'
+        # print (trainMat)
+        # for value, head in zip(trainMat.split('\n')[1].split('\t'), trainMat.split('\n')[0].split('\t')):
+        #     print (head, value)
+        # sys.exit()
 
         if mut_types in ['activating', 'increase']:
             mut_types_colors.append('green')

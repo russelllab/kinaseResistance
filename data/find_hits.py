@@ -22,6 +22,7 @@ for line in open(sys.argv[1], 'r'):
         ## Pseudokinases with multiple domains are removed later
         ## after running the hmmsearch
         if line.split('|')[1] in inactive_domains or line.split('|')[1] in pseudokinases:
+            flag = 0
             continue
         kinase = line.split('>')[1].split()[0].strip()
         kinases[kinase] = ''

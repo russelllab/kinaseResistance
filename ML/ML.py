@@ -28,6 +28,7 @@ import xgboost as xgb
 import pickle
 import argparse
 
+## Old
 # 5 3 3 100 LvNA
 # 5 3 3 100 AvNL
 # 5 4 4 100 AIvNLD
@@ -35,9 +36,16 @@ import argparse
 # 5 3 5 50 AIvLD
 # 5 3 4 100 AvL
 # 5 4 4 100 RvN
+## New
+# 5 5 3 100 RvN
+# 5 10 7 100 LDvNAI
+# 5 5 7 100 AIvNLD
+# 5 7 5 100 AIvLD
+# 5 5 3 100 AvL
+# 5 10 3 100 AvNL
+# 5 12 4 100 LvNA
 
-
-RANDOM_STATE = 1
+RANDOM_STATE = 100
 ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10
@@ -70,8 +78,10 @@ def makeSets(positives, negatives):
 
 
 def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
-        positives, negatives,
-        scaler_filename=None, model_filename=None):
+        name,
+        scaler_filename=None, model_filename=None, column_filename=None):
+    positives = name.split('v')[0]
+    negatives = name.split('v')[1]
     df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t')
     df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.025, regex=True)
     df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
@@ -94,17 +104,24 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         'Dataset',
                         'hmmPos',
                         'hmmSS',
+                        # 'ATPcount',
                         # 'ChargesWT',
                         # 'ChargesMUT',
                         'ChargesDiff',
+                        # 'ATPcount',
                         #   'A_known',
                         #   'D_known',
                         #   'R_known',
                         #   'Phosphomimic',
+                        #   'Acetylmimic',
                         #   'hmmScoreWT',
                         #   'hmmScoreMUT',
                           'hmmScoreDiff'
                         ]
+
+    # columns_to_exclude += ['ncontacts', 'nresidues', 'mech_intra']
+    # columns_to_exclude += ['phi_psi', 'sec', 'burr', 'acc']
+    # columns_to_exclude += ['IUPRED']
     '''
     for aa in AA:
         # if aa not in ['S', 'T', 'Y']:
@@ -116,56 +133,60 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     ############
     pfam_ptm_cols = ['ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
     for i in range(-5,6):
-        if i in [-1, 0, 1]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
     pfam_ptm_cols = ['p_pfam']
     for i in range(-5,6):
-        if i in [-1, 0, 1]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
     ############
 
     ptm_cols = ['ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
     for i in range(-5,6):
-        if i in [-1, 0, 1]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
     ptm_cols = ['p']
     for i in range(-5,6):
-        if i in [-1, 0, 1]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
     ############
 
     adr_cols = ['A', 'D', 'R']
+    # adr_cols = ['D', 'R']
     for i in range(-5, 6):
-        if i in [-1, 1]: continue
+        # if i in [-2, -1, 1, 2]: continue
         for col in adr_cols:
             columns_to_exclude.append(col+'_'+str(i))
 
     ############
 
     adr_cols = ['A_pfam', 'D_pfam', 'R_pfam']
+    # adr_cols = ['D_pfam', 'R_pfam']
     for i in range(-5, 6):
-        if i in [-1, 0, 1]: continue
+        # if i in [-2, -1, 0, 1, 2]: continue
         for col in adr_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
     df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
+    # print (df)
 
     # scaler = MinMaxScaler()
     # columns_to_scale = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
     # columns_to_scale += ['hmmScoreDiff', 'hmmScoreWT', 'hmmScoreMUT']
     # df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
 
-    print ('columns to consider', df.columns.to_numpy())
+    # print ('columns to consider', df.columns.to_numpy())
     columns_to_consider = '\n'.join(df.columns.to_numpy())
     # print (columns_to_consider)
-    open('columns_to_consider.txt', 'w').write(columns_to_consider)
+    if column_filename is not None:
+        open(column_filename, 'w').write(columns_to_consider)
 
     feature_names = df.columns.to_numpy()
     feature_names = feature_names[3:-1]
@@ -210,17 +231,18 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     # for (test_name, y_pred) in zip(test_names, y_test):
     #     print (test_name, y_pred)
     # sys.exit()
+    # print (X)
 
     X = np.array(X)
     scaler = MinMaxScaler()
     scaler.fit(X)
     X = scaler.transform(X)
     X_test = scaler.transform(X_test)
-    for name, row in zip(test_names, X_test):
-        if 'A84T' in name:
-            print (row)
-            print (len(row))
-            break
+    # for name, row in zip(test_names, X_test):
+    #     if 'A84T' in name:
+    #         print (row)
+    #         print (len(row))
+    #         break
     # sys.exit()
     # pickle.dump(scaler, open('finalized_scaler_RN.pkl', 'wb'))
     if scaler_filename is not None:
@@ -308,10 +330,13 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     elif ALGO == 'RF':
         parameters = {
                     'max_depth': max_depth,
+                    # 'max_depth': [None],
                     'min_samples_split': min_samples_split,
                     'min_samples_leaf': min_samples_leaf,
+                    'criterion': ['gini'],
                     # 'max_features': ['sqrt', 'log2'],
                     'max_features': ['log2'],
+                    # 'max_features': ['sqrt'],
                     'n_estimators': n_estimators
                     }
         # parameters = {
@@ -331,7 +356,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS)
         model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc', n_jobs=N_JOBS)
         model.fit(X, y)
-        print ('mean_test_score', model.cv_results_['mean_test_score'])
+        print (name, 'mean_test_score', model.cv_results_['mean_test_score'])
         # print (model.cv_results_['mean_train_score'])
         clf = RandomForestClassifier(
                 n_estimators=model.best_params_['n_estimators'],
@@ -339,6 +364,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 min_samples_split=model.best_params_['min_samples_split'],
                 max_depth=model.best_params_['max_depth'],
                 max_features=model.best_params_['max_features'],
+                criterion=model.best_params_['criterion'],
                 random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
                 )
 
@@ -347,7 +373,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     ## Best model hyper-parameters
     print ('Best model found during the CV')
     print (model.best_params_)
-    print (model.predict_proba(X))
+    # print (model.predict_proba(X))
     for y_pred, y_true in zip(model.predict_proba(X), y):
         open('ai_ld_roc.txt', 'a').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
     # sys.exit()
@@ -500,8 +526,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         clf = RandomForestClassifier(
                     n_estimators=model.best_params_['n_estimators'],
                     min_samples_leaf=model.best_params_['min_samples_leaf'],
+                    min_samples_split=model.best_params_['min_samples_split'],
                     max_depth=model.best_params_['max_depth'],
                     max_features=model.best_params_['max_features'],
+                    criterion=model.best_params_['criterion'],
                     random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
                     )
     clf.fit(X,y)
@@ -549,10 +577,11 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     if model_filename is not None:
         pickle.dump(clf, open('model_'+model_filename+'.sav', 'wb'))
 
-    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive']
+    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance']
     for test_type in test_types:
         print (''.join(['#' for i in range(1,25)]))
-        if test_type in ['activatingresistance', 'increaseresistance']:
+        if test_type in ['activatingresistance']:
+        # if test_type in ['activatingresistance', 'increaseresistance']:
         # if test_type in ['activatingresistance', 'increaseresistance', 'resistance']:
             X_sub_test = []; y_sub_test = []
             for test_name, p, q in zip(test_names, X_test, y_test):
@@ -593,6 +622,7 @@ if __name__ == '__main__':
     parser.add_argument('name', help='AIvLD or AIvNLD or LDvNAI or RvN')
     parser.add_argument('--s', help='filename of the scaler to be saved')
     parser.add_argument('--m', help='filename of the model to be saved')
+    parser.add_argument('--c', help='filename where the columns to consider must be saved')
     args = parser.parse_args()
 
     # set input file to default if not provided
@@ -602,13 +632,17 @@ if __name__ == '__main__':
     n_estimators = int(args.n_estimators)
     positives = args.name.split('v')[0]
     negatives = args.name.split('v')[1]
+    name = args.name
 
     if args.s: scaler_filename = args.s
     else: scaler_filename = None
     
     if args.m: model_filename = args.m
     else: model_filename = None
+
+    if args.c: column_filename = args.c
+    else: column_filename = None
     # print ('hello')
     main([max_depth],[min_samples_split],[min_samples_leaf], [n_estimators],\
-        positives=positives, negatives=negatives,
-        scaler_filename=scaler_filename, model_filename=model_filename)
+        name = name,
+        scaler_filename=scaler_filename, model_filename=model_filename, column_filename=column_filename)

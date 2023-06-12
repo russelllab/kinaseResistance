@@ -100,15 +100,15 @@ def getAccGene(mycursor, name):
     '''Function to fetch acc and gene from the DB'''
     check_with = ['acc', 'gene', 'uniprot_id']
     for check in check_with:
-        mycursor.execute("select acc, gene, uniprot_id, protein_name\
+        mycursor.execute("select acc, gene, uniprot_id, protein_name, fasta\
                          from kinases where "+check+" = %s", (name,))
         hits = mycursor.fetchone()
         if hits is not None: break
     if hits is None:
         print (f'Neither acc nor gene with name {name} found')
-        return None, None, None, None
-    acc, gene, uniprot_id, protein_name = hits[0], hits[1], hits[2], hits[3]
-    return acc, gene, uniprot_id, protein_name
+        return None, None, None, None, None
+    acc, gene, uniprot_id, protein_name, protein_length = hits[0], hits[1], hits[2], hits[3], len(hits[4])
+    return acc, gene, uniprot_id, protein_name, protein_length
 
 def checkInputPositionAA(acc, mutation, mycursor):
 	'''
@@ -472,6 +472,30 @@ def getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA):
             wt_bitscore = bitscore
     return pfampos, wt_bitscore, mut_bitscore, 0
 
+def getATPbindingScores(mycursor, acc, position):
+    count_atp = []
+    mycursor.execute("SELECT pfampos FROM positions \
+                     WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+    hits = mycursor.fetchone()
+    # print (acc, wtAA, position, mutAA, hits)
+    if hits == None:
+        print (acc, position, hits)
+        return 0
+    pfampos = hits[0]
+    # print (f'pfampos of {acc}/{wtAA}{position}{mutAA} is {pfampos}')
+    mycursor.execute("SELECT ligand, acc FROM ligands \
+                        WHERE pfampos = %s", (str(pfampos),))
+    hits = mycursor.fetchall()
+    if hits is None:
+        return count_atp
+    for hit in hits:
+        ligand, kinase = hit
+        if 'ATP' in ligand: count_atp.append(kinase)
+    count_atp = list(set(count_atp))
+    count_atp = 1 if len(count_atp) > 0 else 0
+    # return len(count_atp)
+    return count_atp
+
 def getPTMscore(mycursor, acc, mutation_position, ws=0):
     if ws > 0: ws -= 1
     ws = int(ws/2)
@@ -531,10 +555,91 @@ def getPTMscore(mycursor, acc, mutation_position, ws=0):
     #     sys.exit()
     return row
 
+def getCountAAchange(mycursor, acc, mutation_position, kinases, ws=0):
+    if ws > 0: ws -= 1
+    ws = int(ws/2)
+    mut_types = ['A', 'D', 'R']
+    dic_mut_types = {'A': ['activating', 'increase'], 'D': ['loss', 'decrease'], 'R': ['resistance']}
+    # mut_types = ['activating', 'increase', 'loss', 'decrease', 'resistance']
+    adr_row = []
+    for position in range(mutation_position-ws, mutation_position+ws+1):
+        '''mycursor.execute("SELECT mut_type FROM mutations \
+                            WHERE acc = %s and wtpos = %s", (acc, str(position)))
+        hits = mycursor.fetchall()
+        if hits is None:
+            adr_row.extend([0, 0, 0])
+            continue
+        mut_types_at_position = []
+        for entry in hits:
+            mut_types_at_position.append(entry[0])
+        # print (acc, position, mut_types_at_position)
+        for mut_type in mut_types:
+            categories = dic_mut_types[mut_type]
+            # flag = 0
+            count = 0
+            for category in categories:
+                if category in mut_types_at_position:
+                    # adr_row.append(1)
+                    # flag = 1
+                    # break
+                    count += 1
+            # if flag == 0:
+            #     adr_row.append(0)
+            adr_row.append(count)'''
+
+        mycursor.execute("SELECT pfampos FROM positions \
+                            WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
+        hmmPos = mycursor.fetchone()
+        if hmmPos is None:
+            adr_row.extend([0, 0, 0])
+            continue
+        else:
+            hmmPos = hmmPos[0]
+        mycursor.execute("SELECT wtaa, mutaa, mut_type FROM mutations \
+                        WHERE pfampos = %s", (str(hmmPos),))
+        hits = mycursor.fetchall()
+        # print (hits)
+        mut_types_at_hmmpos = []
+        wtaas_at_hmmpos = []
+        mutaas_at_hmmpos = []
+        for entry in hits:
+            wtaas_at_hmmpos.append(entry[0])
+            mutaas_at_hmmpos.append(entry[1])
+            mut_types_at_hmmpos.append(entry[2])
+        for mut_type in mut_types:
+            dic_count = {}
+            categories = dic_mut_types[mut_type]
+            for wtaa, mutaa, mut_type_at_hmmpos in zip(wtaas_at_hmmpos, mutaas_at_hmmpos, mut_types_at_hmmpos):
+                # flag = 0
+                count = 0
+                for category in categories:
+                    if category == mut_type_at_hmmpos:
+                        # print (wtaa, mutaa, mut_type_at_hmmpos, category)
+                        if wtaa not in dic_count: dic_count[wtaa] = 0
+                        if mutaa not in dic_count: dic_count[mutaa] = 0
+                        dic_count[wtaa] -= 1
+                        dic_count[mutaa] += 1
+            
+            for aa in AA:
+                if aa not in dic_count:
+                    adr_row.append(0)
+                else:
+                    # print (aa, dic_count[aa], mut_type, dic_count)
+                    adr_row.append(dic_count[aa])
+            # adr_row.append(count)
+            # if mut_type in mut_types_at_hmmpos: adr_row.append(1)
+            # else: adr_row.append(0)
+    # print (acc, kinases[acc].gene, mutation_position, adr_row)
+    # sys.exit()
+
+    return adr_row
+
 def getADRvector(mycursor, acc, mutation_position, kinases, ws=0):
     if ws > 0: ws -= 1
     ws = int(ws/2)
     mut_types = ['A', 'D', 'R']
+    dic_mut_types = {'A': ['activating', 'increase'], 'D': ['loss', 'decrease'], 'R': ['resistance']}
+    # mut_types = ['activating', 'increase', 'loss', 'decrease', 'resistance']
     adr_row = []
     for position in range(mutation_position-ws, mutation_position+ws+1):
         mycursor.execute("SELECT mut_type FROM mutations \
@@ -548,8 +653,19 @@ def getADRvector(mycursor, acc, mutation_position, kinases, ws=0):
             mut_types_at_position.append(entry[0])
         # print (acc, position, mut_types_at_position)
         for mut_type in mut_types:
-            if mut_type in mut_types_at_position: adr_row.append(1)
-            else: adr_row.append(0)
+            categories = dic_mut_types[mut_type]
+            # flag = 0
+            count = 0
+            for category in categories:
+                count += mut_types_at_position.count(category)
+                # if category in mut_types_at_position:
+                #     # adr_row.append(1)
+                #     # flag = 1
+                #     # break
+                #     count += 1
+            # if flag == 0:
+            #     adr_row.append(0)
+            adr_row.append(count)
 
         mycursor.execute("SELECT pfampos FROM positions \
                             WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
@@ -566,10 +682,22 @@ def getADRvector(mycursor, acc, mutation_position, kinases, ws=0):
         for entry in hits:
             mut_types_at_hmmpos.append(entry[0])
         for mut_type in mut_types:
-            # hmmPos = kinases[acc].returnhmmPos(position)
-            # if str(hmmPos) in pkinase_act_deact_res[mut_type]: adr_row.append(1)
-            if mut_type in mut_types_at_hmmpos: adr_row.append(1)
-            else: adr_row.append(0)
+            categories = dic_mut_types[mut_type]
+            # flag = 0
+            count = 0
+            for category in categories:
+                count += mut_types_at_hmmpos.count(category)
+                # if category in mut_types_at_hmmpos:
+                #     print (acc, position, hmmPos, mut_type, category)
+                #     # adr_row.append(1)
+                #     # flag = 1
+                #     # break
+                #     count += 1
+            # if flag == 0:
+            #     adr_row.append(0)
+            adr_row.append(count)
+            # if mut_type in mut_types_at_hmmpos: adr_row.append(1)
+            # else: adr_row.append(0)
     # print (acc, kinases[acc].gene, mutation_position, adr_row)
     # sys.exit()
 

@@ -526,5 +526,5 @@ sp|Q7Z695|ADCK2_HUMAN -            626 Pkinase              PF00069.28   264    
 # Target file:     humanKinases.fasta
 # Option settings: hmmsearch --domtblout humanKinasesHits.hmmsearch --noali --domE 1.0 ../pfam/Pkinase.hmm humanKinases.fasta 
 # Current dir:     /home/gurdeep/projects/kinaseResistance/data
-# Date:            Fri May 26 17:33:42 2023
+# Date:            Sun Jun 11 16:24:06 2023
 # [ok]

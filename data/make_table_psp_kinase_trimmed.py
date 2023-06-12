@@ -9,14 +9,14 @@ import argparse
 
 parser = argparse.ArgumentParser(description='', epilog='End of help.')
 parser.add_argument('d', help='name of domain to search for')
-parser.add_argument('h', help='path to HMMSEARCH output')
+parser.add_argument('m', help='path to MAPPINGS')
 parser.add_argument('f', help='path to kinases sequences in FASTA format')
 parser.add_argument('o', help='path to output file')
 args = parser.parse_args()
 
 # set input file to default if not provided
 PFAM_DOM = args.d #['humanKinasesHitsSplitTrimmed']
-HMMSEARCH_MAPPINGS = args.h # 'humanKinasesHitsSplitHmmsearchTrimmedMappings.tsv.gz'
+MAPPINGS_FILE = args.m # 'humanKinasesHitsSplitHmmsearchTrimmedMappings.tsv.gz'
 PATH_TO_FASTA = args.f # 'humanKinases.fasta'
 OUT_FILE = args.o #'Kinase_psites_hits_split_trimmed.tsv'
 OUT_TEXT = '#Acc\tGene\tPfam_Dom\tPfam_Position\tPfam_Residue\tPTM_type\n'
@@ -124,7 +124,7 @@ for count, row in enumerate([
 # kinases_dic -> acc -> kinase_to_pfam -> pfam_dom -> uniprot_pos -> domain_pos
 pfam = {}
 flag = 0
-for line in gzip.open(HMMSEARCH_MAPPINGS, 'rt'):
+for line in gzip.open(MAPPINGS_FILE, 'rt'):
     # print (line)
     if line[0] == '#': continue
     # print (line.split()[0])
@@ -134,52 +134,12 @@ for line in gzip.open(HMMSEARCH_MAPPINGS, 'rt'):
     kinasePosition = int(line.split()[2].rstrip())
     kinases_dic[acc].kinase_to_pfam[kinasePosition] = domainPosition
     pfam[domainPosition] = domainAA
-
-    '''if len(line.split()) == 0:
-        continue
-    if line[:2] == '>>':
-        ## lines with kinase start
-        kinase = line.split('>>')[1].lstrip().rstrip().split()[0]
-        acc = kinase.split('|')[1]
-        # Raise an error if the kinase instance not found
-        if acc not in kinases_dic:
-            # raise ValueError(f'{kinase} not in PSP')
-            # print (f'{kinase} not in PSP')
-            flag = 0
-            continue
-        if PFAM_DOM not in kinases_dic[acc].kinase_to_pfam:
-            kinases_dic[acc].kinase_to_pfam[PFAM_DOM] = {}
-        flag = 1
-    elif line.split()[0] == PFAM_DOM and flag == 1:
-        ## lines with Pkinase domain
-        # print (line)
-        pfam_start, pfam_seq, pfam_end = int(line.split()[1]), line.split()[2], int(line.split()[3])
-        count = int(line.split()[1])
-        for char in pfam_seq:
-            if char not in ['.', '-']:
-                pfam[count] = char+str(count)
-                count += 1
-    elif flag == 1:
-        if kinase == line.split()[0]:
-            # print (acc, kinase, line.split())
-            ## lines with kinase
-            kin_start, kin_seq, kin_end = line.split()[1], line.split()[2], line.split()[3]
-            if kin_start == '-':
-                print (line)
-                continue
-            kin_start, kin_end = int(kin_start), int(kin_end)
-            for pfam_char, kin_char in zip(pfam_seq, kin_seq):
-                if pfam_char not in ['.', '-'] and kin_char not in ['.', '-']:
-                    kinases_dic[acc].kinase_to_pfam[PFAM_DOM][kin_start] = pfam_start
-                    pfam_start += 1
-                    kin_start += 1
-                elif pfam_char in ['.', '-']:
-                    kin_start += 1
-                elif kin_char in ['.', '-']:
-                    pfam_start += 1
-                else:
-                    print ('Exception found', kinase)
-                    sys.exit()'''
+    '''acc = line.split()[0].split('|')[1]
+    domainPosition = int(line.split()[4].rstrip())
+    domainAA = line.split()[3].rstrip()
+    kinasePosition = int(line.split()[2].rstrip())
+    kinases_dic[acc].kinase_to_pfam[kinasePosition] = domainPosition
+    pfam[domainPosition] = domainAA'''
 
 # Map PTM sites to the kinase domain and
 # For those that don't map, print the domain
