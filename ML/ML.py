@@ -375,9 +375,9 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print (model.best_params_)
     # print (model.predict_proba(X))
     for y_pred, y_true in zip(model.predict_proba(X), y):
-        open('ai_ld_roc.txt', 'a').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
+        open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
     # sys.exit()
-    '''
+    
     tprs = []
     aucs = []
     mean_fpr = np.linspace(0, 1, 100)
@@ -483,11 +483,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         ylim=[-0.05, 1.05],
         xlabel="False Positive Rate",
         ylabel="True Positive Rate",
-        title=f"Mean ROC curve with variability",
+        title=f"Mean ROC curve with variability of {N_SPLITS} folds in {name}",
     )
     ax.axis("square")
     ax.legend(loc="lower right")
-    plt.show()
+    plt.grid(linewidth=0.5)
+    plt.savefig(name+'_roc.svg', format='svg', dpi=1000)
     #####################################################
         
 
@@ -501,7 +502,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
     print ('Number of act mutations in the train set:', np.count_nonzero(y))
     print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
-    '''
+    
     ## Fit the best model on the data
     if ALGO == 'LR':
         clf = LogisticRegression(

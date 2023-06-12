@@ -127,4 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.gitignore
 webApp/static/predictor/output/*
+kp2.sql
