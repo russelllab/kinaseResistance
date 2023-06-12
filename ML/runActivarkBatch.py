@@ -10,6 +10,10 @@ from cls import Kinase, Mutation
 
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
+accs_to_consider = []
+for line in open('batch1.txt', 'r'):
+    accs_to_consider.append(line.rstrip().lstrip())
+
 mydb = fetchData.connection(db_name='kinase_project2')
 mydb.autocommit = True
 mycursor = mydb.cursor()
@@ -22,6 +26,7 @@ for row in hits :
     if pfampos == '-': continue
     # print (pfampos)
     acc = name.split('/')[0]
+    if acc not in accs_to_consider: comtinue
     if acc not in kinases: kinases[acc] = []
     kinases[acc].append(name.split('/')[1])
 
@@ -39,15 +44,15 @@ for acc in tqdm(kinases):
         for mutAA in AA:
             if mutAA == wtAA: continue
             mutations += acc + '/' + wtAA + str(position) + mutAA + '\n'
-        if num % 1 == 0:
-            break
+        #if num % 1 == 0:
+        #    break
     
     gzip.open('inputs/'+acc+'.txt.gz', 'wt').write(mutations)
     thread = threading.Thread(target=call_activark, args=(acc,))
     thread.start()
     # prepareTestData.predict('inputs/'+acc+'.txt')
     # if count == 5: break
-    while threading.active_count() > 10:
+    while threading.active_count() > 25:
         pass
     
 mydb.close()

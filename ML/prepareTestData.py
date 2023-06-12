@@ -255,7 +255,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     # if no values in data (besides the header)
     # then just end it here and return the dic results
     if len(data) == 1:
-        print ('No data found in the input file.')
+        print (f'No data in the input file ({inputFile}) could be processed.')
         return results
         # yield results
     # else go ahead
@@ -389,7 +389,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                 #     print (f, hh)
     
     outputDF = pd.DataFrame(outputDict)
-    if outputFile != None: gzip.open(outputFile+'.gz', 'wt').write(outputText)
+    if outputFile != None: gzip.open(outputFile+'.gz', 'wt').write(outputDF.to_string(index=False))
     # else: print (outputText)
     else: print (outputDF.to_string(index=False))
     return results
