@@ -38,12 +38,15 @@ for mutation in mutations:
     name = acc + '/' + mutation[0]
     if name not in dic_mutations:
         dic_mutations[name] = Mutation(acc, pos, wtAA, mutAA, mut_type)
+    else:
+        dic_mutations[name].mut_type += mut_type
     # print (acc, pos, wtAA, mutAA)
     # print (acc, mutation[0])
 
 # get all the predictions from the SIFT4G output file
 mechXpath = '/net/home.isilon/ds-russell/mechismoX/analysis/mutations/data/VLatest/'
 pmut_dic = {}
+pmut_output = ''
 for name in dic_mutations:
     acc = name.split('/')[0]
     if acc in pmut_dic: continue
@@ -51,13 +54,18 @@ for name in dic_mutations:
     for line in gzip.open(mechXpath+acc[:4]+'/'+acc+'.annotations.txt.gz', 'rt'):
         if line.startswith('UniProtID'): continue
         mutation = line.split('\t')[1].strip()+line.split('\t')[2].strip()+line.split('\t')[3].strip()
+        if line.split('\t')[19].lstrip().rstrip() in ['-', '()']: continue
         pmutPred = 'damaging' if 'True' in line.strip().split('\t')[19] else 'benign'
+        # print (acc, mutation, line.split('\t')[19])
+        pmut_output += acc + '\t' + mutation + '\t' + line.split('\t')[19].lstrip().rstrip() + '\n'
         pmutProb = float(line.strip().split('\t')[19].split('(')[1].split(')')[0])
         pmut_dic[acc][mutation] = pmutPred
         #print (acc+'/'+mutation)
         if acc+'/'+mutation in dic_mutations:
                 dic_mutations[acc+'/'+mutation].prediction = pmutPred
                 dic_mutations[acc+'/'+mutation].prob = pmutProb
+
+gzip.open('pmut_output.tsv.gz', 'wt').write(pmut_output)
 
 MUT_TYPES = {'A': ['activating', 'increase'], 'D': ['decrease', 'loss'], 'T': ['activatingresistance', 'increaseresistance']}
 text = ''
@@ -78,7 +86,7 @@ for mut_type in MUT_TYPES:
         else:
             y_true.append(0)
     # print (f'MCC: {matthews_corrcoef(y_true, y_pred)}')
-    print (mut_type, f'REC: {recall_score(y_true, y_pred)}')
+    print (mut_type, len(y_pred), f'REC: {recall_score(y_true, y_pred)}')
     # print (f'AUC: {roc_auc_score(y_true, y_pred)}')
     if mut_type == 'T':
         print (y_true)
