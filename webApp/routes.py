@@ -581,6 +581,8 @@ def configureRoutes(app):
 		else:
 			activating_AIvLD_prob = float(activating_AIvLD_prob)
 			deactivating_AIvLD_prob = 1.0 - activating_AIvLD_prob
+			activating_AIvLD_prob = round(activating_AIvLD_prob, 3)
+			deactivating_AIvLD_prob = round(deactivating_AIvLD_prob, 3)
 
 		results['predictions'][kinase+'/'+mutation]['activating'] = activating_prob
 		results['predictions'][kinase+'/'+mutation]['deactivating'] = deactivating_prob

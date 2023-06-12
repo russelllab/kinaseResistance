@@ -42,7 +42,8 @@ function showChart(uniqID, kinase, mutation, results)
             Plotly.newPlot('predictionChart1', data, layout);
 
             yValues = [
-                      response['activating_AIvLD']
+                      // response['activating_AIvLD'].toFixed(3),
+                      response['activating_AIvLD'],
                       ];
             var trace1 = {
               name : 'Activating',
