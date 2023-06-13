@@ -604,10 +604,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 X_sub_test = []
                 X_sub_test.append(p)
                 X_sub_test = np.array(X_sub_test)
-                if 'A84' in test_name:
-                    print (X_sub_test)
+                # if 'A84' in test_name:
+                #     print (X_sub_test)
                 y_pred = round((clf.predict_proba(X_sub_test)[0])[1], 3)
-                print (test_name, y_pred, q)
+                # print (test_name, y_pred, q)
 
 if __name__ == '__main__':
     '''max_depth = int(sys.argv[1])

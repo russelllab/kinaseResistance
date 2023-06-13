@@ -154,7 +154,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         # or if the mutation is in the first or last 2 residues
         if int(mutation[1:-1]) > protein_length:
             entries_not_found[name] = 'Position ' + str(mutation[1:-1]) +\
-                                    ' is greater than the protein length'\
+                                    ' is greater than the protein length '\
                                     + str(protein_length) + '.' 
             continue
         if int(mutation[1:-1]) < 3:
@@ -165,8 +165,8 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             continue
         if int(mutation[1:-1]) > protein_length - 2:
             entries_not_found[name] = 'Position ' + str(mutation[1:-1]) +\
-                                    ' is greater than the protein length'\
-                                    + str(protein_length) + '. Given the window size of 5, ' +\
+                                    ' is greater than the protein length '\
+                                    + str(protein_length) + ' - 2. Given the window size of 5, ' +\
                                     'the mutation position should be greater than 2 and'+\
                                     ' less than the protein length minus 2.'
             continue

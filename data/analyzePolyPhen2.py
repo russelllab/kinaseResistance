@@ -43,6 +43,20 @@ for mutation in mutations:
     # print (acc, pos, wtAA, mutAA)
     # print (acc, mutation[0])
 
+for name in dic_mutations:
+    if dic_mutations[name].mut_type in ['activatingresistance', 'increaseresistance']:
+        print (name)
+
+polyphen_input = ''
+for name in dic_mutations:
+    acc = name.split('/')[0]
+    pos = name.split('/')[1][1:-1]
+    wtAA = name.split('/')[1][0]
+    mutAA = name.split('/')[1][-1]
+    polyphen_input += f'{acc} {pos} {wtAA} {mutAA}\n'
+
+open('polyphen_input.tsv', 'w').write(polyphen_input)
+
 # get all the predictions from the PolyPhen2 output file
 with gzip.open('polyphen_output.tsv.gz', 'rt') as f:
     for line in f:
@@ -68,12 +82,14 @@ MUT_TYPES = {'A': ['activating', 'increase'], 'D': ['decrease', 'loss'], 'T': ['
 text = ''
 for mut_type in MUT_TYPES:
     y_pred = []; y_true = []; y_prob=[]
+    mut_names = []
     for mutation in dic_mutations:
         if dic_mutations[mutation].prediction is None: continue
         kinase_mut_type = dic_mutations[mutation].mut_type
         if kinase_mut_type not in MUT_TYPES[mut_type]: continue
         # print (mutation, dic_mutations[mutation].mut_type, dic_mutations[mutation].prediction)
-        if 'damaging' in dic_mutations[mutation].prediction:
+        mut_names.append(mutation)
+        if 'probably damaging' in dic_mutations[mutation].prediction:
             y_pred.append(1)
         else:
             y_pred.append(0)
@@ -83,11 +99,11 @@ for mut_type in MUT_TYPES:
         else:
             y_true.append(0)
     # print (f'MCC: {matthews_corrcoef(y_true, y_pred)}')
-    print (mut_type, f'REC: {recall_score(y_true, y_pred)}')
+    print (mut_type, len(y_pred), f'REC: {recall_score(y_true, y_pred)}')
     # print (f'AUC: {roc_auc_score(y_true, y_pred)}')
     if mut_type == 'T':
-        print (y_true)
-        print (y_pred)
+        for mut_name, y_p, y_t in zip(mut_names, y_pred, y_true):
+            print (mut_name, y_p, y_t)
 
     for y_p, y_t in zip(y_prob, y_true):
         text += str(y_p) + '\t' + str(y_t) + '\n'
