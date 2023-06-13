@@ -42,7 +42,7 @@ def add_labels(angles, values, labels, offset, ax):
             s=label, 
             ha=alignment, 
             va="center", 
-            size=45,
+            size=40,
             rotation=rotation, 
             rotation_mode="anchor"
         ) 
@@ -123,7 +123,7 @@ for pfampos in dic_pfam:
     total = 0
     for mut_type in dic_pfam[pfampos]:
         total += dic_pfam[pfampos][mut_type]
-    if total >= 3:
+    if total >= 1:
         make_fractions(dic_pfam[pfampos], total)
         num += 1
         for region in dic_region:
@@ -178,7 +178,8 @@ OFFSET = 0
 VALUES = df["constitutive-activation"].values
 LABELS = df["name"].values
 for i in range(len(LABELS)):
-    LABELS[i] = dif_pfam2aa[LABELS[i]] + ' (' + LABELS[i] + ')'
+    # LABELS[i] = dif_pfam2aa[LABELS[i]] + ' (' + LABELS[i] + ')'
+    LABELS[i] = dif_pfam2aa[LABELS[i]]
 GROUP = df["group"].values
 
 PAD = 1

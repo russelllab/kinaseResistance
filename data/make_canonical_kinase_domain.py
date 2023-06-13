@@ -115,6 +115,7 @@ for line in open('ss.tsv', 'r'):
     name = line.split()[0]
     start, end = line.split()[1].rstrip().split('-')
     print (line)
+    print (name, start, end)
     start = int(start)
     end = int(end)
     dic_ss[name] = [start, end]
