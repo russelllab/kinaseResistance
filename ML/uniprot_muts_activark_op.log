@@ -1,0 +1,55 @@
+The following inputs were ignored:
+O14965/I57V: Did you mean V57V? We found a V at position 57 in O14965 instead of a I. Please ensure that you are using the canonical isoform from UniProt (Release 2023_02).
+O75716/G2A: Position 2 is less than 3. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+O76039-1/E1023G: Protein identifier O76039-1 not found. Try another identifier.
+O76039-1/G994R: Protein identifier O76039-1 not found. Try another identifier.
+O76039-1/R923C: Protein identifier O76039-1 not found. Try another identifier.
+O76039-1/V999M: Protein identifier O76039-1 not found. Try another identifier.
+P00533/A1210V: Position 1210 is greater than the protein length 1210 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+P04626/M774MAYVM: Incorrect mutation format. 774MAYV not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P04626/S779SVGS: Incorrect mutation format. 779SVG not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P06213/A2G: Position 2 is less than 3. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+P06239/P232PQKP: Incorrect mutation format. 232PQK not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P07948/G2A: Position 2 is less than 3. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+P07949/C531CEEC: Incorrect mutation format. 531CEE not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P07949/C634CHELC: Incorrect mutation format. 634CHEL not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P07949/T636TCRT: Incorrect mutation format. 636TCR not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P11274/V1271A: Position 1271 is greater than the protein length 1271 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+P11362/R822C: Position 822 is greater than the protein length 822 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+P21802/A337ANA: Incorrect mutation format. 337AN not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P21802/T268TG: Incorrect mutation format. 268T not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P25092/Y1072C: Position 1072 is greater than the protein length 1073 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+P35916/Y1363F: Position 1363 is greater than the protein length 1363 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+P35968/Q2R: Position 2 is less than 3. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+P36894/P2T: Position 2 is less than 3. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+P36897/A26AA: Incorrect mutation format. 26A not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P37173/Q306HE: Incorrect mutation format. 306H not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P42684-4/S12T: Protein identifier P42684-4 not found. Try another identifier.
+P43403/K541KLEQ: Incorrect mutation format. 541KLE not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P53667/T508EE: Incorrect mutation format. 508E not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+P53779/C463S: Position 463 is greater than the protein length 464 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q02763/A1124V: Position 1124 is greater than the protein length 1124 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q02846/I1027IGI: Incorrect mutation format. 1027IG not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+Q06187/Q103QSVFSSTR: Incorrect mutation format. 103QSVFSST not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+Q07912/R1038H: Position 1038 is greater than the protein length 1038 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q12979/V859A: Position 859 is greater than the protein length 859 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q13233/V211VIQ: Incorrect mutation format. 211VI not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+Q13315/K2418KK: Incorrect mutation format. 2418K not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+Q13315/V3056L: Position 3056 is greater than the protein length 3056 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q15349/R732Q: Position 732 is greater than the protein length 733 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q16513/C984S: Position 984 is greater than the protein length 984 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q58F21/S2F: Position 2 is less than 3. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q6SA08/T327M: Position 327 is greater than the protein length 328 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q7Z695/P626L: Position 626 is greater than the protein length 626 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q86TB3/K2T: Position 2 is less than 3. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q8NFD2/E764K: Position 764 is greater than the protein length 765 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q8NI60/L214L: Incorrect mutation. Wild type and mutant amino acids are the same.
+Q8WU08/G2A: Position 2 is less than 3. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q96KB5/V322A: Position 322 is greater than the protein length 322 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q96RU8/F371L: Position 371 is greater than the protein length 372 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q9BXM7/Q534QQ: Incorrect mutation format. 534Q not a valid position. Use per line: kinase/mutation. Eg: MAP2K1/Q56P.
+Q9HBY8-1/S12T: Protein identifier Q9HBY8-1 not found. Try another identifier.
+Q9NRH2/I765M: Position 765 is greater than the protein length 765 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q9UIK4/S370A: Position 370 is greater than the protein length 370 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+Q9UIK4/T369A: Position 369 is greater than the protein length 370 - 2. Given the window size of 5, the mutation position should be greater than 2 and less than the protein length minus 2.
+
