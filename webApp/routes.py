@@ -60,7 +60,7 @@ def extract_pubmed_ids(string):
 	return [str(match) for match in matches]
 
 def makeWindowText(position_of_interest, current_position):
-	window = int(current_position) - int(position_of_interest)
+	window = int(position_of_interest) - int(current_position)
 	if window > 0: window = '+'+str(window)
 	else: window = str(window)
 	return '('+window+')'
