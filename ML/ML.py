@@ -91,7 +91,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                                 # 'allHomologs',
                                 # 'exclParalogs',
                                 # 'specParalogs',
-                                # 'orthologs'
+                                # 'orthologs',
                                 # 'bpso',
                                 # 'bpsh'
                                 ])]
@@ -104,10 +104,9 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         'Dataset',
                         'hmmPos',
                         'hmmSS',
-                        # 'ATPcount',
                         # 'ChargesWT',
                         # 'ChargesMUT',
-                        'ChargesDiff',
+                        # 'ChargesDiff',
                         # 'ATPcount',
                         #   'A_known',
                         #   'D_known',
@@ -116,7 +115,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         #   'Acetylmimic',
                         #   'hmmScoreWT',
                         #   'hmmScoreMUT',
-                          'hmmScoreDiff'
+                        #   'hmmScoreDiff'
                         ]
 
     # columns_to_exclude += ['ncontacts', 'nresidues', 'mech_intra']
@@ -161,7 +160,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     adr_cols = ['A', 'D', 'R']
     # adr_cols = ['D', 'R']
     for i in range(-5, 6):
-        # if i in [-2, -1, 1, 2]: continue
+        # if i in [-1, 0, 1]: continue
         for col in adr_cols:
             columns_to_exclude.append(col+'_'+str(i))
 
@@ -170,13 +169,24 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     adr_cols = ['A_pfam', 'D_pfam', 'R_pfam']
     # adr_cols = ['D_pfam', 'R_pfam']
     for i in range(-5, 6):
-        # if i in [-2, -1, 0, 1, 2]: continue
+        # if i in [-1, 0, 1]: continue
         for col in adr_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
+    adr_cols = ['A', 'D', 'R']
+    AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 
+        'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+    for mut_type in adr_cols:
+        for aa in AA:
+            col = mut_type+'_'+aa
+            for i in range(-5, 6):
+                if i in [-2, -1, 0, 1, 2]: continue
+                columns_to_exclude.append(col+'_'+str(i)+'_pfam')
+
+
     df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
     # print (df)
-
+    
     # scaler = MinMaxScaler()
     # columns_to_scale = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
     # columns_to_scale += ['hmmScoreDiff', 'hmmScoreWT', 'hmmScoreMUT']
@@ -214,6 +224,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
             y_names.append(row[-1])
             X.append(row[3:-1])
             train_names.append('/'.join(row[:3]))
+            # if row[-1] == 'neutral':
+            #     y_test.append(row[-1])
+            #     X_test.append(row[3:-1])
+            #     test_names.append('/'.join(row[:3]))
         # elif row[-1] == 'R':
         #     y.append(2)
         #     X.append(row[:-1])
@@ -246,7 +260,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     # sys.exit()
     # pickle.dump(scaler, open('finalized_scaler_RN.pkl', 'wb'))
     if scaler_filename is not None:
-        pickle.dump(scaler, open('scaler_'+scaler_filename+'.pkl', 'wb'))
+        pickle.dump(scaler, open('scalers/scaler_'+scaler_filename+'.pkl', 'wb'))
 
     y = np.array(y)
 
@@ -335,8 +349,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                     'min_samples_leaf': min_samples_leaf,
                     'criterion': ['gini'],
                     # 'max_features': ['sqrt', 'log2'],
-                    'max_features': ['log2'],
-                    # 'max_features': ['sqrt'],
+                    # 'max_features': ['log2'],
+                    'max_features': ['sqrt'],
                     'n_estimators': n_estimators
                     }
         # parameters = {
@@ -356,7 +370,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS)
         model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc', n_jobs=N_JOBS)
         model.fit(X, y)
-        print (name, 'mean_test_score', model.cv_results_['mean_test_score'])
+        print (name)
+        print ('mean_test_score', model.cv_results_['mean_test_score'])
         # print (model.cv_results_['mean_train_score'])
         clf = RandomForestClassifier(
                 n_estimators=model.best_params_['n_estimators'],
@@ -371,8 +386,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     breakLine = '#'.join(['-' for i in range(0, 50)])
     print (breakLine)
     ## Best model hyper-parameters
-    print ('Best model found during the CV')
-    print (model.best_params_)
+    print ('Best model:', model.best_params_)
     # print (model.predict_proba(X))
     for y_pred, y_true in zip(model.predict_proba(X), y):
         open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
@@ -490,9 +504,9 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     plt.grid(linewidth=0.5)
     plt.savefig(name+'_roc.svg', format='svg', dpi=1000)
     #####################################################
-        
+    
 
-    print (np.std(AUC))
+    # print (np.std(AUC))
     ## Cross-validation results
     breakLine = '-'.join(['-' for i in range(0, 50)])
     print (breakLine)
@@ -555,8 +569,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         print (''.join(['#' for i in range(1,25)]))
         data = []
         for feature_name, importance in zip(feature_names, clf.feature_importances_):
-            if importance > 0.01:
-                print (feature_name, importance)
+            if importance > 0.015:
+                # print (feature_name, importance)
                 row = []
                 row.append(feature_name)
                 row.append(importance)
@@ -576,8 +590,9 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
 
     # filename = 'finalized_model_RN.sav'
     if model_filename is not None:
-        pickle.dump(clf, open('model_'+model_filename+'.sav', 'wb'))
+        pickle.dump(clf, open('models/model_'+model_filename+'.sav', 'wb'))
 
+    # test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance', 'neutral']
     test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance']
     for test_type in test_types:
         print (''.join(['#' for i in range(1,25)]))
@@ -607,7 +622,9 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 # if 'A84' in test_name:
                 #     print (X_sub_test)
                 y_pred = round((clf.predict_proba(X_sub_test)[0])[1], 3)
-                # print (test_name, y_pred, q)
+                if q in ['resistance', 'neutral']:
+                    continue
+                print (test_name, y_pred, q)
 
 if __name__ == '__main__':
     '''max_depth = int(sys.argv[1])

@@ -13,6 +13,15 @@ from sklearn import decomposition
 from sklearn.preprocessing import MinMaxScaler
 from cls import Kinase, Mutation
 import fetchData
+import argparse
+
+# set arguments
+parser = argparse.ArgumentParser(description='Training for Activark', epilog='End of help.')
+parser.add_argument('alignment_start', help='')
+parser.add_argument('alignment_end', help='')
+args = parser.parse_args()
+ALIGNMENT_START = int(args.alignment_start)
+ALIGNMENT_END = int(args.alignment_end)
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
@@ -50,45 +59,6 @@ fetchData.fetchHmmsearch(kinases, Kinase)
 # fetchData.homologyScores(kinases, Kinase)
 # sys.exit()
 
-def fetchStrucFeat(acc, domainNum):
-    data = []
-    df = pd.DataFrame()
-    for dic, name in zip([
-                        kinases[acc].dihedral,
-                        kinases[acc].sec,
-                        kinases[acc].burr,
-                        kinases[acc].access,
-                        kinases[acc].iupred,
-                        kinases[acc].mechismo
-                        ],[
-                        'dihedral',
-                        'access',
-                        'burr',
-                        'sec',
-                        'iupred',
-                        'mechismo'
-                        ]):
-        row = []
-        print (kinases[acc].dihedral)
-        sys.exit()
-        for hmmPosition in range(1,265):
-            if hmmPosition in kinases[acc].domains[domainNum]:
-                SeqPosition = kinases[acc].domains[domainNum][hmmPosition]
-                residue = kinases[acc].fasta[SeqPosition-1]
-                #print (SeqPosition)
-                try:
-                    value = dic[SeqPosition][residue]
-                except:
-                    print (acc, SeqPosition, len(dic), residue)
-                    sys.exit()
-            else:
-                value = 3
-            row.append(value)
-        #f = pd.DataFrame(data, columns=AA)
-        df[name] = row
-    #print (df)
-
-    return df
 
 '''Map sequence to Pfam for all canonical kinases'''
 seq2pfam = {}
@@ -215,6 +185,7 @@ for acc in tqdm(kinases):
         # print (acc, mutation)
         hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
         if hmmPos == '-': continue
+        if ALIGNMENT_END < int(hmmPos) or int(hmmPos) < ALIGNMENT_START: continue
         iupred_score = fetchData.getIUPredScore(mycursor, acc, wtAA, position, mutAA)
         if iupred_score == None: continue
         ptm_row = fetchData.getPTMscore(mycursor, acc, position, ws=WS)

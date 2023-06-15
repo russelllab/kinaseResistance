@@ -47,7 +47,7 @@ dic_hmm = {}
 dic_mutations = {}
 '''Load mutation information for a pfam_pos'''
 mycursor.execute("SELECT acc, mutation, pfampos, mut_type FROM mutations\
-		 		where pfampos!=%s and pfampos!=%s", ('-', 'neutral'))
+		 		where pfampos!=%s", ('-', ))
 mutations = mycursor.fetchall()
 for mut_row in mutations:
 	acc, mutation, pfampos, mut_type = mut_row
@@ -132,8 +132,8 @@ pfam_positions.sort()
 
 fig, ax = plt.subplots()
 
-mut_types = ['constitutive-activation', 'increase', 'resistance', 'decrease', 'loss']
-mut_types_colors = ['green', 'lightgreen', 'blue', 'lightcoral', 'red']
+mut_types = ['constitutive-activation', 'increase', 'resistance', 'decrease', 'loss', 'neutral']
+mut_types_colors = ['green', 'lightgreen', 'blue', 'lightcoral', 'red', 'yellow']
 bottom = np.zeros(4)
 for mut_type, mut_types_color in zip(mut_types, mut_types_colors):
 	ptmsite = []

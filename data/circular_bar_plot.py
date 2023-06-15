@@ -26,7 +26,7 @@ def get_label_rotation(angle, offset):
 def add_labels(angles, values, labels, offset, ax):
     
     # This is the space between the end of the bar and the label
-    padding = 1
+    padding = 0.5
     
     # Iterate over angles, values, and labels, to add all of them.
     for angle, value, label, in zip(angles, values, labels):
@@ -42,7 +42,7 @@ def add_labels(angles, values, labels, offset, ax):
             s=label, 
             ha=alignment, 
             va="center", 
-            size=40,
+            size=10,
             rotation=rotation, 
             rotation_mode="anchor"
         ) 
@@ -78,17 +78,20 @@ mycursor.execute("SELECT pfampos, pfamaa FROM hmm")
 hits = mycursor.fetchall()
 for hit in hits:
     pfampos, pfamaa = hit
+    if pfampos == '-': continue
+    pfampos = int(pfampos)
     dif_pfam2aa[pfampos] = pfamaa
 
 # select all mutations from the database
 mycursor.execute("SELECT mutation, mut_type, pfampos, acc, gene FROM mutations\
-                where mut_type!='%s' and pfampos!='%s'" % ('neutral', '-'))
+                where pfampos!='%s'" % ('-', ))
 hits = mycursor.fetchall()
 dic_pfam = {}
 for hit in hits:
     mutation, mut_type, pfampos, acc, gene = hit
+    pfampos = int(pfampos)
     if pfampos not in dic_pfam:
-        dic_pfam[pfampos] = {'constitutive-activation':0, 'increase':0, 'loss':0, 'decrease':0, 'resistance':0}
+        dic_pfam[pfampos] = {'constitutive-activation':0, 'increase':0, 'loss':0, 'decrease':0, 'resistance':0, 'neutral': 0}
     if mut_type in ['activating']:
         dic_pfam[pfampos]['constitutive-activation'] += 1
     else:
@@ -107,6 +110,7 @@ def make_fractions(mut_dic, total):
         mut_type_frac = float(mut_dic[mut_type])/total
         mut_type_frac_new = mut_type_frac*total_log2
         mut_dic[mut_type] = mut_type_frac_new
+    return total_log2
 
 num = 0
 unique_pfam = {}
@@ -119,12 +123,19 @@ inc = []
 loss = []
 dec = []
 resistance = []
-for pfampos in dic_pfam:
+neutral = []
+all_var = []
+# for pfampos in dic_pfam:
+for pfampos in range(1, 825):
     total = 0
-    for mut_type in dic_pfam[pfampos]:
-        total += dic_pfam[pfampos][mut_type]
-    if total >= 1:
-        make_fractions(dic_pfam[pfampos], total)
+    if pfampos in dic_pfam:
+        for mut_type in dic_pfam[pfampos]:
+            total += dic_pfam[pfampos][mut_type]
+    else:
+        dic_pfam[pfampos] = {'constitutive-activation':0, 'increase':0, 'loss':0, 'decrease':0, 'resistance':0, 'neutral': 0}
+    if total >= 0:
+        if total!=0: total_log2 = make_fractions(dic_pfam[pfampos], total)
+        else: total_log2 = 0
         num += 1
         for region in dic_region:
             if dic_region[region][0] <= int(pfampos) <= dic_region[region][1]:
@@ -140,9 +151,13 @@ for pfampos in dic_pfam:
                 loss.append(dic_pfam[pfampos]['loss'])
                 dec.append(dic_pfam[pfampos]['decrease'])
                 resistance.append(dic_pfam[pfampos]['resistance'])
+                neutral.append(dic_pfam[pfampos]['neutral'])
+                all_var.append(total_log2)
                 break
         print (pfampos, dic_pfam[pfampos])
 # print(df)
+# print (len(dec))
+# sys.exit()
 print (num)
 # unique_pfam = list(set(unique_pfam))
 # print (unique_pfam)
@@ -155,6 +170,8 @@ df = pd.DataFrame({
     "loss": loss,
     "decrease": dec,
     "resistance": resistance,
+    "neutral": neutral,
+    'all_var': all_var,
     "group": group,
     "order": order
 })
@@ -176,10 +193,15 @@ OFFSET = 0
 
 # All this part is like the code above
 VALUES = df["constitutive-activation"].values
+TOTAL_LOG2 = df['all_var'].values
 LABELS = df["name"].values
+NEW_LABELS = []
 for i in range(len(LABELS)):
-    # LABELS[i] = dif_pfam2aa[LABELS[i]] + ' (' + LABELS[i] + ')'
-    LABELS[i] = dif_pfam2aa[LABELS[i]]
+    pfampos = LABELS[i]
+    NEW_LABELS += [str(dif_pfam2aa[pfampos]) + ' (' + str(pfampos) + ')']
+    # print (LABELS[i], dif_pfam2aa[LABELS[i]])
+    # NEW_LABELS += dif_pfam2aa[LABELS[i]]
+LABELS = NEW_LABELS
 GROUP = df["group"].values
 
 PAD = 1
@@ -218,13 +240,14 @@ COLORS = [f"C{i}" for i, size in enumerate(GROUPS_SIZE) for _ in range(size)]
 COLORS = ['red' for i in range(0, len(VALUES))]
 
 # for i in range(0, 2):
-for col, arr in zip(['green', 'lightgreen', 'red', 'coral', 'blue'],
+for col, arr in zip(['green', 'lightgreen', 'red', 'coral', 'blue', 'yellow'],
                     [
                     df["constitutive-activation"].values,
                     df["increase"].values,
                     df["loss"].values,
                     df["decrease"].values,
-                    df["resistance"].values
+                    df["resistance"].values,
+                    df["neutral"].values
                     ]):
     COLORS = [col for i in range(0, len(VALUES))]
     ax.bar(
@@ -251,7 +274,7 @@ for group, size in zip(GROUP_NAMES, GROUPS_SIZE):
     
     # Add text to indicate group
     ax.text(
-        np.mean(x1), -12, group, color="#333333", fontsize=75, 
+        np.mean(x1), -12, group, color="#333333", fontsize=50, 
         fontweight="bold", ha="center", va="center"
     )
     

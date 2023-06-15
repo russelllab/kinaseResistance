@@ -110,6 +110,27 @@ def getAccGene(mycursor, name):
     acc, gene, uniprot_id, protein_name, protein_length = hits[0], hits[1], hits[2], hits[3], len(hits[4])
     return acc, gene, uniprot_id, protein_name, protein_length
 
+def validateMutation(mycursor, acc, wtPos, wtAA, mutAA):
+    mycursor.execute("select fasta from kinases where \
+                        acc=%s", (acc,))
+    hits = mycursor.fetchone()
+    if hits is None:
+        print (f'No sequence found for {acc}')
+        return False
+    fasta = hits[0]
+    try:
+        if wtPos > len(fasta):
+            print (f'wtPos {wtPos} is greater than length of fasta {len(fasta)} of {acc}')
+            return False
+    except:
+        print (f'wtPos {wtPos} is not an integer {acc}')
+        return False
+    if wtAA != fasta[wtPos-1]:
+        print (f'wtAA {wtAA} does not match with fasta {fasta[wtPos-1]} at position {wtPos} of {acc}')
+        print (fasta[wtPos-3:wtPos+3])
+        return False
+    return True
+
 def checkInputPositionAA(acc, mutation, mycursor):
 	'''
 	Checks if the input position and amino acid are valid

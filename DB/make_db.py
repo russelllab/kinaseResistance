@@ -253,8 +253,11 @@ def create_mutations_table(mycursor)->None:
         mutAA = mutation[-1]
         if len(wtAA) > 1 or len(mutAA) > 1: continue
         wtPos = int(mutation[1:-1])
+        if fetchData.validateMutation(mycursor, acc, wtPos, wtAA, mutAA) is False:
+            # sys.exit()
+            continue
         pfamPos = find_pfampos(mycursor, acc, wtPos)
-        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
+        acc, gene, uniprot_id, protein_name, protein_length = fetchData.getAccGene(mycursor, acc)
         # print (gene, acc, mutation, pfamPos)
         # if pfamPos is None: continue
         mut_type = line.split('\t')[6].lstrip().rstrip()
@@ -268,7 +271,7 @@ def create_mutations_table(mycursor)->None:
         info = line.split('\t')[4]
         # info = 'info'
         # source = line.split('\t')[-1]
-        source = 'UniProt'
+        source = line.split('\t')[7].rstrip()
         pubmed = line.split('\t')[5]
         # print (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)
         mycursor.execute("INSERT INTO mutations (mutation, wtAA, wtPos, mutAA, \
@@ -283,12 +286,16 @@ def create_mutations_table(mycursor)->None:
         if line.split()[0] == 'Mutation_uniprot': continue
         acc = line.split('/')[0]
         mutation = line.split('/')[1].rstrip()
-        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
+        acc, gene, uniprot_id, protein_name, protein_length = fetchData.getAccGene(mycursor, acc)
         wtAA = mutation[0]
         mutAA = mutation[-1]
         if mutAA == 'X': continue
         if len(wtAA) > 1 or len(mutAA) > 1: continue
         wtPos = mutation[1:-1]
+        wtPos = int(wtPos)
+        if fetchData.validateMutation(mycursor, acc, wtPos, wtAA, mutAA) is False:
+            # sys.exit()
+            continue
         pfamPos = find_pfampos(mycursor, acc, wtPos)
         # mutation = wtAA + wtPos + mutAA
         mut_type = 'resistance'
@@ -307,22 +314,28 @@ def create_mutations_table(mycursor)->None:
     '''Fetch neutral mutation data'''
     # for line in open('../AK_mut_w_sc_feb2023/nat_mut_tidy_v2_march2023.tsv', 'r'):
     #for line in open('../data/mutations/nat_mut_tidy_all_samples_tidy_2.tsv', 'r'):
-    for line in open('../data/mutations/20230525_AllNeutrals_1pSNP_5pHom.txt', 'r'):
-        if line.split('\t')[0] == 'Uniprot': continue
-        acc = line.split('\t')[0].lstrip().rstrip()
-        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
-        mutation = line.split('\t')[2].lstrip().rstrip()
+    # for line in open('../data/mutations/20230525_AllNeutrals_1pSNP_5pHom.txt', 'r'):
+    for line in gzip.open('../data/mutations/neutral_nodis_AFgeq0.001_homgeq2.txt.gz', 'rt'):
+        # if line.split('\t')[0] == 'Uniprot': continue
+        acc = line.split()[14].lstrip().rstrip()
+        acc, gene, uniprot_id, protein_name, protein_length = fetchData.getAccGene(mycursor, acc)
+        mutation = line.split()[20].lstrip().rstrip()
         wtAA = mutation[0]
         mutAA = mutation[-1]
         if mutAA == 'X': continue
         if len(wtAA) > 1 or len(mutAA) > 1: continue
         wtPos = mutation[1:-1]
         if wtPos.isdigit() == False: continue
+        wtPos = int(wtPos)
+        if fetchData.validateMutation(mycursor, acc, wtPos, wtAA, mutAA) is False:
+            # sys.exit()
+            continue
         # print (acc, wtPos)
         pfamPos = find_pfampos(mycursor, acc, wtPos)
         mut_type = 'neutral'
         source = 'gnomAD'
-        info = 'AC/AN:'+str(line.split('\t')[7]) + '; Hom/AC:'+str(line.split('\t')[8].rstrip())
+        # info = 'AC/AN:'+str(line.split('\t')[7]) + '; Hom/AC:'+str(line.split('\t')[8].rstrip())
+        info = '-'
         pubmed = '-'
         # if acc not in seq2pfam:
         #     continue
@@ -353,7 +366,7 @@ def create_ligands_table(mycursor)->None:
         gene = line.split('\t')[1]
         uniprotpos = line.split('\t')[2]
         pfamPos = find_pfampos(mycursor, acc, uniprotpos)
-        acc, gene, uniprot_id, protein_name = fetchData.getAccGene(mycursor, acc)
+        acc, gene, uniprot_id, protein_name, protein_length = fetchData.getAccGene(mycursor, acc)
         ligand = line.split('\t')[3]
         ligand_id = line.split('\t')[4]
         if ligand_id == '': ligand_id = '-'
@@ -867,10 +880,10 @@ if __name__ == '__main__':
     # fetch_map_fasta2aln()
     # Create tables
     # print ('Creating HMM table')
-    create_hmm_table(mycursor)
+    # create_hmm_table(mycursor)
     # print ('Creating kinases table')
-    create_kinases_table(mycursor)
-    # print ('Creating mutation table')
+    # create_kinases_table(mycursor)
+    print ('Creating mutation table')
     create_mutations_table(mycursor)
     # print ('Creating ligands table')
     # create_ligands_table(mycursor)
@@ -883,9 +896,9 @@ if __name__ == '__main__':
     # print ('Creating DSSP tables')
     # create_dssp_tables(mycursor)
     # print ('Creating PTM table')
-    create_ptm_table(mycursor)
+    # create_ptm_table(mycursor)
     # print ('Creating alignment table')
-    create_alignment_table(mycursor)
+    # create_alignment_table(mycursor)
     mydb.commit()
 
     # Use mysqldump to create backup file

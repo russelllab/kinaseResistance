@@ -32,7 +32,8 @@ mutations = mycursor.fetchall()
 text = 'UniProtAccession\tGeneName\tMutation\tWT\tPosition\tMUT\tAlignmentPosition\tMutationType\tDescription\tSource\n'
 for mut_row in mutations:
     # print (len(mut_row))
-    mutation_id, mutation, wtaa, wtpos, mutaa, pfampos, mut_type, acc, gene, info, source = mut_row
+    # print (mut_row)
+    mutation_id, mutation, wtaa, wtpos, mutaa, pfampos, mut_type, acc, gene, info, pubmed, source = mut_row
     text += acc + '\t'
     text += gene + '\t'
     text += mutation + '\t'
@@ -96,3 +97,15 @@ for align_row in alignments:
     text += residues + '\n'
 
 open('alignment_table.tsv', 'w').write(text)
+
+# make ATP table
+mycursor.execute("SELECT * FROM ligands where ligand~%s", ('ATP',))
+hits = mycursor.fetchall()
+text = 'ligand\tligand_id\tWTpos\tAlignmentPos\tUniProtAcc\tGene\tPDB\tPubMed\n'
+for hit in hits:
+    row_id, ligand, ligand_id, uniprotpos, pfampos, acc, gene, pdb, pubmed = hit
+    for item in [ligand, ligand_id, uniprotpos, pfampos, acc, gene, pdb, pubmed]:
+        text += str(item).lstrip().rstrip() + '\t'
+    text += '\n'
+
+open('atp_table.tsv', 'w').write(text)

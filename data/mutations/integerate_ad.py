@@ -3,7 +3,7 @@
 import os, sys, gzip, re
 
 class Mutation:
-    def __init__(self, mutation, mutation_type, gene, info, pubmedIDs, outcome):
+    def __init__(self, mutation, mutation_type, gene, info, pubmedIDs, outcome, source):
         self.acc = mutation.split('/')[0]
         self.mut = mutation.split('/')[1]
         # self.mutation = mutation
@@ -12,6 +12,7 @@ class Mutation:
         self.info = info
         self.pubmedIDs = pubmedIDs
         self.outcome = outcome
+        self.source = source
     
     def show(self):
         # print(self.mutation, self.mutation_type, self.gene, self.info, self.outcome)
@@ -23,7 +24,8 @@ class Mutation:
                         self.mutation_type,
                         self.info,
                         self.pubmedIDs,
-                        self.outcome
+                        self.outcome,
+                        self.source
                         ])
 
 def extractInformation(text):
@@ -71,7 +73,7 @@ for line in open('ana_set.tsv', 'r'):
     outcome = outcome2 if outcome2 != '' else outcome1
     # print (line)
     if mutation not in dic:
-        dic[mutation] = Mutation(mutation, mutation_type, gene, info, pubmedIDs, outcome)
+        dic[mutation] = Mutation(mutation, mutation_type, gene, info, pubmedIDs, outcome, 'UniProt')
         dic[mutation].show()
 
 for line in open('missing_cases_annotated.tsv', 'r'):
@@ -84,7 +86,7 @@ for line in open('missing_cases_annotated.tsv', 'r'):
     outcome = line.split('\t')[9]
     if outcome == '': continue
     if mutation not in dic:
-        dic[mutation] = Mutation(mutation, mutation_type, gene, info, pubmedIDs, outcome)
+        dic[mutation] = Mutation(mutation, mutation_type, gene, info, pubmedIDs, outcome, 'UniProt')
         dic[mutation].show()
 
 for line in gzip.open('final_mined_RR_checked_checked-again.txt.gz', 'rt'):
@@ -101,10 +103,10 @@ for line in gzip.open('final_mined_RR_checked_checked-again.txt.gz', 'rt'):
     info = mutation_type + ' '+line.split('\t')[2]
     outcome = 'activating'
     if mutation not in dic:
-        dic[mutation] = Mutation(mutation, mutation_type, gene, info, pubmedIDs, outcome)
+        dic[mutation] = Mutation(mutation, mutation_type, gene, info, pubmedIDs, outcome, 'TextMining')
         # dic[mutation].show()
 
-text = 'UniProtAcc\tGene\tMutation\tMutationType\tInfo\tPubMedID\tOutcome\n'
+text = 'UniProtAcc\tGene\tMutation\tMutationType\tInfo\tPubMedID\tOutcome\tSource\n'
 for mutation in dic:
     # print (mutation)
     text += dic[mutation].show() + '\n'
