@@ -219,6 +219,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     for row in df.to_numpy():
         # print (row)
         # if row[-1] in ['activating', 'increase']:
+        if row[-1] in ['neutral', 'loss', 'decrease']:
+                y_test.append(row[-1])
+                X_test.append(row[3:-1])
+                test_names.append('/'.join(row[:3]))
         if row[-1] in dic['positives']:
             y.append(1)
             y_names.append(row[-1])
@@ -230,10 +234,6 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
             y_names.append(row[-1])
             X.append(row[3:-1])
             train_names.append('/'.join(row[:3]))
-            if row[-1] in ['neutral', 'loss', 'decrease']:
-                y_test.append(row[-1])
-                X_test.append(row[3:-1])
-                test_names.append('/'.join(row[:3]))
         # elif row[-1] == 'R':
         #     y.append(2)
         #     X.append(row[:-1])
@@ -311,7 +311,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                     'max_iter': [1000]
                     }
         model = LogisticRegression(class_weight='balanced')
-        model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc', n_jobs=N_JOBS)
+        model = GridSearchCV(model, parameters, cv=rskf, scoring='mcc', n_jobs=N_JOBS)
         model.fit(X, y)
         clf = LogisticRegression(
                             class_weight='balanced',
