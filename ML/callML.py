@@ -12,7 +12,8 @@ for name in ['AIvNLD', 'AIvLD', 'AvNL', 'AvL', 'LDvNAI', 'LvNA', 'RvN']:
                     # os.system("python3 callML.py {} {} {} {}".format(max_depth, min_samples_split, min_samples_leaf, n_estimators))
 '''
 
-for name in ['AIvLD']:
+#for name in ['AIvLD']:
+for name in ['AIvNLD', 'AIvLD', 'AvNL', 'AvL', 'LDvNAI', 'LvNA', 'RvN']:
     max_depth = [3, 4, 5, 7, 10]
     min_samples_split = [5 ,7, 10, 12]
     min_samples_leaf = [5 ,7, 10, 12]

@@ -24,7 +24,6 @@ from sklearn.metrics import confusion_matrix, matthews_corrcoef, f1_score, preci
 from sklearn.metrics import auc
 from sklearn.metrics import RocCurveDisplay
 from sklearn import tree
-import xgboost as xgb
 import pickle
 import argparse
 
@@ -633,9 +632,16 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 y_pred = round((clf.predict_proba(X_sub_test)[0])[1], 3)
                 if q == 'neutral':
                     known_neutral.append(1)
-                    pred_neutral.append(1 if y_pred<0.5 else 0)
+                    if q in negatives:
+                        pred_neutral.append(1 if y_pred<0.5 else 0)
+                    else:
+                        pred_neutral.append(1 if y_pred>=0.5 else 0)
                 if q in ['loss', 'decrease']:
                     known_deactivating.append(1)
+                    if q in negatives:
+                        pred_neutral.append(1 if y_pred<0.5 else 0)
+                    else:
+                        pred_neutral.append(1 if y_pred>=0.5 else 0)
                     pred_deactivating.append(1 if y_pred<0.5 else 0)
                 if q in ['resistance', 'neutral', 'loss', 'decrease']:
                     continue
