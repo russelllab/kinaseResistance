@@ -160,7 +160,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     adr_cols = ['A', 'D', 'R']
     # adr_cols = ['D', 'R']
     for i in range(-5, 6):
-        # if i in [-1, 0, 1]: continue
+        # if i in [-2, -1, 0, 1, 1]: continue
         for col in adr_cols:
             columns_to_exclude.append(col+'_'+str(i))
 
@@ -169,11 +169,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     adr_cols = ['A_pfam', 'D_pfam', 'R_pfam']
     # adr_cols = ['D_pfam', 'R_pfam']
     for i in range(-5, 6):
-        # if i in [-1, 0, 1]: continue
+        # if i in [-2, -1, 0, 1, 2]: continue
         for col in adr_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
     adr_cols = ['A', 'D', 'R']
+    # adr_cols = ['D', 'R']
     AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 
         'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
     for mut_type in adr_cols:
@@ -182,6 +183,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
             for i in range(-5, 6):
                 if i in [-2, -1, 0, 1, 2]: continue
                 columns_to_exclude.append(col+'_'+str(i)+'_pfam')
+
+    hom_cols = ['allHomologs', 'exclParalogs', 'specParalogs', 'orthologs', 'bpso', 'bpsh']
+    for hom_type in hom_cols:
+        for i in range(-5, 6):
+            if i in [0]: continue
+            columns_to_exclude.append(hom_type)
 
 
     df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
@@ -224,10 +231,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
             y_names.append(row[-1])
             X.append(row[3:-1])
             train_names.append('/'.join(row[:3]))
-            # if row[-1] == 'neutral':
-            #     y_test.append(row[-1])
-            #     X_test.append(row[3:-1])
-            #     test_names.append('/'.join(row[:3]))
+            if row[-1] in ['neutral', 'loss', 'decrease']:
+                y_test.append(row[-1])
+                X_test.append(row[3:-1])
+                test_names.append('/'.join(row[:3]))
         # elif row[-1] == 'R':
         #     y.append(2)
         #     X.append(row[:-1])
@@ -592,8 +599,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     if model_filename is not None:
         pickle.dump(clf, open('models/model_'+model_filename+'.sav', 'wb'))
 
-    # test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance', 'neutral']
-    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance']
+    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance', 'neutral', 'loss', 'decrease']
+    # test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance']
     for test_type in test_types:
         print (''.join(['#' for i in range(1,25)]))
         if test_type in ['activatingresistance']:
@@ -614,6 +621,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
             print('REC:', round(recall_score(y_sub_test, clf.predict(X_sub_test)), 3))
             # print('SPE:', recall_score(y_sub_test, clf.predict(X_sub_test), pos_label=0))
         else:
+            pred_neutral = []; known_neutral = []
+            pred_deactivating = []; known_deactivating = []
             for test_name, p, q in zip(test_names, X_test, y_test):
                 if q != test_type: continue
                 X_sub_test = []
@@ -622,9 +631,19 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 # if 'A84' in test_name:
                 #     print (X_sub_test)
                 y_pred = round((clf.predict_proba(X_sub_test)[0])[1], 3)
-                if q in ['resistance', 'neutral']:
+                if q == 'neutral':
+                    known_neutral.append(1)
+                    pred_neutral.append(1 if y_pred<0.5 else 0)
+                if q in ['loss', 'decrease']:
+                    known_deactivating.append(1)
+                    pred_deactivating.append(1 if y_pred<0.5 else 0)
+                if q in ['resistance', 'neutral', 'loss', 'decrease']:
                     continue
                 print (test_name, y_pred, q)
+            if test_type == 'neutral':
+                print('REC:', test_type, round(recall_score(known_neutral, pred_neutral), 3))
+            if test_type in ['loss', 'decrease']:
+                print('REC:', test_type, round(recall_score(known_deactivating, pred_deactivating), 3))
 
 if __name__ == '__main__':
     '''max_depth = int(sys.argv[1])
@@ -664,3 +683,4 @@ if __name__ == '__main__':
     main([max_depth],[min_samples_split],[min_samples_leaf], [n_estimators],\
         name = name,
         scaler_filename=scaler_filename, model_filename=model_filename, column_filename=column_filename)
+    print ('END')

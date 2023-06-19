@@ -116,7 +116,7 @@ for num, acc in enumerate(kinases):
     
 df = pd.DataFrame(aln_data, index=aln_accs)
 # print (df[range(START_ALN-WINDOW, END_ALN+WINDOW+1)])
-df = df[range(START_ALN-WINDOW, END_ALN+WINDOW+1)]
+df = df[range(START_ALN-WINDOW-1, END_ALN+WINDOW)]
 
 trimmed_aln_clustal = '# CLUSTAL\n\n'
 trimmed_aln_fasta = ''
@@ -124,16 +124,16 @@ trimmed_aln_web = '# CLUSTAL\n\n'
 for acc, row in zip(aln_accs, df.to_numpy()):
     # print (name, ''.join(row))
     trimmed_aln_clustal += kinases[acc].name + '|'
-    trimmed_aln_clustal += kinases[acc].find_fasta_position(START_ALN - WINDOW) + ' '
-    kinases[acc].trimmed_aln_name = kinases[acc].name + '|' + kinases[acc].find_fasta_position(START_ALN - WINDOW)
+    trimmed_aln_clustal += kinases[acc].find_fasta_position(START_ALN - WINDOW - 1) + ' '
+    kinases[acc].trimmed_aln_name = kinases[acc].name + '|' + kinases[acc].find_fasta_position(START_ALN - WINDOW - 1)
     trimmed_aln_clustal += ''.join(row) + '\n'
 
     trimmed_aln_fasta += '>' + kinases[acc].name + '|'
-    trimmed_aln_fasta += kinases[acc].find_fasta_position(START_ALN - WINDOW) + '\n'
+    trimmed_aln_fasta += kinases[acc].find_fasta_position(START_ALN - WINDOW - 1) + '\n'
     trimmed_aln_fasta += ''.join(row) + '\n'
 
     start, end = kinases[acc].name.split('|')[3].split('-')
-    num = kinases[acc].find_fasta_position(START_ALN - WINDOW)
+    num = kinases[acc].find_fasta_position(START_ALN - WINDOW - 1)
     if start == 'start': start = num
     else: start = str(int(start) + int(num) - 1)
     seq = ''.join(row).replace('-', '').replace('.', '')
@@ -473,5 +473,5 @@ for mut_type, color in zip(['A', 'D'], ['Green', 'Red']):
                              ]
                             ) + '\n'
 
-open('jalview_annotations.txt', 'w').write(jalview_annotations)
+open('jalview_annotations_'+INPUT_FILE.split('.')[0]+'.txt', 'w').write(jalview_annotations)
 exit()

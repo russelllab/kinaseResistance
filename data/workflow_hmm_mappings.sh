@@ -7,17 +7,27 @@
 python find_hits.py humanKinases.fasta
 
 # Step 2: Run the hmmalign to align the human sequences
-# with the Pkinase HMM profile
+# with the Pkinase & PK-Tyr HMM profile
 # Save the output in the file humanKinasesHitsSplit.aln
-hmmalign -o humanKinasesHitsSplit.sto ../pfam/Pkinase.hmm humanKinasesHitsSplit.fasta
+# hmmalign -o humanKinasesHitsSplit.sto ../pfam/Pkinase.hmm humanKinasesHitsSplit.fasta
+hmmalign -o humanKinasesPkinaseHitsSplit.sto ../pfam/Pkinase.hmm humanKinasesPkinaseHitsSplit.fasta
+hmmalign -o humanKinasesPK_Tyr_Ser-ThrHitsSplit.sto ../pfam/Pkinase.hmm humanKinasesPK_Tyr_Ser-ThrHitsSplit.fasta
+
+# python prepareAlignments.py -i humanKinasesPkinaseHitsSplit.sto > ali1.fasta
+# python prepareAlignments.py -i humanKinasesPK_Tyr_Ser-ThrHitsSplit.sto > ali2.fasta
 
 # Step 3: Convert the stockholm file to CLUSTAL format
 # Save the output in the file humanKinasesHitsSplit.aln
-sed '/^#/s/.*/CLUSTAL/' humanKinasesHitsSplit.sto > humanKinasesHitsSplit.aln
+# sed '/^#/s/.*/CLUSTAL/' humanKinasesHitsSplit.sto > humanKinasesHitsSplit.aln
+sed '/^# STOCKHOLM/s/.*/CLUSTAL/' humanKinasesPkinaseHitsSplit.sto | grep -v '#' > humanKinasesPkinaseHitsSplit.aln
+sed '/^# STOCKHOLM/s/.*/CLUSTAL/' humanKinasesPK_Tyr_Ser-ThrHitsSplit.sto | grep -v '#' > humanKinasesPK_Tyr_Ser-ThrHitsSplit.aln
 
 # Step 4: Move the .aln file to the alignments folder
-mv humanKinasesHitsSplit.aln ../alignments/
+# mv humanKinasesHitsSplit.aln ../alignments/
+mv humanKinasesPkinaseHitsSplit.aln ../alignments/
+mv humanKinasesPK_Tyr_Ser-ThrHitsSplit.aln ../alignments/
 cd ../alignments/
+# exit 0
 
 # Step 5: Run the trim_alignment_split_script.py to trim the alignment
 # Save the output in the file humanKinasesHitsSplitTrimmed.aln/fasta
@@ -26,9 +36,16 @@ cd ../alignments/
 # and saves in both fasta and aln format
 # the script also saves the jalview annoptation file
 # jalview_annotations.txt
-python trim_alignment_split_outside.py humanKinasesHitsSplit.aln ../data/humanKinases.fasta 32177 32940 30
+# python trim_alignment_split_outside.py humanKinasesHitsSplit.aln ../data/humanKinases.fasta 32177 32940 30
+python trim_alignment_split_outside.py humanKinasesPkinaseHitsSplit.aln ../data/humanKinases.fasta 32178 32816 30
+python trim_alignment_split_outside.py humanKinasesPK_Tyr_Ser-ThrHitsSplit.aln ../data/humanKinases.fasta 1950 2546 30
 
-# Step 6: Build a hidden Markov model (HMM) from the alignment
+# Step 6: Merge the two alignments
+cat humanKinasesPkinaseHitsSplitTrimmed.fasta humanKinasesPK_Tyr_Ser-ThrHitsSplitTrimmed.fasta > ali.fasta
+ruby ../../../makemergetable.rb humanKinasesPkinaseHitsSplitTrimmed.fasta humanKinasesPK_Tyr_Ser-ThrHitsSplitTrimmed.fasta > subMSAtable
+mafft --merge subMSAtable ali.fasta > humanKinasesHitsSplitTrimmed.fasta
+
+# Step 7: Build a hidden Markov model (HMM) from the alignment
 # Use the fasta file as input because the aln file fails (!!!!)
 # Save the output in the file humanKinasesHitsSplitTrimmed.hmm
 # in the pfam folder
@@ -37,14 +54,14 @@ hmmbuild --symfrac 0.0 ../pfam/humanKinasesHitsSplitTrimmed.hmm humanKinasesHits
 # hmmbuild ../pfam/humanKinasesHitsSplitTrimmed.hmm humanKinasesHitsSplitTrimmed.fasta
 hmmpress ../pfam/humanKinasesHitsSplitTrimmed.hmm
 
-# Step 7: Do hmmsearch with the HMM profile against
+# Step 8: Do hmmsearch with the HMM profile against
 # the full kinase sequences. Save the output in the file
 # humanKinasesHitsSplitHmmsearchTrimmed.txt.gz (gzip compressed)
 cd ../data/
 hmmsearch -o humanKinasesHitsSplitHmmsearchTrimmed.txt ../pfam/humanKinasesHitsSplitTrimmed.hmm humanKinases.fasta
 gzip -f humanKinasesHitsSplitHmmsearchTrimmed.txt
 
-# Step 8: Map the UniProt AA to the new domain numbering in the
+# Step 9: Map the UniProt AA to the new domain numbering in the
 # domain name 'humanKinasesHitsSplitTrimmed' (given as input
 # to the script) using the file humanKinasesHitsSplitHmmsearchTrimmed.txt.gz
 # Save the output in the file humanKinasesHitsSplitHmmsearchTrimmedMapped.txt.gz
@@ -53,7 +70,7 @@ gzip -f humanKinasesHitsSplitHmmsearchTrimmed.txt
 # python map2domain.py humanKinasesHitsSplitHmmsearchTrimmed.txt.gz ../alignments/humanKinasesHitsSplitTrimmed.fasta humanKinasesHitsSplitTrimmed 30 794
 python map2aln.py ../alignments/humanKinasesHitsSplitTrimmed.fasta humanKinasesHitsSplitTrimmed
 
-# Step 9: Map the PTM sites to the new domain numbering in the
+# Step 10: Map the PTM sites to the new domain numbering in the
 # domain name 'humanKinasesHitsSplitTrimmed' (given as input
 # to the script) using the file humanKinasesHitsSplitHmmsearchTrimmed.txt.gz
 # Save the output in the file humanKinasesHitsSplitHmmsearchTrimmedPTM.tsv

@@ -146,7 +146,11 @@ for position in range(startWS, endWS+1):
     trainMat += ('_'+str(position)+'_pfam\t').join(PTM_TYPES) + '_' + str(position) + '_pfam\t'
 trainMat += '_WT\t'.join(AA) + '_WT\t'
 trainMat += '_MUT\t'.join(AA) + '_MUT\t'
-trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+
+for position in range(startWS, endWS+1):
+    # trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+    for hom_type in ['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']:
+        trainMat += hom_type + '_' + str(position) + '\t'
 
 for position in range(startWS, endWS+1):
     for mut_type in ['A', 'D', 'R']:

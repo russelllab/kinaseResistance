@@ -64,7 +64,7 @@ for mut_type in dic_var:
         wtAA = mutation[0]
         mutAA = mutation[-1]
 
-        mycursor.execute("SELECT * FROM spec_para where acc=%s and position=%s",\
+        mycursor.execute("SELECT * FROM orth where acc=%s and position=%s",\
                          (acc, wtPos))
         hit = mycursor.fetchone()
         for aa, value in zip(AA, hit[3:-1]):

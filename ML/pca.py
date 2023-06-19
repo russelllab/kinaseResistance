@@ -25,87 +25,110 @@ df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t')
 # print (df.to_numpy().tolist())
 # sys.exit()
 
-df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.075, regex=True)
-df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.5, regex=True)
+df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t')
+df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.025, regex=True)
+df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
 # exclude columns
 # df = df.loc[:, ~df.columns.isin(['allHomologs','exclParalogs','specParalogs','orthologs', 'bpso','bpsh'])]
 df = df.loc[:, ~df.columns.isin([
                             # 'allHomologs',
                             # 'exclParalogs',
                             # 'specParalogs',
-                            # 'orthologs'
+                            # 'orthologs',
                             # 'bpso',
                             # 'bpsh'
                             ])]
 # exclude columns to make the data matrix
 original_df = df.copy()
 columns_to_exclude = [
-                        'Acc',
-                        'Mutation',
-                        'Gene',
-                        'Dataset',
-                        'hmmPos',
-                        'hmmSS',
-                        'ChargesWT',
-                        'ChargesMUT',
-                        # 'ChargesDiff',
-                        #   'A_known',
-                        #   'D_known',
-                        #   'R_known',
-                        #   'Phosphomimic',
-                          'hmmScoreWT',
-                          'hmmScoreMUT',
-                        #   'hmmScoreDiff'
-                        ]
-# for aa in AA:
-#     if aa not in ['S', 'T', 'Y']:
-#         columns_to_exclude.append(aa+'_WT')
-#     if aa not in ['D', 'E']:
-#         columns_to_exclude.append(aa+'_MUT')
+                    'Acc',
+                    'Mutation',
+                    'Gene',
+                    'Dataset',
+                    'hmmPos',
+                    'hmmSS',
+                    # 'ChargesWT',
+                    # 'ChargesMUT',
+                    # 'ChargesDiff',
+                    # 'ATPcount',
+                    #   'A_known',
+                    #   'D_known',
+                    #   'R_known',
+                    #   'Phosphomimic',
+                    #   'Acetylmimic',
+                    #   'hmmScoreWT',
+                    #   'hmmScoreMUT',
+                    #   'hmmScoreDiff'
+                    ]
+
+columns_to_exclude += ['ncontacts', 'nresidues', 'mech_intra']
+columns_to_exclude += ['phi_psi', 'sec', 'burr', 'acc']
+columns_to_exclude += ['IUPRED']
+
+for aa in AA:
+    # if aa not in ['S', 'T', 'Y']:
+        columns_to_exclude.append(aa+'_WT')
+    # if aa not in ['D', 'E']:
+        columns_to_exclude.append(aa+'_MUT')
+
 
 ############
 pfam_ptm_cols = ['ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
 for i in range(-5,6):
-    if i in [-1, 0, 1]: continue
+    if i in [-2, -1, 0, 1, 2]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
 pfam_ptm_cols = ['p_pfam']
 for i in range(-5,6):
-    if i in [-1, 0, 1]: continue
+    if i in [-2, -1, 0, 1, 2]: continue
     for col in pfam_ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 ############
 
 ptm_cols = ['ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
 for i in range(-5,6):
-    if i in [-1, 0, 1]: continue
+    if i in [-2, -1, 0, 1, 2]: continue
     for col in ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
 ptm_cols = ['p']
 for i in range(-5,6):
-    if i in [-1, 0, 1]: continue
+    if i in [-2, -1, 0, 1, 2]: continue
     for col in ptm_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
 ############
 
 adr_cols = ['A', 'D', 'R']
+# adr_cols = ['D', 'R']
 for i in range(-5, 6):
-    if i in [-2, -1, 1, 2]: continue
+    # if i in [-1, 0, 1]: continue
     for col in adr_cols:
         columns_to_exclude.append(col+'_'+str(i))
 
 ############
 
 adr_cols = ['A_pfam', 'D_pfam', 'R_pfam']
+# adr_cols = ['D_pfam', 'R_pfam']
 for i in range(-5, 6):
-    if i in [-2, -1, 0, 1, 2]: continue
+    # if i in [-1, 0, 1]: continue
     for col in adr_cols:
         columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
+adr_cols = ['A', 'D', 'R']
+AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 
+    'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+for mut_type in adr_cols:
+    for aa in AA:
+        col = mut_type+'_'+aa
+        for i in range(-5, 6):
+            if i in [0]: continue
+            columns_to_exclude.append(col+'_'+str(i)+'_pfam')
+
+
 df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
+# print (df)
 
 # scaler = MinMaxScaler()
 # columns_to_scale = ['p_pfam', 'ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
@@ -143,7 +166,7 @@ data = scaler.transform(data)
 # print (trainMat)
 # sys.exit()
 
-X = TSNE(n_components=2, learning_rate='auto', init='random', perplexity=50).fit_transform(data)
+X = TSNE(n_components=2, learning_rate='auto', init='random', perplexity=100).fit_transform(data)
 
 # pca = decomposition.PCA(n_components=2)
 # pca.fit(data)

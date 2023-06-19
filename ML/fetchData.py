@@ -383,25 +383,27 @@ def homologyScores(kinases, Kinase):
 
 def getHomologyScores(mycursor, acc, wtAA, position, mutAA):
     row = []
-    for homology in ['all_homs','orth','excl_para','spec_para','bpso','bpsh']:
-        mycursor.execute("SELECT * FROM "+homology+" \
+    for position in range(position-2, position+3):
+        for homology in ['all_homs','excl_para','spec_para','orth','bpso','bpsh']:
+            mycursor.execute("SELECT * FROM "+homology+" \
                             WHERE acc=%s and position=%s", (acc, str(position),))
-        hit = mycursor.fetchone()
-        if hit is None:
-            row = [] # empty row if no hits found
-            break
-        # print (hit)
-        acc = hit[0]
-        AA = 'ACDEFGHIKLMNPQRSTVWY'
-        homology_score_wt, homology_score_mut = None, None
-        for logodd, aa in zip(hit[3:-1], AA):
-            if aa == mutAA:
-                # row.append(float(logodd))
-                homology_score_mut = float(logodd)
-            if aa == wtAA:
-                homology_score_wt = float(logodd)
-        row.append(homology_score_mut - homology_score_wt)
-    if len(row) == 0: row = None
+            hit = mycursor.fetchone()
+            if hit is None:
+                row = [] # empty row if no hits found
+                break
+            # print (hit)
+            acc = hit[0]
+            AA = 'ACDEFGHIKLMNPQRSTVWY'
+            homology_score_wt, homology_score_mut = None, None
+            for logodd, aa in zip(hit[3:-1], AA):
+                if aa == mutAA:
+                    # row.append(float(logodd))
+                    homology_score_mut = float(logodd)
+                if aa == wtAA:
+                    homology_score_wt = float(logodd)
+            if homology_score_wt is None or homology_score_mut is None:
+                return None
+            row.append(homology_score_mut - homology_score_wt)
     return row
 
 def getIUPredScore(mycursor, acc, wtAA, position, mutAA):
