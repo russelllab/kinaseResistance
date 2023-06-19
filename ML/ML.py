@@ -114,7 +114,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         #   'Acetylmimic',
                         #   'hmmScoreWT',
                         #   'hmmScoreMUT',
-                        #   'hmmScoreDiff'
+                        'hmmScoreDiff'
                         ]
 
     # columns_to_exclude += ['ncontacts', 'nresidues', 'mech_intra']
@@ -187,7 +187,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     for hom_type in hom_cols:
         for i in range(-5, 6):
             if i in [0]: continue
-            columns_to_exclude.append(hom_type)
+            # columns_to_exclude.append(hom_type)
 
 
     df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
