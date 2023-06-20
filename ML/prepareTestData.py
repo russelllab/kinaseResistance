@@ -212,9 +212,9 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         position = int(mutation[1:-1])
         mutAA = mutation[-1]
         wtAA = mutation[0]
-        hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
+        alnPos, hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
         iupred_score = fetchData.getIUPredScore(mycursor, acc, wtAA, position, mutAA)
-        alnPos = fetchData.getAlnPos(mycursor, hmmPos)
+        # alnPos = fetchData.getAlnPos(mycursor, hmmPos)
         adjacentSites = fetchData.getAdjacentSites(mycursor, acc, position, 5)
         ## Even if the position is not in the HMM,
         ## we still want to show it in the output

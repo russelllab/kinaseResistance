@@ -214,9 +214,11 @@ def fetch_mappings_dic():
         uniprotPos = int(line.split('\t')[2])
         pfamAA = line.split('\t')[3]
         pfamPos = line.split('\t')[4].rstrip()
+        alnPos = line.split('\t')[5].rstrip()
         mappings[acc]['positions'][uniprotPos] = {'uniprotAA': uniprotAA,
                                                 'pfamAA': pfamAA,
-                                                'pfamPos': pfamPos}
+                                                'pfamPos': pfamPos,
+                                                'alnPos': alnPos}
         
         # print (mutation, wtAA, wtPos, mutAA, mut_type, acc, gene, info, source)
         '''
@@ -226,6 +228,53 @@ def fetch_mappings_dic():
                             (uniprotPos, uniprotAA, pfamPos, pfamAA, acc, uniprot_id)
                             )
         '''
+    # Extract information of inactive kinases from the
+    # hmmsearch output file
+    domain = None
+    flag = False
+    for line in gzip.open('../data/humanKinasesPkinasePK_Tyr_Ser-ThrAllInactiveHmmsearch.txt.gz', 'rt'):
+        if line.rstrip().lstrip() == '': continue
+        if line.split()[0] == 'Query:': domain = line.split()[1]
+        if domain is None: continue
+        if line.startswith('>>'):
+            name = line.split()[1]
+            acc = name.split('|')[1]
+            if acc not in mappings: mappings[acc] = {'uniprot_id': uniprot_id, 'positions': {}}
+            uniprot_start = 0 if name.split('|')[3].split('-')[0] == 'start' else int(name.split('|')[3].split('-')[0])-1
+            uniprot_id = name.split('|')[2]
+            flag = True
+            continue
+        if flag == False: continue
+        if line.split()[0] == domain:
+            dom_start = int(line.split()[1])
+            dom_end = int(line.split()[3])
+            dom_seq = line.split()[2]
+        elif line.split()[0] == name:
+            if line.split()[1] == '-': continue
+            name_start = int(line.split()[1]) + uniprot_start
+            name_end = int(line.split()[3]) + uniprot_start
+            name_seq = line.split()[2]
+            name_counter = 0; dom_counter = 0
+            for i in range(len(name_seq)):
+                if name_seq[i] not in ['-', '.'] and dom_seq[i] not in ['-', '.']:
+                    uniprotPos = name_start + name_counter
+                    pfamPos = dom_start + dom_counter
+                    uniprotAA = name_seq[i]
+                    pfamAA = dom_seq[i]
+                    # You need to check if the position is already present
+                    # in the dictionary. In that case just skip it                    
+                    if uniprotPos in mappings[acc]['positions']: continue
+                    # If the uniprotPos is not present in the dictionary
+                    # then add it to the dictionary (this means that it is
+                    # inactive/pseudokinase)
+                    mappings[acc]['positions'][uniprotPos] = {'uniprotAA': uniprotAA,
+                                                            'pfamAA': pfamAA,
+                                                            'pfamPos': pfamPos,
+                                                            'alnPos': '-'}
+                    dom_counter += 1; name_counter += 1
+                elif name_seq[i] in ['-', '.']: dom_counter += 1
+                elif dom_seq[i] in ['-', '.']: name_counter += 1
+
     return mappings
 
 def find_pfampos(mycursor, acc, uniprotPos)->None:
@@ -696,8 +745,9 @@ def create_mechismo_table(mycursor) -> None:
     f = open(tmp_df, 'r')
     mycursor.copy_from(f, strucType, sep=',')
 
+'''
 def fetch_map_fasta2aln():
-    '''Function to map from fasta to alignment'''
+    # Function to map from fasta to alignment
     dic_aln = {}
     for line in open('../alignments/humanKinasesHitsSplitTrimmed.fasta', 'r'):
         if line[0] == '>':
@@ -719,7 +769,9 @@ def fetch_map_fasta2aln():
         if start == 'start': start = 0
         else: start = int(start)
         # start += int(line.split('|')[4].split()[0])
-        start += int(name.split('|')[4].split()[0])
+        counter = int(name.split('|')[4].split()[0])
+        # if counter != 1:
+        start += counter
         # continue
         if acc not in map_fasta2aln: map_fasta2aln[acc] = {}
         current_position = start
@@ -730,6 +782,7 @@ def fetch_map_fasta2aln():
     print (map_fasta2aln['P08581'][1100])
     # sys.exit()
     return map_fasta2aln
+'''
 
 def runHmmsearch(acc, path2fasta):
     pdomains = ['Pkinase', 'PK_Tyr_Ser-Thr']
@@ -814,7 +867,7 @@ def create_kinases_table(mycursor)->None:
 
     pfam_domains = fetch_pfam_domains()
     mappings = fetch_mappings_dic()
-    map_fasta2aln = fetch_map_fasta2aln()
+    # map_fasta2aln = fetch_map_fasta2aln()
     num = 0
     data = []
     for kinase in tqdm(kinases):
@@ -835,7 +888,7 @@ def create_kinases_table(mycursor)->None:
         # if acc not in mappings: continue
         # if acc not in map_fasta2aln: continue
         for uniprotPos, uniprotAA in enumerate(fasta, start=1):
-            pfamPos, pfamAA = '-', '-'
+            pfamPos, pfamAA, alnPos = '-', '-', '-'
             if acc in mappings:
                 if uniprotPos in mappings[acc]['positions']:
                     if mappings[acc]['positions'][uniprotPos]['uniprotAA'] != uniprotAA:
@@ -843,12 +896,13 @@ def create_kinases_table(mycursor)->None:
                         sys.exit()
                     pfamPos = mappings[acc]['positions'][uniprotPos]['pfamPos']
                     pfamAA = mappings[acc]['positions'][uniprotPos]['pfamAA']
+                    alnPos = mappings[acc]['positions'][uniprotPos]['alnPos']
                     # print (uniprotPos, uniprotAA, pfamPos, pfamAA, acc, uniprot_id)
             
-            alnPos = '-'
-            if acc in map_fasta2aln:
-                if uniprotPos in map_fasta2aln[acc]:
-                    alnPos = map_fasta2aln[acc][uniprotPos]
+            # alnPos = '-'
+            # if acc in map_fasta2aln:
+            #     if uniprotPos in map_fasta2aln[acc]:
+            #         alnPos = map_fasta2aln[acc][uniprotPos]
                 
             name = acc+'/'+uniprotAA+str(uniprotPos)
             # if acc == 'P08581' and int(uniprotPos) == 1100:
@@ -898,16 +952,15 @@ if __name__ == '__main__':
     if db_exists == False: mycursor.execute("CREATE DATABASE "+db_name)
     mycursor.execute("use "+db_name)
     '''
-    # fetch_map_fasta2aln()
     # Create tables
-    print ('Creating HMM table')
-    create_hmm_table(mycursor)
+    # print ('Creating HMM table')
+    # create_hmm_table(mycursor)
     print ('Creating kinases table')
     create_kinases_table(mycursor)
-    print ('Creating mutation table')
-    create_mutations_table(mycursor)
-    print ('Creating ligands table')
-    create_ligands_table(mycursor)
+    # print ('Creating mutation table')
+    # create_mutations_table(mycursor)
+    # print ('Creating ligands table')
+    # create_ligands_table(mycursor)
     # print ('Creating homology table')
     # create_homology_table(mycursor)
     # print ('Creating IUPRED table')
@@ -916,10 +969,10 @@ if __name__ == '__main__':
     # create_mechismo_table(mycursor)
     # print ('Creating DSSP tables')
     # create_dssp_tables(mycursor)
-    print ('Creating PTM table')
-    create_ptm_table(mycursor)
-    print ('Creating alignment table')
-    create_alignment_table(mycursor)
+    # print ('Creating PTM table')
+    # create_ptm_table(mycursor)
+    # print ('Creating alignment table')
+    # create_alignment_table(mycursor)
     mydb.commit()
 
     # Use mysqldump to create backup file

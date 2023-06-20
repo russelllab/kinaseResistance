@@ -5,6 +5,15 @@
 # and split them if they are more than one domains
 # Save the output in the file humanKinasesHitsSplit.fasta
 python find_hits.py humanKinases.fasta
+cat humanKinasesPkinaseHitsSplit.fasta \
+    humanKinasesPkinaseHitsSplitInactive.fasta \
+    humanKinasesPK_Tyr_Ser-ThrHitsSplit.fasta \
+    humanKinasesPK_Tyr_Ser-ThrHitsSplitInactive.fasta > \
+    humanKinasesPkinasePK_Tyr_Ser-ThrAll.fasta
+cat humanKinasesPkinaseHitsSplitInactive.fasta \
+    humanKinasesPK_Tyr_Ser-ThrHitsSplitInactive.fasta > \
+    humanKinasesPkinasePK_Tyr_Ser-ThrAllInactive.fasta
+
 
 # Step 2: Run the hmmalign to align the human sequences
 # with the Pkinase & PK-Tyr HMM profile
@@ -61,6 +70,9 @@ cd ../data/
 hmmsearch -o humanKinasesHitsSplitHmmsearchTrimmed.txt ../pfam/humanKinasesHitsSplitTrimmed.hmm humanKinases.fasta
 gzip -f humanKinasesHitsSplitHmmsearchTrimmed.txt
 
+hmmsearch -o humanKinasesPkinasePK_Tyr_Ser-ThrAllInactiveHmmsearch.txt ../pfam/humanKinasesHitsSplitTrimmed.hmm humanKinasesPkinasePK_Tyr_Ser-ThrAllInactive.fasta
+gzip -f humanKinasesPkinasePK_Tyr_Ser-ThrAllInactiveHmmsearch.txt
+
 # Step 9: Map the UniProt AA to the new domain numbering in the
 # domain name 'humanKinasesHitsSplitTrimmed' (given as input
 # to the script) using the file humanKinasesHitsSplitHmmsearchTrimmed.txt.gz
@@ -76,3 +88,17 @@ python map2aln.py ../alignments/humanKinasesHitsSplitTrimmed.fasta humanKinasesH
 # Save the output in the file humanKinasesHitsSplitHmmsearchTrimmedPTM.tsv
 # python3 make_table_psp_kinase_trimmed.py humanKinasesHitsSplitTrimmed humanKinasesHitsSplitHmmsearchTrimmedMappings.tsv.gz humanKinases.fasta humanKinasesHitsSplitTrimmedPTM.tsv
 python3 make_table_psp_kinase_trimmed.py humanKinasesHitsSplitTrimmed humanKinasesHitsSplitTrimmedMappings.tsv.gz humanKinases.fasta humanKinasesHitsSplitTrimmedPTM.tsv
+
+# Step 11: Align all kinases (including inactive and pseudokinases) with the new HMM profile
+# Save the output in the file humanKinasesPkinasePK_Tyr_Ser-ThrAll.sto
+# Convert the stockholm file to CLUSTAL format
+hmmalign -o humanKinasesPkinasePK_Tyr_Ser-ThrAll.sto ../pfam/humanKinasesHitsSplitTrimmed.hmm humanKinasesPkinasePK_Tyr_Ser-ThrAll.fasta
+sed '/^# STOCKHOLM/s/.*/CLUSTAL/' humanKinasesPkinasePK_Tyr_Ser-ThrAll.sto | grep -v '#' > humanKinasesPkinasePK_Tyr_Ser-ThrAll.aln
+mv humanKinasesPkinasePK_Tyr_Ser-ThrAll.aln ../alignments/
+cd ../alignments/
+python trim_alignment_split_outside.py \
+        humanKinasesPkinasePK_Tyr_Ser-ThrAll.aln \
+        ../data/humanKinases.fasta \
+        32155 \
+        33025 \
+        30

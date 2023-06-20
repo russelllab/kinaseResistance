@@ -51,7 +51,7 @@ def getAlnPos(mycursor, hmmpos):
 
 def getRegion(mycursor, acc, mutation):
     '''Function to fetch region from the DB'''
-    mycursor.execute("select alnpos from positions where \
+    mycursor.execute("select pfampos from positions where \
                      acc=%s and uniprotpos=%s", (acc, mutation[1:-1],))
     hits = mycursor.fetchone()
     if hits is None:
@@ -65,7 +65,7 @@ def getRegion(mycursor, acc, mutation):
         for line in open('../data/ss.tsv', 'r', encoding='utf-8'):
             if line.startswith('#'): continue
             region_name = line.split()[0]
-            start, end = int(line.split()[-1].split('-')[0]), int(line.split()[-1].split('-')[1])
+            start, end = int(line.split()[-2].split('-')[0]), int(line.split()[-2].split('-')[1])
             if alnpos in range(start, end+1):
                 region.append(region_name)
         
@@ -462,15 +462,17 @@ def getDSSPScores(mycursor, acc, wtAA, position, mutAA):
     return row
 
 def getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA):
-    # print (f'HMMscore in {acc} for {wtAA}{position}{mutAA}')
-    mycursor.execute("SELECT pfampos FROM positions \
+    print (f'HMMscore in {acc} for {wtAA}{position}{mutAA}')
+    mycursor.execute("SELECT pfampos, alnpos FROM positions \
                      WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
     hits = mycursor.fetchone()
+    print (hits)
     # print (acc, wtAA, position, mutAA, hits)
     if hits == None:
         print (acc, wtAA, position, mutAA, hits)
         return '-', None, None, None
     pfampos = hits[0]
+    alnpos = hits[1]
     # print (f'pfampos of {acc}/{wtAA}{position}{mutAA} is {pfampos}')
     mycursor.execute("SELECT * FROM hmm \
                         WHERE pfampos = %s", (str(pfampos),))
@@ -482,7 +484,7 @@ def getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA):
             mut_bitscore = bitscore
         elif aa == wtAA:
             wt_bitscore = bitscore
-    return pfampos, wt_bitscore, mut_bitscore, 0
+    return alnpos, pfampos, wt_bitscore, mut_bitscore, 0
 
 def getATPbindingScores(mycursor, acc, position):
     count_atp = []

@@ -34,11 +34,11 @@ sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 import fetchData
 
-create_svg_path = '/Create_SVG/Enhancements_May2023/05June/'
+create_svg_path = '/Create_SVG/Enhancements_May2023/June20th/'
 sys.path.insert(1, BASE_DIR+create_svg_path)
-import create_svg_20230607_kinases_GS as create_svg
-conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_May-24-2023.txt'
-identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_May-24-2023.txt'
+import create_svg_20230620_kinases_GS as create_svg
+conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_Jun-20-2023.txt'
+identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_Jun-20-2023.txt'
 
 def connection(database='kinase_project2'):
     '''Function to connect to postgresql database'''
@@ -69,7 +69,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 	'''
 	Make text for prediction
 	'''
-	ws = 3
+	ws = 5
 	if ws > 0: ws -= 1
 	ws = int(ws/2)
 	dic_mutations = {'A': 'Activating', 'D': 'Deactivating', 'R': 'Resistance'}
@@ -120,7 +120,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
 		alnpos, pfampos = mycursor.fetchone()
 		# print(pfampos, interested_kinase_pfampos, alnpos, interested_kinase_alnpos)
-		if pfampos == '-' or alnpos == '-': continue
+		if pfampos == '-' and alnpos == '-': continue
 		mycursor.execute("SELECT uniprotaa, uniprotpos, ptmtype, acc, gene FROM ptms \
 						WHERE pfampos = %s", (str(pfampos), ))
 		hits = mycursor.fetchall()
@@ -142,8 +142,9 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			row.append(uniprotaa)
 			row.append(uniprotpos)
 			row.append('-') # MUT aa = blank for PTMs
-			row.append(str(pfampos) + makeWindowText(pfampos, interested_kinase_pfampos))
-			row.append(str(alnpos) + makeWindowText(alnpos, interested_kinase_alnpos))
+			# row.append(str(pfampos) + makeWindowText(pfampos, interested_kinase_pfampos))
+			# row.append(str(alnpos) + makeWindowText(alnpos, interested_kinase_alnpos))
+			row.append(str(position-mutation_position))
 			row.append(dic_ptms[ptmtype])
 			row.append('-') # Description = blank for PTMs
 			# if ref_gene == 'BRAF': print ('ref_gene', row)
@@ -197,7 +198,7 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
 		alnpos, pfampos = mycursor.fetchone()
 		# print(pfampos)
-		if pfampos == '-' or alnpos == '-': continue
+		if pfampos == '-' and alnpos == '-': continue
 		mycursor.execute("SELECT mutation, wtaa, wtpos, mut_type, acc, gene, info, pubmed FROM mutations \
 						WHERE pfampos = %s", (str(pfampos), ))
 		hits = mycursor.fetchall()
@@ -221,8 +222,9 @@ def makeText(acc, gene, mutation, interested_kinase_pfampos, mycursor):
 			row.append(ref_mutation[0])
 			row.append(ref_mutation[1:-1])
 			row.append(ref_mutation[-1])
-			row.append(str(pfampos) + makeWindowText(pfampos, interested_kinase_pfampos))
-			row.append(str(alnpos) + makeWindowText(alnpos, interested_kinase_alnpos))
+			# row.append(str(pfampos) + makeWindowText(pfampos, interested_kinase_pfampos))
+			# row.append(str(alnpos) + makeWindowText(alnpos, interested_kinase_alnpos))
+			row.append(str(position-mutation_position))
 			row.append(dic_mutations[mut_type])
 			# row.append(info.split('"""')[0] if '"' in info else '-')
 			row.append(info)
@@ -685,6 +687,7 @@ def configureRoutes(app):
 				acc = row['acc']
 				gene = row['gene']
 				hmmPos = row['hmmPos']
+				print (acc, gene, hmmPos)
 				data, _ = makeText(acc, gene, mutation, hmmPos, connection())
 				break
 				# text += '<table><tr><td><b>User input:</b></td><td>'+row['name']+'</td></tr>'
@@ -793,7 +796,8 @@ def configureRoutes(app):
 		
 		alignment = 'static/hmm/humanKinasesTrimmed.clustal'
 		# alignment = 'static/hmm/humanKinasesHitsSplitTrimmedWeb.aln'
-		alignment = BASE_DIR + '/alignments/humanKinasesHitsSplitTrimmedWeb.aln'
+		# alignment = BASE_DIR + '/alignments/humanKinasesHitsSplitTrimmedWeb.aln'
+		alignment = BASE_DIR + '/alignments/humanKinasesPkinasePK_Tyr_Ser-ThrAllTrimmedWeb.aln'
 		# resetDic(dic_mutations_info, alignment)
 		dic_mutations_info = resetDic(dic_mutations_info, alignment)
 		# print (dic_mutations_info)
@@ -834,7 +838,7 @@ def configureRoutes(app):
 		for line in open('../data/ss.tsv', 'r', encoding='utf-8'):
 			if line.startswith('#'): continue
 			name = str(line.split()[0])
-			start, end = line.split()[2].rstrip().split('-')
+			start, end = line.split()[3].rstrip().split('-')
 			# print (name, start, end)
 			feature_dic[name] = [i for i in range(int(start), int(end)+1)]
 		try:

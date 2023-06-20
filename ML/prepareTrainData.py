@@ -187,8 +187,11 @@ for acc in tqdm(kinases):
         wtAA = mutation_obj.wtAA
         mut_types = ''.join(np.sort(list(set(mutation_obj.mut_types))))
         # print (acc, mutation)
-        hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
-        if hmmPos == '-': continue
+        alnPos, hmmPos, hmmScoreWT, hmmScoreMUT, hmmSS = fetchData.getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA)
+        # Inactive kinases or pseudokinases or inactive/psedokinase domains
+        # will not have an alignment position, hence they must be skipped
+        # durint the training phase
+        if alnPos == '-': continue
         if ALIGNMENT_END < int(hmmPos) or int(hmmPos) < ALIGNMENT_START: continue
         iupred_score = fetchData.getIUPredScore(mycursor, acc, wtAA, position, mutAA)
         if iupred_score == None: continue

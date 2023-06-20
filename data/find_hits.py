@@ -11,6 +11,7 @@ class Kinase:
         self.name = name
         self.seq = ''
         self.domains = []
+        self.inactive = False
 
 def runHmmsearch(acc, path2fasta):
     pdomains = ['Pkinase', 'PK_Tyr_Ser-Thr']
@@ -66,26 +67,25 @@ kinases = {}
 flag = 0
 for line in open(sys.argv[1], 'r'):
     if line[0] == '>':
-        ## Get rid of the inactive kinases
-        if line.split('>')[1].split()[1].strip() == 'Inactive':
-            flag = 0
-            continue
-        ## Get rid of the one that have catalytically inactive domain/pseduokinases
-        ## It's hard to know which one is the catalytically inactive domain
-        ## but try to make a list as you go along (see above)
-        ## Pseudokinases with multiple domains are removed later
-        ## after running the hmmsearch
-        if line.split('|')[1] in inactive_domains or line.split('|')[1] in pseudokinases:
-            flag = 0
-            continue
         kinase = line.split('>')[1].split()[0].strip()
         kinases[kinase] = Kinase(kinase)
         acc = kinase.split('|')[1]
         kinases[kinase].domains = getKinaseDomain(acc)
         flag = 1
+        ## Mark the inactive kinases
+        if line.split('>')[1].split()[1].strip() == 'Inactive':
+            kinases[kinase].inactive = True
+            continue
+        ## Mark the one that have catalytically inactive domain/pseduokinases
+        ## It's hard to know which one is the catalytically inactive domain
+        ## but try to make a list as you go along (see above)
+        ## Pseudokinases with multiple domains are treated later
+        ## after running the hmmsearch
+        if line.split('|')[1] in inactive_domains or line.split('|')[1] in pseudokinases:
+            kinases[kinase].inactive = True
+            continue
     else:
-        if flag == 1:
-            kinases[kinase].seq += line.strip()
+        kinases[kinase].seq += line.strip()
 
 # Create a fasta file per domain
 domain2name = {'PF00069': 'Pkinase', 'PF07714': 'PK_Tyr_Ser-Thr'}
@@ -104,6 +104,7 @@ class KinaseDomain:
         self.domainEvalues = {}
 
 kinaseDomains = {}
+pseudokinasesHits = []
 for domain in list_kinase_domains:
     if domain not in ['PF00069', 'PF07714']: continue
     domainName = domain2name[domain]
@@ -122,21 +123,7 @@ for domain in list_kinase_domains:
             hits.append(hit)
             continue
         current_hit = int(line.split()[9])
-        ## Get rid of the pseudokinases which multiple domains
-        ## The ones with single domain were already removed
-        ## before running the hmmsearch
-        acc = line.split()[0].split('|')[1]
-        ignore = False
-        for entry in pseudokinases:
-            if '_' not in entry: continue
-            pseudokinase = entry.split('_')[0]
-            dom = entry.split('_')[1]
-            if acc == pseudokinase and int(dom) == int(current_hit):
-                # print (acc)
-                ignore = True
-                break
-        if ignore: continue
-        ##
+        
         current_start = str(line.split()[17])
         current_end = str(line.split()[18])
         if current_hit == 1:
@@ -149,6 +136,22 @@ for domain in list_kinase_domains:
         if domain not in kinaseDomains[name].domainEvalues: kinaseDomains[name].domainEvalues[domain]=[]
         kinaseDomains[name].domainEvalues[domain] += [eValue]
         hits.append(hit)
+        ## Save names of pseudokinases which multiple domains
+        ## The ones with single domain were already marked as inactive
+        ## before running the hmmsearch
+        acc = line.split()[0].split('|')[1]
+        ignore = False
+        for entry in pseudokinases:
+            if '_' not in entry: continue
+            pseudokinase = entry.split('_')[0]
+            dom = entry.split('_')[1]
+            if acc == pseudokinase and int(dom) == int(current_hit):
+                # print (acc)
+                pseudokinasesHits.append(hit)
+                # ignore = True
+                break
+        # if ignore: continue
+        ##
 
 # print (hits)
 
@@ -182,13 +185,9 @@ def getLikelyDomain(name):
 for domain in list_kinase_domains:
     if domain not in ['PF00069', 'PF07714']: continue
     domainName = domain2name[domain]
-    l = ''
+    l = ''; m = ''
     for hit in hits:
         kinase = '|'.join(hit.split('|')[:-1])
-        ## Eliminate the ones that are not present in the kinases dictionary
-        ## These would be the inactive kinases
-        if kinase not in kinases:
-            continue
         # fetch the best domain
         likelyDomain = getLikelyDomain(kinase)
         # ignore if the best domain is not the one we are looking for
@@ -208,6 +207,12 @@ for domain in list_kinase_domains:
             end = int(end)
             seq = kinases[kinase].seq[start:end]
         # print ('>'+hit+'\n'+seq)
-        l += '>'+hit+'\n'+seq+'\n'
+        ## Eliminate the ones that are not present in the kinases dictionary
+        ## These would be the inactive kinases
+        if kinases[kinase].inactive is False and hit not in pseudokinasesHits:
+            l += '>'+hit+'\n'+seq+'\n'
+            continue
+        m += '>'+hit+'\n'+seq+'\n'
 
     open('humanKinases'+domainName+'HitsSplit.fasta', 'w').write(l)
+    open('humanKinases'+domainName+'HitsSplitInactive.fasta', 'w').write(m)

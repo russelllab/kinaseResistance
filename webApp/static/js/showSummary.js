@@ -30,19 +30,20 @@ function defineSummaryDataTable (tableID, uniqID, kinase, mutation)
 							data: response['data'],
 							dom: 'Bfrtip',
 							lengthChange: false,
+							order: [[5, 'asc']],
 							buttons: [
 								'copy', 'csv', 'excel', 'pdf', 'print', 'colvis',
 								{
 									text: "Show all instances",
 									action: function(e, dt, node, config){
-										dt.column(7).search('').draw();
+										dt.column(6).search('').draw();
 										dt.column(1).search('').draw();
 									}
 								},
 								{
 									text: "Show only "+response['gene']+" instances",
 									action: function(e, dt, node, config){
-										dt.column(7).search('').draw();
+										dt.column(6).search('').draw();
 										dt.column(1).search(response['acc']).draw();
 									}
 								},
@@ -50,26 +51,26 @@ function defineSummaryDataTable (tableID, uniqID, kinase, mutation)
 									text: "Show only activating instances",
 									action: function(e, dt, node, config){
 										dt.column(1).search('').draw();
-										dt.column(7).search("^"+'activating', true, false).draw();
+										dt.column(6).search("^"+'activating', true, false).draw();
 									}
 								},
 								{
 									text: "Show only resistance instances",
 									action: function(e, dt, node, config){
 										dt.column(1).search('').draw();
-										dt.column(7).search("^"+'resistance', true, false).draw();
+										dt.column(6).search("^"+'resistance', true, false).draw();
 									}
 								},
 								{
 									text: "Show only deactivating instances",
 									action: function(e, dt, node, config){
 										dt.column(1).search('').draw();
-										dt.column(7).search("^"+'deactivating', true, false).draw();
+										dt.column(6).search("^"+'deactivating', true, false).draw();
 									}
 								},
 							],
 							columnDefs: [
-								{ width: 200, targets: 7 },
+								{ width: 350, targets: 7 },
 								{
 									targets: "_all",
 									className: 'dt-center'
@@ -81,7 +82,7 @@ function defineSummaryDataTable (tableID, uniqID, kinase, mutation)
 								{ title: 'WT' },
 								{ title: 'Position' },
 								{ title: 'MUT' },
-								{ title: 'HMM<br>position' },
+								// { title: 'HMM<br>position' },
 								{ title: 'Alignment<br>position' },
 								{ title: 'Info<br>type' },
 								{ title: 'Description' },
