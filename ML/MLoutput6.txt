@@ -272,74 +272,68 @@ REC: loss 0.978
 ########################
 REC: decrease 0.715
 AIvNLD
-mean_test_score [0.83539236 0.83539236 0.83544035 0.83528481 0.83420307 0.83420307
- 0.83420307 0.83420307 0.83327976 0.83327976 0.83327976 0.83327976
- 0.83036878 0.83036878 0.83036878 0.83036878 0.84451622 0.84451622
- 0.84454724 0.84547344 0.84491706 0.84491706 0.84491706 0.84491706
- 0.84487735 0.84487735 0.84487735 0.84487735 0.84132953 0.84132953
- 0.84132953 0.84132953 0.85084347 0.85084347 0.85071151 0.85007839
- 0.85065235 0.85065235 0.85065235 0.85065235 0.8498215  0.8498215
- 0.8498215  0.8498215  0.84591214 0.84591214 0.84591214 0.84591214
- 0.85726421 0.85726421 0.85696926 0.85670493 0.85446016 0.85446016
- 0.85446016 0.85446016 0.8549636  0.8549636  0.8549636  0.8549636
- 0.85019236 0.85019236 0.85019236 0.85019236 0.86375982 0.86375982
- 0.8648457  0.86424961 0.86030032 0.86030032 0.86030032 0.86030032
- 0.85642922 0.85642922 0.85642922 0.85642922 0.85231778 0.85231778
- 0.85231778 0.85231778]
+mean_test_score [0.83467362]
 -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
-Best model: {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 7, 'n_estimators': 100}
+Best model: {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 20, 'min_samples_split': 12, 'n_estimators': 100}
 ---------------------------------------------------------------------------------------------------
 Stratified CV results
 MET AUC  MCC  F1   PRE  REC  SPE
-AVG 0.86 0.48 0.55 0.65 0.49 0.94
-STD 0.006 0.022 0.019 0.027 0.021 0.007
+AVG 0.84 0.4 0.52 0.41 0.7 0.77
+STD 0.006 0.021 0.016 0.012 0.024 0.006
 Number of act mutations in the train set: 179
 Number of deact mutations in the train set: 790
 ########################
            Feature  Importance
-1      hmmScoreMUT    0.034270
-0       hmmScoreWT    0.031732
-2     Phosphomimic    0.027003
-6   exclParalogs_1    0.019809
-12      D_A_0_pfam    0.019140
-13      D_D_0_pfam    0.019077
-8    allHomologs_2    0.016757
-5    allHomologs_1    0.016644
-10  specParalogs_2    0.016470
-7           bpso_1    0.016447
-4           bpso_0    0.016252
-9   exclParalogs_2    0.015874
-3   specParalogs_0    0.015692
-11     orthologs_2    0.015188
+0       hmmScoreWT    0.042714
+1      hmmScoreMUT    0.040221
+14      D_A_0_pfam    0.029418
+2     Phosphomimic    0.026645
+8   exclParalogs_1    0.025419
+18      D_K_0_pfam    0.022860
+3       ChargesMUT    0.022187
+19      D_M_0_pfam    0.021981
+20      D_Q_0_pfam    0.021807
+10          bpso_1    0.021292
+15      D_D_0_pfam    0.020448
+4            A_MUT    0.020214
+12  exclParalogs_2    0.020203
+5    allHomologs_0    0.020069
+16      D_E_0_pfam    0.019240
+7    allHomologs_1    0.017795
+6           bpsh_0    0.017503
+17      D_G_0_pfam    0.017340
+11   allHomologs_2    0.016208
+9      orthologs_1    0.015566
+13     orthologs_2    0.015263
 ########################
 activatingresistance results ( 14 )
-REC: 0.929
+REC: 0.857
 ########################
 ########################
 ########################
-P46734/MAP2K3/A84T 0.383 A
-P11309/PIM1/S97N 0.299 A
+P46734/MAP2K3/A84T 0.449 A
+P11309/PIM1/S97N 0.485 A
 ########################
-Q00535/CDK5/F82I 0.394 TBD
-Q02750/MAP2K1/V211D 0.391 TBD
+Q00535/CDK5/F82I 0.559 TBD
+Q02750/MAP2K1/V211D 0.58 TBD
 ########################
-O96017/CHEK2/K373E 0.584 Inconclusive
-P06493/CDK1/V124G 0.385 Inconclusive
-P46734/MAP2K3/R94L 0.522 Inconclusive
-P46734/MAP2K3/R96W 0.31 Inconclusive
-P46734/MAP2K3/L215W 0.323 Inconclusive
-P46734/MAP2K3/T222M 0.31 Inconclusive
-P11309/PIM1/Q127E 0.477 Inconclusive
-Q06418/TYRO3/V669L 0.508 Inconclusive
-Q13470/TNK1/A299D 0.497 Inconclusive
+O96017/CHEK2/K373E 0.636 Inconclusive
+P06493/CDK1/V124G 0.503 Inconclusive
+P46734/MAP2K3/R94L 0.606 Inconclusive
+P46734/MAP2K3/R96W 0.432 Inconclusive
+P46734/MAP2K3/L215W 0.501 Inconclusive
+P46734/MAP2K3/T222M 0.386 Inconclusive
+P11309/PIM1/Q127E 0.525 Inconclusive
+Q06418/TYRO3/V669L 0.588 Inconclusive
+Q13470/TNK1/A299D 0.599 Inconclusive
 ########################
-P00533/EGFR/T790M 0.359 TBDincreaseresistance
+P00533/EGFR/T790M 0.463 TBDincreaseresistance
 ########################
-REC: neutral 0.993
+REC: neutral 0.634
 ########################
-REC: loss 0.993
+REC: loss 0.933
 ########################
-REC: decrease 0.971
+REC: decrease 0.731
 AvN
 mean_test_score [0.90658135 0.90658135 0.90535119 0.90639484 0.90335119 0.90335119
  0.90335119 0.90335119 0.90160516 0.90160516 0.90160516 0.90160516
@@ -478,148 +472,125 @@ REC: loss 0.973
 ########################
 REC: decrease 0.785
 AIvLD
-mean_test_score [0.87905605 0.87905605 0.87911943 0.87949815 0.87871267 0.87871267
- 0.87871267 0.87871267 0.87594939 0.87594939 0.87594939 0.87594939
- 0.87565226 0.87565226 0.87565226 0.87565226 0.88811697 0.88811697
- 0.88790233 0.88718226 0.88545707 0.88545707 0.88545707 0.88545707
- 0.88453235 0.88453235 0.88453235 0.88453235 0.88279175 0.88279175
- 0.88279175 0.88279175 0.89124421 0.89124421 0.89061341 0.89179726
- 0.89078512 0.89078512 0.89078512 0.89078512 0.88790812 0.88790812
- 0.88790812 0.88790812 0.88570366 0.88570366 0.88570366 0.88570366
- 0.89455786 0.89455786 0.89493723 0.89538143 0.89320074 0.89320074
- 0.89320074 0.89320074 0.89151099 0.89151099 0.89151099 0.89151099
- 0.88875995 0.88875995 0.88875995 0.88875995 0.89781781 0.89781781
- 0.89690485 0.8981082  0.89495412 0.89495412 0.89495412 0.89495412
- 0.89343524 0.89343524 0.89343524 0.89343524 0.88913505 0.88913505
- 0.88913505 0.88913505]
+mean_test_score [0.88890583]
 -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
-Best model: {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 10, 'n_estimators': 100}
+Best model: {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 10, 'min_samples_split': 10, 'n_estimators': 100}
 ---------------------------------------------------------------------------------------------------
 Stratified CV results
 MET AUC  MCC  F1   PRE  REC  SPE
-AVG 0.9 0.56 0.66 0.62 0.71 0.87
-STD 0.004 0.017 0.013 0.016 0.015 0.008
+AVG 0.89 0.53 0.64 0.55 0.78 0.82
+STD 0.003 0.01 0.007 0.006 0.011 0.003
 Number of act mutations in the train set: 179
 Number of deact mutations in the train set: 645
 ########################
            Feature  Importance
-1      hmmScoreMUT    0.036501
-0       hmmScoreWT    0.034049
-13      D_A_0_pfam    0.029145
-14      D_D_0_pfam    0.025455
-4    allHomologs_0    0.023944
-3            A_MUT    0.022635
-2     Phosphomimic    0.022271
-8           bpsh_0    0.020889
-17      D_S_0_pfam    0.020591
-11  exclParalogs_2    0.019102
-16      D_N_0_pfam    0.018512
-10          bpso_1    0.018198
-7           bpso_0    0.017243
-12     orthologs_2    0.017002
-5   exclParalogs_0    0.016734
-15      D_K_0_pfam    0.015978
-6      orthologs_0    0.015735
-9    allHomologs_1    0.015454
+1      hmmScoreMUT    0.043071
+13      D_A_0_pfam    0.038011
+0       hmmScoreWT    0.031881
+4    allHomologs_0    0.029919
+3            A_MUT    0.029616
+14      D_D_0_pfam    0.027572
+6           bpsh_0    0.026698
+19      D_S_0_pfam    0.021807
+9   exclParalogs_2    0.021792
+5      orthologs_0    0.021293
+17      D_N_0_pfam    0.020954
+8           bpso_1    0.020212
+7    allHomologs_1    0.018589
+15      D_K_0_pfam    0.018104
+2     Phosphomimic    0.017954
+10     orthologs_2    0.017598
+16      D_M_0_pfam    0.017423
+11          bpso_2    0.016105
+12          bpsh_2    0.015994
+18      D_R_0_pfam    0.015531
 ########################
 activatingresistance results ( 14 )
 REC: 0.929
 ########################
 ########################
 ########################
-P46734/MAP2K3/A84T 0.578 A
-P11309/PIM1/S97N 0.488 A
+P46734/MAP2K3/A84T 0.61 A
+P11309/PIM1/S97N 0.555 A
 ########################
-Q00535/CDK5/F82I 0.46 TBD
-Q02750/MAP2K1/V211D 0.426 TBD
+Q00535/CDK5/F82I 0.525 TBD
+Q02750/MAP2K1/V211D 0.527 TBD
 ########################
-O96017/CHEK2/K373E 0.66 Inconclusive
-P06493/CDK1/V124G 0.367 Inconclusive
-P46734/MAP2K3/R94L 0.49 Inconclusive
-P46734/MAP2K3/R96W 0.391 Inconclusive
-P46734/MAP2K3/L215W 0.361 Inconclusive
-P46734/MAP2K3/T222M 0.322 Inconclusive
-P11309/PIM1/Q127E 0.649 Inconclusive
-Q06418/TYRO3/V669L 0.684 Inconclusive
+O96017/CHEK2/K373E 0.663 Inconclusive
+P06493/CDK1/V124G 0.444 Inconclusive
+P46734/MAP2K3/R94L 0.606 Inconclusive
+P46734/MAP2K3/R96W 0.475 Inconclusive
+P46734/MAP2K3/L215W 0.53 Inconclusive
+P46734/MAP2K3/T222M 0.388 Inconclusive
+P11309/PIM1/Q127E 0.72 Inconclusive
+Q06418/TYRO3/V669L 0.641 Inconclusive
 Q13470/TNK1/A299D 0.734 Inconclusive
 ########################
-P00533/EGFR/T790M 0.466 TBDincreaseresistance
+P00533/EGFR/T790M 0.554 TBDincreaseresistance
 ########################
-REC: neutral 0.841
+REC: neutral 0.931
 ########################
-REC: loss 0.973
+REC: loss 0.943
 ########################
-REC: decrease 0.88
+REC: decrease 0.736
 AvNL
-mean_test_score [0.89406098 0.89406098 0.89374832 0.89414941 0.89323022 0.89323022
- 0.89323022 0.89323022 0.89232328 0.89232328 0.89232328 0.89232328
- 0.88965965 0.88965965 0.88965965 0.88965965 0.90372676 0.90372676
- 0.90408824 0.90401543 0.90215689 0.90215689 0.90215689 0.90215689
- 0.90038417 0.90038417 0.90038417 0.90038417 0.89550206 0.89550206
- 0.89550206 0.89550206 0.91010784 0.91010784 0.91029209 0.9103931
- 0.90671488 0.90671488 0.90671488 0.90671488 0.90397475 0.90397475
- 0.90397475 0.90397475 0.89911859 0.89911859 0.89911859 0.89911859
- 0.91674551 0.91674551 0.91768575 0.91750267 0.90854779 0.90854779
- 0.90854779 0.90854779 0.90716035 0.90716035 0.90716035 0.90716035
- 0.90064328 0.90064328 0.90064328 0.90064328 0.92226646 0.92226646
- 0.92242999 0.91903545 0.90924051 0.90924051 0.90924051 0.90924051
- 0.90723546 0.90723546 0.90723546 0.90723546 0.89887603 0.89887603
- 0.89887603 0.89887603]
+mean_test_score [0.87354798]
 -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
-Best model: {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 7, 'n_estimators': 100}
+Best model: {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 25, 'min_samples_split': 10, 'n_estimators': 100}
 ---------------------------------------------------------------------------------------------------
 Stratified CV results
 MET AUC  MCC  F1   PRE  REC  SPE
-AVG 0.92 0.58 0.58 0.85 0.47 0.99
-STD 0.007 0.022 0.025 0.028 0.021 0.003
+AVG 0.88 0.43 0.5 0.38 0.75 0.81
+STD 0.007 0.021 0.017 0.016 0.021 0.009
 Number of act mutations in the train set: 82
 Number of deact mutations in the train set: 548
 ########################
-           Feature  Importance
-2     Phosphomimic    0.037190
-0       hmmScoreWT    0.029138
-1      hmmScoreMUT    0.028210
-7           bpso_0    0.024255
-12      D_D_0_pfam    0.021915
-13      D_N_0_pfam    0.019424
-4            A_MUT    0.018643
-3       ChargesMUT    0.018434
-6      orthologs_0    0.017954
-14      D_H_2_pfam    0.017596
-9   specParalogs_1    0.017047
-8           bpsh_0    0.016855
-11      A_Q_0_pfam    0.016190
-10      A_E_0_pfam    0.015911
-5    allHomologs_0    0.015545
+            Feature  Importance
+12       D_D_0_pfam    0.045455
+0        hmmScoreWT    0.045354
+3             A_MUT    0.036075
+15       D_H_2_pfam    0.035167
+14       D_N_0_pfam    0.033446
+2        ChargesMUT    0.033144
+13       D_K_0_pfam    0.031130
+1       hmmScoreMUT    0.030663
+7            bpso_0    0.026527
+10       A_E_0_pfam    0.023559
+11       D_A_0_pfam    0.023395
+5     allHomologs_0    0.021454
+8    specParalogs_1    0.019270
+4   specParalogs_-2    0.017787
+6    specParalogs_0    0.017172
+9       D_V_-2_pfam    0.015850
 ########################
 activatingresistance results ( 14 )
-REC: 0.786
+REC: 0.857
 ########################
 ########################
 ########################
-P46734/MAP2K3/A84T 0.239 A
-P11309/PIM1/S97N 0.171 A
+P46734/MAP2K3/A84T 0.387 A
+P11309/PIM1/S97N 0.407 A
 ########################
-Q00535/CDK5/F82I 0.486 TBD
-Q02750/MAP2K1/V211D 0.388 TBD
+Q00535/CDK5/F82I 0.563 TBD
+Q02750/MAP2K1/V211D 0.63 TBD
 ########################
-O96017/CHEK2/K373E 0.596 Inconclusive
-P06493/CDK1/V124G 0.263 Inconclusive
-P46734/MAP2K3/R94L 0.384 Inconclusive
-P46734/MAP2K3/R96W 0.298 Inconclusive
-P46734/MAP2K3/L215W 0.311 Inconclusive
-P46734/MAP2K3/T222M 0.27 Inconclusive
-P11309/PIM1/Q127E 0.243 Inconclusive
-Q06418/TYRO3/V669L 0.378 Inconclusive
-Q13470/TNK1/A299D 0.311 Inconclusive
+O96017/CHEK2/K373E 0.71 Inconclusive
+P06493/CDK1/V124G 0.445 Inconclusive
+P46734/MAP2K3/R94L 0.584 Inconclusive
+P46734/MAP2K3/R96W 0.442 Inconclusive
+P46734/MAP2K3/L215W 0.474 Inconclusive
+P46734/MAP2K3/T222M 0.566 Inconclusive
+P11309/PIM1/Q127E 0.521 Inconclusive
+Q06418/TYRO3/V669L 0.577 Inconclusive
+Q13470/TNK1/A299D 0.585 Inconclusive
 ########################
-P00533/EGFR/T790M 0.251 TBDincreaseresistance
+P00533/EGFR/T790M 0.403 TBDincreaseresistance
 ########################
-REC: neutral 1.0
+REC: neutral 0.772
 ########################
-REC: loss 0.988
+REC: loss 0.908
 ########################
-REC: decrease 0.045
+REC: decrease 0.351
 AvL
 mean_test_score [0.94406191 0.94406191 0.94393809 0.94361831 0.9426712  0.9426712
  0.9426712  0.9426712  0.94104637 0.94104637 0.94104637 0.94104637

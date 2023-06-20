@@ -19,12 +19,15 @@ from cls import Kinase, Mutation
 import argparse
 import shutil
 import gzip, sys
+from datetime import datetime
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 MUT_TYPES = ['A', 'D', 'R']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
-MODEL_NAMES = ['AIvNLD', 'LDvNAI', 'RvN', 'AIvLD']
+MODEL_NAMES = ['AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN', 'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
 WS = 5
+START_ALN = 33
+END_ALN = 823
 
 def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     """
@@ -72,7 +75,10 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         row += [ptm_type+'_'+str(position)+'_pfam' for ptm_type in PTM_TYPES]
     row += [aa+'_WT' for aa in AA]
     row += [aa+'_MUT' for aa in AA]
-    row += ['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']
+    # row += ['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']
+    for position in range(startWS, endWS+1):
+        for hom_type in ['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']:
+            row += [hom_type + '_' + str(position)]
     for position in range(startWS, endWS+1):
         for mut_type in ['A', 'D', 'R']:
             for aa in AA:
@@ -82,6 +88,8 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         row += [mut_type+'_'+str(position) for mut_type in MUT_TYPES]
         row += [mut_type+'_'+str(position)+'_pfam' for mut_type in MUT_TYPES]
     data.append(row)
+    # print (row)
+    # sys.exit()
 
     # Open the input file and convert its contents into an array
     # f = open(inputFile, "r")
@@ -276,9 +284,9 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     dic_clfs = {}
     dic_predictions = {}
     for model in MODEL_NAMES:
-        dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/'+'scaler_'+model+'.pkl', 'rb'))
+        dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+'scaler_'+model+'.pkl', 'rb'))
         dic_features[model] = dic_scalers[model].transform(features)
-        dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/'+'model_'+model+'.sav', 'rb'))
+        dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+'model_'+model+'.sav', 'rb'))
         dic_predictions[model] = dic_clfs[model].predict_proba(dic_features[model])
     
     # print (dic_predictions)
@@ -332,12 +340,15 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                 break
         mutType = []
         mutType = fetchData.mutTypes(mycursor, acc, mutation)
+        if len(mutType) == 0: mutType = '-'
+        else: mutType = ','.join(mutType)
+        # print (mutType, mutation)
         
         scores = []
         for model in MODEL_NAMES:
             if str(hmmPos) == '-':
                 scores.append('NA')
-            elif int(hmmPos) < 30 and int(hmmPos) > 739:
+            elif int(hmmPos) < START_ALN and int(hmmPos) > END_ALN:
                 scores.append('NA')
             else:
                 scores.append(str(round(dic_predictions[model][count][1], 3)))
@@ -353,12 +364,10 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         outputDict['HMMpos'].append(hmmPos)
         outputDict['Region'].append(region)
         outputDict['PTM'].append(ptmType)
-        outputDict['KnownADR'].append(','.join(mutType))
+        outputDict['KnownADR'].append(mutType)
         outputDict['NeighSites'].append(adjacentSites)
         for model, score in zip(MODEL_NAMES, scores):
             outputDict[model].append(score)
-        if len(mutType) == 0: mutType = '-'
-        else: mutType = ''.join(mutType)
         results['predictions'][name] = {
                         'acc':acc,
                         'gene':gene,
@@ -377,7 +386,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         for model in MODEL_NAMES:
             if str(hmmPos) == '-':
                 results['predictions'][name][model] = 'NA\t'
-            elif int(hmmPos) < 30 and int(hmmPos) > 739:
+            elif int(hmmPos) < START_ALN and int(hmmPos) > END_ALN:
                 results['predictions'][name][model] = 'NA\t'
             else:
                 results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3)) + '\t'
@@ -389,16 +398,20 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
                 #     print (f, hh)
     
     outputDF = pd.DataFrame(outputDict)
-    if outputFile != None: gzip.open(outputFile+'.gz', 'wt').write(outputDF.to_string(index=False))
-    # else: print (outputText)
-    else: print (outputDF.to_string(index=False))
+    now = datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    outputText = '# Activark predictions\n# '+dt_string+'\n'
+    outputText += '# Input: '+inputFile+'\n'
+    outputText += outputDF.to_string(index=False)
+    if outputFile != None: gzip.open(outputFile+'.gz', 'wt').write(outputText)
+    else: print (outputText)
     return results
     # yield results
 
 # Run this script from command line
 if __name__ == '__main__':
     # set arguments
-    parser = argparse.ArgumentParser(description='Activaark', epilog='End of help.')
+    parser = argparse.ArgumentParser(description='Activark', epilog='End of help.')
     parser.add_argument('i', help='path to input file (mechismo-like format); see sample_mutations.txt')
     parser.add_argument('--o', help='path to output file; default: print on the screen')
     args = parser.parse_args()

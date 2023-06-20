@@ -1,15 +1,59 @@
-modelAUC		MCC		F1			PRE		REC		SPE	testAR_recall	neutral	loss	decrease	P46734/MAP2K3/A84T	P11309/PIM1/S97N	O96017/CHEK2/K373E	P00533/EGFR/T790M	P46734/MAP2K3/T222M	Q02750/MAP2K1/V211D
-AIvNLD	0.86	0.49	0.57	0.6	0.56	0.91	0.857	0.972	0.98	0.93	0.411	0.392	0.701	0.401	0.315	0.566	
-modelAUC		MCC		F1			PRE		REC		SPE	testAR_recall	neutral	loss	decrease	P46734/MAP2K3/A84T	P11309/PIM1/S97N	O96017/CHEK2/K373E	P00533/EGFR/T790M	P46734/MAP2K3/T222M	Q02750/MAP2K1/V211D
-AIvLD	0.89	0.55	0.65	0.6	0.73	0.86	0.929	0.152	0.965	0.851	0.595	0.496	0.723	0.551	0.377	0.527	
-modelAUC		MCC		F1			PRE		REC		SPE	testAR_recall	neutral	loss	decrease	P46734/MAP2K3/A84T	P11309/PIM1/S97N	O96017/CHEK2/K373E	P00533/EGFR/T790M	P46734/MAP2K3/T222M	Q02750/MAP2K1/V211D
-AvNL	0.91	0.58	0.6	0.78	0.51	0.98	0.714	0.986	0.983	0.95	0.298	0.227	0.597	0.413	0.334	0.432	
-modelAUC		MCC		F1			PRE		REC		SPE	testAR_recall	neutral	loss	decrease	P46734/MAP2K3/A84T	P11309/PIM1/S97N	O96017/CHEK2/K373E	P00533/EGFR/T790M	P46734/MAP2K3/T222M	Q02750/MAP2K1/V211D
-AvL	0.95	0.69	0.74	0.68	0.84	0.91	0.929	0.069	0.948	0.603	0.628	0.697	0.676	0.646	0.497	0.429	
-modelAUC		MCC		F1			PRE		REC		SPE	testAR_recall	neutral	loss	decrease	P46734/MAP2K3/A84T	P11309/PIM1/S97N	O96017/CHEK2/K373E	P00533/EGFR/T790M	P46734/MAP2K3/T222M	Q02750/MAP2K1/V211D
-LDvNAI	0.91	0.65	0.87	0.91	0.83	0.84	0.071	0.986	0.0	0.0	0.206	0.321	0.373	0.43	0.697	0.561	
-modelAUC		MCC		F1			PRE		REC		SPE	testAR_recall	neutral	loss	decrease	P46734/MAP2K3/A84T	P11309/PIM1/S97N	O96017/CHEK2/K373E	P00533/EGFR/T790M	P46734/MAP2K3/T222M	Q02750/MAP2K1/V211D
-LvNA	0.97	0.8	0.92	0.95	0.89	0.92	0.071	0.986	0.0	0.512	0.108	0.11	0.225	0.237	0.607	0.519	
-modelAUC		MCC		F1			PRE		REC		SPE	testAR_recall	neutral	loss	decrease	P46734/MAP2K3/A84T	P11309/PIM1/S97N	O96017/CHEK2/K373E	P00533/EGFR/T790M	P46734/MAP2K3/T222M	Q02750/MAP2K1/V211D
-RvN	0.9	0.6	0.72	0.75	0.71	0.88	0.714	0.966	0.194	0.467	0.318	0.223	0.484	0.685	0.58	0.513	
-
+AvNL
+mean_test_score [0.87354798]
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+Best model: {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 25, 'min_samples_split': 10, 'n_estimators': 100}
+---------------------------------------------------------------------------------------------------
+Stratified CV results
+MET AUC  MCC  F1   PRE  REC  SPE
+AVG 0.88 0.43 0.5 0.38 0.75 0.81
+STD 0.007 0.021 0.017 0.016 0.021 0.009
+Number of act mutations in the train set: 82
+Number of deact mutations in the train set: 548
+########################
+            Feature  Importance
+12       D_D_0_pfam    0.045455
+0        hmmScoreWT    0.045354
+3             A_MUT    0.036075
+15       D_H_2_pfam    0.035167
+14       D_N_0_pfam    0.033446
+2        ChargesMUT    0.033144
+13       D_K_0_pfam    0.031130
+1       hmmScoreMUT    0.030663
+7            bpso_0    0.026527
+10       A_E_0_pfam    0.023559
+11       D_A_0_pfam    0.023395
+5     allHomologs_0    0.021454
+8    specParalogs_1    0.019270
+4   specParalogs_-2    0.017787
+6    specParalogs_0    0.017172
+9       D_V_-2_pfam    0.015850
+########################
+activatingresistance results ( 14 )
+REC: 0.857
+########################
+########################
+########################
+P46734/MAP2K3/A84T 0.387 A
+P11309/PIM1/S97N 0.407 A
+########################
+Q00535/CDK5/F82I 0.563 TBD
+Q02750/MAP2K1/V211D 0.63 TBD
+########################
+O96017/CHEK2/K373E 0.71 Inconclusive
+P06493/CDK1/V124G 0.445 Inconclusive
+P46734/MAP2K3/R94L 0.584 Inconclusive
+P46734/MAP2K3/R96W 0.442 Inconclusive
+P46734/MAP2K3/L215W 0.474 Inconclusive
+P46734/MAP2K3/T222M 0.566 Inconclusive
+P11309/PIM1/Q127E 0.521 Inconclusive
+Q06418/TYRO3/V669L 0.577 Inconclusive
+Q13470/TNK1/A299D 0.585 Inconclusive
+########################
+P00533/EGFR/T790M 0.403 TBDincreaseresistance
+########################
+REC: neutral 0.772
+########################
+REC: loss 0.908
+########################
+REC: decrease 0.351
+END

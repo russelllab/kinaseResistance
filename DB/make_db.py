@@ -39,11 +39,19 @@ def create_alignment_table(mycursor)->None:
             pfam_position = int(line.split()[0])
             aln_position = int(line.split()[-5])
             aln2pfam[aln_position] = pfam_position
-    dic = {}
+    
+    dic_aln = {}
     for line in open('../alignments/humanKinasesHitsSplitTrimmed.fasta', 'r'):
         if line[0] == '>':
+            name = line.split('>')[1].rstrip().lstrip()
+            if name not in dic_aln: dic_aln[name] = ''
             continue
-        sequence = line.replace('\n', '')
+        dic_aln[name] += line.replace('\n', '')
+    
+    dic = {}
+    for name in dic_aln:
+        sequence = dic_aln[name]
+        # sequence = line.replace('\n', '')
         for num, residue in enumerate(sequence, start=1):
             if num not in dic: dic[num] = []
             dic[num].append(residue)
@@ -690,19 +698,32 @@ def create_mechismo_table(mycursor) -> None:
 
 def fetch_map_fasta2aln():
     '''Function to map from fasta to alignment'''
-    map_fasta2aln = {}
+    dic_aln = {}
     for line in open('../alignments/humanKinasesHitsSplitTrimmed.fasta', 'r'):
-        if line.startswith('>'):
-            acc = line.split('|')[1]
-            # print (acc)
-            start = line.split('|')[3].split('-')[0]
-            if start == 'start': start = 0
-            else: start = int(start)
-            start += int(line.split('|')[4].split()[0])
+        if line[0] == '>':
+            name = line.split('>')[1].rstrip().lstrip()
+            if name not in dic_aln: dic_aln[name] = ''
             continue
+        dic_aln[name] += line.replace('\n', '')
+
+    map_fasta2aln = {}
+    # for line in open('../alignments/humanKinasesHitsSplitTrimmed.fasta', 'r'):
+    for name in dic_aln:
+        sequence = dic_aln[name]
+        # if line.startswith('>'):
+        # acc = line.split('|')[1]
+        acc = name.split('|')[1]
+        # print (acc)
+        # start = line.split('|')[3].split('-')[0]
+        start = name.split('|')[3].split('-')[0]
+        if start == 'start': start = 0
+        else: start = int(start)
+        # start += int(line.split('|')[4].split()[0])
+        start += int(name.split('|')[4].split()[0])
+        # continue
         if acc not in map_fasta2aln: map_fasta2aln[acc] = {}
         current_position = start
-        for alnpos, aa in enumerate(line.rstrip(), start=1):
+        for alnpos, aa in enumerate(sequence.rstrip(), start=1):
             if aa not in ['-', '.']:
                 map_fasta2aln[acc][current_position] = alnpos
                 current_position += 1
@@ -879,14 +900,14 @@ if __name__ == '__main__':
     '''
     # fetch_map_fasta2aln()
     # Create tables
-    # print ('Creating HMM table')
-    # create_hmm_table(mycursor)
-    # print ('Creating kinases table')
-    # create_kinases_table(mycursor)
+    print ('Creating HMM table')
+    create_hmm_table(mycursor)
+    print ('Creating kinases table')
+    create_kinases_table(mycursor)
     print ('Creating mutation table')
     create_mutations_table(mycursor)
-    # print ('Creating ligands table')
-    # create_ligands_table(mycursor)
+    print ('Creating ligands table')
+    create_ligands_table(mycursor)
     # print ('Creating homology table')
     # create_homology_table(mycursor)
     # print ('Creating IUPRED table')
@@ -895,10 +916,10 @@ if __name__ == '__main__':
     # create_mechismo_table(mycursor)
     # print ('Creating DSSP tables')
     # create_dssp_tables(mycursor)
-    # print ('Creating PTM table')
-    # create_ptm_table(mycursor)
-    # print ('Creating alignment table')
-    # create_alignment_table(mycursor)
+    print ('Creating PTM table')
+    create_ptm_table(mycursor)
+    print ('Creating alignment table')
+    create_alignment_table(mycursor)
     mydb.commit()
 
     # Use mysqldump to create backup file

@@ -58,22 +58,10 @@ def getRegion(mycursor, acc, mutation):
         return '-'
     else:
         alnpos = hits[0]
+        # print (alnpos)
         if alnpos == '-': return '-'
         else: alnpos = int(alnpos)
         region = []
-        # if alnpos in range(442,445):
-        #     region.append('DFG-motif')
-        # if alnpos in range(532, 535):
-        #     region.append('APE-motif')
-        # if alnpos in range(387, 390):
-        #     region.append('HrD-motif')
-        # if alnpos in range(442, 535):
-        #     region.append('Activation-loop')
-        # if alnpos in range(37, 43):
-        #     region.append('Gly-rich-loop')
-        # if alnpos == 127:
-        #     region.append('Catalytic-Lys')
-        
         for line in open('../data/ss.tsv', 'r', encoding='utf-8'):
             if line.startswith('#'): continue
             region_name = line.split()[0]
@@ -83,6 +71,7 @@ def getRegion(mycursor, acc, mutation):
         
         # if no specific region found 
         # then assign a general term
+        '''
         if len(region) == 0:
             if alnpos < 30:
                 region.append('N-term Kinase-domain')
@@ -90,7 +79,7 @@ def getRegion(mycursor, acc, mutation):
                 region.append('C-term Kinase-domain')
             elif alnpos in range(30, 813):
                 region.append('Kinase-domain')
-        
+        '''
         if len(region) == 0:
             return '-'
         else:

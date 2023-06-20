@@ -4,10 +4,12 @@ import numpy as np
 import scipy as sp
 import os, sys, gzip
 import argparse
+import ML
 
 def parse_ML_output(inputFile):
     text = ''
     flag_header = 0
+    dic_model = {}
     for line in open(inputFile, 'r'):
         if 'v' in line:
             if line.split('v')[0].isupper() and line.split('v')[1].isupper():
@@ -19,8 +21,8 @@ def parse_ML_output(inputFile):
         if line.startswith('Best model:'):
             params = line.split('{')[1].split('}')[0].split(',')
             for param in params:
-                param_name = param.split(':')[0].rstrip().lstrip()
-                param_value = param.split(':')[1].rstrip().lstrip()
+                param_name = param.split(':')[0].rstrip().lstrip().replace("'", "")
+                param_value = param.split(':')[1].rstrip().lstrip().replace("'", "")
                 dic_params[param_name] = param_value
         if line.startswith('MET AUC'):
             metrics = line.rstrip().lstrip().split()[1:]
@@ -55,9 +57,21 @@ def parse_ML_output(inputFile):
             for test in test_header:
                 text += dic_test[test] + '\t'
             text += '\n'
+            dic_model[modelName] = dic_params
     print (text)
     print (metrics)
+    return dic_model
 
+def make_ML_models(dic_model):
+    for model in ['AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN', 'LDvNAI', 'LDvN', 'AIvLD', 'RvN']:
+        dic_params = dic_model[model]
+        max_depth = [int(dic_params['max_depth'])]
+        min_samples_split = [int(dic_params['min_samples_split'])]
+        min_samples_leaf = [int(dic_params['min_samples_leaf'])]
+        n_estimators = [int(dic_params['n_estimators'])]
+        ML.main(max_depth, min_samples_split, min_samples_leaf, n_estimators,
+        model, scaler_filename=model, model_filename=model,
+        column_filename='columns_to_consider.txt')
 
 
 if __name__ == '__main__':
@@ -70,4 +84,6 @@ if __name__ == '__main__':
     # set input file to default if not provided
     inputFile = args.inputFile
 
-    parse_ML_output(inputFile)
+    dic_model = parse_ML_output(inputFile)
+    make_ML_models(dic_model)
+
