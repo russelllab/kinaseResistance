@@ -92,9 +92,24 @@ def featuresort(tophits, identdict, sortregel, seqs, doi, starti, endi, goi, ind
 	for entry in seqs:
 		if entry not in rankingcomplete:
 			rankingcomplete.append(entry)
+	seqs_to_consider = ["PRKD1|Q15139|557-885","JAK2|O60674|849-1132","CDK4|P11802|1-303","MET|P08581|1032-1364","ZAP70|P43403|287-619","MAP2K3|P46734|29-347"]
+	chek2_seqs = ["FES|P07332|521-822","PASK|Q96RG2|965-1292","CDK8|P49336|1-375"]
+	if "MAP2K3" in goi:
+		insertcounter = 5
+		for item in seqs_to_consider:
+			rankingcomplete.remove(item)
+			rankingcomplete.insert(insertcounter,item)
+			insertcounter+=1
+	elif "CHEK2" in goi:
+		insertcounter = 7
+		for item in chek2_seqs:
+			rankingcomplete.remove(item)
+			rankingcomplete.insert(insertcounter,item)
+			insertcounter+=1
 	return ranking, rankingcomplete
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 def SHOWORDER(tophits, identdict, sortregel, seqs, doi, starti, endi, goi, indix_posis, posinterest):
+	# dictionary of interest, residue of interest, windowsize, gene of interest
 	showtime = {}
 	if sortregel == "1":
 		for k in doi:	### uniprot ID = k
@@ -123,13 +138,10 @@ def SHOWORDER(tophits, identdict, sortregel, seqs, doi, starti, endi, goi, indix
 										elif int(i)==int(posinterest):
 											featurecount += 15 * [residue]
 										else:
-											#print(k,"\t",i,"\t",residue,"\t",posinterest)
 											featurecount.append(residue)
-			#print(k,"\t",featurecount)
 			if k != goi:							
 				if k not in showtime:
 					showtime[k]=len(featurecount)
-		#print(showtime)
 		ranking = sorted(showtime, key=lambda x: (-showtime[x], x))
 		ranking.insert(0,goi)
 		rankingcomplete = ranking
@@ -223,9 +235,9 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
     if startposition == "none":
         startposition = 1
     try:
-    	filename = translator[poi]+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+"_Topguns"+str(topguns)+"_Sorting_"+str(sortrule)+".svg"
+    	filename = "FIGUREPLOTTER_"+translator[poi]+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+"_Topguns"+str(topguns)+"_Sorting_"+str(sortrule)+".svg"
     except:
-        filename = poi+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+"_Topguns"+str(topguns)+"_Sorting_"+str(sortrule)+".svg"
+        filename = "FIGUREPLOTTER_"+poi+"_Position"+str(startposition)+"_Windowsize"+str(windowsize)+"_Topguns"+str(topguns)+"_Sorting_"+str(sortrule)+".svg"
     dwg = svgwrite.Drawing(path+filename, profile='full')
     x = 50
     y = 120
@@ -245,21 +257,17 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
     alignmentstart = 0
     lettercounter = 0
 
-    #startpos = "none"
     for i, letter in enumerate(sequence_of_interest,start = 1):
         alignmentstart += 1
         if letter not in gapletters:
-            #print(letter,"\t","yes","\t",i,"\t",startpos,"\t",non_minus_count,"\t",startposition)
-            if non_minus_count == startposition:
-                startpos = i	### this is the alignment position that corresponds to the residue of interest. alignment position includes "-"
-            if non_minus_count == startposition+windowsize:
-                distance_end = i
-            if non_minus_count == startposition-windowsize:
-                distance_start = i
             lettercounter += 1
             non_minus_count += 1
-        #else:
-            #print(letter,"\t","no","\t",i,"\t",startpos,"\t",non_minus_count,"\t",startposition)
+            if non_minus_count == startposition:
+                startpos = i	### this is the alignment position that corresponds to the residue of interest. alignment position includes "-"
+            if non_minus_count == startposition+windowsize+1:
+                distance_end = i
+            if non_minus_count == startposition-windowsize+1:
+                distance_start = i
     maxcharactercnt = lettercounter		### should capture the true length of the sequence of interest
     ### make sure the windowsize does not conflict with positions close to the start or end of the sequence
     if distance_start <= 0:
@@ -274,7 +282,7 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
        firstchar = konservierung[alignposition]["First"][1]
        firstval  = float(konservierung[alignposition]["First"][0])
        listofitems = konservierung[alignposition]["Allowance"]
-       if firstval >= 0.89:
+       if firstval >= 0.50:
           if str(firstchar) in gapletters:
               if bool(set(roworder).intersection(listofitems)) == False:
                   forbidden.append(int(alignposition))
@@ -374,7 +382,10 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
                                         dwg.add(dwg.rect((x,y),(10,len(roworder)*20), fill= clustaltypes[Clustalcolors[letter.upper()]], opacity=0.2))
 
                                     viewboxcounter += 1
-                                    drawfontsize = "8px"
+                                    if int(charactercount) >= 100:
+                                            drawfontsize = "6px"
+                                    else:
+                                            drawfontsize = "8px"
                                     if int(charactercount) == int(startposition):
                                         position_interest_x = x
                                         position_interest_y = y
@@ -389,8 +400,7 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
                                             toproof = 1-float(konserv_val)
                                             dwg.add(dwg.rect((x, Konservierungsypsilon), (10, 14*toproof), fill="white"))
                                             if int(charactercount)%10 == False:
-                                                if abs(int(charactercount)-int(startposition))>=3:
-                                                    dwg.add(dwg.text(str(charactercount), insert=(x+5, Konservierungsypsilon-3), text_anchor='middle', dominant_baseline='central', font_size=drawfontsize, font_family='Arial', font_weight='bold', fill='black'))
+                                                dwg.add(dwg.text(str(charactercount), insert=(x+5, Konservierungsypsilon-3), text_anchor='middle', dominant_baseline='central', font_size=drawfontsize, font_family='Arial', font_weight='bold', fill='black'))
                                     for feat in proteinfeatures:
                                         if int(totalcount) in proteinfeatures[feat]:
                                             if feat not in tempfeat:
@@ -582,98 +592,18 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
 
     dwg.save()
 
-    styletext = """<style>
-   <![CDATA[
-    text.moo {
-         font-family: "arial";
-         fill: black;
-         font-size: 50%;
-    }
-    text.hyper {
-         font-family: "arial";
-         
-         font-size: 0.45em;
-    }
-    rect.hiss {
-         fill:white;
-    }
-   ]]>
-   .bootstrap {display: none;}
-   svg text.moo {display: none;}
-   svg text.hyper {display: none;}
-   svg rect.hiss {display: none;}
-   svg g:hover text {display: block;}
-   svg g:hover rect {display: block;}
-   svg g:hover .bootstrap {display: block;}
- </style>"""
-
-    imagefile = open(path+filename,"r", encoding='utf-8')
-    data = imagefile.read()
-    newdata = data.replace("</svg>", styletext+"</svg>")
-    imagefile.close()
-    writeFile = open(path+filename, "w", encoding='utf-8')
-    writeFile.write(newdata)
-    writeFile.close()
-
-    circletext = ""
-    for hlid in highlightsaver:
-        txt = highlightsaver[hlid][2]
-        uppertext = txt.split("++")[0]
-        lowertext = txt.split("++")[1]
-        cx = highlightsaver[hlid][0]
-        cy = highlightsaver[hlid][1]
-        delty = len(lowertext.split("}"))*10
-        tspany = cy+15
-        whiteboxheight = len(lowertext.split("}"))*20+30
-        tspanner = ""
-        ### mutation type source
-        for showfeature in lowertext.split("}"):
-            showmutation = showfeature.split("{")[0]
-            showfeaturetext = showfeature.split("{")[1]
-
-            tspanfeaturetext = showmutation+"\t"+showfeaturetext
-            tspanfeaturetextcolor = colordict[showfeaturetext]
-            linkinformation = showfeature.split("{")[2]
-            bootstrapper = """<svg xmlns="http://www.w3.org/2000/svg" class="bootstrap" width="8" height="8" x='"""+str(cx)+"""' y='"""+str(tspany-35-delty)+"""' fill='blue'  viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>"""
-
-
-            tspanner = tspanner + """<a href=\""""+linkinformation+"""\" target="_blank">"""+bootstrapper+"""<text class="hyper" fill='blue' x='"""+str(cx+12)+"""' y='"""+str(tspany-28-delty)+"""'><tspan class="text">"""+str(tspanfeaturetext)+"""</tspan></text></a>"""
-            tspany += 15
-
-        circletext = circletext+"""<g xmlns="http://www.w3.org/2000/svg">
-          <circle xmlns="http://www.w3.org/2000/svg" cx='"""+str(cx)+"""' cy='"""+str(cy)+"""' r="7" style="fill:transparent;stroke:transparent;stroke-width:0.5;fill-opacity:0.25;stroke-opacity:0.25"/>      
-          <rect class="hiss" x='"""+str(cx-5)+"""' y='"""+str(cy-40-delty)+"""' height='"""+str(whiteboxheight)+"""' width='"""+str(len(uppertext)+80)+"""'></rect>
-          <text class="moo" x='"""+str(cx)+"""' y='"""+str(cy-28-delty)+"""'><tspan class="text">"""+uppertext+"""</tspan></text>"""+tspanner+"""</g>"""
-
-    imagefile = open(path+filename,"r", encoding='utf-8')
-    imagefile.seek(0)
-    data= imagefile.read()
-    imagefile.close()
-    newdata = data.replace("</svg>", circletext+"</svg>")
-    writeFile = open(path+filename, "w", encoding='utf-8')
-    writeFile.write(newdata)
-    writeFile.close()
-
-#    imagefile = open(path+filename,"r", encoding='utf-8')
-#    imagefile.seek(0)
-#    data= imagefile.read()
-#    imagefile.close()
-#    newdata = data.replace("""<svg baseProfile="full" height="100%" version="1.1" viewBox="-120,-140,6130,10660" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">""","""<svg baseProfile="full" height="300cm"  version="1.1" viewBox="-120,-140,6130,10660" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="scroll">""")
-#    writeFile = open(path+filename, "w", encoding='utf-8')
-#    writeFile.write(newdata)
-#    writeFile.close()
-
-
-
-    return filename
-
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 def main(sortingvalue, identitydictionary,overallconservation, alignmentfile, protein_of_interest, position_of_interest, window, topguns, positions, feature_dict, path=''):
 	sequences, trackstart 	= CUSTOM_ALIGN(alignmentfile)
 	TheForbiddenPositions = []
 	
+	import copy
+	temppossis = copy.deepcopy(positions)
+	figurecategories = ["Activating","Deactivating","Resistance","Phosphorylation"]
+	for entry in temppossis:
+		for classification in temppossis[entry]:
+			if classification not in figurecategories:
+				positions[entry].pop(classification)
 	### to define the annotation colors we want to use
 
 	positioncolors = ["#009e73","#d55e00","#0072b2","lightgreen","salmon","yellow","blueviolet","deeppink","olive","dodgerblue","palegreen"]
@@ -740,8 +670,8 @@ if __name__ == "__main__":
 					if "#" not in line:
 						newline = whitespace_killer.sub(" ",line)
 						feature = newline.split(" ")[0]
-						start = int(newline.split(" ")[3].split("-")[0])
-						end = int(newline.split(" ")[3].split("-")[1].replace("\n",""))
+						start = int(newline.split(" ")[2].split("-")[0])
+						end = int(newline.split(" ")[2].split("-")[1].replace("\n",""))
 						if feature not in feature_dict:
 							feature_dict[feature]=[]
 						for i in range(start, end+1):
