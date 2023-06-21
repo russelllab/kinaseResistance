@@ -95,7 +95,6 @@ def featuresort(tophits, identdict, sortregel, seqs, doi, starti, endi, goi, ind
 	return ranking, rankingcomplete
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 def SHOWORDER(tophits, identdict, sortregel, seqs, doi, starti, endi, goi, indix_posis, posinterest):
-	# dictionary of interest, residue of interest, windowsize, gene of interest
 	showtime = {}
 	if sortregel == "1":
 		for k in doi:	### uniprot ID = k
@@ -124,10 +123,13 @@ def SHOWORDER(tophits, identdict, sortregel, seqs, doi, starti, endi, goi, indix
 										elif int(i)==int(posinterest):
 											featurecount += 15 * [residue]
 										else:
+											#print(k,"\t",i,"\t",residue,"\t",posinterest)
 											featurecount.append(residue)
+			#print(k,"\t",featurecount)
 			if k != goi:							
 				if k not in showtime:
 					showtime[k]=len(featurecount)
+		#print(showtime)
 		ranking = sorted(showtime, key=lambda x: (-showtime[x], x))
 		ranking.insert(0,goi)
 		rankingcomplete = ranking
@@ -243,17 +245,21 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
     alignmentstart = 0
     lettercounter = 0
 
+    #startpos = "none"
     for i, letter in enumerate(sequence_of_interest,start = 1):
         alignmentstart += 1
         if letter not in gapletters:
-            lettercounter += 1
-            non_minus_count += 1
+            #print(letter,"\t","yes","\t",i,"\t",startpos,"\t",non_minus_count,"\t",startposition)
             if non_minus_count == startposition:
                 startpos = i	### this is the alignment position that corresponds to the residue of interest. alignment position includes "-"
-            if non_minus_count == startposition+windowsize+1:
+            if non_minus_count == startposition+windowsize:
                 distance_end = i
-            if non_minus_count == startposition-windowsize+1:
+            if non_minus_count == startposition-windowsize:
                 distance_start = i
+            lettercounter += 1
+            non_minus_count += 1
+        #else:
+            #print(letter,"\t","no","\t",i,"\t",startpos,"\t",non_minus_count,"\t",startposition)
     maxcharactercnt = lettercounter		### should capture the true length of the sequence of interest
     ### make sure the windowsize does not conflict with positions close to the start or end of the sequence
     if distance_start <= 0:
@@ -649,6 +655,18 @@ def create_svg(sortrule, seqgleichheit, konservierung, sequences, positions, col
     writeFile = open(path+filename, "w", encoding='utf-8')
     writeFile.write(newdata)
     writeFile.close()
+
+#    imagefile = open(path+filename,"r", encoding='utf-8')
+#    imagefile.seek(0)
+#    data= imagefile.read()
+#    imagefile.close()
+#    newdata = data.replace("""<svg baseProfile="full" height="100%" version="1.1" viewBox="-120,-140,6130,10660" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">""","""<svg baseProfile="full" height="300cm"  version="1.1" viewBox="-120,-140,6130,10660" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="scroll">""")
+#    writeFile = open(path+filename, "w", encoding='utf-8')
+#    writeFile.write(newdata)
+#    writeFile.close()
+
+
+
     return filename
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -722,8 +740,8 @@ if __name__ == "__main__":
 					if "#" not in line:
 						newline = whitespace_killer.sub(" ",line)
 						feature = newline.split(" ")[0]
-						start = int(newline.split(" ")[2].split("-")[0])
-						end = int(newline.split(" ")[2].split("-")[1].replace("\n",""))
+						start = int(newline.split(" ")[3].split("-")[0])
+						end = int(newline.split(" ")[3].split("-")[1].replace("\n",""))
 						if feature not in feature_dict:
 							feature_dict[feature]=[]
 						for i in range(start, end+1):
