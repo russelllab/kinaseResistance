@@ -164,10 +164,10 @@ function makeTableHeadFoot()
                         'Region',
                         'PTM<br>type',
                         'Known<br>ADR',
-                        'Pred_A',
-                        'Pred_D',
-                        'Pred_R',
-                        'Pred<br>(A or D)'
+                        'Pred A',
+                        'Pred D',
+                        'Pred R',
+                        'Pred<br>(A vs D)'
                         ];
     
     var table_contents_text = ['Known information about the input',
@@ -185,7 +185,7 @@ function makeTableHeadFoot()
                                 'Predicted probability of Activating',
                                 'Predicted probability of Deactivating',
                                 'Predicted probability of Resistance',
-                                'Predicted probability of Activating(>=0.5) or Deactivating(<0.5)',
+                                'Predicted probability of Activating(>=0.5) vs Deactivating(<0.5)',
                                 ];
     
     var table_head_foot_id = ['table-head', 'table-foot'];
