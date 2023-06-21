@@ -6,6 +6,7 @@ function showChart(uniqID, kinase, mutation, results)
 		dataType: 'json',
 		data: JSON.stringify({'uniqID': uniqID, 'kinase': kinase, 'mutation': mutation, 'results': results}),
 		success: function (response){
+            // console.log(response);
             yValues = [response['activating'],
                       response['deactivating'],
                       response['resistance'],
