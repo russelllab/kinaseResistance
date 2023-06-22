@@ -71,7 +71,7 @@ function defineDataTable (tableID, uniqID)
                             if ( data.AIvLD >= 0.5 ) {
                                 $('td:eq(13)', row).css('background-color', '#009e73');
                             }
-                            else {
+                            else if  ( data.AIvLD < 0.5 ) {
                                 $('td:eq(13)', row).css('background-color', '#d55e00');
                             }
                         },

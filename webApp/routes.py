@@ -319,6 +319,10 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['LDvNAI'] = results['predictions'][name]['LDvNAI']
 		dic['RvN'] = results['predictions'][name]['RvN']
 		dic['AIvLD'] = results['predictions'][name]['AIvLD']
+		# print (dic['AIvLD'].split(), name)
+		if dic['AIvLD'].lstrip().rstrip() == 'NA':
+			# print (name)
+			dic['view'] = '-'
 		dic['hmmPos'] = results['predictions'][name]['hmmPos']
 		dic['alnPos'] = results['predictions'][name]['alnPos']
 		adjacentSites = results['predictions'][name]['adjacentSites']
