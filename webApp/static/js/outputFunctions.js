@@ -59,10 +59,10 @@ function defineDataTable (tableID, uniqID)
             ajax: '/static/predictor/output/'+uniqID+'/output.json',
             // ajax: '/static/predictor/output/GPBXK/output.json',
             "createdRow": function( row, data, dataIndex ) {
-                            if ( data.AIvNLD >= 0.5 ) {
+                            if ( data.AIvN >= 0.5 ) {
                                 $('td:eq(10)', row).css('background-color', '#009e73');
                             }
-                            if ( data.LDvNAI >= 0.5 ) {
+                            if ( data.LDvN >= 0.5 ) {
                                 $('td:eq(11)', row).css('background-color', '#d55e00');
                             }
                             if ( data.RvN >= 0.5 ) {
@@ -99,6 +99,8 @@ function defineDataTable (tableID, uniqID)
                     { data: 'mutType' },
                     { data: 'AIvNLD' },
                     { data: 'LDvNAI' },
+                    // { data: 'AIvN' },
+                    // { data: 'LDvN' },
                     { data: 'RvN' },
                     { data: 'AIvLD' }
                 ]

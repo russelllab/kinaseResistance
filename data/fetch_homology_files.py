@@ -20,3 +20,15 @@ for acc in accs:
             # sys.exit()
         else:
             os.system('cp '+homFile+' homFiles/')
+
+taxonomyDir = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_by_taxonomy/'
+taxonomyType = ['eukaryotes', 'vertebrates', 'mammals', 'metazoa', 'arthropods']
+for acc in accs:
+    for taxType in taxonomyType:
+        taxFile = taxonomyDir + acc[:4] + '/' + acc + '.txt'
+        if os.path.isfile(taxFile) is False:
+            print(acc, taxType)
+            # sys.exit()
+        else:
+            os.system('cp '+taxFile+' taxFiles/')
+

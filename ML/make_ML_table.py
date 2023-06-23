@@ -63,7 +63,8 @@ def parse_ML_output(inputFile):
     return dic_model
 
 def make_ML_models(dic_model):
-    for model in ['AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN', 'LDvNAI', 'LDvN', 'AIvLD', 'RvN']:
+    # for model in ['AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN', 'LDvNAI', 'LDvN', 'AIvLD', 'RvN']:
+    for model in ['AIvLD']:
         dic_params = dic_model[model]
         max_depth = [int(dic_params['max_depth'])]
         min_samples_split = [int(dic_params['min_samples_split'])]
