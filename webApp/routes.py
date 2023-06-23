@@ -24,6 +24,9 @@ if socket.gethostname() == 'pevolution2.bioquant.uni-heidelberg.de':
 	BASE_URL = 'http://activark.russelllab.org/'
 	# BASE_DIR = '/net/home.isilon/ds-russell/kinaseResistance/'
 	BASE_DIR = '/var/www/flask_apps/kinaseResistance/'
+elif socket.gethostname() == 'gd':
+	BASE_URL = 'http://127.0.0.1:5000/'
+	BASE_DIR = '/home/pevolution/projects/kinaseResistance/'
 else:
 	BASE_URL = 'http://127.0.0.1:5000/'
 	BASE_DIR = '../'
@@ -319,6 +322,14 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['LDvNAI'] = results['predictions'][name]['LDvNAI']
 		dic['RvN'] = results['predictions'][name]['RvN']
 		dic['AIvLD'] = results['predictions'][name]['AIvLD']
+		# print (dic['AIvLD'].split(), name)
+		if dic['AIvLD'].lstrip().rstrip() == 'NA':
+			# print (name)
+			dic['view'] = '-'
+		dic['AIvN'] = results['predictions'][name]['AIvN']
+		dic['LDvN'] = results['predictions'][name]['LDvN']
+		dic['RvN'] = results['predictions'][name]['RvN']
+		
 		dic['hmmPos'] = results['predictions'][name]['hmmPos']
 		dic['alnPos'] = results['predictions'][name]['alnPos']
 		adjacentSites = results['predictions'][name]['adjacentSites']
@@ -573,8 +584,8 @@ def configureRoutes(app):
 		
 		dic = {}
 		# print (kinase, mutation)
-		activating_prob = results['predictions'][kinase+'/'+mutation]['AIvNLD']
-		deactivating_prob = results['predictions'][kinase+'/'+mutation]['LDvNAI']
+		activating_prob = results['predictions'][kinase+'/'+mutation]['AIvN']
+		deactivating_prob = results['predictions'][kinase+'/'+mutation]['LDvN']
 		resistance_prob = results['predictions'][kinase+'/'+mutation]['RvN']
 		activating_AIvLD_prob = results['predictions'][kinase+'/'+mutation]['AIvLD']
 		if activating_prob == 'NA':
