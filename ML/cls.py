@@ -77,10 +77,22 @@ class Mutation:
         else:
             return 0
     
+    def checkReversePhosphomimic(self):
+        if self.mutAA in ['S', 'T', 'Y']:
+            return 1
+        else:
+            return 0
+    
     def checkAcetylmimic(self):
         if self.wtAA in ['K'] and self.mutAA in ['Q']:
             return 1
         elif self.wtAA in ['K']:
             return -1
+        else:
+            return 0
+    
+    def checkReverseAcetylmimic(self):
+        if self.mutAA in ['K']:
+            return 1
         else:
             return 0

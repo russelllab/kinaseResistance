@@ -395,6 +395,39 @@ def getHomologyScores(mycursor, acc, wtAA, position, mutAA):
             row.append(homology_score_mut - homology_score_wt)
     return row
 
+def getTaxonScores(mycursor, acc, wtAA, position, mutAA):
+    '''
+    Returns a list of taxon scores for a given position and mutation
+    '''
+    row = []
+    for position in range(position-2, position+3):
+        for taxon in [
+                    'eukaryotes',
+                    'mammals',
+                    'metazoa',
+                    'vertebrates'
+                    ]:
+            mycursor.execute("SELECT * FROM "+taxon+" \
+                            WHERE acc=%s and position=%s", (acc, str(position),))
+            hit = mycursor.fetchone()
+            if hit is None:
+                # row = [] # empty row if no hits found
+                return None
+            # print (hit)
+            acc = hit[0]
+            AA = 'ACDEFGHIKLMNPQRSTVWY'
+            taxon_score_wt, taxon_score_mut = None, None
+            for logodd, aa in zip(hit[3:-1], AA):
+                if aa == mutAA:
+                    # row.append(float(logodd))
+                    taxon_score_mut = float(logodd)
+                if aa == wtAA:
+                    taxon_score_wt = float(logodd)
+            if taxon_score_wt is None or taxon_score_mut is None:
+                return None
+            row.append(taxon_score_mut - taxon_score_wt)
+    return row
+
 def getIUPredScore(mycursor, acc, wtAA, position, mutAA):
     iupred_score_wt, iupred_score_mut = None, None
     mycursor.execute("SELECT * FROM iupred \
@@ -462,11 +495,11 @@ def getDSSPScores(mycursor, acc, wtAA, position, mutAA):
     return row
 
 def getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA):
-    print (f'HMMscore in {acc} for {wtAA}{position}{mutAA}')
+    # print (f'HMMscore in {acc} for {wtAA}{position}{mutAA}')
     mycursor.execute("SELECT pfampos, alnpos FROM positions \
                      WHERE acc = %s and uniprotpos = %s", (acc, str(position)))
     hits = mycursor.fetchone()
-    print (hits)
+    # print (hits)
     # print (acc, wtAA, position, mutAA, hits)
     if hits == None:
         print (acc, wtAA, position, mutAA, hits)

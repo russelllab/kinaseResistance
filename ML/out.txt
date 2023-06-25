@@ -1,7 +1,7 @@
 # hmmsearch :: search profile(s) against a sequence database
-# HMMER 3.1b2 (February 2015); http://hmmer.org/
-# Copyright (C) 2015 Howard Hughes Medical Institute.
-# Freely distributed under the GNU General Public License (GPLv3).
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # query HMM file:                  ../pfam/humanKinasesHitsSplitTrimmed.hmm
 # target sequence database:        ../data/humanKinases.fasta
@@ -28527,15 +28527,15 @@ Domain annotation for each sequence (and alignments):
 
 Internal pipeline statistics summary:
 -------------------------------------
-Query model(s):                              1  (853 nodes)
-Target sequences:                          520  (467657 residues searched)
+Query model(s):                            1  (853 nodes)
+Target sequences:                        520  (467657 residues searched)
 Passed MSV filter:                       481  (0.925); expected 10.4 (0.02)
 Passed bias filter:                      465  (0.894231); expected 10.4 (0.02)
 Passed Vit filter:                       465  (0.894231); expected 0.5 (0.001)
 Passed Fwd filter:                       465  (0.894231); expected 0.0 (1e-05)
 Initial search space (Z):                520  [actual number of targets]
 Domain search space  (domZ):             465  [number of targets reported over threshold]
-# CPU time: 2.66u 0.00s 00:00:02.66 Elapsed: 00:00:02.66
-# Mc/sec: 149.97
+# CPU time: 3.07u 0.02s 00:00:03.09 Elapsed: 00:00:03.10
+# Mc/sec: 128.67
 //
 [ok]

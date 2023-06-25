@@ -516,6 +516,86 @@ def create_homology_table(mycursor) -> None:
         f = open(tmp_df, 'r')
         mycursor.copy_from(f, homology, sep=',')
 
+def create_taxon_tables(mycursor) -> None:
+    '''Function to create the homology  table'''
+    # path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
+    path = '../data/taxFiles/'
+    mycursor.execute("DROP TABLE IF EXISTS homology CASCADE")
+    mycursor.execute('select acc from kinases')
+    accs = mycursor.fetchall()
+    for taxon in tqdm([
+                    'arthropods',
+                    'eukaryotes',
+                    'mammals',
+                    'metazoa',
+                    'vertebrates'
+                        ]):
+    # for fileEnd in tqdm([
+    #                 '_all_homs.scores.txt.gz',
+    #                 '_orth.scores.txt.gz',
+    #                 '_excl_para.scores.txt.gz',
+    #                 '_spec_para.scores.txt.gz',
+    #                 '_bpso.scores.txt.gz',
+    #                 '_bpsh.scores.txt.gz'
+    #                 ]):
+        mycursor.execute("DROP TABLE IF EXISTS "+taxon+" CASCADE")
+        AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+        mycursor.execute("CREATE TABLE "+taxon+" (\
+                    acc VARCHAR(10) REFERENCES kinases(acc) DEFERRABLE, \
+                    wtaa VARCHAR(5), position INT, \
+                    A_score FLOAT, C_score FLOAT, D_score FLOAT, E_score FLOAT, \
+                    F_score FLOAT, G_score FLOAT, H_score FLOAT, I_score FLOAT, \
+                    K_score FLOAT, L_score FLOAT, M_score FLOAT, N_score FLOAT, \
+                    P_score FLOAT, Q_score FLOAT, R_score FLOAT, S_score FLOAT, \
+                    T_score FLOAT, V_score FLOAT, W_score FLOAT, Y_score FLOAT, \
+                    info TEXT) \
+                    ")
+        data = []
+        num = 0
+        for acc_tuple in tqdm(accs):
+            dic = {}
+            num += 1
+            # if num == 10: break
+            acc = acc_tuple[0]
+            if os.path.isfile(path + '/' + taxon + '/' + acc + '.txt.gz') is False:
+                print (path + '/' + taxon + '/' + acc + '.txt.gz', 'does not exist')
+                continue
+            for line in gzip.open(path + '/' + taxon + '/' + acc + '.txt.gz', 'rt'):
+                #print (acc, line.split())
+                #sys.exit()
+                mutation = line.split()[0].split('/')[1]
+                position = int(mutation[1:-1])
+                wtaa = mutation[0]
+                mutaa = mutation[-1]
+                wtscore = float(line.split()[2])
+                mutscore = float(line.split()[3])
+                diffscore = float(line.split()[4])
+                # info = line.split()[5].rstrip()
+                info = '-'
+                if position not in dic: dic[position] = {'wtaa': wtaa, 'info': info}
+                dic[position][mutaa+'_score'] = mutscore
+            for position in range(1, len(dic)+1):
+                row = []
+                try:
+                    row = [acc, dic[position]['wtaa'], position]
+                except:
+                    print (acc, position, taxon, acc, 'does not exist')
+                    sys.exit()
+                for aa in AA:
+                    if aa+'_score' in dic[position]:
+                        row.append(dic[position][aa+'_score'])
+                    else:
+                        row.append(None)
+                row.append(dic[position]['info'] if 'info' in dic[position] else None)
+                data.append(row)
+        if len(data) == 0: continue
+        df = pd.DataFrame(data)
+        # print (df)
+        tmp_df = "./tmp_dataframe.csv"
+        df.to_csv(tmp_df, index=False, header=False)
+        f = open(tmp_df, 'r')
+        mycursor.copy_from(f, taxon, sep=',')
+
 def create_iupred_table(mycursor) -> None:
     '''Function to create the iupred table'''
     # path = '/net/home.isilon/ds-russell/mechismoX/analysis/alignments/data/HUMAN/orthologs_only/'
@@ -955,14 +1035,16 @@ if __name__ == '__main__':
     # Create tables
     # print ('Creating HMM table')
     # create_hmm_table(mycursor)
-    print ('Creating kinases table')
-    create_kinases_table(mycursor)
+    # print ('Creating kinases table')
+    # create_kinases_table(mycursor)
     # print ('Creating mutation table')
     # create_mutations_table(mycursor)
     # print ('Creating ligands table')
     # create_ligands_table(mycursor)
     # print ('Creating homology table')
     # create_homology_table(mycursor)
+    print ('Creating taxon tables')
+    create_taxon_tables(mycursor)
     # print ('Creating IUPRED table')
     # create_iupred_table(mycursor)
     # print ('Creating Mechismo table')

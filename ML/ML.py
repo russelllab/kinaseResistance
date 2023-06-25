@@ -81,7 +81,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         scaler_filename=None, model_filename=None, column_filename=None):
     positives = name.split('v')[0]
     negatives = name.split('v')[1]
-    df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t')
+    df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t', low_memory=False)
     df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.025, regex=True)
     df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
     # exclude columns
@@ -129,26 +129,26 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     '''
 
     ############
-    pfam_ptm_cols = ['ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
+    pfam_ptm_cols = ['me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
     for i in range(-5,6):
-        if i in [-2, -1, 0, 1, 2]: continue
+        # if i in [-2, -1, 0, 1, 2]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
-    pfam_ptm_cols = ['p_pfam']
+    pfam_ptm_cols = ['p_pfam', 'ac_pfam']
     for i in range(-5,6):
         if i in [-2, -1, 0, 1, 2]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
     ############
 
-    ptm_cols = ['ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
+    ptm_cols = ['me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
     for i in range(-5,6):
-        if i in [-2, -1, 0, 1, 2]: continue
+        # if i in [-2, -1, 0, 1, 2]: continue
         for col in ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
-    ptm_cols = ['p']
+    ptm_cols = ['p', 'ac']
     for i in range(-5,6):
         if i in [-2, -1, 0, 1, 2]: continue
         for col in ptm_cols:
@@ -184,10 +184,17 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 columns_to_exclude.append(col+'_'+str(i)+'_pfam')
 
     hom_cols = ['allHomologs', 'exclParalogs', 'specParalogs', 'orthologs', 'bpso', 'bpsh']
+    # hom_cols = ['allHomologs', 'exclParalogs', 'specParalogs', 'orthologs']
     for hom_type in hom_cols:
         for i in range(-5, 6):
             if i in [0]: continue
-            # columns_to_exclude.append(hom_type)
+            columns_to_exclude.append(hom_type+'_'+str(i))
+    
+    tax_cols = ['eukaryotes', 'mammals', 'metazoa', 'vertebrates']
+    for tax_type in tax_cols:
+        for i in range(-5, 6):
+            if i in [0]: continue
+            columns_to_exclude.append(tax_type+'_'+str(i))
 
 
     df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
@@ -378,6 +385,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         model.fit(X, y)
         print (name)
         print ('mean_test_score', model.cv_results_['mean_test_score'])
+        print ('mean_std_score', model.cv_results_['std_test_score'])
         # print (model.cv_results_['mean_train_score'])
         clf = RandomForestClassifier(
                 n_estimators=model.best_params_['n_estimators'],
@@ -397,7 +405,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     for y_pred, y_true in zip(model.predict_proba(X), y):
         open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
     # sys.exit()
-    
+    '''
     tprs = []
     aucs = []
     mean_fpr = np.linspace(0, 1, 100)
@@ -511,7 +519,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     plt.savefig(name+'_roc.svg', format='svg', dpi=1000)
     #####################################################
     
-
+    
     # print (np.std(AUC))
     ## Cross-validation results
     breakLine = '-'.join(['-' for i in range(0, 50)])
@@ -522,7 +530,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
     print ('Number of act mutations in the train set:', np.count_nonzero(y))
     print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
-    
+    '''
     ## Fit the best model on the data
     if ALGO == 'LR':
         clf = LogisticRegression(
@@ -585,12 +593,14 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
         df_feature_importances = df_feature_importances.sort_values(by=['Importance'], ascending=False)
         print (df_feature_importances)
-        '''
-        sns.set(font_scale = 0.6)
-        sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
-        plt.grid(True, lw=0.1)
-        '''
+        
+        # sns.set(font_scale = 0.6)
+        # sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
+        # plt.grid(True, lw=0.1)
+        
         # plt.savefig('feature_imp.png')
+        # plt.savefig('feature_imp_'+name+'.svg', format='svg', dpi=600)
+        # sys.exit()
         # plt.show()
     
 
@@ -598,7 +608,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     if model_filename is not None:
         pickle.dump(clf, open('models/model_'+model_filename+'.sav', 'wb'))
 
-    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance', 'neutral', 'loss', 'decrease']
+    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance', 'Aactivating', 'neutral', 'loss', 'decrease']
     # test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance']
     for test_type in test_types:
         print (''.join(['#' for i in range(1,25)]))

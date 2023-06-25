@@ -42,10 +42,10 @@ function call_onclick() {
     document.getElementById("slider-box").style.display = "block";
 
     var div = document.getElementById("headingElement");
-    div.style.position = "absolute";
-    div.style.top = "30%";
-    div.style.left = "50%";
-    div.style.transform = "translate(-50%, -50%) scale(2.5)";
+    // div.style.position = "absolute";
+    // div.style.top = "30%";
+    // div.style.left = "50%";
+    // div.style.transform = "translate(-50%, -50%) scale(2.5)";
 }
 
 function call_onclick_clear() {

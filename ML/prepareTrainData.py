@@ -134,7 +134,7 @@ for row in mycursor.fetchall():
 '''Make training matrix'''
 trainMat = 'Acc\tGene\tMutation\tDataset\t'
 trainMat += 'hmmPos\thmmSS\thmmScoreWT\thmmScoreMUT\thmmScoreDiff\t'
-trainMat += 'Phosphomimic\tAcetylmimic\t'
+trainMat += 'Phosphomimic\tReversePhosphomimic\tAcetylmimic\tReverseAcetylmimic\t'
 trainMat += 'IUPRED\tATPcount\t'
 trainMat += '\t'.join(['ncontacts', 'nresidues', 'mech_intra']) + '\t'
 trainMat += '\t'.join(['phi_psi', 'sec', 'burr', 'acc']) + '\t'
@@ -151,6 +151,11 @@ for position in range(startWS, endWS+1):
     # trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
     for hom_type in ['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']:
         trainMat += hom_type + '_' + str(position) + '\t'
+
+for position in range(startWS, endWS+1):
+    # trainMat += '\t'.join(['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']) + '\t'
+    for taxon_type in ['eukaryotes', 'mammals', 'metazoa', 'vertebrates']:
+        trainMat += taxon_type + '_' + str(position) + '\t'
 
 for position in range(startWS, endWS+1):
     for mut_type in ['A', 'D', 'R']:
@@ -199,13 +204,17 @@ for acc in tqdm(kinases):
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(mycursor, acc, wtAA, position, mutAA)
         if homology_row == None: continue
+        taxon_row = fetchData.getTaxonScores(mycursor, acc, wtAA, position, mutAA)
+        if taxon_row == None: continue
         mech_intra_row = fetchData.getMechIntraScores(mycursor, acc, wtAA, position, mutAA)
         if mech_intra_row == None: continue
         dssp_row = fetchData.getDSSPScores(mycursor, acc, wtAA, position, mutAA)
         if dssp_row == None: continue
         atp_count = fetchData.getATPbindingScores(mycursor, acc, position)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
+        is_reverse_phosphomimic = kinases[acc].mutations[mutation].checkReversePhosphomimic()
         is_acetylmimic = kinases[acc].mutations[mutation].checkAcetylmimic()
+        is_reverse_acetylmimic = kinases[acc].mutations[mutation].checkReverseAcetylmimic()
         charges_row = kinases[acc].mutations[mutation].findChangeInCharge()
         count_aa_change_row = fetchData.getCountAAchange(mycursor, acc, position, kinases, ws=WS)
         adr_row = fetchData.getADRvector(mycursor, acc, position, kinases, ws=WS)
@@ -222,7 +231,9 @@ for acc in tqdm(kinases):
         row.append(float(hmmScoreMUT))
         row.append(float(hmmScoreMUT)-float(hmmScoreWT))
         row.append(is_phosphomimic)
+        row.append(is_reverse_phosphomimic)
         row.append(is_acetylmimic)
+        row.append(is_reverse_acetylmimic)
         row.append(float(iupred_score))
         row.append(int(atp_count))
         row += [int(item) for item in mech_intra_row]
@@ -231,14 +242,18 @@ for acc in tqdm(kinases):
         row += [int(item) for item in ptm_row]
         row += [int(item) for item in aa_row]
         row += [int(item) for item in homology_row]
+        row += [int(item) for item in taxon_row]
         row += [int(item) for item in count_aa_change_row]
         row += [int(item) for item in adr_row]
         data.append(row)
 
         # Prepare rows for writing the numpy data
-        trainMat += acc + '\t' + kinases[acc].gene + '\t' + mutation + '\t' + mutation_obj.dataset + '\t'
-        trainMat += str(hmmPos) + '\t' + str(hmmSS) + '\t' + str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
-        trainMat += str(is_phosphomimic) + '\t' + str(is_acetylmimic) + '\t'
+        trainMat += acc + '\t' + kinases[acc].gene + '\t'
+        trainMat += mutation + '\t' + mutation_obj.dataset + '\t'
+        trainMat += str(hmmPos) + '\t' + str(hmmSS) + '\t'
+        trainMat += str(hmmScoreWT) + '\t' + str(hmmScoreMUT) + '\t' + str(hmmScoreMUT-hmmScoreWT) + '\t'
+        trainMat += str(is_phosphomimic) + '\t' + str(is_reverse_phosphomimic) + '\t'
+        trainMat += str(is_acetylmimic) + '\t' + str(is_reverse_acetylmimic) + '\t'
         trainMat += str(iupred_score) + '\t' + str(atp_count) + '\t'
         trainMat += '\t'.join([str(item) for item in mech_intra_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in dssp_row]) + '\t'
@@ -246,6 +261,7 @@ for acc in tqdm(kinases):
         trainMat += '\t'.join([str(item) for item in ptm_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in aa_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in homology_row]) + '\t'
+        trainMat += '\t'.join([str(item) for item in taxon_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in count_aa_change_row]) + '\t'
         trainMat += '\t'.join([str(item) for item in adr_row]) + '\t'
         trainMat += mut_types + '\n'
