@@ -808,7 +808,7 @@ def configureRoutes(app):
 		alignment = 'static/hmm/humanKinasesTrimmed.clustal'
 		# alignment = 'static/hmm/humanKinasesHitsSplitTrimmedWeb.aln'
 		# alignment = BASE_DIR + '/alignments/humanKinasesHitsSplitTrimmedWeb.aln'
-		alignment = BASE_DIR + '/alignments/humanKinasesPkinasePK_Tyr_Ser-ThrAllTrimmedWeb.aln'
+		alignment = BASE_DIR + '/alignments/humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gapsTrimmedWeb.aln'
 		# resetDic(dic_mutations_info, alignment)
 		dic_mutations_info = resetDic(dic_mutations_info, alignment)
 		# print (dic_mutations_info)
@@ -831,8 +831,8 @@ def configureRoutes(app):
 				sortingvalue = str(values[0])
 				break
 		print (f'sortingValue is {sortingvalue}')
-		# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
-		# geeky_file.write(str(dic_mutations_info))
+		geeky_file = open('sample_dic_mutation_info.txt', 'wt')
+		geeky_file.write(str(dic_mutations_info))
 		# try:
 
 		# The following searching  is needed to find the name of entry

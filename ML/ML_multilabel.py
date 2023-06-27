@@ -44,7 +44,7 @@ import argparse
 # 5 10 3 100 AvNL
 # 5 12 4 100 LvNA
 
-RANDOM_STATE = 100
+RANDOM_STATE = 1
 ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10
@@ -111,9 +111,9 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         #   'D_known',
                         #   'R_known',
                         #   'Phosphomimic',
-                        #   'ReversePhosphomimic',
+                          'ReversePhosphomimic',
                         #   'Acetylmimic',
-                        #   'ReverseAcetylmimic',
+                          'ReverseAcetylmimic',
                         #   'hmmScoreWT',
                         #   'hmmScoreMUT',
                         'hmmScoreDiff'
@@ -231,12 +231,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 y_test.append(row[-1])
                 X_test.append(row[3:-1])
                 test_names.append('/'.join(row[:3]))
-        if row[-1] in ['activating', 'increase']:
+        if row[-1] in ['increase', 'activating']:
             y.append(2)
             y_names.append(row[-1])
             X.append(row[3:-1])
             train_names.append('/'.join(row[:3]))
-        elif row[-1] in ['loss', 'decrease']:
+        elif row[-1] in ['decrease', 'loss']:
             y.append(1)
             y_names.append(row[-1])
             X.append(row[3:-1])
@@ -284,8 +284,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 'min_samples_leaf': min_samples_leaf,
                 'criterion': ['gini'],
                 # 'max_features': ['sqrt', 'log2'],
-                'max_features': ['log2'],
-                # 'max_features': ['sqrt'],
+                # 'max_features': ['log2'],
+                'max_features': ['sqrt'],
                 'n_estimators': n_estimators
                 }
     rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS)
@@ -299,10 +299,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     breakLine = '#'.join(['-' for i in range(0, 50)])
     print (breakLine)
     ## Best model hyper-parameters
-    # print ('Best model:', model.best_params_)
+    print ('Best model:', model.best_params_)
     # print (model.predict_proba(X))
-    # for y_pred, y_true in zip(model.predict_proba(X), y):
-    #     open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
+    for y_pred, y_true in zip(model.predict_proba(X), y):
+        open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
     # sys.exit()
     '''
     tprs = []
@@ -523,7 +523,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
             # print('PRE:', precision_score(y_sub_test, clf.predict(X_sub_test)))
             for name, y_prob, y_pred in zip(names, clf.predict(X_sub_test), clf.predict_proba(X_sub_test)):
                 print (name, y_prob, y_pred)
-            y_pred = [1 if i == 2 else 0 for i in clf.predict(X_sub_test)]
+            y_pred = [1 if i in [2] else 0 for i in clf.predict(X_sub_test)]
             print('REC:', recall_score(y_sub_test,
                                         # clf.predict(X_sub_test),
                                         y_pred,
@@ -557,11 +557,11 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 if q in ['loss', 'decrease']:
                     known_deactivating.append(1)
                     # pred_deactivating.append(1 if y_pred_deact>=0.5 else 0)
-                    pred_deactivating.append(1 if y_outcome==1 else 0)
+                    pred_deactivating.append(1 if y_outcome in [1] else 0)
                 if q in ['increase', 'activating']:
                     known_activating.append(1)
                     # pred_activating.append(1 if y_pred>=0.5 else 0)
-                    pred_activating.append(1 if y_outcome==2 else 0)
+                    pred_activating.append(1 if y_outcome in [2] else 0)
                 if q in ['resistance', 'neutral', 'loss', 'decrease', 'increase', 'activating']:
                     continue
                 # print (clf.predict_proba(X_sub_test)[0])

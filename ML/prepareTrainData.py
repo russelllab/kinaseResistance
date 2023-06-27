@@ -20,8 +20,8 @@ parser = argparse.ArgumentParser(description='Training for Activark', epilog='En
 parser.add_argument('alignment_start', help='')
 parser.add_argument('alignment_end', help='')
 args = parser.parse_args()
-ALIGNMENT_START = int(args.alignment_start)
-ALIGNMENT_END = int(args.alignment_end)
+ALIGNMENT_START = int(args.alignment_start) #31
+ALIGNMENT_END = int(args.alignment_end) #753
 
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']

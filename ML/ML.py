@@ -111,7 +111,9 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         #   'D_known',
                         #   'R_known',
                         #   'Phosphomimic',
+                        'ReversePhosphomimic',
                         #   'Acetylmimic',
+                          'ReverseAcetylmimic',
                         #   'hmmScoreWT',
                         #   'hmmScoreMUT',
                         'hmmScoreDiff'
@@ -131,7 +133,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     ############
     pfam_ptm_cols = ['me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
     for i in range(-5,6):
-        # if i in [-2, -1, 0, 1, 2]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
@@ -144,7 +146,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
 
     ptm_cols = ['me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
     for i in range(-5,6):
-        # if i in [-2, -1, 0, 1, 2]: continue
+        if i in [-2, -1, 0, 1, 2]: continue
         for col in ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
@@ -173,7 +175,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
     adr_cols = ['A', 'D', 'R']
-    # adr_cols = ['D', 'R']
+    # adr_cols = ['R']
     AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 
         'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
     for mut_type in adr_cols:
@@ -362,8 +364,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                     'min_samples_leaf': min_samples_leaf,
                     'criterion': ['gini'],
                     # 'max_features': ['sqrt', 'log2'],
-                    # 'max_features': ['log2'],
-                    'max_features': ['sqrt'],
+                    'max_features': ['log2'],
+                    # 'max_features': ['sqrt'],
                     'n_estimators': n_estimators
                     }
         # parameters = {
@@ -405,7 +407,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     for y_pred, y_true in zip(model.predict_proba(X), y):
         open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
     # sys.exit()
-    '''
+    
     tprs = []
     aucs = []
     mean_fpr = np.linspace(0, 1, 100)
@@ -530,7 +532,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
     print ('Number of act mutations in the train set:', np.count_nonzero(y))
     print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
-    '''
+    
     ## Fit the best model on the data
     if ALGO == 'LR':
         clf = LogisticRegression(
@@ -608,7 +610,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     if model_filename is not None:
         pickle.dump(clf, open('models/model_'+model_filename+'.sav', 'wb'))
 
-    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance', 'Aactivating', 'neutral', 'loss', 'decrease']
+    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance', 'activating', 'neutral', 'loss', 'decrease']
     # test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance']
     for test_type in test_types:
         print (''.join(['#' for i in range(1,25)]))
@@ -639,6 +641,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 X_sub_test = np.array(X_sub_test)
                 # if 'A84' in test_name:
                 #     print (X_sub_test)
+                if 'L858R' in test_name:
+                    print (test_name, clf.predict_proba(X_sub_test)[0], clf.predict(X_sub_test)[0], q)
                 y_pred = round((clf.predict_proba(X_sub_test)[0])[1], 3)
                 if q == 'neutral':
                     known_neutral.append(1)
