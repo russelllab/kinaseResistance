@@ -111,9 +111,9 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         #   'D_known',
                         #   'R_known',
                         #   'Phosphomimic',
-                          'ReversePhosphomimic',
+                           'ReversePhosphomimic',
                         #   'Acetylmimic',
-                          'ReverseAcetylmimic',
+                           'ReverseAcetylmimic',
                         #   'hmmScoreWT',
                         #   'hmmScoreMUT',
                         'hmmScoreDiff'
