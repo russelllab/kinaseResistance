@@ -50,8 +50,9 @@ python trim_alignment_split_outside.py humanKinasesPK_Tyr_Ser-ThrHitsSplit.aln .
 
 # Step 6: Merge the two alignments
 cat humanKinasesPkinaseHitsSplitTrimmed.fasta humanKinasesPK_Tyr_Ser-ThrHitsSplitTrimmed.fasta > ali.fasta
+sed 's/\./-/g' ali.fasta > ali2.fasta
 ruby ../../../makemergetable.rb humanKinasesPkinaseHitsSplitTrimmed.fasta humanKinasesPK_Tyr_Ser-ThrHitsSplitTrimmed.fasta > subMSAtable
-mafft --merge subMSAtable ali.fasta > humanKinasesHitsSplitTrimmed.fasta
+mafft --merge subMSAtable ali2.fasta > humanKinasesHitsSplitTrimmed.fasta
 
 # Step 7: Build a hidden Markov model (HMM) from the alignment
 # Use the fasta file as input because the aln file fails (!!!!)
@@ -100,5 +101,5 @@ python trim_alignment_split_outside.py \
         humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gaps.aln \
         ../data/humanKinases.fasta \
         32163 \
-        32954 \
+        33077 \
         30

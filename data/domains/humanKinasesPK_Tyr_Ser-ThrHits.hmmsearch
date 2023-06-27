@@ -526,5 +526,5 @@ sp|O60566|BUB1B_HUMAN -           1050 PK_Tyr_Ser-Thr       PF07714.20   259   0
 # Target file:     humanKinases.fasta
 # Option settings: hmmsearch --domtblout domains/humanKinasesPK_Tyr_Ser-ThrHits.hmmsearch --noali --domE 1.0 ../pfam/PK_Tyr_Ser-Thr.hmm humanKinases.fasta 
 # Current dir:     /home/gurdeep/projects/kinaseResistance/data
-# Date:            Mon Jun 26 14:21:30 2023
+# Date:            Tue Jun 27 11:42:34 2023
 # [ok]

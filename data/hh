@@ -10,5 +10,5 @@ sp|Q7Z7A4|PXK_HUMAN  -          PK_Tyr_Ser-Thr       PF07714.20   8.4e-11   27.7
 # Target file:     ../KA/UniProtFasta2/Q7Z7A4.fasta.gz
 # Option settings: hmmsearch --tblout hh ../pfam/PK_Tyr_Ser-Thr.hmm ../KA/UniProtFasta2/Q7Z7A4.fasta.gz 
 # Current dir:     /home/gurdeep/projects/kinaseResistance/data
-# Date:            Mon Jun 26 14:21:28 2023
+# Date:            Tue Jun 27 11:42:32 2023
 # [ok]
