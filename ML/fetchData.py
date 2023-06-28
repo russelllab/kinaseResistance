@@ -62,24 +62,16 @@ def getRegion(mycursor, acc, mutation):
         if alnpos == '-': return '-'
         else: alnpos = int(alnpos)
         region = []
-        for line in gzip.open('../alignments/humanKinasesHitsSplitTrimmed_ss.tsv.gz', 'rt', encoding='utf-8'):
-            if line.startswith('#'): continue
-            region_name = line.split()[0]
-            start, end = int(line.split()[1].split('-')[0]), int(line.split()[1].split('-')[1])
-            if alnpos in range(start, end+1):
-                region.append(region_name)
+        with gzip.open('../alignments/humanKinasesHitsSplitTrimmed_ss.tsv.gz', 'rt', encoding='utf-8') as regionFile:
+            for line in regionFile:
+                if line.startswith('#'): continue
+                region_name = line.split()[0]
+                start, end = int(line.split()[1].split('-')[0]), int(line.split()[1].split('-')[1])
+                if alnpos in range(start, end+1):
+                    region.append(region_name)
         
         # if no specific region found 
-        # then assign a general term
-        '''
-        if len(region) == 0:
-            if alnpos < 30:
-                region.append('N-term Kinase-domain')
-            elif alnpos > 812:
-                region.append('C-term Kinase-domain')
-            elif alnpos in range(30, 813):
-                region.append('Kinase-domain')
-        '''
+        # return a hyphen
         if len(region) == 0:
             return '-'
         else:
@@ -237,39 +229,40 @@ def fetchHmmsearch(kinases, Kinase):
     os.system('hmmsearch -o out.txt ../pfam/humanKinasesHitsSplitTrimmed.hmm\
                                     ../data/humanKinases.fasta')
     flag = 0
-    for line in open('out.txt', 'r'):
-        if line[:2] == '>>':
-            acc = line.split('|')[1]
-            flag = 1
-            #print (acc)
-        if flag == 1 and line.split()!= [] and acc in kinases:
-            if '== domain' in line:
-                domainNum = int(line.split('domain')[1].split()[0])
-                kinases[acc].domains[domainNum] = {}
-                kinases[acc].seq2pfam[domainNum] = {}
-            elif line.split()[0] == 'humanKinasesHitsSplitTrimmed':
-                hmmStart = int(line.split()[1])
-                hmmSeq = line.split()[2]
-                hmmEnd = int(line.split()[3])
-            elif acc in line.split()[0]:
-                kinaseStart = line.split()[1]
-                if kinaseStart == '-': continue
-                kinaseStart = int(kinaseStart)
-                kinaseSeq = line.split()[2]
-                kinaseEnd = int(line.split()[3])
-                for hmmChar, kinaseChar in zip(hmmSeq, kinaseSeq):
-                    if hmmChar not in ['.', '-'] and kinaseChar not in ['.', '-']:
-                        #kinases[acc].domains[domainNum][kinaseStart] = hmmStart
-                        kinases[acc].domains[domainNum][hmmStart] = kinaseStart
-                        kinases[acc].seq2pfam[domainNum][kinaseStart] = hmmStart
-                        hmmStart += 1
-                        kinaseStart += 1
-                    elif hmmChar in ['.', '-']:
-                        kinaseStart += 1
-                    elif kinaseChar in ['.', '-']:
-                        hmmStart += 1
-        #print (kinases[acc].domains)
-        #sys.exit()
+    with open('out.txt', 'r') as hmmsearchFile:
+        for line in hmmsearchFile:
+            if line[:2] == '>>':
+                acc = line.split('|')[1]
+                flag = 1
+                #print (acc)
+            if flag == 1 and line.split()!= [] and acc in kinases:
+                if '== domain' in line:
+                    domainNum = int(line.split('domain')[1].split()[0])
+                    kinases[acc].domains[domainNum] = {}
+                    kinases[acc].seq2pfam[domainNum] = {}
+                elif line.split()[0] == 'humanKinasesHitsSplitTrimmed':
+                    hmmStart = int(line.split()[1])
+                    hmmSeq = line.split()[2]
+                    hmmEnd = int(line.split()[3])
+                elif acc in line.split()[0]:
+                    kinaseStart = line.split()[1]
+                    if kinaseStart == '-': continue
+                    kinaseStart = int(kinaseStart)
+                    kinaseSeq = line.split()[2]
+                    kinaseEnd = int(line.split()[3])
+                    for hmmChar, kinaseChar in zip(hmmSeq, kinaseSeq):
+                        if hmmChar not in ['.', '-'] and kinaseChar not in ['.', '-']:
+                            #kinases[acc].domains[domainNum][kinaseStart] = hmmStart
+                            kinases[acc].domains[domainNum][hmmStart] = kinaseStart
+                            kinases[acc].seq2pfam[domainNum][kinaseStart] = hmmStart
+                            hmmStart += 1
+                            kinaseStart += 1
+                        elif hmmChar in ['.', '-']:
+                            kinaseStart += 1
+                        elif kinaseChar in ['.', '-']:
+                            hmmStart += 1
+            #print (kinases[acc].domains)
+            #sys.exit()
     # print (kinases['Q96NX5'].domains)
     # print (kinases['Q96NX5'].domains[1][1384])
 
