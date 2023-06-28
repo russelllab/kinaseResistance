@@ -9,6 +9,7 @@ import pandas as pd
 from collections import defaultdict
 from Bio import SeqIO
 
+
 def get_data_paths():
     """
     Get paths to all data files
@@ -19,16 +20,21 @@ def get_data_paths():
     file_path = {
         "cosmic_gws": f"{cosmic_path}/CosmicGenomeScreensMutantExport_mech_gn_mapped.txt",
         "cosmic_tar": f"{cosmic_path}/CosmicCompleteTargetedScreensMutantExport_mech_gn_mapped.txt",
+        "cosmic_gws_new": f"{cosmic_path}/Cosmic_GenomeScreensMutant_v98_GRCh38.tsv.gz",
+        "cosmic_tar_new": f"{cosmic_path}/Cosmic_CompleteTargetedScreensMutant_v98_GRCh38.tsv.gz",
         "cosmic_census": f"{cosmic_path}/cancer_gene_census.csv",
         "uni_fasta_file": f"{uniprot_path}/uniprot_sprot.fasta.gz",
         "ml_output_dir": "/net/home.isilon/ds-russell/kinaseResistance/ML/outputs_old/",
         "ml_output_file": "cosmic_activark.txt.gz",
         "mut_counts_all": "mutation_counts_all.tsv.gz",
         "mut_counts_gws": "mutation_counts_gws.tsv.gz",
+        "mut_counts_all_new": "mutation_counts_all_v98.tsv.gz",
+        "mut_counts_gws_new": "mutation_counts_gws_v98.tsv.gz",
         "cosmic_ml_all": "ML_output_cosmic_all.tsv.gz",
-        "cosmic_ml_gws": "ML_output_cosmic_gws.tsv.gz",
+        "cosmic_ml_gws": "ML_output_cosmic_gws.tsv.gz"
     }
     return file_path
+
 
 def get_list_of_kinases(path):
     """
@@ -41,13 +47,20 @@ def get_list_of_kinases(path):
         kinases.append(accession)
     return kinases
 
-def get_cosmic_counts(paths, kinases):
+
+def get_cosmic_counts(paths, kinases, new=False):
     """
     Get sample counts of COSMIC mutations for all kinases. If counts files do 
     not exist, create them.
     :param paths: dictionary of paths to data files
     :param kinases: list of UniProt accessions of kinases
+    :param new: whether to use new COSMIC files
     """
+    if new:
+        paths["cosmic_gws"] = paths["cosmic_gws_new"]
+        paths["cosmic_tar"] = paths["cosmic_tar_new"]
+        paths["mut_counts_all"] = paths["mut_counts_all_new"]
+        paths["mut_counts_gws"] = paths["mut_counts_gws_new"]
     if os.path.isfile(paths["mut_counts_all"]) and os.path.isfile(paths["mut_counts_gws"]):
         with gzip.open(paths["mut_counts_all"], "rt") as f:
             mech_counts_all = {line.split("\t")[0]: int(line.split("\t")[1]) for line in f}
@@ -61,6 +74,7 @@ def get_cosmic_counts(paths, kinases):
         mech_counts_all = create_mutation_counts_list(paths["mut_counts_all"], mech_samples)
     return mech_counts_all, mech_counts_gws
 
+
 def get_uni_seqs(file, kinases=None):
     """
     Get UniProt sequences. If provided, restrict to provided list of accessions.
@@ -73,6 +87,7 @@ def get_uni_seqs(file, kinases=None):
         if kinases is None or accession in kinases:
             uni_seqs[accession] = str(record.seq)
     return uni_seqs
+
 
 def parse_cosmic_mutations(path, kinases, uni_seqs, mech_samples=None):
     """
@@ -119,6 +134,7 @@ def parse_cosmic_mutations(path, kinases, uni_seqs, mech_samples=None):
 
     return mech_samples
 
+
 def create_mutation_counts_list(path, mech_samples):
     """
     Write file with COSMIC mutation sample counts for each kinase and return 
@@ -134,6 +150,7 @@ def create_mutation_counts_list(path, mech_samples):
             f.write(f"{mech}\t{mech_counts[mech]}\n")
     return mech_counts
 
+
 def parse_cosmic_census(census_file):
     """
     Read COSMIC cancer gene census file.
@@ -142,6 +159,7 @@ def parse_cosmic_census(census_file):
     df = pd.read_csv(census_file, sep=",", quotechar='"')
 
     return df
+
 
 def merge_cosmic_MLoutput(ml_output_file, cosmic_ml_output_file, cosmic_counts, 
                           census):
@@ -178,11 +196,12 @@ def merge_cosmic_MLoutput(ml_output_file, cosmic_ml_output_file, cosmic_counts,
         for row in sorted(to_print, key=to_print.get, reverse=True):
             f.write(row+"\n")
 
+
 if __name__ == '__main__':
     file_path = get_data_paths()
     kinase_list = get_list_of_kinases(file_path["ml_output_dir"])
     cosmic_counts_all, cosmic_counts_gws = get_cosmic_counts(file_path, 
-                                                            kinase_list)
+                                                            kinase_list, new=True)
     census = parse_cosmic_census(file_path["cosmic_census"])
 
     rerun = False
