@@ -39,7 +39,7 @@ def connect2DB(db_name='kinase_project2'):
     """
     mydb = fetchData.connection(db_name=db_name)
     mydb.autocommit = True
-    return mydb.cursor()
+    return mydb
 
 def prepare_input_row(line, kinases, entries_not_found, data):
     """
@@ -50,7 +50,8 @@ def prepare_input_row(line, kinases, entries_not_found, data):
     # mydb = fetchData.connection(db_name='kinase_project2')
     # mydb.autocommit = True
     # mycursor = mydb.cursor()
-    mycursor = connect2DB()
+    mydb = connect2DB()
+    mycursor = mydb.cursor()
 
     if line.split() == []: return None # Ignore empty line
     if line[0] == '#' or line.lstrip().rstrip() == '': return None # Ignore comments
@@ -208,6 +209,7 @@ def prepare_input_row(line, kinases, entries_not_found, data):
     row += [item for item in adr_row]
     
     data.append(row)
+    mydb.close()
 
 def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     """
@@ -361,7 +363,9 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     '''
     
     # fetch cursor for misc stuff
-    mycursor = connect2DB()
+    mydb = connect2DB()
+    mycursor = mydb.cursor()
+
     # Print the results
     terminal_width, terminal_height = shutil.get_terminal_size()
     print (''.join(['-' for i in range(terminal_width)]))
@@ -477,6 +481,7 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     else: print (outputText)
     return results
     # yield results
+    mydb.close()
 
 # Run this script from command line
 if __name__ == '__main__':

@@ -32,7 +32,7 @@ for row in hits :
 
 def call_activark(acc):
     outputFile = 'outputs/'+acc+'.txt'
-    prepareTestData.predict(20, 'inputs/'+acc+'.txt.gz', outputFile = outputFile)
+    prepareTestData.predict(5000, 'inputs/'+acc+'.txt.gz', outputFile = outputFile)
 
 count = 0
 for acc in tqdm(kinases):
@@ -43,6 +43,7 @@ for acc in tqdm(kinases):
         position = int(case[1:])
         for mutAA in AA:
             if mutAA == wtAA: continue
+            # if mutAA != 'A': continue
             mutations += acc + '/' + wtAA + str(position) + mutAA + '\n'
         #if num % 1 == 0:
         #    break
