@@ -41,7 +41,7 @@ def connect2DB(db_name='kinase_project2'):
     mydb.autocommit = True
     return mydb
 
-def prepare_input_row(line, kinases, entries_not_found, data):
+def prepare_input_row(line, kinases, entries_not_found, data, dic_region):
     """
     Function to prepare the input row
     """
@@ -157,7 +157,8 @@ def prepare_input_row(line, kinases, entries_not_found, data):
         kinases[acc].mutations[mutation] = Mutation(mutation, '-', acc, 'test')
 
     # Get region
-    region = fetchData.getRegion(mycursor, acc, mutation)
+    # region = fetchData.getRegion(mycursor, acc, mutation)
+    region = fetchData.getRegion2(mycursor, acc, mutation, dic_region)
     
     # Get features
     position = int(mutation[1:-1])
@@ -278,6 +279,9 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     # print (row)
     # sys.exit()
 
+    # Get region dic
+    dic_region = fetchData.getSSdic()
+
     # Open the input file and convert its contents into an array
     # f = open(inputFile, "r")
     f = fetchData.checkGZfile(inputFile)
@@ -294,7 +298,7 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         while (threading.active_count() >= numThreads):
             continue
         thread = threading.Thread(target=prepare_input_row,
-                                  args=(line, kinases, entries_not_found, data))
+                                  args=(line, kinases, entries_not_found, data, dic_region))
         thread.start()
         threads.append(thread)
 

@@ -77,6 +77,41 @@ def getRegion(mycursor, acc, mutation):
         else:
             return ';'.join(region)
 
+def getSSdic():
+    dic_region = {}
+    with gzip.open('../alignments/humanKinasesHitsSplitTrimmed_ss.tsv.gz', 'rt', encoding='utf-8') as regionFile:
+        for line in regionFile:
+            if line.startswith('#'): continue
+            region_name = line.split()[0]
+            start, end = int(line.split()[1].split('-')[0]), int(line.split()[1].split('-')[1])
+            for position in range(start, end+1):
+                if position not in dic_region: dic_region[position] = []
+                dic_region[position].append(region_name)
+    return dic_region
+
+def getRegion2(mycursor, acc, mutation, dic_region):
+    '''Function to fetch region from the DB'''
+    mycursor.execute("select pfampos from positions where \
+                     acc=%s and uniprotpos=%s", (acc, mutation[1:-1],))
+    hits = mycursor.fetchone()
+    if hits is None:
+        return '-'
+    else:
+        alnpos = hits[0]
+        # print (alnpos)
+        if alnpos == '-': return '-'
+        else: alnpos = int(alnpos)
+        region = []
+        if alnpos in dic_region:
+            region = dic_region[alnpos]
+        
+        # if no specific region found 
+        # return a hyphen
+        if len(region) == 0:
+            return '-'
+        else:
+            return ';'.join(region)
+
 def getAccGene(mycursor, name):
     '''Function to fetch acc and gene from the DB'''
     check_with = ['acc', 'gene', 'uniprot_id']
