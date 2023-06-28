@@ -44,7 +44,7 @@ import argparse
 # 5 10 3 100 AvNL
 # 5 12 4 100 LvNA
 
-RANDOM_STATE = 1
+RANDOM_STATE = 100
 ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10

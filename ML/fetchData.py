@@ -62,10 +62,10 @@ def getRegion(mycursor, acc, mutation):
         if alnpos == '-': return '-'
         else: alnpos = int(alnpos)
         region = []
-        for line in open('../data/ss.tsv', 'r', encoding='utf-8'):
+        for line in gzip.open('../alignments/humanKinasesHitsSplitTrimmed_ss.tsv.gz', 'rt', encoding='utf-8'):
             if line.startswith('#'): continue
             region_name = line.split()[0]
-            start, end = int(line.split()[-2].split('-')[0]), int(line.split()[-2].split('-')[1])
+            start, end = int(line.split()[1].split('-')[0]), int(line.split()[1].split('-')[1])
             if alnpos in range(start, end+1):
                 region.append(region_name)
         

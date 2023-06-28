@@ -24,7 +24,7 @@ from datetime import datetime
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 MUT_TYPES = ['A', 'D', 'R']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
-MODEL_NAMES = ['N', 'L', 'A', 'AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN', 'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
+MODEL_NAMES = ['N', 'D', 'A', 'AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN', 'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
 # MODEL_NAMES = ['N', 'L', 'A']
 WS = 5
 START_ALN = 33
@@ -297,7 +297,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     dic_clfs = {}
     dic_predictions = {}
     for model in MODEL_NAMES:
-        if model in ['N', 'L', 'A']:
+        if model in ['N', 'D', 'A']:
             dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+'scaler_all.pkl', 'rb'))
             dic_features[model] = dic_scalers[model].transform(features)
             dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+'model_all.sav', 'rb'))
@@ -340,7 +340,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             outputDict[model] = []
         else:
             outputDict['N'] = []
-            outputDict['L'] = []
+            outputDict['D'] = []
             outputDict['A'] = []
     # for row, predictAD, predictRN in zip(test_data, clfAD.predict_proba(featuresAD), clfRN.predict_proba(featuresRN)):
     for count, row in enumerate(test_data):
@@ -376,12 +376,12 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             elif int(hmmPos) < START_ALN and int(hmmPos) > END_ALN:
                 scores.append('NA')
             else:
-                if model not in ['N', 'L', 'A']:
+                if model not in ['N', 'D', 'A']:
                     scores.append(str(round(dic_predictions[model][count][1], 3)))
                 else:
                     if model == 'N':
                         scores.append(str(round(dic_predictions[model][count][0], 3)))
-                    elif model == 'L':
+                    elif model == 'D':
                         scores.append(str(round(dic_predictions[model][count][1], 3)))
                     elif model == 'A':
                         scores.append(str(round(dic_predictions[model][count][2], 3)))
