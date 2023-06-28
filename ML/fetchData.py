@@ -503,7 +503,7 @@ def getHmmPkinaseScore(mycursor, acc, wtAA, position, mutAA):
     # print (acc, wtAA, position, mutAA, hits)
     if hits == None:
         print (acc, wtAA, position, mutAA, hits)
-        return '-', None, None, None
+        return '-', None, None, None, None
     pfampos = hits[0]
     alnpos = hits[1]
     # print (f'pfampos of {acc}/{wtAA}{position}{mutAA} is {pfampos}')
