@@ -41,7 +41,7 @@ def connect2DB(db_name='kinase_project2'):
     mydb.autocommit = True
     return mydb
 
-def prepare_input_row(line, kinases, entries_not_found, data, dic_region):
+def prepare_input_row(line, kinases, entries_not_found, data, dic_region, mydb):
     """
     Function to prepare the input row
     """
@@ -50,7 +50,7 @@ def prepare_input_row(line, kinases, entries_not_found, data, dic_region):
     # mydb = fetchData.connection(db_name='kinase_project2')
     # mydb.autocommit = True
     # mycursor = mydb.cursor()
-    mydb = connect2DB()
+    # mydb = connect2DB()
     mycursor = mydb.cursor()
 
     if line.split() == []: return None # Ignore empty line
@@ -210,7 +210,7 @@ def prepare_input_row(line, kinases, entries_not_found, data, dic_region):
     row += [item for item in adr_row]
     
     data.append(row)
-    mydb.close()
+    mycursor.close()
 
 def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     """
@@ -241,6 +241,9 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     # mydb = fetchData.connection(db_name='kinase_project2')
     # mydb.autocommit = True
     # mycursor = mydb.cursor()
+    # fetch cursor for misc stuff
+    mydb = connect2DB()
+    mycursor = mydb.cursor()
 
     # Make header
     data = []
@@ -298,7 +301,7 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         while (threading.active_count() >= numThreads):
             continue
         thread = threading.Thread(target=prepare_input_row,
-                                  args=(line, kinases, entries_not_found, data, dic_region))
+                                  args=(line, kinases, entries_not_found, data, dic_region, mydb))
         thread.start()
         threads.append(thread)
 
@@ -365,10 +368,6 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     scalerRN = pickle.load(open(BASE_DIR+'/ML/'+'finalized_scaler_RN.pkl', 'rb'))
     featuresRN = scalerRN.transform(features)
     '''
-    
-    # fetch cursor for misc stuff
-    mydb = connect2DB()
-    mycursor = mydb.cursor()
 
     # Print the results
     terminal_width, terminal_height = shutil.get_terminal_size()
@@ -478,6 +477,7 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     outputDF = pd.DataFrame(outputDict)
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    mycursor.close()
     outputText = '# Activark predictions\n# '+dt_string+'\n'
     outputText += '# Input: '+inputFile+'\n'
     outputText += outputDF.to_string(index=False)
@@ -485,7 +485,6 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     else: print (outputText)
     return results
     # yield results
-    mydb.close()
 
 # Run this script from command line
 if __name__ == '__main__':
