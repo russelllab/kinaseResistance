@@ -24,7 +24,8 @@ from datetime import datetime
 PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 MUT_TYPES = ['A', 'D', 'R']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
-MODEL_NAMES = ['AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN', 'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
+MODEL_NAMES = ['N', 'D', 'A', 'AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN', 'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
+# MODEL_NAMES = ['N', 'L', 'A']
 WS = 5
 START_ALN = 33
 END_ALN = 823
@@ -63,7 +64,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     data = []
     row = ['Input', 'Acc','Gene','UniProtID', 'ProteinName', 'Mutation','Region', 'Dataset']
     row += ['AdjacentSites', 'alnPos', 'hmmPos','hmmSS','hmmScoreWT','hmmScoreMUT','hmmScoreDiff']
-    row += ['Phosphomimic', 'Acetylmimic']
+    row += ['Phosphomimic', 'ReversePhosphomimic', 'Acetylmimic', 'ReverseAcetylmimic']
     row += ['IUPRED', 'ATPcount']
     row += ['ncontacts', 'nresidues', 'mech_intra']
     row += ['phi_psi', 'sec', 'burr', 'acc']
@@ -79,6 +80,11 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     for position in range(startWS, endWS+1):
         for hom_type in ['allHomologs','exclParalogs','specParalogs','orthologs','bpso','bpsh']:
             row += [hom_type + '_' + str(position)]
+    
+    for position in range(startWS, endWS+1):
+        for taxon_type in ['eukaryotes', 'mammals', 'metazoa', 'vertebrates']:
+            row += [taxon_type + '_' + str(position)]
+
     for position in range(startWS, endWS+1):
         for mut_type in ['A', 'D', 'R']:
             for aa in AA:
@@ -222,13 +228,17 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         aa_row = fetchData.getAAvector(wtAA, mutAA)
         homology_row = fetchData.getHomologyScores(mycursor, acc, wtAA, position, mutAA)
         if homology_row == None: continue
+        taxon_row = fetchData.getTaxonScores(mycursor, acc, wtAA, position, mutAA)
+        if taxon_row == None: continue
         mech_intra_row = fetchData.getMechIntraScores(mycursor, acc, wtAA, position, mutAA)
         if mech_intra_row == None: continue
         dssp_row = fetchData.getDSSPScores(mycursor, acc, wtAA, position, mutAA)
         if dssp_row == None: continue
         atp_count = fetchData.getATPbindingScores(mycursor, acc, position)
         is_phosphomimic = kinases[acc].mutations[mutation].checkPhosphomimic()
+        is_reverse_phosphomimic = kinases[acc].mutations[mutation].checkReversePhosphomimic()
         is_acetylmimic = kinases[acc].mutations[mutation].checkAcetylmimic()
+        is_reverse_acetylmimic = kinases[acc].mutations[mutation].checkReverseAcetylmimic()
         charges_row = kinases[acc].mutations[mutation].findChangeInCharge()
         count_aa_change_row = fetchData.getCountAAchange(mycursor, acc, position, kinases, ws=WS)
         adr_row = fetchData.getADRvector(mycursor, acc, position, kinases, WS)
@@ -238,7 +248,9 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         row += [adjacentSites, str(alnPos), str(hmmPos), str(hmmSS)]
         row += [float(hmmScoreWT), float(hmmScoreMUT), float(hmmScoreMUT)-float(hmmScoreWT)]
         row.append(is_phosphomimic)
+        row.append(is_reverse_phosphomimic)
         row.append(is_acetylmimic)
+        row.append(is_reverse_acetylmimic)
         row.append(iupred_score)
         row.append(atp_count)
         row += [item for item in mech_intra_row]
@@ -247,6 +259,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         row += [item for item in ptm_row]
         row += [item for item in aa_row]
         row += [item for item in homology_row]
+        row += [item for item in taxon_row]
         row += [int(item) for item in count_aa_change_row]
         row += [item for item in adr_row]
         # print (row)
@@ -284,10 +297,16 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     dic_clfs = {}
     dic_predictions = {}
     for model in MODEL_NAMES:
-        dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+'scaler_'+model+'.pkl', 'rb'))
-        dic_features[model] = dic_scalers[model].transform(features)
-        dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+'model_'+model+'.sav', 'rb'))
-        dic_predictions[model] = dic_clfs[model].predict_proba(dic_features[model])
+        if model in ['N', 'D', 'A']:
+            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+'scaler_all.pkl', 'rb'))
+            dic_features[model] = dic_scalers[model].transform(features)
+            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+'model_all.sav', 'rb'))
+            dic_predictions[model] = dic_clfs[model].predict_proba(dic_features[model])
+        else:
+            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+'scaler_'+model+'.pkl', 'rb'))
+            dic_features[model] = dic_scalers[model].transform(features)
+            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+'model_'+model+'.sav', 'rb'))
+            dic_predictions[model] = dic_clfs[model].predict_proba(dic_features[model])
     
     # print (dic_predictions)
 
@@ -316,7 +335,13 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     outputDict = {'UserInput': [], 'UniProtAcc': [], 'GeneName': [], 'UniProtID': [],
                   'Mutation': [], 'HMMpos': [], 'Region': [], 'PTM': [], 'KnownADR': [],
                   'NeighSites': []}
-    for model in MODEL_NAMES: outputDict[model] = []
+    for model in MODEL_NAMES:
+        if model != 'all':
+            outputDict[model] = []
+        else:
+            outputDict['N'] = []
+            outputDict['D'] = []
+            outputDict['A'] = []
     # for row, predictAD, predictRN in zip(test_data, clfAD.predict_proba(featuresAD), clfRN.predict_proba(featuresRN)):
     for count, row in enumerate(test_data):
         ## Set prediction proba to NA if the position is not in the HMM
@@ -351,7 +376,15 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             elif int(hmmPos) < START_ALN and int(hmmPos) > END_ALN:
                 scores.append('NA')
             else:
-                scores.append(str(round(dic_predictions[model][count][1], 3)))
+                if model not in ['N', 'D', 'A']:
+                    scores.append(str(round(dic_predictions[model][count][1], 3)))
+                else:
+                    if model == 'N':
+                        scores.append(str(round(dic_predictions[model][count][0], 3)))
+                    elif model == 'D':
+                        scores.append(str(round(dic_predictions[model][count][1], 3)))
+                    elif model == 'A':
+                        scores.append(str(round(dic_predictions[model][count][2], 3)))
         # outputText += user_input +'\t'+ acc +'\t'+ gene +'\t'+ uniprot_id +'\t' + mutation +'\t'
         # outputText += str(hmmPos) +'\t'+ region + '\t' + ptmType + '\t' + ','.join(mutType) + '\t'
         # outputText += adjacentSites + '\t'
@@ -368,6 +401,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         outputDict['NeighSites'].append(adjacentSites)
         for model, score in zip(MODEL_NAMES, scores):
             outputDict[model].append(score)
+            
         results['predictions'][name] = {
                         'acc':acc,
                         'gene':gene,

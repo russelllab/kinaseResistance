@@ -20,7 +20,7 @@ cat humanKinasesPkinaseHitsSplitInactive.fasta \
 # Save the output in the file humanKinasesHitsSplit.aln
 # hmmalign -o humanKinasesHitsSplit.sto ../pfam/Pkinase.hmm humanKinasesHitsSplit.fasta
 hmmalign -o humanKinasesPkinaseHitsSplit.sto ../pfam/Pkinase.hmm humanKinasesPkinaseHitsSplit.fasta
-hmmalign -o humanKinasesPK_Tyr_Ser-ThrHitsSplit.sto ../pfam/Pkinase.hmm humanKinasesPK_Tyr_Ser-ThrHitsSplit.fasta
+hmmalign -o humanKinasesPK_Tyr_Ser-ThrHitsSplit.sto ../pfam/PK_Tyr_Ser-Thr.hmm humanKinasesPK_Tyr_Ser-ThrHitsSplit.fasta
 
 # python prepareAlignments.py -i humanKinasesPkinaseHitsSplit.sto > ali1.fasta
 # python prepareAlignments.py -i humanKinasesPK_Tyr_Ser-ThrHitsSplit.sto > ali2.fasta
@@ -36,7 +36,6 @@ sed '/^# STOCKHOLM/s/.*/CLUSTAL/' humanKinasesPK_Tyr_Ser-ThrHitsSplit.sto | grep
 mv humanKinasesPkinaseHitsSplit.aln ../alignments/
 mv humanKinasesPK_Tyr_Ser-ThrHitsSplit.aln ../alignments/
 cd ../alignments/
-# exit 0
 
 # Step 5: Run the trim_alignment_split_script.py to trim the alignment
 # Save the output in the file humanKinasesHitsSplitTrimmed.aln/fasta
@@ -47,12 +46,14 @@ cd ../alignments/
 # jalview_annotations.txt
 # python trim_alignment_split_outside.py humanKinasesHitsSplit.aln ../data/humanKinases.fasta 32177 32940 30
 python trim_alignment_split_outside.py humanKinasesPkinaseHitsSplit.aln ../data/humanKinases.fasta 32178 32816 30
-python trim_alignment_split_outside.py humanKinasesPK_Tyr_Ser-ThrHitsSplit.aln ../data/humanKinases.fasta 1950 2546 30
+python trim_alignment_split_outside.py humanKinasesPK_Tyr_Ser-ThrHitsSplit.aln ../data/humanKinases.fasta 1947 2479 30
 
 # Step 6: Merge the two alignments
 cat humanKinasesPkinaseHitsSplitTrimmed.fasta humanKinasesPK_Tyr_Ser-ThrHitsSplitTrimmed.fasta > ali.fasta
+sed 's/\./-/g' ali.fasta > ali2.fasta
 ruby ../../../makemergetable.rb humanKinasesPkinaseHitsSplitTrimmed.fasta humanKinasesPK_Tyr_Ser-ThrHitsSplitTrimmed.fasta > subMSAtable
-mafft --merge subMSAtable ali.fasta > humanKinasesHitsSplitTrimmed.fasta
+mafft --merge subMSAtable ali2.fasta > humanKinasesHitsSplitTrimmed.fasta
+python make_ss_annotations.py humanKinasesHitsSplitTrimmed.fasta
 
 # Step 7: Build a hidden Markov model (HMM) from the alignment
 # Use the fasta file as input because the aln file fails (!!!!)
@@ -94,11 +95,13 @@ python3 make_table_psp_kinase_trimmed.py humanKinasesHitsSplitTrimmed humanKinas
 # Convert the stockholm file to CLUSTAL format
 hmmalign -o humanKinasesPkinasePK_Tyr_Ser-ThrAll.sto ../pfam/humanKinasesHitsSplitTrimmed.hmm humanKinasesPkinasePK_Tyr_Ser-ThrAll.fasta
 sed '/^# STOCKHOLM/s/.*/CLUSTAL/' humanKinasesPkinasePK_Tyr_Ser-ThrAll.sto | grep -v '#' > humanKinasesPkinasePK_Tyr_Ser-ThrAll.aln
-mv humanKinasesPkinasePK_Tyr_Ser-ThrAll.aln ../alignments/
+python remove_empty_cols_aln.py humanKinasesPkinasePK_Tyr_Ser-ThrAll.aln
+mv humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gaps.aln ../alignments/
 cd ../alignments/
 python trim_alignment_split_outside.py \
-        humanKinasesPkinasePK_Tyr_Ser-ThrAll.aln \
+        humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gaps.aln \
         ../data/humanKinases.fasta \
-        32155 \
-        33025 \
+        32163 \
+        33077 \
         30
+python make_ss_annotations.py humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gapsTrimmed.fasta

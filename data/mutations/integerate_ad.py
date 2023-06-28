@@ -103,7 +103,7 @@ for line in gzip.open('final_mined_RR_checked_checked-again.txt.gz', 'rt'):
     info = mutation_type + ' '+line.split('\t')[2]
     outcome = 'activating'
     if mutation not in dic:
-        dic[mutation] = Mutation(mutation, mutation_type, gene, info, pubmedIDs, outcome, 'TextMining')
+        dic[mutation] = Mutation(mutation, mutation_type, gene, info, pubmedIDs, outcome, 'PubMed')
         # dic[mutation].show()
 
 text = 'UniProtAcc\tGene\tMutation\tMutationType\tInfo\tPubMedID\tOutcome\tSource\n'

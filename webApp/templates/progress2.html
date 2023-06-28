@@ -24,15 +24,29 @@
                 transform: rotate(360deg);
             }
             }
+        
+        .logo-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        /* height: 100px; Adjust the height as needed */
+                        }
     </style>
-    <h1 class="headingFontHomePage" id="headingElement"><i class="bi bi-diagram-3-fill"></i> Activark</h1>
+    <h1 class="headingFontHomePage" id="headingElement">
+        <!-- <div class="logo-container">
+            <img src="static/img/activark_logo.png" alt="Activark Logo"
+            style="width: 100px; height: 100px; padding-top: 10%;">
+        </div> -->
+        <i class="bi bi-diagram-3-fill"></i>
+        Activark
+    </h1>
     <div id="formArea">
 	<form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
         <textarea style="height: 400px; width: 400px; font-size: 15px;" type="text" 
                     placeholder="#Input format&#10;&#10;PLK3/K91R&#10;RAF1/D486N&#10;EGFR_HUMAN/T790M" name="inputMut" id="inputMut">
             
                         </textarea>
-        <div style="display: inline; padding-top: 10px;">
+        <div style="display: inline; padding-top: 0px;">
 		    <!-- <input style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit"/> -->
             <button id="exampleDefault" style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">Submit <i class="bi bi-send"></i></button>
             <button id="clearButton" style="padding-top: 10px;" type="button" onclick="call_onclick_clear()" value="Submit">Clear <i class="bi bi-repeat"></i></button>

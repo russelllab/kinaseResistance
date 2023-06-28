@@ -81,7 +81,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         scaler_filename=None, model_filename=None, column_filename=None):
     positives = name.split('v')[0]
     negatives = name.split('v')[1]
-    df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t')
+    df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t', low_memory=False)
     df['Dataset'] = df['Dataset'].replace(to_replace='train', value=0.025, regex=True)
     df['Dataset'] = df['Dataset'].replace(to_replace='test', value=0.3, regex=True)
     # exclude columns
@@ -111,7 +111,9 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         #   'D_known',
                         #   'R_known',
                         #   'Phosphomimic',
+                        'ReversePhosphomimic',
                         #   'Acetylmimic',
+                          'ReverseAcetylmimic',
                         #   'hmmScoreWT',
                         #   'hmmScoreMUT',
                         'hmmScoreDiff'
@@ -129,26 +131,26 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     '''
 
     ############
-    pfam_ptm_cols = ['ac_pfam', 'me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
+    pfam_ptm_cols = ['me_pfam', 'gl_pfam', 'm1_pfam', 'm2_pfam', 'm3_pfam', 'sm_pfam', 'ub_pfam']
     for i in range(-5,6):
         if i in [-2, -1, 0, 1, 2]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
-    pfam_ptm_cols = ['p_pfam']
+    pfam_ptm_cols = ['p_pfam', 'ac_pfam']
     for i in range(-5,6):
         if i in [-2, -1, 0, 1, 2]: continue
         for col in pfam_ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
     ############
 
-    ptm_cols = ['ac', 'me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
+    ptm_cols = ['me', 'gl', 'm1', 'm2', 'm3', 'sm', 'ub']
     for i in range(-5,6):
         if i in [-2, -1, 0, 1, 2]: continue
         for col in ptm_cols:
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i))
 
-    ptm_cols = ['p']
+    ptm_cols = ['p', 'ac']
     for i in range(-5,6):
         if i in [-2, -1, 0, 1, 2]: continue
         for col in ptm_cols:
@@ -173,7 +175,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
             columns_to_exclude.append(col.split('_')[0]+'_'+str(i)+'_'+col.split('_')[1])
 
     adr_cols = ['A', 'D', 'R']
-    # adr_cols = ['D', 'R']
+    # adr_cols = ['R']
     AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 
         'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
     for mut_type in adr_cols:
@@ -184,10 +186,17 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 columns_to_exclude.append(col+'_'+str(i)+'_pfam')
 
     hom_cols = ['allHomologs', 'exclParalogs', 'specParalogs', 'orthologs', 'bpso', 'bpsh']
+    # hom_cols = ['allHomologs', 'exclParalogs', 'specParalogs', 'orthologs']
     for hom_type in hom_cols:
         for i in range(-5, 6):
             if i in [0]: continue
-            # columns_to_exclude.append(hom_type)
+            columns_to_exclude.append(hom_type+'_'+str(i))
+    
+    tax_cols = ['eukaryotes', 'mammals', 'metazoa', 'vertebrates']
+    for tax_type in tax_cols:
+        for i in range(-5, 6):
+            if i in [0]: continue
+            columns_to_exclude.append(tax_type+'_'+str(i))
 
 
     df = df.loc[:, ~df.columns.isin(columns_to_exclude)]
@@ -355,8 +364,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                     'min_samples_leaf': min_samples_leaf,
                     'criterion': ['gini'],
                     # 'max_features': ['sqrt', 'log2'],
-                    # 'max_features': ['log2'],
-                    'max_features': ['sqrt'],
+                    'max_features': ['log2'],
+                    # 'max_features': ['sqrt'],
                     'n_estimators': n_estimators
                     }
         # parameters = {
@@ -378,6 +387,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         model.fit(X, y)
         print (name)
         print ('mean_test_score', model.cv_results_['mean_test_score'])
+        print ('mean_std_score', model.cv_results_['std_test_score'])
         # print (model.cv_results_['mean_train_score'])
         clf = RandomForestClassifier(
                 n_estimators=model.best_params_['n_estimators'],
@@ -511,7 +521,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     plt.savefig(name+'_roc.svg', format='svg', dpi=1000)
     #####################################################
     
-
+    
     # print (np.std(AUC))
     ## Cross-validation results
     breakLine = '-'.join(['-' for i in range(0, 50)])
@@ -585,12 +595,14 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
         df_feature_importances = df_feature_importances.sort_values(by=['Importance'], ascending=False)
         print (df_feature_importances)
-        '''
-        sns.set(font_scale = 0.6)
-        sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
-        plt.grid(True, lw=0.1)
-        '''
+        
+        # sns.set(font_scale = 0.6)
+        # sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
+        # plt.grid(True, lw=0.1)
+        
         # plt.savefig('feature_imp.png')
+        # plt.savefig('feature_imp_'+name+'.svg', format='svg', dpi=600)
+        # sys.exit()
         # plt.show()
     
 
@@ -598,7 +610,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     if model_filename is not None:
         pickle.dump(clf, open('models/model_'+model_filename+'.sav', 'wb'))
 
-    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance', 'neutral', 'loss', 'decrease']
+    test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance', 'activating', 'neutral', 'loss', 'decrease']
     # test_types = ['activatingresistance', 'increaseresistance','resistance', 'A', 'TBD', 'Inconclusive', 'TBDincreaseresistance']
     for test_type in test_types:
         print (''.join(['#' for i in range(1,25)]))
@@ -629,6 +641,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 X_sub_test = np.array(X_sub_test)
                 # if 'A84' in test_name:
                 #     print (X_sub_test)
+                if 'L858R' in test_name:
+                    print (test_name, clf.predict_proba(X_sub_test)[0], clf.predict(X_sub_test)[0], q)
                 y_pred = round((clf.predict_proba(X_sub_test)[0])[1], 3)
                 if q == 'neutral':
                     known_neutral.append(1)

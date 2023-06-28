@@ -1,59 +1,20 @@
-AvNL
-mean_test_score [0.87354798]
--#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
-Best model: {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 25, 'min_samples_split': 10, 'n_estimators': 100}
----------------------------------------------------------------------------------------------------
-Stratified CV results
-MET AUC  MCC  F1   PRE  REC  SPE
-AVG 0.88 0.43 0.5 0.38 0.75 0.81
-STD 0.007 0.021 0.017 0.016 0.021 0.009
-Number of act mutations in the train set: 82
-Number of deact mutations in the train set: 548
-########################
-            Feature  Importance
-12       D_D_0_pfam    0.045455
-0        hmmScoreWT    0.045354
-3             A_MUT    0.036075
-15       D_H_2_pfam    0.035167
-14       D_N_0_pfam    0.033446
-2        ChargesMUT    0.033144
-13       D_K_0_pfam    0.031130
-1       hmmScoreMUT    0.030663
-7            bpso_0    0.026527
-10       A_E_0_pfam    0.023559
-11       D_A_0_pfam    0.023395
-5     allHomologs_0    0.021454
-8    specParalogs_1    0.019270
-4   specParalogs_-2    0.017787
-6    specParalogs_0    0.017172
-9       D_V_-2_pfam    0.015850
-########################
-activatingresistance results ( 14 )
-REC: 0.857
-########################
-########################
-########################
-P46734/MAP2K3/A84T 0.387 A
-P11309/PIM1/S97N 0.407 A
-########################
-Q00535/CDK5/F82I 0.563 TBD
-Q02750/MAP2K1/V211D 0.63 TBD
-########################
-O96017/CHEK2/K373E 0.71 Inconclusive
-P06493/CDK1/V124G 0.445 Inconclusive
-P46734/MAP2K3/R94L 0.584 Inconclusive
-P46734/MAP2K3/R96W 0.442 Inconclusive
-P46734/MAP2K3/L215W 0.474 Inconclusive
-P46734/MAP2K3/T222M 0.566 Inconclusive
-P11309/PIM1/Q127E 0.521 Inconclusive
-Q06418/TYRO3/V669L 0.577 Inconclusive
-Q13470/TNK1/A299D 0.585 Inconclusive
-########################
-P00533/EGFR/T790M 0.403 TBDincreaseresistance
-########################
-REC: neutral 0.772
-########################
-REC: loss 0.908
-########################
-REC: decrease 0.351
-END
+P15056/V600E
+P15056/V600K
+P15056/K601E
+P15056/V600R
+P15056/G469A
+P15056/D594G
+P15056/V600M
+P15056/D594N
+P15056/G469V
+P15056/G466E
+P15056/G466V
+P15056/K601N
+P15056/L597R
+P15056/G469R
+P15056/V600D
+P15056/G469E
+P15056/N581S
+P15056/L597Q
+P15056/V600G
+P15056/L597S
