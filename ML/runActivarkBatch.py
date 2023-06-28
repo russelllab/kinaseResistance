@@ -11,7 +11,7 @@ from cls import Kinase, Mutation
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 
 accs_to_consider = []
-for line in open('batch1.txt', 'r'):
+for line in gzip.open('all_kinases_acc.txt.gz', 'rt'):
     accs_to_consider.append(line.rstrip().lstrip())
 
 mydb = fetchData.connection(db_name='kinase_project2')
@@ -26,13 +26,13 @@ for row in hits :
     if pfampos == '-': continue
     # print (pfampos)
     acc = name.split('/')[0]
-    if acc not in accs_to_consider: comtinue
+    if acc not in accs_to_consider: continue
     if acc not in kinases: kinases[acc] = []
     kinases[acc].append(name.split('/')[1])
 
 def call_activark(acc):
     outputFile = 'outputs/'+acc+'.txt'
-    prepareTestData.predict('inputs/'+acc+'.txt.gz', outputFile = outputFile)
+    prepareTestData.predict(20, 'inputs/'+acc+'.txt.gz', outputFile = outputFile)
 
 count = 0
 for acc in tqdm(kinases):
@@ -48,11 +48,12 @@ for acc in tqdm(kinases):
         #    break
     
     gzip.open('inputs/'+acc+'.txt.gz', 'wt').write(mutations)
-    thread = threading.Thread(target=call_activark, args=(acc,))
-    thread.start()
+    call_activark(acc)
+    # thread = threading.Thread(target=call_activark, args=(acc,))
+    # thread.start()
     # prepareTestData.predict('inputs/'+acc+'.txt')
     # if count == 5: break
-    while threading.active_count() > 25:
-        pass
+    # while threading.active_count() > 25:
+    #     pass
     
 mydb.close()

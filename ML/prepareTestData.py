@@ -30,7 +30,6 @@ MODEL_NAMES = ['N', 'D', 'A', 'AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN',
                'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
 # MODEL_NAMES = ['N', 'L', 'A']
 WS = 5
-NTHREADS = 2
 START_ALN = 33
 END_ALN = 823
 
@@ -210,7 +209,7 @@ def prepare_input_row(line, kinases, entries_not_found, data):
     
     data.append(row)
 
-def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
+def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     """
     Function to predict the effect of mutations on kinase activity
 
@@ -290,7 +289,7 @@ def predict(inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     for line in tqdm(file_contents):
         # count += 1
         # print (threading.active_count())
-        while (threading.active_count() >= NTHREADS):
+        while (threading.active_count() >= numThreads):
             continue
         thread = threading.Thread(target=prepare_input_row,
                                   args=(line, kinases, entries_not_found, data))
@@ -496,9 +495,10 @@ if __name__ == '__main__':
     outputFile = args.o
 
     # assign number of threads if provided
-    if args.t is not None: NTHREADS = int(args.t)
+    if args.t is not None: numThreads = int(args.t)
+    else: numThreads = 2
 
-    results_json = predict(inputFile, outputFile)
+    results_json = predict(numThreads, inputFile, outputFile)
     if len(results_json['entries_not_found']) > 0:
         if len(results_json['entries_not_found']) == 1: print ('The following input was ignored:')
         else: print ('The following inputs were ignored:')
