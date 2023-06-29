@@ -59,14 +59,19 @@ function defineDataTable (tableID, uniqID)
             ajax: '/static/predictor/output/'+uniqID+'/output.json',
             // ajax: '/static/predictor/output/GPBXK/output.json',
             "createdRow": function( row, data, dataIndex ) {
-                            if ( data.AIvN >= 0.5 ) {
-                                $('td:eq(10)', row).css('background-color', '#009e73');
+                            if (data.N == 'NA') {}
+                            
+                            else if ( data.N >= data.D && data.N >= data.A ) {
+                                $('td:eq(10)', row).css('background-color', '#F2E34C');
                             }
-                            if ( data.LDvN >= 0.5 ) {
+                            else if ( data.D >= data.N && data.D >= data.A ) {
                                 $('td:eq(11)', row).css('background-color', '#d55e00');
                             }
+                            else if ( data.A >= data.D && data.A >= data.N ) {
+                                $('td:eq(12)', row).css('background-color', '#009e73');
+                            }
                             if ( data.RvN >= 0.5 ) {
-                                $('td:eq(12)', row).css('background-color', '#0072b2');
+                                $('td:eq(14)', row).css('background-color', '#0072b2');
                             }
                             if ( data.AIvLD >= 0.5 ) {
                                 $('td:eq(13)', row).css('background-color', '#009e73');
@@ -97,12 +102,16 @@ function defineDataTable (tableID, uniqID)
                     { data: 'region' },
                     { data: 'ptmType' },
                     { data: 'mutType' },
-                    { data: 'AIvNLD' },
-                    { data: 'LDvNAI' },
+                    { data: 'N' },
+                    { data: 'D' },
+                    { data: 'A' },
+                    // { data: 'AIvNLD' },
+                    // { data: 'LDvNAI' },
                     // { data: 'AIvN' },
                     // { data: 'LDvN' },
-                    { data: 'RvN' },
-                    { data: 'AIvLD' }
+                    { data: 'AIvLD' },
+                    { data: 'RvN' }
+                    
                 ]
             });
     
@@ -166,10 +175,11 @@ function makeTableHeadFoot()
                         'Region',
                         'PTM<br>type',
                         'Known<br>ADR',
-                        'Pred A',
+                        'Pred N',
                         'Pred D',
-                        'Pred R',
-                        'Pred<br>(A vs D)'
+                        'Pred A',
+                        'Pred<br>(A vs D)',
+                        'Pred R'
                         ];
     
     var table_contents_text = ['Known information about the input',
@@ -184,10 +194,11 @@ function makeTableHeadFoot()
                                 'Region of the mutation site<br>in the kinase canonical structure',
                                 'Known PTM at the position of the mutation',
                                 'Known Activating/Deactivating/Resistance mutation',
-                                'Predicted probability of Activating',
+                                'Predicted probability of Neutral',
                                 'Predicted probability of Deactivating',
-                                'Predicted probability of Resistance',
+                                'Predicted probability of Activating',
                                 'Predicted probability of Activating(>=0.5) vs Deactivating(<0.5)',
+                                'Predicted probability of Resistance',
                                 ];
     
     var table_head_foot_id = ['table-head', 'table-foot'];

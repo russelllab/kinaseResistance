@@ -466,7 +466,16 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             elif int(hmmPos) < START_ALN and int(hmmPos) > END_ALN:
                 results['predictions'][name][model] = 'NA\t'
             else:
-                results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3)) + '\t'
+                if model not in ['N', 'D', 'A']:
+                    results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3))
+                else:
+                    if model == 'N':
+                        results['predictions'][name][model] = str(round(dic_predictions[model][count][0], 3))
+                    elif model == 'D':
+                        results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3))
+                    elif model == 'A':
+                        results['predictions'][name][model] = str(round(dic_predictions[model][count][2], 3))
+                # results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3)) + '\t'
         
             # if 'A84' in mutation and model=='AIvNLD':
                 # print (dic_features[model][count])

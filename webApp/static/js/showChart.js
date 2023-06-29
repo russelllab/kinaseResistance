@@ -7,20 +7,23 @@ function showChart(uniqID, kinase, mutation, results)
 		data: JSON.stringify({'uniqID': uniqID, 'kinase': kinase, 'mutation': mutation, 'results': results}),
 		success: function (response){
             // console.log(response);
-            yValues = [response['activating'],
+            // NvDvA preditcion
+            yValues = [
+                      response['neutral'],
                       response['deactivating'],
-                      response['resistance'],
+                      response['activating'],
                       // response['activating_AIvLD'],
                       // response['deactivating_AIvLD']
                       ];
             var trace1 = {
               name : 'Prediction',
-              x: ['Activating', 'Deactivating', 'Resistance'],
+              x: ['Neutral', 'Deactivating', 'Activating'],
               y: yValues,
               marker:{
-                color: ['rgba(0, 158, 115, 1.0)',
+                color: ['rgba(242, 227, 76, 1.0)',
                         'rgba(213, 94, 0, 1.0)',
-                        'rgba(0, 114, 178, 1.0)',
+                        'rgba(0, 158, 115, 1.0)',
+                        // 'rgba(0, 114, 178, 1.0)',
                         // 'rgba(0, 158, 115, 1.0)',
                         // 'rgba(213, 94, 0, 1.0)',
                       ]
@@ -33,7 +36,7 @@ function showChart(uniqID, kinase, mutation, results)
             var data = [trace1];
             var layout = {
               // title: 'Effect of '+mutation+'<br>on '+kinase+' activity',
-              title: 'Prediction of A, D or R vs others',
+              title: 'Prediction of N vs D vs A',
               yaxis: {
                 // autorange: true,
                 range: [0, 1.0],
@@ -43,6 +46,7 @@ function showChart(uniqID, kinase, mutation, results)
 
             Plotly.newPlot('predictionChart1', data, layout);
 
+            // AIvLD preditcion
             yValues = [
                       // response['activating_AIvLD'].toFixed(3),
                       response['activating_AIvLD'],
@@ -91,6 +95,56 @@ function showChart(uniqID, kinase, mutation, results)
             };
 
             Plotly.newPlot('predictionChart2', data, layout);
+
+            // RvN preditcions
+            yValues = [
+              // response['activating_AIvLD'].toFixed(3),
+              response['resistance'],
+              ];
+            var trace1 = {
+              name : 'Resistance',
+              x: ['R vs N'],
+              y: yValues,
+              marker:{
+                color: [
+                        'rgba(0, 114, 178, 1.0)',
+                      ]
+              },
+              type: 'bar',
+              text: yValues.map(String),
+              textposition: 'auto',
+            };
+
+            yValues = [
+              1 - response['resistance'],
+              ];
+            var trace2 = {
+              name : 'Neutral',
+              x: ['R vs N'],
+              y: yValues,
+              marker:{
+                color: [
+                        'rgba(242, 227, 76, 1.0)',
+                      ]
+              },
+              type: 'bar',
+              text: yValues.map(String),
+              textposition: 'auto',
+            };
+            
+            var data = [trace1, trace2];
+            var layout = {
+              // title: 'Effect of '+mutation+'<br>on '+kinase+' activity',
+              title: 'Prediction of R vs N',
+              yaxis: {
+                // autorange: true,
+                range: [0, 1.0],
+                type: 'linear'            
+              },
+              barmode: 'stack'
+            };
+
+            Plotly.newPlot('predictionChart3', data, layout);
 
 		}
 	});
