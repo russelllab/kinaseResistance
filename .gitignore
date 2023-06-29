@@ -134,3 +134,4 @@ dmypy.json
 .gitignore
 webApp/static/predictor/output/*
 kp2.sql
+cosmic/*backup*
