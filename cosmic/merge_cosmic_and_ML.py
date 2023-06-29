@@ -31,7 +31,9 @@ def get_data_paths():
         "mut_counts_all_new": "mutation_counts_all_v98.tsv.gz",
         "mut_counts_gws_new": "mutation_counts_gws_v98.tsv.gz",
         "cosmic_ml_all": "ML_output_cosmic_all.tsv.gz",
-        "cosmic_ml_gws": "ML_output_cosmic_gws.tsv.gz"
+        "cosmic_ml_gws": "ML_output_cosmic_gws.tsv.gz",
+        "cosmic_v98_counts": "Cosmic_v98_counts.tsv.gz",
+        "cosmic_v98_miss": "Cosmic_v98_mismatches.tsv"
     }
     return file_path
 
@@ -47,6 +49,18 @@ def get_list_of_kinases(path):
         kinases.append(accession)
     return kinases
 
+
+def get_cosmic_counts_new(file, file2, kinases):
+    mismatches = []
+    for row in csv.reader(open(file2, "rt"), delimiter="\t"):
+        mismatches.append(row[0])
+    mech_counts_all = {}
+    for row in csv.reader(gzip.open(file, "rt"), delimiter="\t"):
+        acc = row[0].split("/")[0]
+        ensp = row[1]
+        if acc in kinases and ensp not in mismatches:
+            mech_counts_all[row[0]] = int(row[3])
+    return mech_counts_all
 
 def get_cosmic_counts(paths, kinases, new=False):
     """
@@ -200,13 +214,17 @@ def merge_cosmic_MLoutput(ml_output_file, cosmic_ml_output_file, cosmic_counts,
 if __name__ == '__main__':
     file_path = get_data_paths()
     kinase_list = get_list_of_kinases(file_path["ml_output_dir"])
-    cosmic_counts_all, cosmic_counts_gws = get_cosmic_counts(file_path, 
-                                                            kinase_list, new=True)
+
+    cosmic_counts_all = get_cosmic_counts_new(file_path["cosmic_v98_counts"], 
+                          file_path["cosmic_v98_miss"],
+                          kinase_list)
+    # cosmic_counts_all, cosmic_counts_gws = get_cosmic_counts(file_path, 
+    #                                                         kinase_list, new=True)
     census = parse_cosmic_census(file_path["cosmic_census"])
 
     rerun = False
     if os.path.isfile(file_path["ml_output_file"]) and rerun == True:
         merge_cosmic_MLoutput(file_path["ml_output_file"], file_path["cosmic_ml_all"], 
                               cosmic_counts_all, census)
-        merge_cosmic_MLoutput(file_path["ml_output_file"], file_path["cosmic_ml_gws"], 
-                              cosmic_counts_gws, census)
+        # merge_cosmic_MLoutput(file_path["ml_output_file"], file_path["cosmic_ml_gws"], 
+        #                       cosmic_counts_gws, census)
