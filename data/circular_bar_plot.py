@@ -43,7 +43,7 @@ def add_labels(angles, values, labels, offset, ax):
             s=label, 
             ha=alignment, 
             va="center", 
-            size=13,
+            size=18,
             rotation=rotation, 
             rotation_mode="anchor"
         ) 
@@ -155,7 +155,8 @@ for pfampos in dic_pfam2ptmsite:
     for ptmtype in dic_pfam2ptmsite[pfampos]:
         if dic_pfam2ptmsite[pfampos][ptmtype] >= 20:
             print (pfampos, ptmtype, dic_pfam2ptmsite[pfampos][ptmtype])
-            dic_ptm_colors[pfampos] = generate_shades_of_cyan(dic_pfam2ptmsite[pfampos][ptmtype])
+            # dic_ptm_colors[pfampos] = generate_shades_of_cyan(dic_pfam2ptmsite[pfampos][ptmtype])
+            dic_ptm_colors[pfampos] = 'cyan' if ptmtype == 'p' else 'grey'
 
 print (dic_ptm_colors)
 # sys.exit()
@@ -306,7 +307,7 @@ COLORS = [f"C{i}" for i, size in enumerate(GROUPS_SIZE) for _ in range(size)]
 COLORS = ['red' for i in range(0, len(VALUES))]
 
 # for i in range(0, 2):
-for col, arr in zip(['-', 'green', 'lightgreen', 'red', 'coral', 'blue', 'yellow'],
+for col, arr in zip(['-', 'green', 'lightgreen', 'red', 'coral', 'blue', '#F2E34C'],
                     [
                     df["ptm"].values,
                     df["constitutive-activation"].values,
