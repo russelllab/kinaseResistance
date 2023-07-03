@@ -63,7 +63,7 @@ df = pd.DataFrame({
 # where order_num is the order in which the region appears in the file
 dic_region = {}
 order_num = 0
-for line in gzip.open('../alignments/humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gapsTrimmed_ss.tsv.gz', 'rt', encoding='utf-8'):
+for line in gzip.open('../alignments/humanKinasesHitsSplitTrimmed_ss.tsv.gz', 'rt', encoding='utf-8'):
     if line.startswith('#'): continue
     if line.split()[0] in ['DFG-motif', 'HrD-motif', 'APE-motif',
                             'Catalytic-Lys', 'Gly-rich-loop']: continue
