@@ -43,7 +43,7 @@ def add_labels(angles, values, labels, offset, ax):
             s=label, 
             ha=alignment, 
             va="center", 
-            size=10,
+            size=13,
             rotation=rotation, 
             rotation_mode="anchor"
         ) 
@@ -263,7 +263,8 @@ LABELS = df["name"].values
 NEW_LABELS = []
 for i in range(len(LABELS)):
     pfampos = LABELS[i]
-    NEW_LABELS += [str(dif_pfam2aa[pfampos]) + ' (' + str(pfampos) + ')']
+    # NEW_LABELS += [str(dif_pfam2aa[pfampos]) + ' (' + str(pfampos) + ')']
+    NEW_LABELS += [str(dif_pfam2aa[pfampos])]
     # print (LABELS[i], dif_pfam2aa[LABELS[i]])
     # NEW_LABELS += dif_pfam2aa[LABELS[i]]
 LABELS = NEW_LABELS
@@ -359,6 +360,6 @@ for group, size in zip(GROUP_NAMES, GROUPS_SIZE):
 
 # plt.show()
 plt.savefig('circular_bar_plot.png', format='png', dpi=400)
-# plt.savefig('circular_bar_plot.svg', format='svg', dpi=400)
+plt.savefig('circular_bar_plot.svg', format='svg', dpi=400)
 # plt.savefig('circular_bar_plot_all_positions.png', format='png', dpi=400)
 # plt.savefig('circular_bar_plot_all_positions.svg', format='svg', dpi=400)
