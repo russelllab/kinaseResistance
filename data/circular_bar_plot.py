@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sys
+import gzip
+
 sys.path.append('../ML/')
 import fetchData
 
@@ -24,7 +26,6 @@ def get_label_rotation(angle, offset):
     return rotation, alignment
 
 def add_labels(angles, values, labels, offset, ax):
-    
     # This is the space between the end of the bar and the label
     padding = 0.5
     
@@ -57,22 +58,26 @@ df = pd.DataFrame({
     "group": ["A"] * 10 + ["B"] * 20 + ["C"] * 12 + ["D"] * 8
 })
 
-
+# Define a dictionary to store a region's start and end positions
+# dic_region -> {region_name: [start, end, order_num]}
+# where order_num is the order in which the region appears in the file
 dic_region = {}
 order_num = 0
-for line in open('ss.tsv', 'r', encoding='utf-8'):
+for line in gzip.open('../alignments/humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gapsTrimmed_ss.tsv.gz', 'rt', encoding='utf-8'):
     if line.startswith('#'): continue
     if line.split()[0] in ['DFG-motif', 'HrD-motif', 'APE-motif',
                             'Catalytic-Lys', 'Gly-rich-loop']: continue
     order_num += 1
     name = line.split()[0]
-    start, end = line.split()[2].strip().split('-')
+    start, end = line.split()[1].strip().split('-')
     dic_region[name] = [int(start), int(end), order_num]
 
 mydb = fetchData.connection(db_name='kinase_project2')
 mydb.autocommit = True
 mycursor = mydb.cursor()
 
+# Define a dictionary to store the pfam positions and the corresponding amino acids
+# dif_pfam2aa -> {pfampos: pfamaa}
 dif_pfam2aa = {}
 mycursor.execute("SELECT pfampos, pfamaa FROM hmm")
 hits = mycursor.fetchall()
@@ -81,6 +86,10 @@ for hit in hits:
     if pfampos == '-': continue
     pfampos = int(pfampos)
     dif_pfam2aa[pfampos] = pfamaa
+
+# Define a dictionary to store the pfam positions and number of corresponding mutations
+# at that position
+# dic_pfam -> {pfampos: {mut_type: num}}
 
 # select all mutations from the database
 mycursor.execute("SELECT mutation, mut_type, pfampos, acc, gene FROM mutations\
@@ -104,6 +113,53 @@ for hit in hits:
 #     for mut_type in dic_pfam[pfampos]:
 #         dic_pfam[pfampos][mut_type] = np.log2(dic_pfam[pfampos][mut_type] + 1)*2
 
+# Define a dictionary to store the pfam positions and PTM information
+# dic_pfam2psite -> {pfampos: {ptmsite: num}}
+dic_pfam2ptmsite = {}
+mycursor.execute("SELECT ptmtype, pfampos FROM ptms\
+                where pfampos!='%s'" % ('-', ))
+hits = mycursor.fetchall()
+for hit in hits:
+    ptmtype, pfampos = hit
+    pfampos = int(pfampos)
+    if pfampos not in dic_pfam2ptmsite:
+        dic_pfam2ptmsite[pfampos] = {}
+    if ptmtype not in dic_pfam2ptmsite[pfampos]:
+        dic_pfam2ptmsite[pfampos][ptmtype] = 0
+    dic_pfam2ptmsite[pfampos][ptmtype] += 1
+
+def generate_shades_of_cyan(number):
+    number = int(number)
+    number_log2 = np.log2(number)
+    number_log2 = int(number_log2)
+    # number = number / 10
+    # if number < 1 or number > 10:
+    #     raise ValueError("Number must be between 1 and 10.")
+
+    # Determine the step size to create shades
+    step = 255 // 10
+
+    # Calculate the RGB values for the given number
+    red = 0
+    green = 255 - (number_log2 * step)
+    blue = 255
+
+    # print (red, green, blue)
+
+    # Convert RGB values to hexadecimal color code
+    hex_color = f"#{red:02x}{green:02x}{blue:02x}"
+    return hex_color
+
+dic_ptm_colors = {}
+for pfampos in dic_pfam2ptmsite:
+    for ptmtype in dic_pfam2ptmsite[pfampos]:
+        if dic_pfam2ptmsite[pfampos][ptmtype] >= 20:
+            print (pfampos, ptmtype, dic_pfam2ptmsite[pfampos][ptmtype])
+            dic_ptm_colors[pfampos] = generate_shades_of_cyan(dic_pfam2ptmsite[pfampos][ptmtype])
+
+print (dic_ptm_colors)
+# sys.exit()
+
 def make_fractions(mut_dic, total):
     total_log2 = np.log2(total + 1)*2
     for mut_type in mut_dic:
@@ -124,18 +180,24 @@ loss = []
 dec = []
 resistance = []
 neutral = []
+ptm = []
 all_var = []
+# Now we construct the dataframe. But before that we save the data in lists
+# so that we can sort them according to the order in which the regions appear
+# in the file. We will create lists for the following:
+# name, value, group, order, const_act, inc, loss, dec, resistance, neutral, all_var
+
 # for pfampos in dic_pfam:
-for pfampos in range(1, 825):
+for pfampos in range(1, 882):
     total = 0
+    # Calculate the total number of mutations at that pfam position
     if pfampos in dic_pfam:
         for mut_type in dic_pfam[pfampos]:
             total += dic_pfam[pfampos][mut_type]
-    else:
-        dic_pfam[pfampos] = {'constitutive-activation':0, 'increase':0, 'loss':0, 'decrease':0, 'resistance':0, 'neutral': 0}
-    if total >= 0:
-        if total!=0: total_log2 = make_fractions(dic_pfam[pfampos], total)
-        else: total_log2 = 0
+    # else:
+    #     dic_pfam[pfampos] = {'constitutive-activation':0, 'increase':0, 'loss':0, 'decrease':0, 'resistance':0, 'neutral': 0}
+    if total > 0:
+        total_log2 = make_fractions(dic_pfam[pfampos], total)
         num += 1
         for region in dic_region:
             if dic_region[region][0] <= int(pfampos) <= dic_region[region][1]:
@@ -152,6 +214,7 @@ for pfampos in range(1, 825):
                 dec.append(dic_pfam[pfampos]['decrease'])
                 resistance.append(dic_pfam[pfampos]['resistance'])
                 neutral.append(dic_pfam[pfampos]['neutral'])
+                ptm.append(1)
                 all_var.append(total_log2)
                 break
         print (pfampos, dic_pfam[pfampos])
@@ -162,6 +225,7 @@ print (num)
 # unique_pfam = list(set(unique_pfam))
 # print (unique_pfam)
 
+# Now we create the dataframe
 df = pd.DataFrame({
     "name": name,
     "value": value,
@@ -171,6 +235,7 @@ df = pd.DataFrame({
     "decrease": dec,
     "resistance": resistance,
     "neutral": neutral,
+    "ptm": ptm,
     'all_var': all_var,
     "group": group,
     "order": order
@@ -240,8 +305,9 @@ COLORS = [f"C{i}" for i, size in enumerate(GROUPS_SIZE) for _ in range(size)]
 COLORS = ['red' for i in range(0, len(VALUES))]
 
 # for i in range(0, 2):
-for col, arr in zip(['green', 'lightgreen', 'red', 'coral', 'blue', 'yellow'],
+for col, arr in zip(['-', 'green', 'lightgreen', 'red', 'coral', 'blue', 'yellow'],
                     [
+                    df["ptm"].values,
                     df["constitutive-activation"].values,
                     df["increase"].values,
                     df["loss"].values,
@@ -249,7 +315,10 @@ for col, arr in zip(['green', 'lightgreen', 'red', 'coral', 'blue', 'yellow'],
                     df["resistance"].values,
                     df["neutral"].values
                     ]):
-    COLORS = [col for i in range(0, len(VALUES))]
+    if col == '-':
+        COLORS = [dic_ptm_colors[pfampos] if pfampos in dic_ptm_colors else 'white' for pfampos in df['name'].values]
+    else:
+        COLORS = [col for i in range(0, len(VALUES))]
     ax.bar(
         ANGLES[IDXS], arr, width=WIDTH, color=COLORS, 
         edgecolor="white", linewidth=2, bottom=bottom
@@ -290,6 +359,6 @@ for group, size in zip(GROUP_NAMES, GROUPS_SIZE):
 
 # plt.show()
 plt.savefig('circular_bar_plot.png', format='png', dpi=400)
-plt.savefig('circular_bar_plot.svg', format='svg', dpi=400)
+# plt.savefig('circular_bar_plot.svg', format='svg', dpi=400)
 # plt.savefig('circular_bar_plot_all_positions.png', format='png', dpi=400)
 # plt.savefig('circular_bar_plot_all_positions.svg', format='svg', dpi=400)
