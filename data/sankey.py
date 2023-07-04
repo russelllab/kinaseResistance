@@ -65,7 +65,7 @@ for mutation in mutations:
 
 print (dic_kd)
 # sys.exit()
-level1 = ['COSMIC', 'UniProt', 'Text Mining']
+level1 = ['COSMIC', 'UniProt', 'PubMed', 'UniProt+PubMed']
 level2 = ['Constitutive-activation', 'Increase', 'Loss', 'Decrease', 'Resistance']
 level3 = ['Upstream KD', 'KD', 'Downstream KD']
 levels = level1 + level2 + level3
@@ -84,21 +84,21 @@ fig = go.Figure(data=[go.Sankey(
       line = dict(color = "black", width = 0.5),
     #   label = ["A1", "A2", "B1", "B2", "C1", "C2"],
       label = levels,
-      x = [0.05, 0.05, 0.05,
+      x = [0.05, 0.05, 0.05, 0.05,
            0.5, 0.5, 0.5, 0.5, 0.5,
            1.0, 1.0, 1.0],
-      y = [1.1, 0.45, 0.98,
+      y = [1.1, 0.45, 1.0, 0.94,
            0.8, 0.95, 0.22, 0.57, 1.075,
            0.1, 0.6, 1.075],
-      color = ['gold', 'lightblue', 'grey',\
-                'green','lightgreen', 'red', 'lightcoral','cornflowerblue',\
+      color = ['gold', 'lightblue', 'grey', 'grey',
+                'green','lightgreen', 'red', 'lightcoral','cornflowerblue',
                 'grey', 'grey', 'grey']
     ),
     link = dict(
-      source = [0,    1,   1,   1,   1,  2,  3,  3,  3,  4,  4,  4,  5,   5,  5,   6,   6,  6,  7,  7], # indices correspond to labels, eg A1, A2, A1, B1, ...
-      target = [7,    3,   4,   5,   6,  3,  8,  9, 10,  8,  9, 10,  8,   9, 10,   8,   9, 10,  8,  9],
-      value =  [98, 129, 184, 499, 427, 38, 45, 99, 18, 43, 93, 48, 61, 404, 34, 120, 232, 75, 10, 86],
-      color = ['gold', 'lightblue', 'lightblue', 'lightblue', 'lightblue', 'silver', 'green', 'green', 'green'\
+      source = [0,    1,   1,   1,   1,  2,  3,  4,  4,  4,  5,  5,  5,  6,   6,  6,   7,   7,  7,  8,  8], # indices correspond to labels, eg A1, A2, A1, B1, ...
+      target = [8,    4,   5,   6,   7,  4,  4,  9, 10, 11,  9, 10, 11,  9,   10, 11,  9,  10, 11,  9, 10],
+      value =  [98, 129, 184, 499, 427, 38,  9, 45, 99, 18, 43, 93, 48, 61, 404, 34, 120, 232, 75, 10, 86],
+      color = ['gold', 'lightblue', 'lightblue', 'lightblue', 'lightblue', 'silver', 'silver', 'green', 'green', 'green'\
                ,'lightgreen', 'lightgreen', 'lightgreen', 'red', 'red', 'red'\
                 ,'lightcoral','lightcoral','lightcoral'\
                 ,'cornflowerblue','cornflowerblue','cornflowerblue'\
