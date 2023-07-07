@@ -1,4 +1,3 @@
-
 import os
 import re
 import sys
@@ -44,7 +43,7 @@ def get_list_of_kinases(path):
     predictions.
     """
     kinases = []
-    for file in glob.glob(path+"*"):
+    for file in glob.glob(path + "*"):
         accession = file.split("/")[-1].split(".")[0]
         kinases.append(accession)
     return kinases
@@ -54,13 +53,15 @@ def get_cosmic_counts_new(file, file2, kinases):
     mismatches = []
     for row in csv.reader(open(file2, "rt"), delimiter="\t"):
         mismatches.append(row[0])
+
     mech_counts_all = {}
     for row in csv.reader(gzip.open(file, "rt"), delimiter="\t"):
         acc = row[0].split("/")[0]
         ensp = row[1]
         if acc in kinases and ensp not in mismatches:
-            mech_counts_all[row[0]] = int(row[3])
+            mech_counts_all[row[0]] = int(row[4])
     return mech_counts_all
+
 
 def get_cosmic_counts(paths, kinases, new=False):
     """
@@ -111,7 +112,7 @@ def parse_cosmic_mutations(path, kinases, uni_seqs, mech_samples=None):
     :param kinases: list of UniProt accessions of kinases
     :param uni_seqs: dictionary of UniProt sequences
     :param mech_samples: dictionary of COSMIC mutation counts
-    """   
+    """
     if mech_samples is None:
         mech_samples = defaultdict(set)
 
@@ -139,11 +140,11 @@ def parse_cosmic_mutations(path, kinases, uni_seqs, mech_samples=None):
                 status = t[29]
 
         if (uni_ac in kinases
-        and status in ["Confirmed somatic variant", "Reported in another cancer sample as somatic"]
-        and change == "Substitution - Missense"
-        and mech != "ERROR"):
+                and status in ["Confirmed somatic variant", "Reported in another cancer sample as somatic"]
+                and change == "Substitution - Missense"
+                and mech != "ERROR"):
             wt, pos = re.search("(\w)(\d+)\w", mech.split("/")[1]).group(1, 2)
-            if wt == uni_seqs[uni_ac][int(pos)-1]:
+            if wt == uni_seqs[uni_ac][int(pos) - 1]:
                 mech_samples[mech].add(sample_id)
 
     return mech_samples
@@ -171,11 +172,11 @@ def parse_cosmic_census(census_file):
     :param census_file: path to COSMIC cancer gene census file
     """
     df = pd.read_csv(census_file, sep=",", quotechar='"')
-
+    df["Role in Cancer"] = df["Role in Cancer"].fillna("inconclusive")
     return df
 
 
-def merge_cosmic_MLoutput(ml_output_file, cosmic_ml_output_file, cosmic_counts, 
+def merge_cosmic_MLoutput(ml_output_file, cosmic_ml_output_file, cosmic_counts,
                           census):
     """
     Merge ML predictions with COSMIC mutation counts and cancer gene status.
@@ -190,12 +191,12 @@ def merge_cosmic_MLoutput(ml_output_file, cosmic_ml_output_file, cosmic_counts,
         if line[0] == "#":
             continue
         line = line.strip().replace("C-term Kinase-domain", "C-term-Kinase-domain")
-        t = [x.replace(" ","") for x in line.split()]
-        
+        t = [x.replace(" ", "") for x in line.split()]
+
         if "UserInput" in line:
-            header = "\t".join(t+["Cosmic", "GeneRole"])
+            header = "\t".join(t + ["Cosmic", "GeneRole"])
             continue
-        
+
         mech = t[0]
         gene = t[2]
         role = "NA"
@@ -203,28 +204,28 @@ def merge_cosmic_MLoutput(ml_output_file, cosmic_ml_output_file, cosmic_counts,
             role = census.loc[census["Gene Symbol"] == gene, "Role in Cancer"].values[0]
         if t[-1] != "NA":
             if mech in cosmic_counts:
-                to_print[ "\t".join( t+[str(cosmic_counts[mech])]+[str(role)] ) ] = cosmic_counts[mech]
+                to_print["\t".join(t + [str(cosmic_counts[mech])] + [str(role)])] = cosmic_counts[mech]
 
     with gzip.open(cosmic_ml_output_file, "wt") as f:
         f.write(f"{header}\n")
         for row in sorted(to_print, key=to_print.get, reverse=True):
-            f.write(row+"\n")
+            f.write(row + "\n")
 
 
 if __name__ == '__main__':
     file_path = get_data_paths()
     kinase_list = get_list_of_kinases(file_path["ml_output_dir"])
 
-    cosmic_counts_all = get_cosmic_counts_new(file_path["cosmic_v98_counts"], 
-                          file_path["cosmic_v98_miss"],
-                          kinase_list)
+    cosmic_counts_all = get_cosmic_counts_new(file_path["cosmic_v98_counts"],
+                                              file_path["cosmic_v98_miss"],
+                                              kinase_list)
     # cosmic_counts_all, cosmic_counts_gws = get_cosmic_counts(file_path, 
     #                                                         kinase_list, new=True)
     census = parse_cosmic_census(file_path["cosmic_census"])
 
-    rerun = False
-    if os.path.isfile(file_path["ml_output_file"]) and rerun == True:
-        merge_cosmic_MLoutput(file_path["ml_output_file"], file_path["cosmic_ml_all"], 
+    rerun = True
+    if os.path.isfile(file_path["ml_output_file"]) and rerun is True:
+        merge_cosmic_MLoutput(file_path["ml_output_file"], file_path["cosmic_ml_all"],
                               cosmic_counts_all, census)
         # merge_cosmic_MLoutput(file_path["ml_output_file"], file_path["cosmic_ml_gws"], 
         #                       cosmic_counts_gws, census)
