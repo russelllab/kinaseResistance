@@ -911,13 +911,20 @@ def fetch_pfam_domains():
                 dic_kinase[acc] = runHmmsearch(acc, path2fasta)
     return dic_kinase
 
+def fetch_pfam_domain_id2name():
+    dic = {}
+    for line in gzip.open('../pfam/Pfam-A.clans.tsv.gz', 'rt'):
+        if line.startswith('#'): continue
+        dic[line.split('\t')[0]] = line.split('\t')[-1].rstrip().replace(' ', '_')
+    return dic
+
 def create_kinases_table(mycursor)->None:
     '''Function to create the kinases table'''
     mycursor.execute("DROP TABLE IF EXISTS kinases CASCADE")
     mycursor.execute("CREATE TABLE kinases (\
                      acc VARCHAR(10) PRIMARY KEY, \
                      gene VARCHAR(10), uniprot_id VARCHAR(25), \
-                     pfam_domain VARCHAR(50), protein_name VARCHAR(100), \
+                     pfam_domain VARCHAR(100), protein_name VARCHAR(100), \
                      fasta TEXT) \
                      ")
                     #  UNIQUE(acc, gene, uniprot_id, fasta))\
@@ -945,6 +952,7 @@ def create_kinases_table(mycursor)->None:
         else:
             kinases[name] += line.rstrip()
 
+    pfam_domain_id2name = fetch_pfam_domain_id2name()
     pfam_domains = fetch_pfam_domains()
     mappings = fetch_mappings_dic()
     # map_fasta2aln = fetch_map_fasta2aln()
@@ -959,7 +967,13 @@ def create_kinases_table(mycursor)->None:
         gene = kinase.split('|')[2]
         protein_name = kinase.split('|')[3]
         fasta = str(kinases[kinase])
-        pfam_domain = ';'.join(pfam_domains[acc])
+        pfam_domain = []
+        for dom in pfam_domains[acc]:
+            if '.' in dom: dom = dom.split('.')[0]
+            if dom == '-': pfam_domain.append('-')
+            else: pfam_domain.append(pfam_domain_id2name[dom])
+        # pfam_domain = ';'.join(pfam_domains[acc])
+        pfam_domain = ';'.join(pfam_domain)
         # print (acc, pfam_domain)
         # print (acc, gene, uniprot_id, fasta)
         mycursor.execute("INSERT INTO kinases (acc, gene, uniprot_id, pfam_domain, protein_name, fasta) \

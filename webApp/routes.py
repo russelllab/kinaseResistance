@@ -39,7 +39,7 @@ import fetchData
 
 create_svg_path = '/Create_SVG/Enhancements_May2023/27June/'
 sys.path.insert(1, BASE_DIR+create_svg_path)
-import create_svg_20230627_kinases_GS as create_svg
+import create_svg_20230706_kinases_GS as create_svg
 conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_Jun-28-2023.txt'
 identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_Jun-28-2023.txt'
 
@@ -598,7 +598,7 @@ def configureRoutes(app):
 			activating_AIvLD_prob = 0.0
 			deactivating_AIvLD_prob = 0.0
 		else:
-			deactivating_AIvLD_prob = 1.0 - float(activating_AIvLD_prob)
+			deactivating_AIvLD_prob = round(1.0 - float(activating_AIvLD_prob), 3)
 		# else:
 		# 	activating_AIvLD_prob = float(activating_AIvLD_prob)
 		# 	deactivating_AIvLD_prob = 1.0 - activating_AIvLD_prob

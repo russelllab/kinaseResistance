@@ -298,17 +298,21 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     for line in tqdm(file_contents):
         # count += 1
         # print (threading.active_count())
+        '''
         while (threading.active_count() >= numThreads):
             continue
         thread = threading.Thread(target=prepare_input_row,
                                   args=(line, kinases, entries_not_found, data, dic_region, mydb))
         thread.start()
         threads.append(thread)
+        '''
+        prepare_input_row(line, kinases, entries_not_found, data, dic_region, mydb)
 
     # Wait for all threads to finish
+    '''
     for thread in threads:
         thread.join()
-
+    '''
     # save entries not found in the results dic
     results ['entries_not_found'] = entries_not_found
     
