@@ -301,122 +301,134 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     ## Best model hyper-parameters
     print ('Best model:', model.best_params_)
     # print (model.predict_proba(X))
+    text = ''
     for y_pred, y_true in zip(model.predict_proba(X), y):
-        open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
+        text += str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_pred[2]) + '\t' + str(y_true) + '\n'
+    open(name+'_roc.txt', 'w').write(text)
     # sys.exit()
-    '''
-    tprs = []
-    aucs = []
-    mean_fpr = np.linspace(0, 1, 100)
-    fig, ax = plt.subplots(figsize=(6, 6))
+    
+    for index_num, positive in enumerate(['D', 'A']):
+        tprs = []
+        aucs = []
+        mean_fpr = np.linspace(0, 1, 100)
+        fig, ax = plt.subplots(figsize=(6, 6))
 
-    AUC= []; MCC= []; F1=[]; PRE=[]; REC=[]; SPE=[]
-    for i in range(0,10):
-        skf = StratifiedKFold(n_splits=N_SPLITS, shuffle=True)
-        rskf = RepeatedStratifiedKFold(n_splits=N_SPLITS, n_repeats=N_REPEATS)
-        auc_itr = []; mcc_itr= []; f1_itr=[]; pre_itr=[]; rec_itr=[]; spe_itr=[]
-        for fold, (train_index, test_index) in enumerate(skf.split(X, y)):
-            X_train, X_validation = X[train_index], X[test_index]
-            y_train, y_validation = y[train_index], y[test_index]
-            if ALGO == 'LR':
-                clf = LogisticRegression(
-                            class_weight='balanced',
-                            max_iter=model.best_params_['max_iter'],
-                            solver=model.best_params_['solver'],
-                            C=model.best_params_['C'],
-                            penalty=model.best_params_['penalty']
-                            )
-            elif ALGO == 'XGB':
-                clf = xgb.XGBClassifier(
-                    # n_estimators=model.best_params_['n_estimators'],
-                    # learning_rate=model.best_params_['learning_rate'],
-                    # min_samples_leaf=model.best_params_['min_samples_leaf'],
-                    max_depth=model.best_params_['max_depth'],
-                    objective=model.best_params_['objective'],
-                    # min_samples_split=model.best_params_['min_samples_split'],
-                    # max_features=model.best_params_['max_features'],
-                    random_state=RANDOM_STATE,
-                    scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0)
-                    )
-            elif ALGO == 'RF':
-                clf = RandomForestClassifier(
-                    n_estimators=model.best_params_['n_estimators'],
-                    min_samples_leaf=model.best_params_['min_samples_leaf'],
-                    max_depth=model.best_params_['max_depth'],
-                    min_samples_split=model.best_params_['min_samples_split'],
-                    max_features=model.best_params_['max_features'],
-                    random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
-                    )
-            clf.fit(X_train, y_train)
-            tn, fp, fn, tp = confusion_matrix(y_train, clf.predict(X_train)).ravel()
-            #print (tn, fp, fn, tp)
-            auc_itr.append(roc_auc_score(y_validation, clf.predict_proba(X_validation)[:,1]))
-            mcc_itr.append(matthews_corrcoef(y_validation, clf.predict(X_validation)))
-            f1_itr.append(f1_score(y_validation, clf.predict(X_validation)))
-            pre_itr.append(precision_score(y_validation, clf.predict(X_validation)))
-            rec_itr.append(recall_score(y_validation, clf.predict(X_validation)))
-            spe_itr.append(recall_score(y_validation, clf.predict(X_validation), pos_label=0))
-            if i == 5:
-                viz = RocCurveDisplay.from_estimator(
-                                                    clf,
-                                                    X_validation,
-                                                    y_validation,
-                                                    name=f"ROC fold {fold}",
-                                                    alpha=0.3,
-                                                    lw=1,
-                                                    ax=ax,
-                                                )
-                interp_tpr = np.interp(mean_fpr, viz.fpr, viz.tpr)
-                interp_tpr[0] = 0.0
-                tprs.append(interp_tpr)
-                aucs.append(viz.roc_auc)
-        AUC.append(np.mean(auc_itr))
-        # print (np.mean(auc_itr), auc_itr)
-        MCC.append(np.mean(mcc_itr))
-        F1.append(np.mean(f1_itr))
-        PRE.append(np.mean(pre_itr))
-        SPE.append(np.mean(spe_itr))
-        REC.append(np.mean(rec_itr))
+        AUC= []; MCC= []; F1=[]; PRE=[]; REC=[]; SPE=[]
+        for i in range(0,10):
+            skf = StratifiedKFold(n_splits=N_SPLITS, shuffle=True)
+            rskf = RepeatedStratifiedKFold(n_splits=N_SPLITS, n_repeats=N_REPEATS)
+            auc_itr = []; mcc_itr= []; f1_itr=[]; pre_itr=[]; rec_itr=[]; spe_itr=[]
+            for fold, (train_index, test_index) in enumerate(skf.split(X, y)):
+                X_train, X_validation = X[train_index], X[test_index]
+                y_train, y_validation = y[train_index], y[test_index]
+                if ALGO == 'LR':
+                    clf = LogisticRegression(
+                                class_weight='balanced',
+                                max_iter=model.best_params_['max_iter'],
+                                solver=model.best_params_['solver'],
+                                C=model.best_params_['C'],
+                                penalty=model.best_params_['penalty']
+                                )
+                elif ALGO == 'XGB':
+                    clf = xgb.XGBClassifier(
+                        # n_estimators=model.best_params_['n_estimators'],
+                        # learning_rate=model.best_params_['learning_rate'],
+                        # min_samples_leaf=model.best_params_['min_samples_leaf'],
+                        max_depth=model.best_params_['max_depth'],
+                        objective=model.best_params_['objective'],
+                        # min_samples_split=model.best_params_['min_samples_split'],
+                        # max_features=model.best_params_['max_features'],
+                        random_state=RANDOM_STATE,
+                        scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0)
+                        )
+                elif ALGO == 'RF':
+                    clf = RandomForestClassifier(
+                        n_estimators=model.best_params_['n_estimators'],
+                        min_samples_leaf=model.best_params_['min_samples_leaf'],
+                        max_depth=model.best_params_['max_depth'],
+                        min_samples_split=model.best_params_['min_samples_split'],
+                        max_features=model.best_params_['max_features'],
+                        random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
+                        )
+                clf.fit(X_train, y_train)
+                # tn, fp, fn, tp = confusion_matrix(y_train, clf.predict(X_train)).ravel()
+                #print (tn, fp, fn, tp)
+                auc_itr.append(roc_auc_score(y_validation, clf.predict_proba(X_validation), multi_class='ovr', average='weighted'))
+                # mcc_itr.append(matthews_corrcoef(y_validation, clf.predict(X_validation)))
+                # f1_itr.append(f1_score(y_validation, clf.predict(X_validation)))
+                # pre_itr.append(precision_score(y_validation, clf.predict(X_validation)))
+                # rec_itr.append(recall_score(y_validation, clf.predict(X_validation)))
+                # spe_itr.append(recall_score(y_validation, clf.predict(X_validation), pos_label=0))
+                if i == 5:
+                    # print (y_validation)
+                    y_validation_temp = []
+                    for y_known in y_validation:
+                        if y_known == index_num+1:
+                            y_validation_temp.append(1)
+                        else:
+                            y_validation_temp.append(0)
+                    viz = RocCurveDisplay.from_predictions(
+                                                        # clf,
+                                                        # X_validation,
+                                                        y_validation_temp,
+                                                        clf.predict_proba(X_validation)[:, index_num+1],
+                                                        name=f"ROC fold {fold}",
+                                                        alpha=0.3,
+                                                        lw=1,
+                                                        ax=ax,
+                                                    )
+                    interp_tpr = np.interp(mean_fpr, viz.fpr, viz.tpr)
+                    interp_tpr[0] = 0.0
+                    tprs.append(interp_tpr)
+                    aucs.append(viz.roc_auc)
+            AUC.append(np.mean(auc_itr))
+            # print (np.mean(auc_itr), auc_itr)
+            # MCC.append(np.mean(mcc_itr))
+            # F1.append(np.mean(f1_itr))
+            # PRE.append(np.mean(pre_itr))
+            # SPE.append(np.mean(spe_itr))
+            # REC.append(np.mean(rec_itr))
 
+        #####################################################
+        ax.plot([0, 1], [0, 1], "k--", label="random (AUC = 0.5)")
+        mean_tpr = np.mean(tprs, axis=0)
+        mean_tpr[-1] = 1.0
+        mean_auc = auc(mean_fpr, mean_tpr)
+        std_auc = np.std(aucs)
+        ax.plot(
+            mean_fpr,
+            mean_tpr,
+            color="b",
+            label=r"Mean ROC (AUC = %0.2f $\pm$ %0.2f)" % (mean_auc, std_auc),
+            lw=2,
+            alpha=0.8,
+        )
+
+        std_tpr = np.std(tprs, axis=0)
+        tprs_upper = np.minimum(mean_tpr + std_tpr, 1)
+        tprs_lower = np.maximum(mean_tpr - std_tpr, 0)
+        ax.fill_between(
+            mean_fpr,
+            tprs_lower,
+            tprs_upper,
+            color="grey",
+            alpha=0.2,
+            label=r"$\pm$ 1 std. dev.",
+        )
+
+        ax.set(
+            xlim=[-0.05, 1.05],
+            ylim=[-0.05, 1.05],
+            xlabel="False Positive Rate",
+            ylabel="True Positive Rate",
+            title=f"Mean ROC curve with variability of {N_SPLITS} folds in {positive} vs rest",
+        )
+        ax.axis("square")
+        ax.legend(loc="lower right")
+        plt.grid(linewidth=0.5)
+        plt.savefig(name+'_'+positive+'_roc.svg', format='svg', dpi=1000)
     #####################################################
-    ax.plot([0, 1], [0, 1], "k--", label="random (AUC = 0.5)")
-    mean_tpr = np.mean(tprs, axis=0)
-    mean_tpr[-1] = 1.0
-    mean_auc = auc(mean_fpr, mean_tpr)
-    std_auc = np.std(aucs)
-    ax.plot(
-        mean_fpr,
-        mean_tpr,
-        color="b",
-        label=r"Mean ROC (AUC = %0.2f $\pm$ %0.2f)" % (mean_auc, std_auc),
-        lw=2,
-        alpha=0.8,
-    )
-
-    std_tpr = np.std(tprs, axis=0)
-    tprs_upper = np.minimum(mean_tpr + std_tpr, 1)
-    tprs_lower = np.maximum(mean_tpr - std_tpr, 0)
-    ax.fill_between(
-        mean_fpr,
-        tprs_lower,
-        tprs_upper,
-        color="grey",
-        alpha=0.2,
-        label=r"$\pm$ 1 std. dev.",
-    )
-
-    ax.set(
-        xlim=[-0.05, 1.05],
-        ylim=[-0.05, 1.05],
-        xlabel="False Positive Rate",
-        ylabel="True Positive Rate",
-        title=f"Mean ROC curve with variability of {N_SPLITS} folds in {name}",
-    )
-    ax.axis("square")
-    ax.legend(loc="lower right")
-    plt.grid(linewidth=0.5)
-    plt.savefig(name+'_roc.svg', format='svg', dpi=1000)
-    #####################################################
+    # sys.exit()
     
 
     # print (np.std(AUC))
@@ -429,7 +441,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
     print ('Number of act mutations in the train set:', np.count_nonzero(y))
     print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
-    '''
+    
     
     clf = RandomForestClassifier(
                 n_estimators=model.best_params_['n_estimators'],
@@ -463,16 +475,16 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         print (''.join(['#' for i in range(1,25)]))
         data = []
         for feature_name, importance in zip(feature_names, clf.feature_importances_):
-            if importance > 0.015:
-                # print (feature_name, importance)
-                row = []
-                row.append(feature_name)
-                row.append(importance)
-                data.append(row)
+            # print (feature_name, importance)
+            row = []
+            row.append(feature_name)
+            row.append(importance)
+            data.append(row)
 
         df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
         df_feature_importances = df_feature_importances.sort_values(by=['Importance'], ascending=False)
-        print (df_feature_importances)
+        # print (df_feature_importances)
+        df_feature_importances.to_csv('feature_imp_'+name+'.csv', index=False)
         
         # sns.set(font_scale = 0.6)
         # sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")

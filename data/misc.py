@@ -91,10 +91,12 @@ new_mut_types = []
 for mut_type in mut_types:
     new_mut_types.append(mut_type)
     new_mut_types.append(mut_type+' at p-sites')
+    new_mut_types.append(mut_type+' at p-sites to DE')
 mut_types = new_mut_types
 mut_types_colors = ['green', 'lightgreen', 'blue', 'lightcoral', 'red']
 new_mut_types_colors = []
 for mut_type_color in mut_types_colors:
+    new_mut_types_colors.append(mut_type_color)
     new_mut_types_colors.append(mut_type_color)
     new_mut_types_colors.append(mut_type_color)
 mut_types_colors = new_mut_types_colors
@@ -103,14 +105,16 @@ width = 0.5
 fig, ax = plt.subplots()
 hatches = []
 for mut_type in mut_types:
+    print (mut_type)
     # hatch='.....' if ' at p-sites' in mut_type else None
     if ' at p-sites to DE' in mut_type:
-        hatches.append('.....')
+        hatches.append('///.....')
     elif ' at p-sites' in mut_type:
-        # hatches.append('+++++')
-        hatches.append(None)
+        hatches.append('.....')
+        # hatches.append(None)
     else:
         hatches.append(None)
+print (hatches)
 for mut_type, mut_type_color, hatch in zip(mut_types, mut_types_colors, hatches):
     row = []
     for pfam_position in pfam_positions:
@@ -131,7 +135,7 @@ ax.set_title("Top 15 most mutated alignment positions")
 ax.set_xlim(0,8)
 # ax.legend(loc="upper right")
 plt.grid(linewidth=0.5, color='gray', linestyle='--')
-plt.show()
-# plt.savefig('most_mutated_pfam_positions.png', dpi=1000)
-# plt.savefig('most_mutated_pfam_positions.eps', dpi=1000)
-# plt.savefig('most_mutated_pfam_positions.svg', dpi=1000)
+# plt.show()
+plt.savefig('most_mutated_pfam_positions.png', dpi=1000)
+plt.savefig('most_mutated_pfam_positions.eps', dpi=1000)
+plt.savefig('most_mutated_pfam_positions.svg', dpi=1000)

@@ -113,7 +113,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         #   'Phosphomimic',
                         'ReversePhosphomimic',
                         #   'Acetylmimic',
-                          'ReverseAcetylmimic',
+                        'ReverseAcetylmimic',
                         #   'hmmScoreWT',
                         #   'hmmScoreMUT',
                         'hmmScoreDiff'
@@ -585,7 +585,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         print (''.join(['#' for i in range(1,25)]))
         data = []
         for feature_name, importance in zip(feature_names, clf.feature_importances_):
-            if importance > 0.015:
+            # if importance > 0.015:
+            if True:
                 # print (feature_name, importance)
                 row = []
                 row.append(feature_name)
@@ -594,7 +595,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
 
         df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
         df_feature_importances = df_feature_importances.sort_values(by=['Importance'], ascending=False)
-        print (df_feature_importances)
+        # print (df_feature_importances)
+        df_feature_importances.to_csv('feature_imp_'+name+'.csv', index=False)
         
         # sns.set(font_scale = 0.6)
         # sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")

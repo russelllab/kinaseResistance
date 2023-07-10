@@ -16,12 +16,13 @@ from sklearn.manifold import TSNE
 from sklearn.metrics import RocCurveDisplay
 
 fig, ax = plt.subplots(figsize=(6, 6))
-for files in ['ai_nld_roc.txt',
-              'ld_nai_roc.txt',
+for files in [
+            # 'ai_nld_roc.txt',
+            #   'ld_nai_roc.txt',
               'ai_ld_roc.txt',
-                'a_nl_roc.txt',
-                'l_na_roc.txt',
-                'a_l_roc.txt',
+                # 'a_nl_roc.txt',
+                # 'l_na_roc.txt',
+                # 'a_l_roc.txt',
                 'r_n_roc.txt',
                 '../data/polyphen2_roc.txt',
                 '../data/pmut_roc.txt'

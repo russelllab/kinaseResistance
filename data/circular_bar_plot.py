@@ -43,7 +43,7 @@ def add_labels(angles, values, labels, offset, ax):
             s=label, 
             ha=alignment, 
             va="center", 
-            size=18,
+            size=30,
             rotation=rotation, 
             rotation_mode="anchor"
         ) 
@@ -264,8 +264,8 @@ LABELS = df["name"].values
 NEW_LABELS = []
 for i in range(len(LABELS)):
     pfampos = LABELS[i]
-    NEW_LABELS += [str(dif_pfam2aa[pfampos]) + ' (' + str(pfampos) + ')']
-    # NEW_LABELS += [str(dif_pfam2aa[pfampos])]
+    # NEW_LABELS += [str(dif_pfam2aa[pfampos]) + ' (' + str(pfampos) + ')']
+    NEW_LABELS += [str(dif_pfam2aa[pfampos])]
     # print (LABELS[i], dif_pfam2aa[LABELS[i]])
     # NEW_LABELS += dif_pfam2aa[LABELS[i]]
 LABELS = NEW_LABELS
