@@ -11,7 +11,7 @@ conn = psycopg2.connect(database="kinase_project2",
 	password="hellokitty")
 
 cursor = conn.cursor()
-commander_farsight = "select gene, acc from kinases;"
+commander_farsight = "select gene, acc from kinases where pfam_domain!='-';"
 cursor.execute(commander_farsight)
 results = cursor.fetchall()
 
@@ -26,7 +26,8 @@ for result in results:
 	if result[1] not in genemapper:
 		genemapper[result[1]]=result[0]
 
-### 520 kinases
+#print(len(genemapper))
+### 505 kinases
 
 
 
