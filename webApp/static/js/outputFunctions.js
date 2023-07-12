@@ -59,26 +59,31 @@ function defineDataTable (tableID, uniqID)
             ajax: '/static/predictor/output/'+uniqID+'/output.json',
             // ajax: '/static/predictor/output/GPBXK/output.json',
             "createdRow": function( row, data, dataIndex ) {
-                            if (data.N == 'NA') {}
-                            
-                            else if ( data.N >= data.D && data.N >= data.A ) {
-                                $('td:eq(10)', row).css('background-color', '#F2E34C');
-                            }
-                            else if ( data.D >= data.N && data.D >= data.A ) {
-                                $('td:eq(11)', row).css('background-color', '#d55e00');
-                            }
-                            else if ( data.A >= data.D && data.A >= data.N ) {
-                                $('td:eq(12)', row).css('background-color', '#009e73');
-                            }
-                            if ( data.RvN >= 0.5 ) {
-                                $('td:eq(14)', row).css('background-color', '#0072b2');
-                            }
+                            // ActvDeact
                             if ( data.AIvLD >= 0.5 ) {
-                                $('td:eq(13)', row).css('background-color', '#009e73');
+                                $('td:eq(10)', row).css('background-color', '#009e73');
                             }
                             else if  ( data.AIvLD < 0.5 ) {
                                 $('td:eq(13)', row).css('background-color', '#d55e00');
                             }
+                            
+                            // NeutralvsDeactvsAct
+                            if (data.N == 'NA') {}
+                            else if ( data.N >= data.D && data.N >= data.A ) {
+                                $('td:eq(13)', row).css('background-color', '#F2E34C');
+                            }
+                            else if ( data.D >= data.N && data.D >= data.A ) {
+                                $('td:eq(12)', row).css('background-color', '#d55e00');
+                            }
+                            else if ( data.A >= data.D && data.A >= data.N ) {
+                                $('td:eq(11)', row).css('background-color', '#009e73');
+                            }
+
+                            // ResistantvsNeutral
+                            if ( data.RvN >= 0.5 ) {
+                                $('td:eq(14)', row).css('background-color', '#0072b2');
+                            }
+                            
                         },
             dom: 'Bfrtip',
             buttons: [
@@ -102,14 +107,14 @@ function defineDataTable (tableID, uniqID)
                     { data: 'region' },
                     { data: 'ptmType' },
                     { data: 'mutType' },
-                    { data: 'N' },
-                    { data: 'D' },
+                    { data: 'AIvLD' },
                     { data: 'A' },
+                    { data: 'D' },
+                    { data: 'N' },
                     // { data: 'AIvNLD' },
                     // { data: 'LDvNAI' },
                     // { data: 'AIvN' },
                     // { data: 'LDvN' },
-                    { data: 'AIvLD' },
                     { data: 'RvN' }
                     
                 ]
@@ -175,10 +180,10 @@ function makeTableHeadFoot()
                         'Region',
                         'PTM<br>type',
                         'Known<br>ADR',
-                        'Pred N',
-                        'Pred D',
-                        'Pred A',
                         'Pred<br>(A vs D)',
+                        'Pred A',
+                        'Pred D',
+                        'Pred N',
                         'Pred R'
                         ];
     
@@ -194,10 +199,10 @@ function makeTableHeadFoot()
                                 'Region of the mutation site<br>in the kinase canonical structure',
                                 'Known PTM at the position of the mutation',
                                 'Known Activating/Deactivating/Resistance mutation',
-                                'Predicted probability of Neutral',
-                                'Predicted probability of Deactivating',
-                                'Predicted probability of Activating',
                                 'Predicted probability of Activating(>=0.5) vs Deactivating(<0.5)',
+                                'Predicted probability of Activating',
+                                'Predicted probability of Deactivating',
+                                'Predicted probability of Neutral',
                                 'Predicted probability of Resistance',
                                 ];
     

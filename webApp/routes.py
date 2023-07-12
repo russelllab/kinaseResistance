@@ -32,7 +32,6 @@ else:
 	BASE_DIR = '../'
 	BASE_DIR = '/home/gurdeep/projects/kinaseResistance/'
 
-
 sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 import fetchData
