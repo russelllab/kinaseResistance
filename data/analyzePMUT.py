@@ -101,7 +101,7 @@ for mut_type in MUT_TYPES:
         print (y_true)
         print (y_pred)
 
-    for y_p, y_t in zip(y_prob, y_true):
+    for y_p, y_t in zip(y_prob, y_act_deact_or_neutral):
         text += str(y_p) + '\t' + str(y_t) + '\n'
 
 open('pmut_roc.txt', 'w').write(text)
