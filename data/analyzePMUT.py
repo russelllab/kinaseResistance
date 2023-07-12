@@ -67,10 +67,15 @@ for name in dic_mutations:
 
 gzip.open('pmut_output.tsv.gz', 'wt').write(pmut_output)
 
-MUT_TYPES = {'A': ['activating', 'increase'], 'D': ['decrease', 'loss'], 'T': ['activatingresistance', 'increaseresistance']}
+MUT_TYPES = {
+            'A': ['activating', 'increase'],
+            'D': ['decrease', 'loss'],
+            'T': ['activatingresistance', 'increaseresistance'],
+            'N': ['neutral']
+            }
 text = ''
 for mut_type in MUT_TYPES:
-    y_pred = []; y_true = []; y_prob=[]
+    y_pred = []; y_true = []; y_prob=[]; y_act_deact_or_neutral = []
     for mutation in dic_mutations:
         if dic_mutations[mutation].prediction is None: continue
         kinase_mut_type = dic_mutations[mutation].mut_type
@@ -81,6 +86,10 @@ for mut_type in MUT_TYPES:
         else:
             y_pred.append(0)
         y_prob.append(float(dic_mutations[mutation].prob))
+        if kinase_mut_type in MUT_TYPES['N']:
+            y_act_deact_or_neutral.append(0)
+        else:
+            y_act_deact_or_neutral.append(1)
         if kinase_mut_type in MUT_TYPES[mut_type]:
             y_true.append(1)
         else:
