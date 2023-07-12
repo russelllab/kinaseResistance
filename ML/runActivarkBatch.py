@@ -32,7 +32,7 @@ for row in hits :
 
 def call_activark(acc):
     outputFile = 'outputs/'+acc+'.txt'
-    prepareTestData.predict(5000, 'inputs/'+acc+'.txt.gz', outputFile = outputFile)
+    prepareTestData.predict(30, 'inputs/'+acc+'.txt.gz', outputFile = outputFile)
 
 count = 0
 for acc in tqdm(kinases):
@@ -49,12 +49,12 @@ for acc in tqdm(kinases):
         #    break
     
     gzip.open('inputs/'+acc+'.txt.gz', 'wt').write(mutations)
-    call_activark(acc)
-    # thread = threading.Thread(target=call_activark, args=(acc,))
-    # thread.start()
+    # call_activark(acc)
+    thread = threading.Thread(target=call_activark, args=(acc,))
+    thread.start()
     # prepareTestData.predict('inputs/'+acc+'.txt')
     # if count == 5: break
-    # while threading.active_count() > 25:
-    #     pass
+    while threading.active_count() > 25:
+        pass
     
 mydb.close()
