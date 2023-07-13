@@ -18,6 +18,8 @@ class Mutation:
         self.mut_type = mut_type
         self.prediction = None
         self.prob = None
+    def show(self):
+        print (self.acc, self.pos, self.wtAA, self.mutAA, self.mut_type, self.prediction, self.prob)
 
 mydb = fetchData.connection(db_name='kinase_project2')
 mydb.autocommit = True
