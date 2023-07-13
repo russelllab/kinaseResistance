@@ -404,8 +404,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     ## Best model hyper-parameters
     print ('Best model:', model.best_params_)
     # print (model.predict_proba(X))
+    text = ''
     for y_pred, y_true in zip(model.predict_proba(X), y):
-        open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
+        text += str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_true) + '\n'
+    open(name+'_roc.txt', 'w').write(text)
     # sys.exit()
     
     tprs = []

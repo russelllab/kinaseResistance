@@ -70,11 +70,13 @@ gzip.open('pmut_output.tsv.gz', 'wt').write(pmut_output)
 MUT_TYPES = {
             'A': ['activating', 'increase'],
             'D': ['decrease', 'loss'],
-            'T': ['activatingresistance', 'increaseresistance'],
+            'R': ['resistance'],
+            'T': ['activatingresistance'],
             'N': ['neutral']
             }
 text = ''
 for mut_type in MUT_TYPES:
+    names = []
     y_pred = []; y_true = []; y_prob=[]; y_act_deact_or_neutral = []
     for mutation in dic_mutations:
         if dic_mutations[mutation].prediction is None: continue
@@ -94,6 +96,7 @@ for mut_type in MUT_TYPES:
             y_true.append(1)
         else:
             y_true.append(0)
+        names.append(mutation)
     # print (f'MCC: {matthews_corrcoef(y_true, y_pred)}')
     print (mut_type, len(y_pred), f'REC: {recall_score(y_true, y_pred)}')
     # print (f'AUC: {roc_auc_score(y_true, y_pred)}')
@@ -101,8 +104,9 @@ for mut_type in MUT_TYPES:
         print (y_true)
         print (y_pred)
 
-    for y_p, y_t in zip(y_prob, y_act_deact_or_neutral):
-        text += str(y_p) + '\t' + str(y_t) + '\n'
+    for name, y_p, y_t in zip(names, y_prob, y_act_deact_or_neutral):
+        if 'V600E' in name: dic_mutations[name].show()
+        text += str(name) + '\t' + str(dic_mutations[name].mut_type) + '\t' + str(y_p) + '\t' + str(y_t) + '\n'
 
 open('pmut_roc.txt', 'w').write(text)
 # print (y_pred)
