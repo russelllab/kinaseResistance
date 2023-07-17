@@ -302,8 +302,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('Best model:', model.best_params_)
     # print (model.predict_proba(X))
     text = ''
-    for y_pred, y_true in zip(model.predict_proba(X), y):
-        text += str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_pred[2]) + '\t' + str(y_true) + '\n'
+    for variant,y_pred, y_true in zip(train_names, model.predict_proba(X), y):
+        text += str(variant) + '\t' + str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_pred[2]) + '\t' + str(y_true) + '\n'
+    for variant,y_pred, y_true in zip(test_names, model.predict_proba(X_test), y_test):
+        text += str(variant) + '\t' + str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_pred[2]) + '\t' + str(y_true) + '\n'
     open(name+'_roc.txt', 'w').write(text)
     # sys.exit()
     
