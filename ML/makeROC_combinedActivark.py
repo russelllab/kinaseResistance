@@ -42,8 +42,6 @@ for files in [
                 # 'l_na_roc.txt',
                 # 'a_l_roc.txt',
                 'RvN_roc.txt',
-                '../data/polyphen2_roc.txt',
-                '../data/pmut_roc.txt'
                 ]:
     if 'all_roc' in files:
         counter += 1
@@ -62,16 +60,6 @@ for files in [
             else:
                 y_true.append(0)
             # print (name)
-        elif 'polyphen2' in files or 'pmut' in files:
-            if line.split()[1] in [
-                                'activating',
-                                'increase',
-                                'loss',
-                                'decrease',
-                                'neutral'
-                                ]:
-                y_target.append(float(line.split()[2]))
-                y_true.append(int(line.split()[3].strip()))
         else:
             if str(line.split()[-1]) not in ['0', '1']: continue
             y_target.append(float(line.split()[2]))
@@ -80,6 +68,6 @@ for files in [
     make_curve(name, y_true, y_target, ax)
     
 plt.grid(True)
-plt.savefig('roc_all.png', dpi=1000)
-plt.savefig('roc_all.svg', dpi=1000)
+plt.savefig('roc_all_activark.png', dpi=1000)
+plt.savefig('roc_all_activark.svg', dpi=1000)
 # plt.show()

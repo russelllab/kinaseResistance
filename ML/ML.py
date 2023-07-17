@@ -405,8 +405,10 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('Best model:', model.best_params_)
     # print (model.predict_proba(X))
     text = ''
-    for y_pred, y_true in zip(model.predict_proba(X), y):
-        text += str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_true) + '\n'
+    for variant, y_pred, y_true in zip(train_names, model.predict_proba(X), y):
+        text += variant + '\t' + str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_true) + '\n'
+    for variant, y_pred, y_true in zip(test_names, model.predict_proba(X), y_test):
+        text += variant + '\t' + str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_true) + '\n'
     open(name+'_roc.txt', 'w').write(text)
     # sys.exit()
     
@@ -497,7 +499,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         lw=2,
         alpha=0.8,
     )
-
+    # plt.show()
+    # sys.exit()
     std_tpr = np.std(tprs, axis=0)
     tprs_upper = np.minimum(mean_tpr + std_tpr, 1)
     tprs_lower = np.maximum(mean_tpr - std_tpr, 0)
