@@ -1,4 +1,0 @@
-Set	Total_Vars	Total_Prots	KnownA_Vars	KnownA_%	KnownR_Vars	KnownR_%	KnownD_Vars	KnownD_%	KnownN_Vars	KnownN_%	PredA_Vars	PredA_%	PredD_Vars	PredD_%	PredR_Vars	PredR_%	PredN_Vars	PredN_%	PredNA_Vars	PredNA_%	PredND_Vars	PredND_%
-ALL	6290	502	333	5.29%	29	0.46%	975	15.5%	843	13.4%	1710	27.19%	1119	17.79%	1108	17.62%						
-MUTAGEN	1686	314	162	9.61%	2	0.12%	753	44.66%	0	0.0%	236	14.0%	0	0.0%	467	27.7%	106	6.29%	101	5.99%	5	0.3%
-VARIANT	4604	486	171	3.71%	27	0.59%	222	4.82%	843	18.31%	430	9.34%	0	0.0%	641	13.92%	769	16.7%	736	15.99%	33	0.72%
