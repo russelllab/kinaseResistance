@@ -134,4 +134,10 @@ dmypy.json
 .gitignore
 webApp/static/predictor/output/*
 kp2.sql
+
+# Cosmic folder
 cosmic/*backup*
+
+# Uniprot folder
+uniprot/disease_plot*
+uniprot/above_5/
