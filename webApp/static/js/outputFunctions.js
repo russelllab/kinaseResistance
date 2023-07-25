@@ -73,7 +73,15 @@ function defineDataTable (tableID, uniqID)
 
                             }
                             else if  ( data.verdictNDA.includes('Deactivating') ) {
-                                $('td:eq(6)', row).css('background-color', '#d55e00');
+                                if ( data.verdictNDA.includes('Low') ) {
+                                    $('td:eq(6)', row).css('background-color', '#FF5C5C');
+                                }
+                                else if ( data.verdictNDA.includes('Medium') ) {
+                                    $('td:eq(6)', row).css('background-color', '#FF2400');
+                                }
+                                else {
+                                    $('td:eq(6)', row).css('background-color', '#960018');
+                                }
                             }
 
                             // VerdictR
