@@ -61,33 +61,40 @@ function defineDataTable (tableID, uniqID)
             "createdRow": function( row, data, dataIndex ) {
                             // ActvDeact
                             if ( data.AIvLD >= 0.5 ) {
-                                $('td:eq(10)', row).css('background-color', '#009e73');
+                                $('td:eq(8)', row).css('background-color', '#009e73');
                             }
                             else if  ( data.AIvLD < 0.5 ) {
-                                $('td:eq(10)', row).css('background-color', '#d55e00');
+                                $('td:eq(8)', row).css('background-color', '#d55e00');
                             }
                             
                             // NeutralvsDeactvsAct
                             if (data.N == 'NA') {}
                             else if ( data.N >= data.D && data.N >= data.A ) {
-                                $('td:eq(13)', row).css('background-color', '#F2E34C');
+                                $('td:eq(11)', row).css('background-color', '#F2E34C');
                             }
                             else if ( data.D >= data.N && data.D >= data.A ) {
-                                $('td:eq(12)', row).css('background-color', '#d55e00');
+                                $('td:eq(10)', row).css('background-color', '#d55e00');
                             }
                             else if ( data.A >= data.D && data.A >= data.N ) {
-                                $('td:eq(11)', row).css('background-color', '#009e73');
+                                $('td:eq(9)', row).css('background-color', '#009e73');
                             }
 
                             // ResistantvsNeutral
                             if ( data.RvN >= 0.5 ) {
-                                $('td:eq(14)', row).css('background-color', '#0072b2');
+                                $('td:eq(12)', row).css('background-color', '#0072b2');
                             }
                             
                         },
             dom: 'Bfrtip',
             buttons: [
                 'copy', 'csv', 'excel', 'pdf', 'print', 'colvis'
+            ],
+            columnDefs: [
+                {
+                    targets: [4,6,8],
+                    visible: false,
+                    searchable: true
+                }
             ],
             columns: [
                     {
@@ -107,6 +114,7 @@ function defineDataTable (tableID, uniqID)
                     { data: 'region' },
                     { data: 'ptmType' },
                     { data: 'mutType' },
+                    { data: 'verdict' },
                     { data: 'AIvLD' },
                     { data: 'A' },
                     { data: 'D' },
@@ -180,6 +188,7 @@ function makeTableHeadFoot()
                         'Region',
                         'PTM<br>type',
                         'Known<br>ADR',
+                        'Verdict',
                         'Pred<br>(A vs D)',
                         'Pred A',
                         'Pred D',
@@ -199,6 +208,7 @@ function makeTableHeadFoot()
                                 'Region of the mutation site<br>in the kinase canonical structure',
                                 'Known PTM at the position of the mutation',
                                 'Known Activating/Deactivating/Resistance mutation',
+                                'Verdict of the mutation',
                                 'Predicted probability of Activating(>=0.5) vs Deactivating(<0.5)',
                                 'Predicted probability of Activating',
                                 'Predicted probability of Deactivating',

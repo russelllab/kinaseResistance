@@ -288,6 +288,29 @@ def resetDic(dic, alignment):
 	# print (new_dic)
 	return new_dic
 
+def final_verdict(AIvLD, A, D, N, RvN):
+	a = float(A)*0.6 + float(AIvLD)*0.4
+	d = float(D)*0.6 + (1-float(AIvLD))*0.4
+	n = float(N)*0.6
+	if n > 0.5:
+		verdict = '-'
+		return verdict
+	if a >= d:
+		prob = a
+		verdict = 'Activating'
+	else:
+		prob = d
+		verdict = 'Deactivating'
+	if 0 <= prob < 0.33:
+		verdict += ' (Low)'
+	elif 0.33 <= prob < 0.66:
+		verdict += ' (Medium)'
+	else:
+		verdict += ' (High)'
+	return verdict
+	
+
+
 def makeOutputJson(uniqID, results, mycursor) -> dict:
 	output = []
 	for name in results['predictions']:
@@ -333,6 +356,15 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['A'] = results['predictions'][name]['A']
 		dic['D'] = results['predictions'][name]['D']
 		dic['N'] = results['predictions'][name]['N']
+
+		# Verdict
+		dic['verdict'] = final_verdict(
+										dic['AIvLD'],
+				 						dic['A'],
+										dic['D'],
+										dic['N'],
+										dic['RvN']
+										)
 		
 		dic['hmmPos'] = results['predictions'][name]['hmmPos']
 		dic['alnPos'] = results['predictions'][name]['alnPos']
