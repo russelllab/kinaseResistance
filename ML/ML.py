@@ -228,7 +228,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     for row in df.to_numpy():
         # print (row)
         # if row[-1] in ['activating', 'increase']:
-        if row[-1] in ['neutral', 'loss', 'decrease']:
+        if row[-1] in ['neutral', 'loss', 'decrease', 'increase', 'activating']:
                 y_test.append(row[-1])
                 X_test.append(row[3:-1])
                 test_names.append('/'.join(row[:3]))
@@ -537,7 +537,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
     print ('Number of act mutations in the train set:', np.count_nonzero(y))
     print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
-    
+    # sys.exit()
     ## Fit the best model on the data
     if ALGO == 'LR':
         clf = LogisticRegression(
@@ -625,13 +625,17 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         # if test_type in ['activatingresistance', 'increaseresistance']:
         # if test_type in ['activatingresistance', 'increaseresistance', 'resistance']:
             X_sub_test = []; y_sub_test = []
+            final_test_names = []
             for test_name, p, q in zip(test_names, X_test, y_test):
                 if q != test_type: continue
                 X_sub_test.append(p)
                 y_sub_test.append(1)
+                final_test_names.append(test_name)
             X_sub_test = np.array(X_sub_test)
             # print (test_name, round(y_pred[1], 2), y_known)
             print (test_type, 'results', '(', len(X_sub_test), ')')
+            for final_test_name, y_known, y_pred in zip(final_test_names, y_sub_test, clf.predict_proba(X_sub_test)):
+                print (final_test_name, round(y_pred[1], 2), y_known)
             # print(roc_auc_score(y_sub_test, clf.predict_proba(X_sub_test)[:,1]))
             # print('MCC:', matthews_corrcoef(y_sub_test, clf.predict(X_sub_test)))
             # print('F1:', f1_score(y_sub_test, clf.predict(X_sub_test)))

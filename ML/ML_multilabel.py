@@ -443,7 +443,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
     print ('Number of act mutations in the train set:', np.count_nonzero(y))
     print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
-    
+    # sys.exit()
     
     clf = RandomForestClassifier(
                 n_estimators=model.best_params_['n_estimators'],

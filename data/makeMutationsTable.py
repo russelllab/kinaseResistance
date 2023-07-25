@@ -29,7 +29,7 @@ mycursor = mydb.cursor()
 # make mutations table
 mycursor.execute("SELECT * FROM mutations")
 mutations = mycursor.fetchall()
-text = 'UniProtAccession\tGeneName\tMutation\tWT\tPosition\tMUT\tAlignmentPosition\tMutationType\tDescription\tSource\n'
+text = 'UniProtAccession\tGeneName\tMutation\tWT\tPosition\tMUT\tAlignmentPosition\tMutationType\tDescription\tPubMedID\tSource\n'
 for mut_row in mutations:
     # print (len(mut_row))
     # print (mut_row)
@@ -43,10 +43,11 @@ for mut_row in mutations:
     text += str(pfampos) + '\t'
     text += mut_type + '\t'
     text += info + '\t'
+    text += pubmed.replace(',',';') + '\t'
     text += source + '\n'
 
 open('mutations_table.tsv', 'w').write(text)
-
+sys.exit()
 # make ptms table
 mycursor.execute("SELECT * FROM ptms")
 ptms = mycursor.fetchall()

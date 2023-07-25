@@ -64,7 +64,7 @@ function defineDataTable (tableID, uniqID)
                                 $('td:eq(10)', row).css('background-color', '#009e73');
                             }
                             else if  ( data.AIvLD < 0.5 ) {
-                                $('td:eq(13)', row).css('background-color', '#d55e00');
+                                $('td:eq(10)', row).css('background-color', '#d55e00');
                             }
                             
                             // NeutralvsDeactvsAct
