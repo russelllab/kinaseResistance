@@ -59,42 +59,57 @@ function defineDataTable (tableID, uniqID)
             ajax: '/static/predictor/output/'+uniqID+'/output.json',
             // ajax: '/static/predictor/output/GPBXK/output.json',
             "createdRow": function( row, data, dataIndex ) {
+                            // VerdictNDA
+                            if ( data.verdictNDA.includes('Activating') ) {
+                                if ( data.verdictNDA.includes('Low') ) {
+                                    $('td:eq(6)', row).css('background-color', '#90EE90');
+                                }
+                                else if ( data.verdictNDA.includes('Medium') ) {
+                                    $('td:eq(6)', row).css('background-color', '#32CD32');
+                                }
+                                else {
+                                    $('td:eq(6)', row).css('background-color', '#008000');
+                                }
+
+                            }
+                            else if  ( data.verdictNDA.includes('Deactivating') ) {
+                                $('td:eq(6)', row).css('background-color', '#d55e00');
+                            }
+
+                            // VerdictR
+                            if ( data.verdictR.includes('Resistance') ) {
+                                $('td:eq(7)', row).css('background-color', '#0072b2');
+                            }
+
                             // ActvDeact
                             if ( data.AIvLD >= 0.5 ) {
-                                $('td:eq(8)', row).css('background-color', '#009e73');
+                                $('td:eq(9)', row).css('background-color', '#009e73');
                             }
                             else if  ( data.AIvLD < 0.5 ) {
-                                $('td:eq(8)', row).css('background-color', '#d55e00');
+                                $('td:eq(9)', row).css('background-color', '#d55e00');
                             }
                             
                             // NeutralvsDeactvsAct
                             if (data.N == 'NA') {}
                             else if ( data.N >= data.D && data.N >= data.A ) {
-                                $('td:eq(11)', row).css('background-color', '#F2E34C');
+                                $('td:eq(12)', row).css('background-color', '#F2E34C');
                             }
                             else if ( data.D >= data.N && data.D >= data.A ) {
-                                $('td:eq(10)', row).css('background-color', '#d55e00');
+                                $('td:eq(11)', row).css('background-color', '#d55e00');
                             }
                             else if ( data.A >= data.D && data.A >= data.N ) {
-                                $('td:eq(9)', row).css('background-color', '#009e73');
+                                $('td:eq(10)', row).css('background-color', '#009e73');
                             }
 
                             // ResistantvsNeutral
                             if ( data.RvN >= 0.5 ) {
-                                $('td:eq(12)', row).css('background-color', '#0072b2');
+                                $('td:eq(13)', row).css('background-color', '#0072b2');
                             }
                             
                         },
             dom: 'Bfrtip',
             buttons: [
                 'copy', 'csv', 'excel', 'pdf', 'print', 'colvis'
-            ],
-            columnDefs: [
-                {
-                    targets: [4,6,8],
-                    visible: false,
-                    searchable: true
-                }
             ],
             columns: [
                     {
@@ -114,7 +129,8 @@ function defineDataTable (tableID, uniqID)
                     { data: 'region' },
                     { data: 'ptmType' },
                     { data: 'mutType' },
-                    { data: 'verdict' },
+                    { data: 'verdictNDA' },
+                    { data: 'verdictR' },
                     { data: 'AIvLD' },
                     { data: 'A' },
                     { data: 'D' },
@@ -125,7 +141,14 @@ function defineDataTable (tableID, uniqID)
                     // { data: 'LDvN' },
                     { data: 'RvN' }
                     
-                ]
+                ],
+            columnDefs: [
+                {
+                    targets: [2,4,6,8,12,13,14,15,16],
+                    visible: false,
+                    searchable: true
+                }
+            ],
             });
     
         $('#'+tableID+' tbody').on('click', 'td.dt-control', function () {
@@ -188,7 +211,8 @@ function makeTableHeadFoot()
                         'Region',
                         'PTM<br>type',
                         'Known<br>ADR',
-                        'Verdict',
+                        'Verdict<br>(Activating/Deactivating)',
+                        'Verdict<br>(Resistance)',
                         'Pred<br>(A vs D)',
                         'Pred A',
                         'Pred D',
@@ -208,7 +232,8 @@ function makeTableHeadFoot()
                                 'Region of the mutation site<br>in the kinase canonical structure',
                                 'Known PTM at the position of the mutation',
                                 'Known Activating/Deactivating/Resistance mutation',
-                                'Verdict of the mutation',
+                                'Verdict of the mutation (activating/deactivating/neutral)',
+                                'Verdict of the mutation (resistant)',
                                 'Predicted probability of Activating(>=0.5) vs Deactivating(<0.5)',
                                 'Predicted probability of Activating',
                                 'Predicted probability of Deactivating',

@@ -288,7 +288,10 @@ def resetDic(dic, alignment):
 	# print (new_dic)
 	return new_dic
 
-def final_verdict(AIvLD, A, D, N, RvN):
+def final_verdictNDA(AIvLD, A, D, N, RvN):
+	if AIvLD == 'NA\t':
+		verdict = '-'
+		return verdict
 	a = float(A)*0.6 + float(AIvLD)*0.4
 	d = float(D)*0.6 + (1-float(AIvLD))*0.4
 	n = float(N)*0.6
@@ -309,6 +312,15 @@ def final_verdict(AIvLD, A, D, N, RvN):
 		verdict += ' (High)'
 	return verdict
 	
+def final_verdictR(AIvLD, A, D, RvN):
+	if RvN == 'NA\t':
+		verdict = '-'
+		return verdict
+	if float(RvN) > 0.5 and float(D) <= 0.5:
+		verdict = 'Resistance'
+	else:
+		verdict = '-'
+	return verdict
 
 
 def makeOutputJson(uniqID, results, mycursor) -> dict:
@@ -358,11 +370,18 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['N'] = results['predictions'][name]['N']
 
 		# Verdict
-		dic['verdict'] = final_verdict(
+		dic['verdictNDA'] = final_verdictNDA(
 										dic['AIvLD'],
 				 						dic['A'],
 										dic['D'],
 										dic['N'],
+										dic['RvN']
+										)
+		
+		dic['verdictR'] = final_verdictR(
+										dic['AIvLD'],
+				 						dic['A'],
+										dic['D'],
 										dic['RvN']
 										)
 		
