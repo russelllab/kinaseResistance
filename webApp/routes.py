@@ -336,7 +336,12 @@ def final_verdictNDA(AIvLD, A, D, N, RvN):
 	elif verdictA == '-' and verdictD != '-':
 		verdict = verdictD
 	else:
-		verdict = 'Uncertain'
+		if float(AIvLD) >= 0.6:
+			verdict = verdictA
+		elif float(AIvLD) <= 0.4:
+			verdict = verdictD
+		else:
+			verdict = 'Uncertain'
 	
 	return verdict
 	
