@@ -219,7 +219,7 @@ function makeTableHeadFoot()
                         'Region',
                         'PTM<br>type',
                         'Known<br>ADR',
-                        'Verdict<br>(Activating/Deactivating)',
+                        'Verdict<br>(Activating/<br>Deactivating)',
                         'Verdict<br>(Resistance)',
                         'Pred<br>(A vs D)',
                         'Pred A',

@@ -290,8 +290,9 @@ def resetDic(dic, alignment):
 
 def final_verdictNDA(AIvLD, A, D, N, RvN):
 	if AIvLD == 'NA\t':
-		verdict = '-'
+		verdict = 'NA'
 		return verdict
+	'''
 	a = float(A)*0.6 + float(AIvLD)*0.4
 	d = float(D)*0.6 + (1-float(AIvLD))*0.4
 	n = float(N)*0.6
@@ -311,12 +312,39 @@ def final_verdictNDA(AIvLD, A, D, N, RvN):
 	else:
 		verdict += ' (High)'
 	return verdict
+	'''
+	verdictA = '-'
+	if float(AIvLD) >= 0.7 and float(A) > float(D) and float(A) > float(N):
+		verdictA = 'Activating (High)'
+	elif float(AIvLD) >= 0.5 and float(A) > float(D) and float(A) > float(N):
+		verdictA = 'Activating (Medium)'
+	elif float(AIvLD) >= 0.5 and float(N) > float(A) and float(A) > float(D):
+		verdictA = 'Activating (Low)'
+	
+	verdictD = '-'
+	if float(AIvLD) <= 0.3 and float(D) > float(A) and float(D) > float(N):
+		verdictD = 'Deactivating (High)'
+	elif float(AIvLD) < 0.5 and float(D) > float(A) and float(D) > float(N):
+		verdictD = 'Deactivating (Medium)'
+	elif float(AIvLD) < 0.5 and float(N) > float(D) and float(D) > float(A):
+		verdictD = 'Deactivating (Low)'
+	
+	if verdictA == '-' and verdictD == '-':
+		verdict = 'Uncertain'
+	elif verdictA != '-' and verdictD == '-':
+		verdict = verdictA
+	elif verdictA == '-' and verdictD != '-':
+		verdict = verdictD
+	else:
+		verdict = 'Uncertain'
+	
+	return verdict
 	
 def final_verdictR(AIvLD, A, D, RvN):
 	if RvN == 'NA\t':
 		verdict = '-'
 		return verdict
-	if float(RvN) > 0.5 and float(D) <= 0.5:
+	if float(RvN) > 0.5 and float(AIvLD) < 0.3:
 		verdict = 'Resistance'
 	else:
 		verdict = '-'
