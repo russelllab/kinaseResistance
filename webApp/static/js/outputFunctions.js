@@ -210,15 +210,15 @@ function makeTableHeadFoot()
     var table_contents = ['Info',
                         'View',
                         'Input',
-                        'Gene<br>name',
+                        'Gene',
                         'UniProt<br>accession',
-                        'Mutation',
+                        'Variant',
                         "Site<br>(+/-5 residues)",
                         // 'HMM<br>position',
                         // 'Alignment<br>position',
-                        'Region',
+                        'Kinase domain<br>region',
                         'PTM<br>type',
-                        'Known<br>ADR',
+                        'Known functional<br>cosequence',
                         'Verdict<br>(Activating/<br>Deactivating)',
                         'Verdict<br>(Resistance)',
                         'Pred<br>(A vs D)',
@@ -230,23 +230,23 @@ function makeTableHeadFoot()
     
     var table_contents_text = ['Known information about the input',
                                 'View individual results',
-                                'Input mutation',
-                                'Gene name',
+                                'Input',
+                                'Gene',
                                 'UniProt accession',
-                                'Mutation',
-                                'Adjacent residues to the mutation site',
+                                'Variant',
+                                'Adjacent residues to variant site',
                                 // 'hidden Markov Model position',
                                 // 'Alignment position',
-                                'Region of the mutation site<br>in the kinase canonical structure',
-                                'Known PTM at the position of the mutation',
-                                'Known Activating/Deactivating/Resistance mutation',
-                                'Verdict of the mutation (activating/deactivating/neutral)',
-                                'Verdict of the mutation (resistant)',
-                                'Predicted probability of Activating(>=0.5) vs Deactivating(<0.5)',
-                                'Predicted probability of Activating',
-                                'Predicted probability of Deactivating',
-                                'Predicted probability of Neutral',
-                                'Predicted probability of Resistance',
+                                'Location of the variant site in the canonical kinase domain',
+                                'Known PTMs at the variant site',
+                                'Known functional consequence of the variant',
+                                'Likelihood of the variant to be activating/deactivating',
+                                'Likelihood of the variant to be resistant',
+                                'Predicted probability of the variant to be activating(>=0.5) vs deactivating(<0.5)',
+                                'Predicted probability of the variant to be activating',
+                                'Predicted probability of the variant to be deactivating',
+                                'Predicted probability of the variant to be neutral',
+                                'Predicted probability of the variant to be resistance',
                                 ];
     
     var table_head_foot_id = ['table-head', 'table-foot'];
@@ -257,6 +257,7 @@ function makeTableHeadFoot()
       if (i == 0) {
         row.setAttribute("data-title", 'Header');
         row.setAttribute("data-intro", 'Description of the table columns.');
+        row.setAttribute("style", "text-align: center;");
       }
       
       // Create 3 cells in the row using a nested for loop
@@ -267,7 +268,8 @@ function makeTableHeadFoot()
         // const cellText = document.createTextNode(table_contents[j]);
 
         // cell.appendChild(cellText);
-        cell.innerHTML = table_contents[j] + '<br>';
+        // cell.innerHTML = table_contents[j] + '<br>';
+        cell.innerHTML = table_contents[j];
         cell.style = "white-space: nowrap";
 
         const but = document.createElement("span");
@@ -279,8 +281,8 @@ function makeTableHeadFoot()
         const icon = document.createElement("i");
         icon.setAttribute("class", "bi bi-info-circle");
         if ((i == 0) && (j == 0)) {
-            icon.setAttribute("data-title", 'Help');
-            icon.setAttribute("data-intro", 'Click the help buttons to know more.');
+            icon.setAttribute("data-title", 'Information');
+            icon.setAttribute("data-intro", 'Hover on these buttons to know more about the column.');
           }
 
         but.appendChild(icon);

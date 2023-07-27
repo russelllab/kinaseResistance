@@ -129,7 +129,7 @@ function makeSummaryTableHeadFoot()
       const row = document.createElement("tr");
       if (i == 0) {
         row.setAttribute("data-title", 'Header');
-        row.setAttribute("data-intro", 'Description of the table columns.');
+        row.setAttribute("data-intro", 'Table with the summary.');
       }
       
       // Create 3 cells in the row using a nested for loop
@@ -153,7 +153,7 @@ function makeSummaryTableHeadFoot()
         icon.setAttribute("class", "bi bi-info-circle");
         if ((i == 0) && (j == 0)) {
             icon.setAttribute("data-title", 'Help');
-            icon.setAttribute("data-intro", 'Click the help buttons to know more.');
+            icon.setAttribute("data-intro", 'Click these buttons to know more about the section.');
           }
 
         but.appendChild(icon);

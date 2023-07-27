@@ -1,1 +1,21 @@
-This panel displays the summary of the input mutation and prediction results.
+<p>
+This panel displays the summary of the input variant, predicted probabilities and known functional
+and PTM information in all kinases.
+</p>
+<p>
+<kbd>Predictions (Activating vs Deactivating)</kbd>: These predictions represent a typical situation 
+when one has what is believed to be a functional variant (e.g. observed many times in a cohort or dataset) 
+and wishes to distinguish these two possibilities.
+</p>
+<p>
+<kbd>Predictions (Activating vs Deactivating vs Neutral)</kbd>: These predictions are more 
+reflective of a situation where one does not know if a variant is functional at all 
+and thus one needs to predict neutrals.
+</p>
+<p>
+<kbd>Predictions (Resistance vs Not)</kbd>: This predicts if a given mutation is resistant or not.
+</p>
+<p>
+<kbd>Known functional and PTM information in all kinases</kbd>: Known functional and PTM information 
+of the variant site and adjacent positions (+/- 2 in the alignment) in other kinases.
+</p>

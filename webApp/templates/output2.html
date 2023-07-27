@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="{{url_for('static', filename='/js/outputFunctions.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/makeModals.js')}}"></script>
 	<script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src="{{url_for('static', filename='/js/showSummary.js')}}"></script>
@@ -29,6 +30,9 @@
 {% endblock %}
 
 {% block content %}
+	<script>
+		makeModals('Results')
+	</script>
 	<div class="container" style="padding-bottom: 100px;">
 		<div class="row" style="padding-top: 20px;">
 			<div class="alert alert-primary d-flex align-items-center alert-dismissible " role="alert">
@@ -57,8 +61,8 @@
 		
 		<div class="row">
 			<h3 class="headingFont" data-title="Results" data-intro="This page displays predicted results and known information">Summary of your input
-				<button type="button" class="btn btn-default btn-sm">
-					<i class="bi bi-info-circle" data-bs-toggle="modal" data-bs-target="#ResultsModal" onclick="makeModals('Results')"></i>
+				<button type="button" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#ResultsModal">
+					<i class="bi bi-question-circle-fill" data-title="Description of the page" data-intro="Click this to read the detailed descrition of the page"></i>
 				</button>
 			</h3>
 			<h5 class="headingFont2">

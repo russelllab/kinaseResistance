@@ -697,7 +697,7 @@ def configureRoutes(app):
 
 		results['predictions'][kinase+'/'+mutation]['activating'] = activating_prob
 		results['predictions'][kinase+'/'+mutation]['deactivating'] = deactivating_prob
-		results['predictions'][kinase+'/'+mutation]['neutral'] = neutral_prob
+		results['predictions'][kinase+'/'+mutation]['neutral'] = round(float(neutral_prob), 3)
 		results['predictions'][kinase+'/'+mutation]['resistance'] = resistance_prob
 		dic = {'activating': results['predictions'][kinase+'/'+mutation]['activating'],
 				'deactivating': results['predictions'][kinase+'/'+mutation]['deactivating'],
