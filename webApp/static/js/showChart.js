@@ -87,7 +87,7 @@ function showChart(uniqID, kinase, mutation, results)
             var data = [trace1];
             var layout = {
               // title: 'Effect of '+mutation+'<br>on '+kinase+' activity',
-              title: 'Prediction of N vs D vs A',
+              title: 'Prediction of A vs D vs N',
               yaxis: {
                 // autorange: true,
                 range: [0, 1.0],
