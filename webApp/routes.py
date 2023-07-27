@@ -349,7 +349,7 @@ def final_verdictR(AIvLD, A, D, RvN):
 	if RvN == 'NA\t':
 		verdict = '-'
 		return verdict
-	if float(RvN) > 0.5 and float(AIvLD) < 0.3:
+	if float(RvN) > 0.5 and float(AIvLD) > 0.3:
 		verdict = 'Resistance'
 	else:
 		verdict = '-'
