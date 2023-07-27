@@ -485,6 +485,13 @@ def configureRoutes(app):
 		Display the alignment page
 		'''
 		return render_template('alignment.html')
+	
+	@app.route('/about', methods=['GET', 'POST'])
+	def about():
+		''''
+		Display the about page
+		'''
+		return render_template('about.html')
 
 	@app.route('/output/<string:uniqID>', methods=['GET', 'POST'])
 	def output(uniqID: str):
@@ -540,7 +547,7 @@ def configureRoutes(app):
 		with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/ignored.json', 'w') as f:
 			json.dump(ignored, f)
 		if len(results['predictions']) == 0:
-			text = 'Unfortunately, none of the mutations you submitted were found in the database.<br>Please check the input and try again.'
+			text = 'None of the variants could not be processed.<br>Please check your input and try again.'
 			return render_template('ignored2.html',
 								uniqID=json.dumps(uniqID),
 								text=json.dumps(text),
@@ -639,9 +646,9 @@ def configureRoutes(app):
 				ignored = json.load(f)
 			
 			if len(ignored['data']) == 1:
-				text = 'Unfortunately, the following mutation you submitted was not found in the database.<br>Please check the input and try again.'
+				text = 'The following variants could not be processed.<br>Please check your input and try again.'
 			else:
-				text = 'Unfortunately, the following mutations you submitted were not found in the database.<br>Please check the input and try again.'
+				text = 'The following variants could not be processed.<br>Please check your input and try again.'
 			return render_template('ignored2.html',
 									uniqID=json.dumps(uniqID),
 									text=json.dumps(text),

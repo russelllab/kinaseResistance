@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 {% block head %}
     <title>Activark</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/slider.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form.css') }}">
     <script src="{{url_for('static', filename='/js/loadExamples.js')}}"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
 {% endblock %}
 
 {% block content %}
@@ -29,14 +29,10 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        /* height: 100px; Adjust the height as needed */
                         }
     </style>
-    <h1 class="headingFontHomePage" id="headingElement">
-        <!-- <div class="logo-container">
-            <img src="static/img/activark_logo.png" alt="Activark Logo"
-            style="width: 100px; height: 100px; padding-top: 10%;">
-        </div> -->
+    
+    <h1 class="headingFontHomePage">
         <i class="bi bi-diagram-3-fill"></i>
         Activark
     </h1>
@@ -47,7 +43,6 @@
             
                         </textarea>
         <div style="display: inline; padding-top: 0px;">
-		    <!-- <input style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit"/> -->
             <button id="exampleDefault" style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">Submit <i class="bi bi-send"></i></button>
             <button id="clearButton" style="padding-top: 10px;" type="button" onclick="call_onclick_clear()" value="Submit">Clear <i class="bi bi-repeat"></i></button>
         </div>
@@ -61,8 +56,8 @@
     </form>
     </div>
 	<h2 class="slider-text" id="slider-text">Hang tight while we run your query... <i style="padding-left: 10px;" class="fas fa-hourglass-half"></i></h2>
-		<div class="slider-box" id="slider-box">		
-			<div class="slider"></div>
-		</div>
+    <div class="slider-box" id="slider-box">		
+        <div class="slider"></div>
+    </div>
 {% endblock %}
 	
