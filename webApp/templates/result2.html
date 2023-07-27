@@ -112,7 +112,7 @@
 	<div id="introAlert" class="alert alert-info d-flex align-items-center alert-dismissible " role="alert">
 		<i class="bi bi-info-circle-fill"></i>
 		<span class="iconText">
-			Need a <a href="#" id="intro-link" class="alert-link" onclick=runIntro()>quick tour</a> of the page?
+			Need a <a href="#" id="intro-link" class="alert-link blink" onclick=runIntro()>QUICK TOUR</a> of the page?
 		</span>
 		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	</div>
@@ -123,11 +123,16 @@
 	<div class="row" style="outline:none !important;">
 		<div class="card">
 			<div class="card-body">
-				<h3 class="headingFont" data-step="1" data-title="Summary" data-intro="This panel shows summary of the input">Summary
+				<h3 class="headingFont"
+					data-step="1" data-title="Summary" data-intro="This panel shows summary of the input">
+					Summary
 					<button type="button" class="btn btn-default btn-lg" data-bs-toggle="modal" data-bs-target="#SummaryModal">
 						<i class="bi bi-question-circle-fill"></i>
 					</button>
 				</h3>
+				<h5 class="headingFont2">
+					(A: Activating; D: Deactivating; N: Neutral; R: Resistance-causing)
+				</h5>
 				<div class="row">
 					<div id='summaryCard' class=".border-0" style="padding-top: 25px; width: 30%; outline: none !important; float: left;" data-step="2" data-title="Summary" data-intro="Summary of the input">
 					<!-- Summary objekt will be drawn inside this DIV -->

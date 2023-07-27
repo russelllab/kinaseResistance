@@ -8,7 +8,7 @@ known information about the input variants.<br>
 <kbd>Known ADR:</kbd> Known functional variants at the given site.<br>
 <kbd>Verdict (activating vs deactivating):</kbd> 
 Likelihood if the given variant is activating or deactivating the kinase. 
-Values in paranthesis refer to the prediction confidence (Low, Medium. High). 
+Values in paranthesis refer to the prediction confidence (Low, Medium, High). 
 Variants with uncertain verdicts are marked as "ambigous" and the ones that
 lie outside the kinase domain as '-'. <br>
 <kbd>Verdict (resistance):</kbd> 

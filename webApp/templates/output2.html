@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block head %}
-	<title>Activark: Results</title>
+	<title>Activark: Output</title>
 	<!-- Load plotly.js into the DOM -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,8 +30,33 @@
 {% endblock %}
 
 {% block content %}
+	<style>
+		div.dt-button-collection {
+		width: 400px;
+		}
+		
+		div.dt-button-collection button.dt-button {
+			display: inline-block;
+			width: 32%;
+		}
+		div.dt-button-collection button.buttons-colvis {
+			display: inline-block;
+			width: 49%;
+		}
+		div.dt-button-collection h3 {
+			margin-top: 5px;
+			margin-bottom: 5px;
+			font-weight: 100;
+			border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+			font-size: 1em;
+			padding: 0 1em;
+		}
+		div.dt-button-collection h3.not-top-heading {
+			margin-top: 10px;
+		}
+	</style>
 	<script>
-		makeModals('Results')
+		makeModals('Output')
 	</script>
 	<div class="container" style="padding-bottom: 100px;">
 		<div class="row" style="padding-top: 20px;">
@@ -46,7 +71,7 @@
 			  <div id="introAlert" class="alert alert-info d-flex align-items-center alert-dismissible " role="alert">
 				<i class="bi bi-info-circle-fill"></i>
 				<span class="iconText">
-					Need a <a href="#" id="intro-link" class="alert-link" onclick=runIntro()>quick tour</a> of the page?
+					Need a <a href="#" id="intro-link" class="alert-link blink" onclick=runIntro()>QUICK TOUR</a> of the page?
 				</span>
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 			  </div>
@@ -60,8 +85,9 @@
 		</div>
 		
 		<div class="row">
-			<h3 class="headingFont" data-title="Results" data-intro="This page displays predicted results and known information">Summary of your input
-				<button type="button" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#ResultsModal">
+			<h3 class="headingFont" data-title="Output" data-intro="This page displays predicted output and known information">
+				Output
+				<button type="button" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#OutputModal">
 					<i class="bi bi-question-circle-fill" data-title="Description of the page" data-intro="Click this to read the detailed descrition of the page"></i>
 				</button>
 			</h3>

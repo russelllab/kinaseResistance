@@ -13,7 +13,11 @@ reflective of a situation where one does not know if a variant is functional at 
 and thus one needs to predict neutrals.
 </p>
 <p>
-<kbd>Predictions (Resistance vs Not)</kbd>: This predicts if a given mutation is resistant or not.
+<kbd>Predictions (Resistance vs Not)</kbd>: This predicts if a given variant is resistant or not.
+<strong>Note</strong>: Given that this predictor lacks information about activating and deactivating information,
+users may ignore its predictions when other predictors predict the variant to be
+strongly deactivating (eg: variants occuring at most conserved residues like the Catalytic Lysine,
+DFG-motif, etc., which are associated with loss of kinase activity.)
 </p>
 <p>
 <kbd>Known functional and PTM information in all kinases</kbd>: Known functional and PTM information 

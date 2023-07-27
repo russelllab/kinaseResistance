@@ -116,8 +116,31 @@ function defineDataTable (tableID, uniqID)
                             
                         },
             dom: 'Bfrtip',
+            // buttons: [
+            //     'copy', 'csv', 'excel', 'pdf', 'print', '<h3>columnsToggle</h3>',
+            //     '<h3 data-title="Information" data-intro="Hover on these buttons to know more about the column.">colvis</h3>'
+            // ],
             buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print', 'colvis'
+                {
+                    extend: 'collection',
+                    text: '<span data-title="Export table" data-intro="Select one of the options here to export the table.">Export</span>',
+                    className: 'custom-html-collection',
+                    buttons: [
+                        'copy',
+                        'pdf',
+                        'csv',
+                        'excel',
+                        'print',
+                    ]
+                },
+                {
+                    extend: 'collection',
+                    text: '<span data-title="Colvis" data-intro="Show/hide columns in the table. By default, only relevant columns are displayed.">Column Visibility</span>',
+                    className: 'custom-html-collection',
+                    buttons: [
+                        'columnsToggle'
+                    ]
+                }
             ],
             columns: [
                     {
@@ -278,14 +301,15 @@ function makeTableHeadFoot()
         but.setAttribute("title", table_contents_text[j]);
         but.style = "display: inline-block; padding-left: 5px; padding-right: 5px";
 
-        const icon = document.createElement("i");
-        icon.setAttribute("class", "bi bi-info-circle");
-        if ((i == 0) && (j == 0)) {
-            icon.setAttribute("data-title", 'Information');
-            icon.setAttribute("data-intro", 'Hover on these buttons to know more about the column.');
-          }
+        // // Information icon
+        // const icon = document.createElement("i");
+        // icon.setAttribute("class", "bi bi-info-circle");
+        // if ((i == 0) && (j == 0)) {
+        //     icon.setAttribute("data-title", 'Information');
+        //     icon.setAttribute("data-intro", 'Hover on these buttons to know more about the column.');
+        //   }
 
-        but.appendChild(icon);
+        // but.appendChild(icon);
         cell.appendChild(but);
                 
         // Add the cell to the row

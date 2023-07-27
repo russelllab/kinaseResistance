@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" type="image/x-icon" href="../static/img/logo_v1.svg">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/navbar.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/footer.css') }}">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -60,6 +61,16 @@
 			margin: 0;
 			padding-left: 5px;
 		}
+		.blink {
+            animation: blinker 1.0s linear infinite;
+            color: red;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
