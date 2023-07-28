@@ -6,9 +6,9 @@ import logging
 ### fetching uniprotIDs and genenames from the database
 ### storing everything in 2x lists and 1x dict
 conn = psycopg2.connect(database="kinase_project2", 
-	host="pevolution2.bioquant.uni-heidelberg.de",
-	user="gurdeep",
-	password="hellokitty")
+	host="insert_host_ip_here",
+	user="insert_user_here",
+	password="insert_password_here")
 
 cursor = conn.cursor()
 commander_farsight = "select gene, acc from kinases where pfam_domain!='-';"
