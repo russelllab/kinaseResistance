@@ -16,9 +16,13 @@ ___
 ## Required libraries/software
 
 Python 3.6+
+
 import svgwrite
+
 import ast
-imposrt sys
+
+import sys
+
 
 ___
 ## Features
@@ -34,12 +38,16 @@ ___
 ## Using the script
 # Prep Work
 The dictionaries **GenerelleKonservierung_MONTH-DAY-YEAR.txt** and **SeqIdentity_Matrix_MONTH-DAY-YEAR.txt** can be created using the script **Enhancements_May2023/27June/Precalculate_20230627.py**.
+
 Use the script like this:
+
 `python3 Precalculate_20230627.py Clustal_Alignment Mutation_Infofile 2 P15056 600 20`.
+
 The last 4 fields ("2 P15056 600 20") are only for debugging purposes. Simply provide the alignment and the information and the aforementioned dictionaries will be written to disk.
 
 # Main Script
 To use the script we can now execute the following command:
+
 `python3 create_svg_20230706_kinases_GS.py PIM1=P11309=1-313 97 10 20 humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gapsTrimmedWeb.aln sample_dic_mutation_info.txt GenerelleKonservierung_Jun-28-2023.txt ss.tsv SeqIdentity_Matrix_Jun-28-2023.txt 1`   
 
 This command has several fields after calling the script:
@@ -58,6 +66,7 @@ This command has several fields after calling the script:
 | 9     |1|Determines the way of filtering that is used|
 
 The filtering values are:
+
 | Value        | Filter Mechanism | 
 | ------------- |:-------------:| 
 | 1     | Number of functional infos per kinase| 
@@ -81,7 +90,7 @@ Information of the given type (1,3-12) is weighted stronger the closer it is map
 
 ___
 ## The most recent type of results
-MAP2K3, osition 84, with tooltips and showing MAP2K3 + top30 sequences sorted by known "Activating" variants. Open in new tab to use tooltips.
+MAP2K3, position 84, with tooltips and showing MAP2K3 + top30 sequences sorted by known "Activating" variants. Open in new tab to use tooltips.
 <img src="https://github.com/russelllab/kinaseResistance/blob/9ef9ee144c2e443a89dd56c4ab4f5e8033c5bbec/Create_SVG/Enhancements_May2023/27June/MAP2K3%7CP46734%7C28-347_Position84_Windowsize30_Topguns30_Sorting_3.svg?sanitize=true">
 
 ___
@@ -92,4 +101,5 @@ Yes, there will be a more general version of this alignment script available tog
 ___
 ## Contact
 Alignment: torsten.schmenger(at)bioquant.uni-heidelberg.de
+
 Website: gurdeep.singh(at)bioquant.uni-heidelberg.de
