@@ -1,4 +1,0 @@
-{"Effector":[34,42],
-		"Switch II":[61,78],
-		"Switch I":[27,38],
-		"p-loop":[13,20]}
