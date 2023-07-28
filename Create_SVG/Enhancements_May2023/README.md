@@ -1,3 +1,9 @@
+## Changelog 27. June 2023
+Bugfixes and QoL improvements.
+
+## Changelog 20. June 2023
+Bugfixes and QoL improvements.
+
 ## Changelog 05. June 2023
 Updated the feature annotation to work with the contents of the file ss.tsv. My script reads the lines without "#" and replaces any number of spaces with a single space, then reads the feature and the start & end positions. This file can therefore be updated later and should not break the script as long as the format remains the same.
 
