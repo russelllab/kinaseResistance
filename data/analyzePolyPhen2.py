@@ -93,11 +93,13 @@ for mut_type in MUT_TYPES:
     names = []
     y_pred = []; y_true = []; y_prob=[]; y_act_deact_or_neutral = []
     for mutation in dic_mutations:
+        if dic_mutations[mutation].mut_type in ['activatingresistance', 'increaseresistance']:
+            print (mutation, dic_mutations[mutation].mut_type, dic_mutations[mutation].prob)
         if dic_mutations[mutation].prediction is None: continue
         kinase_mut_type = dic_mutations[mutation].mut_type
         if kinase_mut_type not in MUT_TYPES[mut_type]: continue
         # print (mutation, dic_mutations[mutation].mut_type, dic_mutations[mutation].prediction)
-        if 'probably damaging' in dic_mutations[mutation].prediction:
+        if 'damaging' in dic_mutations[mutation].prediction:
             y_pred.append(1)
         else:
             y_pred.append(0)
