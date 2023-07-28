@@ -3,7 +3,7 @@
 	<!-- Load plotly.js into the DOM -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Activark (About)</title>
+	<title>Activark (Examples)</title>
 	<script src="{{url_for('static', filename='/js/ignoredFunctions.js')}}"></script>
 	<script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -31,23 +31,120 @@
 		}
 	</style>
 	<div class="container">
-		<div id="examples" class="row" style="padding-top: 50px; height: 500px;">
+		<div id="example_avd" class="row" style="padding-top: 50px">
 			<div class="card">
 				<div class="card-body">
-					<h3>Examples</h3>
-					<!-- <a href="../static/img/logo_v1.svg" download="download">
-						click here
-					</a> -->
+					<h3>When to use the activating vs deactivating predictor?</h3>
+					This predictor represents a typical situation when one has what is believed 
+					to be a functional variant (e.g. observed many times in a cohort or dataset) 
+					and wishes to distinguish these two possibilities. For example:
 					<p>
-						<ul>
-						</ul>
+						<!-- <h5>The PIM1 p.Ser97Asn lymphoma variant</h5>
+						Ser97 in PIM1 lies in the ꭤC-helix is the position within COSMIC with 
+						the most missense variants (97) of which 37 are p.Ser97Asn and all in 
+						<a href="https://pubmed.ncbi.nlm.nih.gov/36994552/">haematopoietic and lymphoid cancers</a>. 
+						PIM1 p.Ser97Asn represents a scenario you'd expect the variant to have a functional
+						consequence on the kinase activity, and hence, would use this predictor. -->
+						<div class=".border-0" style="padding-top: 25px; width: 80%; outline: none !important; float: left;">
+							<h5>The BRAF p.Val600Glu variant</h5>
+							<li>Val600 in BRAF lies within the activation-loop</li>
+							<li>Val600 is the position within <a href="https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=BRAF" target="_blank">
+								COSMIC</a> with the most missense variants (53122).</li>
+							<li>BRAF p.Val600Glu represents a variant you'd expect to have a functional
+								consequence on kinase activity of BRAF.</li>
+							<li>Val600Glu is predicted activating (see right).</li>
+						</div>
+						<div class=".border-0" style="float: left;  height: 300px; width: 20%; outline: none !important; ">
+							<img src = "../static/img/braf_v600e.png" height="300px" class="center" alt="workflow"/>
+						</div>
 					</p>
-					  
+
+					<p>
+						<div class=".border-0" style="padding-top: 25px; width: 80%; outline: none !important; float: left;">
+							<h5>The STK11 p.Ser216Phe variant</h5>
+							<li>Ser216 lies within the activation-loop of STK11's kinase domain</li>
+							<li>Ser216 is the position within <a href="https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=STK11" target="_blank">
+								COSMIC</a> with the most missense variants (21) in the kinase domain.</li>
+							<li>STK11 p.Ser216Phe represents a variant you'd expect to have a functional
+								consequence on kinase activity of STK11.</li>
+							<li>Ser216Phe is predicted deactivating (see right).</li>
+						</div>
+						<div class=".border-0" style="float: left;  height: 300px; width: 20%; outline: none !important; ">
+							<img src = "../static/img/stk11_s216f.png" height="300px" class="center" alt="workflow"/>
+						</div>
+					</p>
 				</div>
 			</div>
 		</div>
-				
-		
+		<div id="example_avdvn" class="row" style="padding-top: 50px">
+			<div class="card">
+				<div class="card-body">
+					<h3>When to use the activating vs deactivating vs neutral predictor?</h3>
+					This predictor represents is more reflective of a situation where one does not know if a variant 
+					is functional at all and thus one needs to predict neutrals. For example:
+					<p>
+						<div class=".border-0" style="padding-top: 25px; width: 65%; outline: none !important; float: left;">
+							<h5>The MELK p.Lys219Arg variant</h5>
+							<li>Lys219 lies in the αG helix of MELK</li>
+							<li>Lys219 has a minor allele frequency of 2%.</li>
+							<li>MELK p.Lys219Arg represents a variant you wouldn't know
+								if it has a functional consequence on kinase activity of MELK.</li>
+							<li>Lys219Arg is predicted neutral (see right).</li>
+						</div>
+						<div class=".border-0" style="float: left;  height: 300px; width: 35%; outline: none !important; ">
+							<img src = "../static/img/melk_k219r.png" height="300px" class="center" alt="workflow"/>
+						</div>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="example_rvn" class="row" style="padding-top: 50px; padding-bottom: 100px;">
+			<div class="card">
+				<div class="card-body">
+					<h3>When to use the resistant or not predictor?</h3>
+					This predictor predicts if the given variant is resistant or not.
+					However, it does not take into account if the variant is activating or deactivating. Hence,
+					this predictor is useful when one knows that a variant DOES NOT lead to loss of
+					kinase activity but one does not know if the variant is resistant or not (see example below).
+					For example:
+					<p>
+						<div class=".border-0" style="padding-top: 25px; width: 80%; outline: none !important; float: left;">
+							<h5>The EGFR p.Thr790Met variant</h5>
+							<li>Thr790 lies in the β5 sheet of EGFR</li>
+							<li>Thr790Met is predicted to be drug-resistant (see right).</li>
+							<li>Note that this predictor predcits the likelihood of
+								a given variant to be resistant to a drug, not the likelihood
+								of a patient to respond to a drug.
+								</li>
+						</div>
+						<div class=".border-0" style="float: left;  height: 300px; width: 20%; outline: none !important; ">
+							<img src = "../static/img/egfr_t790m.png" height="300px" class="center" alt="workflow"/>
+						</div>
+					</p>
+					<p>
+						<div class=".border-0" style="padding-top: 25px; width: 40%; outline: none !important; float: left;">
+							<h5>The RAF1 p.Asp486Asn variant (CAUTION)</h5>
+							<li>Asp486 lies in the activation-loop and at the DFG-motif in RAF1</li>
+							<li>Asp486 is predicted to be drug-resistant (see right-most figure).</li>
+							<li>Asp486 is also predicted to be strongly deactivating (see left-most and middle figures)</li>
+							<li>Since the resistance or not predictor lacks the information about activating or deactivating,
+								it is not able to take this into account and
+								hence the prediction of drug-resistance should be ignored.</li>
+						</div>
+						<div class=".border-0" style="float: left; width: 15%; outline: none !important; ">
+							<img src = "../static/img/raf1_d486n1.png" height="300px" class="center" alt="workflow"/>
+						</div>
+						<div class=".border-0" style="float: left; width: 30%; outline: none !important; ">
+							<img src = "../static/img/raf1_d486n2.png" height="300px" class="center" alt="workflow"/>
+						</div>
+						<div class=".border-0" style="float: left; width: 15%; outline: none !important; ">
+							<img src = "../static/img/raf1_d486n3.png" height="300px" class="center" alt="workflow"/>
+						</div>
+					</p>
+						
+				</div>
+			</div>
+		</div>
 	</div>
 	  
 {% endblock %}
