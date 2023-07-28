@@ -499,6 +499,13 @@ def configureRoutes(app):
 		Display the datasets page
 		'''
 		return render_template('datasets.html')
+	
+	@app.route('/examples', methods=['GET', 'POST'])
+	def examples():
+		''''
+		Display the examples page
+		'''
+		return render_template('examples.html')
 
 	@app.route('/output/<string:uniqID>', methods=['GET', 'POST'])
 	def output(uniqID: str):
