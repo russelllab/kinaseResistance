@@ -96,7 +96,9 @@ MAP2K3, position 84, with tooltips and showing MAP2K3 + top30 sequences sorted b
 ___
 ## FAQs
 # Is there a more general version of this script available?
-Yes, there will be a more general version of this alignment script available together with automated data collection for any protein in uniprot. For more information contact torsten.schmenger(at)bioquant.uni-heidelberg.de.
+Yes, there is another repository with a light version of this script that works for other proteins, too. The user must provide an alignment, a info-dictionary and structural features. Everything is explained in the [Annotate_Alignment](https://github.com/tschmenger/Annotate_Alignments/tree/main) repository.
+
+For more information contact torsten.schmenger(at)bioquant.uni-heidelberg.de.
 
 ___
 ## Contact
