@@ -492,7 +492,14 @@ def configureRoutes(app):
 		Display the about page
 		'''
 		return render_template('about.html')
-
+	
+	@app.route('/help', methods=['GET', 'POST'])
+	def help():
+		''''
+		Display the help page
+		'''
+		return render_template('help.html')
+	
 	@app.route('/datasets', methods=['GET', 'POST'])
 	def datasets():
 		''''
