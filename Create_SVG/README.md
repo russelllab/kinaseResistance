@@ -48,7 +48,7 @@ The last 4 fields ("2 P15056 600 20") are only for debugging purposes. Simply pr
 ## Main Script
 To use the script we can now execute the following command:
 
-`python3 create_svg_20230706_kinases_GS.py PIM1=P11309=1-313 97 10 20 humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gapsTrimmedWeb.aln sample_dic_mutation_info.txt GenerelleKonservierung_Jun-28-2023.txt ss.tsv SeqIdentity_Matrix_Jun-28-2023.txt 1`   
+`python3 Create_SVG_20230731.py PIM1=P11309=1-313 97 10 20 humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gapsTrimmedWeb.aln sample_dic_mutation_info.txt GenerelleKonservierung_Jun-28-2023.txt ss.tsv SeqIdentity_Matrix_Jun-28-2023.txt 1`   
 
 This command has several fields after calling the script:
 
