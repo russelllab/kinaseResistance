@@ -1,7 +1,7 @@
 ___
 # Introduction
 ## This script
-The script **Enhancements_May2023/27June/create_svg_20230706_kinases_GS.py** comes with several python3 functions that can annotate or highlight positions in a Clustal-formatted alignment.
+The script **Enhancements_May2023/27June/Create_SVG_20230731.py** comes with several python3 functions that can annotate or highlight positions in a Clustal-formatted alignment.
 
 ___
 ## General use case
