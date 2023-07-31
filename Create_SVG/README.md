@@ -80,7 +80,8 @@ The filtering values are:
 | 9     | Sumoylation | 
 | 10     | O-GlcNAc | 
 | 11     | Methylation | 
-| 12     | Activating | 
+| 12     | Activating & Deactivating| 
+| 13+     | Activating | 
 
 Information of the given type (1,3-12) is weighted stronger the closer it is mapped to the position of interest for the queried protein.
 
