@@ -1,33 +1,30 @@
 import os
-import re
-import sys
 import csv
-import glob
 import gzip
 import pandas as pd
-from collections import defaultdict
-from Bio import SeqIO
 
 
 def get_data_paths():
     """
     Get paths to all data files
-    Modify this function to point to the correct paths on your system
     """
-    cosmic_path = "/net/home.isilon/ds-russell/COSMIC/latest_version/"
     file_paths = {
         # Census file as provided by COSMIC
-        "cosmic_census": f"{cosmic_path}/cancer_gene_census.csv",
+        "cosmic_census": "data/Cosmic_v98_cancer_gene_census.csv.gz",
+       
         # These 2 files need to be generated before using https://github.com/jcgonzs/cosmic_tools
-        "cosmic_counts": "Cosmic_v98_counts.tsv.gz",
-        "cosmic_miss": "Cosmic_v98_mismatches.tsv",
-        # File listing kinase UniProt accessions
+        "cosmic_counts": "data/Cosmic_v98_counts.tsv.gz",
+        "cosmic_miss": "data/Cosmic_v98_mismatches.tsv.gz",
+       
+        # File listing all kinase UniProt accessions
         "kinase_list": "../ML/all_kinases_acc.txt.gz",
+        
         # Machine learning predictions
-        "ml_output_file": "cosmic_activark.txt.gz",
+        "ml_output_file": "ML/cosmic_activark.txt.gz",
+        
         # Final output files
-        "cosmic_ml_all": "ML_output_cosmic_all.tsv.gz",
-        "cosmic_ml_gws": "ML_output_cosmic_gws.tsv.gz"
+        "cosmic_ml_all": "results/ML_output_cosmic_all.tsv.gz",
+        "cosmic_ml_gws": "results/ML_output_cosmic_gws.tsv.gz"
     }
     return file_paths
 
@@ -52,7 +49,7 @@ def get_cosmic_counts(counts_file, miss_file, kinases):
     :param kinases: list of UniProt accessions of kinases
     """
     mismatches = []
-    for row in csv.reader(open(miss_file, "rt"), delimiter="\t"):
+    for row in csv.reader(gzip.open(miss_file, "rt"), delimiter="\t"):
         mismatches.append(row[0])
 
     mech_counts_all = {}
@@ -74,20 +71,6 @@ def parse_cosmic_census(census_file):
     df = pd.read_csv(census_file, sep=",", quotechar='"')
     df["Role in Cancer"] = df["Role in Cancer"].fillna("inconclusive")
     return df
-
-
-def get_uni_seqs(file, kinases=None):
-    """
-    Get UniProt sequences. If provided, restrict to provided list of accessions.
-    :param file: path to UniProt FASTA file
-    :param kinases: list of UniProt accessions of kinases
-    """
-    uni_seqs = {}
-    for record in SeqIO.parse(gzip.open(file, "rt"), "fasta"):
-        accession = record.id.split("|")[1]
-        if kinases is None or accession in kinases:
-            uni_seqs[accession] = str(record.seq)
-    return uni_seqs
 
 
 def merge_cosmic_and_ml(ml_output_file, cosmic_ml_output_file, cosmic_counts, census):
