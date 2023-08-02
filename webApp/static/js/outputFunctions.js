@@ -62,56 +62,59 @@ function defineDataTable (tableID, uniqID)
                             // VerdictNDA
                             if ( data.verdictNDA.includes('Activating') ) {
                                 if ( data.verdictNDA.includes('Low') ) {
-                                    $('td:eq(6)', row).css('background-color', '#90EE90');
+                                    $('td:eq(5)', row).css('background-color', '#90EE90');
                                 }
                                 else if ( data.verdictNDA.includes('Medium') ) {
-                                    $('td:eq(6)', row).css('background-color', '#32CD32');
+                                    $('td:eq(5)', row).css('background-color', '#32CD32');
                                 }
                                 else {
-                                    $('td:eq(6)', row).css('background-color', '#008000');
+                                    $('td:eq(5)', row).css('background-color', '#008000');
+                                    $('td:eq(5)', row).css('color', 'white');
                                 }
 
                             }
                             else if  ( data.verdictNDA.includes('Deactivating') ) {
                                 if ( data.verdictNDA.includes('Low') ) {
-                                    $('td:eq(6)', row).css('background-color', '#FF8A8A');
+                                    $('td:eq(5)', row).css('background-color', '#FF8A8A');
                                 }
                                 else if ( data.verdictNDA.includes('Medium') ) {
-                                    $('td:eq(6)', row).css('background-color', '#FF5C5C');
+                                    $('td:eq(5)', row).css('background-color', '#FF5C5C');
                                 }
                                 else {
-                                    $('td:eq(6)', row).css('background-color', '#960018');
+                                    $('td:eq(5)', row).css('background-color', '#960018');
+                                    $('td:eq(5)', row).css('color', 'white');
                                 }
                             }
 
                             // VerdictR
                             if ( data.verdictR.includes('Resistance') ) {
-                                $('td:eq(7)', row).css('background-color', '#0072b2');
+                                $('td:eq(6)', row).css('background-color', '#0072b2');
+                                $('td:eq(6)', row).css('color', 'white');
                             }
 
                             // ActvDeact
                             if ( data.AIvLD >= 0.5 ) {
-                                $('td:eq(9)', row).css('background-color', '#009e73');
+                                $('td:eq(8)', row).css('background-color', '#009e73');
                             }
                             else if  ( data.AIvLD < 0.5 ) {
-                                $('td:eq(9)', row).css('background-color', '#d55e00');
+                                $('td:eq(8)', row).css('background-color', '#d55e00');
                             }
                             
                             // NeutralvsDeactvsAct
                             if (data.N == 'NA') {}
                             else if ( data.N >= data.D && data.N >= data.A ) {
-                                $('td:eq(12)', row).css('background-color', '#F2E34C');
+                                $('td:eq(11)', row).css('background-color', '#F2E34C');
                             }
                             else if ( data.D >= data.N && data.D >= data.A ) {
-                                $('td:eq(11)', row).css('background-color', '#d55e00');
+                                $('td:eq(10)', row).css('background-color', '#d55e00');
                             }
                             else if ( data.A >= data.D && data.A >= data.N ) {
-                                $('td:eq(10)', row).css('background-color', '#009e73');
+                                $('td:eq(9)', row).css('background-color', '#009e73');
                             }
 
                             // ResistantvsNeutral
                             if ( data.RvN >= 0.5 ) {
-                                $('td:eq(13)', row).css('background-color', '#0072b2');
+                                $('td:eq(12)', row).css('background-color', '#0072b2');
                             }
                             
                         },
@@ -143,12 +146,12 @@ function defineDataTable (tableID, uniqID)
                 }
             ],
             columns: [
-                    {
-                    className: 'dt-control',
-                    orderable: false,
-                    data: null,
-                    defaultContent: '',
-                    },
+                    // {
+                    // className: 'dt-control',
+                    // orderable: false,
+                    // data: null,
+                    // defaultContent: '',
+                    // },
                     { data: 'view' },
                     { data: 'name' }, // input
                     { data: 'gene' },
@@ -175,13 +178,15 @@ function defineDataTable (tableID, uniqID)
                 ],
             columnDefs: [
                 {
-                    targets: [2,4,6,8,12,13,14,15,16],
+                    targets: [1,3,5,7,11,12,13,14,15],
                     visible: false,
                     searchable: true
                 }
             ],
             });
-    
+
+        // Activate this when you want to have a child row
+        /*
         $('#'+tableID+' tbody').on('click', 'td.dt-control', function () {
             var tr = $(this).closest('tr');
             var row = table.row(tr);
@@ -197,6 +202,7 @@ function defineDataTable (tableID, uniqID)
                 tr.addClass('shown');
             }
         });
+        */
     });
 }
 
@@ -230,8 +236,9 @@ function makeIgnoredLink(uniqID)
 
 function makeTableHeadFoot()
 {   
-    var table_contents = ['Info',
-                        'View',
+    var table_contents = [
+                        // 'Info',
+                        'View details',
                         'Input',
                         'Gene',
                         'UniProt<br>accession',
@@ -241,7 +248,7 @@ function makeTableHeadFoot()
                         // 'Alignment<br>position',
                         'Kinase domain<br>region',
                         'PTM<br>type',
-                        'Known functional<br>cosequence',
+                        'Known functional<br>consequence',
                         'Verdict<br>(Activating/<br>Deactivating)',
                         'Verdict<br>(Resistance)',
                         'Pred<br>(A vs D)',
@@ -251,10 +258,11 @@ function makeTableHeadFoot()
                         'Pred R'
                         ];
     
-    var table_contents_text = ['Known information about the input',
-                                'View individual results',
+    var table_contents_text = [
+                                // 'Known information about the input',
+                                'View details of the prediction for the input',
                                 'Input',
-                                'Gene',
+                                'Gene name',
                                 'UniProt accession',
                                 'Variant',
                                 'Adjacent residues to variant site',

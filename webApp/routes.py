@@ -38,7 +38,7 @@ import fetchData
 
 create_svg_path = '/Create_SVG/Enhancements_May2023/27June/'
 sys.path.insert(1, BASE_DIR+create_svg_path)
-import create_svg_20230706_kinases_GS as create_svg
+import Create_SVG_20230731 as create_svg
 conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_Jun-28-2023.txt'
 identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_Jun-28-2023.txt'
 
@@ -862,6 +862,12 @@ def configureRoutes(app):
 
 		with open('static/predictor/output/'+uniqID+'/output.json', 'r') as f:
 			output = json.load(f)
+		
+		## check window size
+		if int(ws) % 2 == 0:
+			ws = int(ws)/2
+		else:
+			ws = (int(ws)-1)/2
 		
 		accs_in_alignment = {}
 		for line in open('static/hmm/humanKinasesTrimmed.clustal', 'r'):

@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block head %}
-	<title>Activark: Output</title>
+	<title>Activark: Summary</title>
 	<!-- Load plotly.js into the DOM -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,34 +59,12 @@
 		makeModals('Output')
 	</script>
 	<div class="container" style="padding-bottom: 100px;">
-		<div class="row" style="padding-top: 20px;">
-			<div class="alert alert-primary d-flex align-items-center alert-dismissible " role="alert">
-				<i class="bi bi-bookmark-check-fill"></i>
-				<span class="iconText">
-				  Bookmark this page to easily access your results again in the future.
-				</span>
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-			  </div>
-
-			  <div id="introAlert" class="alert alert-info d-flex align-items-center alert-dismissible " role="alert">
-				<i class="bi bi-info-circle-fill"></i>
-				<span class="iconText">
-					Need a <a href="#" id="intro-link" class="alert-link blink" onclick=runIntro()>QUICK TOUR</a> of the page?
-				</span>
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-			  </div>
-
-			  <div id="ignoredAlert" class="alert alert-warning" role="alert">
-				<i class="bi bi-exclamation-circle-fill"></i>
-				<span id="errorText">Some input(s) were ignored.</span>
-				<a id="ignored-link" class="alert-link" target="_blank">Click here</a> to know more.
-			  </div>
-			  <script>makeIgnoredLink({{uniqID|safe}})</script>
-		</div>
 		
 		<div class="row">
-			<h3 class="headingFont" data-title="Output" data-intro="This page displays predicted output and known information">
-				Output
+			<h3 class="headingFont"
+				data-title="Output" data-intro="This page displays predicted output and known information"
+				style="padding-top: 50px;">
+				Known and predicted kinase effects
 				<button type="button" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#OutputModal">
 					<i class="bi bi-question-circle-fill" data-title="Description of the page" data-intro="Click this to read the detailed descrition of the page"></i>
 				</button>
@@ -135,6 +113,31 @@
 				</script>
 			</table>
 		</div>
+		<div class="row" style="padding-top: 20px;">
+			<div class="alert alert-primary d-flex align-items-center alert-dismissible " role="alert">
+				<i class="bi bi-bookmark-check-fill"></i>
+				<span class="iconText">
+				  Bookmark this page to easily access your results again in the future.
+				</span>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+
+			  <div id="introAlert" class="alert alert-info d-flex align-items-center alert-dismissible " role="alert">
+				<i class="bi bi-info-circle-fill"></i>
+				<span class="iconText">
+					Need a <a href="#" id="intro-link" class="alert-link blink" onclick=runIntro()>QUICK TOUR</a> of the page?
+				</span>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+
+			  <div id="ignoredAlert" class="alert alert-warning" role="alert">
+				<i class="bi bi-exclamation-circle-fill"></i>
+				<span id="errorText">Some input(s) were ignored.</span>
+				<a id="ignored-link" class="alert-link" target="_blank">Click here</a> to know more.
+			  </div>
+			  <script>makeIgnoredLink({{uniqID|safe}})</script>
+		</div>
+		
 	</div>
     <script>
 		defineDataTable("outputTable", {{uniqID|safe}});
