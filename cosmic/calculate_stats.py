@@ -8,14 +8,32 @@ def get_data_paths():
     Get paths to all data files
     """
     file_paths = {
-        "cosmic_ml_all": "ML_output_cosmic_all.tsv.gz",
-        "cosmic_ml_gws": "ML_output_cosmic_gws.tsv.gz",
-        "stats": "stats_from_cosmic_activark.txt"
+        "cosmic_ml_all": "results/ML_output_cosmic_all.tsv.gz",
+        "cosmic_ml_gws": "results/ML_output_cosmic_gws.tsv.gz",
+        "stats": "results/stats_from_cosmic_activark.txt",
+        "cols": "results/stats_from_cosmic_activark_cols.txt"
     }
     return file_paths
 
+def decide_AvD_prediction(row):
 
-def print_stats_from_cosmic_ml(file_path):
+    if row["AIvLD"] > 0.7 and row["A"] > row["D"] and row["A"] > row["N"]:
+        return "Activating (High)"
+    elif row["AIvLD"] > 0.5 and row["A"] > row["D"] and row["A"] > row["N"]:
+        return "Activating (Medium)"
+    elif row["AIvLD"] > 0.5 and row["N"] > row["A"] > row["D"]:
+        return "Activating (Low)"
+    elif row["AIvLD"] < 0.3 and row["D"] > row["A"] and row["D"] > row["N"]:
+        return "Deactivating (High)"
+    elif row["AIvLD"] < 0.5 and row["D"] > row["A"] and row["D"] > row["N"]:
+        return "Deactivating (Medium)"
+    elif row["AIvLD"] < 0.5 and row["N"] > row["D"] > row["A"]:
+        return "Deactivating (Low)"
+    else:
+        return "Uncertain"
+
+
+def compute_stats_from_cosmic_ml(file_path):
     """
     Calculate a bunch of stats from the cosmic ML output files. Feel free to add more to it.
     Output is a df printed in a tab-delimited file.
@@ -24,6 +42,7 @@ def print_stats_from_cosmic_ml(file_path):
     for mode, file in zip(["all", "gws"], [file_path["cosmic_ml_all"], file_path["cosmic_ml_gws"]]):
         df = pd.read_csv(file, sep="\t")
         df['GeneRole'] = df['GeneRole'].replace(np.nan, "-")
+        df["AD_prediction"] = df.apply(decide_AvD_prediction, axis=1)
 
         for count_min in [0, 1, 2, 5, 10, 20, 30]:
             df2 = df[df['Cosmic'] > count_min]
@@ -35,9 +54,9 @@ def print_stats_from_cosmic_ml(file_path):
             known_res = df2[df2["KnownADR"].str.contains("resistance")]
             known_deact = df2[df2["KnownADR"].str.contains("decrease") | df2["KnownADR"].str.contains("loss")]
             known_neut = df2[df2["KnownADR"].str.contains("neutral")]
-            pred_act = df2[(df2["A"] > df2["D"]) & (df2["A"] > df2["N"])]
-            pred_deact = df2[(df2["D"] > df2["A"]) & (df2["D"] > df2["N"])]
-            pred_neut = df2[(df2["N"] > df2["A"]) & (df2["N"] > df2["D"])]
+            pred_act = df2[df2["AD_prediction"].str.contains("Activating")]
+            pred_deact = df2[df2["AD_prediction"].str.contains("Deactivating")]
+            pred_unce = df2[df2["AD_prediction"].str.contains("Uncertain")]
             pred_res = df2[df2["RvN"] > 0.5]
             d = {
                 "VarSet": mode,
@@ -100,12 +119,12 @@ def print_stats_from_cosmic_ml(file_path):
                 "PredD_AvgCount": str(round(pred_deact["Cosmic"].mean(), 2)),
                 "PredD_Genes": str(pred_deact["GeneName"].nunique()),
 
-                "PredN_Vars": str(len(pred_neut.index)),
-                "PredN_%": f"{round(len(pred_neut.index) / len(df2.index) * 100, 2)}%",
-                "PredN_TotCount": str(round(pred_neut["Cosmic"].sum(), 2)),
-                "PredN_TotCount_%": f"{round(pred_neut['Cosmic'].sum() / df2['Cosmic'].sum() * 100, 2)}%",
-                "PredN_AvgCount": str(round(pred_neut["Cosmic"].mean(), 2)),
-                "PredN_Genes": str(pred_neut["GeneName"].nunique()),
+                "PredU_Vars": str(len(pred_unce.index)),
+                "PredU_%": f"{round(len(pred_unce.index) / len(df2.index) * 100, 2)}%",
+                "PredU_TotCount": str(round(pred_unce["Cosmic"].sum(), 2)),
+                "PredU_TotCount_%": f"{round(pred_unce['Cosmic'].sum() / df2['Cosmic'].sum() * 100, 2)}%",
+                "PredU_AvgCount": str(round(pred_unce["Cosmic"].mean(), 2)),
+                "PredU_Genes": str(pred_unce["GeneName"].nunique()),
 
                 "PredR_Vars": str(len(pred_res.index)),
                 "PredR_%": f"{round(len(pred_res.index) / len(df2.index) * 100, 2)}%",
@@ -114,44 +133,127 @@ def print_stats_from_cosmic_ml(file_path):
                 "PredR_AvgCount": str(round(pred_res["Cosmic"].mean(), 2)),
                 "PredR_Genes": str(pred_res["GeneName"].nunique()),
 
-                "Res_Act_Vars": str(len(pred_res[(pred_res["A"] > pred_res["D"]) & (pred_res["A"] > pred_res["N"])])),
-                "Res_Act_%": f"{round(len(pred_res[(pred_res['A'] > pred_res['D']) & (pred_res['A'] > pred_res['N'])]) / len(df2.index) * 100, 2)}%",
-                "Res_Deact_Vars": str(len(pred_res[(pred_res["D"] > pred_res["A"]) & (pred_res["D"] > pred_res["N"])])),
-                "Res_Deact_%": f"{round(len(pred_res[(pred_res['D'] > pred_res['A']) & (pred_res['D'] > pred_res['N'])]) / len(df2.index) * 100, 2)}%",
-                "Res_Neut_Vars": str(len(pred_res[(pred_res["N"] > pred_res["A"]) & (pred_res["N"] > pred_res["D"])])),
-                "Res_Neut_%": f"{round(len(pred_res[(pred_res['N'] > pred_res['A']) & (pred_res['N'] > pred_res['D'])]) / len(df2.index) * 100, 2)}%",
+                "Onco_PredA_Vars": str(len(df_onco[df_onco['AD_prediction'].str.contains('Activating')].index)),
+                "Onco_PredA_%": f"{round(len(df_onco[df_onco['AD_prediction'].str.contains('Activating')].index) / len(df_onco.index) * 100, 2)}%",
+                "Onco_PredA_AvgCount": str(round(df_onco[df_onco['AD_prediction'].str.contains('Activating')]["Cosmic"].mean(), 2)),
+                "Onco_PredD_Vars": str(len(df_onco[df_onco['AD_prediction'].str.contains('Deactivating')].index)),
+                "Onco_PredD_%": f"{round(len(df_onco[df_onco['AD_prediction'].str.contains('Deactivating')].index) / len(df_onco.index) * 100, 2)}%",
+                "Onco_PredD_AvgCount": str(round(df_onco[df_onco['AD_prediction'].str.contains('Deactivating')]["Cosmic"].mean(), 2)),
+                "Onco_PredR_Vars": str(len(df_onco[df_onco["RvN"] > 0.5].index)),
+                "Onco_PredR_%": f"{round(len(df_onco[df_onco['RvN'] > 0.5].index) / len(df_onco.index) * 100, 2)}%",
+                "Onco_PredR_AvgCount": str(round(df_onco[df_onco["RvN"] > 0.5]["Cosmic"].mean(), 2)),
 
-                # "Onco_PredA_Vars": str(len(df_onco[df_onco["AIvLD"] > 0.5].index)),
-                # "Onco_PredA_%": f"{round(len(df_onco[df_onco['AIvLD'] > 0.5].index) / len(df_onco.index) * 100, 2)}%",
-                # "Onco_PredA_AvgCount": str(round(df_onco[df_onco["AIvLD"] > 0.5]["Cosmic"].mean(), 2)),
-                # "Onco_PredD_Vars": str(len(df_onco[df_onco["AIvLD"] <= 0.5].index)),
-                # "Onco_PredD_%": f"{round(len(df_onco[df_onco['AIvLD'] <= 0.5].index) / len(df_onco.index) * 100, 2)}%",
-                # "Onco_PredD_AvgCount": str(round(df_onco[df_onco["AIvLD"] <= 0.5]["Cosmic"].mean(), 2)),
-                # "Onco_PredR_Vars": str(len(df_onco[df_onco["RvN"] > 0.5].index)),
-                # "Onco_PredR_%": f"{round(len(df_onco[df_onco['RvN'] > 0.5].index) / len(df_onco.index) * 100, 2)}%",
-                # "Onco_PredR_AvgCount": str(round(df_onco[df_onco["RvN"] > 0.5]["Cosmic"].mean(), 2)),
-
-                # "TSG_PredA_Vars": str(len(df_tsg[df_tsg["AIvLD"] > 0.5].index)),
-                # "TSG_PredA_%": f"{round(len(df_tsg[df_tsg['AIvLD'] > 0.5].index) / len(df_tsg.index) * 100, 2)}%",
-                # "TSG_PredA_AvgCount": str(round(df_tsg[df_tsg["AIvLD"] > 0.5]["Cosmic"].mean(), 2)),
-                # "TSG_PredD_Vars": str(len(df_tsg[df_tsg["AIvLD"] <= 0.5].index)),
-                # "TSG_PredD_%": f"{round(len(df_tsg[df_tsg['AIvLD'] <= 0.5].index) / len(df_tsg.index) * 100, 2)}%",
-                # "TSG_PredD_AvgCount": str(round(df_tsg[df_tsg["AIvLD"] <= 0.5]["Cosmic"].mean(), 2)),
-                # "TSG_PredR_Vars": str(len(df_tsg[df_tsg["RvN"] > 0.5].index)),
-                # "TSG_PredR_%": f"{round(len(df_tsg[df_tsg['RvN'] > 0.5].index) / len(df_tsg.index) * 100, 2)}%",
-                # "TSG_PredR_AvgCount": str(round(df_tsg[df_tsg["RvN"] > 0.5]["Cosmic"].mean(), 2))
-
-                # "Top5Genes(NumVars)": ";".join(
-                #     df2.groupby("GeneName").count()["Cosmic"].sort_values(ascending=False).head(5).index.values),
-                # "Top5Genes(VarCount)": ";".join(
-                #     df2.groupby("GeneName").sum()["Cosmic"].sort_values(ascending=False).head(5).index.values)
+                "TSG_PredA_Vars": str(len(df_tsg[df_tsg['AD_prediction'].str.contains('Activating')].index)),
+                "TSG_PredA_%": f"{round(len(df_tsg[df_tsg['AD_prediction'].str.contains('Activating')].index) / len(df_tsg.index) * 100, 2)}%",
+                "TSG_PredA_AvgCount": str(round(df_tsg[df_tsg['AD_prediction'].str.contains('Activating')]["Cosmic"].mean(), 2)),
+                "TSG_PredD_Vars": str(len(df_tsg[df_tsg['AD_prediction'].str.contains('Deactivating')].index)),
+                "TSG_PredD_%": f"{round(len(df_tsg[df_tsg['AD_prediction'].str.contains('Deactivating')].index) / len(df_tsg.index) * 100, 2)}%",
+                "TSG_PredD_AvgCount": str(round(df_tsg[df_tsg['AD_prediction'].str.contains('Deactivating')]["Cosmic"].mean(), 2)),
+                "TSG_PredR_Vars": str(len(df_tsg[df_tsg["RvN"] > 0.5].index)),
+                "TSG_PredR_%": f"{round(len(df_tsg[df_tsg['RvN'] > 0.5].index) / len(df_tsg.index) * 100, 2)}%",
+                "TSG_PredR_AvgCount": str(round(df_tsg[df_tsg["RvN"] > 0.5]["Cosmic"].mean(), 2))
             }
             final_df.append(d)
 
     final_df = pd.DataFrame(final_df)
     final_df.to_csv(file_path["stats"], sep="\t", index=False)
 
+    columns = {
+        "VarSet": "Variant data set: all variants ('all') or genome-wide screen variants only ('gws')",
+        "MinCount": "Minimum number of times a variant must be observed (sample count) in COSMIC to be included in the analysis",
+        "Vars": "Number of unique variants",
+        "TotVars": "Total number of variants (sum of sample counts)",
+        "Genes": "Number of genes",
+        "Oncog": "Number of oncogenes",
+        "TSG": "Number of tumor suppressor genes",
+        "Both": "Number of genes that are both oncogenes and tumor suppressor genes",
+        "Unknown": "Number of genes without known role in cancer",
+
+        "Oncog_Vars": "Number of unique variants in oncogenes",
+        "Oncog_%": "Fraction from total number of unique variants",
+        "Oncog_AvgCount": "Average sample count of variants in oncogenes",
+        "TSG_Vars": "Number of unique variants in tumor suppressor genes",
+        "TSG_%": "Fraction from total number of unique variants",
+        "TSG_AvgCount": "Average sample count of variants in tumor suppressor genes",
+
+        "KnownA_Vars": "Number of unique known activating variants",
+        "KnownA_%": "Fraction from total number of unique variants",
+        "KnownA_TotCount": "Total sample count of known activating variants",
+        "KnownA_TotCount_%": "Fraction from total variant count",
+        "KnownA_AvgCount": "Average sample count of known activating variants",
+        "KnownA_Genes": "Number of genes with known activating variants",
+        "KnownD_Vars": "Number of unique known deactivating variants",
+        "KnownD_%": "Fraction from total number of unique variants",
+        "KnownD_TotCount": "Total sample count of known deactivating variants",
+        "KnownD_TotCount_%": "Fraction from total variant count",
+        "KnownD_AvgCount": "Average sample count of known deactivating variants",
+        "KnownD_Genes": "Number of genes with known deactivating variants",
+        "KnownR_Vars": "Number of unique known resistance variants",
+        "KnownR_%": "Fraction from total number of unique variants",
+        "KnownR_TotCount": "Total sample count of known resistance variants",
+        "KnownR_TotCount_%": "Fraction from total variant count",
+        "KnownR_AvgCount": "Average sample count of known resistance variants",
+        "KnownR_Genes": "Number of genes with known resistance variants",
+        "KnownN_Vars": "Number of unique known neutral variants",
+        "KnownN_%": "Fraction from total number of unique variants",
+        "KnownN_TotCount": "Total sample count of known neutral variants",
+        "KnownN_TotCount_%": "Fraction from total variant count",
+        "KnownN_AvgCount": "Average sample count of known neutral variants",
+        "KnownN_Genes": "Number of genes with known neutral variants",
+
+        "PredA_Vars": "Number of unique variants predicted as activating",
+        "PredA_%": "Fraction from total number of unique variants",
+        "PredA_TotCount": "Total sample count of variants predicted as activating",
+        "PredA_TotCount_%": "Fraction from total variant count",
+        "PredA_AvgCount": "Average sample count of variants predicted as activating",
+        "PredA_Genes": "Number of genes with variants predicted as activating",
+
+        "PredD_Vars": "Number of unique variants predicted as deactivating",
+        "PredD_%": "Fraction from total number of unique variants",
+        "PredD_TotCount": "Total sample count of variants predicted as deactivating",
+        "PredD_TotCount_%": "Fraction from total variant count",
+        "PredD_AvgCount": "Average sample count of variants predicted as deactivating",
+        "PredD_Genes": "Number of genes with variants predicted as deactivating",
+
+        "PredU_Vars": "Number of unique variants predicted as 'uncertain'",
+        "PredU_%": "Fraction from total number of unique variants",
+        "PredU_TotCount": "Total sample count of variants predicted as 'uncertain'",
+        "PredU_TotCount_%": "Fraction from total variant count",
+        "PredU_AvgCount": "Average sample count of variants predicted as 'uncertain'",
+        "PredU_Genes": "Number of genes with variants predicted as 'uncertain'",
+
+        "PredR_Vars": "Number of unique variants predicted as resistance",
+        "PredR_%": "Fraction from total number of unique variants",
+        "PredR_TotCount": "Total sample count of variants predicted as resistance",
+        "PredR_TotCount_%": "Fraction from total variant count",
+        "PredR_AvgCount": "Average sample count of variants predicted as resistance",
+        "PredR_Genes": "Number of genes with variants predicted as resistance",
+
+        "Onco_PredA_Vars": "Number of unique variants predicted as activating in oncogenes",
+        "Onco_PredA_%": "Fraction from total number of unique variants",
+        "Onco_PredA_AvgCount": "Average sample count of variants predicted as activating in oncogenes",
+        "Onco_PredD_Vars": "Number of unique variants predicted as deactivating in oncogenes",
+        "Onco_PredD_%": "Fraction from total number of unique variants",
+        "Onco_PredD_AvgCount": "Average sample count of variants predicted as deactivating in oncogenes",
+        "Onco_PredR_Vars": "Number of unique variants predicted as resistance in oncogenes",
+        "Onco_PredR_%": "Fraction from total number of unique variants",
+        "Onco_PredR_AvgCount": "Average sample count of variants predicted as resistance in oncogenes",
+        "TSG_PredA_Vars": "Number of unique variants predicted as activating in tumor suppressor genes",
+        "TSG_PredA_%": "Fraction from total number of unique variants",
+        "TSG_PredA_AvgCount": "Average sample count of variants predicted as activating in tumor suppressor genes",
+        "TSG_PredD_Vars": "Number of unique variants predicted as deactivating in tumor suppressor genes",
+        "TSG_PredD_%": "Fraction from total number of unique variants",
+        "TSG_PredD_AvgCount": "Average sample count of variants predicted as deactivating in tumor suppressor genes",
+        "TSG_PredR_Vars": "Number of unique variants predicted as resistance in tumor suppressor genes",
+        "TSG_PredR_%": "Fraction from total number of unique variants",
+        "TSG_PredR_AvgCount": "Average sample count of variants predicted as resistance in tumor suppressor genes"
+    }
+    with open(file_path["cols"], "w") as f:
+        for k, v in columns.items():
+            f.write(f"{k}\t{v}\n")
+
+
 if __name__ == '__main__':
     file_path = get_data_paths()
 
-    print_stats_from_cosmic_ml(file_path)
+    compute_stats_from_cosmic_ml(file_path)
