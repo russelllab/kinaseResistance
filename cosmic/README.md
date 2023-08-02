@@ -1,6 +1,5 @@
-# Introduction
-
-This directory contains files and scripts for the analysis of Activark predictions on somatic variants (from [COSMIC](https://cancer.sanger.ac.uk/cosmic/classic) v98).
+# Activark predictions on somatic kinase variants
+This directory contains files and scripts for the analysis of Activark predictions on somatic kinase variants (from [COSMIC](https://cancer.sanger.ac.uk/cosmic/classic) v98).
 
 
 ## Data Files
@@ -29,7 +28,7 @@ Complete predictor output for COSMIC kinase variants.
 - `ML/cosmic_activark.log`</br>
 Log of predictor output.
 
-#### Analysis results
+### Analysis results
 
 - `results/ML_output_cosmic_all.tsv.gz`</br>
 Final list of kinase somatic variants in COSMIC containing known functional annotations (if available), the predictor scores, the sample counts and the corresponding known roles in cancer for the kinase (if known). Variants are sorted by sample count in descending order.
@@ -40,10 +39,13 @@ Same as above but using only sample counts from genome-wide screens.
 - `results/stats_from_cosmic_activark.txt`</br>
 Diverse calculations made for `results/ML_output_cosmic_all.tsv.gz`, such us the number of variants predicted as activating, deactivating and/or resistance in the whole dataset or withing known oncogenes or TSGs.
 
+- `results/stats_from_cosmic_activark_cols.txt`</br>
+Column descriptions from `results/stats_from_cosmic_activark.txt`.
+
 ## Scripts
 
 - `merge_cosmic_and_ML.py`</br>
 Merges the predictions for somatic variants with COSMIC annotations. Produces `results/ML_output_cosmic_all.tsv.gz` and `results/ML_output_cosmic_gws.tsv.gz`.
 
 - `calculate_stats.py`</br>
-Loads results in dataframe and makes a bunch of calculations. 
+Loads results in dataframe and makes a bunch of calculations. Produces: `results/stats_from_cosmic_activark.txt` and `stats_from_cosmic_activark_cols.txt`.
