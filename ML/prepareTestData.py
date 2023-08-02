@@ -234,7 +234,8 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     # Create dict results that will return the output
     results = {
             'entries_not_found': {},
-            'predictions': {}
+            'predictions': {},
+            'overEntries': 0,
             }
 
     # # Connect to DB
@@ -293,7 +294,7 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     # Go line by line through the contents
     kinases = {}
     entries_not_found = {}
-    # count = 0
+    count = 0
     threads = []
     for line in tqdm(file_contents):
         # count += 1
@@ -307,6 +308,12 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
         threads.append(thread)
         '''
         prepare_input_row(line, kinases, entries_not_found, data, dic_region, mydb)
+        # if more than 150 entries, then stop
+        # and update the overEntries counter
+        # First row in the data array is the header
+        if len(data) > 100: 
+            results['overEntries'] += 1
+            break
 
     # Wait for all threads to finish
     '''

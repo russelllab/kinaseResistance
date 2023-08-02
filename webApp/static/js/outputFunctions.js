@@ -206,6 +206,20 @@ function defineDataTable (tableID, uniqID)
     });
 }
 
+function overEntriesAlert(overEntries)
+{
+    // get a reference to the div element
+		myDiv = document.getElementById('overEntriesAlert');
+		// check conditions and activate the div if they are met
+        // alert (error);
+
+		if (overEntries != 0) {
+		myDiv.style.display = 'block';
+		} else {
+		myDiv.style.display = 'none';
+		}
+}
+
 function ignoredAlert(error)
 {
     // get a reference to the div element

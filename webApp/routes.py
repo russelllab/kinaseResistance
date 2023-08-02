@@ -541,7 +541,8 @@ def configureRoutes(app):
 		# 	return render_template('error1.html',
 		# 						# flaggedInput=json.dumps(kinase+'/'+mutation)
 		# 						)
-		
+		overEntries = results['overEntries']
+
 		ignored = []
 		entries_not_found = results['entries_not_found']
 		print (entries_not_found)
@@ -585,7 +586,8 @@ def configureRoutes(app):
 		return render_template('output2.html',
 								uniqID=json.dumps(uniqID),
 								output=json.dumps(output),
-								error=json.dumps(len(results['entries_not_found']))
+								error=json.dumps(len(results['entries_not_found'])),
+								overEntries=json.dumps(results['overEntries'])
 								)
 		
 	@app.route('/result', methods=['GET', 'POST'])
@@ -953,6 +955,8 @@ def configureRoutes(app):
 		identitydictionary = ast.literal_eval(data_ident)
 		sortingvalue = '1'
 		dic_buttons = get_Buttons()
+		# print (dic_buttons)
+		# print (sortTypeText)
 		for values in dic_buttons['data']:
 			if values[1] == sortTypeText:
 				sortingvalue = str(values[0])

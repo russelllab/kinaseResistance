@@ -130,6 +130,15 @@
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 			  </div>
 
+			  <div id="overEntriesAlert" class="alert alert-dark alert-dismissible" role="alert">
+				<i class="bi bi-exclamation-circle-fill"></i>
+				<span >
+					Found more than 100 variants in the input.
+					Only predicted the first 100 variants.
+				</span>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+
 			  <div id="ignoredAlert" class="alert alert-warning" role="alert">
 				<i class="bi bi-exclamation-circle-fill"></i>
 				<span id="errorText">Some input(s) were ignored.</span>
@@ -142,6 +151,7 @@
     <script>
 		defineDataTable("outputTable", {{uniqID|safe}});
 		ignoredAlert({{error|safe}});
+		overEntriesAlert({{overEntries|safe}});
 		// introJs().start()
 	</script>
 	  <script>

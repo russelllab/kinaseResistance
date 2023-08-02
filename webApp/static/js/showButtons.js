@@ -46,7 +46,7 @@ function showButtons()
 
             // buttonList = ['Sequence identity', 'Phosphorylation', 'Acetylation']
             buttonList = ['Functional Information','Sequence Identity','Activating',
-                            'Deactivating','Activating & Deactivating','Resistance','Phosphorylation','Acetylation',
+                            'Deactivating','Activating and Deactivating','Resistance','Phosphorylation','Acetylation',
                             'Ubiquitination','Sumoylation','O-GlcNAc','Methylation']
             for (let i = 0; i < buttonList.length; i++){
                 var buttonAtag = document.createElement("a");
