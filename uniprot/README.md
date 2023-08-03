@@ -37,7 +37,7 @@ Column descriptions for `results/stats_from_uniprot_diseases_all.tsv` and `...un
 
 ### Plots
 
-Contain diverse scatter plots showing genetic diseases distribution according to the fractions of variants predicted as activating or deactivating. Dots are coloured according to the fuctional outcome of characterized variants.  
+Contains diverse scatter plots showing genetic diseases distribution according to the fractions of variants predicted as activating or deactivating. Dots are coloured according to the fuctional outcome of characterized variants.  
 
 ## Scripts
 - `merge_and_calculate_stats.py`</br>
