@@ -1,0 +1,16 @@
+Disease	Disease acronym
+Vars	Number of variants
+Prots	Number of proteins (kinases)
+GeneList	List of proteins (Gene names)
+KnownA	Number of known activating variants
+KnownD	Number of known deactivating variants
+KnownR	Number of known resistance variants
+PredA	Number of variants predicted as activating
+PredA%	Fraction of variants predicted as activating from the total predicted either A or D
+PredD	Number of variants predicted as deactivating
+PredD%	Fraction of variants predicted as deactivating from the total predicted either A or D
+PredU	Number of variants predicted as uncertain
+UnkPredA	Number of uncharacterized variants predicted as activating
+UnkPredD	Number of uncharacterized variants predicted as deactivating
+UnkPredA%	Fraction of uncharacterized variants predicted as activating from the total predicted either A or D
+UnkPredD%	Fraction of uncharacterized variants predicted as deactivating from the total predicted either A or D
