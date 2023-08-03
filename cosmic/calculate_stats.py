@@ -11,12 +11,16 @@ def get_data_paths():
         "cosmic_ml_all": "results/ML_output_cosmic_all.tsv.gz",
         "cosmic_ml_gws": "results/ML_output_cosmic_gws.tsv.gz",
         "stats": "results/stats_from_cosmic_activark.txt",
-        "cols": "results/stats_from_cosmic_activark_cols.txt"
+        "stats_cols": "results/stats_from_cosmic_activark_cols.txt"
     }
     return file_paths
 
 def decide_AvD_prediction(row):
-
+    """
+    Make decision on whether variant is predicted to be activating/deactivating
+    with different confidence levels, or uncertain.
+    """
+    
     if row["AIvLD"] > 0.7 and row["A"] > row["D"] and row["A"] > row["N"]:
         return "Activating (High)"
     elif row["AIvLD"] > 0.5 and row["A"] > row["D"] and row["A"] > row["N"]:
@@ -248,7 +252,7 @@ def compute_stats_from_cosmic_ml(file_path):
         "TSG_PredR_%": "Fraction from total number of unique variants",
         "TSG_PredR_AvgCount": "Average sample count of variants predicted as resistance in tumor suppressor genes"
     }
-    with open(file_path["cols"], "w") as f:
+    with open(file_path["stats_cols"], "w") as f:
         for k, v in columns.items():
             f.write(f"{k}\t{v}\n")
 

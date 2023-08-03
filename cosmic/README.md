@@ -40,7 +40,7 @@ Same as above but using only sample counts from genome-wide screens.
 Diverse calculations made for `results/ML_output_cosmic_all.tsv.gz`, such us the number of variants predicted as activating, deactivating and/or resistance in the whole dataset or withing known oncogenes or TSGs.
 
 - `results/stats_from_cosmic_activark_cols.txt`</br>
-Column descriptions from `results/stats_from_cosmic_activark.txt`.
+Column descriptions for `results/stats_from_cosmic_activark.txt`.
 
 ## Scripts
 

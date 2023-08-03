@@ -139,5 +139,4 @@ kp2.sql
 cosmic/*backup*
 
 # Uniprot folder
-uniprot/disease_plot*
-uniprot/above_5/
+barplot_values*
