@@ -132,6 +132,8 @@ dmypy.json
 .idea/
 
 .gitignore
+data/dataTables/*
+webApp/static/dataTables/*
 webApp/static/predictor/output/*
 kp2.sql
 
