@@ -1,6 +1,6 @@
 ![Website](https://img.shields.io/website?down_message=down&style=plastic&up_message=up&url=http%3A%2F%2Factivark.russelllab.org) ![Twitter Follow](https://img.shields.io/twitter/follow/MechismoNews?style=social)
 
-![ActivarkLogo](webApp/static/img/logo_v2.svg)
+<img src='webApp/static/img/logo_v2.svg' alt='logo' width='500'/>
 
 Activark is a data-driven, ML-based approach to predict the functional consequence of genetic changes in protein kinases. Activark was trained on a curated dataset of activating (i.e. constitutive-activation or increase in kinase activity), deactivating (i.e. loss or decrease in Kinase activity), and drug-resistance protein variants in human kinases and using sequence and structural features.
 
