@@ -27,22 +27,22 @@ for Salzberg in ['False']:
         else:
             mlflow.set_experiment(algo)
         # for name in ['AIvLD']:
-        for name in ['RvN', 'AIvLD']:
+        for name in ['RvN', 'AIvLD', 'AIvNLD', 'LDvNAI', 'AIvN', 'LDvN', 'AvN','DvN']:
         # for name in ['AILDRvN', 'ALRvN', 'AILDvN', 'ALvN', 'AIvNLD', 'AvN', 'AIvN', 'AIvLD', 'AvNL', 'AvL', 'LDvNAI', 'LvNA','LDvN', 'LvN', 'RvN']:
             with mlflow.start_run(run_name=name) as run:
                 # ML.main(max_depth,min_samples_split,min_samples_leaf, n_estimators, name=name)
                 # ML_xgb.main(max_depth,min_samples_split,min_samples_leaf, n_estimators, name=name)
                 if algo in ['RF', 'XGB']:
-                    # max_depth = [3, 4, 5, 7, 10]
-                    max_depth = [3]
-                    # min_samples_split = [3, 5 ,7, 10]
-                    min_samples_split = [3]
-                    # min_samples_leaf = [3, 5 ,7, 10]
-                    min_samples_leaf = [3]
+                    max_depth = [3, 5, 7, 10]
+                    # max_depth = [3]
+                    min_samples_split = [3, 5 ,7, 10]
+                    # min_samples_split = [3]
+                    min_samples_leaf = [3, 5 ,7, 10]
+                    # min_samples_leaf = [3]
                     n_estimators = [100]
                     ML_xgb.main(name=name, algo=algo,
-                                model_filename=name,
-                                scaler_filename=name,
+                                # model_filename=name,
+                                # scaler_filename=name,
                                 max_depth=max_depth,
                                 min_samples_split=min_samples_split,
                                 min_samples_leaf=min_samples_leaf,

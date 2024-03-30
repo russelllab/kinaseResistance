@@ -133,7 +133,7 @@ pfam_positions.sort()
 fig, ax = plt.subplots()
 
 mut_types = ['constitutive-activation', 'increase', 'resistance', 'decrease', 'loss', 'neutral']
-mut_types_colors = ['green', 'lightgreen', 'blue', 'lightcoral', 'red', 'yellow']
+mut_types_colors = ['green', 'lightgreen', 'blue', 'lightcoral', 'red', '#F2E34C']
 bottom = np.zeros(4)
 for mut_type, mut_types_color in zip(mut_types, mut_types_colors):
 	ptmsite = []

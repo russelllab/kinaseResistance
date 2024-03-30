@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/471584527324098298/dc1b5c4a7f364d7da451eb002e749ee1/artifacts
+deleted_time: 1711805423959
+end_time: 1711803765766
+entry_point_name: ''
+experiment_id: '471584527324098298'
+lifecycle_stage: deleted
+run_id: dc1b5c4a7f364d7da451eb002e749ee1
+run_name: LDvNAI
+run_uuid: dc1b5c4a7f364d7da451eb002e749ee1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711803752120
+status: 3
+tags: []
+user_id: gurdeep

@@ -1,0 +1,17 @@
+This panel displays the prediction results and
+known information about the input variants.<br>
+<kbd>Info:</kbd> Known variant and PTM information at the equivalent site in other kinases.<br>
+<kbd>View:</kbd> Click this to view the individual variant entry.<br>
+<kbd>Gene Name:</kbd> Gene of the kinase.<br>
+<kbd>Variant:</kbd> Input variant.<br>
+<kbd>Kinase domain region:</kbd> Kinase domain region.<br>
+<kbd>Known ADR:</kbd> Known functional variants at the given site.<br>
+<kbd>Verdict (activating vs deactivating):</kbd> 
+Likelihood if the given variant is activating or deactivating the kinase. 
+Values in paranthesis refer to the prediction confidence (Low, Medium, High). 
+Variants with uncertain verdicts are marked as "ambigous" and the ones that
+lie outside the kinase domain as '-'. <br>
+<kbd>Verdict (resistance):</kbd> 
+Likelihood if the given variant is resistant the kinase. 
+Values in paranthesis refer to the prediction confidence (Low, Medium. High). 
+Variants that lie outside the kinase domain as '-'. <br>

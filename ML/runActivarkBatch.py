@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import gzip
+import os
 import threading
 import fetchData
 from tqdm import tqdm
@@ -9,6 +10,7 @@ import prepareTestData
 from cls import Kinase, Mutation
 
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
+ALGO = 'XGB'
 
 accs_to_consider = []
 for line in gzip.open('all_kinases_acc.txt.gz', 'rt'):
@@ -31,8 +33,11 @@ for row in hits :
     kinases[acc].append(name.split('/')[1])
 
 def call_activark(acc):
-    outputFile = 'outputs/'+acc+'.txt'
-    prepareTestData.predict(5000, 'inputs/'+acc+'.txt.gz', outputFile = outputFile)
+    # if the folder does not exist, create it
+    if not os.path.exists('outputs/'+ALGO):
+        os.makedirs('outputs/'+ALGO)
+    outputFile = 'outputs/'+ALGO+'/'+acc+'.txt'
+    prepareTestData.predict(6, 'inputs/'+acc+'.txt.gz', outputFile = outputFile, algo=ALGO)
 
 count = 0
 for acc in tqdm(kinases):
@@ -49,12 +54,12 @@ for acc in tqdm(kinases):
         #    break
     
     gzip.open('inputs/'+acc+'.txt.gz', 'wt').write(mutations)
-    call_activark(acc)
-    # thread = threading.Thread(target=call_activark, args=(acc,))
-    # thread.start()
+    # call_activark(acc)
+    thread = threading.Thread(target=call_activark, args=(acc,))
+    thread.start()
     # prepareTestData.predict('inputs/'+acc+'.txt')
     # if count == 5: break
-    # while threading.active_count() > 25:
-    #     pass
+    while threading.active_count() > 10:
+        pass
     
 mydb.close()

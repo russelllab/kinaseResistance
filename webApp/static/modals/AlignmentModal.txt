@@ -1,2 +1,9 @@
-This panel displays the alignment of the input kinase sequence with the remaining human kinase sequences.<br>
-			The sequences are aligned using the HMM profile of the human kinase sequences and sorted based on mutational information known around the position of the interest.
+This panel displays the alignment of the input kinase sequence with
+other human kinase sequences. Known functional variants are then mapped
+onto the alignment. Hover on the variants to know more about them.<br>
+<kbd>Sort alignment by</kbd> represents the information (known functional or PTM)
+based on which the alignment will be sorted.<br>
+<kbd>Show top N kinases</kbd> reflects the top N kinases to be displayed in the alignment.
+(recommended 10-100).<br>
+<kbd>Window Size</kbd> represents the number of positions before or
+after the variant site to be displayed in the alignment (recommended 10-30).

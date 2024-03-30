@@ -18,6 +18,8 @@ class Mutation:
         self.mut_type = mut_type
         self.prediction = None
         self.prob = None
+    def show(self):
+        print (self.acc, self.pos, self.wtAA, self.mutAA, self.mut_type, self.prediction, self.prob)
 
 mydb = fetchData.connection(db_name='kinase_project2')
 mydb.autocommit = True
@@ -67,10 +69,17 @@ for name in dic_mutations:
 
 gzip.open('pmut_output.tsv.gz', 'wt').write(pmut_output)
 
-MUT_TYPES = {'A': ['activating', 'increase'], 'D': ['decrease', 'loss'], 'T': ['activatingresistance', 'increaseresistance']}
+MUT_TYPES = {
+            'A': ['activating', 'increase'],
+            'D': ['decrease', 'loss'],
+            'R': ['resistance'],
+            'T': ['activatingresistance'],
+            'N': ['neutral']
+            }
 text = ''
 for mut_type in MUT_TYPES:
-    y_pred = []; y_true = []; y_prob=[]
+    names = []
+    y_pred = []; y_true = []; y_prob=[]; y_act_deact_or_neutral = []
     for mutation in dic_mutations:
         if dic_mutations[mutation].prediction is None: continue
         kinase_mut_type = dic_mutations[mutation].mut_type
@@ -81,10 +90,15 @@ for mut_type in MUT_TYPES:
         else:
             y_pred.append(0)
         y_prob.append(float(dic_mutations[mutation].prob))
+        if kinase_mut_type in MUT_TYPES['N']:
+            y_act_deact_or_neutral.append(0)
+        else:
+            y_act_deact_or_neutral.append(1)
         if kinase_mut_type in MUT_TYPES[mut_type]:
             y_true.append(1)
         else:
             y_true.append(0)
+        names.append(mutation)
     # print (f'MCC: {matthews_corrcoef(y_true, y_pred)}')
     print (mut_type, len(y_pred), f'REC: {recall_score(y_true, y_pred)}')
     # print (f'AUC: {roc_auc_score(y_true, y_pred)}')
@@ -92,8 +106,9 @@ for mut_type in MUT_TYPES:
         print (y_true)
         print (y_pred)
 
-    for y_p, y_t in zip(y_prob, y_true):
-        text += str(y_p) + '\t' + str(y_t) + '\n'
+    for name, y_p, y_t in zip(names, y_prob, y_act_deact_or_neutral):
+        if 'V600E' in name: dic_mutations[name].show()
+        text += str(name) + '\t' + str(dic_mutations[name].mut_type) + '\t' + str(y_p) + '\t' + str(y_t) + '\n'
 
 open('pmut_roc.txt', 'w').write(text)
 # print (y_pred)

@@ -26,11 +26,11 @@ PTM_TYPES = ['ac', 'gl', 'm1', 'm2', 'm3', 'me', 'p', 'sm', 'ub']
 MUT_TYPES = ['A', 'D', 'R']
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L',
       'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
-MODEL_NAMES = ['N', 'D', 'A', 'AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN',
-               'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
-MODEL_NAMES = ['AIvLD', 'RvN']
+# MODEL_NAMES = ['N', 'D', 'A', 'AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN',
+#                'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
+MODEL_NAMES = ['N', 'D', 'A',
+               'RvN', 'AIvLD', 'AIvNLD', 'LDvNAI', 'AIvN', 'LDvN']
 # MODEL_NAMES = ['N', 'L', 'A']
-ALGO = 'XGB'
 WS = 5
 START_ALN = 33
 END_ALN = 823
@@ -214,7 +214,7 @@ def prepare_input_row(line, kinases, entries_not_found, data, dic_region, mydb):
     data.append(row)
     mycursor.close()
 
-def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
+def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../', algo='XGB') -> dict:
     """
     Function to predict the effect of mutations on kinase activity
 
@@ -236,7 +236,8 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     # Create dict results that will return the output
     results = {
             'entries_not_found': {},
-            'predictions': {}
+            'predictions': {},
+            'overEntries': 0,
             }
 
     # # Connect to DB
@@ -295,22 +296,32 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     # Go line by line through the contents
     kinases = {}
     entries_not_found = {}
-    # count = 0
+    count = 0
     threads = []
     for line in tqdm(file_contents):
         # count += 1
         # print (threading.active_count())
+        '''
         while (threading.active_count() >= numThreads):
             continue
         thread = threading.Thread(target=prepare_input_row,
                                   args=(line, kinases, entries_not_found, data, dic_region, mydb))
         thread.start()
         threads.append(thread)
+        '''
+        prepare_input_row(line, kinases, entries_not_found, data, dic_region, mydb)
+        # if more than 150 entries, then stop
+        # and update the overEntries counter
+        # First row in the data array is the header
+        if len(data) > 100: 
+            results['overEntries'] += 1
+            break
 
     # Wait for all threads to finish
+    '''
     for thread in threads:
         thread.join()
-
+    '''
     # save entries not found in the results dic
     results ['entries_not_found'] = entries_not_found
     
@@ -343,14 +354,14 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     dic_predictions = {}
     for model in MODEL_NAMES:
         if model in ['N', 'D', 'A']:
-            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+ALGO+'/'+'scaler_all.pkl', 'rb'))
+            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+algo+'/'+'scaler_all.pkl', 'rb'))
             dic_features[model] = dic_scalers[model].transform(features)
-            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+ALGO+'/'+'model_all.sav', 'rb'))
+            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+algo+'/'+'model_all.sav', 'rb'))
             dic_predictions[model] = dic_clfs[model].predict_proba(dic_features[model])
         else:
-            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+ALGO+'/'+'scaler_'+model+'.pkl', 'rb'))
+            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+algo+'/'+'scaler_'+model+'.pkl', 'rb'))
             dic_features[model] = dic_scalers[model].transform(features)
-            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+ALGO+'/'+'model_'+model+'.sav', 'rb'))
+            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+algo+'/'+'model_'+model+'.sav', 'rb'))
             dic_predictions[model] = dic_clfs[model].predict_proba(dic_features[model])
     
     # print (dic_predictions)
@@ -468,7 +479,16 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
             elif int(hmmPos) < START_ALN and int(hmmPos) > END_ALN:
                 results['predictions'][name][model] = 'NA\t'
             else:
-                results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3)) + '\t'
+                if model not in ['N', 'D', 'A']:
+                    results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3))
+                else:
+                    if model == 'N':
+                        results['predictions'][name][model] = str(round(dic_predictions[model][count][0], 3))
+                    elif model == 'D':
+                        results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3))
+                    elif model == 'A':
+                        results['predictions'][name][model] = str(round(dic_predictions[model][count][2], 3))
+                # results['predictions'][name][model] = str(round(dic_predictions[model][count][1], 3)) + '\t'
         
             # if 'A84' in mutation and model=='AIvNLD':
                 # print (dic_features[model][count])

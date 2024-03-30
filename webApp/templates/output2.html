@@ -1,10 +1,11 @@
 {% extends "layout.html" %}
 {% block head %}
-	<title>Activark: Results</title>
+	<title>Activark: Summary</title>
 	<!-- Load plotly.js into the DOM -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="{{url_for('static', filename='/js/outputFunctions.js')}}"></script>
+	<script src="{{url_for('static', filename='/js/makeModals.js')}}"></script>
 	<script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src="{{url_for('static', filename='/js/showSummary.js')}}"></script>
@@ -29,38 +30,48 @@
 {% endblock %}
 
 {% block content %}
+	<style>
+		div.dt-button-collection {
+		width: 400px;
+		}
+		
+		div.dt-button-collection button.dt-button {
+			display: inline-block;
+			width: 32%;
+		}
+		div.dt-button-collection button.buttons-colvis {
+			display: inline-block;
+			width: 49%;
+		}
+		div.dt-button-collection h3 {
+			margin-top: 5px;
+			margin-bottom: 5px;
+			font-weight: 100;
+			border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+			font-size: 1em;
+			padding: 0 1em;
+		}
+		div.dt-button-collection h3.not-top-heading {
+			margin-top: 10px;
+		}
+	</style>
+	<script>
+		makeModals('Output')
+	</script>
 	<div class="container" style="padding-bottom: 100px;">
-		<div class="row" style="padding-top: 20px;">
-			<div class="alert alert-primary d-flex align-items-center alert-dismissible " role="alert">
-				<i class="bi bi-bookmark-check-fill"></i>
-				<span class="iconText">
-				  Bookmark this page to easily access your results again in the future.
-				</span>
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-			  </div>
-
-			  <div id="introAlert" class="alert alert-info d-flex align-items-center alert-dismissible " role="alert">
-				<i class="bi bi-info-circle-fill"></i>
-				<span class="iconText">
-					Need a <a href="#" id="intro-link" class="alert-link" onclick=runIntro()>quick tour</a> of the page?
-				</span>
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-			  </div>
-
-			  <div id="ignoredAlert" class="alert alert-warning" role="alert">
-				<i class="bi bi-exclamation-circle-fill"></i>
-				<span id="errorText">Some input(s) were ignored.</span>
-				<a id="ignored-link" class="alert-link" target="_blank">Click here</a> to know more.
-			  </div>
-			  <script>makeIgnoredLink({{uniqID|safe}})</script>
-		</div>
 		
 		<div class="row">
-			<h3 class="headingFont" data-title="Results" data-intro="This page displays predicted results and known information">Results
-				<button type="button" class="btn btn-default btn-sm">
-					<i class="bi bi-info-circle" data-bs-toggle="modal" data-bs-target="#ResultsModal" onclick="makeModals('Results')"></i>
+			<h3 class="headingFont"
+				data-title="Output" data-intro="This page displays predicted output and known information"
+				style="padding-top: 50px;">
+				Known and predicted kinase effects
+				<button type="button" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#OutputModal">
+					<i class="bi bi-question-circle-fill" data-title="Description of the page" data-intro="Click this to read the detailed descrition of the page"></i>
 				</button>
 			</h3>
+			<h5 class="headingFont2">
+				(A: Activating; D: Deactivating; N: Neutral; R: Resistance-causing)
+			</h5>
 			<table id="outputTable" class="display" style="width:100%; text-align: center;">
 				<thead id="table-head">
 					<!-- <tr>
@@ -102,10 +113,45 @@
 				</script>
 			</table>
 		</div>
+		<div class="row" style="padding-top: 20px;">
+			<div class="alert alert-primary d-flex align-items-center alert-dismissible " role="alert">
+				<i class="bi bi-bookmark-check-fill"></i>
+				<span class="iconText">
+				  Bookmark this page to easily access your results again in the future.
+				</span>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+
+			  <div id="introAlert" class="alert alert-info d-flex align-items-center alert-dismissible " role="alert">
+				<i class="bi bi-info-circle-fill"></i>
+				<span class="iconText">
+					Need a <a href="#" id="intro-link" class="alert-link blink" onclick=runIntro()>QUICK TOUR</a> of the page?
+				</span>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+
+			  <div id="overEntriesAlert" class="alert alert-dark alert-dismissible" role="alert">
+				<i class="bi bi-exclamation-circle-fill"></i>
+				<span >
+					Found more than 100 variants in the input.
+					Only predicted the first 100 variants.
+				</span>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+
+			  <div id="ignoredAlert" class="alert alert-warning" role="alert">
+				<i class="bi bi-exclamation-circle-fill"></i>
+				<span id="errorText">Some input(s) were ignored.</span>
+				<a id="ignored-link" class="alert-link" target="_blank">Click here</a> to know more.
+			  </div>
+			  <script>makeIgnoredLink({{uniqID|safe}})</script>
+		</div>
+		
 	</div>
     <script>
 		defineDataTable("outputTable", {{uniqID|safe}});
 		ignoredAlert({{error|safe}});
+		overEntriesAlert({{overEntries|safe}});
 		// introJs().start()
 	</script>
 	  <script>

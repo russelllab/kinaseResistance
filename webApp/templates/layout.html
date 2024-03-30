@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" type="image/x-icon" href="../static/img/logo_v2.svg">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/navbar.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/footer.css') }}">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -24,6 +25,19 @@
 			/* transform: translate(-50%, -50%); */
   			/* transition: all 2s ease-in-out; */
         }
+		.headingFont2
+        {
+            font-family:    Arial, Helvetica, sans-serif;
+            font-size:      20px;
+            font-weight:    bold;
+            text-align: center;
+            padding-top: 0px;
+			/* position: absolute; */
+			/* top: 10%; */
+  			/* left: 50%; */
+			/* transform: translate(-50%, -50%); */
+  			/* transition: all 2s ease-in-out; */
+        }
 		.headingFontHomePage
         {
             font-family:    Arial, Helvetica, sans-serif;
@@ -33,9 +47,9 @@
             padding-top: 5%;
 			position: relative;
 			top: 10%;
-  			left: 50%;
-			transform: translate(-50%, -50%);
-  			transition: all 2s ease-in-out;
+  			/* left: 50%; */
+			/* transform: translate(-50%, -50%); */
+  			/* transition: all 2s ease-in-out; */
         }
 		body {
 			margin: 0;
@@ -47,6 +61,16 @@
 			margin: 0;
 			padding-left: 5px;
 		}
+		.blink {
+            animation: blinker 1.0s linear infinite;
+            color: red;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -64,8 +88,10 @@
 	<nav>
 		<ul>
 			<li><a href="/" target="_blank">Search <i class="bi bi-search"></i></a></li>
-			<li><a href="#">About <i class="bi bi-info-circle"></i></a></li>
-			<li><a href="#">Help <i class="bi bi-book"></i></a></li>
+			<li><a href="/about" target="_blank">About <i class="bi bi-info-circle"></i></a></li>
+			<li><a href="/help" target="_blank">Help <i class="bi bi-book"></i></a></li>
+			<li><a href="/datasets" target="_blank">Datasets <i class="bi bi-database-down"></i></a></li>
+			<li><a href="/examples" target="_blank">Examples <i class="bi bi-stack"></i></a></li>
 			<li><a href="http://russelllab.org" target="_blank">Russell Lab <i class="bi bi-people"></i></a></li>
 		</ul>
 		<div class="nav-link">

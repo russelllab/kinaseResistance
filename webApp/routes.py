@@ -32,16 +32,15 @@ else:
 	BASE_DIR = '../'
 	BASE_DIR = '/home/gurdeep/projects/kinaseResistance/'
 
-
 sys.path.insert(1, BASE_DIR+'/ML/')
 import prepareTestData
 import fetchData
 
-create_svg_path = '/Create_SVG/Enhancements_May2023/June20th/'
+create_svg_path = '/Create_SVG/Enhancements_May2023/27June/'
 sys.path.insert(1, BASE_DIR+create_svg_path)
-import create_svg_20230620_kinases_GS as create_svg
-conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_Jun-20-2023.txt'
-identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_Jun-20-2023.txt'
+import Create_SVG_20230731 as create_svg
+conservation_dic_path = BASE_DIR+create_svg_path+'GenerelleKonservierung_Jun-28-2023.txt'
+identity_dic_path = BASE_DIR+create_svg_path+'SeqIdentity_Matrix_Jun-28-2023.txt'
 
 def connection(database='kinase_project2'):
     '''Function to connect to postgresql database'''
@@ -289,6 +288,74 @@ def resetDic(dic, alignment):
 	# print (new_dic)
 	return new_dic
 
+def final_verdictNDA(AIvLD, A, D, N, RvN):
+	if AIvLD == 'NA\t':
+		verdict = 'NA'
+		return verdict
+	'''
+	a = float(A)*0.6 + float(AIvLD)*0.4
+	d = float(D)*0.6 + (1-float(AIvLD))*0.4
+	n = float(N)*0.6
+	if n > 0.5:
+		verdict = '-'
+		return verdict
+	if a >= d:
+		prob = a
+		verdict = 'Activating'
+	else:
+		prob = d
+		verdict = 'Deactivating'
+	if 0 <= prob < 0.33:
+		verdict += ' (Low)'
+	elif 0.33 <= prob < 0.66:
+		verdict += ' (Medium)'
+	else:
+		verdict += ' (High)'
+	return verdict
+	'''
+	verdictA = '-'
+	if float(AIvLD) >= 0.7 and float(A) > float(D) and float(A) > float(N):
+		verdictA = 'Activating (High)'
+	elif float(AIvLD) >= 0.5 and float(A) > float(D) and float(A) > float(N):
+		verdictA = 'Activating (Medium)'
+	elif float(AIvLD) >= 0.5 and float(N) > float(A) and float(A) > float(D):
+		verdictA = 'Activating (Low)'
+	
+	verdictD = '-'
+	if float(AIvLD) <= 0.3 and float(D) > float(A) and float(D) > float(N):
+		verdictD = 'Deactivating (High)'
+	elif float(AIvLD) < 0.5 and float(D) > float(A) and float(D) > float(N):
+		verdictD = 'Deactivating (Medium)'
+	elif float(AIvLD) < 0.5 and float(N) > float(D) and float(D) > float(A):
+		verdictD = 'Deactivating (Low)'
+	
+	if verdictA == '-' and verdictD == '-':
+		verdict = 'Uncertain'
+	elif verdictA != '-' and verdictD == '-':
+		verdict = verdictA
+	elif verdictA == '-' and verdictD != '-':
+		verdict = verdictD
+	else:
+		if float(AIvLD) >= 0.6:
+			verdict = verdictA
+		elif float(AIvLD) <= 0.4:
+			verdict = verdictD
+		else:
+			verdict = 'Uncertain'
+	
+	return verdict
+	
+def final_verdictR(AIvLD, A, D, RvN):
+	if RvN == 'NA\t':
+		verdict = '-'
+		return verdict
+	if float(RvN) > 0.5 and float(AIvLD) > 0.3:
+		verdict = 'Resistance'
+	else:
+		verdict = '-'
+	return verdict
+
+
 def makeOutputJson(uniqID, results, mycursor) -> dict:
 	output = []
 	for name in results['predictions']:
@@ -329,6 +396,27 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 		dic['AIvN'] = results['predictions'][name]['AIvN']
 		dic['LDvN'] = results['predictions'][name]['LDvN']
 		dic['RvN'] = results['predictions'][name]['RvN']
+
+		# NDA predictions
+		dic['A'] = results['predictions'][name]['A']
+		dic['D'] = results['predictions'][name]['D']
+		dic['N'] = results['predictions'][name]['N']
+
+		# Verdict
+		dic['verdictNDA'] = final_verdictNDA(
+										dic['AIvLD'],
+				 						dic['A'],
+										dic['D'],
+										dic['N'],
+										dic['RvN']
+										)
+		
+		dic['verdictR'] = final_verdictR(
+										dic['AIvLD'],
+				 						dic['A'],
+										dic['D'],
+										dic['RvN']
+										)
 		
 		dic['hmmPos'] = results['predictions'][name]['hmmPos']
 		dic['alnPos'] = results['predictions'][name]['alnPos']
@@ -349,7 +437,7 @@ def makeOutputJson(uniqID, results, mycursor) -> dict:
 	output = {'data': output}
 	return output
 
-def runPrediction(uniqID, inputMuts):
+def runPrediction(uniqID, inputMuts, algo='XGB'):
 	if os.path.isfile(BASE_DIR + '/webApp/static/predictor/output/'+uniqID) is False:
 		os.system('mkdir '+ BASE_DIR +'/webApp/static/predictor/output/'+uniqID)
 	with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/input.txt', 'w') as f:
@@ -364,8 +452,8 @@ def runPrediction(uniqID, inputMuts):
 	# 		print(p.keys())
 	# 		return p
 		# yield p
-	results = prepareTestData.predict(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/input.txt', \
-				BASE_DIR = BASE_DIR)
+	results = prepareTestData.predict(10, BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/input.txt', \
+				BASE_DIR = BASE_DIR, algo=algo)
 	return results
 
 def configureRoutes(app):
@@ -397,6 +485,34 @@ def configureRoutes(app):
 		Display the alignment page
 		'''
 		return render_template('alignment.html')
+	
+	@app.route('/about', methods=['GET', 'POST'])
+	def about():
+		''''
+		Display the about page
+		'''
+		return render_template('about.html')
+	
+	@app.route('/help', methods=['GET', 'POST'])
+	def help():
+		''''
+		Display the help page
+		'''
+		return render_template('help.html')
+	
+	@app.route('/datasets', methods=['GET', 'POST'])
+	def datasets():
+		''''
+		Display the datasets page
+		'''
+		return render_template('datasets.html')
+	
+	@app.route('/examples', methods=['GET', 'POST'])
+	def examples():
+		''''
+		Display the examples page
+		'''
+		return render_template('examples.html')
 
 	@app.route('/output/<string:uniqID>', methods=['GET', 'POST'])
 	def output(uniqID: str):
@@ -407,6 +523,7 @@ def configureRoutes(app):
 		'''
 		if request.method == 'POST':
 			inputMuts = request.form['inputMut']
+			algo = request.form['algo']
 		if request.method == 'GET':
 			# inputMuts = 'BRAF/V600E'
 			# f = open(BASE_DIR+'/tests/sample_mutations3.txt', "r")
@@ -416,7 +533,7 @@ def configureRoutes(app):
 		mycursor = connection()
 		#sys.exit()
 		# inputMuts = request.form['inputMut']
-		results = runPrediction(uniqID, inputMuts)
+		results = runPrediction(uniqID, inputMuts, algo=algo)
 		# print (results)
 		if isinstance(results, float):
 			return app.response_class(results, mimetype='text/plain')
@@ -425,7 +542,8 @@ def configureRoutes(app):
 		# 	return render_template('error1.html',
 		# 						# flaggedInput=json.dumps(kinase+'/'+mutation)
 		# 						)
-		
+		overEntries = results['overEntries']
+
 		ignored = []
 		entries_not_found = results['entries_not_found']
 		print (entries_not_found)
@@ -452,7 +570,7 @@ def configureRoutes(app):
 		with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/ignored.json', 'w') as f:
 			json.dump(ignored, f)
 		if len(results['predictions']) == 0:
-			text = 'Unfortunately, none of the mutations you submitted were found in the database.<br>Please check the input and try again.'
+			text = 'None of the variants could not be processed.<br>Please check your input and try again.'
 			return render_template('ignored2.html',
 								uniqID=json.dumps(uniqID),
 								text=json.dumps(text),
@@ -469,7 +587,8 @@ def configureRoutes(app):
 		return render_template('output2.html',
 								uniqID=json.dumps(uniqID),
 								output=json.dumps(output),
-								error=json.dumps(len(results['entries_not_found']))
+								error=json.dumps(len(results['entries_not_found'])),
+								overEntries=json.dumps(results['overEntries'])
 								)
 		
 	@app.route('/result', methods=['GET', 'POST'])
@@ -495,7 +614,7 @@ def configureRoutes(app):
 				mycursor = connection()
 				uniqID = makeUniqID()
 				print (uniqID, kinase, mutation)
-				results = runPrediction(uniqID, kinase+'/'+mutation)
+				results = runPrediction(uniqID, kinase+'/'+mutation, algo='XGB')
 				output = makeOutputJson(uniqID, results, mycursor)
 				# Save the output to a json file to be used by datatables
 				with open(BASE_DIR+'/webApp/static/predictor/output/'+uniqID+'/output.json', 'w') as f:
@@ -551,9 +670,9 @@ def configureRoutes(app):
 				ignored = json.load(f)
 			
 			if len(ignored['data']) == 1:
-				text = 'Unfortunately, the following mutation you submitted was not found in the database.<br>Please check the input and try again.'
+				text = 'The following variants could not be processed.<br>Please check your input and try again.'
 			else:
-				text = 'Unfortunately, the following mutations you submitted were not found in the database.<br>Please check the input and try again.'
+				text = 'The following variants could not be processed.<br>Please check your input and try again.'
 			return render_template('ignored2.html',
 									uniqID=json.dumps(uniqID),
 									text=json.dumps(text),
@@ -584,24 +703,29 @@ def configureRoutes(app):
 		
 		dic = {}
 		# print (kinase, mutation)
-		activating_prob = results['predictions'][kinase+'/'+mutation]['AIvN']
-		deactivating_prob = results['predictions'][kinase+'/'+mutation]['LDvN']
+		activating_prob = results['predictions'][kinase+'/'+mutation]['A']
+		deactivating_prob = results['predictions'][kinase+'/'+mutation]['D']
+		neutral_prob = results['predictions'][kinase+'/'+mutation]['N']
 		resistance_prob = results['predictions'][kinase+'/'+mutation]['RvN']
 		activating_AIvLD_prob = results['predictions'][kinase+'/'+mutation]['AIvLD']
 		if activating_prob == 'NA':
 			activating_AIvLD_prob = 0.0
 			deactivating_AIvLD_prob = 0.0
 		else:
-			activating_AIvLD_prob = float(activating_AIvLD_prob)
-			deactivating_AIvLD_prob = 1.0 - activating_AIvLD_prob
-			activating_AIvLD_prob = round(activating_AIvLD_prob, 3)
-			deactivating_AIvLD_prob = round(deactivating_AIvLD_prob, 3)
+			deactivating_AIvLD_prob = round(1.0 - float(activating_AIvLD_prob), 3)
+		# else:
+		# 	activating_AIvLD_prob = float(activating_AIvLD_prob)
+		# 	deactivating_AIvLD_prob = 1.0 - activating_AIvLD_prob
+		# 	activating_AIvLD_prob = round(activating_AIvLD_prob, 3)
+		# 	deactivating_AIvLD_prob = round(deactivating_AIvLD_prob, 3)
 
 		results['predictions'][kinase+'/'+mutation]['activating'] = activating_prob
 		results['predictions'][kinase+'/'+mutation]['deactivating'] = deactivating_prob
+		results['predictions'][kinase+'/'+mutation]['neutral'] = round(float(neutral_prob), 3)
 		results['predictions'][kinase+'/'+mutation]['resistance'] = resistance_prob
 		dic = {'activating': results['predictions'][kinase+'/'+mutation]['activating'],
 				'deactivating': results['predictions'][kinase+'/'+mutation]['deactivating'],
+				'neutral': results['predictions'][kinase+'/'+mutation]['neutral'],
 				'resistance': results['predictions'][kinase+'/'+mutation]['resistance'],
 				'activating_AIvLD': activating_AIvLD_prob,
 				'deactivating_AIvLD': deactivating_AIvLD_prob
@@ -742,6 +866,12 @@ def configureRoutes(app):
 		with open('static/predictor/output/'+uniqID+'/output.json', 'r') as f:
 			output = json.load(f)
 		
+		## check window size
+		if int(ws) % 2 == 0:
+			ws = int(ws)/2
+		else:
+			ws = (int(ws)-1)/2
+		
 		accs_in_alignment = {}
 		for line in open('static/hmm/humanKinasesTrimmed.clustal', 'r'):
 			if line.startswith('sp'):
@@ -826,13 +956,15 @@ def configureRoutes(app):
 		identitydictionary = ast.literal_eval(data_ident)
 		sortingvalue = '1'
 		dic_buttons = get_Buttons()
+		# print (dic_buttons)
+		# print (sortTypeText)
 		for values in dic_buttons['data']:
 			if values[1] == sortTypeText:
 				sortingvalue = str(values[0])
 				break
 		print (f'sortingValue is {sortingvalue}')
-		geeky_file = open('sample_dic_mutation_info.txt', 'wt')
-		geeky_file.write(str(dic_mutations_info))
+		# geeky_file = open('sample_dic_mutation_info.txt', 'wt')
+		# geeky_file.write(str(dic_mutations_info))
 		# try:
 
 		# The following searching  is needed to find the name of entry
@@ -846,10 +978,10 @@ def configureRoutes(app):
 				entry_to_search = entry
 				break
 		feature_dic = {}
-		for line in open('../data/ss.tsv', 'r', encoding='utf-8'):
+		for line in gzip.open('../alignments/humanKinasesPkinasePK_Tyr_Ser-ThrAll_no_gapsTrimmed_ss.tsv.gz', 'rt', encoding='utf-8'):
 			if line.startswith('#'): continue
 			name = str(line.split()[0])
-			start, end = line.split()[3].rstrip().split('-')
+			start, end = line.split()[1].rstrip().split('-')
 			# print (name, start, end)
 			feature_dic[name] = [i for i in range(int(start), int(end)+1)]
 		try:

@@ -1,17 +1,23 @@
 {% extends "layout.html" %}
 {% block head %}
     <title>Activark</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/slider.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form.css') }}">
     <script src="{{url_for('static', filename='/js/loadExamples.js')}}"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
+    <!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css" rel="stylesheet" crossorigin="anonymous">
 {% endblock %}
 
 {% block content %}
     <style>
         .fa-hourglass-half {
-            font-size: 30px;
+            font-size: 20px;
             color: black;
             animation: rotate 2s linear infinite;
             }
@@ -29,40 +35,76 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        /* height: 100px; Adjust the height as needed */
                         }
     </style>
-    <h1 class="headingFontHomePage" id="headingElement">
-        <!-- <div class="logo-container">
-            <img src="static/img/activark_logo.png" alt="Activark Logo"
-            style="width: 100px; height: 100px; padding-top: 10%;">
-        </div> -->
+    
+    <!-- <h1 class="headingFontHomePage">
         <i class="bi bi-diagram-3-fill"></i>
         Activark
-    </h1>
-    <div id="formArea">
-	<form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
-        <textarea style="height: 400px; width: 400px; font-size: 15px;" type="text" 
-                    placeholder="#Input format&#10;&#10;PLK3/K91R&#10;RAF1/D486N&#10;EGFR_HUMAN/T790M" name="inputMut" id="inputMut">
-            
-                        </textarea>
-        <div style="display: inline; padding-top: 0px;">
-		    <!-- <input style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit"/> -->
-            <button id="exampleDefault" style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">Submit <i class="bi bi-send"></i></button>
-            <button id="clearButton" style="padding-top: 10px;" type="button" onclick="call_onclick_clear()" value="Submit">Clear <i class="bi bi-repeat"></i></button>
+    </h1> -->
+    <div class="container" style="padding-top: 50px;">
+		<div class="row align-items-center">
+            <div class="col text-center">
+                <div class="card" style="height: 500px;">
+                    <div class="card-body">
+                        <span>
+                            <img src = "../static/img/logo_v2.svg" height="300px" 
+                            alt="logo"/>
+                        </span>
+                        <p style=" padding-top: 50px;">
+                            Activark is a data-driven, ML-based approach to predict the functional consequence 
+                            of genetic changes in protein kinases. Activark was trained on a curated dataset 
+                            <a href="http://activark.russelllab.org/about#data_source"><i class="bi bi-box-arrow-up-right"></i></a>
+                            of activating, deactivating, and resistance protein variants in human kinases 
+                            and using sequence & structural features 
+                            <a href="http://activark.russelllab.org/about#feature_eng"><i class="bi bi-box-arrow-up-right"></i></a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card" style="height: 500px;">
+                    <div class="card-body">
+                        <!-- This is hidden until Submit is clicked -->
+                        <h2 class="slider-text" id="slider-text">
+                            Hang tight while we search ... 
+                            <i style="padding-left: 10px;" class="fas fa-hourglass-half">
+                            </i>
+                        </h2>
+                        <!--  -->
+                        <div class="slider-box" id="slider-box">		
+                            <div class="slider"></div>
+                        </div>
+
+                        <div id="formArea" style="padding-top: 10px;">
+                        <form action="{{ url_for('output', uniqID=uniqID|safe) }}" method="POST">
+                            <h3>Search (max 150 variants)</h3>
+                            <textarea style="height: 300px; width: 500px; font-size: 15px;" type="text" 
+                                        placeholder="#Input format&#10;&#10;PLK3/K91R&#10;RAF1/D486N&#10;EGFR_HUMAN/T790M" name="inputMut" id="inputMut">
+                                
+                                            </textarea>
+                            <div style="display: inline; padding-top: 10px;">
+                                <button id="exampleDefault" style="padding-top: 10px;" type="submit" onclick="call_onclick()" value="Submit">Submit <i class="bi bi-send"></i></button>
+                                <button id="clearButton" style="padding-top: 10px;" type="button" onclick="call_onclick_clear()" value="Submit">Clear <i class="bi bi-repeat"></i></button>
+                                <!-- Add a dropdown with 2 options RF and XGB -->
+                                <select id="algo" name="algo" style="padding-top: 10px;">
+                                    <option value="XGB">XGB</option>
+                                    <option value="RF">RF</option>
+                                </select>
+                            </div>
+                            <div style="display: inline; padding-top: 10px;">
+                                <button type="button" id="example1" onclick="load_example(1)">Example 1 <i class="bi bi-arrow-bar-up"></i></button>
+                                <button type="button" id="example2" onclick="load_example(2)">Example 2 <i class="bi bi-arrow-bar-up"></i></button>
+                            </div>
+                            <!-- <div style="display: inline; padding-top: 10px;">
+                                <button style="background-color: crimson;" type="button" id="example3" onclick="load_example(3)">Wrong inputs <i class="bi bi-patch-exclamation"></i></button>
+                            </div> -->
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div style="display: inline; padding-top: 10px;">
-            <button type="button" id="example1" onclick="load_example(1)">Example 1 <i class="bi bi-arrow-bar-up"></i></button>
-            <button type="button" id="example2" onclick="load_example(2)">Example 2 <i class="bi bi-arrow-bar-up"></i></button>
-        </div>
-        <div style="display: inline; padding-top: 10px;">
-            <button style="background-color: crimson;" type="button" id="example3" onclick="load_example(3)">Wrong inputs <i class="bi bi-patch-exclamation"></i></button>
-        </div>
-    </form>
     </div>
-	<h2 class="slider-text" id="slider-text">Hang tight while we run your query... <i style="padding-left: 10px;" class="fas fa-hourglass-half"></i></h2>
-		<div class="slider-box" id="slider-box">		
-			<div class="slider"></div>
-		</div>
 {% endblock %}
 	

@@ -116,7 +116,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                         #   'Phosphomimic',
                         'ReversePhosphomimic',
                         #   'Acetylmimic',
-                          'ReverseAcetylmimic',
+                        'ReverseAcetylmimic',
                         #   'hmmScoreWT',
                         #   'hmmScoreMUT',
                         'hmmScoreDiff'
@@ -231,7 +231,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     for row in df.to_numpy():
         # print (row)
         # if row[-1] in ['activating', 'increase']:
-        if row[-1] in ['neutral', 'loss', 'decrease']:
+        if row[-1] in ['neutral', 'loss', 'decrease', 'increase', 'activating']:
                 y_test.append(row[-1])
                 X_test.append(row[3:-1])
                 test_names.append('/'.join(row[:3]))
@@ -408,8 +408,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('Best model:', model.best_params_)
     mlflow.log_params(model.best_params_)
     # print (model.predict_proba(X))
-    for y_pred, y_true in zip(model.predict_proba(X), y):
-        open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
+    text = ''
+    for variant, y_pred, y_true in zip(train_names, model.predict_proba(X), y):
+        text += variant + '\t' + str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_true) + '\n'
+    for variant, y_pred, y_true in zip(test_names, model.predict_proba(X), y_test):
+        text += variant + '\t' + str(y_pred[0]) + '\t' + str(y_pred[1]) + '\t' + str(y_true) + '\n'
+    open(name+'_roc.txt', 'w').write(text)
     # sys.exit()
     
     tprs = []
@@ -499,7 +503,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         lw=2,
         alpha=0.8,
     )
-
+    # plt.show()
+    # sys.exit()
     std_tpr = np.std(tprs, axis=0)
     tprs_upper = np.minimum(mean_tpr + std_tpr, 1)
     tprs_lower = np.maximum(mean_tpr - std_tpr, 0)
@@ -604,7 +609,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         print (''.join(['#' for i in range(1,25)]))
         data = []
         for feature_name, importance in zip(feature_names, clf.feature_importances_):
-            if importance > 0.015:
+            # if importance > 0.015:
+            if True:
                 # print (feature_name, importance)
                 row = []
                 row.append(feature_name)
@@ -613,7 +619,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
 
         df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
         df_feature_importances = df_feature_importances.sort_values(by=['Importance'], ascending=False)
-        print (df_feature_importances)
+        # print (df_feature_importances)
+        df_feature_importances.to_csv('feature_imp_'+name+'.csv', index=False)
         
         # sns.set(font_scale = 0.6)
         # sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
@@ -637,13 +644,17 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
         # if test_type in ['activatingresistance', 'increaseresistance']:
         # if test_type in ['activatingresistance', 'increaseresistance', 'resistance']:
             X_sub_test = []; y_sub_test = []
+            final_test_names = []
             for test_name, p, q in zip(test_names, X_test, y_test):
                 if q != test_type: continue
                 X_sub_test.append(p)
                 y_sub_test.append(1)
+                final_test_names.append(test_name)
             X_sub_test = np.array(X_sub_test)
             # print (test_name, round(y_pred[1], 2), y_known)
             print (test_type, 'results', '(', len(X_sub_test), ')')
+            for final_test_name, y_known, y_pred in zip(final_test_names, y_sub_test, clf.predict_proba(X_sub_test)):
+                print (final_test_name, round(y_pred[1], 2), y_known)
             # print(roc_auc_score(y_sub_test, clf.predict_proba(X_sub_test)[:,1]))
             # print('MCC:', matthews_corrcoef(y_sub_test, clf.predict(X_sub_test)))
             # print('F1:', f1_score(y_sub_test, clf.predict(X_sub_test)))

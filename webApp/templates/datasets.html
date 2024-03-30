@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+{% block head %}
+	<!-- Load plotly.js into the DOM -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Activark (Datasets)</title>
+	<script src="{{url_for('static', filename='/js/ignoredFunctions.js')}}"></script>
+	<script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<!-- DataTables -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+	<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+	<style>
+		.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 85%;
+		}
+	</style>
+	<div class="container">
+		<div id="datasets" class="row" style="padding-top: 50px">
+			<div class="card">
+				<div class="card-body">
+					<h3>Sequence features</h3>
+					<p>
+						<kbd>One-hot encoding and charges of wild-type and mutated amino acids:</kbd>
+						We constructed two distinct vectors that represent the wild-type and mutated amino acids.
+						Each amino acid was encoded by a binary vector of length 20, with a value of 1 at the 
+						corresponding position and 0s elsewhere (data not provided here). We constructed an additional vector that 
+						encodes the charge on the wild-type and mutated amino acids (data not provided here).
+					</p>
+
+					<kbd>Phosphomimetic or acetylation mimicking:</kbd> 
+					<p>
+						A variant was considered phosphomimetic if the amino acid changed from a 
+						Ser(S) or Thr(T) to an Asp(D) or Glu(E), and acetylation mimicking if the 
+						amino acid changed from Lys(K) to Gln(Q) (data not provided here).
+					</p>
+
+					<p>
+						<kbd>ATP binding pocket:</kbd> 
+						We calculated the number of known ATP binding sites at the position 
+						equivalent to the variant in the alignment. We obtained the list of 
+						known ATP binding sites in human kinases from UniProt (version 2023_02).
+						<ul>
+							<li><a href="../static/dataTables/ligands.txt.gz" download>ATP-binding sites</a></li>
+						</ul>
+					</p>
+
+					<p>
+						<kbd>Post-translational modification information:</kbd> 
+						We incorporated known post-translational modification (PTM) information 
+						of the variant position and its adjacent positions (window size = 5) as a 
+						feature vector, with a length equal to the number of possible PTM types 
+						(phosphorylation, acetylation, methylation, etc.). The presence of a 
+						specific PTM type was represented by 1, and otherwise as 0. We repeated 
+						the procedure to incorporate known PTM information at the alignment 
+						position equivalent to the variant position, and its adjacent residues 
+						(window size = 5). Each element in the vector encoded the number of 
+						kinases harbouring the corresponding PTM type at the given position in the alignment.
+						<ul>
+							<li><a href="../static/dataTables/ptms.txt.gz" download>PTMs</a></li>
+						</ul>
+					</p>
+
+					<p>
+						<kbd>Loss/gain of amino acids in known mutations:</kbd> 
+						We also incorporated the number of times an amino acid was observed 
+						to be a wild-type (loss) or mutated (gain) in a mutation type 
+						(i.e. activating, deactivating, and resistance) at the position 
+						equivalent to the variant (and its adjacent residues; window size=5) 
+						in the alignment. We set the count initially to zero for all the 
+						amino acids at all alignment positions. For a loss of an amino acid 
+						at an alignment position in a mutation type, we decreased the 
+						corresponding count by 1, and increased for a gain.
+						<ul>
+							<li><a href="../static/dataTables/mutations.txt.gz" download>Known variants</a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="datasets" class="row" style="padding-top: 50px">
+			<div class="card">
+				<div class="card-body">
+					<h3>Evolutionary features</h3>
+					We extracted log scores for each amino acid and position from the profile 
+					hidden Markov model of the alignment and used the wild-type and mutated scores 
+					as features.  We did the same for three additional alignments determined 
+					after pan-proteome comparisons and ortholog/paralog determination. We 
+					subsetted the orthologs based on the phylogeny into eukaryotes, metazoa, 
+					vertebrates, and mammals and used conservation across them as features. 
+					Specifically, this included conservation scores from three alignments 
+					(all homologs, best-per-species orthologs and exclusive paralogs used 
+					<a href='https://www.nature.com/articles/s41525-022-00322-z' target="_blank">previously</a>)
+					<ul>
+						<li><a href="../static/dataTables/all_homs.txt.gz" download>All homologs</a></li>
+						<li><a href="../static/dataTables/orth.txt.gz" download>Orthologs</a></li>
+						<li><a href="../static/dataTables/excl_para.txt.gz" download>Exclusive paralogs</a></li>
+						<li><a href="../static/dataTables/spec_para.txt.gz" download>Species-specific paralogs</a></li>
+						<li><a href="../static/dataTables/eukaryotes.txt.gz" download>Eukaryotes</a></li>
+						<li><a href="../static/dataTables/metazoa.txt.gz" download>Metazoans</a></li>
+						<li><a href="../static/dataTables/mammals.txt.gz" download>Mammals</a></li>
+						<li><a href="../static/dataTables/vertebrates.txt.gz" download>Vertebrates</a></li>
+						<li><a href="../static/dataTables/bpsh.txt.gz" download>Best-per-species Homologs</a></li>
+						<li><a href="../static/dataTables/bpso.txt.gz" download>Best-per-species Orthologs</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="datasets" class="row" style="padding-top: 50px; padding-bottom: 75px;">
+			<div class="card">
+				<div class="card-body">
+					<h3>Structural features</h3>
+						We used Alphafold2 structures for each kinase to 
+						determine the secondary structure, accessibility and backbone psi/phi angles using DSSP. 
+						We used IUPred to determine disorder scores.
+						We scored intra-protein side-chain-to-side-chain contacts using Mechismo. 
+						For all values, we determined log-odds values for each amino acid in each environment 
+						and used these values and their mutant-wild-type differences as 
+						features (as described 
+						<a href='https://www.nature.com/articles/s41525-022-00322-z' target="_blank">previously</a>)
+					<ul>
+						<li><a href="../static/dataTables/phi_psi.txt.gz" download>Phi/psi angles</a></li>
+						<li><a href="../static/dataTables/sec.txt.gz" download>Secondary structure scores</a></li>
+						<li><a href="../static/dataTables/acc.txt.gz" download>Accessibility scores</a></li>
+						<li><a href="../static/dataTables/burr.txt.gz" download>Burried scores</a></li>
+						<li><a href="../static/dataTables/iupred.txt.gz" download>IUPred scores</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+				
+		
+	</div>
+	  
+{% endblock %}

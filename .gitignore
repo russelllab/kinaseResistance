@@ -132,5 +132,13 @@ dmypy.json
 .idea/
 
 .gitignore
+data/dataTables/*
+webApp/static/dataTables/*
 webApp/static/predictor/output/*
 kp2.sql
+
+# Cosmic folder
+cosmic/*backup*
+
+# Uniprot folder
+barplot_values*

@@ -338,7 +338,10 @@ def main(name, algo='RF',
     X = scaler.transform(X)
     X_test = scaler.transform(X_test)
     if scaler_filename is not None:
-        pickle.dump(scaler, open('scalers/scaler_'+scaler_filename+'.pkl', 'wb'))
+        # if the algo not in the directory, create it
+        if not os.path.exists('scalers/'+algo):
+            os.makedirs('scalers/'+algo)
+        pickle.dump(scaler, open('scalers/'+algo+'/scaler_'+scaler_filename+'.pkl', 'wb'))
 
     y = np.array(y)
 
@@ -531,16 +534,16 @@ def main(name, algo='RF',
         print (''.join(['#' for i in range(1,25)]))
         data = []
         for feature_name, importance in zip(feature_names, clf.feature_importances_):
-            if importance > 0.015:
-                # print (feature_name, importance)
-                row = []
-                row.append(feature_name)
-                row.append(importance)
-                data.append(row)
+            # print (feature_name, importance)
+            row = []
+            row.append(feature_name)
+            row.append(importance)
+            data.append(row)
 
         df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
         df_feature_importances = df_feature_importances.sort_values(by=['Importance'], ascending=False)
-        print (df_feature_importances)
+        # print (df_feature_importances)
+        df_feature_importances.to_csv('feature_imp_'+name+'.csv', index=False)
         
         # sns.set(font_scale = 0.6)
         # sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")
@@ -554,7 +557,11 @@ def main(name, algo='RF',
 
     # filename = 'finalized_model_RN.sav'
     if model_filename is not None:
-        pickle.dump(clf, open('models/model_'+model_filename+'.sav', 'wb'))
+        # if the algo not in the directory, create it
+        if not os.path.exists('models/'+algo):
+            os.makedirs('models/'+algo)
+        pickle.dump(clf, open('models/'+algo+'/model_'+model_filename+'.sav', 'wb'))
+        # pickle.dump(clf, open('models/model_'+model_filename+'.sav', 'wb'))
 
     test_types = ['activatingresistance',
                 'increaseresistance',

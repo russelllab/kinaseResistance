@@ -105,6 +105,8 @@ for line in gzip.open('final_mined_RR_checked_checked-again.txt.gz', 'rt'):
     if mutation not in dic:
         dic[mutation] = Mutation(mutation, mutation_type, gene, info, pubmedIDs, outcome, 'PubMed')
         # dic[mutation].show()
+    else:
+        dic[mutation].source += '+PubMed'
 
 text = 'UniProtAcc\tGene\tMutation\tMutationType\tInfo\tPubMedID\tOutcome\tSource\n'
 for mutation in dic:

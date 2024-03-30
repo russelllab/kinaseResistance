@@ -51,8 +51,13 @@ for mutation in mutations:
     acc, wtpos, mutation, pfampos, mut_type = mutation
     if mut_type =='activating': mut_type = 'constitutive-activation'
     if pfampos == '-': continue
+    mutAA = mutation[-1]
+    print (mutAA)
     if acc in dic_ptms:
-        if int(wtpos) in dic_ptms[acc]: mut_type += ' at p-sites'
+        if int(wtpos) in dic_ptms[acc]:
+            mut_type += ' at p-sites'
+            if mutAA in ['D', 'E']:
+                mut_type += ' to DE'
     if pfampos not in dic_hmm: dic_hmm[pfampos] = {}
     if mut_type not in dic_hmm[pfampos]: dic_hmm[pfampos][mut_type] = 0
     dic_hmm[pfampos][mut_type] += 1
@@ -86,17 +91,31 @@ new_mut_types = []
 for mut_type in mut_types:
     new_mut_types.append(mut_type)
     new_mut_types.append(mut_type+' at p-sites')
+    new_mut_types.append(mut_type+' at p-sites to DE')
 mut_types = new_mut_types
 mut_types_colors = ['green', 'lightgreen', 'blue', 'lightcoral', 'red']
 new_mut_types_colors = []
 for mut_type_color in mut_types_colors:
     new_mut_types_colors.append(mut_type_color)
     new_mut_types_colors.append(mut_type_color)
+    new_mut_types_colors.append(mut_type_color)
 mut_types_colors = new_mut_types_colors
 left = np.zeros(len(pfam_positions))
 width = 0.5
 fig, ax = plt.subplots()
-for mut_type, mut_type_color in zip(mut_types, mut_types_colors):
+hatches = []
+for mut_type in mut_types:
+    print (mut_type)
+    # hatch='.....' if ' at p-sites' in mut_type else None
+    if ' at p-sites to DE' in mut_type:
+        hatches.append('///.....')
+    elif ' at p-sites' in mut_type:
+        hatches.append('.....')
+        # hatches.append(None)
+    else:
+        hatches.append(None)
+print (hatches)
+for mut_type, mut_type_color, hatch in zip(mut_types, mut_types_colors, hatches):
     row = []
     for pfam_position in pfam_positions:
         if mut_type not in dic_hmm[pfam_position]:
@@ -107,7 +126,9 @@ for mut_type, mut_type_color in zip(mut_types, mut_types_colors):
     p = ax.barh(pfam_position_labels, row, width,\
                 label=mut_type, left=left, color=mut_type_color,\
                 edgecolor = 'black', linewidth = 0.5, \
-                hatch='.....' if ' at p-sites' in mut_type else None)
+                hatch = hatch
+                # hatch='.....' if ' at p-sites' in mut_type else None
+                )
     left += row
 
 ax.set_title("Top 15 most mutated alignment positions")

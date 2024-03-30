@@ -1,0 +1,7 @@
+artifact_location: mlflow-artifacts:/786265624190403785
+creation_time: 1711796413801
+experiment_id: '786265624190403785'
+last_update_time: 1711805416043
+lifecycle_stage: deleted
+name: XGB_Salzberg
+tags: {}

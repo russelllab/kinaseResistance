@@ -86,5 +86,5 @@ if __name__ == '__main__':
     inputFile = args.inputFile
 
     dic_model = parse_ML_output(inputFile)
-    make_ML_models(dic_model)
+    # make_ML_models(dic_model)
 
