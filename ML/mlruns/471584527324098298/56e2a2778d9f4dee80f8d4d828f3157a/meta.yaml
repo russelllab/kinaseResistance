@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/471584527324098298/56e2a2778d9f4dee80f8d4d828f3157a/artifacts
+end_time: 1711799592107
+entry_point_name: ''
+experiment_id: '471584527324098298'
+lifecycle_stage: active
+run_id: 56e2a2778d9f4dee80f8d4d828f3157a
+run_name: RvN
+run_uuid: 56e2a2778d9f4dee80f8d4d828f3157a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711799583160
+status: 3
+tags: []
+user_id: gurdeep

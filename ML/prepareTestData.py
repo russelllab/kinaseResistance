@@ -28,7 +28,9 @@ AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L',
       'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 MODEL_NAMES = ['N', 'D', 'A', 'AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN',
                'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
+MODEL_NAMES = ['AIvLD', 'RvN']
 # MODEL_NAMES = ['N', 'L', 'A']
+ALGO = 'XGB'
 WS = 5
 START_ALN = 33
 END_ALN = 823
@@ -341,14 +343,14 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../') -> dict:
     dic_predictions = {}
     for model in MODEL_NAMES:
         if model in ['N', 'D', 'A']:
-            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+'scaler_all.pkl', 'rb'))
+            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+ALGO+'/'+'scaler_all.pkl', 'rb'))
             dic_features[model] = dic_scalers[model].transform(features)
-            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+'model_all.sav', 'rb'))
+            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+ALGO+'/'+'model_all.sav', 'rb'))
             dic_predictions[model] = dic_clfs[model].predict_proba(dic_features[model])
         else:
-            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+'scaler_'+model+'.pkl', 'rb'))
+            dic_scalers[model] = pickle.load(open(BASE_DIR+'/ML/scalers/'+ALGO+'/'+'scaler_'+model+'.pkl', 'rb'))
             dic_features[model] = dic_scalers[model].transform(features)
-            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+'model_'+model+'.sav', 'rb'))
+            dic_clfs[model] = pickle.load(open(BASE_DIR+'/ML/models/'+ALGO+'/'+'model_'+model+'.sav', 'rb'))
             dic_predictions[model] = dic_clfs[model].predict_proba(dic_features[model])
     
     # print (dic_predictions)
@@ -504,7 +506,7 @@ if __name__ == '__main__':
 
     # assign number of threads if provided
     if args.t is not None: numThreads = int(args.t)
-    else: numThreads = 2
+    else: numThreads = 5
 
     results_json = predict(numThreads, inputFile, outputFile)
     if len(results_json['entries_not_found']) > 0:

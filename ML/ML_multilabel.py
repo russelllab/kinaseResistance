@@ -19,6 +19,10 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import roc_auc_score, roc_curve
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import confusion_matrix, matthews_corrcoef, f1_score, precision_score, recall_score
 from sklearn.metrics import auc
@@ -26,6 +30,9 @@ from sklearn.metrics import RocCurveDisplay
 from sklearn import tree
 import pickle
 import argparse
+import mlflow
+import mlflow.sklearn
+from mlflow.models import infer_signature
 
 ## Old
 # 5 3 3 100 LvNA
@@ -45,7 +52,6 @@ import argparse
 # 5 12 4 100 LvNA
 
 RANDOM_STATE = 100
-ALGO = 'RF' #LR, XGB, RF
 N_SPLITS = 10
 N_REPEATS = 10
 N_JOBS = -1
@@ -75,10 +81,76 @@ def makeSets(positives, negatives):
                 sys.exit(1)
     return dic
 
+def log_model(model):
+    print ('mean_test_score', model.cv_results_['mean_test_score'])
+    # mean of the array
+    print (round(model.cv_results_['mean_test_score'].mean(), 2))
+    mlflow.log_metric('AUC', round(model.cv_results_['mean_test_score'].mean(), 2))
+    # std of the array
+    print (round(model.cv_results_['mean_test_score'].std(), 3))
+    mlflow.log_metric('AUC_STD', round(model.cv_results_['mean_test_score'].std(), 3))
+    # print (model.cv_results_['mean_train_score'])
 
-def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
-        name,
-        scaler_filename=None, model_filename=None, column_filename=None):
+    breakLine = '#'.join(['-' for i in range(0, 50)])
+    print (breakLine)
+    ## Best model hyper-parameters
+    print ('Best model:', model.best_params_)
+    # print (model.predict_proba(X))
+    mlflow.log_params(model.best_params_)
+
+def equalNumOfSamples(X, y):
+    num_1 = np.count_nonzero(y == 1)
+    num_0 = np.count_nonzero(y == 0)
+    num_2 = np.count_nonzero(y == 2)
+    if num_1 > num_0 and num_2 > num_0:
+        # select all rows from X that have y equals 0
+        X0 = np.array([X[i] for i in range(0, len(X)) if y[i] == 0])
+        # randomly select equal rows as y = 1 from X that have y equals 0
+        X1 = np.array([X[i] for i in range(0, len(X)) if y[i] == 1])
+        arr_X1 = np.random.choice(len(X1), num_0, replace=False)
+        X1 = X1[arr_X1]
+        X2 = np.array([X[i] for i in range(0, len(X)) if y[i] == 2])
+        arr_X2 = np.random.choice(len(X2), num_0, replace=False)
+        X2 = X2[arr_X2]
+        X_new = np.concatenate((X0, X1, X2), axis=0)
+        y_new = np.concatenate((np.zeros(len(X0)), np.ones(len(X1)), 2*np.ones(len(X2))), axis=0)
+    elif num_0 > num_1 and num_2 > num_1:
+        # select all rows from X that have y equals 1
+        X1 = np.array([X[i] for i in range(0, len(X)) if y[i] == 1])
+        # randomly select equal rows as y = 0 from X that have y equals 1
+        X0 = np.array([X[i] for i in range(0, len(X)) if y[i] == 0])
+        arr_X0 = np.random.choice(len(X0), num_1, replace=False)
+        X0 = X0[arr_X0]
+        # randomly select equal rows as y = 0 from X that have y equals 1
+        X2 = np.array([X[i] for i in range(0, len(X)) if y[i] == 2])
+        arr_X2 = np.random.choice(len(X2), num_1, replace=False)
+        X2 = X2[arr_X2]
+        # print (X0)
+        # print (X1)
+        X_new = np.concatenate((X0, X1, X2), axis=0)
+        y_new = np.concatenate((np.zeros(len(X0)), np.ones(len(X1)), 2*np.ones(len(X2))), axis=0)
+    else:
+        # select all rows from X that have y equals 1
+        X2 = np.array([X[i] for i in range(0, len(X)) if y[i] == 2])
+        # randomly select equal rows as y = 0 from X that have y equals 1
+        X0 = np.array([X[i] for i in range(0, len(X)) if y[i] == 0])
+        arr_X0 = np.random.choice(len(X0), num_2, replace=False)
+        X0 = X0[arr_X0]
+        # randomly select equal rows as y = 0 from X that have y equals 1
+        X1 = np.array([X[i] for i in range(0, len(X)) if y[i] == 2])
+        arr_X1 = np.random.choice(len(X1), num_2, replace=False)
+        X1 = X1[arr_X1]
+        # print (X0)
+        # print (X1)
+        X_new = np.concatenate((X0, X1, X2), axis=0)
+        y_new = np.concatenate((np.zeros(len(X0)), np.ones(len(X1)), 2*np.ones(len(X2))), axis=0)    
+    return X_new, y_new
+
+# def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
+#         name,
+#         scaler_filename=None, model_filename=None, column_filename=None):
+def main(name, algo='RF',
+        scaler_filename=None, model_filename=None, column_filename=None, **kwargs):
     # positives = name.split('v')[0]
     # negatives = name.split('v')[1]
     df = pd.read_csv('trainDataFromHitsSplitTrimmedAln.tsv.gz', sep = '\t')
@@ -275,175 +347,171 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     rskf = RepeatedStratifiedKFold(n_splits=N_SPLITS, n_repeats=N_REPEATS)
 
     ## To perform the randomizationt test (Salzberg test), enable the this line
-    # np.random.shuffle(y)
+    if kwargs['Salzberg'] == 'True':
+        np.random.shuffle(y)
 
-    parameters = {
-                'max_depth': max_depth,
-                # 'max_depth': [None],
-                'min_samples_split': min_samples_split,
-                'min_samples_leaf': min_samples_leaf,
-                'criterion': ['gini'],
-                # 'max_features': ['sqrt', 'log2'],
-                # 'max_features': ['log2'],
-                'max_features': ['sqrt'],
-                'n_estimators': n_estimators
-                }
-    rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS)
-    model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc_ovr_weighted', n_jobs=N_JOBS)
-    # model = rf
-    model.fit(X, y)
-    print (name)
-    print ('mean_test_score', model.cv_results_['mean_test_score'])
-    # print (model.cv_results_['mean_train_score'])
+    if algo == 'GNB':
+        parameters = {
+                    'var_smoothing': kwargs['var_smoothing'],
+                    }
+        model = GaussianNB()
+        model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc_ovr_weighted', n_jobs=N_JOBS)
+        # assign sample weight based on the class distribution
+        # like the class_weight parameter in sklearn
+        sample_weight = np.zeros(len(y))
+        sample_weight[y == 0] = 1.0/np.count_nonzero(y == 0)
+        sample_weight[y == 1] = 1.0/np.count_nonzero(y == 1)
+        sample_weight[y == 2] = 1.0/np.count_nonzero(y == 2)
+        model.fit(X, y, sample_weight=sample_weight)
+        print (name)
+        log_model(model)
+        clf = GaussianNB(
+                        var_smoothing=model.best_params_['var_smoothing']
+                        )
+        clf.fit(X,y, sample_weight=sample_weight)
+    elif algo == 'MLP':
+        parameters = {
+                    'hidden_layer_sizes':kwargs['hidden_layer_sizes'],
+                    'activation':kwargs['activation'],
+                    'solver':kwargs['solver'],
+                    'alpha':kwargs['alpha'],
+                    'batch_size':kwargs['batch_size'],
+                    'learning_rate':kwargs['learning_rate'],
+                    'learning_rate_init':kwargs['learning_rate_init'],
+                    'max_iter':kwargs['max_iter'],
+                    'shuffle':kwargs['shuffle'],
+                    'tol':kwargs['tol'],
+                    }
+        model = MLPClassifier(random_state=RANDOM_STATE)
+        model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc_ovr_weighted', n_jobs=N_JOBS)
+        # find out if num of 1 is more than 0 or not
+        X_new, y_new = equalNumOfSamples(X, y)
+        # model.fit(X, y)
+        model.fit(X_new, y_new)
 
-    breakLine = '#'.join(['-' for i in range(0, 50)])
-    print (breakLine)
-    ## Best model hyper-parameters
-    print ('Best model:', model.best_params_)
-    # print (model.predict_proba(X))
-    for y_pred, y_true in zip(model.predict_proba(X), y):
-        open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
-    # sys.exit()
-    '''
-    tprs = []
-    aucs = []
-    mean_fpr = np.linspace(0, 1, 100)
-    fig, ax = plt.subplots(figsize=(6, 6))
+        print (name)
+        log_model(model)
 
-    AUC= []; MCC= []; F1=[]; PRE=[]; REC=[]; SPE=[]
-    for i in range(0,10):
-        skf = StratifiedKFold(n_splits=N_SPLITS, shuffle=True)
-        rskf = RepeatedStratifiedKFold(n_splits=N_SPLITS, n_repeats=N_REPEATS)
-        auc_itr = []; mcc_itr= []; f1_itr=[]; pre_itr=[]; rec_itr=[]; spe_itr=[]
-        for fold, (train_index, test_index) in enumerate(skf.split(X, y)):
-            X_train, X_validation = X[train_index], X[test_index]
-            y_train, y_validation = y[train_index], y[test_index]
-            if ALGO == 'LR':
-                clf = LogisticRegression(
-                            class_weight='balanced',
-                            max_iter=model.best_params_['max_iter'],
-                            solver=model.best_params_['solver'],
-                            C=model.best_params_['C'],
-                            penalty=model.best_params_['penalty']
-                            )
-            elif ALGO == 'XGB':
-                clf = xgb.XGBClassifier(
-                    # n_estimators=model.best_params_['n_estimators'],
-                    # learning_rate=model.best_params_['learning_rate'],
-                    # min_samples_leaf=model.best_params_['min_samples_leaf'],
-                    max_depth=model.best_params_['max_depth'],
-                    objective=model.best_params_['objective'],
-                    # min_samples_split=model.best_params_['min_samples_split'],
-                    # max_features=model.best_params_['max_features'],
-                    random_state=RANDOM_STATE,
-                    scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0)
-                    )
-            elif ALGO == 'RF':
-                clf = RandomForestClassifier(
-                    n_estimators=model.best_params_['n_estimators'],
-                    min_samples_leaf=model.best_params_['min_samples_leaf'],
-                    max_depth=model.best_params_['max_depth'],
-                    min_samples_split=model.best_params_['min_samples_split'],
-                    max_features=model.best_params_['max_features'],
-                    random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
-                    )
-            clf.fit(X_train, y_train)
-            tn, fp, fn, tp = confusion_matrix(y_train, clf.predict(X_train)).ravel()
-            #print (tn, fp, fn, tp)
-            auc_itr.append(roc_auc_score(y_validation, clf.predict_proba(X_validation)[:,1]))
-            mcc_itr.append(matthews_corrcoef(y_validation, clf.predict(X_validation)))
-            f1_itr.append(f1_score(y_validation, clf.predict(X_validation)))
-            pre_itr.append(precision_score(y_validation, clf.predict(X_validation)))
-            rec_itr.append(recall_score(y_validation, clf.predict(X_validation)))
-            spe_itr.append(recall_score(y_validation, clf.predict(X_validation), pos_label=0))
-            if i == 5:
-                viz = RocCurveDisplay.from_estimator(
-                                                    clf,
-                                                    X_validation,
-                                                    y_validation,
-                                                    name=f"ROC fold {fold}",
-                                                    alpha=0.3,
-                                                    lw=1,
-                                                    ax=ax,
-                                                )
-                interp_tpr = np.interp(mean_fpr, viz.fpr, viz.tpr)
-                interp_tpr[0] = 0.0
-                tprs.append(interp_tpr)
-                aucs.append(viz.roc_auc)
-        AUC.append(np.mean(auc_itr))
-        # print (np.mean(auc_itr), auc_itr)
-        MCC.append(np.mean(mcc_itr))
-        F1.append(np.mean(f1_itr))
-        PRE.append(np.mean(pre_itr))
-        SPE.append(np.mean(spe_itr))
-        REC.append(np.mean(rec_itr))
+        clf = MLPClassifier(
+                        hidden_layer_sizes=model.best_params_['hidden_layer_sizes'],
+                        activation=model.best_params_['activation'],
+                        solver=model.best_params_['solver'],
+                        alpha=model.best_params_['alpha'],
+                        batch_size=model.best_params_['batch_size'],
+                        learning_rate=model.best_params_['learning_rate'],
+                        learning_rate_init=model.best_params_['learning_rate_init'],
+                        max_iter=model.best_params_['max_iter'],
+                        shuffle=model.best_params_['shuffle'],
+                        tol=model.best_params_['tol'],
+                        random_state=RANDOM_STATE
+                        )
+        clf.fit(X_new,y_new)
+    elif algo == 'SVC':
+        parameters = {
+                    'C': kwargs['C'],
+                    'kernel': kwargs['kernel'],
+                    'max_iter': [1000],
+                    }
+        model = SVC(class_weight='balanced', probability=True)
+        model = GridSearchCV(model, parameters, cv=rskf, scoring='roc_auc_ovr_weighted', n_jobs=N_JOBS)
+        model.fit(X, y)
+        
+        print (name)
+        log_model(model)
+        for y_pred, y_true in zip(model.predict_proba(X), y):
+            open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
+        # sys.exit()
+        
+        
+        clf = SVC(
+                class_weight='balanced',
+                max_iter=model.best_params_['max_iter'],
+                C=model.best_params_['C'],
+                probability=True
+                )
+        # pass
+        clf.fit(X,y)
+    elif algo == 'XGB':
+        parameters = {
+                    'max_depth': kwargs['max_depth'],
+                    # 'objective': ["binary:logistic"],
+                    # 'learning_rate': [0.1],
+                    'min_samples_split': kwargs['min_samples_split'],
+                    'min_samples_leaf': kwargs['min_samples_leaf'],
+                    'criterion': ['friedman_mse'],
+                    'max_features': ['log2'],
+                    'n_estimators': kwargs['n_estimators']
+                    }
+        xgb_model = GradientBoostingClassifier(
+                        # n_jobs=N_JOBS,
+                        random_state=RANDOM_STATE,
+                        # scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0)
+                        )
+        model = GridSearchCV(xgb_model, parameters, cv=rskf, scoring='roc_auc_ovr_weighted', n_jobs=N_JOBS)
+        # define sample weight based on the class distribution
+        # like the class_weight parameter in sklearn
+        sample_weight = np.zeros(len(y))
+        sample_weight[y == 0] = 1.0/np.count_nonzero(y == 0)
+        sample_weight[y == 1] = 1.0/np.count_nonzero(y == 1)
+        sample_weight[y == 2] = 1.0/np.count_nonzero(y == 2)
+        # print (y)
+        # print (sample_weight)
+        # sys.exit()
+        model.fit(X, y, sample_weight=sample_weight)
 
-    #####################################################
-    ax.plot([0, 1], [0, 1], "k--", label="random (AUC = 0.5)")
-    mean_tpr = np.mean(tprs, axis=0)
-    mean_tpr[-1] = 1.0
-    mean_auc = auc(mean_fpr, mean_tpr)
-    std_auc = np.std(aucs)
-    ax.plot(
-        mean_fpr,
-        mean_tpr,
-        color="b",
-        label=r"Mean ROC (AUC = %0.2f $\pm$ %0.2f)" % (mean_auc, std_auc),
-        lw=2,
-        alpha=0.8,
-    )
+        log_model(model)
 
-    std_tpr = np.std(tprs, axis=0)
-    tprs_upper = np.minimum(mean_tpr + std_tpr, 1)
-    tprs_lower = np.maximum(mean_tpr - std_tpr, 0)
-    ax.fill_between(
-        mean_fpr,
-        tprs_lower,
-        tprs_upper,
-        color="grey",
-        alpha=0.2,
-        label=r"$\pm$ 1 std. dev.",
-    )
-
-    ax.set(
-        xlim=[-0.05, 1.05],
-        ylim=[-0.05, 1.05],
-        xlabel="False Positive Rate",
-        ylabel="True Positive Rate",
-        title=f"Mean ROC curve with variability of {N_SPLITS} folds in {name}",
-    )
-    ax.axis("square")
-    ax.legend(loc="lower right")
-    plt.grid(linewidth=0.5)
-    plt.savefig(name+'_roc.svg', format='svg', dpi=1000)
-    #####################################################
-    
-
-    # print (np.std(AUC))
-    ## Cross-validation results
-    breakLine = '-'.join(['-' for i in range(0, 50)])
-    print (breakLine)
-    print ('Stratified CV results')
-    print ('MET', 'AUC ', 'MCC ', 'F1  ', 'PRE ', 'REC ', 'SPE')
-    print ('AVG', round(np.mean(AUC),2),round(np.mean(MCC),2),round(np.mean(F1),2),round(np.mean(PRE),2),round(np.mean(REC),2),round(np.mean(SPE),2))
-    print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
-    print ('Number of act mutations in the train set:', np.count_nonzero(y))
-    print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
-    '''
-    
-    clf = RandomForestClassifier(
+        clf = GradientBoostingClassifier(
                 n_estimators=model.best_params_['n_estimators'],
+                # leaarning_rate=model.best_params_['learning_rate'],
                 min_samples_leaf=model.best_params_['min_samples_leaf'],
                 min_samples_split=model.best_params_['min_samples_split'],
                 max_depth=model.best_params_['max_depth'],
+                # objective=model.best_params_['objective'],
                 max_features=model.best_params_['max_features'],
                 criterion=model.best_params_['criterion'],
-                random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
+                random_state=RANDOM_STATE,
+                # scale_pos_weight=float(np.count_nonzero(y == 1))/np.count_nonzero(y == 0),
+                # n_jobs=N_JOBS
                 )
-    # pass
-    clf.fit(X,y)
+        
+        clf.fit(X,y, sample_weight=sample_weight)
+    elif algo == 'RF':
+        parameters = {
+                    'max_depth': kwargs['max_depth'],
+                    # 'max_depth': [None],
+                    'min_samples_split': kwargs['min_samples_split'],
+                    'min_samples_leaf': kwargs['min_samples_leaf'],
+                    'criterion': ['gini'],
+                    # 'max_features': ['sqrt', 'log2'],
+                    # 'max_features': ['log2'],
+                    'max_features': ['sqrt'],
+                    'n_estimators': kwargs['n_estimators']
+                    }
+        rf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS)
+        model = GridSearchCV(rf, parameters, cv=rskf, scoring='roc_auc_ovr_weighted', n_jobs=N_JOBS)
+        # model = rf
+        model.fit(X, y)
+        print (name)
+        log_model(model)
+        for y_pred, y_true in zip(model.predict_proba(X), y):
+            open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
+        # sys.exit()
+        
+        
+        clf = RandomForestClassifier(
+                    n_estimators=model.best_params_['n_estimators'],
+                    min_samples_leaf=model.best_params_['min_samples_leaf'],
+                    min_samples_split=model.best_params_['min_samples_split'],
+                    max_depth=model.best_params_['max_depth'],
+                    max_features=model.best_params_['max_features'],
+                    criterion=model.best_params_['criterion'],
+                    random_state=RANDOM_STATE, class_weight="balanced", n_jobs=N_JOBS
+                    )
+        # pass
+        clf.fit(X,y)
     
-    if ALGO == 'RF':
+    if algo == 'RF':
         # print (clf.estimator_.decision_path(X))
         '''
         estimator = clf.estimator_
@@ -532,6 +600,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                                         # average='weighted'
                                         ))
             # print('SPE:', recall_score(y_sub_test, clf.predict(X_sub_test), pos_label=0))
+            # store in MLflow
+            mlflow.log_metric(test_type+'_REC', round(recall_score(y_sub_test, y_pred), 3))
         else:
             pred_neutral = []; known_neutral = []
             pred_deactivating = []; known_deactivating = []
@@ -568,10 +638,13 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 print (test_name, clf.predict_proba(X_sub_test)[0], clf.predict(X_sub_test)[0], q)
             if test_type == 'neutral':
                 print('REC:', test_type, round(recall_score(known_neutral, pred_neutral), 3))
+                mlflow.log_metric(test_type+'_REC', round(recall_score(known_neutral, pred_neutral), 3))
             if test_type in ['loss', 'decrease']:
                 print('REC:', test_type, round(recall_score(known_deactivating, pred_deactivating), 3))
+                mlflow.log_metric(test_type+'_REC', round(recall_score(known_deactivating, pred_deactivating), 3))
             if test_type in ['increase', 'activating']:
                 print('REC:', test_type, round(recall_score(known_activating, pred_activating), 3))
+                mlflow.log_metric(test_type+'_REC', round(recall_score(known_activating, pred_activating), 3))
 
 if __name__ == '__main__':
     '''max_depth = int(sys.argv[1])

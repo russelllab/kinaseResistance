@@ -25,7 +25,7 @@ class HMM:
 mydb = fetchData.connection(db_name='kinase_project2')
 mydb.autocommit = True
 mycursor = mydb.cursor()
-
+'''
 # make mutations table
 mycursor.execute("SELECT * FROM mutations")
 mutations = mycursor.fetchall()
@@ -97,7 +97,7 @@ for align_row in alignments:
     text += residues + '\n'
 
 open('alignment_table.tsv', 'w').write(text)
-
+'''
 # make ATP table
 mycursor.execute("SELECT * FROM ligands where ligand~%s", ('ATP',))
 hits = mycursor.fetchall()
@@ -108,4 +108,4 @@ for hit in hits:
         text += str(item).lstrip().rstrip() + '\t'
     text += '\n'
 
-open('atp_table.tsv', 'w').write(text)
+open('atp_table2.tsv', 'w').write(text)

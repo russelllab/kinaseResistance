@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gurdeep/projects/kinaseResistance/ML/mlruns/700862726969675992/16cc2036fb2b4b8398d22a7d244e814a/artifacts
+end_time: 1703497938355
+entry_point_name: ''
+experiment_id: '700862726969675992'
+lifecycle_stage: active
+run_id: 16cc2036fb2b4b8398d22a7d244e814a
+run_name: redolent-steed-207
+run_uuid: 16cc2036fb2b4b8398d22a7d244e814a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703497937361
+status: 3
+tags: []
+user_id: gurdeep

@@ -26,6 +26,9 @@ from sklearn.metrics import RocCurveDisplay
 from sklearn import tree
 import pickle
 import argparse
+import mlflow
+import mlflow.sklearn
+from mlflow.models import infer_signature
 
 ## Old
 # 5 3 3 100 LvNA
@@ -403,6 +406,7 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print (breakLine)
     ## Best model hyper-parameters
     print ('Best model:', model.best_params_)
+    mlflow.log_params(model.best_params_)
     # print (model.predict_proba(X))
     for y_pred, y_true in zip(model.predict_proba(X), y):
         open(name+'_roc.txt', 'w').write(str(y_pred[1]) + '\t' + str(y_true) + '\n')
@@ -532,6 +536,21 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
     print ('STD', round(np.std(AUC),3),round(np.std(MCC),3),round(np.std(F1),3),round(np.std(PRE),3),round(np.std(REC),3),round(np.std(SPE),3))
     print ('Number of act mutations in the train set:', np.count_nonzero(y))
     print ('Number of deact mutations in the train set:', len(y) - np.count_nonzero(y))
+    ## store cross-validation results in MLflow
+    mlflow.log_metric("AUC", round(np.mean(AUC),2))
+    mlflow.log_metric("STD_AUC", round(np.std(AUC),3))
+    mlflow.log_metric("MCC", round(np.mean(MCC),2))
+    mlflow.log_metric("STD_MCC", round(np.std(MCC),3))
+    mlflow.log_metric("F1", round(np.mean(F1),2))
+    mlflow.log_metric("STD_F1", round(np.std(F1),3))
+    mlflow.log_metric("PRE", round(np.mean(PRE),2))
+    mlflow.log_metric("STD_PRE", round(np.std(PRE),3))
+    mlflow.log_metric("REC", round(np.mean(REC),2))
+    mlflow.log_metric("STD_REC", round(np.std(REC),3))
+    mlflow.log_metric("SPE", round(np.mean(SPE),2))
+    mlflow.log_metric("STD_SPE", round(np.std(SPE),3))
+    mlflow.log_metric("N_POS", np.count_nonzero(y))
+    mlflow.log_metric("N_NEG", len(y) - np.count_nonzero(y))
     
     ## Fit the best model on the data
     if ALGO == 'LR':
@@ -630,6 +649,8 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
             # print('F1:', f1_score(y_sub_test, clf.predict(X_sub_test)))
             # print('PRE:', precision_score(y_sub_test, clf.predict(X_sub_test)))
             print('REC:', round(recall_score(y_sub_test, clf.predict(X_sub_test)), 3))
+            # store in MLflow
+            mlflow.log_metric(test_type+'_REC', round(recall_score(y_sub_test, clf.predict(X_sub_test)), 3))
             # print('SPE:', recall_score(y_sub_test, clf.predict(X_sub_test), pos_label=0))
         else:
             pred_neutral = []; known_neutral = []
@@ -663,8 +684,12 @@ def main(max_depth, min_samples_split, min_samples_leaf, n_estimators,\
                 print (test_name, y_pred, q)
             if test_type == 'neutral':
                 print('REC:', test_type, round(recall_score(known_neutral, pred_neutral), 3))
+                # store in MLflow
+                mlflow.log_metric(test_type+'_REC', round(recall_score(known_neutral, pred_neutral), 3))
             if test_type in ['loss', 'decrease']:
                 print('REC:', test_type, round(recall_score(known_deactivating, pred_deactivating), 3))
+                # store in MLflow
+                mlflow.log_metric(test_type+'_REC', round(recall_score(known_deactivating, pred_deactivating), 3))
 
 if __name__ == '__main__':
     '''max_depth = int(sys.argv[1])
