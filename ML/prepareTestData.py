@@ -313,9 +313,9 @@ def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../', algo='XG
         # if more than 150 entries, then stop
         # and update the overEntries counter
         # First row in the data array is the header
-        if len(data) > 100: 
-            results['overEntries'] += 1
-            break
+        # if len(data) > 100: 
+        #     results['overEntries'] += 1
+        #     break
 
     # Wait for all threads to finish
     '''
@@ -514,7 +514,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Activark', epilog='End of help.')
     parser.add_argument('i', help='path to input file (mechismo-like format); see sample_mutations.txt')
     parser.add_argument('--o', help='path to output file; default: print on the screen')
-    parser.add_argument('--t', help='number of threads (default: 2)')
+    parser.add_argument('--a', help='algo to use (XGB/RF); default: XGB')
+    parser.add_argument('--t', help='number of threads (default: 5)')
     args = parser.parse_args()
 
     # set input file to default if not provided
@@ -524,11 +525,15 @@ if __name__ == '__main__':
     # extract output file if provided
     outputFile = args.o
 
+    # assign algorithm if provided
+    if args.a is not None: algo = args.a
+    else: algo = 'XGB'
+
     # assign number of threads if provided
     if args.t is not None: numThreads = int(args.t)
     else: numThreads = 5
 
-    results_json = predict(numThreads, inputFile, outputFile)
+    results_json = predict(numThreads, inputFile, outputFile, algo=algo)
     if len(results_json['entries_not_found']) > 0:
         if len(results_json['entries_not_found']) == 1: print ('The following input was ignored:')
         else: print ('The following inputs were ignored:')
