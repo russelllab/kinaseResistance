@@ -766,7 +766,7 @@ def main(name, algo='SVC',
                     )
         clf.fit(X,y)
     
-    if algo == 'RF':
+    if algo in ['RF', 'XGB']:
         # print (clf.estimator_.decision_path(X))
         '''
         estimator = clf.estimator_
@@ -786,16 +786,18 @@ def main(name, algo='SVC',
         print (''.join(['#' for i in range(1,25)]))
         data = []
         for feature_name, importance in zip(feature_names, clf.feature_importances_):
-            if importance > 0.015:
-                # print (feature_name, importance)
-                row = []
-                row.append(feature_name)
-                row.append(importance)
-                data.append(row)
+            # if importance > 0.015:
+            # print (feature_name, importance)
+            row = []
+            row.append(feature_name)
+            row.append(importance)
+            data.append(row)
 
         df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
         df_feature_importances = df_feature_importances.sort_values(by=['Importance'], ascending=False)
         print (df_feature_importances)
+        # Save feature importance
+        df_feature_importances.to_csv('feature_imp/'+algo+'/feature_imp_'+name+'.csv', index=False)
         
         # sns.set(font_scale = 0.6)
         # sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")

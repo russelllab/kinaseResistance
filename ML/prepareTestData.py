@@ -28,7 +28,7 @@ AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L',
       'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 # MODEL_NAMES = ['N', 'D', 'A', 'AILDRvN', 'AILDvN', 'AIvNLD', 'AIvN',
 #                'LDvNAI', 'LDvN', 'AIvLD', 'RvN']
-MODEL_NAMES = ['N', 'D', 'A',
+MODEL_NAMES = ['N', 'D', 'A', 'AILDvN', 'AILDRvN',
                'RvN', 'AIvLD', 'AIvNLD', 'LDvNAI', 'AIvN', 'LDvN']
 # MODEL_NAMES = ['N', 'L', 'A']
 WS = 5

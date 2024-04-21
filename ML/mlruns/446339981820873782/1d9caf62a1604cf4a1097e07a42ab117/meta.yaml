@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gurdeep/projects/kinaseResistance/ML/mlruns/446339981820873782/1d9caf62a1604cf4a1097e07a42ab117/artifacts
+end_time: 1713634336254
+entry_point_name: ''
+experiment_id: '446339981820873782'
+lifecycle_stage: active
+run_id: 1d9caf62a1604cf4a1097e07a42ab117
+run_name: AIvLD
+run_uuid: 1d9caf62a1604cf4a1097e07a42ab117
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713634322659
+status: 3
+tags: []
+user_id: gurdeep

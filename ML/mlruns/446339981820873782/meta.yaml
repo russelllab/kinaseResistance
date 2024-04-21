@@ -1,0 +1,7 @@
+artifact_location: file:///home/gurdeep/projects/kinaseResistance/ML/mlruns/446339981820873782
+creation_time: 1713633910846
+experiment_id: '446339981820873782'
+last_update_time: 1713634611019
+lifecycle_stage: active
+name: XGB_Test
+tags: {}

@@ -514,7 +514,7 @@ def main(name, algo='RF',
         # pass
         clf.fit(X,y)
     
-    if algo == 'RF':
+    if algo in ['RF', 'XGB']:
         # print (clf.estimator_.decision_path(X))
         '''
         estimator = clf.estimator_
@@ -543,7 +543,8 @@ def main(name, algo='RF',
         df_feature_importances = pd.DataFrame(data, columns=['Feature', 'Importance'])
         df_feature_importances = df_feature_importances.sort_values(by=['Importance'], ascending=False)
         # print (df_feature_importances)
-        df_feature_importances.to_csv('feature_imp_'+name+'.csv', index=False)
+        # df_feature_importances.to_csv('feature_imp_'+name+'.csv', index=False)
+        df_feature_importances.to_csv('feature_imp/'+algo+'/feature_imp_'+name+'.csv', index=False)
         
         # sns.set(font_scale = 0.6)
         # sns.barplot(data=df_feature_importances, color="grey", x="Importance", y="Feature")

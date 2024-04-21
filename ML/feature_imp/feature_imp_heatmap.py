@@ -9,7 +9,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-INPUT_FILE = 'feature_imp_all.csv'
+MODEL = 'XGB'
+INPUT_FILE = 'feature_imp_AIvLD.csv'
 AA = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L',
         'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
 VMAX = 0.055
@@ -17,7 +18,7 @@ VMIN = 0.0
 LINEWIDTH = 0.05
 
 dic_name2value = {}
-with open(INPUT_FILE, 'r', encoding='utf-8') as f:
+with open(MODEL+'/'+INPUT_FILE, 'r', encoding='utf-8') as f:
     for line in f:
         if line.startswith('Feature,Importance'): continue
         feature = line.rstrip().split(',')[0]
@@ -62,7 +63,7 @@ sns.heatmap(df,
             linecolor='black',
             )
 # plt.show()
-plt.savefig(INPUT_FILE.split('.')[0]+'_ohe.svg', dpi=1000)
+plt.savefig(MODEL+'/'+INPUT_FILE.split('.')[0]+'_ohe.svg', dpi=1000)
 data = []
 window_features = []
 
@@ -104,7 +105,7 @@ sns.heatmap(df,
             linecolor='black',
             )
 # plt.show()
-plt.savefig(INPUT_FILE.split('.')[0]+'_invidual.svg', dpi=1000)
+plt.savefig(MODEL+'/'+INPUT_FILE.split('.')[0]+'_invidual.svg', dpi=1000)
 data = []
 window_features = []
 
@@ -140,7 +141,7 @@ sns.heatmap(df,
             linecolor='black',
             )
 # plt.show()
-plt.savefig(INPUT_FILE.split('.')[0]+'_window.svg', dpi=1000)
+plt.savefig(MODEL+'/'+INPUT_FILE.split('.')[0]+'_window.svg', dpi=1000)
 data = []
 window_features = []
 
@@ -167,4 +168,4 @@ sns.heatmap(df,
             linecolor='black',
             )
 # plt.show()
-plt.savefig(INPUT_FILE.split('.')[0]+'_mutype.svg', dpi=1000)
+plt.savefig(MODEL+'/'+INPUT_FILE.split('.')[0]+'_mutype.svg', dpi=1000)

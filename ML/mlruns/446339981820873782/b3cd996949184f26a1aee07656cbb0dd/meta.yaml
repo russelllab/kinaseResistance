@@ -1,0 +1,16 @@
+artifact_uri: file:///home/gurdeep/projects/kinaseResistance/ML/mlruns/446339981820873782/b3cd996949184f26a1aee07656cbb0dd/artifacts
+deleted_time: 1713634275043
+end_time: 1713634161119
+entry_point_name: ''
+experiment_id: '446339981820873782'
+lifecycle_stage: deleted
+run_id: b3cd996949184f26a1aee07656cbb0dd
+run_name: RvN
+run_uuid: b3cd996949184f26a1aee07656cbb0dd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713634151884
+status: 3
+tags: []
+user_id: gurdeep
