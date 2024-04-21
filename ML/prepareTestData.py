@@ -214,7 +214,7 @@ def prepare_input_row(line, kinases, entries_not_found, data, dic_region, mydb):
     data.append(row)
     mycursor.close()
 
-def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../', algo='XGB') -> dict:
+def predict(numThreads, inputFile, outputFile = None, BASE_DIR = '../', algo='GBC') -> dict:
     """
     Function to predict the effect of mutations on kinase activity
 
@@ -514,7 +514,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Activark', epilog='End of help.')
     parser.add_argument('i', help='path to input file (mechismo-like format); see sample_mutations.txt')
     parser.add_argument('--o', help='path to output file; default: print on the screen')
-    parser.add_argument('--a', help='algo to use (XGB/RF); default: XGB')
+    parser.add_argument('--a', help='algo to use (GBC/RF); default: GBC')
     parser.add_argument('--t', help='number of threads (default: 5)')
     args = parser.parse_args()
 
@@ -527,7 +527,7 @@ if __name__ == '__main__':
 
     # assign algorithm if provided
     if args.a is not None: algo = args.a
-    else: algo = 'XGB'
+    else: algo = 'GBC'
 
     # assign number of threads if provided
     if args.t is not None: numThreads = int(args.t)
