@@ -20,8 +20,8 @@ for name in ['AIvNLD', 'AIvLD', 'AvNL', 'AvL', 'LDvNAI', 'LvNA', 'RvN']:
 # for algo in ['GNB', 'MLP', 'RF', 'XGB', 'SVC']:
 for algo in ['XGB']:
     # for Salzberg in ['False', 'True']:
-    # for Salzberg in ['False']:
-    for Salzberg in ['True']:
+    for Salzberg in ['False']:
+    # for Salzberg in ['True']:
         if Salzberg == 'True':
             mlflow.set_experiment(algo+'_Salzberg')
         else:

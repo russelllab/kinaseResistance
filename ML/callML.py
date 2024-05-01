@@ -27,9 +27,9 @@ for Salzberg in ['False']:
         else:
             mlflow.set_experiment(algo)
         # for name in ['AIvLD']:
-        # for name in ['RvN', 'AIvLD', 'AIvNLD', 'LDvNAI', 'AIvN', 'LDvN', 'AvN','DvN']:
+        for name in ['RvN', 'AIvLD', 'AIvNLD', 'LDvNAI', 'AIvN', 'LDvN', 'AILDvN', 'AILDRvN']:
         # for name in ['AILDvN', 'AILDRvN']:
-        for name in ['AIvLD', 'RvN']:
+        # for name in ['AIvLD', 'RvN']:
         # for name in ['AILDRvN', 'ALRvN', 'AILDvN', 'ALvN', 'AIvNLD', 'AvN', 'AIvN', 'AIvLD', 'AvNL', 'AvL', 'LDvNAI', 'LvNA','LDvN', 'LvN', 'RvN']:
             with mlflow.start_run(run_name=name) as run:
                 # ML.main(max_depth,min_samples_split,min_samples_leaf, n_estimators, name=name)

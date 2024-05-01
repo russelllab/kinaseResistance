@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gurdeep/projects/kinaseResistance/ML/mlruns/588508134140600753/7ab0fdb689ca49039ef13d5371c021d8/artifacts
+end_time: 1714565485232
+entry_point_name: ''
+experiment_id: '588508134140600753'
+lifecycle_stage: active
+run_id: 7ab0fdb689ca49039ef13d5371c021d8
+run_name: LDvNAI
+run_uuid: 7ab0fdb689ca49039ef13d5371c021d8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714565158849
+status: 3
+tags: []
+user_id: gurdeep
